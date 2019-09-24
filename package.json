@@ -1,0 +1,14 @@
+{
+  "name": "root",
+  "private": true,
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "esm": "^3.2.25",
+    "lerna": "^3.16.4",
+    "mocha": "^6.2.0",
+    "sinon": "^7.5.0"
+  },
+  "dependencies": {
+    
+  }
+}

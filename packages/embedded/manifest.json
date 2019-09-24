@@ -1,0 +1,7 @@
+{
+  "modules": {
+    "@embedded/event": "../event/event",
+    "@embedded/led": "../led/led",
+    "@embedded/switch": "../switch/switch"
+  }
+}		

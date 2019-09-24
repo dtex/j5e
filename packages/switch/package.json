@@ -1,0 +1,14 @@
+{
+  "name": "@embedded/switch",
+  "version": "0.0.1",
+  "description": "",
+  "main": "switch.js",
+  "scripts": {
+    "test": "../../node_modules/mocha/bin/mocha --harmony --require esm"
+  },
+  "author": "Donovan Buck <donovan@donovan.bz>",
+  "license": "MIT",
+  "dependencies": {
+    "@embedded/event": "0.0.1"
+  }
+}

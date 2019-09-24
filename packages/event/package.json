@@ -1,0 +1,11 @@
+{
+  "name": "@embedded/event",
+  "version": "0.0.1",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    
+  },
+  "author": "Donovan Buck <donovan@donovan.bz>",
+  "license": "MIT"
+}
