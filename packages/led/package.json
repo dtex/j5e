@@ -1,6 +1,6 @@
 {
   "name": "@embedded/led",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "led.js",
   "scripts": {
@@ -8,8 +8,5 @@
   },
   "author": "Donovan Buck <donovan@donovan.bz>",
   "license": "MIT",
-  "dependencies": {
-    
-  },
   "gitHead": "afc3b7c3e73e755a38812ccd66c9252c8e111641"
 }
