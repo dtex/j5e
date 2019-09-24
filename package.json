@@ -1,6 +1,5 @@
 {
   "name": "root",
-  "private": true,
   "devDependencies": {
     "chai": "^4.2.0",
     "esm": "^3.2.25",
