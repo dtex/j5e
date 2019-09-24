@@ -10,5 +10,6 @@
   "license": "MIT",
   "dependencies": {
     "@embedded/event": "^0.0.2"
-  }
+  },
+  "gitHead": "afc3b7c3e73e755a38812ccd66c9252c8e111641"
 }

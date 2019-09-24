@@ -3,7 +3,12 @@
   "version": "0.0.2",
   "description": "",
   "main": "main.js",
+  "dependencies": {
+    "@embedded/event": "0.0.1",
+    "@embedded/led": "0.0.1"
+  },
   "scripts": {},
   "author": "Donovan Buck <donovan@donovan.bz>",
-  "license": "MIT"
+  "license": "MIT",
+  "gitHead": "afc3b7c3e73e755a38812ccd66c9252c8e111641"
 }
