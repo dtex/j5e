@@ -7,7 +7,5 @@
     "mocha": "^6.2.0",
     "sinon": "^7.5.0"
   },
-  "dependencies": {
-    
-  }
+  "dependencies": {}
 }

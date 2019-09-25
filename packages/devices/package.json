@@ -1,11 +1,11 @@
 {
-  "name": "@embedded/embedded",
-  "version": "0.0.3",
+  "name": "@embedded/devices",
+  "version": "0.0.1",
   "description": "",
   "main": "main.js",
   "dependencies": {
-    "@embedded/event": "0.0.1",
-    "@embedded/led": "0.0.1"
+    "@embedded/event": "~0.0.1",
+    "@embedded/led": "~0.0.1"
   },
   "scripts": {},
   "author": "Donovan Buck <donovan@donovan.bz>",
