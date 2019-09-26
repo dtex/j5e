@@ -65,7 +65,7 @@ In your project directory create a file called main.js and add the following cod
 
 ````js
 import Digital from "builtin/digital";
-import Led from "@embedded/devices";
+import Led from "@embedded/led";
 
 const io = new Digital({
   pin: 14,
