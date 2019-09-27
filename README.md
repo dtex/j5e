@@ -77,5 +77,7 @@ const led = new Led(io);
 led.blink();
 ````
 
+Now you're ready to build your program for your platform (refer back to the Moddable docs for this).
+
 
 
