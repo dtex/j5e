@@ -1,6 +1,6 @@
 {
   "name": "@embedded/switch",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
   "main": "switch.js",
   "scripts": {
@@ -9,7 +9,7 @@
   "author": "Donovan Buck <donovan@donovan.bz>",
   "license": "MIT",
   "dependencies": {
-    "@embedded/event": "~0.0.3"
+    "@embedded/event": "^0.0.4"
   },
   "gitHead": "afc3b7c3e73e755a38812ccd66c9252c8e111641"
 }
