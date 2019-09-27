@@ -1,0 +1,6 @@
+{
+  "modules": {
+    "@embedded/event": "../event/event",
+    "@embedded/switch": "./switch"
+  }
+}		
