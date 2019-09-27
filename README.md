@@ -79,5 +79,47 @@ led.blink();
 
 Now you're ready to build your program for your platform (refer back to the Moddable docs for this).
 
+## A Variation
+If you know you are only going to use a single device (like LED), you don't necessarily need all the @embedded-js device packages in your project folder.
+
+````js
+npm install @embedded/led
+````
+
+And then in your package.json:
+````js
+{
+	"include": [
+		"$(MODDABLE)/modules/io/manifest.json",
+		"./node_modules/@embedded/led/manifest.json"
+	],
+	"modules": {
+		"*": [
+			"./main"
+		]
+	}
+}
+````
+Note: Excluding unused devices from your node_modules does not decrease the size of the build that is deployed to your device. Only classes that are explicitly imported into your file will be included.
+
+## But Wait, There's a Better Way
+
+Instead of npm installing the embedded-js dependencies, clone this project to a folder that is a sibling of your moddable directory. Call it ```embedded_js``` or something. Create a variable that points to that folder called "$EMBEDDED_JS" or whatever, and then all the devices will be available to any of your applications by pointing to them in the manifest file like this:
+
+````js
+{
+	"include": [
+		"$(MODDABLE)/modules/io/manifest.json",
+		"$(EMBEDDED_JS)/devices/manifest.json"
+	],
+	"modules": {
+		"*": [
+			"./main"
+		]
+	}
+}
+````
+
+
 
 
