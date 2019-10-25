@@ -1,0 +1,11 @@
+{
+  "name": "@embedded/fn",
+  "version": "0.0.1",
+  "description": "",
+  "main": "fn.js",
+  "scripts": {
+    "test": "../../node_modules/mocha/bin/mocha --harmony --require esm"
+  },
+  "author": "Donovan Buck <donovan@donovan.bz>",
+  "license": "MIT"
+}
