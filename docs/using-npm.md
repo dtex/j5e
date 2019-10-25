@@ -69,12 +69,7 @@ Here's the ubquitous "Hello World" for hardware to get you started:
 import Digital from "builtin/digital";
 import Led from "@embedded/led";
 
-const io = new Digital({
-  pin: 14,
-  mode: Digital.Output
-});
-
-const led = new Led(io);
+const led = new Led(Digital, 14);
 
 led.blink();
 ````

@@ -1,5 +1,5 @@
 # Embedded-JS
-Embedded-JS is a device framework for providers using TC-53's IO pattern. Right now, that only Moddable's IO module, but we should see more soon. The is the recommended method but if you prefer to use a package manager, check out these [instructions for using npm](docs/using-npm.md). 
+Embedded-JS is a device framework for providers using TC-53's IO pattern. Right now, that's only Moddable's IO module for XS, but we should see more soon. This is the recommended method but if you prefer to use a package manager, check out these [instructions for using npm](docs/using-npm.md). 
 
 ## Usage
 This library is pretty easy to use, but getting your machine configured can be a bit of a chore. Don't worry though, the process is well documented.
@@ -74,12 +74,7 @@ cd myProject
 import Digital from "builtin/digital";
 import Led from "@embedded/led";
 
-const io = new Digital({
-  pin: 14,
-  mode: Digital.Output
-});
-
-const led = new Led(io);
+const led = new Led(digital, 14);
 
 led.blink();
 ````
