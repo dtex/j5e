@@ -46,7 +46,7 @@ class Emitter {
       listener.apply(this, arguments);
     });
   }
-
+  
 };
 
 export { Emitter };

@@ -1,3 +1,5 @@
+import {normalizeParams} from "@embedded/fn";
+
 /**
  * Led
  * @constructor
@@ -8,6 +10,7 @@
 
 class Led {
   
+  #io;
   #state = {
     isAnode: false,
     isRunning: false,
@@ -19,15 +22,18 @@ class Led {
     HIGH: 1
   };
   
-  constructor(opts) {    
+  constructor(io, pin) {    
     
-    if (!opts.io) opts = { io: opts };
+    const {ioOpts, deviceOpts} = normalizeParams(io, pin);
     
-    this.io = opts.io;
+    this.#io = new ioOpts.io({
+      pin: ioOpts.pin,
+      mode: ioOpts.io.Output
+    });
     
     this.LOW = 0;
-    if (this.io.resolution) {
-      this.HIGH = (1 << this.io.resolution()) -1;
+    if (ioOpts.io.resolution) {
+      this.HIGH = (1 << ioOpts.io.resolution()) -1;
     } else {
       this.HIGH = 1;
     }
@@ -67,40 +73,17 @@ class Led {
    * Turn an led on
    */
   on() {
-    
-    this.#state.value = 1;
-
-    /*if (state.mode === this.io.MODES.PWM) {
-      // Assume we need to simply turn this all the way on, when:
-
-      // ...state.value is null
-      if (state.value === null) {
-        state.value = 255;
-      }
-
-      // ...there is no active interval
-      if (!state.interval) {
-        state.value = 255;
-      }
-
-      // ...the last value was 0
-      if (state.value === 0) {
-        state.value = 255;
-      }
-    }*/
-
-    this.io.write(this.HIGH);
-
+    this.#state.value = this.HIGH;
+    this.#io.write(this.HIGH);
     return this;
-    
   }
 
   /**
    * Turn an led off
    */
   off() {
-    this.#state.value = 0;
-    this.io.write(this.LOW);
+    this.#state.value = this.LOW;
+    this.#io.write(this.LOW);
     return this;
   }
 
@@ -111,8 +94,6 @@ class Led {
   toggle() {
     return this[this.isOn ? "off" : "on"]();
   }
-
-  //strobe 
 
   /**
    * blink
@@ -169,29 +150,6 @@ class Led {
 
     return this;
   };
-  
-
-  /**
-   * Add an animation segment to the animation queue
-   * @param {Object} options Options: cuePoints, keyFrames, duration,
-   *   easing, loop, metronomic, progress, fps, onstart, onpause,
-   *   onstop, oncomplete, onloop
-   */
-  // enqueue(options = {}) {
-  //   /* istanbul ignore else */
-  //   if (typeof options.target === "undefined") {
-  //     options.target = this.defaultTarget;
-  //   }
-
-  //   this.segments.push(options);
-
-  //   /* istanbul ignore if */
-  //   if (!this.paused && !this.isRunning) {
-  //     this.next();
-  //   }
-
-  //   return this;
-  // }
 
 };
 
