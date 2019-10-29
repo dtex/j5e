@@ -2,7 +2,7 @@
   "name": "@embedded/event",
   "version": "0.0.5",
   "description": "",
-  "main": "main.js",
+  "main": "event.js",
   "scripts": {},
   "author": "Donovan Buck <donovan@donovan.bz>",
   "license": "MIT",
