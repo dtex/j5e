@@ -11,17 +11,17 @@ import {normalizeParams} from "@embedded/fn";
 
 class Switch extends Emitter {
   
-  #io;
   #state = {
     normallyOpen: true,
     raw: null 
   };
   
-  constructor(io, pin) {    
-    super();
-    const {ioOpts, deviceOpts} = normalizeParams(io, pin);
+  constructor(io, pin) {
     
-    this.#io = new ioOpts.io({
+    const {ioOpts, deviceOpts} = normalizeParams(io, pin);
+    super(ioOpts);
+    
+    this.io = new ioOpts.io({
       pin: ioOpts.pin,
       mode: ioOpts.io.Input,
       edge: ioOpts.io.Rising | ioOpts.io.Falling,
@@ -40,12 +40,12 @@ class Switch extends Emitter {
     Object.defineProperties(this, {
       isClosed: {
         get: () => {
-          return !this.#io.read();
+          return !this.io.read();
         }
       },
       isOpen: {
         get: () => {
-          return this.#io.read();
+          return this.io.read();
         }
       }
     });
