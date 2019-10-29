@@ -1,4 +1,4 @@
-import {normalizeParams} from "@embedded/fn";
+import {normalizeParams, constrain, setInterval, clearInterval} from "@embedded/fn";
 
 /**
  * Led
@@ -10,9 +10,8 @@ import {normalizeParams} from "@embedded/fn";
 
 class Led {
   
-  #io;
   #state = {
-    isAnode: false,
+    isAnode: false, 
     isRunning: false,
     value: 0,
     direction: 1,
@@ -26,22 +25,16 @@ class Led {
     
     const {ioOpts, deviceOpts} = normalizeParams(io, pin);
     
-    this.#io = new ioOpts.io({
+    this.io = new ioOpts.io({
       pin: ioOpts.pin,
       mode: ioOpts.io.Output
     });
-    
+
     this.LOW = 0;
-    if (ioOpts.io.resolution) {
-      this.HIGH = (1 << ioOpts.io.resolution()) -1;
+    if (this.io.resolution) {
+      this.HIGH = (1 << this.io.resolution) -1;
     } else {
       this.HIGH = 1;
-    }
-
-    if (typeof System !== "undefined") {
-      this.setInterval = System.setInterval
-    } else {
-      this.setInterval = GLOBAL.setInterval
     }
 
     Object.defineProperties(this, {
@@ -70,11 +63,24 @@ class Led {
   }
 
   /**
+   * Internal method that writes to IO
+   */
+  write() {
+    let value = constrain(this.#state.value, this.LOW, this.HIGH);
+
+    if (this.#state.isAnode) {
+      value = this.HIGH - value;
+    }
+
+    this.io.write(value | 0);
+  }
+
+  /**
    * Turn an led on
    */
   on() {
     this.#state.value = this.HIGH;
-    this.#io.write(this.HIGH);
+    this.write();
     return this;
   }
 
@@ -83,7 +89,7 @@ class Led {
    */
   off() {
     this.#state.value = this.LOW;
-    this.#io.write(this.LOW);
+    this.write();
     return this;
   }
 
@@ -111,25 +117,168 @@ class Led {
 
     this.#state.isRunning = true;
 
-    this.#state.interval = this.setInterval(() => {
-      this.toggle();
+    this.#state.interval = System.setInterval(() => {
+        this.toggle();
       if (typeof callback === "function") {
         callback();
       }
-    }, duration || 100);
+    }, 100);
 
     return this;
-  };
+  }
 
-  //brightness
+  /**
+   * set the brightness of an led attached to PWM
+   * @param {value} int {
+   *   vale: Value to set to PWM [this.HIGH, this.LOW]
+   * }
+   * return {Led}
+   */
+  brightness(value) {
+    this.#state.value = value;
+    this.io.write(value);
+    return this;
+  }
 
-  //fade
+  /**
+  * animate Animate the brightness of an led
+  * @param {Object} opts {
+  *   step: function to call on each step
+  *   delta: function to calculate each change
+  *   complete: function to call on completion,
+  *   duration: ms duration of animation
+  *   delay: ms interval delay
+  * }
+  * @return {Led}
+  */
+  animate(opts) {
+    var start = Date.now();
 
-  //fadeIn
+    // Avoid traffic jams
+    if (this.#state.interval) {
+      System.clearInterval(this.#state.interval);
+    }
 
-  //fadeOut
+    if (!opts.duration) {
+      opts.duration = 1000;
+    }
 
-  //pulse
+    if (!opts.delta) {
+      opts.delta = function(val) {
+        return val;
+      };
+    }
+
+    this.#state.isRunning = true;
+
+    this.#state.interval = System.setInterval(() => {
+      const lapsed = Date.now() - start;
+      let progress = lapsed / opts.duration;
+
+      if (progress > 1) {
+        progress = 1;
+      }
+
+      const delta = opts.delta(progress);
+
+      opts.step(delta);
+
+      if (progress === 1) {
+        this.stop();
+        if (typeof opts.complete === "function") {
+          opts.complete();
+        }
+      }
+    }, opts.delay || 10);
+
+   return this;
+  }
+
+  /**
+   * pulse Fade the Led in and out in a loop with specified time
+   * @param  {number} rate Time in ms that a fade in/out will elapse
+   * @return {Led}
+   */
+
+  pulse(time, callback) {
+    
+    const target = this.#state.value !== 0 ?
+      (this.#state.value === this.HIGH ? 0 : this.HIGH) : this.HIGH;
+    const direction = target === this.HIGH ? 1 : -1;
+    const update = this.#state.value <= target ? target : (this.#state.value - target);
+
+    if (typeof time === "function") {
+      callback = time;
+      time = null;
+    }
+
+    const step = (delta) => {
+      let value = (update * delta);
+
+      if (direction === -1) {
+        value = value ^ this.HIGH;
+      }
+
+      this.#state.value = value;
+      this.#state.direction = direction;
+      this.write();
+    };
+
+    const complete = () => {
+      this.pulse(time, callback);
+      if (typeof callback === "function") {
+        callback();
+      }
+    };
+
+    return this.animate({
+      duration: time,
+      complete: complete,
+      step: step
+    });
+  }  
+
+  /**
+   * fade Fade an led in and out
+   * @param  {Number} val  Analog brightness value 0-255
+   * @param  {Number} time Time in ms that a fade in/out will elapse
+   * @return {Led}
+   */
+
+  fade(val, time, callback) {
+    const previous = this.#state.value || 0;
+    const update = val - this.#state.value;
+
+    if (typeof time === "function") {
+      callback = time;
+      time = null;
+    }
+
+    const step = (delta) => {
+      const value = previous + (update * delta);
+      this.#state.value = value;
+      this.write();
+    };
+
+    const complete = () => {
+      if (typeof callback === "function") {
+        callback();
+      }
+    };
+    return this.animate({
+      duration: time,
+      complete: complete,
+      step: step
+    });
+  }
+
+  fadeIn(time, callback) {
+    return this.fade(this.HIGH, time || 1000, callback);
+  }
+
+  fadeOut(time, callback) {
+    return this.fade(this.LOW, time || 1000, callback);
+  }
 
   /**
    * stop Stop the led from strobing, pulsing or fading
@@ -138,7 +287,7 @@ class Led {
   stop() {
     
     if (this.#state.interval) {
-      clearInterval(this.#state.interval);
+      System.clearInterval(this.#state.interval);
     }
 
     if (this.#state.animation) {

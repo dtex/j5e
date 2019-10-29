@@ -6,6 +6,9 @@
   "scripts": {
     "test": "../../node_modules/mocha/bin/mocha --harmony --require esm"
   },
+  "dependencies": {
+    "@embedded/fn": "^0.0.2"
+  },
   "author": "Donovan Buck <donovan@donovan.bz>",
   "license": "MIT",
   "gitHead": "afc3b7c3e73e755a38812ccd66c9252c8e111641"
