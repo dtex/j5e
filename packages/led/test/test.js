@@ -2,7 +2,6 @@ const chai = require('chai');
 const assert = require('assert');
 const sinon = require('sinon');
 
-import { Digital, PWM } from './../../mock/provider.js';
 import Led from './../led.js';
 
 describe('Led - Digital', function() {
@@ -13,7 +12,7 @@ describe('Led - Digital', function() {
       
       const led = new Led({
         pin: 12,
-        io: Digital
+        provider: "./../../mock/digital.js"
       });
       
       assert.equal(led instanceof Led, true);
@@ -26,61 +25,75 @@ describe('Led - Digital', function() {
 
   describe('On', function() {
     
-    const led = new Led(Digital, 12);
-    const writeSpy = sinon.spy(led.io, "write");
+    const led = new Led({
+      pin: 12,
+      provider: "./../../mock/digital.js"
+    });
+    led.on("ready", () => {
+      const writeSpy = sinon.spy(led.io, "write");
 
-    it('should call io digital.write with 1', function() {  
-      assert.equal(led.value, 0);
-      led.on();
-      assert.equal(writeSpy.getCall(0).args[0], 1);
-      assert.equal(led.value, 1);
+      it('should call io digital.write with 1', function() {  
+        assert.equal(led.value, 0);
+        led.on();
+        assert.equal(writeSpy.getCall(0).args[0], 1);
+        assert.equal(led.value, 1);
+      });
     });
 
   });
 
-  describe('Off', function() {
+  // describe('Off', function() {
     
-    const led = new Led(Digital, 12);
+  //   const led = new Led({
+  //     pin: 12,
+  //     provider: "./../../mock/digital.js"
+  //   });
     
-    const writeSpy = sinon.spy(led.io, "write");
+  //   const writeSpy = sinon.spy(led.io, "write");
 
-    it('should call io digital.write with 0', function() {  
-      led.on();
-      assert.equal(led.value, 1);
-      led.off();
-      assert.equal(writeSpy.getCall(0).args[0], 1);
-      assert.equal(writeSpy.getCall(1).args[0], 0);
-      assert.equal(led.value, 0);
-    });
+  //   it('should call io digital.write with 0', function() {  
+  //     led.on();
+  //     assert.equal(led.value, 1);
+  //     led.off();
+  //     assert.equal(writeSpy.getCall(0).args[0], 1);
+  //     assert.equal(writeSpy.getCall(1).args[0], 0);
+  //     assert.equal(led.value, 0);
+  //   });
 
-  });
+  // });
 
-  describe('Toggle', function() {
+  // describe('Toggle', function() {
     
-    const led = new Led(Digital, 12);
-    const writeSpy = sinon.spy(led.io, "write");
+  //   const led = new Led({
+  //     pin: 12,
+  //     provider: "./../../mock/digital.js"
+  //   });
+  //   const writeSpy = sinon.spy(led.io, "write");
 
-    it('should call io digital.write twice, with 1 and 0', function() {  
-      assert.equal(led.value, 0);
+  //   it('should call io digital.write twice, with 1 and 0', function() {  
+  //     assert.equal(led.value, 0);
       
-      led.toggle();
-      assert(writeSpy.calledOnceWith(1));
-      assert.equal(led.value, 1);
+  //     led.toggle();
+  //     assert(writeSpy.calledOnceWith(1));
+  //     assert.equal(led.value, 1);
       
-      led.toggle();
-      assert.equal(writeSpy.callCount, 2);
-      assert.equal(writeSpy.secondCall.args[0], 0);
-      assert.equal(led.value, 0);
+  //     led.toggle();
+  //     assert.equal(writeSpy.callCount, 2);
+  //     assert.equal(writeSpy.secondCall.args[0], 0);
+  //     assert.equal(led.value, 0);
 
-    });
+  //   });
 
-  });
+  // });
 
   /*
   describe('Blink', function() {
     
     const clock = sinon.useFakeTimers();
-    const led = new Led(Digital, 12);
+    const led = new Led({
+      pin: 12,
+      provider: "./../../mock/digital.js"
+    });
     
     const writeSpy = sinon.spy(led.io, "write");
 
@@ -99,7 +112,10 @@ describe('Led - Digital', function() {
   describe('Stop', function() {
     
     const clock = sinon.useFakeTimers();
-    const led = new Led(Digital, 12);
+    const led = new Led({
+      pin: 12,
+      provider: "./../../mock/digital.js"
+    });
     
     sinon.spy(io, "write");
 
@@ -128,7 +144,7 @@ describe('Led - PWM', function() {
       
       const led = new Led({
         pin: 12,
-        io: PWM
+        provider: "./../../mock/pwm.js"
       });
       
       assert.equal(led instanceof Led, true);
@@ -141,7 +157,10 @@ describe('Led - PWM', function() {
 
   describe('On', function() {
     
-    const led = new Led(PWM, 12);
+    const led = new Led({
+      pin: 12,
+      provider: "./../../mock/pwm.js"
+    });
     const writeSpy = sinon.spy(led.io, "write");
 
     it('should call io digital.write with 1', function() {  
@@ -155,7 +174,10 @@ describe('Led - PWM', function() {
 
   describe('Off', function() {
     
-    const led = new Led(PWM, 12);
+    const led = new Led({
+      pin: 12,
+      provider: "./../../mock/pwm.js"
+    });
     
     const writeSpy = sinon.spy(led.io, "write");
 
@@ -172,7 +194,10 @@ describe('Led - PWM', function() {
 
   describe('Toggle', function() {
     
-    const led = new Led(PWM, 12);
+    const led = new Led({
+      pin: 12,
+      provider: "./../../mock/pwm.js"
+    });
     const writeSpy = sinon.spy(led.io, "write");
 
     it('should call io digital.write twice, with 1 and 0', function() {  
@@ -192,7 +217,10 @@ describe('Led - PWM', function() {
 
   describe('Brightness', function() {
     
-    const led = new Led(PWM, 12);
+    const led = new Led({
+      pin: 12,
+      provider: "./../../mock/pwm.js"
+    });
     const writeSpy = sinon.spy(led.io, "write");
 
     it('should call io digital.write twice, with 0 and 512', function() {  
@@ -210,22 +238,25 @@ describe('Led - PWM', function() {
     });
   });
 */
-  describe('Fade', function() {
-    
-    const led = new Led(PWM, 12);
-    const writeSpy = sinon.spy(led.io, "write");
-
-    it('should call fade and...', function() {  
-      led.off();
-      assert.equal(led.value, 0);
-      assert(writeSpy.calledOnceWith(0));
+    // describe('Fade', function() {
       
-      led.fade(1024);
-      //assert.equal(writeSpy.callCount, 2);
-      //assert.equal(writeSpy.secondCall.args[0], 512);
-      //assert.equal(led.value, 512);
+    //   const led = new Led({
+    //     pin: 12,
+    //     provider: "./../../mock/pwm.js"
+    //   });
+    //   const writeSpy = sinon.spy(led.io, "write");
 
-    });
-  });
+    //   it('should call fade and...', function() {  
+    //     led.off();
+    //     assert.equal(led.value, 0);
+    //     assert(writeSpy.calledOnceWith(0));
+        
+    //     led.fadeOn();
+    //     //assert.equal(writeSpy.callCount, 2);
+    //     //assert.equal(writeSpy.secondCall.args[0], 512);
+    //     //assert.equal(led.value, 512);
+
+    //   });
+    // });
 
 });

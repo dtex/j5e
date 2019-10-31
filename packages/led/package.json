@@ -7,7 +7,8 @@
     "test": "../../node_modules/mocha/bin/mocha --harmony --require esm"
   },
   "dependencies": {
-    "@embedded/fn": "^0.0.2"
+    "@embedded/fn": "^0.0.2",
+    "@embedded/event": "^0.0.5"
   },
   "author": "Donovan Buck <donovan@donovan.bz>",
   "license": "MIT",

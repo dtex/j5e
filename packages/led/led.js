@@ -1,4 +1,5 @@
-import {normalizeParams, constrain, setInterval, clearInterval} from "@embedded/fn";
+import { Emitter } from "@embedded/event";
+import {normalizeParams, constrain, loadModule, setInterval, clearInterval} from "@embedded/fn";
 
 /**
  * Led
@@ -20,46 +21,55 @@ class Led {
     interval: null,
     HIGH: 1
   };
-  
-  constructor(io, pin) {    
-    
-    const {ioOpts, deviceOpts} = normalizeParams(io, pin);
-    
-    this.io = new ioOpts.io({
-      pin: ioOpts.pin,
-      mode: ioOpts.io.Output
-    });
 
-    this.LOW = 0;
-    if (this.io.resolution) {
-      this.HIGH = (1 << this.io.resolution) -1;
-    } else {
-      this.HIGH = 1;
-    }
+  constructor(io, device) {
+    return (async () => {
+      const {ioOpts, deviceOpts} = normalizeParams(io, device);
+    
+      this.LOW = 0;
 
-    Object.defineProperties(this, {
-      value: {
-        get: function() {
-          return this.#state.value;
+      Object.defineProperties(this, {
+        value: {
+          get: function() {
+            return this.#state.value;
+          }
+        },
+        mode: {
+          get: function() {
+            return this.#state.mode;
+          }
+        },
+        isOn: {
+          get: function() {
+            return !!this.#state.value;
+          }
+        },
+        isRunning: {
+          get: function() {
+            return this.#state.isRunning;
+          }
         }
-      },
-      mode: {
-        get: function() {
-          return this.#state.mode;
-        }
-      },
-      isOn: {
-        get: function() {
-          return !!this.#state.value;
-        }
-      },
-      isRunning: {
-        get: function() {
-          return this.#state.isRunning;
-        }
+      });
+
+      if (!ioOpts.provider || typeof ioOpts.provider === "string") {
+        const Provider = await import(ioOpts.provider || "builtin/digital");
+        this.io = new Provider.default({
+          pin: ioOpts.pin,
+          mode: Provider.default.Output
+        });
+      } else {
+        this.io = ioOpts.provider;
       }
-    });
-
+      
+      
+      if (this.io.resolution) {
+        this.HIGH = (1 << this.io.resolution) -1;
+      } else {
+        this.HIGH = 1;
+      }
+      
+      return this;
+    })();
   }
 
   /**
