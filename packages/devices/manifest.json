@@ -1,8 +1,0 @@
-{
-  "modules": {
-    "@embedded/event": "../event/event",
-    "@embedded/fn": "../fn/fn",
-    "@embedded/led": "../led/led",
-    "@embedded/switch": "../switch/switch"
-  }
-}		

@@ -1,5 +1,0 @@
-{
-  "modules": {
-    "@embedded/led": "./led"
-  }
-}		
