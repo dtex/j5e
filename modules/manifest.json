@@ -1,8 +1,8 @@
 {
   "modules": {
-    "@embedded/event": "./event",
-    "@embedded/fn": "./fn",
-    "@embedded/led": "./led",
-    "@embedded/switch": "./switch"
+    "@j5e/event": "./util/event",
+    "@j5e/fn": "./util/fn",
+    "@j5e/led": "./led/led",
+    "@j5e/switch": "./switch/switch"
   }
 }		
