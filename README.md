@@ -3,44 +3,9 @@ J5e is a device framework built for ECMA TC-53's IO pattern. Right now, that's o
 
 This project is very much in a "pre-alpha" form so use at your own risk.
 
-## Usage
-This library is pretty easy to use, but getting your machine configured can be a bit of a chore. Don't worry though, the process is well documented.
+## Get Started
 
 ### 1. Make sure you have successfully [configured your host environment](https://github.com/Moddable-OpenSource/moddable/blob/public/documentation/Moddable%20SDK%20-%20Getting%20Started.md) for the Moddable SDK. 
----
-### 2. Download the [J5e repository](https://github.com/dtex/J5e/archive/master.zip), or use the git command line tool as follows:
-
-**macOS	and Linux**
-````bash
-cd ~/Projects
-git clone https://github.com/dtex/J5e
-````
-
-**Windows**
-````bash
-cd C:\Users\<user>\Projects
-git clone https://github.com/dtex/J5e
-````
----
-### 3. Setup the J5e environment variable to point at the directory:
-
-**macOS**
-````bash
-export J5e="/Users/<user>/Projects/J5e/modules"
-````
-
-**Linux**
-````bash
-J5e=~/Projects/J5e/modules
-export J5e
-````
-
-**Windows**
-````bash
-set J5e=C:\Users\<user>\Projects\J5e\modules
-````
----
-## Write an Embedded Program
 
 ### 1. Create a working directory (You can call it whatever you want):
 
@@ -54,13 +19,25 @@ mkdir myProject
 cd myProject
 ````
 
-### 3. Create a manifest.json file in your working directory:
+### 3. Initialize this directory for npm:
+
+````bash
+npm init -y
+````
+
+### 4. Install J5e using npm:
+
+````bash
+npm install j5e
+````
+
+### 5. Create a manifest.json file in your working directory:
 
 ````js
 {
 	"include": [
 		"$(MODDABLE)/modules/io/manifest.json",
-		"$(J5e)/manifest.json"
+		"./node_modules/j5e/manifest.json"
 	],
 	"modules": {
 		"*": [
@@ -70,7 +47,7 @@ cd myProject
 }
 ````
 
-### 4. Create you main.js program file. Here's the ubquitous "Hello World" for hardware to get you started:
+### 6. Create you main.js program file. Here's the ubquitous "Hello World" for hardware to get you started:
 
 ````js
 import Led from "@J5e/led";
@@ -81,7 +58,7 @@ import Led from "@J5e/led";
 })();
 ````
 
-### 5. Now you're ready to build your program for your platform (refer back to the [Moddable docs](https://github.com/Moddable-OpenSource/moddable/tree/public/examples#building-apps) for help with this):
+### 7. Now you're ready to build your program for your platform (refer back to the [Moddable docs](https://github.com/Moddable-OpenSource/moddable/tree/public/examples#building-apps) for help with this):
 
 ````bash
 mcconfig -d -m -p esp
