@@ -1,7 +1,7 @@
 {
   "name": "j5e",
   "version": "0.0.3",
-  "description": "J5e is a device framework built for ECMA TC-53's IO pattern",
+  "description": "j5e is a device framework built for ECMA TC-53's IO pattern",
   "main": "index.js",
   "directories": {
     "test": "tests"
@@ -11,20 +11,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dtex/J5e.git"
+    "url": "git+https://github.com/dtex/j5e.git"
   },
   "keywords": [
-    "javascript",
-    "robotics",
-    "IoT",
-    "embedded",
-    "moddable",
-    "xs"
+    
+    "javascript", "robotics", "IoT", "embedded",
+
+    "moddable", "xs",
+    
+    "esp8266",
+    
+    "led", "switch"
+
   ],
   "author": "Donovan Buck <donovan@donovan.bz>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dtex/J5e/issues"
+    "url": "https://github.com/dtex/j5e/issues"
   },
-  "homepage": "https://github.com/dtex/J5e#readme"
+  "homepage": "https://github.com/dtex/j5e#readme"
 }
