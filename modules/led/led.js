@@ -1,5 +1,5 @@
-import { Emitter } from "@embedded/event";
-import {normalizeParams, constrain, loadModule, setInterval, clearInterval} from "@embedded/fn";
+import { Emitter } from "@j5e/event";
+import {normalizeParams, constrain, loadModule, setInterval, clearInterval} from "@j5e/fn";
 
 /**
  * Led

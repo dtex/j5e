@@ -1,5 +1,5 @@
-# J5e – Johnny Five for Embedded Systems
-J5e is a device framework built for ECMA TC-53's IO pattern. Right now, that's only Moddable's IO module for XS, but we should see more soon. This is the recommended method but if you prefer to use a package manager, check out these [instructions for using npm](docs/using-npm.md). 
+# j5e – Johnny Five for Embedded Systems
+j5e is a device framework built for ECMA TC-53's IO pattern. Right now, that's only Moddable's IO module for XS, but we should see more soon. This is the recommended method but if you prefer to use a package manager, check out these [instructions for using npm](docs/using-npm.md). 
 
 This project is very much in a "pre-alpha" form so use at your own risk.
 
@@ -50,7 +50,7 @@ npm install j5e
 ### 6. Create you main.js program file. Here's the ubquitous "Hello World" for hardware to get you started:
 
 ````js
-import Led from "@J5e/led";
+import Led from "@j5e/led";
 
 (async function() {
 	const led = await new Led(14);

@@ -1,5 +1,5 @@
-import { Emitter } from "@embedded/event";
-import {normalizeParams, loadModule} from "@embedded/fn";
+import { Emitter } from "@j5e/event";
+import {normalizeParams, loadModule} from "@j5e/fn";
 
 
 // TODO: Research "Normally Open" vs "Sink Drive"
