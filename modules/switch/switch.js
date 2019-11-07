@@ -1,5 +1,5 @@
 import { Emitter } from "@j5e/event";
-import {normalizeParams, loadModule} from "@j5e/fn";
+import {normalizeParams, getProvider} from "@j5e/fn";
 
 
 // TODO: Research "Normally Open" vs "Sink Drive"
@@ -23,6 +23,14 @@ class Switch extends Emitter {
       const {ioOpts, deviceOpts} = normalizeParams(io, device);
       super();
 
+      const Provider = await getProvider(ioOpts, "builtin/digital");
+      
+      this.io = new Provider({
+        pin: ioOpts.pin,
+        mode: Provider.Input,
+        edge: Provider.Rising | Provider.Falling,
+        onReadable: () => { this.emit(this.isOpen ? "open" : "close") }
+      });
 
       // Is this instance Normally Open
       this.#state.normallyOpen = deviceOpts.type !== "NC";
@@ -39,18 +47,6 @@ class Switch extends Emitter {
           }
         }
       });
-      
-      if (!ioOpts.provider || typeof ioOpts.provider === "string") {
-        const Provider = await import(ioOpts.provider || "builtin/digital");
-        this.io = new Provider.default({
-          pin: ioOpts.pin,
-          mode: Provider.default.Input,
-          edge: Provider.default.Rising | Provider.default.Falling,
-          onReadable: () => { this.emit(this.isOpen ? "open" : "close") }
-        });
-      } else {
-        this.io = ioOpts.provider;
-      }
       
       return this;
     })();

@@ -16,11 +16,13 @@ const constrain = function(value, low, high) {
   return value;
 }
 
-/* Wrapper for dynamic module loading */
-const loadModule = function(module) {
-  import(module).then((loaded) => {
-    return loaded;
-  });
+const getProvider = async function(ioOpts, defaultProvider, opts) {
+  if (!ioOpts.provider || typeof ioOpts.provider === "string") {
+    const Provider = await import(ioOpts.provider || defaultProvider);
+    return Provider.default;
+  } else {
+    return ioOpts.provider;
+  }
 }
 
 const setInterval = function() {
@@ -40,7 +42,7 @@ const clearInterval = function() {
 export { 
   clearInterval,
   constrain,
-  loadModule,
+  getProvider,
   normalizeParams,
   setInterval
 };

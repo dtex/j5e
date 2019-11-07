@@ -1,5 +1,5 @@
 import { Emitter } from "@j5e/event";
-import {normalizeParams, constrain, loadModule, setInterval, clearInterval} from "@j5e/fn";
+import {normalizeParams, constrain, getProvider, setInterval, clearInterval} from "@j5e/fn";
 
 /**
  * Led
@@ -25,7 +25,14 @@ class Led {
   constructor(io, device) {
     return (async () => {
       const {ioOpts, deviceOpts} = normalizeParams(io, device);
-    
+
+      const Provider = await getProvider(ioOpts, "builtin/digital");
+      
+      this.io = new Provider({
+        pin: ioOpts.pin,
+        mode: Provider.Output
+      });
+      
       this.LOW = 0;
 
       Object.defineProperties(this, {
@@ -50,17 +57,6 @@ class Led {
           }
         }
       });
-
-      if (!ioOpts.provider || typeof ioOpts.provider === "string") {
-        const Provider = await import(ioOpts.provider || "builtin/digital");
-        this.io = new Provider.default({
-          pin: ioOpts.pin,
-          mode: Provider.default.Output
-        });
-      } else {
-        this.io = ioOpts.provider;
-      }
-      
       
       if (this.io.resolution) {
         this.HIGH = (1 << this.io.resolution) -1;
