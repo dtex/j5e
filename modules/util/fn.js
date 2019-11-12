@@ -3,9 +3,14 @@
  * ioOpts: pin || options object
  * deviceOpts optional device options
  */
-const normalizeParams = function(ioOpts, deviceOpts) {
-  if (typeof ioOpts === "number" || typeof ioOpts === "string") ioOpts = {pin: ioOpts};
-  if (typeof deviceOpts === "undefined") deviceOpts = {};
+const normalizeParams = function(ioOpts, deviceOpts={}) {
+  if (typeof ioOpts === "number" || typeof ioOpts === "string") {
+    ioOpts = {pin: ioOpts};
+  }
+  if (typeof deviceOpts === "function") {
+    ioOpts.io = deviceOpts;
+    deviceOpts = {};
+  }
   return { ioOpts, deviceOpts}
 };
 
@@ -16,34 +21,38 @@ const constrain = function(value, low, high) {
   return value;
 }
 
-const getProvider = async function(ioOpts, defaultProvider, opts) {
-  if (!ioOpts.provider || typeof ioOpts.provider === "string") {
-    const Provider = await import(ioOpts.provider || defaultProvider);
+const getProvider = async function(ioOpts, defaultProvider) {
+  if (!ioOpts.io || typeof ioOpts.io === "string") {
+    const Provider = await import(ioOpts.io || defaultProvider);
     return Provider.default;
   } else {
-    return ioOpts.provider;
+    return ioOpts.io;
   }
 }
 
-const setInterval = function() {
-  if (typeof System !== "undefined") {
-    return System.setInterval;
+const timer = {
+  setInterval: function(callback, duration) {
+    if (global && global.setInterval) {
+      return global.setInterval(callback, duration);
+    }
+    if (System && System.setInterval) {
+      return System.setInterval(callback, duration);
+    }
+  },
+  clearInterval: function(identifier) {
+    if (global && global.clearInterval) {
+      return global.clearInterval(identifier);
+    }
+    if (System && System.clearInterval) {
+      return System.clearInterval(identifier);
+    }
   }
-  return GLOBAL.setInterval;
-}
-
-const clearInterval = function() {
-  if (typeof System !== "undefined") {
-    return System.clearInterval;
-  }
-  return GLOBAL.clearInterval;
-}
+};
 
 export { 
-  clearInterval,
   constrain,
   getProvider,
   normalizeParams,
-  setInterval
+  timer
 };
 

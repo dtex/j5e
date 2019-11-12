@@ -37,7 +37,7 @@ npm install j5e
 {
 	"include": [
 		"$(MODDABLE)/modules/io/manifest.json",
-		"./node_modules/j5e/manifest.json"
+		"./node_modules/j5e/modules/manifest.json"
 	],
 	"modules": {
 		"*": [

@@ -1,16 +1,15 @@
-const chai = require('chai');
 const assert = require('assert');
 const sinon = require('sinon');
 
-import { Digital } from './../../mock/provider.js';
-import { clearInterval, constrain, normalizeParams, setInterval } from './../fn.js';
+import { Digital } from "mock-io";
+import { constrain, normalizeParams, timer } from '../modules/util/fn';
 
 describe('Fn', function() {
   
   describe('normalizeParams', function() {
     
     it('should return valid ioOpts and deviceOpts when passed a provider class and pin number', function() {
-      const {ioOpts, deviceOpts} = normalizeParams(Digital, 13);
+      const {ioOpts, deviceOpts} = normalizeParams(13, Digital);
       assert.equal(Object.is(ioOpts.io, Digital), true);
       assert.equal(ioOpts.pin, 13);
       assert.equal(typeof deviceOpts, "object");
@@ -45,7 +44,7 @@ describe('Fn', function() {
   });
 
   describe('constrain', function() {
-    
+   
     it('should return the value when value is in range', function() {
       const result = constrain(128, 0, 255);
       assert.equal(result, 128);

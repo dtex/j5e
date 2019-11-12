@@ -3,31 +3,38 @@
   "version": "0.0.4",
   "description": "j5e is a device framework built for ECMA TC-53's IO pattern",
   "main": "index.js",
+  "type": "module",
   "directories": {
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/mocha --harmony --require esm"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dtex/j5e.git"
   },
   "keywords": [
-    
-    "javascript", "robotics", "IoT", "embedded",
-
-    "moddable", "xs",
-    
+    "javascript",
+    "robotics",
+    "IoT",
+    "embedded",
+    "moddable",
+    "xs",
     "esp8266",
-    
-    "led", "switch"
-
+    "led",
+    "switch"
   ],
   "author": "Donovan Buck <donovan@donovan.bz>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dtex/j5e/issues"
   },
-  "homepage": "https://github.com/dtex/j5e#readme"
+  "homepage": "https://github.com/dtex/j5e#readme",
+  "devDependencies": {
+    "assert": "^2.0.0",
+    "esm": "^3.2.25",
+    "mocha": "^6.2.2",
+    "sinon": "^7.5.0"
+  }
 }

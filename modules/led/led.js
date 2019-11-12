@@ -1,5 +1,4 @@
-import { Emitter } from "@j5e/event";
-import {normalizeParams, constrain, getProvider, setInterval, clearInterval} from "@j5e/fn";
+import {normalizeParams, constrain, getProvider, timer} from "../util/fn.js";
 
 /**
  * Led
@@ -112,23 +111,23 @@ class Led {
    * @param  {Number} duration Time in ms on, time in ms off
    * @return {Led}
    */
-  blink(duration, callback) {
+  blink(duration=100, callback) {
     // Avoid traffic jams
     this.stop();
 
     if (typeof duration === "function") {
       callback = duration;
-      duration = null;
+      duration = 100;
     }
 
     this.#state.isRunning = true;
 
-    this.#state.interval = System.setInterval(() => {
+    this.#state.interval = timer.setInterval(() => {
         this.toggle();
       if (typeof callback === "function") {
         callback();
       }
-    }, 100);
+    }, duration);
 
     return this;
   }
@@ -162,7 +161,7 @@ class Led {
 
     // Avoid traffic jams
     if (this.#state.interval) {
-      System.clearInterval(this.#state.interval);
+      timer.clearInterval(this.#state.interval);
     }
 
     if (!opts.duration) {
@@ -177,7 +176,7 @@ class Led {
 
     this.#state.isRunning = true;
 
-    this.#state.interval = System.setInterval(() => {
+    this.#state.interval = timer.setInterval(() => {
       const lapsed = Date.now() - start;
       let progress = lapsed / opts.duration;
 
@@ -190,7 +189,6 @@ class Led {
       opts.step(delta);
 
       if (progress === 1) {
-        this.stop();
         if (typeof opts.complete === "function") {
           opts.complete();
         }
@@ -206,7 +204,7 @@ class Led {
    * @return {Led}
    */
 
-  pulse(time, callback) {
+  pulse(time=1000, callback) {
     
     const target = this.#state.value !== 0 ?
       (this.#state.value === this.HIGH ? 0 : this.HIGH) : this.HIGH;
@@ -215,7 +213,7 @@ class Led {
 
     if (typeof time === "function") {
       callback = time;
-      time = null;
+      time = 1000;
     }
 
     const step = (delta) => {
@@ -251,13 +249,13 @@ class Led {
    * @return {Led}
    */
 
-  fade(val, time, callback) {
+  fade(val, time=1000, callback) {
     const previous = this.#state.value || 0;
     const update = val - this.#state.value;
 
     if (typeof time === "function") {
       callback = time;
-      time = null;
+      time = 1000;
     }
 
     const step = (delta) => {
@@ -278,12 +276,12 @@ class Led {
     });
   }
 
-  fadeIn(time, callback) {
-    return this.fade(this.HIGH, time || 1000, callback);
+  fadeIn(time=1000, callback) {
+    return this.fade(this.HIGH, time, callback);
   }
 
-  fadeOut(time, callback) {
-    return this.fade(this.LOW, time || 1000, callback);
+  fadeOut(time=1000, callback) {
+    return this.fade(this.LOW, time, callback);
   }
 
   /**
@@ -293,11 +291,7 @@ class Led {
   stop() {
     
     if (this.#state.interval) {
-      System.clearInterval(this.#state.interval);
-    }
-
-    if (this.#state.animation) {
-      this.#state.animation.stop();
+      timer.clearInterval(this.#state.interval);
     }
 
     this.#state.interval = null;

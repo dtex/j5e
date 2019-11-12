@@ -1,5 +1,5 @@
-import { Emitter } from "@j5e/event";
-import {normalizeParams, getProvider} from "@j5e/fn";
+import { Emitter } from "../util/event.js";
+import {normalizeParams, getProvider} from "../util/fn.js";
 
 
 // TODO: Research "Normally Open" vs "Sink Drive"
@@ -24,7 +24,6 @@ class Switch extends Emitter {
       super();
 
       const Provider = await getProvider(ioOpts, "builtin/digital");
-      
       this.io = new Provider({
         pin: ioOpts.pin,
         mode: Provider.Input,
