@@ -1,8 +1,8 @@
 {
   "modules": {
-    "@j5e/event": "./util/event",
-    "@j5e/fn": "./util/fn",
-    "@j5e/led": "./led/led",
-    "@j5e/switch": "./switch/switch"
+    "j5e/event": "./util/event",
+    "j5e/fn": "./util/fn",
+    "j5e/led": "./led/led",
+    "j5e/switch": "./switch/switch"
   }
 }		

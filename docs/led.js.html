@@ -1,14 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: led.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: led.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import {normalizeParams, constrain, getProvider, timer} from "../util/fn.js";
+
 /**
- * Led module - For controlling LED's
- * @module j5e/led
+ * Led
+ * @constructor
+ *
+ * @param {opts} 
+ *
  */
 
-import {normalizeParams, constrain, getProvider, timer} from "../util/fn.js";
-
-/** 
- * Class representing an LED
- * @classdesc The Led class allows for control of LED's
- */
 class Led {
   
   #state = {
@@ -22,13 +49,6 @@ class Led {
     HIGH: 1
   };
 
-  /**
-   * Instantiate an LED
-   * @param {(number|string|object)} io - A pin number, pin identifier or a complete IO options object
-   * @param {(number|string)} [io.pin] - If passing an object, a pin number or pin identifier
-   * @param {(string|constructor)} [io.io=builtin/digital] - If passing an object, a string specifying a path to the IO provider or a constructor
-   * @param {object} [device={}] - An object containing device options
-   */
   constructor(io, device) {
     return (async () => {
       const {ioOpts, deviceOpts} = normalizeParams(io, device);
@@ -66,7 +86,7 @@ class Led {
       });
       
       if (this.io.resolution) {
-        this.HIGH = (1 << this.io.resolution) -1;
+        this.HIGH = (1 &lt;&lt; this.io.resolution) -1;
       } else {
         this.HIGH = 1;
       }
@@ -76,7 +96,7 @@ class Led {
   }
 
   /**
-   * Internal method that writes the current LED value to the IO
+   * Internal method that writes to IO
    */
   write() {
     let value = constrain(this.#state.value, this.LOW, this.HIGH);
@@ -90,7 +110,6 @@ class Led {
 
   /**
    * Turn an led on
-   * @return {Led}
    */
   on() {
     this.#state.value = this.HIGH;
@@ -100,7 +119,6 @@ class Led {
 
   /**
    * Turn an led off
-   * @return {Led}
    */
   off() {
     this.#state.value = this.LOW;
@@ -110,16 +128,15 @@ class Led {
 
   /**
    * Toggle the on/off state of an led
-   * @return {Led}
+   * * @return {Led}
    */
   toggle() {
     return this[this.isOn ? "off" : "on"]();
   }
 
   /**
-   * Blink the LED on a fixed interval
-   * @param {Number} duration=100 - Time in ms on, time in ms off
-   * @param {Function} callback - Method to call on blink
+   * blink
+   * @param  {Number} duration Time in ms on, time in ms off
    * @return {Led}
    */
   blink(duration=100, callback) {
@@ -144,9 +161,11 @@ class Led {
   }
 
   /**
-   * Set the brightness of an led attached to PWM
-   * @param {Integer} value - Brightness value [this.HIGH, this.LOW]
-   * @return {Led}
+   * set the brightness of an led attached to PWM
+   * @param {value} int {
+   *   vale: Value to set to PWM [this.HIGH, this.LOW]
+   * }
+   * return {Led}
    */
   brightness(value) {
     this.#state.value = value;
@@ -155,13 +174,14 @@ class Led {
   }
 
   /**
-  * Animate the brightness of an led. THis method is not meant to be called externally
-  * @param {Object} opts
-  * @param {function} opts.step - A callback to be run each time the LED state changes
-  * @param {function} opts.delta - A function that calculate each step's change
-  * @param {function} opts.complete - A function to call on completion
-  * @param {number} opts.duration=1000 - Duration of the animation in ms
-  * @param {number} opts.delay=10 - Interval delay in ms
+  * animate Animate the brightness of an led
+  * @param {Object} opts {
+  *   step: function to call on each step
+  *   delta: function to calculate each change
+  *   complete: function to call on completion,
+  *   duration: ms duration of animation
+  *   delay: ms interval delay
+  * }
   * @return {Led}
   */
   animate(opts) {
@@ -207,9 +227,8 @@ class Led {
   }
 
   /**
-   * Pulse the Led in and out in a loop with specified time
-   * @param {number} [time=1000] Time in ms that a fade in/out will elapse
-   * @param {function} [callback] A function to run each time the direction of pulse changes
+   * pulse Fade the Led in and out in a loop with specified time
+   * @param  {number} rate Time in ms that a fade in/out will elapse
    * @return {Led}
    */
 
@@ -218,7 +237,7 @@ class Led {
     const target = this.#state.value !== 0 ?
       (this.#state.value === this.HIGH ? 0 : this.HIGH) : this.HIGH;
     const direction = target === this.HIGH ? 1 : -1;
-    const update = this.#state.value <= target ? target : (this.#state.value - target);
+    const update = this.#state.value &lt;= target ? target : (this.#state.value - target);
 
     if (typeof time === "function") {
       callback = time;
@@ -253,11 +272,11 @@ class Led {
 
   /**
    * fade Fade an led in and out
-   * @param {Number} val Target brightness value
-   * @param {Number} [time=1000] Time in ms that a fade will take
-   * @param {function} [callback] A function to run when the fade is complete
+   * @param  {Number} val  Analog brightness value 0-255
+   * @param  {Number} time Time in ms that a fade in/out will elapse
    * @return {Led}
    */
+
   fade(val, time=1000, callback) {
     const previous = this.#state.value || 0;
     const update = val - this.#state.value;
@@ -285,22 +304,10 @@ class Led {
     });
   }
 
-  /**
-   * fade Fade an led in
-   * @param {Number} [time=1000] Time in ms that a fade will take
-   * @param {function} [callback] A function to run when the fade is complete
-   * @return {Led}
-   */
   fadeIn(time=1000, callback) {
     return this.fade(this.HIGH, time, callback);
   }
 
-  /**
-   * fade Fade an led out
-   * @param {Number} [time=1000] Time in ms that a fade will take
-   * @param {function} [callback] A function to run when the fade is complete
-   * @return {Led}
-   */
   fadeOut(time=1000, callback) {
     return this.fade(this.LOW, time, callback);
   }
@@ -323,4 +330,26 @@ class Led {
 
 };
 
-export default Led;
+export default Led;</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Led.html">Led</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Tue Nov 12 2019 18:56:52 GMT-0600 (Central Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

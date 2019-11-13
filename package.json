@@ -1,6 +1,6 @@
 {
   "name": "j5e",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "j5e is a device framework built for ECMA TC-53's IO pattern",
   "main": "index.js",
   "type": "module",
@@ -8,7 +8,8 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha --harmony --require esm"
+    "test": "./node_modules/mocha/bin/mocha --harmony --require esm",
+    "docs": "jsdoc -c ./jsdoc.conf.json"
   },
   "repository": {
     "type": "git",
