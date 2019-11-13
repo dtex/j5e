@@ -6,8 +6,6 @@
 import { Emitter } from "../util/event.js";
 import {normalizeParams, getProvider} from "../util/fn.js";
 
-
-// TODO: Research "Normally Open" vs "Sink Drive"
 /** 
  * Class representing a switch
  * @classdesc The Switch class allows for control of digital switches
@@ -17,17 +15,14 @@ import {normalizeParams, getProvider} from "../util/fn.js";
  */
 class Switch extends Emitter {
   
-  #state = {
-    normallyOpen: true,
-    raw: null 
-  };
-
   /**
    * Instantiate a switch
    * @param {(number|string|object)} io - A pin number, pin identifier or a complete IO options object
    * @param {(number|string)} [io.pin] - If passing an object, a pin number or pin identifier
    * @param {(string|constructor)} [io.io=builtin/digital] - If passing an object, a string specifying a path to the IO provider or a constructor
    * @param {object} [device={}] - An object containing device options
+   * @property {boolean} isClosed - True if the switch is closed (current is flowing)
+   * @property {boolean} isClosed - True if the switch is open (current is not flowing)
    */
   constructor(io, device) { 
     return (async () => {
@@ -41,9 +36,6 @@ class Switch extends Emitter {
         edge: Provider.Rising | Provider.Falling,
         onReadable: () => { this.emit(this.isOpen ? "open" : "close") }
       });
-
-      // Is this instance Normally Open
-      this.#state.normallyOpen = deviceOpts.type !== "NC";
 
       Object.defineProperties(this, {
         isClosed: {

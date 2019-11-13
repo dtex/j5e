@@ -12,14 +12,12 @@ import {normalizeParams, constrain, getProvider, timer} from "../util/fn.js";
 class Led {
   
   #state = {
-    isAnode: false, 
+    sink: false, 
     isRunning: false,
     value: 0,
     direction: 1,
     mode: null,
-    intensity: 0,
-    interval: null,
-    HIGH: 1
+    interval: null
   };
 
   /**
@@ -28,6 +26,7 @@ class Led {
    * @param {(number|string)} [io.pin] - If passing an object, a pin number or pin identifier
    * @param {(string|constructor)} [io.io=builtin/digital] - If passing an object, a string specifying a path to the IO provider or a constructor
    * @param {object} [device={}] - An object containing device options
+   * @param {boolean} [device.sink=false] - True if the device is wired for sink drive
    */
   constructor(io, device) {
     return (async () => {
@@ -64,6 +63,10 @@ class Led {
           }
         }
       });
+
+      if (device.sink) {
+        this.#state.sink = true;
+      }
       
       if (this.io.resolution) {
         this.HIGH = (1 << this.io.resolution) -1;
@@ -81,7 +84,7 @@ class Led {
   write() {
     let value = constrain(this.#state.value, this.LOW, this.HIGH);
 
-    if (this.#state.isAnode) {
+    if (this.#state.sink) {
       value = this.HIGH - value;
     }
 
