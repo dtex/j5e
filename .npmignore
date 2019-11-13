@@ -1,0 +1,5 @@
+docs/
+examples/
+test/
+.gitignore
+jsdoc.conf.json
