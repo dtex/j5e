@@ -3,4 +3,4 @@ j5e is a device framework built for ECMA TC-53's IO pattern. Right now, that's o
 
 This project is very much in a "pre-alpha" form so use at your own risk.
 
-Check out the [Getting Started]() guide.
+Check out the [Getting Started](https://github.com/dtex/j5e/blob/master/examples/GETSTARTED.md) guide.
