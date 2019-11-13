@@ -64,7 +64,7 @@ class Led {
         }
       });
 
-      if (device.sink) {
+      if (deviceOpts.sink) {
         this.#state.sink = true;
       }
       
