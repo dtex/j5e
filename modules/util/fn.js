@@ -31,6 +31,7 @@ export function constrain(value, low, high) {
   return value;
 }
 
+
 /**
  * Map a value (number) from one range to another. Based on Arduino's map().
  *
@@ -43,7 +44,7 @@ export function constrain(value, low, high) {
  * @example
  * Fn.map(500, 0, 1000, 0, 255); // ->
  */
-export function map (value, fromLow, fromHigh, toLow, toHigh) {
+export function map(value, fromLow, fromHigh, toLow, toHigh) {
   return ((value - fromLow) * (toHigh - toLow) / (fromHigh - fromLow) + toLow) | 0;
 };
 

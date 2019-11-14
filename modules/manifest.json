@@ -5,6 +5,7 @@
     "j5e/event": "./util/event",
     "j5e/fn": "./util/fn",
     "j5e/led": "./led/led",
+    "j5e/servo": "./servo/servo",
     "j5e/switch": "./switch/switch"
   }
 }		
