@@ -165,7 +165,7 @@ class Animation extends Emitter {
    * Not intended to be called externally
    */
   loopFunction({calledAt}) {
-console.log("loop", calledAt);
+
     // Find the current timeline progress
     const progress = this.calculateProgress(calledAt);
 
@@ -451,7 +451,6 @@ class Timer {
    */
   constructor(animation) {
     this.interval = timer.setInterval(() => {
-      console.log("setInterval", Date.now());
       animation.loopFunction({
         calledAt: Date.now()
       });
