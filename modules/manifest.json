@@ -1,5 +1,6 @@
 {
   "modules": {
+    "j5e/animation": "./util/animation",
     "j5e/easing": "./util/easing",
     "j5e/event": "./util/event",
     "j5e/fn": "./util/fn",

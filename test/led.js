@@ -104,6 +104,7 @@ describe('Led - Digital', function() {
       assert.equal(led.value, 0);
       assert.equal(writeSpy.callCount, 10);
 
+      clock.restore();
     });
 
   });
@@ -129,6 +130,7 @@ describe('Led - Digital', function() {
       assert.equal(led.value, 1);
       assert.equal(led.io.write.callCount, 5);
 
+      clock.restore();
     });
 
   });

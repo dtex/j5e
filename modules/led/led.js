@@ -4,6 +4,7 @@
  */
 
 import {normalizeParams, constrain, getProvider, timer} from "../util/fn.js";
+import {inOutSine, outSine} from "../util/easing.js";
 
 /** 
  * Class representing an LED
@@ -78,7 +79,7 @@ class Led {
     })();
   }
 
-  /**
+   /**
    * Internal method that writes the current LED value to the IO
    */
   write() {
@@ -158,55 +159,14 @@ class Led {
   }
 
   /**
-  * Animate the brightness of an led. THis method is not meant to be called externally
-  * @param {Object} opts
-  * @param {function} opts.step - A callback to be run each time the LED state changes
-  * @param {function} opts.delta - A function that calculate each step's change
-  * @param {function} opts.complete - A function to call on completion
-  * @param {number} opts.duration=1000 - Duration of the animation in ms
-  * @param {number} opts.delay=10 - Interval delay in ms
-  * @return {Led}
-  */
-  animate(opts) {
-    var start = Date.now();
-
-    // Avoid traffic jams
-    if (this.#state.interval) {
-      timer.clearInterval(this.#state.interval);
-    }
-
-    if (!opts.duration) {
-      opts.duration = 1000;
-    }
-
-    if (!opts.delta) {
-      opts.delta = function(val) {
-        return val;
-      };
-    }
-
-    this.#state.isRunning = true;
-
-    this.#state.interval = timer.setInterval(() => {
-      const lapsed = Date.now() - start;
-      let progress = lapsed / opts.duration;
-
-      if (progress > 1) {
-        progress = 1;
-      }
-
-      const delta = opts.delta(progress);
-
-      opts.step(delta);
-
-      if (progress === 1) {
-        if (typeof opts.complete === "function") {
-          opts.complete();
-        }
-      }
-    }, opts.delay || 10);
-
-   return this;
+   * Set the brightness of an led 0-100
+   * @param {Integer} value - Brightness value [0, 100]
+   * @return {Led}
+   */
+  intensity(value) {
+    this.#state.value = map(value, 0, 100, this.LOW, this.HIGH);
+    this.io.write(value);
+    return this;
   }
 
   /**
@@ -218,40 +178,36 @@ class Led {
 
   pulse(time=1000, callback) {
     
-    const target = this.#state.value !== 0 ?
-      (this.#state.value === this.HIGH ? 0 : this.HIGH) : this.HIGH;
-    const direction = target === this.HIGH ? 1 : -1;
-    const update = this.#state.value <= target ? target : (this.#state.value - target);
+    this.stop();
+
+    var options = {
+      duration: typeof time === "number" ? time : 1000,
+      keyFrames: [this.LOW, this.HIGH],
+      metronomic: true,
+      loop: true,
+      easing: inOutSine,
+      onloop: function() {
+        /* istanbul ignore else */
+        if (typeof callback === "function") {
+          callback();
+        }
+      }
+    };
+
+    if (typeof time === "object") {
+      Object.assign(options, time);
+    }
 
     if (typeof time === "function") {
       callback = time;
-      time = 1000;
     }
 
-    const step = (delta) => {
-      let value = (update * delta);
+    this.#state.isRunning = true;
 
-      if (direction === -1) {
-        value = value ^ this.HIGH;
-      }
-
-      this.#state.value = value;
-      this.#state.direction = direction;
-      this.write();
-    };
-
-    const complete = () => {
-      this.pulse(time, callback);
-      if (typeof callback === "function") {
-        callback();
-      }
-    };
-
-    return this.animate({
-      duration: time,
-      complete: complete,
-      step: step
-    });
+    this.#state.animation = this.#state.animation || new Animation(this);
+    this.#state.animation.enqueue(options);
+    return this;
+    
   }  
 
   /**
@@ -262,30 +218,43 @@ class Led {
    * @return {Led}
    */
   fade(val, time=1000, callback) {
-    const previous = this.#state.value || 0;
-    const update = val - this.#state.value;
+    
+    this.stop();
+
+    var options = {
+      duration: typeof time === "number" ? time : 1000,
+      keyFrames: [null, typeof val === "number" ? val : 0xff],
+      easing: outSine,
+      oncomplete: function() {
+        this.#state.isRunning = false;
+        if (typeof callback === "function") {
+          callback();
+        }
+      }
+    };
+
+    if (typeof val === "object") {
+      Object.assign(options, val);
+    }
+
+    if (typeof val === "function") {
+      callback = val;
+    }
+
+    if (typeof time === "object") {
+      Object.assign(options, time);
+    }
 
     if (typeof time === "function") {
       callback = time;
-      time = 1000;
     }
 
-    const step = (delta) => {
-      const value = previous + (update * delta);
-      this.#state.value = value;
-      this.write();
-    };
+    this.#state.isRunning = true;
 
-    const complete = () => {
-      if (typeof callback === "function") {
-        callback();
-      }
-    };
-    return this.animate({
-      duration: time,
-      complete: complete,
-      step: step
-    });
+    this.#state.animation = this.#state.animation || new Animation(this);
+    this.#state.animation.enqueue(options);
+
+    return this;
   }
 
   /**
@@ -322,6 +291,53 @@ class Led {
     this.#state.isRunning = false;
 
     return this;
+  };
+
+  /**
+   * @param [number || object] keyFrames An array of step values or a keyFrame objects
+   */
+
+  normalize(keyFrames) {
+    
+    // If user passes null as the first element in keyFrames use current value
+    /* istanbul ignore else */
+    if (keyFrames[0] === null) {
+      keyFrames[0] = {
+        value: this.#state.value || 0
+      };
+    }
+
+    return keyFrames.map(function(frame) {
+      let value = frame;
+      /* istanbul ignore else */
+      if (frame !== null) {
+        // frames that are just numbers represent values
+        if (typeof frame === "number") {
+          frame = {
+            value: value,
+          };
+        } else {
+          if (typeof frame.brightness === "number") {
+            frame.value = frame.brightness;
+            delete frame.brightness;
+          }
+          if (typeof frame.intensity === "number") {
+            frame.value = Fn.scale(frame.intensity, 0, 100, 0, 255);
+            delete frame.intensity;
+          }
+        }
+
+      }
+      return frame;
+    });
+  }
+
+  /**
+   * @position [number] value to set the led to
+   */
+  render(position) {
+    this.#state.value = position[0];
+    return this.write();
   };
 
 };
