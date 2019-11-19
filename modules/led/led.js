@@ -5,6 +5,7 @@
 
 import {normalizeParams, constrain, getProvider, timer} from "../util/fn.js";
 import {inOutSine, outSine} from "../util/easing.js";
+import Animation from "../util/animation.js";
 
 /** 
  * Class representing an LED
@@ -226,7 +227,7 @@ class Led {
       keyFrames: [null, typeof val === "number" ? val : 0xff],
       easing: outSine,
       oncomplete: function() {
-        this.#state.isRunning = false;
+        this.stop();
         if (typeof callback === "function") {
           callback();
         }
