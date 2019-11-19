@@ -31,7 +31,7 @@
  * @module j5e/servo
  */
 import { Emitter } from "../util/event.js";
-import {normalizeParams, getProvider} from "../util/fn.js";
+import {normalizeParams, getProvider, map} from "../util/fn.js";
 
 /** 
  * Class representing a Servo
@@ -70,7 +70,8 @@ class Servo extends Emitter {
    * @property {object} last - The most recent position update
    * @property {object[]} last.timestamp - Timestamp of position update
    * @property {object[]} last.target - The user requested position
-   * @property {object[]} last.degrees - The actual position (factors in offset and invert)
+   * @property {object[]} last.degrees - The corrected position (factors in offset and invert)
+   * @property {number} position - The most recent request and corrected position (factors in offset and invert)
    */
   constructor(io, device) {
     return (async () => {
@@ -109,255 +110,59 @@ class Servo extends Emitter {
         }
       });
 
+      this.initialize(opts);
+
+      // If "startAt" is defined and center is falsy
+      // set servo to min or max degrees
+      if (typeof deviceOpts.startAt !== "undefined") {
+        this.to(deviceOpts.startAt);
+      } else {
+
+        if (deviceOpts.center) {
+          this.center();
+        }
+
+        if (deviceOpts.type === "continuous") {
+          this.stop();
+        }
+      
+      }
+
       return this;
     })();
   }
 
-  // /**
-  //  * Internal method that writes the current LED value to the IO
-  //  */
-  // write() {
-  //   let value = constrain(this.#state.value, this.LOW, this.HIGH);
+  /**
+   * The initialization code for a servo
+   */
+  initialize(deviceOpts) {
+    // No operation here... Meant to be overwritten by descendants
+  }
 
-  //   if (this.#state.sink) {
-  //     value = this.HIGH - value;
-  //   }
-
-  //   this.io.write(value | 0);
-  // }
-
-  // /**
-  //  * Turn an led on
-  //  * @return {Led}
-  //  */
-  // on() {
-  //   this.#state.value = this.HIGH;
-  //   this.write();
-  //   return this;
-  // }
-
-  // /**
-  //  * Turn an led off
-  //  * @return {Led}
-  //  */
-  // off() {
-  //   this.#state.value = this.LOW;
-  //   this.write();
-  //   return this;
-  // }
-
-  // /**
-  //  * Toggle the on/off state of an led
-  //  * @return {Led}
-  //  */
-  // toggle() {
-  //   return this[this.isOn ? "off" : "on"]();
-  // }
-
-  // /**
-  //  * Blink the LED on a fixed interval
-  //  * @param {Number} duration=100 - Time in ms on, time in ms off
-  //  * @param {Function} callback - Method to call on blink
-  //  * @return {Led}
-  //  */
-  // blink(duration=100, callback) {
-  //   // Avoid traffic jams
-  //   this.stop();
-
-  //   if (typeof duration === "function") {
-  //     callback = duration;
-  //     duration = 100;
-  //   }
-
-  //   this.#state.isRunning = true;
-
-  //   this.#state.interval = timer.setInterval(() => {
-  //       this.toggle();
-  //     if (typeof callback === "function") {
-  //       callback();
-  //     }
-  //   }, duration);
-
-  //   return this;
-  // }
-
-  // /**
-  //  * Set the brightness of an led attached to PWM
-  //  * @param {Integer} value - Brightness value [this.HIGH, this.LOW]
-  //  * @return {Led}
-  //  */
-  // brightness(value) {
-  //   this.#state.value = value;
-  //   this.io.write(value);
-  //   return this;
-  // }
-
-  // /**
-  // * Animate the brightness of an led. THis method is not meant to be called externally
-  // * @param {Object} opts
-  // * @param {function} opts.step - A callback to be run each time the LED state changes
-  // * @param {function} opts.delta - A function that calculate each step's change
-  // * @param {function} opts.complete - A function to call on completion
-  // * @param {number} opts.duration=1000 - Duration of the animation in ms
-  // * @param {number} opts.delay=10 - Interval delay in ms
-  // * @return {Led}
-  // */
-  // animate(opts) {
-  //   var start = Date.now();
-
-  //   // Avoid traffic jams
-  //   if (this.#state.interval) {
-  //     timer.clearInterval(this.#state.interval);
-  //   }
-
-  //   if (!opts.duration) {
-  //     opts.duration = 1000;
-  //   }
-
-  //   if (!opts.delta) {
-  //     opts.delta = function(val) {
-  //       return val;
-  //     };
-  //   }
-
-  //   this.#state.isRunning = true;
-
-  //   this.#state.interval = timer.setInterval(() => {
-  //     const lapsed = Date.now() - start;
-  //     let progress = lapsed / opts.duration;
-
-  //     if (progress > 1) {
-  //       progress = 1;
-  //     }
-
-  //     const delta = opts.delta(progress);
-
-  //     opts.step(delta);
-
-  //     if (progress === 1) {
-  //       if (typeof opts.complete === "function") {
-  //         opts.complete();
-  //       }
-  //     }
-  //   }, opts.delay || 10);
-
-  //  return this;
-  // }
-
-  // /**
-  //  * Pulse the Led in and out in a loop with specified time
-  //  * @param {number} [time=1000] Time in ms that a fade in/out will elapse
-  //  * @param {function} [callback] A function to run each time the direction of pulse changes
-  //  * @return {Led}
-  //  */
-
-  // pulse(time=1000, callback) {
+  /**
+   * Calls the write param on the IO instance for this servo.
+   * @param {number} degrees - The absolute position to move a servo to
+   * @returns {Servo}
+   */
+  update(degrees) {
     
-  //   const target = this.#state.value !== 0 ?
-  //     (this.#state.value === this.HIGH ? 0 : this.HIGH) : this.HIGH;
-  //   const direction = target === this.HIGH ? 1 : -1;
-  //   const update = this.#state.value &lt;= target ? target : (this.#state.value - target);
+    // If same degrees return immediately.
+    if (this.last &amp;&amp; this.last.degrees === degrees) {
+      return this;
+    }
 
-  //   if (typeof time === "function") {
-  //     callback = time;
-  //     time = 1000;
-  //   }
+    // Map value from degreeRange to pwmRange
+    let microseconds = map(
+      degrees,
+      this.degreeRange[0], this.degreeRange[1],
+      this.pwmRange[0], this.pwmRange[1]
+    );
 
-  //   const step = (delta) => {
-  //     let value = (update * delta);
+    // Restrict values to integers
+    microseconds |= 0;
 
-  //     if (direction === -1) {
-  //       value = value ^ this.HIGH;
-  //     }
-
-  //     this.#state.value = value;
-  //     this.#state.direction = direction;
-  //     this.write();
-  //   };
-
-  //   const complete = () => {
-  //     this.pulse(time, callback);
-  //     if (typeof callback === "function") {
-  //       callback();
-  //     }
-  //   };
-
-  //   return this.animate({
-  //     duration: time,
-  //     complete: complete,
-  //     step: step
-  //   });
-  // }  
-
-  // /**
-  //  * fade Fade an led in and out
-  //  * @param {Number} val Target brightness value
-  //  * @param {Number} [time=1000] Time in ms that a fade will take
-  //  * @param {function} [callback] A function to run when the fade is complete
-  //  * @return {Led}
-  //  */
-  // fade(val, time=1000, callback) {
-  //   const previous = this.#state.value || 0;
-  //   const update = val - this.#state.value;
-
-  //   if (typeof time === "function") {
-  //     callback = time;
-  //     time = 1000;
-  //   }
-
-  //   const step = (delta) => {
-  //     const value = previous + (update * delta);
-  //     this.#state.value = value;
-  //     this.write();
-  //   };
-
-  //   const complete = () => {
-  //     if (typeof callback === "function") {
-  //       callback();
-  //     }
-  //   };
-  //   return this.animate({
-  //     duration: time,
-  //     complete: complete,
-  //     step: step
-  //   });
-  // }
-
-  // /**
-  //  * fade Fade an led in
-  //  * @param {Number} [time=1000] Time in ms that a fade will take
-  //  * @param {function} [callback] A function to run when the fade is complete
-  //  * @return {Led}
-  //  */
-  // fadeIn(time=1000, callback) {
-  //   return this.fade(this.HIGH, time, callback);
-  // }
-
-  // /**
-  //  * fade Fade an led out
-  //  * @param {Number} [time=1000] Time in ms that a fade will take
-  //  * @param {function} [callback] A function to run when the fade is complete
-  //  * @return {Led}
-  //  */
-  // fadeOut(time=1000, callback) {
-  //   return this.fade(this.LOW, time, callback);
-  // }
-
-  // /**
-  //  * stop Stop the led from strobing, pulsing or fading
-  //  * @return {Led}
-  //  */
-  // stop() {
-    
-  //   if (this.#state.interval) {
-  //     timer.clearInterval(this.#state.interval);
-  //   }
-
-  //   this.#state.interval = null;
-  //   this.#state.isRunning = false;
-
-  //   return this;
-  // };
+    this.io.write(microseconds);
+  }
 
 };
 
@@ -371,13 +176,13 @@ export default Servo;</code></pre>
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-j5e_event.html">j5e/event</a></li><li><a href="module-j5e_fn.html">j5e/fn</a></li><li><a href="module-j5e_led.html">j5e/led</a></li><li><a href="module-j5e_servo.html">j5e/servo</a></li><li><a href="module-j5e_switch.html">j5e/switch</a></li></ul><h3>Classes</h3><ul><li><a href="module-j5e_event.Emitter.html">Emitter</a></li><li><a href="module-j5e_led-Led.html">Led</a></li><li><a href="module-j5e_servo-Servo.html">Servo</a></li><li><a href="module-j5e_switch-Switch.html">Switch</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-j5e_animation.html">j5e/animation</a></li><li><a href="module-j5e_easing.html">j5e/easing</a></li><li><a href="module-j5e_event.html">j5e/event</a></li><li><a href="module-j5e_fn.html">j5e/fn</a></li><li><a href="module-j5e_led.html">j5e/led</a></li><li><a href="module-j5e_servo.html">j5e/servo</a></li><li><a href="module-j5e_switch.html">j5e/switch</a></li></ul><h3>Classes</h3><ul><li><a href="module-j5e_animation-Animation.html">Animation</a></li><li><a href="module-j5e_animation-Segment.html">Segment</a></li><li><a href="module-j5e_animation-Timer.html">Timer</a></li><li><a href="module-j5e_event.Emitter.html">Emitter</a></li><li><a href="module-j5e_led-Led.html">Led</a></li><li><a href="module-j5e_servo-Servo.html">Servo</a></li><li><a href="module-j5e_switch-Switch.html">Switch</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Wed Nov 13 2019 19:18:31 GMT-0600 (Central Standard Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Tue Nov 19 2019 17:52:41 GMT-0600 (Central Standard Time)
 </footer>
 
 <script> prettyPrint(); </script>

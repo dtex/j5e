@@ -918,7 +918,7 @@
 
             
 
-            <td class="description last">The actual position (factors in offset and invert)</td>
+            <td class="description last">The corrected position (factors in offset and invert)</td>
         </tr>
 
     
@@ -926,6 +926,29 @@
 </table>
 
             </td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>position</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The most recent request and corrected position (factors in offset and invert)</td>
         </tr>
 
     
@@ -964,7 +987,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="servo_servo.js.html">servo/servo.js</a>, <a href="servo_servo.js.html#line47">line 47</a>
+        <a href="servo_servo.js.html">servo/servo.js</a>, <a href="servo_servo.js.html#line48">line 48</a>
     </li></ul></dd>
     
 
@@ -1028,6 +1051,253 @@
     
 
     
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="initialize"><span class="type-signature"></span>initialize<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    The initialization code for a servo
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="servo_servo.js.html">servo/servo.js</a>, <a href="servo_servo.js.html#line110">line 110</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="update"><span class="type-signature"></span>update<span class="signature">(degrees)</span><span class="type-signature"> &rarr; {Servo}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Calls the write param on the IO instance for this servo.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>degrees</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The absolute position to move a servo to</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="servo_servo.js.html">servo/servo.js</a>, <a href="servo_servo.js.html#line119">line 119</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Servo</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+    
 
     
 
@@ -1042,13 +1312,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-j5e_event.html">j5e/event</a></li><li><a href="module-j5e_fn.html">j5e/fn</a></li><li><a href="module-j5e_led.html">j5e/led</a></li><li><a href="module-j5e_servo.html">j5e/servo</a></li><li><a href="module-j5e_switch.html">j5e/switch</a></li></ul><h3>Classes</h3><ul><li><a href="module-j5e_event.Emitter.html">Emitter</a></li><li><a href="module-j5e_led-Led.html">Led</a></li><li><a href="module-j5e_servo-Servo.html">Servo</a></li><li><a href="module-j5e_switch-Switch.html">Switch</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-j5e_animation.html">j5e/animation</a></li><li><a href="module-j5e_easing.html">j5e/easing</a></li><li><a href="module-j5e_event.html">j5e/event</a></li><li><a href="module-j5e_fn.html">j5e/fn</a></li><li><a href="module-j5e_led.html">j5e/led</a></li><li><a href="module-j5e_servo.html">j5e/servo</a></li><li><a href="module-j5e_switch.html">j5e/switch</a></li></ul><h3>Classes</h3><ul><li><a href="module-j5e_animation-Animation.html">Animation</a></li><li><a href="module-j5e_animation-Segment.html">Segment</a></li><li><a href="module-j5e_animation-Timer.html">Timer</a></li><li><a href="module-j5e_event.Emitter.html">Emitter</a></li><li><a href="module-j5e_led-Led.html">Led</a></li><li><a href="module-j5e_servo-Servo.html">Servo</a></li><li><a href="module-j5e_switch-Switch.html">Switch</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Wed Nov 13 2019 19:18:31 GMT-0600 (Central Standard Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Tue Nov 19 2019 17:52:41 GMT-0600 (Central Standard Time)
 </footer>
 
 <script> prettyPrint(); </script>
