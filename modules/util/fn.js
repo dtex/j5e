@@ -31,6 +31,22 @@ export function constrain(value, low, high) {
   return value;
 }
 
+/**
+ * Map a value (number) from one range to another. Based on Arduino's map().
+ *
+ * @param {Number} value    - value to map
+ * @param {Number} fromLow  - low end of originating range
+ * @param {Number} fromHigh - high end of originating range
+ * @param {Number} toLow    - low end of target range
+ * @param {Number} toHigh   - high end of target range
+ * @return {Number} mapped value (integer)
+ * @example
+ * Fn.map(500, 0, 1000, 0, 255); // ->
+ */
+export function map (value, fromLow, fromHigh, toLow, toHigh) {
+  return ((value - fromLow) * (toHigh - toLow) / (fromHigh - fromLow) + toLow) | 0;
+};
+
 /** Asynchronously load a provider. This allows users to simply pass a path or skip specifying a provider altogether (uses builtins).
  * @param {object} ioOpts - An IO options object
  * @param {io} [ioOpts.io] - The path to the IO class

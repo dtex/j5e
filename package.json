@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --harmony --require esm",
-    "docs": "jsdoc -c ./jsdoc.conf.json"
+    "docs": "jsdoc -c ./examples/jsdoc.json"
   },
   "repository": {
     "type": "git",
@@ -37,6 +37,10 @@
     "esm": "^3.2.25",
     "mocha": "^6.2.2",
     "sinon": "^7.5.0",
-    "@dtex/mock-io": "^0.0.5"
+    "@dtex/mock-io": "^0.0.5",
+    "chai": "^4.2.0"
+  },
+  "dependencies": {
+    
   }
 }

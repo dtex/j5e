@@ -78,7 +78,7 @@ class Led {
     })();
   }
 
-  /**
+   /**
    * Internal method that writes the current LED value to the IO
    */
   write() {
@@ -153,6 +153,17 @@ class Led {
    */
   brightness(value) {
     this.#state.value = value;
+    this.io.write(value);
+    return this;
+  }
+
+  /**
+   * Set the brightness of an led 0-100
+   * @param {Integer} value - Brightness value [0, 100]
+   * @return {Led}
+   */
+  intensity(value) {
+    this.#state.value = map(value, 0, 100, this.LOW, this.HIGH);
     this.io.write(value);
     return this;
   }
@@ -322,6 +333,53 @@ class Led {
     this.#state.isRunning = false;
 
     return this;
+  };
+
+  /**
+   * @param [number || object] keyFrames An array of step values or a keyFrame objects
+   */
+
+  normalize(keyFrames) {
+    
+    // If user passes null as the first element in keyFrames use current value
+    /* istanbul ignore else */
+    if (keyFrames[0] === null) {
+      keyFrames[0] = {
+        value: this.#state.value || 0
+      };
+    }
+
+    return keyFrames.map(function(frame) {
+      let value = frame;
+      /* istanbul ignore else */
+      if (frame !== null) {
+        // frames that are just numbers represent values
+        if (typeof frame === "number") {
+          frame = {
+            value: value,
+          };
+        } else {
+          if (typeof frame.brightness === "number") {
+            frame.value = frame.brightness;
+            delete frame.brightness;
+          }
+          if (typeof frame.intensity === "number") {
+            frame.value = Fn.scale(frame.intensity, 0, 100, 0, 255);
+            delete frame.intensity;
+          }
+        }
+
+      }
+      return frame;
+    });
+  }
+
+  /**
+   * @position [number] value to set the led to
+   */
+  render(position) {
+    this.#state.value = position[0];
+    return this.write();
   };
 
 };
