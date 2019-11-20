@@ -3,8 +3,8 @@
  * @module j5e/switch
  */
 
-import { Emitter } from "../util/event.js";
-import {normalizeParams, getProvider} from "../util/fn.js";
+import { Emitter } from "j5e/event";
+import {normalizeParams, getProvider} from "j5e/fn";
 
 /** 
  * Class representing a switch

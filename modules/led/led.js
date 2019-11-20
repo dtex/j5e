@@ -3,9 +3,9 @@
  * @module j5e/led
  */
 
-import {normalizeParams, constrain, getProvider, timer} from "../util/fn.js";
-import {inOutSine, outSine} from "../util/easing.js";
-import Animation from "../util/animation.js";
+import {normalizeParams, constrain, getProvider, timer} from "j5e/fn";
+import {inOutSine, outSine} from "j5e/easing";
+import Animation from "j5e/animation";
 
 /** 
  * Class representing an LED
