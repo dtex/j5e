@@ -3,9 +3,9 @@
  * @module j5e/animation
  */
 
-import { Emitter } from "./event.js";
-import { linear } from "./easing.js";
-const { cloneDeep, constrain, timer } = require("./fn");
+import { Emitter } from "j5e/event";
+import { linear } from "j5e/easing";
+import { constrain, timer } from "j5e/fn";
 
 /** 
  * Class representing an Animation
@@ -123,7 +123,7 @@ class Animation extends Emitter {
   stop() {
 
     this.emit("animation:stop");
-
+trace("Animation stop");
     this.segments = [];
     this.isRunning = false;
     if (this.playLoop) {
@@ -457,6 +457,7 @@ class Timer {
     }, animation.rate);
   }
   stop() {
+    trace("timer stop");
     if (this.interval) {
       timer.clearInterval(this.interval);
     }
