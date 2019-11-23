@@ -79,7 +79,7 @@ export const timer = {
     if (global && global.clearInterval) {
       return global.clearInterval(identifier);
     }
-    if (System && System.clearInterval) {
+    if (System && System.clearInterval && identifier.timer) {
       return System.clearInterval(identifier);
     }
   }

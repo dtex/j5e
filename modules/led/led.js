@@ -42,7 +42,7 @@ class Led {
       });
       
       this.LOW = 0;
-
+      
       Object.defineProperties(this, {
         value: {
           get: function() {
@@ -286,6 +286,10 @@ class Led {
     
     if (this.#state.interval) {
       timer.clearInterval(this.#state.interval);
+    }
+
+    if (this.#state.animation) {
+      this.#state.animation.stop();
     }
 
     this.#state.interval = null;
