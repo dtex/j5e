@@ -1,39 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>JSDoc: Source: util/animation.js</title>
-
-    <script src="scripts/prettify/prettify.js"> </script>
-    <script src="scripts/prettify/lang-css.js"> </script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
-</head>
-
-<body>
-
-<div id="main">
-
-    <h1 class="page-title">Source: util/animation.js</h1>
-
-    
-
-
-
-    
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>/**
+/**
  * Animation module - Handles tweening between a series of key frames
  * @module j5e/animation
  */
 
-import { Emitter } from "j5e/event";
-import { linear } from "j5e/easing";
-import { constrain, timer } from "j5e/fn";
+// import { Emitter } from "@j5e/event";
+//import { linear } from "@j5e/easing";
+import { constrain, timer } from "@j5e/fn";
+
+function linear(n) { return n; }
 
 /** 
  * Class representing an Animation
@@ -41,7 +15,7 @@ import { constrain, timer } from "j5e/fn";
  * @fires animation:pause
  * @fires animation:stop
  */
-class Animation extends Emitter {
+class Animation {
 
   /**
    * Animation  
@@ -49,7 +23,7 @@ class Animation extends Emitter {
    * @param {Led|Led[]|Servo|Servo[]} target - LEDs or Servos to be animated
    */
   constructor(target) {
-    super();
+    // super();
     Object.assign(this, new Segment());
     this.defaultTarget = target || {};
   }
@@ -80,9 +54,13 @@ class Animation extends Emitter {
       options.target = this.defaultTarget;
     }
 
+    if (typeof options.easing === "undefined") {
+      options.easing = linear;
+    }
+
     this.segments.push(options);
 
-    if (!this.paused &amp;&amp; !this.isRunning) {
+    if (!this.paused && !this.isRunning) {
       this.next();
     }
 
@@ -132,7 +110,7 @@ class Animation extends Emitter {
    */
   pause() {
 
-    this.emit("animation:pause");
+    // this.emit("animation:pause");
 
     if (this.playLoop) {
       this.playLoop.stop();
@@ -150,8 +128,8 @@ class Animation extends Emitter {
    */
   stop() {
 
-    this.emit("animation:stop");
-trace("Animation stop");
+    // this.emit("animation:stop");
+
     this.segments = [];
     this.isRunning = false;
     if (this.playLoop) {
@@ -205,9 +183,9 @@ trace("Animation stop");
 
     // See if we have reached the end of the animation
     /* istanbul ignore else */
-    if ((this.progress === 1 &amp;&amp; !this.reverse) || (progress === this.loopback &amp;&amp; this.reverse)) {
+    if ((this.progress === 1 && !this.reverse) || (progress === this.loopback && this.reverse)) {
 
-      if (this.loop || (this.metronomic &amp;&amp; !this.reverse)) {
+      if (this.loop || (this.metronomic && !this.reverse)) {
 
         if (this.onloop) {
           this.onloop();
@@ -226,11 +204,11 @@ trace("Animation stop");
         this.isRunning = false;
 
         if (this.oncomplete) {
-          process.nextTick(this.oncomplete.bind(this));
+          timer.setImmediate(this.oncomplete.bind(this));
         }
 
         if (this.segments.length > 0) {
-          process.nextTick(() => { this.next(); });
+          timer.setImmediate(() => { this.next(); });
         } else {
           this.stop();
         }
@@ -335,7 +313,7 @@ trace("Animation stop");
 
       // If the keyframe at indices.right is null, move right
       kIndices.right = keyFrame.findIndex((frame, index) =>
-        index >= indices.right &amp;&amp; frame !== null
+        index >= indices.right && frame !== null
       );
 
       // Find our progress for the current tween
@@ -363,7 +341,7 @@ trace("Animation stop");
         calcValue = right.position.map((value, index) => (value - left.position[index]) *
           tween.progress + left.position[index]);
       } else {
-        if (typeof right.value === "number" &amp;&amp; typeof left.value === "number") {
+        if (typeof right.value === "number" && typeof left.value === "number") {
           calcValue = (right.value - left.value) * tween.progress + left.value;
         } else {
           calcValue = this.target[Animation.keys].reduce((accum, key) => {
@@ -400,7 +378,7 @@ trace("Animation stop");
     this.keyFrames.forEach(function(keyFrames) {
 
       // Pad the right side of keyFrames arrays with null
-      for (let i = keyFrames.length; i &lt; cuePoints.length; i++) {
+      for (let i = keyFrames.length; i < cuePoints.length; i++) {
         keyFrames.push(null);
       }
 
@@ -485,9 +463,9 @@ class Timer {
     }, animation.rate);
   }
   stop() {
-    trace("timer stop");
     if (this.interval) {
       timer.clearInterval(this.interval);
+      this.interval = null;
     }
   }
 };
@@ -544,26 +522,4 @@ class Segment {
   }
 }
 
-export default Animation;</code></pre>
-        </article>
-    </section>
-
-
-
-
-</div>
-
-<nav>
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-j5e_animation.html">j5e/animation</a></li><li><a href="module-j5e_easing.html">j5e/easing</a></li><li><a href="module-j5e_event.html">j5e/event</a></li><li><a href="module-j5e_fn.html">j5e/fn</a></li><li><a href="module-j5e_led.html">j5e/led</a></li><li><a href="module-j5e_servo.html">j5e/servo</a></li><li><a href="module-j5e_switch.html">j5e/switch</a></li></ul><h3>Classes</h3><ul><li><a href="module-j5e_animation-Animation.html">Animation</a></li><li><a href="module-j5e_animation-Segment.html">Segment</a></li><li><a href="module-j5e_animation-Timer.html">Timer</a></li><li><a href="module-j5e_event.Emitter.html">Emitter</a></li><li><a href="module-j5e_led-Led.html">Led</a></li><li><a href="module-j5e_servo-Servo.html">Servo</a></li><li><a href="module-j5e_switch-Switch.html">Switch</a></li></ul>
-</nav>
-
-<br class="clear">
-
-<footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Sun Nov 24 2019 23:45:05 GMT-0600 (Central Standard Time)
-</footer>
-
-<script> prettyPrint(); </script>
-<script src="scripts/linenumber.js"> </script>
-</body>
-</html>
+export default Animation;

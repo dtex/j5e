@@ -31,6 +31,7 @@ export function constrain(value, low, high) {
   return value;
 }
 
+
 /**
  * Map a value (number) from one range to another. Based on Arduino's map().
  *
@@ -43,7 +44,7 @@ export function constrain(value, low, high) {
  * @example
  * Fn.map(500, 0, 1000, 0, 255); // ->
  */
-export function map (value, fromLow, fromHigh, toLow, toHigh) {
+export function map(value, fromLow, fromHigh, toLow, toHigh) {
   return ((value - fromLow) * (toHigh - toLow) / (fromHigh - fromLow) + toLow) | 0;
 };
 
@@ -70,7 +71,7 @@ export const timer = {
     if (global && global.setInterval) {
       return global.setInterval(callback, duration);
     }
-    if (System && System.setInterval) {
+    if (typeof System !== "undefined" && System.setInterval) {
       return System.setInterval(callback, duration);
     }
   },
@@ -78,8 +79,24 @@ export const timer = {
     if (global && global.clearInterval) {
       return global.clearInterval(identifier);
     }
-    if (System && System.clearInterval) {
+    if (typeof System !== "undefined" && System.clearInterval) { //} && identifier.timer) {
       return System.clearInterval(identifier);
+    }
+  },
+  setTimeout: function(callback, duration) {
+    if (global && global.setTimeout) {
+      return global.setTimeout(callback, duration);
+    }
+    if (typeof System !== "undefined" && System.setTimeout) {
+      return System.setTimeout(callback, duration);
+    }
+  },
+  setImmediate: function(callback) {
+    if (typeof process !== "undefined" && process.setImmediate) {
+      setImmediate(callback);
+    }
+    if (typeof System !== "undefined" && System.setTimeout) {
+      System.setTimeout(callback);
     }
   }
 };

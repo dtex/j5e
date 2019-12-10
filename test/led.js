@@ -2,7 +2,7 @@ const assert = require('assert');
 const sinon = require('sinon');
 
 import { Digital, PWM } from "@dtex/mock-io";
-import Led from '../modules/led/led';
+import Led from '@j5e/led';
 
 describe('Led - Digital', function() {
   
@@ -242,26 +242,36 @@ describe('Led - PWM', function() {
     });
   });
 
-  describe('Fade', function() {
+  describe('Fade In and Fade Out', function() {
     
     it('should call fade and...', async function() {  
   
-      // const led = await new Led({
-      //   pin: 12,
-      //   io: PWM
-      // });
-      // const writeSpy = sinon.spy(led.io, "write");
+      const clock = sinon.useFakeTimers();
+      const led = await new Led({
+        pin: 12,
+        io: PWM
+      });
+      const writeSpy = sinon.spy(led.io, "write");
   
-      // led.off();
-      // assert.equal(led.value, 0);
-      // assert(writeSpy.calledOnceWith(0));
+      led.off();
+      assert.equal(led.value, 0);
+      assert(writeSpy.calledOnceWith(0));
       
-      // led.fadeOn();
-      // console.log(writeSpy.callCount);
-      //assert.equal(writeSpy.callCount, 2);
-      //assert.equal(writeSpy.secondCall.args[0], 512);
-      //assert.equal(led.value, 512);
+      led.fadeIn();
+      clock.tick(1050);
+      assert.equal(writeSpy.callCount, 51);
+      assert.equal(writeSpy.getCall(0).args[0], 0);
+      assert.equal(writeSpy.getCall(26).args[0], 745);
+      assert.equal(writeSpy.getCall(50).args[0], 1023);
 
+      led.fadeOut();
+      clock.tick(1050);
+      assert.equal(writeSpy.callCount, 101);
+      assert.equal(writeSpy.getCall(51).args[0], 990);
+      assert.equal(writeSpy.getCall(76).args[0], 277);
+      assert.equal(writeSpy.getCall(100).args[0], 0);
+
+      clock.restore();
     });
   });
 

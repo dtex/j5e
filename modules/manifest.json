@@ -1,10 +1,17 @@
 {
   "modules": {
-    "j5e/animation": "./util/animation",
-    "j5e/easing": "./util/easing",
-    "j5e/event": "./util/event",
-    "j5e/fn": "./util/fn",
-    "j5e/led": "./led/led",
-    "j5e/switch": "./switch/switch"
-  }
-}		
+    "@j5e/animation": "./animation/index",
+    "@j5e/easing": "./easing/index",
+    "@j5e/event": "./event/index",
+    "@j5e/fn": "./fn/index",
+    "@j5e/led": "./led/index",
+    "@j5e/servo": "./servo/index",
+    "@j5e/switch": "./switch/index"
+  },
+  "xpreload": [
+    "@j5e/fn",
+    "@j5e/animation",
+    "@j5e/easing",
+    "@j5e/event"
+  ]
+}		  

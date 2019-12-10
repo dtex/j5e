@@ -3,8 +3,9 @@
  * @module j5e/led
  */
 
-import {normalizeParams, constrain, getProvider, timer} from "../util/fn.js";
-import {inOutSine, outSine} from "../util/easing.js";
+import {normalizeParams, constrain, getProvider, timer} from "@j5e/fn";
+import {inOutSine, outSine} from "@j5e/easing";
+import Animation from "@j5e/animation";
 
 /** 
  * Class representing an LED
@@ -41,7 +42,7 @@ class Led {
       });
       
       this.LOW = 0;
-
+      
       Object.defineProperties(this, {
         value: {
           get: function() {
@@ -138,7 +139,7 @@ class Led {
     this.#state.isRunning = true;
 
     this.#state.interval = timer.setInterval(() => {
-        this.toggle();
+      this.toggle();
       if (typeof callback === "function") {
         callback();
       }
@@ -226,7 +227,7 @@ class Led {
       keyFrames: [null, typeof val === "number" ? val : 0xff],
       easing: outSine,
       oncomplete: function() {
-        this.#state.isRunning = false;
+        this.stop();
         if (typeof callback === "function") {
           callback();
         }
@@ -285,6 +286,10 @@ class Led {
     
     if (this.#state.interval) {
       timer.clearInterval(this.#state.interval);
+    }
+
+    if (this.#state.animation) {
+      this.#state.animation.stop();
     }
 
     this.#state.interval = null;
