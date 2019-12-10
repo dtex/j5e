@@ -71,7 +71,7 @@ export const timer = {
     if (global && global.setInterval) {
       return global.setInterval(callback, duration);
     }
-    if (System && System.setInterval) {
+    if (typeof System !== "undefined" && System.setInterval) {
       return System.setInterval(callback, duration);
     }
   },
@@ -79,8 +79,24 @@ export const timer = {
     if (global && global.clearInterval) {
       return global.clearInterval(identifier);
     }
-    if (System && System.clearInterval && identifier.timer) {
+    if (typeof System !== "undefined" && System.clearInterval) { //} && identifier.timer) {
       return System.clearInterval(identifier);
+    }
+  },
+  setTimeout: function(callback, duration) {
+    if (global && global.setTimeout) {
+      return global.setTimeout(callback, duration);
+    }
+    if (typeof System !== "undefined" && System.setTimeout) {
+      return System.setTimeout(callback, duration);
+    }
+  },
+  setImmediate: function(callback) {
+    if (typeof process !== "undefined" && process.setImmediate) {
+      setImmediate(callback);
+    }
+    if (typeof System !== "undefined" && System.setTimeout) {
+      System.setTimeout(callback);
     }
   }
 };

@@ -3,9 +3,9 @@
  * @module j5e/led
  */
 
-import {normalizeParams, constrain, getProvider, timer} from "j5e/fn";
-import {inOutSine, outSine} from "j5e/easing";
-import Animation from "j5e/animation";
+import {normalizeParams, constrain, getProvider, timer} from "@j5e/fn";
+import {inOutSine, outSine} from "@j5e/easing";
+import Animation from "@j5e/animation";
 
 /** 
  * Class representing an LED
@@ -139,7 +139,7 @@ class Led {
     this.#state.isRunning = true;
 
     this.#state.interval = timer.setInterval(() => {
-        this.toggle();
+      this.toggle();
       if (typeof callback === "function") {
         callback();
       }

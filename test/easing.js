@@ -1,7 +1,7 @@
 const assert = require('assert');
 const expect = require('chai').expect;
 
-import * as easing from '../modules/util/easing';
+import * as easing from '@j5e/easing';
 
 const inputs = [0, 0.1, 0.25, 0.5, 0.75, 0.9, 1];
 const results = {

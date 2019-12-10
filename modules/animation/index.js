@@ -3,9 +3,11 @@
  * @module j5e/animation
  */
 
-import { Emitter } from "j5e/event";
-import { linear } from "j5e/easing";
-import { constrain, timer } from "j5e/fn";
+// import { Emitter } from "@j5e/event";
+//import { linear } from "@j5e/easing";
+import { constrain, timer } from "@j5e/fn";
+
+function linear(n) { return n; }
 
 /** 
  * Class representing an Animation
@@ -13,7 +15,7 @@ import { constrain, timer } from "j5e/fn";
  * @fires animation:pause
  * @fires animation:stop
  */
-class Animation extends Emitter {
+class Animation {
 
   /**
    * Animation  
@@ -21,7 +23,7 @@ class Animation extends Emitter {
    * @param {Led|Led[]|Servo|Servo[]} target - LEDs or Servos to be animated
    */
   constructor(target) {
-    super();
+    // super();
     Object.assign(this, new Segment());
     this.defaultTarget = target || {};
   }
@@ -50,6 +52,10 @@ class Animation extends Emitter {
   enqueue(options = {}) {
     if (typeof options.target === "undefined") {
       options.target = this.defaultTarget;
+    }
+
+    if (typeof options.easing === "undefined") {
+      options.easing = linear;
     }
 
     this.segments.push(options);
@@ -104,7 +110,7 @@ class Animation extends Emitter {
    */
   pause() {
 
-    this.emit("animation:pause");
+    // this.emit("animation:pause");
 
     if (this.playLoop) {
       this.playLoop.stop();
@@ -122,8 +128,8 @@ class Animation extends Emitter {
    */
   stop() {
 
-    this.emit("animation:stop");
-trace("Animation stop");
+    // this.emit("animation:stop");
+
     this.segments = [];
     this.isRunning = false;
     if (this.playLoop) {
@@ -198,11 +204,11 @@ trace("Animation stop");
         this.isRunning = false;
 
         if (this.oncomplete) {
-          process.nextTick(this.oncomplete.bind(this));
+          timer.setImmediate(this.oncomplete.bind(this));
         }
 
         if (this.segments.length > 0) {
-          process.nextTick(() => { this.next(); });
+          timer.setImmediate(() => { this.next(); });
         } else {
           this.stop();
         }
@@ -457,9 +463,9 @@ class Timer {
     }, animation.rate);
   }
   stop() {
-    trace("timer stop");
     if (this.interval) {
       timer.clearInterval(this.interval);
+      this.interval = null;
     }
   }
 };

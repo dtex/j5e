@@ -1,7 +1,7 @@
 const assert = require('assert');
 
 import { Digital } from "@dtex/mock-io";
-import Switch from '../modules/switch/switch';
+import Switch from '@j5e/switch';
 
 describe('Switch', function() {
   
