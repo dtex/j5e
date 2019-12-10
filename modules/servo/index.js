@@ -399,7 +399,7 @@ class Servo extends Emitter {
           return Math.round((a + b) / 2);
         })
       );
-      }
+    }
 
     return this;
   }
