@@ -1,29 +1,32 @@
-# Getting Started
+# Getting Started (Moddable XS)
 
 #### 1. Make sure you have successfully [configured your host environment](https://github.com/Moddable-OpenSource/moddable/blob/public/documentation/Moddable%20SDK%20-%20Getting%20Started.md) for the Moddable SDK. 
 
-#### 2. Create a working directory (You can call it whatever you want):
+#### 2. Clone the j5e repository
 
 ````bash
+cd ~/Projects
+git clone https://github.com/Moddable-OpenSource/moddable
+````
+
+#### 3. Setup the ```j5e``` environment variable to point at the ```dist/moddable``` directory in your copy of the j5e repo
+
+````bash
+export j5e="/Users/<user>/Projects/j5e/dist/moddable"
+````
+
+
+#### 4. Create a working directory (You can call it whatever you want):
+
+````bash
+cd ~/Projects
 mkdir myProject
 ````
 
-#### 3. Navigate into your working directory:
+#### 5. Navigate into your working directory:
 
 ````bash
 cd myProject
-````
-
-#### 4. Initialize this directory for npm:
-
-````bash
-npm init -y
-````
-
-#### 5. Install J5e using npm:
-
-````bash
-npm install j5e
 ````
 
 #### 6. Create a manifest.json file in your working directory:
@@ -32,7 +35,7 @@ npm install j5e
 {
 	"include": [
 		"$(MODDABLE)/modules/io/manifest.json",
-		"./node_modules/j5e/modules/manifest.json"
+		"$(j5e)/manifest.json"
 	],
 	"modules": {
 		"*": [

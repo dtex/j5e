@@ -1,0 +1,16 @@
+{
+	"include": [
+	],
+	"modules": {
+		"*": []
+	},
+	"preload": [
+	],
+	"platforms": {
+		"esp": {
+		},
+		"...": {
+			"error": "Experimental TC53 IO modules unsupported"
+		}
+	}
+}

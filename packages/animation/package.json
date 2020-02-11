@@ -1,0 +1,32 @@
+{
+  "name": "@j5e/animation",
+  "version": "0.0.1",
+  "description": "Animation class for J5e used for scripting LEDs and Servos",
+  "main": "animation.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "../../node_modules/mocha/bin/mocha --harmony --require esm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dtex/j5e.git"
+  },
+  "dependencies": {
+    "@j5e/fn": "^0.0.1"
+  },
+  "keywords": [
+    "j5e",
+    "iot",
+    "robotics",
+    "ecmascript",
+    "builtin"
+  ],
+  "author": "Donovan Buck <donovan@donovan.bz>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dtex/j5e/issues"
+  },
+  "homepage": "https://github.com/dtex/j5e#readme"
+}
