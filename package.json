@@ -9,7 +9,9 @@
   },
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --harmony --require esm",
-    "docs": "jsdoc -c ./examples/jsdoc.json"
+    "docs": "./node_modules/jsdoc/jsdoc.js -r readme.md -d docs *.js",
+    "dist": "npm run dist-moddable",
+    "dist-moddable": "node ./build/dist-moddable.cjs --experimental-modules"
   },
   "repository": {
     "type": "git",
@@ -33,12 +35,14 @@
   },
   "homepage": "https://github.com/dtex/j5e#readme",
   "devDependencies": {
-    "assert": "^2.0.0",
-    "esm": "^3.2.25",
-    "mocha": "^6.2.2",
-    "sinon": "^7.5.0",
     "@dtex/mock-io": "^0.0.2",
-    "chai": "^4.2.0"
-  },
-  "dependencies": {}
+    "assert": "^2.0.0",
+    "chai": "^4.2.0",
+    "esm": "^3.2.25",
+    "fs-extra": "^8.1.0",
+    "jsdoc": "^3.6.3",
+    "lerna": "^3.20.2",
+    "mocha": "^6.2.2",
+    "sinon": "^7.5.0"
+  }
 }

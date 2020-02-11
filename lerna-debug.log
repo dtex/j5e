@@ -1,0 +1,21 @@
+0 silly argv {
+0 silly argv   _: [ 'create' ],
+0 silly argv   lernaVersion: '3.20.2',
+0 silly argv   '$0': 'lerna',
+0 silly argv   name: '@j5e/foo'
+0 silly argv }
+1 notice cli v3.20.2
+2 verbose rootPath /Users/donovan/Documents/git/j5e
+3 error Error: canceled
+3 error     at Interface.<anonymous> (/Users/donovan/Documents/git/j5e/node_modules/read/lib/read.js:66:13)
+3 error     at Interface.emit (events.js:223:5)
+3 error     at Interface._ttyWrite (readline.js:885:16)
+3 error     at ReadStream.onkeypress (readline.js:191:10)
+3 error     at ReadStream.emit (events.js:223:5)
+3 error     at emitKeys (internal/readline/utils.js:433:14)
+3 error     at emitKeys.next (<anonymous>)
+3 error     at ReadStream.onData (readline.js:1151:36)
+3 error     at ReadStream.emit (events.js:223:5)
+3 error     at addChunk (_stream_readable.js:309:12)
+3 error     at readableAddChunk (_stream_readable.js:290:11)
+3 error     at ReadStream.Readable.push (_stream_readable.js:224:10)

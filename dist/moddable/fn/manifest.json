@@ -1,0 +1,14 @@
+{
+  "include": [],
+  "modules": {
+    "*": [],
+    "@j5e/led": "$(j5e)//fn/*"
+  },
+  "preload": [],
+  "platforms": {
+    "esp": {},
+    "...": {
+      "error": "Experimental TC53 IO modules unsupported"
+    }
+  }
+}

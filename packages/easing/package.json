@@ -1,0 +1,35 @@
+{
+  "name": "@j5e/easing",
+  "version": "0.0.1",
+  "description": "Easing methods for J5e",
+  "main": "easing.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "../../node_modules/mocha/bin/mocha --harmony --require esm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dtex/j5e.git"
+  },
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+    
+  },
+  "keywords": [
+    "j5e",
+    "iot",
+    "robotics",
+    "ecmascript",
+    "builtin"
+  ],
+  "author": "Donovan Buck <donovan@donovan.bz>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dtex/j5e/issues"
+  },
+  "homepage": "https://github.com/dtex/j5e#readme"
+}

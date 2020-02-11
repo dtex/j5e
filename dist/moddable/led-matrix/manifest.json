@@ -1,0 +1,15 @@
+{
+  "include": [],
+  "modules": {
+    "*": [],
+    "@j5e/fn": "$(j5e)/fn/*",
+    "@j5e/led": "$(j5e)//led-matrix/*"
+  },
+  "preload": [],
+  "platforms": {
+    "esp": {},
+    "...": {
+      "error": "Experimental TC53 IO modules unsupported"
+    }
+  }
+}

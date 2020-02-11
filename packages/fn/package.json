@@ -1,0 +1,32 @@
+{
+  "name": "@j5e/fn",
+  "version": "0.0.1",
+  "description": "Utilities for J5e used in various classes",
+  "main": "fn.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "../../node_modules/mocha/bin/mocha --harmony --require esm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dtex/j5e.git"
+  },
+  "dependencies": {
+    
+  },
+  "keywords": [
+    "j5e",
+    "iot",
+    "robotics",
+    "ecmascript",
+    "builtin"
+  ],
+  "author": "Donovan Buck <donovan@donovan.bz>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dtex/j5e/issues"
+  },
+  "homepage": "https://github.com/dtex/j5e#readme"
+}

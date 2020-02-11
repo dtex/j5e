@@ -1,0 +1,23 @@
+{
+  "include": [],
+  "modules": {
+    "*": [],
+    "@j5e/HT16K33": "$(j5e)/HT16K33/*",
+    "@j5e/animation": "$(j5e)/animation/*",
+    "@j5e/easing": "$(j5e)/easing/*",
+    "@j5e/event": "$(j5e)/event/*",
+    "@j5e/fn": "$(j5e)/fn/*",
+    "@j5e/gps": "$(j5e)/gps/*",
+    "@j5e/led": "$(j5e)/led/*",
+    "@j5e/led-matrix": "$(j5e)/led-matrix/*",
+    "@j5e/servo": "$(j5e)/servo/*",
+    "@j5e/switch": "$(j5e)/switch/*"
+  },
+  "preload": [],
+  "platforms": {
+    "esp": {},
+    "...": {
+      "error": "Experimental TC53 IO modules unsupported"
+    }
+  }
+}
