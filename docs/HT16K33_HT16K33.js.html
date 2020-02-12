@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Module: j5e/matrix</title>
+    <title>JSDoc: Source: HT16K33/HT16K33.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,139 +17,92 @@
 
 <div id="main">
 
-    <h1 class="page-title">Module: j5e/matrix</h1>
+    <h1 class="page-title">Source: HT16K33/HT16K33.js</h1>
 
     
 
 
 
-
-<section>
-
-<header>
     
-        
-            
-        
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * HT16K33 module - For controlling HT16K33 I2C LED matrix backpacks
+ * @module j5e/HT16K33
+ */
+
+import Matrix from "@j5e/matrix";
+import {normalizeParams, getProvider} from "@j5e/fn";
+
+/** 
+ * Class representing an HT16K33
+ * @classdesc The HT16K33 class allows for control of HT16K33 I2C LED matrix backpacks
+ * @extends Matrix
+ */
+class HT16K33 extends Matrix {
+
+  /** @constant
+   * @type {object}
+   */
+  OP = {
+    SHUTDOWN: 0x20,
+    BRIGHTNESS: 0xE0,
+    BLINK: 0x80
+  };
+
+  state = {};
+
+  /**
+   * Instantiate an HT16K33 LED matrix backpack
+   */
+  constructor(io, device) {
+    return (async () => {
+      const {ioOpts, deviceOpts} = normalizeParams(io, device);
+
+      await super(io, device);
+
+      const Provider = await getProvider(ioOpts, "builtin/i2c");
+      
+      this.io = new Provider({
+        sda: ioOpts.sda,
+        scl: ioOpts.scl,
+        address: ioOpts.address || 0x70,
+      });
+      
+      Object.assign(this.state, deviceOpts);
+
+      this.initializ(deviceOpts);
+      
+    })();
+  }
+
+  initializ(opts) {
     
-</header>
-
-<article>
-    <div class="container-overview">
+    this.buffer = Array(this.state.rows).fill([]);
+    super.on();
     
-        
-            <div class="description">Led module - For controlling LED's</div>
-        
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="led-matrix_matrix.js.html">led-matrix/matrix.js</a>, <a href="led-matrix_matrix.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Classes</h3>
-
-        <dl>
-            <dt><a href="module-j5e_matrix-Matrix.html">Matrix</a></dt>
-            <dd></dd>
-        </dl>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
+    // Turn off blinking during initialization, in case it was left on.
+    this.blink(device, false);
+    this.brightness(device, 100);
+    this.clear(device);
+
+  }
+
+  /*
+  * Send data to the HT16K33
+   * @param {Number} opcode Operation code.
+   * @param {Number} data   Data.
+  */
+  send(opcode, data) {
+    this.io.write(this.state.address, [opcode | data]);
+    return this;
+  }
+
+}
+
+export default HT16K33;</code></pre>
+        </article>
+    </section>
 
 
 
