@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --harmony --require esm",
-    "docs": "./node_modules/jsdoc/jsdoc.js -r readme.md -d docs *.js",
+    "docs": "./node_modules/jsdoc/jsdoc.js -r readme.md -d docs ./packages/*/*.js",
     "dist": "npm run dist-moddable",
     "dist-moddable": "node ./build/dist-moddable.cjs --experimental-modules"
   },
