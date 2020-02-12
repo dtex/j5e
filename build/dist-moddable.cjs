@@ -5,20 +5,23 @@ const target = "./dist/moddable";
 // Let's start with a clean slate
 fs.emptyDirSync(target);
 
+// Load the manifest template
 const manifestTemplate =  fs.readFileSync("./build/templates/moddable-manifest.json");
+
+// This will be the top level manifest used when including all of j5e
 const j5eManifest = JSON.parse(manifestTemplate);
 
 // Get a list of packages
 const packages = fs.readdirSync("./packages");
 
 packages.forEach(package => {
-  // Add to the main moddable manifest
+  // Add to the top level manifest
   j5eManifest.modules[`@j5e/${package}`] = `$(j5e)/${package}/*`;
 
   // Create the module directory in dist/moddable
   fs.mkdirSync(`${target}/${package}`);
 
-  // Create a new module manifest file
+  // Create a new module specific manifest file
   let manifest = JSON.parse(manifestTemplate);
   
   // Get a list of the dependencies from package.json
@@ -26,7 +29,7 @@ packages.forEach(package => {
   const packageJSON = JSON.parse(packageFile);
   const dependencies = packageJSON.dependencies;
   
-  // Add each dependency as an include in the manifest
+  // Add each dependency as a module in the manifest
   Object.keys(dependencies).forEach(dependency => {
     let dependencyPath = dependency.replace("@j5e/", "$(j5e)/");
     manifest.modules[dependency] = dependencyPath + "/*";
