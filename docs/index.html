@@ -44,8 +44,8 @@
 
     <section>
         <article><h2>j5e – Johnny Five for Embedded Systems</h2>
-<p>j5e is a device framework built for ECMA TC-53's IO pattern. j5e's API is based on the <a href="https://github.com/rwaldron.johnny-five">Johnny-Five</a> API which has been battle tested over quite some time.</p>
-<p>Right now, the only provider that matches the ECMA TC-53 IO pattern is <a href="https://github.com/Moddable-OpenSource/moddable/blob/public/documentation/io/io.md">Moddable's IO module for XS</a> which runs on the ESP 8266, but we should see more soon.</p>
+<p>j5e is a device framework built for <a href="https://www.ecma-international.org/memento/tc53.htm">ECMA TC-53's</a> I/O class pattern. The <a href="https://gist.github.com/phoddie/166c9c17b2f31d0beda9f2410a219268">I/O class pattern</a> is a standard interface for accessing underlying hardware interfaces (GPIO). j5e's API is based on the <a href="https://github.com/rwaldron.johnny-five">Johnny-Five</a> API which has been battle tested over quite some time.</p>
+<p>Right now, the only provider that matches the ECMA TC-53 I/O class pattern is <a href="https://github.com/Moddable-OpenSource/moddable/blob/public/documentation/io/io.md">Moddable's IO module for XS</a> which runs on the ESP 8266, but we should see more soon.</p>
 <p><em>This project is very much in a &quot;pre-alpha&quot; state so use at your own risk.</em></p>
 <p>j5e in action</p>
 <pre class="prettyprint source lang-js"><code>import Led from &quot;@j5e/led&quot;;
@@ -59,9 +59,11 @@
 <h2>j5e Anatomy 101</h2>
 <p>One goal of j5e is write once, run anywhere. We are having to build toward this goal before most TC-53 IO conformant platforms even exist. To this end we've settled on node.js compatability as our primary target, with a build step that will generate distributions for other platforms programmatically. The JS is all the same across platforms, but the project structure has to change in order to work with differeing implementations of ECMAScript Modules (package.json vs manifest.json and inconsistent module resolution schemes).</p>
 <h3>It's a Mono-Repo</h3>
-<p>In order to resolve module paths by <code>namespace/modulename</code> in node.js (eg <code>@j5e/led</code>), each module needs to be its own package under the <code>@j5e</code> namespace, which is an npm organization. Rather than having a seperate repo for what could end up being hundreds of modules we're using lerna to manage the different packages. Each module/package is contained in its own directory within <code>/packages/</code>. If you've cloned the repo and need to do some work on it, make sure you run <code>lerna bootstrap</code> to get all the intradependencies wired up properly and then run <code>npm install</code> to get all the packages needed for dev.</p>
+<p>In order to resolve module paths by <code>namespace/modulename</code> in node.js (eg <code>@j5e/led</code>), each module needs to be its own package under the <code>@j5e</code> namespace, which is an npm organization. Rather than having a seperate repo for what could end up being hundreds of modules we're using lerna to manage the different packages. Each module/package is contained in its own directory within <code>/packages/</code>. If you've cloned the repo and need to do some work on it, make sure you run <code>lerna bootstrap</code> to get all the dependencies wired up properly and then run <code>npm install</code> to get all the packages needed for dev.</p>
 <h3>Documentation</h3>
 <p><a href="https://dtex.github.io/j5e/">Documentation</a> is handled using <a href="https://jsdoc.app/">JSDoc</a>. Nothing in the <code>docs</code> folder should be edited directly. It is generated from comments in the code and some md files in the examples folder. To generate new documentation run <code>npm run docs</code>.</p>
+<h3>Tests</h3>
+<p>Tests are run using mocha and chai. Each package has its own test folder. You can test a single package by navigating to the package folder and running <code>npm run test</code>. You can run all tests from anywhere in the repo by running <code>lerna run test</code>.</p>
 <h3>Build Process</h3>
 <p>Creating new builds for the dist folder is handled with simple node.js script (no task runner). A build script is necessary for every platform except node.js. To generate new dists, jus run <code>npm run dist</code>.</p></article>
     </section>
@@ -74,13 +76,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-j5e_animation.html">j5e/animation</a></li><li><a href="module-j5e_easing.html">j5e/easing</a></li><li><a href="module-j5e_event.html">j5e/event</a></li><li><a href="module-j5e_fn.html">j5e/fn</a></li><li><a href="module-j5e_HT16K33.html">j5e/HT16K33</a></li><li><a href="module-j5e_led.html">j5e/led</a></li><li><a href="module-j5e_matrix.html">j5e/matrix</a></li><li><a href="module-j5e_servo.html">j5e/servo</a></li><li><a href="module-j5e_switch.html">j5e/switch</a></li></ul><h3>Classes</h3><ul><li><a href="GPS.html">GPS</a></li><li><a href="module-j5e_animation-Animation.html">Animation</a></li><li><a href="module-j5e_animation-Segment.html">Segment</a></li><li><a href="module-j5e_animation-Timer.html">Timer</a></li><li><a href="module-j5e_event.Emitter.html">Emitter</a></li><li><a href="module-j5e_HT16K33-HT16K33.html">HT16K33</a></li><li><a href="module-j5e_led-Led.html">Led</a></li><li><a href="module-j5e_matrix-Matrix.html">Matrix</a></li><li><a href="module-j5e_servo-Servo.html">Servo</a></li><li><a href="module-j5e_switch-Switch.html">Switch</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-j5e_animation.html">j5e/animation</a></li><li><a href="module-j5e_easing.html">j5e/easing</a></li><li><a href="module-j5e_event.html">j5e/event</a></li><li><a href="module-j5e_fn.html">j5e/fn</a></li><li><a href="module-j5e_led.html">j5e/led</a></li><li><a href="module-j5e_servo.html">j5e/servo</a></li><li><a href="module-j5e_switch.html">j5e/switch</a></li></ul><h3>Classes</h3><ul><li><a href="module-j5e_animation-Animation.html">Animation</a></li><li><a href="module-j5e_animation-Segment.html">Segment</a></li><li><a href="module-j5e_animation-Timer.html">Timer</a></li><li><a href="module-j5e_event.Emitter.html">Emitter</a></li><li><a href="module-j5e_led-Led.html">Led</a></li><li><a href="module-j5e_servo-Servo.html">Servo</a></li><li><a href="module-j5e_switch-Switch.html">Switch</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Tue Feb 11 2020 19:47:57 GMT-0600 (Central Standard Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Sun Feb 16 2020 15:29:43 GMT-0600 (Central Standard Time)
 </footer>
 
 <script> prettyPrint(); </script>
