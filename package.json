@@ -3,7 +3,6 @@
   "version": "0.0.8",
   "description": "j5e is a device framework built for ECMA TC-53's IO pattern",
   "main": "index.js",
-  "type": "module",
   "directories": {
     "test": "tests"
   },
