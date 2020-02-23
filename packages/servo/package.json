@@ -1,6 +1,6 @@
 {
   "name": "@j5e/servo",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Servo class for J5e",
   "main": "index.js",
   "publishConfig": {
@@ -14,10 +14,10 @@
     "url": "git+https://github.com/dtex/j5e.git"
   },
   "dependencies": {
-    "@j5e/animation": "^0.0.1",
-    "@j5e/easing": "^0.0.1",
-    "@j5e/event": "^0.0.1",
-    "@j5e/fn": "^0.0.1"
+    "@j5e/animation": "^0.0.2",
+    "@j5e/easing": "^0.0.2",
+    "@j5e/event": "^0.0.2",
+    "@j5e/fn": "^0.0.2"
   },
   "keywords": [
     "j5e",

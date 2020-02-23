@@ -1,6 +1,6 @@
 {
   "name": "@j5e/animation",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Animation class for J5e used for scripting LEDs and Servos",
   "main": "index.js",
   "publishConfig": {
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/dtex/j5e.git"
   },
   "dependencies": {
-    "@j5e/fn": "^0.0.1"
+    "@j5e/fn": "^0.0.2"
   },
   "keywords": [
     "j5e",
