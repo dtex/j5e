@@ -2,12 +2,12 @@
   "name": "@j5e/easing",
   "version": "0.0.1",
   "description": "Easing methods for J5e",
-  "main": "easing.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "../../node_modules/mocha/bin/mocha --harmony --require esm"
+    "test": "../../node_modules/mocha/bin/mocha ../../tests/easing.js --harmony --require esm"
   },
   "repository": {
     "type": "git",

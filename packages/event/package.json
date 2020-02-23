@@ -2,19 +2,18 @@
   "name": "@j5e/event",
   "version": "0.0.1",
   "description": "Event emitter class for J5e",
-  "main": "event.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "../../node_modules/mocha/bin/mocha --harmony --require esm"
+    "test": "../../node_modules/mocha/bin/mocha ../../tests/event.js --harmony --require esm"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dtex/j5e.git"
   },
   "dependencies": {
-    "@j5e/led-matrix": "^0.0.1"
   },
   "devDependencies": {
     

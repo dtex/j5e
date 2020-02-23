@@ -2,12 +2,12 @@
   "name": "@j5e/servo",
   "version": "0.0.1",
   "description": "Servo class for J5e",
-  "main": "servo.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "../../node_modules/mocha/bin/mocha --harmony --require esm"
+    "test": "../../node_modules/mocha/bin/mocha ../../tests/servo.js --harmony --require esm"
   },
   "repository": {
     "type": "git",
