@@ -17,9 +17,6 @@
     "@j5e/event": "^0.0.1",
     "@j5e/fn": "^0.0.1"
   },
-  "devDependencies": {
-    
-  },
   "keywords": [
     "j5e",
     "iot",
