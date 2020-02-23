@@ -2,7 +2,7 @@ const assert = require('assert');
 const sinon = require('sinon');
 
 import { Digital } from "@dtex/mock-io";
-import { constrain, normalizeParams, timer } from '../fn';
+import { constrain, normalizeParams, timer } from '../packages/fn';
 
 describe('Fn', function() {
   
