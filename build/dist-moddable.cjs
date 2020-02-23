@@ -27,7 +27,7 @@ packages.forEach(package => {
   // Get a list of the dependencies from package.json
   const packageFile =  fs.readFileSync(`./packages/${package}/package.json`);
   const packageJSON = JSON.parse(packageFile);
-  const dependencies = packageJSON.dependencies;
+  const dependencies = packageJSON.dependencies || [];
   
   // Add each dependency as a module in the manifest
   Object.keys(dependencies).forEach(dependency => {
