@@ -15,12 +15,9 @@
   },
   "dependencies": {
     "@j5e/animation": "^0.0.1",
+    "@j5e/easing": "^0.0.1",
     "@j5e/event": "^0.0.1",
-    "@j5e/fn": "^0.0.1",
-    "@j5e/easing": "^0.0.1"
-  },
-  "devDependencies": {
-    
+    "@j5e/fn": "^0.0.1"
   },
   "keywords": [
     "j5e",

@@ -13,12 +13,6 @@
     "type": "git",
     "url": "git+https://github.com/dtex/j5e.git"
   },
-  "dependencies": {
-    
-  },
-  "devDependencies": {
-    
-  },
   "keywords": [
     "j5e",
     "iot",
