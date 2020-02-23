@@ -26,6 +26,7 @@ class Led {
    * Instantiate an LED
    * @param {(number|string|object)} io - A pin number, pin identifier or a complete IO options object
    * @param {(number|string)} [io.pin] - If passing an object, a pin number or pin identifier
+   * @param {boolean} [io.pwm] - If true and io.io is not passed, will use "builtin/pwm" for io
    * @param {(string|constructor)} [io.io=builtin/digital] - If passing an object, a string specifying a path to the IO provider or a constructor
    * @param {object} [device={}] - An object containing device options
    * @param {boolean} [device.sink=false] - True if the device is wired for sink drive
@@ -34,7 +35,7 @@ class Led {
     return (async () => {
       const {ioOpts, deviceOpts} = normalizeParams(io, device);
 
-      const Provider = await getProvider(ioOpts, "builtin/digital");
+      const Provider = await getProvider(ioOpts, ioOpts.pwm ? "builtin/pwm" : "builtin/digital");
       
       this.io = new Provider({
         pin: ioOpts.pin,
