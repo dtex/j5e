@@ -22,7 +22,7 @@ class Switch extends Emitter {
    * @param {(string|constructor)} [io.io=builtin/digital] - If passing an object, a string specifying a path to the IO provider or a constructor
    * @param {object} [device={}] - An object containing device options
    * @property {boolean} isClosed - True if the switch is closed (current is flowing)
-   * @property {boolean} isClosed - True if the switch is open (current is not flowing)
+   * @property {boolean} isOpen - True if the switch is open (current is not flowing)
    */
   constructor(io, device) { 
     return (async () => {
