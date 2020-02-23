@@ -1,6 +1,6 @@
 {
   "name": "@j5e/fn",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Utilities for J5e used in various classes",
   "main": "index.js",
   "publishConfig": {
