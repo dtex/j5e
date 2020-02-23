@@ -1,9 +1,9 @@
-const assert = require('assert');
+import assert from 'assert';
 const sinon = require('sinon');
 
 import { Digital, PWM } from "@dtex/mock-io";
-import Animation from "../animation";
-import Led from "@j5e/led";
+import Animation from "../packages/animation";
+import Led from "../packages/led";
 
 describe('Animation', function() {
   
