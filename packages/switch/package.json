@@ -2,12 +2,12 @@
   "name": "@j5e/switch",
   "version": "0.0.1",
   "description": "Switch class for J5e",
-  "main": "switch.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "../../node_modules/mocha/bin/mocha --harmony --require esm"
+    "test": "../../node_modules/mocha/bin/mocha ../../tests/switch.js --harmony --require esm"
   },
   "repository": {
     "type": "git",

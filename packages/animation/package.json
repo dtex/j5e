@@ -2,12 +2,12 @@
   "name": "@j5e/animation",
   "version": "0.0.1",
   "description": "Animation class for J5e used for scripting LEDs and Servos",
-  "main": "animation.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "../../node_modules/mocha/bin/mocha --harmony --require esm"
+    "test": "../../node_modules/mocha/bin/mocha ../../tests/animation.js --harmony --require esm"
   },
   "repository": {
     "type": "git",
