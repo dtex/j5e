@@ -6,7 +6,7 @@
     "@j5e/event": "$(j5e)/event/*",
     "@j5e/fn": "$(j5e)/fn/*",
     "@j5e/easing": "$(j5e)/easing/*",
-    "@j5e/led": "$(j5e)//servo/*"
+    "@j5e/led": "$(j5e)/servo/*"
   },
   "preload": [],
   "platforms": {

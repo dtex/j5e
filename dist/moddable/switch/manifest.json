@@ -4,7 +4,7 @@
     "*": [],
     "@j5e/event": "$(j5e)/event/*",
     "@j5e/fn": "$(j5e)/fn/*",
-    "@j5e/led": "$(j5e)//switch/*"
+    "@j5e/led": "$(j5e)/switch/*"
   },
   "preload": [],
   "platforms": {

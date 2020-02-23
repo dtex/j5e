@@ -2,7 +2,7 @@
   "include": [],
   "modules": {
     "*": [],
-    "@j5e/led": "$(j5e)//easing/*"
+    "@j5e/led": "$(j5e)/easing/*"
   },
   "preload": [],
   "platforms": {
