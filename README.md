@@ -17,17 +17,17 @@ import Led from "@j5e/led";
 
 New users should check out the [Getting Started](https://github.com/dtex/j5e/blob/master/examples/GETSTARTED.md) guide.
 
-## j5e Anatomy 101
-One goal of j5e is write once, run anywhere. We are building toward this goal before most TC-53 IO conformant platforms exist. To this end we've settled on node.js compatability as our primary target, with a build step that will generate distributions for other platforms programmatically. The JS is all the same across platforms, but the project structure has to change in order to work with differeing implementations of ECMAScript Modules (package.json vs manifest.json and inconsistent module resolution schemes).
+## j5e Repo Anatomy
+One goal of j5e is write once, run anywhere. We are building toward this goal before most TC-53 IO conformant platforms exist. To this end we've settled on node.js compatability as our primary target, with a build step that will generate distributions for other platforms programmatically. The JS is the same across platforms, but the project structure has to change in order to work with different implementations of ECMAScript Modules (package.json vs manifest.json and inconsistent module resolution schemes).
 
 ### It's a Mono-Repo
-In order to resolve module paths by ```namespace/modulename``` in node.js (eg ```@j5e/led```), each module needs to be its own package under the ```@j5e``` namespace, which is an npm organization. Rather than having a seperate repo for what could end up being hundreds of modules we're using lerna to manage the different packages. Each module/package is contained in its own directory within ```/packages/```. If you've cloned the repo and need to do some work on it, make sure you run ```lerna bootstrap``` to get all the dependencies wired up properly and then run ```npm install``` to get all the packages needed for dev.
+In order to resolve module paths by ```namespace/modulename``` in node.js (eg ```@j5e/led```), each module needs to be its own package under the ```@j5e``` namespace. The ```@j5e``` namespace is an npm organization. Rather than having a seperate repo for what could end up being hundreds of modules we're using lerna to manage the different packages. Each module/package is contained in its own directory within ```./packages/```. If you've cloned the repo and need to do some work on it, make sure you run ```lerna bootstrap``` to get all the dependencies wired up properly and then run ```npm install``` to get all the packages needed for dev.
 
 ### Documentation
-[Documentation](https://dtex.github.io/j5e/) is handled using [JSDoc](https://jsdoc.app/). Nothing in the ```docs``` folder should be edited directly. It is generated from comments in the code and some md files in the examples folder. To generate new documentation run ```npm run docs```.
+[Documentation](https://dtex.github.io/j5e/) is handled using [JSDoc](https://jsdoc.app/). Nothing in the ```./docs/``` folder should be edited directly. It is generated from comments in the code and some miscellaneous files in the ```./build/docs/``` folder. To generate new documentation run ```npm run docs```.
 
 ### Tests
-Tests are run using mocha and chai. Each package has its own js file in the ```tests``` folder. You can test a single package by navigating to the package folder and running ```npm run test```. You can run all tests from anywhere in the repo by running ```lerna run test```.
+Tests are run using mocha and chai. Each package has its own js file in the ```./tests/``` folder. You can test a single package by navigating to the package folder and running ```npm run test```. You can run all tests from anywhere in the repo by running ```lerna run test```.
 
 ### Build Process
-Creating new builds for the dist folder is handled with simple node.js script (no task runner). A build script is necessary for every platform except node.js. To generate new dists, just run ```npm run dist```.
+Creating new builds for the ```./dist/``` folder is handled with simple node.js scripts (no task runner). A build script is necessary for every platform except node.js. To generate new dists, just run ```npm run dist```.

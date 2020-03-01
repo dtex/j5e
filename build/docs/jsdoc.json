@@ -1,0 +1,23 @@
+{
+  "source": {
+      "includePattern": ".+\\.js(doc|x)?$",
+      "include": ["README.md", "./packages"]
+  },
+  "recurseDepth": 2,
+  "opts": {
+      "destination": "./docs/",
+      "recurse": true
+  },
+  "templates": {
+    "systemName"            : "j5e",
+    "systemSummary"         : "Johnny Five for Embedded Systems",
+    "systemLogo"            : "./build/docs/j5e.png",
+    "systemColor"           : "#000",
+    "copyright"             : "Copyright © 2020 The contributors to the j5e and Johnny-Five projects.",
+    "dateFormat"            : "MMMM D, YYYY",
+    "inlineNav"             : false,
+    "analytics"             : { "ua": "UA-36026876-4", "domain": "dtex.github.io" },
+    "favicon"               : "./build/docs/j5e.png",
+    "stylesheets"           : "./build/docs/custom.css"
+  }
+}
