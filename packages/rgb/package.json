@@ -1,0 +1,35 @@
+{
+  "name": "@j5e/rgb",
+  "version": "0.0.1",
+  "description": "RGB LED control class for J5e",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "../../node_modules/mocha/bin/mocha ../../tests/rgb.js --harmony --require esm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dtex/j5e.git"
+  },
+  "dependencies": {
+    "@j5e/animation": "^0.0.3",
+    "@j5e/easing": "^0.0.3",
+    "@j5e/fn": "^0.0.3"
+  },
+  "keywords": [
+    "j5e",
+    "iot",
+    "robotics",
+    "ecmascript",
+    "builtin"
+  ],
+  "author": "Donovan Buck <donovan@donovan.bz>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dtex/j5e/issues"
+  },
+  "homepage": "https://github.com/dtex/j5e#readme",
+  "gitHead": "10354fdd0d5620b1bd08e4281c829df607471467"
+}
