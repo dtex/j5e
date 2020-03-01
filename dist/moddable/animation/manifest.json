@@ -3,7 +3,7 @@
   "modules": {
     "*": [],
     "@j5e/fn": "$(j5e)/fn/*",
-    "@j5e/led": "$(j5e)/animation/*"
+    "@j5e/animation": "$(j5e)/animation/*"
   },
   "preload": [],
   "platforms": {

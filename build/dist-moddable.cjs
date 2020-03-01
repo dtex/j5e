@@ -36,7 +36,7 @@ packages.forEach(package => {
   });
   
   // Add the main file to modules in manifest
-  manifest.modules["@j5e/led"] = (`$(j5e)/${package}/*`);
+  manifest.modules[`@j5e/${package}`] = (`$(j5e)/${package}/*`);
   
   // Publish the module manifest
   fs.writeFileSync(`${target}/${package}/manifest.json`, JSON.stringify(manifest, null, 2));

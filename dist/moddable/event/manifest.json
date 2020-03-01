@@ -2,7 +2,7 @@
   "include": [],
   "modules": {
     "*": [],
-    "@j5e/led": "$(j5e)/event/*"
+    "@j5e/event": "$(j5e)/event/*"
   },
   "preload": [],
   "platforms": {
