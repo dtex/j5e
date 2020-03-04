@@ -3,11 +3,12 @@
   "version": "0.0.3",
   "description": "Utilities for J5e used in various classes",
   "main": "index.js",
+  "type": "module",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "test": "../../node_modules/mocha/bin/mocha ../../tests/fn.js --harmony --require esm"
+    "test": "../../node_modules/mocha/bin/mocha ../tests/fn.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,6 @@
   "bugs": {
     "url": "https://github.com/dtex/j5e/issues"
   },
-  "homepage": "https://github.com/dtex/j5e#readme",
+  "homepage": "https://dtex.github.com/j5e",
   "gitHead": "10354fdd0d5620b1bd08e4281c829df607471467"
 }

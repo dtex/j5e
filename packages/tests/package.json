@@ -1,0 +1,45 @@
+{
+  "name": "@j5e/tests",
+  "version": "0.0.1",
+  "description": "Unit tests for J5e",
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dtex/j5e.git"
+  },
+  "dependencies": {
+    "@j5e/animation": "^0.0.3",
+    "@j5e/easing": "^0.0.3",
+    "@j5e/event": "^0.0.3",
+    "@j5e/fn": "^0.0.3",
+    "@j5e/led": "^0.0.3",
+    "@j5e/rgb": "^0.0.1",
+    "@j5e/servo": "^0.0.3",
+    "@j5e/switch": "^0.0.3"
+  },
+  "devDependencies": {
+    "@dtex/mock-io": "^0.0.2",
+    "assert": "^2.0.0",
+    "chai": "^4.2.0",
+    "esm": "^3.2.25",
+    "mocha": "^7.1.0",
+    "sinon": "^7.5.0"
+  },
+  "keywords": [
+    "j5e",
+    "iot",
+    "robotics",
+    "ecmascript",
+    "builtin"
+  ],
+  "author": "Donovan Buck <donovan@donovan.bz>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dtex/j5e/issues"
+  },
+  "homepage": "https://dtex.github.com/j5e",
+  "gitHead": "10354fdd0d5620b1bd08e4281c829df607471467"
+}

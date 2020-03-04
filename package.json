@@ -3,12 +3,13 @@
   "version": "0.0.8",
   "description": "j5e is a device framework built for ECMA TC-53's IO pattern",
   "main": "index.js",
+  "type": "module",
   "directories": {
     "test": "tests"
   },
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --harmony --require esm",
-    "docs": "./node_modules/jsdoc/jsdoc.js -r readme.md -d docs ./packages/*/*.js",
+    "docs": "./node_modules/jsdoc/jsdoc.js -t ./node_modules/foodoc/template -u ./build/docs/tutorials -c ./build/docs/jsdoc.json -d docs",
     "dist": "npm run dist-moddable",
     "dist-moddable": "node ./build/dist-moddable.cjs --experimental-modules"
   },
@@ -32,16 +33,13 @@
   "bugs": {
     "url": "https://github.com/dtex/j5e/issues"
   },
-  "homepage": "https://github.com/dtex/j5e#readme",
+  "homepage": "https://dtex.github.com/j5e",
   "devDependencies": {
     "@dtex/mock-io": "^0.0.2",
-    "assert": "^2.0.0",
-    "chai": "^4.2.0",
-    "esm": "^3.2.25",
+    "foodoc": "0.0.9",
     "fs-extra": "^8.1.0",
     "jsdoc": "^3.6.3",
-    "lerna": "^3.20.2",
-    "mocha": "^6.2.2",
-    "sinon": "^7.5.0"
-  }
+    "lerna": "^3.20.2"
+  },
+  "dependencies": {}
 }

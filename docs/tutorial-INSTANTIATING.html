@@ -1,0 +1,309 @@
+<!-- start:readme.hbs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+		<title>Instantiating a Device</title>
+		<link rel="icon" type="image/png" href="favicon.png"/>
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="css/prism.min.css">
+		<link type="text/css" rel="stylesheet" href="css/template.min.css">
+			<style>
+				.page-header,
+				pre.code-toolbar > .toolbar:hover {
+					background-color: #000;
+				}
+				.callout-primary,
+				.toc .nav > li > a:hover,
+				.toc .nav > li > a:focus,
+				.toc .nav > li.active > a,
+				.toc .nav > li.active > a:hover,
+				.toc .nav > li.active > a:focus,
+				pre.code-toolbar > .toolbar:hover {
+					border-left-color: #000;
+				}
+				pre.code-toolbar > .toolbar:hover {
+					border-bottom-color: #000;
+				}
+				.callout-primary h5,
+				.symbol-title.collapsible-symbol .toggle-icon,
+				.breadcrumb li a,
+				.toc .nav > li > a:hover,
+				.toc .nav > li > a:focus,
+				.toc .nav > li.active > a,
+				.toc .nav > li.active > a:hover,
+				.toc .nav > li.active > a:focus {
+					color: #000;
+				}
+			</style>
+		<script type="text/javascript">
+			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"MMMM D, YYYY","systemName":"j5e","systemSummary":"Johnny Five for Embedded Systems","systemLogo":"img/j5e.png","systemColor":"#000","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Copyright © 2020 The contributors to the j5e and Johnny-Five projects.","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":{"ua":"UA-36026876-4","domain":"dtex.github.io"},"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":"./build/docs/custom.css","scripts":[],"monospaceLinks":false,"cleverLinks":false};
+			window.DOCLET_TOC_ENABLED = true;
+			window.DOCLET_AFILTER_ENABLED = false;
+		</script>
+</head>
+<body>
+	<!-- start:navbar.hbs -->
+	<header class="navbar navbar-default navbar-fixed-top navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand branding-logo" href="index.html" style="background-image: url(img/j5e.png);">
+					j5e
+				</a>
+				<!-- displayed on small devices -->
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="navbar-collapse collapse" id="topNavigation">
+				<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="list_class.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+											<li><a href="module-j5e_animation-Animation.html">j5e/animation~Animation</a></li>
+											<li><a href="module-j5e_animation-Segment.html">j5e/animation~Segment</a></li>
+											<li><a href="module-j5e_animation-Timer.html">j5e/animation~Timer</a></li>
+											<li><a href="module-j5e_event.Emitter.html">j5e/event.Emitter</a></li>
+											<li><a href="module-j5e_led-Led.html">j5e/led~Led</a></li>
+											<li><a href="module-j5e_rgb-RGB.html">j5e/rgb~RGB</a></li>
+											<li><a href="module-j5e_servo-Servo.html">j5e/servo~Servo</a></li>
+											<li><a href="module-j5e_switch-Switch.html">j5e/switch~Switch</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="list_module.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+											<li><a href="module-j5e_animation.html">j5e/animation</a></li>
+											<li><a href="module-j5e_easing.html">j5e/easing</a></li>
+											<li><a href="module-j5e_event.html">j5e/event</a></li>
+											<li><a href="module-j5e_fn.html">j5e/fn</a></li>
+											<li><a href="module-j5e_led.html">j5e/led</a></li>
+											<li><a href="module-j5e_rgb.html">j5e/rgb</a></li>
+											<li><a href="module-j5e_servo.html">j5e/servo</a></li>
+											<li><a href="module-j5e_switch.html">j5e/switch</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="list_tutorial.html" class="dropdown-toggle" data-toggle="dropdown">Tutorials<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+											<li><a href="tutorial-ASYNC.html">Making it Asynchronous</a></li>
+											<li><a href="tutorial-GETSTARTED.html">Getting Started</a></li>
+											<li><a href="tutorial-INSTANTIATING.html">Instantiating a Device</a></li>
+									</ul>
+								</li>
+				</ul>
+					<!-- start:lunr-search-navbar.hbs -->
+					<form class="navbar-form navbar-right" role="search">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Search" id="lunr-search-input">
+							<div class="input-group-btn">
+								<button class="btn btn-default" id="lunr-search-submit">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+					<!-- start:lunr-search-navbar.hbs -->		</div>
+		</div>
+	</header>
+	<!-- end:navbar.hbs -->		<div class="page-header">
+			<div class="container">
+				<span class="kind">tutorial</span>
+				<h1><span class="title">Instantiating a Device</span></h1>
+				<div class="summary"><p>The ioOptions parameter is powerful, flexible, and just a little confusing.</p></div>			</div>
+		</div>
+	<div class="container content">
+		<div class="row">
+			<div class="col-md-9 main-content">
+						<ol class="breadcrumb">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="list_tutorial.html">Tutorials</a></li>
+							<li class="active">Instantiating a Device</li>
+						</ol>
+		<section class="tutorial-section">
+			<article><p>j5e device instantiation allows for a few different patterns. On one hand we wanted to enable the simplest possible use case where the only parameter we need is the pin number, and on the other hand we needed to be able to support complex io and device initializations whose details we could not foresee.</p>
+<pre class="prettyprint source lang-js"><code>new DeviceClass(io[, device]);
+</code></pre>
+<h2>The <code>io</code> Argument</h2>
+<p>In TC-53 parlance, an &quot;I/O&quot; is a single GPIO instance. That GPIO Instance could be Digital, PWM, Serial, I2C, SPI or something else. <strong>The <code>io</code> argument describes the configuration for the I/O instance</strong>. This configuration could include which board to use, which pins, what data rate, etc. The details depend on your situation and provider.</p>
+<p><em>Whoah, what's a provider?</em></p>
+<p>In the physical world a provider is a &quot;thing&quot; (hardware or software) that provides access to some type of I/O. The I/O could be built into the device running your JavaScript, part of a physically connected device like an expander or external microcontroller, or even part of a cloud service that controls a device located halfway around the world.</p>
+<p>In code a provider is a bundle of classes that work with that &quot;thing&quot;. Providers could come from a board manufacturer, an expander library, an IoT cloud service, or a myriad of other places. The most basic providers are the <strong>builtins</strong> that are bundled with some platforms. In XS for the ESP8266, these providers are bundled with the <a href="https://github.com/Moddable-OpenSource/moddable">Moddable SDK</a>, and are part of the IO module. They give access to the ESP8266's built-in GPIO pins. Non-builtin providers are known as &quot;external providers&quot;.</p>
+<p>The <code>io</code> argument is always required and can take a few different forms:</p>
+<ul>
+<li><strong>Pin Identifier</strong> - This is the simplest scenario and would be a single number of string. j5e will assume the provider is a builtin. The particular type of IO will vary by device class. For example, servo would default to <code>builtin/PWM</code>. Button or switch would default to <code>builtin/Digital</code>.<pre class="prettyprint source lang-js"><code>import LED from &quot;@j5e/led&quot;;
+
+(async function() {
+  
+  // Instantiate an LED connected to 
+  // builtin pin 13
+  const led = await new LED(13);
+
+  led.blink();
+  
+})();
+</code></pre>
+</li>
+</ul>
+<hr>
+<ul>
+<li>
+<p><strong>Object Literal</strong> - Sometimes it is necessary to specify more than just a pin number to instantiate an I/O. For example if you are using an external provider, or need to set the data speed.</p>
+<pre class="prettyprint source lang-js"><code>import LED from &quot;@j5e/led&quot;;
+
+(async function() {
+
+  // Instantiate an LED connected to 
+  // an expander on pin 2
+  const led = await new LED({
+    io: &quot;PCA9685/PWM&quot;,
+    address: 0x40,
+    pin: 2
+  });
+
+  led.blink();
+
+})();
+</code></pre>
+<p>*Pro tip: It is also possible to instantiate</p>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>I/O Instance</strong> - Sometimes it may be necessary to explicitly instantiate the I/O and pass that instance on to j5e.<pre class="prettyprint source lang-js"><code>import PWM from &quot;PCA9685/PWM&quot;;
+import LED from &quot;@j5e/LED&quot;;
+
+(async function() {
+  
+  // Instantiate a PWM I/O connected to 
+  // an expander on pin 2
+  const ledIO = await new PWM({
+    pin: 2,
+    address: 0x40
+  });
+  
+  // Instantiate an LED connected to 
+  // our LED I/O
+  const led = await new Led(ledIO);
+
+  led.pulse();
+
+})();
+
+</code></pre>
+<em>Note that some je classes will not allow an I/O Instance to be passed in as an ioOption. Specifically, any j5e class that depends on callbacks for its event emitters must instantiate its own I/O Instances. The TC-53 specification does not allow for mutable callbacks on I/O instances.</em></li>
+</ul>
+<hr>
+<ul>
+<li><strong>A Homogenous Array of Pin Identifiers, Object Literals, or I/O Instances</strong> - Some devices require more than one I/O. For example, and RGB LED requires three PWM I/O's. The order of the elements in the array is important and is specific to the type of device.<pre class="prettyprint source lang-js"><code>import RGB from &quot;@j5e/RGB&quot;;
+
+(async function() {
+  
+  // Instantiate an RGB LED connected to 
+  // built-in pins 12, 13 and 14 
+  const rgb = await new RGB([12, 13, 14]);
+
+  led.blink();
+
+})();
+</code></pre>
+</li>
+</ul>
+<hr>
+<ul>
+<li>
+<p><strong>A Heterogenous Array of Pin Identifiers, Object Literals, and/or I/O Instances</strong> - You can also use more complex combinations in your array. For example, some devices require multiple I/O's suppplied by more than one provider. A motor controller may use a PWM expander to control motor speed and a built-in digital pin to control direction. The order of the elements in the array matters and varies with the type of device.</p>
+<pre class="prettyprint source lang-js"><code>import PWM from &quot;PCA9685/PWM&quot;;
+import Motor from &quot;@j5e/motor&quot;;
+
+(async function() {
+
+  // Instantiate a PWM I/O connected to 
+  // pin 2 of an expander
+  const speedIO = new PWM({
+    pin: 2,
+    address: 0x40
+  });
+
+  // Instantiate a motor connected to 
+  // speedIO and pin 13 on builtin
+  const m1 = await new Motor([ speedIO, 13 ]);
+  
+  m1.forward();
+
+})();
+</code></pre>
+<h2>The <code>device</code> Argument</h2>
+<p>A device is something connected to your I/O. It could be a sensor, a switch, and LED, a motor, a GPS receiver, or... The universe of devices is vast. Since the details of the device argument can vary greatly we won't try and cover it here, except to say that it is optional. If it is not passed, j5e will use default values. If a string is passed in its place, it is understood to be the path to an I/O provider. Let's look at examples of those two forms:</p>
+<ul>
+<li><strong>An Object Literal</strong> - In this scenario, the <code>device</code> argument is passing a device-specific configuration.</li>
+</ul>
+<pre class="prettyprint source lang-js"><code>import Servo from &quot;@j5e/servo&quot;;
+
+(async function() {
+
+  const servo = await new Servo(13, {
+    pwmRange: [700, 2300],
+    offset: 3
+  });
+
+  servo.sweep();
+
+})();
+</code></pre>
+</li>
+</ul>
+<hr></article>
+		</section>
+			</div>
+				<div class="col-md-3 side-content">
+					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
+				</div>
+		</div>
+	</div>
+	<footer>
+				<div class="copyright">Copyright © 2020 The contributors to the j5e and Johnny-Five projects.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on March 4, 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+	</footer>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/clipboard.min.js"></script>
+	<script src="js/prism.min.js"></script>
+	<script src="js/template.min.js"></script>
+		<!-- start:lunr-search-modal.hbs -->
+		<div class="modal fade" id="lunr-search-modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Search results</h4>
+					</div>
+					<div class="modal-body" id="lunr-search-body">
+					</div>
+					<div class="modal-footer" id="lunr-search-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+		<!-- end:lunr-search-modal.hbs -->		<script src="js/lunr.min.js"></script>
+	
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-36026876-4', 'dtex.github.io');
+			ga('send', 'pageview');
+		</script>
+	
+</body>
+</html>
+<!-- end:readme.hbs -->

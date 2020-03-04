@@ -15,7 +15,9 @@ const j5eManifest = JSON.parse(manifestTemplate);
 const packages = fs.readdirSync("./packages");
 
 packages.forEach(package => {
-  // Add to the top level manifest
+  
+  if (package === "tests") return;
+   // Add to the top level manifest
   j5eManifest.modules[`@j5e/${package}`] = `$(j5e)/${package}/*`;
 
   // Create the module directory in dist/moddable
@@ -36,7 +38,7 @@ packages.forEach(package => {
   });
   
   // Add the main file to modules in manifest
-  manifest.modules["@j5e/led"] = (`$(j5e)/${package}/*`);
+  manifest.modules[`@j5e/${package}`] = (`$(j5e)/${package}/*`);
   
   // Publish the module manifest
   fs.writeFileSync(`${target}/${package}/manifest.json`, JSON.stringify(manifest, null, 2));
