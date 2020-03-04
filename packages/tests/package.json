@@ -1,14 +1,10 @@
 {
-  "name": "@j5e/servo",
-  "version": "0.0.3",
-  "description": "Servo class for J5e",
-  "main": "index.js",
+  "name": "@j5e/tests",
+  "version": "0.0.1",
+  "description": "Unit tests for J5e",
   "type": "module",
   "publishConfig": {
     "access": "public"
-  },
-  "scripts": {
-    "test": "../../node_modules/mocha/bin/mocha ../tests/servo.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +14,19 @@
     "@j5e/animation": "^0.0.3",
     "@j5e/easing": "^0.0.3",
     "@j5e/event": "^0.0.3",
-    "@j5e/fn": "^0.0.3"
+    "@j5e/fn": "^0.0.3",
+    "@j5e/led": "^0.0.3",
+    "@j5e/rgb": "^0.0.1",
+    "@j5e/servo": "^0.0.3",
+    "@j5e/switch": "^0.0.3"
+  },
+  "devDependencies": {
+    "@dtex/mock-io": "^0.0.2",
+    "assert": "^2.0.0",
+    "chai": "^4.2.0",
+    "esm": "^3.2.25",
+    "mocha": "^7.1.0",
+    "sinon": "^7.5.0"
   },
   "keywords": [
     "j5e",

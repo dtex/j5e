@@ -1,8 +1,7 @@
-const assert = require('assert');
-const sinon = require('sinon');
-
+import assert from 'assert';
+import sinon from 'sinon';
 import { Digital, PWM } from "@dtex/mock-io";
-import Led from '../packages/led';
+import Led from '@j5e/led';
 
 describe('Led - Digital', function() {
   

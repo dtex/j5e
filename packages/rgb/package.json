@@ -3,11 +3,12 @@
   "version": "0.0.1",
   "description": "RGB LED control class for J5e",
   "main": "index.js",
+  "type": "module",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "test": "../../node_modules/mocha/bin/mocha ../../tests/rgb.js --harmony --require esm"
+    "test": "../../node_modules/mocha/bin/mocha ../tests/rgb.js"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,6 @@
   "bugs": {
     "url": "https://github.com/dtex/j5e/issues"
   },
-  "homepage": "https://github.com/dtex/j5e#readme",
+  "homepage": "https://dtex.github.com/j5e",
   "gitHead": "10354fdd0d5620b1bd08e4281c829df607471467"
 }

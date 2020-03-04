@@ -1,21 +1,12 @@
-const assert = require('assert');
-const sinon = require('sinon');
-
+import assert from 'assert';
+import sinon from 'sinon';
 import { Digital } from "@dtex/mock-io";
-import { constrain, normalizeParams, timer } from '../packages/fn';
+import { constrain, normalizeParams, timer } from '@j5e/fn';
 
 describe('Fn', function() {
   
   describe('normalizeParams', function() {
-    
-    it('should return valid ioOpts and deviceOpts when passed a provider class and pin number', function() {
-      const {ioOpts, deviceOpts} = normalizeParams(13, Digital);
-      assert.equal(Object.is(ioOpts.io, Digital), true);
-      assert.equal(ioOpts.pin, 13);
-      assert.equal(typeof deviceOpts, "object");
-      assert.equal(Object.keys(deviceOpts).length, 0);
-    });
-
+  
     it('should return valid ioOpts and deviceOpts when passed a provider object', function() {
       const {ioOpts, deviceOpts} = normalizeParams({
         io: Digital,

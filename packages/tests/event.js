@@ -1,8 +1,7 @@
-const assert = require('assert');
-const sinon = require('sinon');
-
-import { Emitter } from '../packages/event';
-import Switch from '../packages/switch';
+import assert from 'assert';
+import sinon from 'sinon';
+import { Emitter } from '@j5e/event';
+import Switch from '@j5e/switch';
 import { Digital } from "@dtex/mock-io";
 
 describe('Event', function() {

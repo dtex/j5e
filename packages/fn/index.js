@@ -10,14 +10,28 @@
  * @param {object} [deviceOpts={}] - An object containing device options
  */
 export function normalizeParams(ioOpts={}, deviceOpts={}) {
+  ioOpts = normalizeIO(ioOpts);
+  deviceOpts = normalizeDevice(deviceOpts);
+  return { ioOpts, deviceOpts }
+};
+
+ /** Normalize I/O parameters
+ * @param {(number|string|object)} ioOpts - A pin number, pin identifier or a complete IO options object
+ * @param {(number|string)} [ioOpts.pin] - If passing an object, a pin number or pin identifier
+ * @param {(string|constructor)} [ioOpts.io] - If passing an object, a string specifying a path to the IO provider or a constructor
+ */
+export function normalizeIO(ioOpts={}) {
   if (typeof ioOpts === "number" || typeof ioOpts === "string") {
     ioOpts = {pin: ioOpts};
   }
-  if (typeof deviceOpts === "function") {
-    ioOpts.io = deviceOpts;
-    deviceOpts = {};
-  }
-  return { ioOpts, deviceOpts}
+  return ioOpts;
+};
+
+/** Normalize Device parameter
+ * @param {object} [deviceOpts={}] - An object containing device options
+ */
+export function normalizeDevice(deviceOpts={}) {
+  return deviceOpts;
 };
 
 /** Constrain a value to a range. 
@@ -29,8 +43,17 @@ export function constrain(value, low, high) {
   if (value > high) value = high;
   if (value < low) value = low;
   return value;
-}
+};
 
+/** Wait for and async forEach loop
+ * @param {array[]} array - An input array
+ * @param {function} callback - A function to execute when iteration is complete
+ */
+export async function asyncForEach(array, callback) {
+  for (let index = 0; index < array.length; index++) {
+    await callback(array[index], index, array);
+  }
+};
 
 /**
  * Map a value (number) from one range to another. Based on Arduino's map().

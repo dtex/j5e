@@ -3,7 +3,7 @@
  * @module j5e/rgb
  */
 
-import {normalizeParams, constrain, getProvider, timer} from "@j5e/fn";
+import {normalizeParams, constrain, getProvider, timer, asyncForEach} from "@j5e/fn";
 import {inOutSine, outSine} from "@j5e/easing";
 import Animation from "@j5e/animation";
 
@@ -32,7 +32,7 @@ class RGB {
 
   /**
    * Instantiate an RGB LED
-   * @param {(number[]|string[]|object)} io - A pin number array, pin identifier array or a complete IO options object
+   * @param {(number[]|string[]|object[])} io - An array of 3 pin identifiers, IO options, or IO instances
    * @param {(number[]|string[]|object)} [io.pins] - A pin number array, pin identifier array or a complete pins object
    * @param {(number|string)} [io.pins.red] - A pin number or pin identifier for the red channel
    * @param {(number|string)} [io.pins.green] - A pin number or pin identifier for the green channel
@@ -43,47 +43,38 @@ class RGB {
    */
   constructor(io, device) {
     return (async () => {
+      if (!Array.isArray(io) || io.length !== 3) {
+        throw "RGB expects an array of three elements for the io parameter";
+      }
+      
       let {ioOpts, deviceOpts} = normalizeParams(io, device);
 
       if (deviceOpts.sink) {
         this.#state.sink = true;
       }
 
-      // Normalize pins to [Number|String]
-      if (Array.isArray(ioOpts)) {
-        // Convert to ioOpts.pins array definition
-        ioOpts = {
-          pins: ioOpts
-        };
-      } else if (typeof ioOpts.pins === "object" && !Array.isArray(ioOpts.pins)) {
-        // opts.pins is an object, convert to array
-        ioOpts.pins = [ioOpts.pins.red, ioOpts.pins.green, ioOpts.pins.blue];
-      }
-
-      // Normalize provider(s) to  [String|Contructor]
-      if (!Array.isArray(ioOpts.io)) {
-        ioOpts.io = [].fill(ioOpts.io, 0, 2);
-      }
-
       this.LOW = 0;
-      
-      RGB.colors.forEach(async (color, index) => {
-        const Provider = await getProvider(ioOpts.io[index], "builtin/pwm");
-        this.io[color] = new Provider({
-          pin: ioOpts.pins[index],
+      this.io = {};
+      this.HIGH = {};
+    
+      await asyncForEach(RGB.colors, async (color, index) => {
+        const Provider = await getProvider(ioOpts[index], "builtin/pwm");
+        this.io[color] = await new Provider({
+          pin: ioOpts[index].pin,
           mode: Provider.Output
         });
+    
         if (this.io[color].resolution) {
           this.HIGH[color] = (1 << this.io[color].resolution) -1;
         } else {
           this.HIGH[color] = 1;
         }
       });
-      
+    
       Object.defineProperties(this, {
         isOn: {
           get: function() {
-            return this.#state.colors.some(function(color) {
+            return RGB.colors.some((color) => {
               return this.#state[color] > 0;
             });
           }
@@ -108,7 +99,7 @@ class RGB {
             
             colors = colors || this.color();
 
-            this.#state.values = RGB.ToScaledRGB(this.#state.intensity, colors);
+            //this.#state.values = RGB.ToScaledRGB(this.#state.intensity, colors);
 
             this.write(this.#state.values);
 
@@ -132,7 +123,7 @@ class RGB {
    */
   write(colors) {
     
-    RGB.colors.forEach((color, index) => {
+    asyncForEach(RGB.colors, (color, index) => {
       let value = colors[color];
     
       if (this.#state.sink) {
