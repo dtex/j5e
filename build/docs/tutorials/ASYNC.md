@@ -1,4 +1,4 @@
-Users of Johnny-Five may recall that asynchronous functionality was handled through the use of event listeners. Take the ubiquitous Johnny-Five "Hello World" example:
+Users of Johnny-Five may recall that asynchronous functionality was handled through the use of event listeners. Take this Johnny-Five "Hello World" example:
 
 ````js
 var five = require("johnny-five");
@@ -16,7 +16,7 @@ board.on("ready", function() {
 
 We can't instantiate our LED before the board is ready, so we wait for the board's ready event to fire and then run our program. 
 
-The challenge of having to wait for I/O to be ready remains, but now we handle it with promises and async/await. The trick is that in order to ```await``` for a call to return, the code must be wrapped in an ```async``` function. The simplest way to do this is with an "asynchronous immediately invoked function expression" or "AIIFE". The AIIFE wraps our program so we can use ```await``` on our initialization calls. 
+Things have changed. The challenge of having to wait for I/O to be ready remains, but now we handle it with promises and async/await. The trick is that in order to ```await``` for a call to return, the code must be wrapped in an ```async``` function. The simplest way to do this is with an "asynchronous immediately invoked function expression" or "AIIFE". The AIIFE wraps our program so we can use ```await``` on our initialization calls. 
 
 ````js
 import Led from "@j5e/led";
@@ -37,9 +37,9 @@ Maybe one day we'll be able to use await at the top level without the AIIFE and 
   // ...
 })();
 ````
-If you're unclear about this bit of computer vomit, perhaps this breakdown will help.
+If you're unclear about this bit of computer vomit, perhaps this breakdown will help...
 
-Typically at the top level a program we assign a function expression to a variable, and then call it later:
+It is commont to assign function expression to a variable in the global namespace, and then call it later:
 ````js
 // Function expression assigned to global "foo"
 const foo = function() { 
@@ -48,7 +48,7 @@ const foo = function() {
 
 foo();
 ````
-But we don't need to name the function and pollute the global namespace so we leave off the variable assignment:
+But an anonymous function is fine here so we leave off the variable assignment:
 ````js
 // Anonymous function in the global namespace (error)
 function() {
@@ -70,10 +70,10 @@ We want to make sure that the function runs so we add parens after the grouping 
   // ...
 })();
 ````
-It runs! Now one last thing... In order to be able to use await within our anonymous function, it has to be declared an async function, so we end up with:
+It runs! Now one last thing... In order to be able to use await within our anonymous function, it has to be an async function, so we end up with:
 ````js
 (async function() { 
   // ...
 })();
 ````
-and we can now await all the things.
+and now we can ```await``` all the things.

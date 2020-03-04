@@ -1,11 +1,11 @@
-All j5e devices (LED's, Motors, Sensors, etc) are instantiated using the same pattern:
-````js
-const instanceName = new DeviceClass(ioOptions, deviceOptions);
-````
-The deviceOptions argument is just an object literal, varies with the type of device being instantiated and is frequently optional. The ioOptions argument on the other hand is required and can take a number of different forms. Let's break down ioOptions in more detail.
+j5e device instantiation allows for a few different patterns. On one hand we wanted to enable the simplest possible use case where the only parameter we need is the pin number, and on the other hand we needed to be able to support complex io and device initializations whose details we could not foresee.
 
-## ioOptions
-In TC-53 parlance, an "I/O" is a single GPIO instance. That GPIO Instance could be Digital, PWM, Serial, I2C, SPI or something else. **The ioOptions argument describes the configuration for the I/O instance**. This configuration could include which board to use, which pins, what data rate, etc. The details depend on your situation and provider. 
+````js
+new DeviceClass(io[, device]);
+````
+
+## The ```io``` Argument
+In TC-53 parlance, an "I/O" is a single GPIO instance. That GPIO Instance could be Digital, PWM, Serial, I2C, SPI or something else. **The ```io``` argument describes the configuration for the I/O instance**. This configuration could include which board to use, which pins, what data rate, etc. The details depend on your situation and provider. 
 
 *Whoah, what's a provider?*
 
@@ -13,8 +13,8 @@ In the physical world a provider is a "thing" (hardware or software) that provid
 
 In code a provider is a bundle of classes that work with that "thing". Providers could come from a board manufacturer, an expander library, an IoT cloud service, or a myriad of other places. The most basic providers are the **builtins** that are bundled with some platforms. In XS for the ESP8266, these providers are bundled with the [Moddable SDK](https://github.com/Moddable-OpenSource/moddable), and are part of the IO module. They give access to the ESP8266's built-in GPIO pins. Non-builtin providers are known as "external providers".
 
-The ```ioOptions``` argument is always required and can take a few different forms: 
-* **Number or String** - This is the simplest scenario and would be a single pin identifier. j5e will assume the provider is a builtin. The particular type of IO will vary by device class. For example, servo would default to ```builtin/PWM```. Button or switch would default to ```builtin/Digital```.
+The ```io``` argument is always required and can take a few different forms: 
+* **Pin Identifier** - This is the simplest scenario and would be a single number of string. j5e will assume the provider is a builtin. The particular type of IO will vary by device class. For example, servo would default to ```builtin/PWM```. Button or switch would default to ```builtin/Digital```.
   ````js
   import LED from "@j5e/led";
 
@@ -47,41 +47,10 @@ The ```ioOptions``` argument is always required and can take a few different for
 
   })();
   ````
+
+  *Pro tip: It is also possible to instantiate 
 ---
-* **An Array of Pin Identifiers** - Some devices require more than one I/O. For example, and RGB LED requires three PWM I/O's. If they all use the same provider, then you can just pass them as an array of pin identifiers.
-  ````js
-  import RGB from "@j5e/RGB";
-
-  (async function() {
-    
-    // Instantiate an RGB LED connected to 
-    // built-in pins 12, 13 and 14 
-    const rgb = await new RGB([12, 13, 14]);
-
-    led.blink();
-
-  })();
-  ````
-  You could also use on object with an array on the pins property.
-  ````js
-  import RGB from "@j5e/RGB";
-
-  (async function() {
-    
-    // Instantiate an RGB LED connected to 
-    // an expander on pins 2, 3 and 4 
-    const rgb = await new RGB({
-      io: "PCA9685/PWM",
-      address: 0x40,
-      pins: [2, 3, 4]
-    });
-
-    rgb.blink();
-
-  })();
-  ````
----
-* **I/O Instance** - Sometimes it may be necessary to explicitly instantiate the I/O and pass that instance on to j5e. For simplicitly, j5e tries to abstract this away, but the ability is there if you ever need it.
+* **I/O Instance** - Sometimes it may be necessary to explicitly instantiate the I/O and pass that instance on to j5e.
   ````js
   import PWM from "PCA9685/PWM";
   import LED from "@j5e/LED";
@@ -106,8 +75,22 @@ The ```ioOptions``` argument is always required and can take a few different for
   ````
   *Note that some je classes will not allow an I/O Instance to be passed in as an ioOption. Specifically, any j5e class that depends on callbacks for its event emitters must instantiate its own I/O Instances. The TC-53 specification does not allow for mutable callbacks on I/O instances.*
 ---
+* **A Homogenous Array of Pin Identifiers, Object Literals, or I/O Instances** - Some devices require more than one I/O. For example, and RGB LED requires three PWM I/O's. The order of the elements in the array is important and is specific to the type of device.
+  ````js
+  import RGB from "@j5e/RGB";
 
-* **Heterogeneous Providers** - It is rare, but some devices require multiple I/O's suppplied by more than one provider. For example, a motor controller may use a PWM expander to control motor speed and a built-in digital pin to control direction. For these devices you can pass an array of pin identifiers, objects, or I/O instances. The order of the elements in the array is important and is specific to the type of device.
+  (async function() {
+    
+    // Instantiate an RGB LED connected to 
+    // built-in pins 12, 13 and 14 
+    const rgb = await new RGB([12, 13, 14]);
+
+    led.blink();
+
+  })();
+  ````
+---
+* **A Heterogenous Array of Pin Identifiers, Object Literals, and/or I/O Instances** - You can also use more complex combinations in your array. For example, some devices require multiple I/O's suppplied by more than one provider. A motor controller may use a PWM expander to control motor speed and a built-in digital pin to control direction. The order of the elements in the array matters and varies with the type of device.
   ````js
   import PWM from "PCA9685/PWM";
   import Motor from "@j5e/motor";
@@ -129,4 +112,22 @@ The ```ioOptions``` argument is always required and can take a few different for
 
   })();
   ````
-  
+
+  ## The ```device``` Argument
+  A device is something connected to your I/O. It could be a sensor, a switch, and LED, a motor, a GPS receiver, or... The universe of devices is vast. Since the details of the device argument can vary greatly we won't try and cover it here, except to say that it is optional. If it is not passed, j5e will use default values. If a string is passed in its place, it is understood to be the path to an I/O provider. Let's look at examples of those two forms:
+  * **An Object Literal** - In this scenario, the ```device``` argument is passing a device-specific configuration.
+  ````js
+  import Servo from "@j5e/servo";
+
+  (async function() {
+
+    const servo = await new Servo(13, {
+      pwmRange: [700, 2300],
+      offset: 3
+    });
+
+    servo.sweep();
+
+  })();
+  ````
+---
