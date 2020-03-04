@@ -1,6 +1,6 @@
 {
   "name": "@j5e/switch",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Switch class for J5e",
   "main": "index.js",
   "type": "module",
@@ -15,8 +15,8 @@
     "url": "git+https://github.com/dtex/j5e.git"
   },
   "dependencies": {
-    "@j5e/event": "^0.0.3",
-    "@j5e/fn": "^0.0.3"
+    "@j5e/event": "^0.0.4",
+    "@j5e/fn": "^0.0.4"
   },
   "keywords": [
     "j5e",
