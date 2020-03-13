@@ -427,12 +427,9 @@ class RGB {
 
             // If the values were %...
             if (isPercentString(args[0])) {
-              args.forEach(function(value, index) {
-                // Only convert the first 3 values
-                if (index <= 2) {
-                  args[index] = Math.round((parseInt(value, 10) / 100) * 255);
-                }
-              });
+              args[0] = Math.round((parseInt(value, 10) / 100) * this.HIGH.red);
+              args[1] = Math.round((parseInt(value, 10) / 100) * this.HIGH.green);
+              args[2] = Math.round((parseInt(value, 10) / 100) * this.HIGH.blue);
             }
 
             update = {

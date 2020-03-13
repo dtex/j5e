@@ -1,6 +1,9 @@
 /**
- * Led module - For controlling LED's
+ * LED module
  * @module j5e/led
+ * @requires module:@j5e/animation
+ * @requires module:@j5e/easing
+ * @requires module:@j5e/fn
  */
 
 import {normalizeParams, constrain, getProvider, timer} from "@j5e/fn";
@@ -9,9 +12,11 @@ import Animation from "@j5e/animation";
 
 /** 
  * Class representing an LED
- * @classdesc The Led class allows for control of LED's
+ * @classdesc The LED class allows for control of Light Emitting Diodes
+ * @async
+ * 
  */
-class Led {
+class LED {
   
   #state = {
     sink: false, 
@@ -24,12 +29,43 @@ class Led {
 
   /**
    * Instantiate an LED
-   * @param {(number|string|object)} io - A pin number, pin identifier or a complete IO options object
-   * @param {(number|string)} [io.pin] - If passing an object, a pin number or pin identifier
+   * @param {object|number|string} io - Pin identifier or IO Options
+   * @param {number} io.pin - A pin number
+   * @param {string} io.pin - A pin identifier
    * @param {boolean} [io.pwm] - If true and io.io is not passed, will use "builtin/pwm" for io
-   * @param {(string|constructor)} [io.io=builtin/digital] - If passing an object, a string specifying a path to the IO provider or a constructor
+   * @param {string} [io.io=builtin/digital] - A string specifying a path to the IO provider
+   * @param {constructor} [io.io=builtin/digital] - An I/O constructor
    * @param {object} [device={}] - An object containing device options
    * @param {boolean} [device.sink=false] - True if the device is wired for sink drive
+   * @example
+   * <caption>Using a pin number</caption>
+   * import LED from "@j5e/led";
+   *
+   * (async function() {
+   *   const led = await new LED(12);
+   *   led.blink();
+   * })();
+   * 
+   * @example
+   * <caption>Using a pin identifier</caption>
+   * import LED from "@j5e/led";
+   *
+   * (async function() {
+   *   const led = await new LED("A1");
+   *   led.blink();
+   * })();
+   * 
+   * @example
+   * <caption>Using an IO options object</caption>
+   * import LED from "@j5e/led";
+   *
+   * (async function() {
+   *   const led = await new LED({
+   *     pin: 12,
+   *     pwm: true
+   *   });
+   *   led.blink();
+   * })();
    */
   constructor(io, device) {
     return (async () => {
@@ -81,8 +117,9 @@ class Led {
     })();
   }
 
-   /**
+  /**
    * Internal method that writes the current LED value to the IO
+   * @access private
    */
   write() {
     let value = constrain(this.#state.value, this.LOW, this.HIGH);
@@ -96,7 +133,14 @@ class Led {
 
   /**
    * Turn an led on
-   * @return {Led}
+   * @returns {LED} The instance on which the method was called
+   * @example
+   * import RGB from "@j5e/rgb";
+   *
+   * (async function() {
+   *   rgb = await new RGB([12, 13, 14])
+   *   rgb.on();
+   * })();
    */
   on() {
     this.#state.value = this.HIGH;
@@ -106,7 +150,7 @@ class Led {
 
   /**
    * Turn an led off
-   * @return {Led}
+   * @return {LED}
    */
   off() {
     this.#state.value = this.LOW;
@@ -116,7 +160,7 @@ class Led {
 
   /**
    * Toggle the on/off state of an led
-   * @return {Led}
+   * @return {LED}
    */
   toggle() {
     return this[this.isOn ? "off" : "on"]();
@@ -126,7 +170,7 @@ class Led {
    * Blink the LED on a fixed interval
    * @param {Number} duration=100 - Time in ms on, time in ms off
    * @param {Function} callback - Method to call on blink
-   * @return {Led}
+   * @return {LED}
    */
   blink(duration=100, callback) {
     // Avoid traffic jams
@@ -152,7 +196,7 @@ class Led {
   /**
    * Set the brightness of an led attached to PWM
    * @param {Integer} value - Brightness value [this.HIGH, this.LOW]
-   * @return {Led}
+   * @return {LED}
    */
   brightness(value) {
     this.#state.value = value;
@@ -163,7 +207,7 @@ class Led {
   /**
    * Set the brightness of an led 0-100
    * @param {Integer} value - Brightness value [0, 100]
-   * @return {Led}
+   * @return {LED}
    */
   intensity(value) {
     this.#state.value = map(value, 0, 100, this.LOW, this.HIGH);
@@ -172,17 +216,14 @@ class Led {
   }
 
   /**
-   * Pulse the Led in and out in a loop with specified time
+   * Pulse the LED in and out in a loop with specified time
    * @param {number} [time=1000] Time in ms that a fade in/out will elapse
    * @param {function} [callback] A function to run each time the direction of pulse changes
-   * @return {Led}
+   * @return {LED}
    */
-
   pulse(time=1000, callback) {
     
-    this.stop();
-
-    var options = {
+    let options = {
       duration: typeof time === "number" ? time : 1000,
       keyFrames: [this.LOW, this.HIGH],
       metronomic: true,
@@ -204,20 +245,32 @@ class Led {
       callback = time;
     }
 
+    return this.animate(options);
+    
+  }
+  
+  /**
+   * Animate the RGB LED
+   * @param {Object} options
+   * @return {RGB}
+   */
+  animate(options) {
+    // Avoid traffic jams
+    this.stop();
+
     this.#state.isRunning = true;
 
     this.#state.animation = this.#state.animation || new Animation(this);
     this.#state.animation.enqueue(options);
     return this;
-    
-  }  
+  }
 
   /**
    * fade Fade an led in and out
    * @param {Number} val Target brightness value
    * @param {Number} [time=1000] Time in ms that a fade will take
    * @param {function} [callback] A function to run when the fade is complete
-   * @return {Led}
+   * @return {LED}
    */
   fade(val, time=1000, callback) {
     
@@ -263,7 +316,7 @@ class Led {
    * fade Fade an led in
    * @param {Number} [time=1000] Time in ms that a fade will take
    * @param {function} [callback] A function to run when the fade is complete
-   * @return {Led}
+   * @return {LED}
    */
   fadeIn(time=1000, callback) {
     return this.fade(this.HIGH, time, callback);
@@ -273,7 +326,7 @@ class Led {
    * fade Fade an led out
    * @param {Number} [time=1000] Time in ms that a fade will take
    * @param {function} [callback] A function to run when the fade is complete
-   * @return {Led}
+   * @return {LED}
    */
   fadeOut(time=1000, callback) {
     return this.fade(this.LOW, time, callback);
@@ -281,7 +334,7 @@ class Led {
 
   /**
    * stop Stop the led from strobing, pulsing or fading
-   * @return {Led}
+   * @return {LED}
    */
   stop() {
     
@@ -301,6 +354,7 @@ class Led {
 
   /**
    * @param [number || object] keyFrames An array of step values or a keyFrame objects
+   * @access private
    */
 
   normalize(keyFrames) {
@@ -340,6 +394,7 @@ class Led {
 
   /**
    * @position [number] value to set the led to
+   * @access private
    */
   render(position) {
     this.#state.value = position[0];
@@ -348,4 +403,4 @@ class Led {
 
 };
 
-export default Led;
+export default LED;
