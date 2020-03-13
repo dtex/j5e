@@ -271,9 +271,7 @@ class RGB {
    * @return {RGB}
    */
   pulse(time=1000, callback) {
-    // Avoid traffic jams
-    this.stop();
-
+    
     var options = {
       duration: typeof time === "number" ? time : 1000,
       cuePoints: [0, 1],
@@ -296,12 +294,7 @@ class RGB {
     if (typeof time === "function") {
       callback = time;
     }
-
-    this.#state.isRunning = true;
-
-    this.#state.animation = this.#state.animation || new Animation(this);
-    this.#state.animation.enqueue(options);
-    return this;
+    return this.animate(options);
   }
 
   /**
@@ -422,9 +415,9 @@ class RGB {
           }
 
           update = {
-            red: parseInt(input.slice(0, 2), 16),
-            green: parseInt(input.slice(2, 4), 16),
-            blue: parseInt(input.slice(4, 6), 16)
+            red: parseInt(input.slice(0, 2), 16)/255 * this.HIGH.red,
+            green: parseInt(input.slice(2, 4), 16)/255 * this.HIGH.green,
+            blue: parseInt(input.slice(4, 6), 16)/255 * this.HIGH.blue
           };
         } else {
           // color("rgba(r, g, b, a)") or color("rgb(r, g, b)")
