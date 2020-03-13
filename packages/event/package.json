@@ -1,6 +1,6 @@
 {
   "name": "@j5e/event",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Event emitter class for J5e",
   "main": "index.js",
   "type": "module",

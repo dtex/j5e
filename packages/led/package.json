@@ -1,6 +1,6 @@
 {
   "name": "@j5e/led",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "LED control class for J5e",
   "main": "./index.js",
   "type": "module",
@@ -15,9 +15,9 @@
     "url": "git+https://github.com/dtex/j5e.git"
   },
   "dependencies": {
-    "@j5e/animation": "^0.0.4",
-    "@j5e/easing": "^0.0.4",
-    "@j5e/fn": "^0.0.4"
+    "@j5e/animation": "^0.0.5",
+    "@j5e/easing": "^0.0.5",
+    "@j5e/fn": "^0.0.5"
   },
   "keywords": [
     "j5e",
