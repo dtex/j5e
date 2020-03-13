@@ -63,12 +63,6 @@
           "power",
           "tutori"
         ],
-        "list_class.html": [
-          "class",
-          "document",
-          "list",
-          "list:class"
-        ],
         "list_module.html": [
           "document",
           "list",
@@ -274,138 +268,6 @@
           "j5e/switch~switch",
           "module:j5e/switch~switch",
           "switch"
-        ],
-        "module-j5e_led-Led.html": [
-          "allow",
-          "class",
-          "control",
-          "j5e/led~l",
-          "led",
-          "led'",
-          "module:j5e/led~l"
-        ],
-        "module-j5e_led-Led.html#write": [
-          "current",
-          "function",
-          "intern",
-          "io",
-          "led",
-          "method",
-          "module:j5e/led~led#writ",
-          "valu",
-          "write"
-        ],
-        "module-j5e_led-Led.html#on": [
-          "function",
-          "led",
-          "module:j5e/led~led#on",
-          "turn"
-        ],
-        "module-j5e_led-Led.html#off": [
-          "function",
-          "led",
-          "module:j5e/led~led#off",
-          "turn"
-        ],
-        "module-j5e_led-Led.html#toggle": [
-          "function",
-          "led",
-          "module:j5e/led~led#toggl",
-          "on/off",
-          "state",
-          "toggl"
-        ],
-        "module-j5e_led-Led.html#blink": [
-          "blink",
-          "callback",
-          "durat",
-          "fix",
-          "function",
-          "interv",
-          "led",
-          "module:j5e/led~led#blink"
-        ],
-        "module-j5e_led-Led.html#brightness": [
-          "attach",
-          "bright",
-          "function",
-          "led",
-          "module:j5e/led~led#bright",
-          "pwm",
-          "set",
-          "valu"
-        ],
-        "module-j5e_led-Led.html#intensity": [
-          "0",
-          "100",
-          "bright",
-          "function",
-          "intens",
-          "led",
-          "module:j5e/led~led#intens",
-          "set",
-          "valu"
-        ],
-        "module-j5e_led-Led.html#pulse": [
-          "callback",
-          "function",
-          "led",
-          "loop",
-          "module:j5e/led~led#puls",
-          "out",
-          "puls",
-          "specifi",
-          "time"
-        ],
-        "module-j5e_led-Led.html#fade": [
-          "callback",
-          "fade",
-          "function",
-          "led",
-          "module:j5e/led~led#fad",
-          "out",
-          "time",
-          "val"
-        ],
-        "module-j5e_led-Led.html#fadeIn": [
-          "callback",
-          "fade",
-          "fadein",
-          "function",
-          "led",
-          "module:j5e/led~led#fadein",
-          "time"
-        ],
-        "module-j5e_led-Led.html#fadeOut": [
-          "callback",
-          "fade",
-          "fadeout",
-          "function",
-          "led",
-          "module:j5e/led~led#fadeout",
-          "out",
-          "time"
-        ],
-        "module-j5e_led-Led.html#stop": [
-          "fade",
-          "function",
-          "led",
-          "module:j5e/led~led#stop",
-          "puls",
-          "stop",
-          "strobe"
-        ],
-        "module-j5e_led-Led.html#normalize": [
-          "function",
-          "module:j5e/led~led#norm",
-          "normal",
-          "number",
-          "object"
-        ],
-        "module-j5e_led-Led.html#render": [
-          "function",
-          "module:j5e/led~led#rend",
-          "render"
         ],
         "module-j5e_rgb-RGB.html": [
           "allow",
@@ -650,6 +512,126 @@
           "servo",
           "speed"
         ],
+        "module-j5e_led-LED.html": [
+          "allow",
+          "class",
+          "control",
+          "diod",
+          "emit",
+          "j5e/led~l",
+          "led",
+          "light",
+          "lt;async&gt",
+          "module:j5e/led~l"
+        ],
+        "module-j5e_led-LED.html#on": [
+          "function",
+          "led",
+          "module:j5e/led~led#on",
+          "turn"
+        ],
+        "module-j5e_led-LED.html#off": [
+          "function",
+          "led",
+          "module:j5e/led~led#off",
+          "turn"
+        ],
+        "module-j5e_led-LED.html#toggle": [
+          "function",
+          "led",
+          "module:j5e/led~led#toggl",
+          "on/off",
+          "state",
+          "toggl"
+        ],
+        "module-j5e_led-LED.html#blink": [
+          "blink",
+          "callback",
+          "durat",
+          "fix",
+          "function",
+          "interv",
+          "led",
+          "module:j5e/led~led#blink"
+        ],
+        "module-j5e_led-LED.html#brightness": [
+          "attach",
+          "bright",
+          "function",
+          "led",
+          "module:j5e/led~led#bright",
+          "pwm",
+          "set",
+          "valu"
+        ],
+        "module-j5e_led-LED.html#intensity": [
+          "0",
+          "100",
+          "bright",
+          "function",
+          "intens",
+          "led",
+          "module:j5e/led~led#intens",
+          "set",
+          "valu"
+        ],
+        "module-j5e_led-LED.html#pulse": [
+          "callback",
+          "function",
+          "led",
+          "loop",
+          "module:j5e/led~led#puls",
+          "out",
+          "puls",
+          "specifi",
+          "time"
+        ],
+        "module-j5e_led-LED.html#animate": [
+          "anim",
+          "function",
+          "led",
+          "module:j5e/led~led#anim",
+          "option",
+          "rgb"
+        ],
+        "module-j5e_led-LED.html#fade": [
+          "callback",
+          "fade",
+          "function",
+          "led",
+          "module:j5e/led~led#fad",
+          "out",
+          "time",
+          "val"
+        ],
+        "module-j5e_led-LED.html#fadeIn": [
+          "callback",
+          "fade",
+          "fadein",
+          "function",
+          "led",
+          "module:j5e/led~led#fadein",
+          "time"
+        ],
+        "module-j5e_led-LED.html#fadeOut": [
+          "callback",
+          "fade",
+          "fadeout",
+          "function",
+          "led",
+          "module:j5e/led~led#fadeout",
+          "out",
+          "time"
+        ],
+        "module-j5e_led-LED.html#stop": [
+          "fade",
+          "function",
+          "led",
+          "module:j5e/led~led#stop",
+          "puls",
+          "stop",
+          "strobe"
+        ],
         "module-j5e_animation-Timer.html": [
           "class",
           "j5e/animation~tim",
@@ -710,10 +692,8 @@
           "util"
         ],
         "module-j5e_led.html": [
-          "control",
           "j5e/l",
           "led",
-          "led'",
           "modul",
           "module:j5e/l"
         ],
@@ -741,14 +721,14 @@
           "switch"
         ]
       },
-      "length": 74
+      "length": 71
     },
     "tokenStore": {
       "root": {
         "0": {
           "docs": {
-            "module-j5e_led-Led.html#intensity": {
-              "ref": "module-j5e_led-Led.html#intensity",
+            "module-j5e_led-LED.html#intensity": {
+              "ref": "module-j5e_led-LED.html#intensity",
               "tf": 10
             }
           },
@@ -771,8 +751,8 @@
           "0": {
             "0": {
               "docs": {
-                "module-j5e_led-Led.html#intensity": {
-                  "ref": "module-j5e_led-Led.html#intensity",
+                "module-j5e_led-LED.html#intensity": {
+                  "ref": "module-j5e_led-LED.html#intensity",
                   "tf": 10
                 }
               }
@@ -847,6 +827,10 @@
                   "module-j5e_event.Emitter.html#emit": {
                     "ref": "module-j5e_event.Emitter.html#emit",
                     "tf": 675
+                  },
+                  "module-j5e_led-LED.html": {
+                    "ref": "module-j5e_led-LED.html",
+                    "tf": 7.142857142857142
                   }
                 },
                 "t": {
@@ -1133,16 +1117,16 @@
             },
             "x": {
               "docs": {
-                "module-j5e_led-Led.html#blink": {
-                  "ref": "module-j5e_led-Led.html#blink",
-                  "tf": 12.5
-                },
                 "module-j5e_rgb-RGB.html#blink": {
                   "ref": "module-j5e_rgb-RGB.html#blink",
                   "tf": 12.5
                 },
                 "module-j5e_rgb-RGB.html#pulse": {
                   "ref": "module-j5e_rgb-RGB.html#pulse",
+                  "tf": 12.5
+                },
+                "module-j5e_led-LED.html#blink": {
+                  "ref": "module-j5e_led-LED.html#blink",
                   "tf": 12.5
                 }
               }
@@ -1223,62 +1207,6 @@
                           },
                           "module-j5e_animation-Animation.html#normalizeKeyframes": {
                             "ref": "module-j5e_animation-Animation.html#normalizeKeyframes",
-                            "tf": 110
-                          },
-                          "module-j5e_led-Led.html#write": {
-                            "ref": "module-j5e_led-Led.html#write",
-                            "tf": 110
-                          },
-                          "module-j5e_led-Led.html#on": {
-                            "ref": "module-j5e_led-Led.html#on",
-                            "tf": 110
-                          },
-                          "module-j5e_led-Led.html#off": {
-                            "ref": "module-j5e_led-Led.html#off",
-                            "tf": 110
-                          },
-                          "module-j5e_led-Led.html#toggle": {
-                            "ref": "module-j5e_led-Led.html#toggle",
-                            "tf": 110
-                          },
-                          "module-j5e_led-Led.html#blink": {
-                            "ref": "module-j5e_led-Led.html#blink",
-                            "tf": 110
-                          },
-                          "module-j5e_led-Led.html#brightness": {
-                            "ref": "module-j5e_led-Led.html#brightness",
-                            "tf": 110
-                          },
-                          "module-j5e_led-Led.html#intensity": {
-                            "ref": "module-j5e_led-Led.html#intensity",
-                            "tf": 110
-                          },
-                          "module-j5e_led-Led.html#pulse": {
-                            "ref": "module-j5e_led-Led.html#pulse",
-                            "tf": 110
-                          },
-                          "module-j5e_led-Led.html#fade": {
-                            "ref": "module-j5e_led-Led.html#fade",
-                            "tf": 110
-                          },
-                          "module-j5e_led-Led.html#fadeIn": {
-                            "ref": "module-j5e_led-Led.html#fadeIn",
-                            "tf": 110
-                          },
-                          "module-j5e_led-Led.html#fadeOut": {
-                            "ref": "module-j5e_led-Led.html#fadeOut",
-                            "tf": 110
-                          },
-                          "module-j5e_led-Led.html#stop": {
-                            "ref": "module-j5e_led-Led.html#stop",
-                            "tf": 110
-                          },
-                          "module-j5e_led-Led.html#normalize": {
-                            "ref": "module-j5e_led-Led.html#normalize",
-                            "tf": 110
-                          },
-                          "module-j5e_led-Led.html#render": {
-                            "ref": "module-j5e_led-Led.html#render",
                             "tf": 110
                           },
                           "module-j5e_rgb-RGB.html#color": {
@@ -1373,6 +1301,54 @@
                             "ref": "module-j5e_servo-Servo.html#ccw",
                             "tf": 110
                           },
+                          "module-j5e_led-LED.html#on": {
+                            "ref": "module-j5e_led-LED.html#on",
+                            "tf": 110
+                          },
+                          "module-j5e_led-LED.html#off": {
+                            "ref": "module-j5e_led-LED.html#off",
+                            "tf": 110
+                          },
+                          "module-j5e_led-LED.html#toggle": {
+                            "ref": "module-j5e_led-LED.html#toggle",
+                            "tf": 110
+                          },
+                          "module-j5e_led-LED.html#blink": {
+                            "ref": "module-j5e_led-LED.html#blink",
+                            "tf": 110
+                          },
+                          "module-j5e_led-LED.html#brightness": {
+                            "ref": "module-j5e_led-LED.html#brightness",
+                            "tf": 110
+                          },
+                          "module-j5e_led-LED.html#intensity": {
+                            "ref": "module-j5e_led-LED.html#intensity",
+                            "tf": 110
+                          },
+                          "module-j5e_led-LED.html#pulse": {
+                            "ref": "module-j5e_led-LED.html#pulse",
+                            "tf": 110
+                          },
+                          "module-j5e_led-LED.html#animate": {
+                            "ref": "module-j5e_led-LED.html#animate",
+                            "tf": 110
+                          },
+                          "module-j5e_led-LED.html#fade": {
+                            "ref": "module-j5e_led-LED.html#fade",
+                            "tf": 110
+                          },
+                          "module-j5e_led-LED.html#fadeIn": {
+                            "ref": "module-j5e_led-LED.html#fadeIn",
+                            "tf": 110
+                          },
+                          "module-j5e_led-LED.html#fadeOut": {
+                            "ref": "module-j5e_led-LED.html#fadeOut",
+                            "tf": 110
+                          },
+                          "module-j5e_led-LED.html#stop": {
+                            "ref": "module-j5e_led-LED.html#stop",
+                            "tf": 110
+                          },
                           "module-j5e_easing.html": {
                             "ref": "module-j5e_easing.html",
                             "tf": 12.5
@@ -1448,20 +1424,20 @@
               "docs": {},
               "e": {
                 "docs": {
-                  "module-j5e_led-Led.html#fade": {
-                    "ref": "module-j5e_led-Led.html#fade",
+                  "module-j5e_led-LED.html#fade": {
+                    "ref": "module-j5e_led-LED.html#fade",
                     "tf": 695
                   },
-                  "module-j5e_led-Led.html#fadeIn": {
-                    "ref": "module-j5e_led-Led.html#fadeIn",
+                  "module-j5e_led-LED.html#fadeIn": {
+                    "ref": "module-j5e_led-LED.html#fadeIn",
                     "tf": 33.33333333333333
                   },
-                  "module-j5e_led-Led.html#fadeOut": {
-                    "ref": "module-j5e_led-Led.html#fadeOut",
+                  "module-j5e_led-LED.html#fadeOut": {
+                    "ref": "module-j5e_led-LED.html#fadeOut",
                     "tf": 25
                   },
-                  "module-j5e_led-Led.html#stop": {
-                    "ref": "module-j5e_led-Led.html#stop",
+                  "module-j5e_led-LED.html#stop": {
+                    "ref": "module-j5e_led-LED.html#stop",
                     "tf": 8.333333333333332
                   }
                 },
@@ -1469,8 +1445,8 @@
                   "docs": {},
                   "n": {
                     "docs": {
-                      "module-j5e_led-Led.html#fadeIn": {
-                        "ref": "module-j5e_led-Led.html#fadeIn",
+                      "module-j5e_led-LED.html#fadeIn": {
+                        "ref": "module-j5e_led-LED.html#fadeIn",
                         "tf": 675
                       }
                     }
@@ -1482,8 +1458,8 @@
                     "docs": {},
                     "t": {
                       "docs": {
-                        "module-j5e_led-Led.html#fadeOut": {
-                          "ref": "module-j5e_led-Led.html#fadeOut",
+                        "module-j5e_led-LED.html#fadeOut": {
+                          "ref": "module-j5e_led-LED.html#fadeOut",
                           "tf": 675
                         }
                       }
@@ -1593,13 +1569,13 @@
                   },
                   "s": {
                     "docs": {
-                      "module-j5e_led-Led.html#intensity": {
-                        "ref": "module-j5e_led-Led.html#intensity",
-                        "tf": 683.3333333333334
-                      },
                       "module-j5e_rgb-RGB.html#toScaledRGB": {
                         "ref": "module-j5e_rgb-RGB.html#toScaledRGB",
                         "tf": 7.142857142857142
+                      },
+                      "module-j5e_led-LED.html#intensity": {
+                        "ref": "module-j5e_led-LED.html#intensity",
+                        "tf": 683.3333333333334
                       }
                     }
                   }
@@ -1608,10 +1584,6 @@
                   "docs": {},
                   "n": {
                     "docs": {
-                      "module-j5e_led-Led.html#write": {
-                        "ref": "module-j5e_led-Led.html#write",
-                        "tf": 7.142857142857142
-                      },
                       "module-j5e_rgb-RGB.html#write": {
                         "ref": "module-j5e_rgb-RGB.html#write",
                         "tf": 7.142857142857142
@@ -1620,16 +1592,16 @@
                   },
                   "v": {
                     "docs": {
-                      "module-j5e_led-Led.html#blink": {
-                        "ref": "module-j5e_led-Led.html#blink",
-                        "tf": 12.5
-                      },
                       "module-j5e_rgb-RGB.html#blink": {
                         "ref": "module-j5e_rgb-RGB.html#blink",
                         "tf": 12.5
                       },
                       "module-j5e_rgb-RGB.html#pulse": {
                         "ref": "module-j5e_rgb-RGB.html#pulse",
+                        "tf": 12.5
+                      },
+                      "module-j5e_led-LED.html#blink": {
+                        "ref": "module-j5e_led-LED.html#blink",
                         "tf": 12.5
                       }
                     }
@@ -1654,10 +1626,6 @@
           },
           "o": {
             "docs": {
-              "module-j5e_led-Led.html#write": {
-                "ref": "module-j5e_led-Led.html#write",
-                "tf": 7.142857142857142
-              },
               "module-j5e_rgb-RGB.html#write": {
                 "ref": "module-j5e_rgb-RGB.html#write",
                 "tf": 7.142857142857142
@@ -1934,31 +1902,6 @@
                     }
                   }
                 },
-                "l": {
-                  "docs": {
-                    "module-j5e_led.html": {
-                      "ref": "module-j5e_led.html",
-                      "tf": 600
-                    }
-                  },
-                  "e": {
-                    "docs": {},
-                    "d": {
-                      "docs": {},
-                      "~": {
-                        "docs": {},
-                        "l": {
-                          "docs": {
-                            "module-j5e_led-Led.html": {
-                              "ref": "module-j5e_led-Led.html",
-                              "tf": 100
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                },
                 "r": {
                   "docs": {},
                   "g": {
@@ -1983,6 +1926,31 @@
                                   "tf": 100
                                 }
                               }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "l": {
+                  "docs": {
+                    "module-j5e_led.html": {
+                      "ref": "module-j5e_led.html",
+                      "tf": 600
+                    }
+                  },
+                  "e": {
+                    "docs": {},
+                    "d": {
+                      "docs": {},
+                      "~": {
+                        "docs": {},
+                        "l": {
+                          "docs": {
+                            "module-j5e_led-LED.html": {
+                              "ref": "module-j5e_led-LED.html",
+                              "tf": 50
                             }
                           }
                         }
@@ -2092,10 +2060,6 @@
                   "docs": {},
                   "r": {
                     "docs": {
-                      "module-j5e_led-Led.html#render": {
-                        "ref": "module-j5e_led-Led.html#render",
-                        "tf": 750
-                      },
                       "module-j5e_servo-Servo.html#render": {
                         "ref": "module-j5e_servo-Servo.html#render",
                         "tf": 800
@@ -2180,6 +2144,10 @@
                 },
                 "module-j5e_rgb-RGB.html#animate": {
                   "ref": "module-j5e_rgb-RGB.html#animate",
+                  "tf": 49.99999999999999
+                },
+                "module-j5e_led-LED.html#animate": {
+                  "ref": "module-j5e_led-LED.html#animate",
                   "tf": 49.99999999999999
                 },
                 "module-j5e_rgb.html": {
@@ -2328,12 +2296,12 @@
                 "docs": {},
                 "e": {
                   "docs": {
-                    "module-j5e_led-Led.html#toggle": {
-                      "ref": "module-j5e_led-Led.html#toggle",
-                      "tf": 12.5
-                    },
                     "module-j5e_rgb-RGB.html#toggle": {
                       "ref": "module-j5e_rgb-RGB.html#toggle",
+                      "tf": 12.5
+                    },
+                    "module-j5e_led-LED.html#toggle": {
+                      "ref": "module-j5e_led-LED.html#toggle",
                       "tf": 12.5
                     }
                   }
@@ -2348,13 +2316,24 @@
                     "ref": "module-j5e_animation-Animation.html#stop",
                     "tf": 760
                   },
-                  "module-j5e_led-Led.html#stop": {
-                    "ref": "module-j5e_led-Led.html#stop",
-                    "tf": 716.6666666666666
-                  },
                   "module-j5e_servo-Servo.html#stop": {
                     "ref": "module-j5e_servo-Servo.html#stop",
                     "tf": 775
+                  },
+                  "module-j5e_led-LED.html#stop": {
+                    "ref": "module-j5e_led-LED.html#stop",
+                    "tf": 716.6666666666666
+                  }
+                }
+              }
+            },
+            "e": {
+              "docs": {},
+              "p": {
+                "docs": {
+                  "module-j5e_servo-Servo.html#step": {
+                    "ref": "module-j5e_servo-Servo.html#step",
+                    "tf": 680.5555555555555
                   }
                 }
               }
@@ -2367,22 +2346,11 @@
                   "docs": {},
                   "e": {
                     "docs": {
-                      "module-j5e_led-Led.html#stop": {
-                        "ref": "module-j5e_led-Led.html#stop",
+                      "module-j5e_led-LED.html#stop": {
+                        "ref": "module-j5e_led-LED.html#stop",
                         "tf": 8.333333333333332
                       }
                     }
-                  }
-                }
-              }
-            },
-            "e": {
-              "docs": {},
-              "p": {
-                "docs": {
-                  "module-j5e_servo-Servo.html#step": {
-                    "ref": "module-j5e_servo-Servo.html#step",
-                    "tf": 680.5555555555555
                   }
                 }
               }
@@ -2573,14 +2541,6 @@
                   "ref": "module-j5e_animation-Animation.html#speed",
                   "tf": 10
                 },
-                "module-j5e_led-Led.html#brightness": {
-                  "ref": "module-j5e_led-Led.html#brightness",
-                  "tf": 10
-                },
-                "module-j5e_led-Led.html#intensity": {
-                  "ref": "module-j5e_led-Led.html#intensity",
-                  "tf": 10
-                },
                 "module-j5e_servo-Servo.html#to": {
                   "ref": "module-j5e_servo-Servo.html#to",
                   "tf": 6.25
@@ -2596,6 +2556,14 @@
                 "module-j5e_servo-Servo.html#center": {
                   "ref": "module-j5e_servo-Servo.html#center",
                   "tf": 8.333333333333332
+                },
+                "module-j5e_led-LED.html#brightness": {
+                  "ref": "module-j5e_led-LED.html#brightness",
+                  "tf": 10
+                },
+                "module-j5e_led-LED.html#intensity": {
+                  "ref": "module-j5e_led-LED.html#intensity",
+                  "tf": 10
                 },
                 "module-j5e_animation-Segment.html": {
                   "ref": "module-j5e_animation-Segment.html",
@@ -2639,13 +2607,13 @@
                     "docs": {},
                     "i": {
                       "docs": {
-                        "module-j5e_led-Led.html#pulse": {
-                          "ref": "module-j5e_led-Led.html#pulse",
-                          "tf": 8.333333333333332
-                        },
                         "module-j5e_servo-Servo.html#step": {
                           "ref": "module-j5e_servo-Servo.html#step",
                           "tf": 5.555555555555555
+                        },
+                        "module-j5e_led-LED.html#pulse": {
+                          "ref": "module-j5e_led-LED.html#pulse",
+                          "tf": 8.333333333333332
                         }
                       }
                     }
@@ -2725,10 +2693,6 @@
                         "docs": {
                           "global.html": {
                             "ref": "global.html",
-                            "tf": 35
-                          },
-                          "list_class.html": {
-                            "ref": "list_class.html",
                             "tf": 35
                           },
                           "list_module.html": {
@@ -2863,6 +2827,17 @@
                   }
                 }
               }
+            },
+            "o": {
+              "docs": {},
+              "d": {
+                "docs": {
+                  "module-j5e_led-LED.html": {
+                    "ref": "module-j5e_led-LED.html",
+                    "tf": 7.142857142857142
+                  }
+                }
+              }
             }
           },
           "u": {
@@ -2873,16 +2848,16 @@
                 "docs": {},
                 "t": {
                   "docs": {
-                    "module-j5e_led-Led.html#blink": {
-                      "ref": "module-j5e_led-Led.html#blink",
-                      "tf": 25
-                    },
                     "module-j5e_rgb-RGB.html#blink": {
                       "ref": "module-j5e_rgb-RGB.html#blink",
                       "tf": 25
                     },
                     "module-j5e_rgb-RGB.html#pulse": {
                       "ref": "module-j5e_rgb-RGB.html#pulse",
+                      "tf": 25
+                    },
+                    "module-j5e_led-LED.html#blink": {
+                      "ref": "module-j5e_led-LED.html#blink",
                       "tf": 25
                     }
                   }
@@ -3043,10 +3018,6 @@
                       "ref": "module-j5e_switch-Switch.html",
                       "tf": 8.333333333333332
                     },
-                    "module-j5e_led-Led.html": {
-                      "ref": "module-j5e_led-Led.html",
-                      "tf": 10
-                    },
                     "module-j5e_rgb-RGB.html": {
                       "ref": "module-j5e_rgb-RGB.html",
                       "tf": 8.333333333333332
@@ -3054,6 +3025,10 @@
                     "module-j5e_servo-Servo.html": {
                       "ref": "module-j5e_servo-Servo.html",
                       "tf": 8.333333333333332
+                    },
+                    "module-j5e_led-LED.html": {
+                      "ref": "module-j5e_led-LED.html",
+                      "tf": 7.142857142857142
                     }
                   }
                 }
@@ -3090,6 +3065,10 @@
                     "ref": "module-j5e_rgb-RGB.html#animate",
                     "tf": 700
                   },
+                  "module-j5e_led-LED.html#animate": {
+                    "ref": "module-j5e_led-LED.html#animate",
+                    "tf": 700
+                  },
                   "module-j5e_animation.html": {
                     "ref": "module-j5e_animation.html",
                     "tf": 6.25
@@ -3119,8 +3098,8 @@
                   "docs": {},
                   "h": {
                     "docs": {
-                      "module-j5e_led-Led.html#brightness": {
-                        "ref": "module-j5e_led-Led.html#brightness",
+                      "module-j5e_led-LED.html#brightness": {
+                        "ref": "module-j5e_led-LED.html#brightness",
                         "tf": 10
                       }
                     }
@@ -3245,7 +3224,7 @@
                     },
                     "module-j5e_led.html": {
                       "ref": "module-j5e_led.html",
-                      "tf": 122.5
+                      "tf": 135
                     },
                     "module-j5e_rgb.html": {
                       "ref": "module-j5e_rgb.html",
@@ -4107,272 +4086,6 @@
                                   }
                                 }
                               },
-                              "l": {
-                                "docs": {
-                                  "module-j5e_led.html": {
-                                    "ref": "module-j5e_led.html",
-                                    "tf": 1300
-                                  }
-                                },
-                                "e": {
-                                  "docs": {},
-                                  "d": {
-                                    "docs": {},
-                                    "~": {
-                                      "docs": {},
-                                      "l": {
-                                        "docs": {
-                                          "module-j5e_led-Led.html": {
-                                            "ref": "module-j5e_led-Led.html",
-                                            "tf": 1300
-                                          }
-                                        },
-                                        "e": {
-                                          "docs": {},
-                                          "d": {
-                                            "docs": {},
-                                            "#": {
-                                              "docs": {},
-                                              "w": {
-                                                "docs": {},
-                                                "r": {
-                                                  "docs": {},
-                                                  "i": {
-                                                    "docs": {},
-                                                    "t": {
-                                                      "docs": {
-                                                        "module-j5e_led-Led.html#write": {
-                                                          "ref": "module-j5e_led-Led.html#write",
-                                                          "tf": 1150
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "o": {
-                                                "docs": {},
-                                                "n": {
-                                                  "docs": {
-                                                    "module-j5e_led-Led.html#on": {
-                                                      "ref": "module-j5e_led-Led.html#on",
-                                                      "tf": 1300
-                                                    }
-                                                  }
-                                                },
-                                                "f": {
-                                                  "docs": {},
-                                                  "f": {
-                                                    "docs": {
-                                                      "module-j5e_led-Led.html#off": {
-                                                        "ref": "module-j5e_led-Led.html#off",
-                                                        "tf": 1300
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "t": {
-                                                "docs": {},
-                                                "o": {
-                                                  "docs": {},
-                                                  "g": {
-                                                    "docs": {},
-                                                    "g": {
-                                                      "docs": {},
-                                                      "l": {
-                                                        "docs": {
-                                                          "module-j5e_led-Led.html#toggle": {
-                                                            "ref": "module-j5e_led-Led.html#toggle",
-                                                            "tf": 1150
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "b": {
-                                                "docs": {},
-                                                "l": {
-                                                  "docs": {},
-                                                  "i": {
-                                                    "docs": {},
-                                                    "n": {
-                                                      "docs": {},
-                                                      "k": {
-                                                        "docs": {
-                                                          "module-j5e_led-Led.html#blink": {
-                                                            "ref": "module-j5e_led-Led.html#blink",
-                                                            "tf": 1150
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                },
-                                                "r": {
-                                                  "docs": {},
-                                                  "i": {
-                                                    "docs": {},
-                                                    "g": {
-                                                      "docs": {},
-                                                      "h": {
-                                                        "docs": {},
-                                                        "t": {
-                                                          "docs": {
-                                                            "module-j5e_led-Led.html#brightness": {
-                                                              "ref": "module-j5e_led-Led.html#brightness",
-                                                              "tf": 1150
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "i": {
-                                                "docs": {},
-                                                "n": {
-                                                  "docs": {},
-                                                  "t": {
-                                                    "docs": {},
-                                                    "e": {
-                                                      "docs": {},
-                                                      "n": {
-                                                        "docs": {},
-                                                        "s": {
-                                                          "docs": {
-                                                            "module-j5e_led-Led.html#intensity": {
-                                                              "ref": "module-j5e_led-Led.html#intensity",
-                                                              "tf": 1150
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "p": {
-                                                "docs": {},
-                                                "u": {
-                                                  "docs": {},
-                                                  "l": {
-                                                    "docs": {},
-                                                    "s": {
-                                                      "docs": {
-                                                        "module-j5e_led-Led.html#pulse": {
-                                                          "ref": "module-j5e_led-Led.html#pulse",
-                                                          "tf": 1150
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "f": {
-                                                "docs": {},
-                                                "a": {
-                                                  "docs": {},
-                                                  "d": {
-                                                    "docs": {
-                                                      "module-j5e_led-Led.html#fade": {
-                                                        "ref": "module-j5e_led-Led.html#fade",
-                                                        "tf": 1150
-                                                      }
-                                                    },
-                                                    "e": {
-                                                      "docs": {},
-                                                      "i": {
-                                                        "docs": {},
-                                                        "n": {
-                                                          "docs": {
-                                                            "module-j5e_led-Led.html#fadeIn": {
-                                                              "ref": "module-j5e_led-Led.html#fadeIn",
-                                                              "tf": 1150
-                                                            }
-                                                          }
-                                                        }
-                                                      },
-                                                      "o": {
-                                                        "docs": {},
-                                                        "u": {
-                                                          "docs": {},
-                                                          "t": {
-                                                            "docs": {
-                                                              "module-j5e_led-Led.html#fadeOut": {
-                                                                "ref": "module-j5e_led-Led.html#fadeOut",
-                                                                "tf": 1150
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "s": {
-                                                "docs": {},
-                                                "t": {
-                                                  "docs": {},
-                                                  "o": {
-                                                    "docs": {},
-                                                    "p": {
-                                                      "docs": {
-                                                        "module-j5e_led-Led.html#stop": {
-                                                          "ref": "module-j5e_led-Led.html#stop",
-                                                          "tf": 1150
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "n": {
-                                                "docs": {},
-                                                "o": {
-                                                  "docs": {},
-                                                  "r": {
-                                                    "docs": {},
-                                                    "m": {
-                                                      "docs": {
-                                                        "module-j5e_led-Led.html#normalize": {
-                                                          "ref": "module-j5e_led-Led.html#normalize",
-                                                          "tf": 1150
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "r": {
-                                                "docs": {},
-                                                "e": {
-                                                  "docs": {},
-                                                  "n": {
-                                                    "docs": {},
-                                                    "d": {
-                                                      "docs": {
-                                                        "module-j5e_led-Led.html#render": {
-                                                          "ref": "module-j5e_led-Led.html#render",
-                                                          "tf": 1150
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              },
                               "r": {
                                 "docs": {},
                                 "g": {
@@ -4572,6 +4285,238 @@
                                   }
                                 }
                               },
+                              "l": {
+                                "docs": {
+                                  "module-j5e_led.html": {
+                                    "ref": "module-j5e_led.html",
+                                    "tf": 1300
+                                  }
+                                },
+                                "e": {
+                                  "docs": {},
+                                  "d": {
+                                    "docs": {},
+                                    "~": {
+                                      "docs": {},
+                                      "l": {
+                                        "docs": {
+                                          "module-j5e_led-LED.html": {
+                                            "ref": "module-j5e_led-LED.html",
+                                            "tf": 1300
+                                          }
+                                        },
+                                        "e": {
+                                          "docs": {},
+                                          "d": {
+                                            "docs": {},
+                                            "#": {
+                                              "docs": {},
+                                              "o": {
+                                                "docs": {},
+                                                "n": {
+                                                  "docs": {
+                                                    "module-j5e_led-LED.html#on": {
+                                                      "ref": "module-j5e_led-LED.html#on",
+                                                      "tf": 1300
+                                                    }
+                                                  }
+                                                },
+                                                "f": {
+                                                  "docs": {},
+                                                  "f": {
+                                                    "docs": {
+                                                      "module-j5e_led-LED.html#off": {
+                                                        "ref": "module-j5e_led-LED.html#off",
+                                                        "tf": 1300
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "t": {
+                                                "docs": {},
+                                                "o": {
+                                                  "docs": {},
+                                                  "g": {
+                                                    "docs": {},
+                                                    "g": {
+                                                      "docs": {},
+                                                      "l": {
+                                                        "docs": {
+                                                          "module-j5e_led-LED.html#toggle": {
+                                                            "ref": "module-j5e_led-LED.html#toggle",
+                                                            "tf": 1150
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "b": {
+                                                "docs": {},
+                                                "l": {
+                                                  "docs": {},
+                                                  "i": {
+                                                    "docs": {},
+                                                    "n": {
+                                                      "docs": {},
+                                                      "k": {
+                                                        "docs": {
+                                                          "module-j5e_led-LED.html#blink": {
+                                                            "ref": "module-j5e_led-LED.html#blink",
+                                                            "tf": 1150
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "r": {
+                                                  "docs": {},
+                                                  "i": {
+                                                    "docs": {},
+                                                    "g": {
+                                                      "docs": {},
+                                                      "h": {
+                                                        "docs": {},
+                                                        "t": {
+                                                          "docs": {
+                                                            "module-j5e_led-LED.html#brightness": {
+                                                              "ref": "module-j5e_led-LED.html#brightness",
+                                                              "tf": 1150
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "i": {
+                                                "docs": {},
+                                                "n": {
+                                                  "docs": {},
+                                                  "t": {
+                                                    "docs": {},
+                                                    "e": {
+                                                      "docs": {},
+                                                      "n": {
+                                                        "docs": {},
+                                                        "s": {
+                                                          "docs": {
+                                                            "module-j5e_led-LED.html#intensity": {
+                                                              "ref": "module-j5e_led-LED.html#intensity",
+                                                              "tf": 1150
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "p": {
+                                                "docs": {},
+                                                "u": {
+                                                  "docs": {},
+                                                  "l": {
+                                                    "docs": {},
+                                                    "s": {
+                                                      "docs": {
+                                                        "module-j5e_led-LED.html#pulse": {
+                                                          "ref": "module-j5e_led-LED.html#pulse",
+                                                          "tf": 1150
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "a": {
+                                                "docs": {},
+                                                "n": {
+                                                  "docs": {},
+                                                  "i": {
+                                                    "docs": {},
+                                                    "m": {
+                                                      "docs": {
+                                                        "module-j5e_led-LED.html#animate": {
+                                                          "ref": "module-j5e_led-LED.html#animate",
+                                                          "tf": 1150
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "f": {
+                                                "docs": {},
+                                                "a": {
+                                                  "docs": {},
+                                                  "d": {
+                                                    "docs": {
+                                                      "module-j5e_led-LED.html#fade": {
+                                                        "ref": "module-j5e_led-LED.html#fade",
+                                                        "tf": 1150
+                                                      }
+                                                    },
+                                                    "e": {
+                                                      "docs": {},
+                                                      "i": {
+                                                        "docs": {},
+                                                        "n": {
+                                                          "docs": {
+                                                            "module-j5e_led-LED.html#fadeIn": {
+                                                              "ref": "module-j5e_led-LED.html#fadeIn",
+                                                              "tf": 1150
+                                                            }
+                                                          }
+                                                        }
+                                                      },
+                                                      "o": {
+                                                        "docs": {},
+                                                        "u": {
+                                                          "docs": {},
+                                                          "t": {
+                                                            "docs": {
+                                                              "module-j5e_led-LED.html#fadeOut": {
+                                                                "ref": "module-j5e_led-LED.html#fadeOut",
+                                                                "tf": 1150
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "s": {
+                                                "docs": {},
+                                                "t": {
+                                                  "docs": {},
+                                                  "o": {
+                                                    "docs": {},
+                                                    "p": {
+                                                      "docs": {
+                                                        "module-j5e_led-LED.html#stop": {
+                                                          "ref": "module-j5e_led-LED.html#stop",
+                                                          "tf": 1150
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
                               "f": {
                                 "docs": {},
                                 "n": {
@@ -4649,10 +4594,6 @@
                   "docs": {},
                   "d": {
                     "docs": {
-                      "module-j5e_led-Led.html#write": {
-                        "ref": "module-j5e_led-Led.html#write",
-                        "tf": 7.142857142857142
-                      },
                       "module-j5e_rgb-RGB.html#write": {
                         "ref": "module-j5e_rgb-RGB.html#write",
                         "tf": 7.142857142857142
@@ -4742,20 +4683,20 @@
               "docs": {},
               "n": {
                 "docs": {
-                  "module-j5e_led-Led.html#on": {
-                    "ref": "module-j5e_led-Led.html#on",
-                    "tf": 25
-                  },
-                  "module-j5e_led-Led.html#off": {
-                    "ref": "module-j5e_led-Led.html#off",
-                    "tf": 25
-                  },
                   "module-j5e_rgb-RGB.html#off": {
                     "ref": "module-j5e_rgb-RGB.html#off",
                     "tf": 25
                   },
                   "module-j5e_rgb-RGB.html#on": {
                     "ref": "module-j5e_rgb-RGB.html#on",
+                    "tf": 25
+                  },
+                  "module-j5e_led-LED.html#on": {
+                    "ref": "module-j5e_led-LED.html#on",
+                    "tf": 25
+                  },
+                  "module-j5e_led-LED.html#off": {
+                    "ref": "module-j5e_led-LED.html#off",
                     "tf": 25
                   }
                 }
@@ -4776,22 +4717,6 @@
                     "ref": "module-j5e_animation-Animation.html#calculateProgress",
                     "tf": 6.25
                   },
-                  "module-j5e_led-Led.html#pulse": {
-                    "ref": "module-j5e_led-Led.html#pulse",
-                    "tf": 33.33333333333333
-                  },
-                  "module-j5e_led-Led.html#fade": {
-                    "ref": "module-j5e_led-Led.html#fade",
-                    "tf": 20
-                  },
-                  "module-j5e_led-Led.html#fadeIn": {
-                    "ref": "module-j5e_led-Led.html#fadeIn",
-                    "tf": 25
-                  },
-                  "module-j5e_led-Led.html#fadeOut": {
-                    "ref": "module-j5e_led-Led.html#fadeOut",
-                    "tf": 25
-                  },
                   "module-j5e_servo-Servo.html#to": {
                     "ref": "module-j5e_servo-Servo.html#to",
                     "tf": 31.25
@@ -4811,6 +4736,22 @@
                   "module-j5e_servo-Servo.html#center": {
                     "ref": "module-j5e_servo-Servo.html#center",
                     "tf": 33.33333333333333
+                  },
+                  "module-j5e_led-LED.html#pulse": {
+                    "ref": "module-j5e_led-LED.html#pulse",
+                    "tf": 33.33333333333333
+                  },
+                  "module-j5e_led-LED.html#fade": {
+                    "ref": "module-j5e_led-LED.html#fade",
+                    "tf": 20
+                  },
+                  "module-j5e_led-LED.html#fadeIn": {
+                    "ref": "module-j5e_led-LED.html#fadeIn",
+                    "tf": 25
+                  },
+                  "module-j5e_led-LED.html#fadeOut": {
+                    "ref": "module-j5e_led-LED.html#fadeOut",
+                    "tf": 25
                   }
                 },
                 "r": {
@@ -4876,12 +4817,12 @@
                 "docs": {},
                 "l": {
                   "docs": {
-                    "module-j5e_led-Led.html#toggle": {
-                      "ref": "module-j5e_led-Led.html#toggle",
-                      "tf": 712.5
-                    },
                     "module-j5e_rgb-RGB.html#toggle": {
                       "ref": "module-j5e_rgb-RGB.html#toggle",
+                      "tf": 712.5
+                    },
+                    "module-j5e_led-LED.html#toggle": {
+                      "ref": "module-j5e_led-LED.html#toggle",
                       "tf": 712.5
                     }
                   }
@@ -4965,10 +4906,6 @@
                 "docs": {},
                 "e": {
                   "docs": {
-                    "module-j5e_led-Led.html#write": {
-                      "ref": "module-j5e_led-Led.html#write",
-                      "tf": 757.1428571428571
-                    },
                     "module-j5e_rgb-RGB.html#write": {
                       "ref": "module-j5e_rgb-RGB.html#write",
                       "tf": 757.1428571428571
@@ -5028,10 +4965,6 @@
                           "ref": "module-j5e_switch-Switch.html",
                           "tf": 8.333333333333332
                         },
-                        "module-j5e_led-Led.html": {
-                          "ref": "module-j5e_led-Led.html",
-                          "tf": 10
-                        },
                         "module-j5e_rgb-RGB.html": {
                           "ref": "module-j5e_rgb-RGB.html",
                           "tf": 8.333333333333332
@@ -5040,9 +4973,9 @@
                           "ref": "module-j5e_servo-Servo.html",
                           "tf": 8.333333333333332
                         },
-                        "module-j5e_led.html": {
-                          "ref": "module-j5e_led.html",
-                          "tf": 12.5
+                        "module-j5e_led-LED.html": {
+                          "ref": "module-j5e_led-LED.html",
+                          "tf": 7.142857142857142
                         },
                         "module-j5e_rgb.html": {
                           "ref": "module-j5e_rgb.html",
@@ -5151,10 +5084,6 @@
                 "docs": {},
                 "s": {
                   "docs": {
-                    "list_class.html": {
-                      "ref": "list_class.html",
-                      "tf": 635
-                    },
                     "module-j5e_event.Emitter.html": {
                       "ref": "module-j5e_event.Emitter.html",
                       "tf": 116.25
@@ -5167,10 +5096,6 @@
                       "ref": "module-j5e_switch-Switch.html",
                       "tf": 118.33333333333333
                     },
-                    "module-j5e_led-Led.html": {
-                      "ref": "module-j5e_led-Led.html",
-                      "tf": 120
-                    },
                     "module-j5e_rgb-RGB.html": {
                       "ref": "module-j5e_rgb-RGB.html",
                       "tf": 118.33333333333333
@@ -5178,6 +5103,10 @@
                     "module-j5e_servo-Servo.html": {
                       "ref": "module-j5e_servo-Servo.html",
                       "tf": 118.33333333333333
+                    },
+                    "module-j5e_led-LED.html": {
+                      "ref": "module-j5e_led-LED.html",
+                      "tf": 117.14285714285714
                     },
                     "module-j5e_animation-Timer.html": {
                       "ref": "module-j5e_animation-Timer.html",
@@ -5308,32 +5237,32 @@
                       "docs": {},
                       "k": {
                         "docs": {
-                          "module-j5e_led-Led.html#blink": {
-                            "ref": "module-j5e_led-Led.html#blink",
-                            "tf": 25
-                          },
-                          "module-j5e_led-Led.html#pulse": {
-                            "ref": "module-j5e_led-Led.html#pulse",
-                            "tf": 25
-                          },
-                          "module-j5e_led-Led.html#fade": {
-                            "ref": "module-j5e_led-Led.html#fade",
-                            "tf": 20
-                          },
-                          "module-j5e_led-Led.html#fadeIn": {
-                            "ref": "module-j5e_led-Led.html#fadeIn",
-                            "tf": 25
-                          },
-                          "module-j5e_led-Led.html#fadeOut": {
-                            "ref": "module-j5e_led-Led.html#fadeOut",
-                            "tf": 25
-                          },
                           "module-j5e_rgb-RGB.html#blink": {
                             "ref": "module-j5e_rgb-RGB.html#blink",
                             "tf": 25
                           },
                           "module-j5e_rgb-RGB.html#pulse": {
                             "ref": "module-j5e_rgb-RGB.html#pulse",
+                            "tf": 25
+                          },
+                          "module-j5e_led-LED.html#blink": {
+                            "ref": "module-j5e_led-LED.html#blink",
+                            "tf": 25
+                          },
+                          "module-j5e_led-LED.html#pulse": {
+                            "ref": "module-j5e_led-LED.html#pulse",
+                            "tf": 25
+                          },
+                          "module-j5e_led-LED.html#fade": {
+                            "ref": "module-j5e_led-LED.html#fade",
+                            "tf": 20
+                          },
+                          "module-j5e_led-LED.html#fadeIn": {
+                            "ref": "module-j5e_led-LED.html#fadeIn",
+                            "tf": 25
+                          },
+                          "module-j5e_led-LED.html#fadeOut": {
+                            "ref": "module-j5e_led-LED.html#fadeOut",
                             "tf": 25
                           }
                         }
@@ -5410,10 +5339,6 @@
                         "module-j5e_animation-Animation.html#tweenedValue": {
                           "ref": "module-j5e_animation-Animation.html#tweenedValue",
                           "tf": 4.166666666666666
-                        },
-                        "module-j5e_led-Led.html#write": {
-                          "ref": "module-j5e_led-Led.html#write",
-                          "tf": 7.142857142857142
                         },
                         "module-j5e_rgb-RGB.html#write": {
                           "ref": "module-j5e_rgb-RGB.html#write",
@@ -5545,10 +5470,6 @@
               "docs": {},
               "t": {
                 "docs": {
-                  "list_class.html": {
-                    "ref": "list_class.html",
-                    "tf": 110
-                  },
                   "list_module.html": {
                     "ref": "list_module.html",
                     "tf": 110
@@ -5560,26 +5481,6 @@
                 },
                 ":": {
                   "docs": {},
-                  "c": {
-                    "docs": {},
-                    "l": {
-                      "docs": {},
-                      "a": {
-                        "docs": {},
-                        "s": {
-                          "docs": {},
-                          "s": {
-                            "docs": {
-                              "list_class.html": {
-                                "ref": "list_class.html",
-                                "tf": 1300
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  },
                   "m": {
                     "docs": {},
                     "o": {
@@ -5644,6 +5545,20 @@
                   }
                 }
               }
+            },
+            "g": {
+              "docs": {},
+              "h": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "module-j5e_led-LED.html": {
+                      "ref": "module-j5e_led-LED.html",
+                      "tf": 7.142857142857142
+                    }
+                  }
+                }
+              }
             }
           },
           "e": {
@@ -5653,58 +5568,6 @@
                 "module-j5e_animation-Animation.html": {
                   "ref": "module-j5e_animation-Animation.html",
                   "tf": 10
-                },
-                "module-j5e_led-Led.html": {
-                  "ref": "module-j5e_led-Led.html",
-                  "tf": 510
-                },
-                "module-j5e_led-Led.html#write": {
-                  "ref": "module-j5e_led-Led.html#write",
-                  "tf": 7.142857142857142
-                },
-                "module-j5e_led-Led.html#on": {
-                  "ref": "module-j5e_led-Led.html#on",
-                  "tf": 125
-                },
-                "module-j5e_led-Led.html#off": {
-                  "ref": "module-j5e_led-Led.html#off",
-                  "tf": 125
-                },
-                "module-j5e_led-Led.html#toggle": {
-                  "ref": "module-j5e_led-Led.html#toggle",
-                  "tf": 62.5
-                },
-                "module-j5e_led-Led.html#blink": {
-                  "ref": "module-j5e_led-Led.html#blink",
-                  "tf": 37.5
-                },
-                "module-j5e_led-Led.html#brightness": {
-                  "ref": "module-j5e_led-Led.html#brightness",
-                  "tf": 43.33333333333333
-                },
-                "module-j5e_led-Led.html#intensity": {
-                  "ref": "module-j5e_led-Led.html#intensity",
-                  "tf": 43.33333333333333
-                },
-                "module-j5e_led-Led.html#pulse": {
-                  "ref": "module-j5e_led-Led.html#pulse",
-                  "tf": 33.33333333333333
-                },
-                "module-j5e_led-Led.html#fade": {
-                  "ref": "module-j5e_led-Led.html#fade",
-                  "tf": 32.5
-                },
-                "module-j5e_led-Led.html#fadeIn": {
-                  "ref": "module-j5e_led-Led.html#fadeIn",
-                  "tf": 41.666666666666664
-                },
-                "module-j5e_led-Led.html#fadeOut": {
-                  "ref": "module-j5e_led-Led.html#fadeOut",
-                  "tf": 37.5
-                },
-                "module-j5e_led-Led.html#stop": {
-                  "ref": "module-j5e_led-Led.html#stop",
-                  "tf": 58.33333333333333
                 },
                 "module-j5e_rgb-RGB.html#write": {
                   "ref": "module-j5e_rgb-RGB.html#write",
@@ -5734,24 +5597,68 @@
                   "ref": "module-j5e_rgb-RGB.html#animate",
                   "tf": 16.666666666666664
                 },
+                "module-j5e_led-LED.html": {
+                  "ref": "module-j5e_led-LED.html",
+                  "tf": 507.14285714285717
+                },
+                "module-j5e_led-LED.html#on": {
+                  "ref": "module-j5e_led-LED.html#on",
+                  "tf": 125
+                },
+                "module-j5e_led-LED.html#off": {
+                  "ref": "module-j5e_led-LED.html#off",
+                  "tf": 125
+                },
+                "module-j5e_led-LED.html#toggle": {
+                  "ref": "module-j5e_led-LED.html#toggle",
+                  "tf": 62.5
+                },
+                "module-j5e_led-LED.html#blink": {
+                  "ref": "module-j5e_led-LED.html#blink",
+                  "tf": 37.5
+                },
+                "module-j5e_led-LED.html#brightness": {
+                  "ref": "module-j5e_led-LED.html#brightness",
+                  "tf": 43.33333333333333
+                },
+                "module-j5e_led-LED.html#intensity": {
+                  "ref": "module-j5e_led-LED.html#intensity",
+                  "tf": 43.33333333333333
+                },
+                "module-j5e_led-LED.html#pulse": {
+                  "ref": "module-j5e_led-LED.html#pulse",
+                  "tf": 33.33333333333333
+                },
+                "module-j5e_led-LED.html#animate": {
+                  "ref": "module-j5e_led-LED.html#animate",
+                  "tf": 16.666666666666664
+                },
+                "module-j5e_led-LED.html#fade": {
+                  "ref": "module-j5e_led-LED.html#fade",
+                  "tf": 32.5
+                },
+                "module-j5e_led-LED.html#fadeIn": {
+                  "ref": "module-j5e_led-LED.html#fadeIn",
+                  "tf": 41.666666666666664
+                },
+                "module-j5e_led-LED.html#fadeOut": {
+                  "ref": "module-j5e_led-LED.html#fadeOut",
+                  "tf": 37.5
+                },
+                "module-j5e_led-LED.html#stop": {
+                  "ref": "module-j5e_led-LED.html#stop",
+                  "tf": 58.33333333333333
+                },
                 "module-j5e_led.html": {
                   "ref": "module-j5e_led.html",
-                  "tf": 12.5
+                  "tf": 25
                 }
               },
               "'": {
                 "docs": {
-                  "module-j5e_led-Led.html": {
-                    "ref": "module-j5e_led-Led.html",
-                    "tf": 10
-                  },
                   "module-j5e_rgb-RGB.html": {
                     "ref": "module-j5e_rgb-RGB.html",
                     "tf": 8.333333333333332
-                  },
-                  "module-j5e_led.html": {
-                    "ref": "module-j5e_led.html",
-                    "tf": 12.5
                   },
                   "module-j5e_rgb.html": {
                     "ref": "module-j5e_rgb.html",
@@ -5782,8 +5689,8 @@
               "docs": {},
               "p": {
                 "docs": {
-                  "module-j5e_led-Led.html#pulse": {
-                    "ref": "module-j5e_led-Led.html#pulse",
+                  "module-j5e_led-LED.html#pulse": {
+                    "ref": "module-j5e_led-LED.html#pulse",
                     "tf": 8.333333333333332
                   }
                 },
@@ -5800,6 +5707,41 @@
                             "module-j5e_animation-Animation.html#loopFunction": {
                               "ref": "module-j5e_animation-Animation.html#loopFunction",
                               "tf": 750
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "t": {
+            "docs": {},
+            ";": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "s": {
+                  "docs": {},
+                  "y": {
+                    "docs": {},
+                    "n": {
+                      "docs": {},
+                      "c": {
+                        "docs": {},
+                        "&": {
+                          "docs": {},
+                          "g": {
+                            "docs": {},
+                            "t": {
+                              "docs": {
+                                "module-j5e_led-LED.html": {
+                                  "ref": "module-j5e_led-LED.html",
+                                  "tf": 50
+                                }
+                              }
                             }
                           }
                         }
@@ -5980,35 +5922,35 @@
               }
             }
           },
-          "w": {
-            "docs": {},
-            "m": {
-              "docs": {
-                "module-j5e_led-Led.html#brightness": {
-                  "ref": "module-j5e_led-Led.html#brightness",
-                  "tf": 10
-                }
-              }
-            }
-          },
           "u": {
             "docs": {},
             "l": {
               "docs": {},
               "s": {
                 "docs": {
-                  "module-j5e_led-Led.html#pulse": {
-                    "ref": "module-j5e_led-Led.html#pulse",
-                    "tf": 683.3333333333334
-                  },
-                  "module-j5e_led-Led.html#stop": {
-                    "ref": "module-j5e_led-Led.html#stop",
-                    "tf": 8.333333333333332
-                  },
                   "module-j5e_rgb-RGB.html#pulse": {
                     "ref": "module-j5e_rgb-RGB.html#pulse",
                     "tf": 687.5
+                  },
+                  "module-j5e_led-LED.html#pulse": {
+                    "ref": "module-j5e_led-LED.html#pulse",
+                    "tf": 683.3333333333334
+                  },
+                  "module-j5e_led-LED.html#stop": {
+                    "ref": "module-j5e_led-LED.html#stop",
+                    "tf": 8.333333333333332
                   }
+                }
+              }
+            }
+          },
+          "w": {
+            "docs": {},
+            "m": {
+              "docs": {
+                "module-j5e_led-LED.html#brightness": {
+                  "ref": "module-j5e_led-LED.html#brightness",
+                  "tf": 10
                 }
               }
             }
@@ -6050,37 +5992,13 @@
                 "docs": {},
                 "k": {
                   "docs": {
-                    "module-j5e_led-Led.html#blink": {
-                      "ref": "module-j5e_led-Led.html#blink",
-                      "tf": 687.5
-                    },
                     "module-j5e_rgb-RGB.html#blink": {
                       "ref": "module-j5e_rgb-RGB.html#blink",
                       "tf": 687.5
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "r": {
-            "docs": {},
-            "i": {
-              "docs": {},
-              "g": {
-                "docs": {},
-                "h": {
-                  "docs": {},
-                  "t": {
-                    "docs": {
-                      "module-j5e_led-Led.html#brightness": {
-                        "ref": "module-j5e_led-Led.html#brightness",
-                        "tf": 693.3333333333334
-                      },
-                      "module-j5e_led-Led.html#intensity": {
-                        "ref": "module-j5e_led-Led.html#intensity",
-                        "tf": 10
-                      }
+                    },
+                    "module-j5e_led-LED.html#blink": {
+                      "ref": "module-j5e_led-LED.html#blink",
+                      "tf": 687.5
                     }
                   }
                 }
@@ -6107,6 +6025,30 @@
                           "ref": "module-j5e_animation.html",
                           "tf": 6.25
                         }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "r": {
+            "docs": {},
+            "i": {
+              "docs": {},
+              "g": {
+                "docs": {},
+                "h": {
+                  "docs": {},
+                  "t": {
+                    "docs": {
+                      "module-j5e_led-LED.html#brightness": {
+                        "ref": "module-j5e_led-LED.html#brightness",
+                        "tf": 693.3333333333334
+                      },
+                      "module-j5e_led-LED.html#intensity": {
+                        "ref": "module-j5e_led-LED.html#intensity",
+                        "tf": 10
                       }
                     }
                   }
@@ -6190,12 +6132,12 @@
                   "docs": {},
                   "f": {
                     "docs": {
-                      "module-j5e_led-Led.html#toggle": {
-                        "ref": "module-j5e_led-Led.html#toggle",
-                        "tf": 12.5
-                      },
                       "module-j5e_rgb-RGB.html#toggle": {
                         "ref": "module-j5e_rgb-RGB.html#toggle",
+                        "tf": 12.5
+                      },
+                      "module-j5e_led-LED.html#toggle": {
+                        "ref": "module-j5e_led-LED.html#toggle",
                         "tf": 12.5
                       }
                     }
@@ -6225,6 +6167,10 @@
                       "module-j5e_servo-Servo.html#sweep": {
                         "ref": "module-j5e_servo-Servo.html#sweep",
                         "tf": 33.33333333333333
+                      },
+                      "module-j5e_led-LED.html#animate": {
+                        "ref": "module-j5e_led-LED.html#animate",
+                        "tf": 33.33333333333333
                       }
                     }
                   }
@@ -6236,16 +6182,16 @@
             "docs": {},
             "t": {
               "docs": {
-                "module-j5e_led-Led.html#pulse": {
-                  "ref": "module-j5e_led-Led.html#pulse",
+                "module-j5e_led-LED.html#pulse": {
+                  "ref": "module-j5e_led-LED.html#pulse",
                   "tf": 8.333333333333332
                 },
-                "module-j5e_led-Led.html#fade": {
-                  "ref": "module-j5e_led-Led.html#fade",
+                "module-j5e_led-LED.html#fade": {
+                  "ref": "module-j5e_led-LED.html#fade",
                   "tf": 12.5
                 },
-                "module-j5e_led-Led.html#fadeOut": {
-                  "ref": "module-j5e_led-Led.html#fadeOut",
+                "module-j5e_led-LED.html#fadeOut": {
+                  "ref": "module-j5e_led-LED.html#fadeOut",
                   "tf": 12.5
                 }
               },
@@ -6258,42 +6204,6 @@
                       "module-j5e_rgb-RGB.html#toScaledRGB": {
                         "ref": "module-j5e_rgb-RGB.html#toScaledRGB",
                         "tf": 7.142857142857142
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "b": {
-            "docs": {},
-            "j": {
-              "docs": {},
-              "e": {
-                "docs": {},
-                "c": {
-                  "docs": {},
-                  "t": {
-                    "docs": {
-                      "module-j5e_led-Led.html#normalize": {
-                        "ref": "module-j5e_led-Led.html#normalize",
-                        "tf": 33.33333333333333
-                      },
-                      "module-j5e_servo-Servo.html#normalize": {
-                        "ref": "module-j5e_servo-Servo.html#normalize",
-                        "tf": 33.33333333333333
-                      },
-                      "module-j5e_servo-Servo.html#min": {
-                        "ref": "module-j5e_servo-Servo.html#min",
-                        "tf": 33.33333333333333
-                      },
-                      "module-j5e_servo-Servo.html#max": {
-                        "ref": "module-j5e_servo-Servo.html#max",
-                        "tf": 33.33333333333333
-                      },
-                      "module-j5e_servo-Servo.html#center": {
-                        "ref": "module-j5e_servo-Servo.html#center",
-                        "tf": 33.33333333333333
                       }
                     }
                   }
@@ -6326,6 +6236,38 @@
                           "ref": "module-j5e_animation-Segment.html",
                           "tf": 12.5
                         }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "b": {
+            "docs": {},
+            "j": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "c": {
+                  "docs": {},
+                  "t": {
+                    "docs": {
+                      "module-j5e_servo-Servo.html#normalize": {
+                        "ref": "module-j5e_servo-Servo.html#normalize",
+                        "tf": 33.33333333333333
+                      },
+                      "module-j5e_servo-Servo.html#min": {
+                        "ref": "module-j5e_servo-Servo.html#min",
+                        "tf": 33.33333333333333
+                      },
+                      "module-j5e_servo-Servo.html#max": {
+                        "ref": "module-j5e_servo-Servo.html#max",
+                        "tf": 33.33333333333333
+                      },
+                      "module-j5e_servo-Servo.html#center": {
+                        "ref": "module-j5e_servo-Servo.html#center",
+                        "tf": 33.33333333333333
                       }
                     }
                   }
@@ -6392,10 +6334,6 @@
                   "docs": {},
                   "l": {
                     "docs": {
-                      "module-j5e_led-Led.html#normalize": {
-                        "ref": "module-j5e_led-Led.html#normalize",
-                        "tf": 683.3333333333334
-                      },
                       "module-j5e_servo-Servo.html#normalize": {
                         "ref": "module-j5e_servo-Servo.html#normalize",
                         "tf": 683.3333333333334
@@ -6451,10 +6389,6 @@
                   "docs": {},
                   "r": {
                     "docs": {
-                      "module-j5e_led-Led.html#normalize": {
-                        "ref": "module-j5e_led-Led.html#normalize",
-                        "tf": 33.33333333333333
-                      },
                       "module-j5e_servo-Servo.html#normalize": {
                         "ref": "module-j5e_servo-Servo.html#normalize",
                         "tf": 33.33333333333333
@@ -6472,8 +6406,8 @@
             "docs": {},
             "l": {
               "docs": {
-                "module-j5e_led-Led.html#fade": {
-                  "ref": "module-j5e_led-Led.html#fade",
+                "module-j5e_led-LED.html#fade": {
+                  "ref": "module-j5e_led-LED.html#fade",
                   "tf": 20
                 }
               },
@@ -6483,18 +6417,6 @@
                     "ref": "module-j5e_animation-Animation.html#tweenedValue",
                     "tf": 4.166666666666666
                   },
-                  "module-j5e_led-Led.html#write": {
-                    "ref": "module-j5e_led-Led.html#write",
-                    "tf": 7.142857142857142
-                  },
-                  "module-j5e_led-Led.html#brightness": {
-                    "ref": "module-j5e_led-Led.html#brightness",
-                    "tf": 33.33333333333333
-                  },
-                  "module-j5e_led-Led.html#intensity": {
-                    "ref": "module-j5e_led-Led.html#intensity",
-                    "tf": 33.33333333333333
-                  },
                   "module-j5e_rgb-RGB.html#write": {
                     "ref": "module-j5e_rgb-RGB.html#write",
                     "tf": 7.142857142857142
@@ -6502,6 +6424,14 @@
                   "module-j5e_rgb-RGB.html#toScaledRGB": {
                     "ref": "module-j5e_rgb-RGB.html#toScaledRGB",
                     "tf": 7.142857142857142
+                  },
+                  "module-j5e_led-LED.html#brightness": {
+                    "ref": "module-j5e_led-LED.html#brightness",
+                    "tf": 33.33333333333333
+                  },
+                  "module-j5e_led-LED.html#intensity": {
+                    "ref": "module-j5e_led-LED.html#intensity",
+                    "tf": 33.33333333333333
                   }
                 }
               }
@@ -6621,7 +6551,7 @@
           }
         }
       },
-      "length": 566
+      "length": 552
     },
     "corpusTokens": [
       "0",
@@ -6666,6 +6596,7 @@
       "degre",
       "devic",
       "digit",
+      "diod",
       "directli",
       "document",
       "durat",
@@ -6738,14 +6669,15 @@
       "led",
       "led'",
       "left",
+      "light",
       "list",
-      "list:class",
       "list:modul",
       "list:tutori",
       "listen",
       "littl",
       "loop",
       "loopfunct",
+      "lt;async&gt",
       "maintain",
       "make",
       "manag",
@@ -6782,20 +6714,18 @@
       "module:j5e/fn",
       "module:j5e/l",
       "module:j5e/led~l",
+      "module:j5e/led~led#anim",
       "module:j5e/led~led#blink",
       "module:j5e/led~led#bright",
       "module:j5e/led~led#fad",
       "module:j5e/led~led#fadein",
       "module:j5e/led~led#fadeout",
       "module:j5e/led~led#intens",
-      "module:j5e/led~led#norm",
       "module:j5e/led~led#off",
       "module:j5e/led~led#on",
       "module:j5e/led~led#puls",
-      "module:j5e/led~led#rend",
       "module:j5e/led~led#stop",
       "module:j5e/led~led#toggl",
-      "module:j5e/led~led#writ",
       "module:j5e/rgb",
       "module:j5e/rgb~rgb",
       "module:j5e/rgb~rgb#anim",
@@ -6936,17 +6866,6 @@
       "name": "INSTANTIATING",
       "tags": "INSTANTIATING",
       "summary": "The ioOptions parameter is powerful, flexible, and just a little confusing.",
-      "description": "",
-      "body": ""
-    },
-    "list_class.html": {
-      "id": "list_class.html",
-      "kind": "list",
-      "title": "Classes",
-      "longname": "list:class",
-      "name": "Classes",
-      "tags": "list:class",
-      "summary": "All documented classes.",
       "description": "",
       "body": ""
     },
@@ -7154,157 +7073,6 @@
       "summary": "",
       "description": "The Switch class allows for control of digital switches",
       "body": ""
-    },
-    "module-j5e_led-Led.html": {
-      "id": "module-j5e_led-Led.html",
-      "kind": "class",
-      "title": "j5e/led~Led",
-      "longname": "module:j5e/led~Led",
-      "name": "Led",
-      "tags": "module:j5e/led~Led",
-      "summary": "",
-      "description": "The Led class allows for control of LED's",
-      "body": ""
-    },
-    "module-j5e_led-Led.html#write": {
-      "id": "module-j5e_led-Led.html#write",
-      "kind": "function",
-      "title": "write()",
-      "longname": "module:j5e/led~Led#write",
-      "name": "write",
-      "tags": "module:j5e/led~Led#write write",
-      "summary": "",
-      "description": "Internal method that writes the current LED value to the IO"
-    },
-    "module-j5e_led-Led.html#on": {
-      "id": "module-j5e_led-Led.html#on",
-      "kind": "function",
-      "title": "on() → {Led}",
-      "longname": "module:j5e/led~Led#on",
-      "name": "on",
-      "tags": "module:j5e/led~Led#on on",
-      "summary": "",
-      "description": "Turn an led on"
-    },
-    "module-j5e_led-Led.html#off": {
-      "id": "module-j5e_led-Led.html#off",
-      "kind": "function",
-      "title": "off() → {Led}",
-      "longname": "module:j5e/led~Led#off",
-      "name": "off",
-      "tags": "module:j5e/led~Led#off off",
-      "summary": "",
-      "description": "Turn an led off"
-    },
-    "module-j5e_led-Led.html#toggle": {
-      "id": "module-j5e_led-Led.html#toggle",
-      "kind": "function",
-      "title": "toggle() → {Led}",
-      "longname": "module:j5e/led~Led#toggle",
-      "name": "toggle",
-      "tags": "module:j5e/led~Led#toggle toggle",
-      "summary": "",
-      "description": "Toggle the on/off state of an led"
-    },
-    "module-j5e_led-Led.html#blink": {
-      "id": "module-j5e_led-Led.html#blink",
-      "kind": "function",
-      "title": "blink( duration, callback ) → {Led}",
-      "longname": "module:j5e/led~Led#blink",
-      "name": "blink",
-      "tags": "module:j5e/led~Led#blink blink",
-      "summary": "",
-      "description": "Blink the LED on a fixed interval"
-    },
-    "module-j5e_led-Led.html#brightness": {
-      "id": "module-j5e_led-Led.html#brightness",
-      "kind": "function",
-      "title": "brightness( value ) → {Led}",
-      "longname": "module:j5e/led~Led#brightness",
-      "name": "brightness",
-      "tags": "module:j5e/led~Led#brightness brightness",
-      "summary": "",
-      "description": "Set the brightness of an led attached to PWM"
-    },
-    "module-j5e_led-Led.html#intensity": {
-      "id": "module-j5e_led-Led.html#intensity",
-      "kind": "function",
-      "title": "intensity( value ) → {Led}",
-      "longname": "module:j5e/led~Led#intensity",
-      "name": "intensity",
-      "tags": "module:j5e/led~Led#intensity intensity",
-      "summary": "",
-      "description": "Set the brightness of an led 0-100"
-    },
-    "module-j5e_led-Led.html#pulse": {
-      "id": "module-j5e_led-Led.html#pulse",
-      "kind": "function",
-      "title": "pulse( [ time [, callback ] ] ) → {Led}",
-      "longname": "module:j5e/led~Led#pulse",
-      "name": "pulse",
-      "tags": "module:j5e/led~Led#pulse pulse",
-      "summary": "",
-      "description": "Pulse the Led in and out in a loop with specified time"
-    },
-    "module-j5e_led-Led.html#fade": {
-      "id": "module-j5e_led-Led.html#fade",
-      "kind": "function",
-      "title": "fade( val [, time [, callback ] ] ) → {Led}",
-      "longname": "module:j5e/led~Led#fade",
-      "name": "fade",
-      "tags": "module:j5e/led~Led#fade fade",
-      "summary": "",
-      "description": "fade Fade an led in and out"
-    },
-    "module-j5e_led-Led.html#fadeIn": {
-      "id": "module-j5e_led-Led.html#fadeIn",
-      "kind": "function",
-      "title": "fadeIn( [ time [, callback ] ] ) → {Led}",
-      "longname": "module:j5e/led~Led#fadeIn",
-      "name": "fadeIn",
-      "tags": "module:j5e/led~Led#fadeIn fadeIn",
-      "summary": "",
-      "description": "fade Fade an led in"
-    },
-    "module-j5e_led-Led.html#fadeOut": {
-      "id": "module-j5e_led-Led.html#fadeOut",
-      "kind": "function",
-      "title": "fadeOut( [ time [, callback ] ] ) → {Led}",
-      "longname": "module:j5e/led~Led#fadeOut",
-      "name": "fadeOut",
-      "tags": "module:j5e/led~Led#fadeOut fadeOut",
-      "summary": "",
-      "description": "fade Fade an led out"
-    },
-    "module-j5e_led-Led.html#stop": {
-      "id": "module-j5e_led-Led.html#stop",
-      "kind": "function",
-      "title": "stop() → {Led}",
-      "longname": "module:j5e/led~Led#stop",
-      "name": "stop",
-      "tags": "module:j5e/led~Led#stop stop",
-      "summary": "",
-      "description": "stop Stop the led from strobing, pulsing or fading"
-    },
-    "module-j5e_led-Led.html#normalize": {
-      "id": "module-j5e_led-Led.html#normalize",
-      "kind": "function",
-      "title": "normalize( [ number || object ] )",
-      "longname": "module:j5e/led~Led#normalize",
-      "name": "normalize",
-      "tags": "module:j5e/led~Led#normalize normalize",
-      "summary": "",
-      "description": ""
-    },
-    "module-j5e_led-Led.html#render": {
-      "id": "module-j5e_led-Led.html#render",
-      "kind": "function",
-      "title": "render()",
-      "longname": "module:j5e/led~Led#render",
-      "name": "render",
-      "tags": "module:j5e/led~Led#render render",
-      "summary": "",
-      "description": ""
     },
     "module-j5e_rgb-RGB.html": {
       "id": "module-j5e_rgb-RGB.html",
@@ -7558,6 +7326,137 @@
       "summary": "",
       "description": "csw Move a continuous rotation servo counter-clockwise"
     },
+    "module-j5e_led-LED.html": {
+      "id": "module-j5e_led-LED.html",
+      "kind": "class",
+      "title": "&lt;async&gt; j5e/led~LED",
+      "longname": "module:j5e/led~LED",
+      "name": "LED",
+      "tags": "module:j5e/led~LED",
+      "summary": "",
+      "description": "The LED class allows for control of Light Emitting Diodes",
+      "body": ""
+    },
+    "module-j5e_led-LED.html#on": {
+      "id": "module-j5e_led-LED.html#on",
+      "kind": "function",
+      "title": "on() → {LED}",
+      "longname": "module:j5e/led~LED#on",
+      "name": "on",
+      "tags": "module:j5e/led~LED#on on",
+      "summary": "",
+      "description": "Turn an led on"
+    },
+    "module-j5e_led-LED.html#off": {
+      "id": "module-j5e_led-LED.html#off",
+      "kind": "function",
+      "title": "off() → {LED}",
+      "longname": "module:j5e/led~LED#off",
+      "name": "off",
+      "tags": "module:j5e/led~LED#off off",
+      "summary": "",
+      "description": "Turn an led off"
+    },
+    "module-j5e_led-LED.html#toggle": {
+      "id": "module-j5e_led-LED.html#toggle",
+      "kind": "function",
+      "title": "toggle() → {LED}",
+      "longname": "module:j5e/led~LED#toggle",
+      "name": "toggle",
+      "tags": "module:j5e/led~LED#toggle toggle",
+      "summary": "",
+      "description": "Toggle the on/off state of an led"
+    },
+    "module-j5e_led-LED.html#blink": {
+      "id": "module-j5e_led-LED.html#blink",
+      "kind": "function",
+      "title": "blink( duration, callback ) → {LED}",
+      "longname": "module:j5e/led~LED#blink",
+      "name": "blink",
+      "tags": "module:j5e/led~LED#blink blink",
+      "summary": "",
+      "description": "Blink the LED on a fixed interval"
+    },
+    "module-j5e_led-LED.html#brightness": {
+      "id": "module-j5e_led-LED.html#brightness",
+      "kind": "function",
+      "title": "brightness( value ) → {LED}",
+      "longname": "module:j5e/led~LED#brightness",
+      "name": "brightness",
+      "tags": "module:j5e/led~LED#brightness brightness",
+      "summary": "",
+      "description": "Set the brightness of an led attached to PWM"
+    },
+    "module-j5e_led-LED.html#intensity": {
+      "id": "module-j5e_led-LED.html#intensity",
+      "kind": "function",
+      "title": "intensity( value ) → {LED}",
+      "longname": "module:j5e/led~LED#intensity",
+      "name": "intensity",
+      "tags": "module:j5e/led~LED#intensity intensity",
+      "summary": "",
+      "description": "Set the brightness of an led 0-100"
+    },
+    "module-j5e_led-LED.html#pulse": {
+      "id": "module-j5e_led-LED.html#pulse",
+      "kind": "function",
+      "title": "pulse( [ time [, callback ] ] ) → {LED}",
+      "longname": "module:j5e/led~LED#pulse",
+      "name": "pulse",
+      "tags": "module:j5e/led~LED#pulse pulse",
+      "summary": "",
+      "description": "Pulse the LED in and out in a loop with specified time"
+    },
+    "module-j5e_led-LED.html#animate": {
+      "id": "module-j5e_led-LED.html#animate",
+      "kind": "function",
+      "title": "animate( options ) → {RGB}",
+      "longname": "module:j5e/led~LED#animate",
+      "name": "animate",
+      "tags": "module:j5e/led~LED#animate animate",
+      "summary": "",
+      "description": "Animate the RGB LED"
+    },
+    "module-j5e_led-LED.html#fade": {
+      "id": "module-j5e_led-LED.html#fade",
+      "kind": "function",
+      "title": "fade( val [, time [, callback ] ] ) → {LED}",
+      "longname": "module:j5e/led~LED#fade",
+      "name": "fade",
+      "tags": "module:j5e/led~LED#fade fade",
+      "summary": "",
+      "description": "fade Fade an led in and out"
+    },
+    "module-j5e_led-LED.html#fadeIn": {
+      "id": "module-j5e_led-LED.html#fadeIn",
+      "kind": "function",
+      "title": "fadeIn( [ time [, callback ] ] ) → {LED}",
+      "longname": "module:j5e/led~LED#fadeIn",
+      "name": "fadeIn",
+      "tags": "module:j5e/led~LED#fadeIn fadeIn",
+      "summary": "",
+      "description": "fade Fade an led in"
+    },
+    "module-j5e_led-LED.html#fadeOut": {
+      "id": "module-j5e_led-LED.html#fadeOut",
+      "kind": "function",
+      "title": "fadeOut( [ time [, callback ] ] ) → {LED}",
+      "longname": "module:j5e/led~LED#fadeOut",
+      "name": "fadeOut",
+      "tags": "module:j5e/led~LED#fadeOut fadeOut",
+      "summary": "",
+      "description": "fade Fade an led out"
+    },
+    "module-j5e_led-LED.html#stop": {
+      "id": "module-j5e_led-LED.html#stop",
+      "kind": "function",
+      "title": "stop() → {LED}",
+      "longname": "module:j5e/led~LED#stop",
+      "name": "stop",
+      "tags": "module:j5e/led~LED#stop stop",
+      "summary": "",
+      "description": "stop Stop the led from strobing, pulsing or fading"
+    },
     "module-j5e_animation-Timer.html": {
       "id": "module-j5e_animation-Timer.html",
       "kind": "class",
@@ -7632,7 +7531,7 @@
       "name": "j5e/led",
       "tags": "module:j5e/led",
       "summary": "",
-      "description": "Led module - For controlling LED's",
+      "description": "LED module",
       "body": ""
     },
     "module-j5e_rgb.html": {

@@ -8,16 +8,29 @@
       "destination": "./docs/",
       "recurse": true
   },
+  "plugins" : ["plugins/staticFiles/staticFiles.cjs"],
+  "staticFiles": {
+    "include": ["static:./build/docs/css"]
+  },
   "templates": {
     "systemName"            : "j5e",
     "systemSummary"         : "Johnny Five for Embedded Systems",
-    "systemLogo"            : "./build/docs/j5e.png",
+    "systemLogo"            : "./build/docs/img/j5e.png",
     "systemColor"           : "#000",
     "copyright"             : "Copyright © 2020 The contributors to the j5e and Johnny-Five projects.",
     "dateFormat"            : "MMMM D, YYYY",
-    "inlineNav"             : false,
+    "inlineNav"             : true,
+    "navMembers"            : [
+                                {"kind": "external", "title": "Externals", "summary": "All documented external members."},
+                                {"kind": "global", "title": "Globals", "summary": "All documented globals."},
+                                {"kind": "mixin", "title": "Mixins", "summary": "All documented mixins."},
+                                {"kind": "interface", "title": "Interfaces", "summary": "All documented interfaces."},
+                                {"kind": "module", "title": "Modules", "summary": "All documented modules."},
+                                {"kind": "namespace", "title": "Namespaces", "summary": "All documented namespaces."},
+                                {"kind": "tutorial", "title": "Tutorials", "summary": "All available tutorials."}
+                              ],
     "analytics"             : { "ua": "UA-36026876-4", "domain": "dtex.github.io" },
-    "favicon"               : "./build/docs/j5e.png",
-    "stylesheets"           : "./build/docs/custom.css"
+    "favicon"               : "./build/docs/img/j5e.png",
+    "stylesheets"           : ["./static/custom.css"]
   }
 }

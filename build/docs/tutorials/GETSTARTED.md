@@ -4,7 +4,7 @@
 
 ````bash
 cd ~/Projects
-git clone https://github.com/Moddable-OpenSource/moddable
+git clone https://github.com/dtex/j5e
 ````
 
 #### 3. Setup the ```j5e``` environment variable to point at the ```dist/moddable``` directory in your copy of the j5e repo
@@ -43,7 +43,7 @@ cd myProject
 }
 ````
 
-#### 7. Create you ```main.js``` program file. Here's the ubquitous "Hello World" for hardware to get you started:
+#### 7. Create your ```main.js``` program file. Here's the ubquitous "Hello World" for hardware to get you started:
 
 ````js
 import Led from "@j5e/led";

@@ -14,7 +14,6 @@ var fs = require("jsdoc/fs"),
     recursive = conf.recursive || false,
     // By default recursion will go three levels deep if `recursive` is `true`
     recursiveLevel = conf.recursiveLevel || (!recursive ? 1 : 3);
-
 /**
  * Splits include paths into an array of source and destination paths
  *

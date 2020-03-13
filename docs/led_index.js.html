@@ -13,6 +13,7 @@
 		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
 		<link type="text/css" rel="stylesheet" href="css/prism.min.css">
 		<link type="text/css" rel="stylesheet" href="css/template.min.css">
+			<link type="text/css" rel="stylesheet" href="./static/custom.css">
 			<style>
 				.page-header,
 				pre.code-toolbar > .toolbar:hover {
@@ -42,7 +43,7 @@
 				}
 			</style>
 		<script type="text/javascript">
-			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"MMMM D, YYYY","systemName":"j5e","systemSummary":"Johnny Five for Embedded Systems","systemLogo":"img/j5e.png","systemColor":"#000","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Copyright © 2020 The contributors to the j5e and Johnny-Five projects.","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":{"ua":"UA-36026876-4","domain":"dtex.github.io"},"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":"./build/docs/custom.css","scripts":[],"monospaceLinks":false,"cleverLinks":false};
+			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"MMMM D, YYYY","systemName":"j5e","systemSummary":"Johnny Five for Embedded Systems","systemLogo":"img/j5e.png","systemColor":"#000","navMembers":[{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Copyright © 2020 The contributors to the j5e and Johnny-Five projects.","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":true,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":{"ua":"UA-36026876-4","domain":"dtex.github.io"},"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":["./static/custom.css"],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
 			window.DOCLET_TOC_ENABLED = false;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
@@ -64,40 +65,8 @@
 			</div>
 			<div class="navbar-collapse collapse" id="topNavigation">
 				<ul class="nav navbar-nav">
-								<li class="dropdown">
-									<a href="list_class.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
-									<ul class="dropdown-menu">
-											<li><a href="module-j5e_animation-Animation.html">j5e/animation~Animation</a></li>
-											<li><a href="module-j5e_animation-Segment.html">j5e/animation~Segment</a></li>
-											<li><a href="module-j5e_animation-Timer.html">j5e/animation~Timer</a></li>
-											<li><a href="module-j5e_event.Emitter.html">j5e/event.Emitter</a></li>
-											<li><a href="module-j5e_led-Led.html">j5e/led~Led</a></li>
-											<li><a href="module-j5e_rgb-RGB.html">j5e/rgb~RGB</a></li>
-											<li><a href="module-j5e_servo-Servo.html">j5e/servo~Servo</a></li>
-											<li><a href="module-j5e_switch-Switch.html">j5e/switch~Switch</a></li>
-									</ul>
-								</li>
-								<li class="dropdown">
-									<a href="list_module.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
-									<ul class="dropdown-menu">
-											<li><a href="module-j5e_animation.html">j5e/animation</a></li>
-											<li><a href="module-j5e_easing.html">j5e/easing</a></li>
-											<li><a href="module-j5e_event.html">j5e/event</a></li>
-											<li><a href="module-j5e_fn.html">j5e/fn</a></li>
-											<li><a href="module-j5e_led.html">j5e/led</a></li>
-											<li><a href="module-j5e_rgb.html">j5e/rgb</a></li>
-											<li><a href="module-j5e_servo.html">j5e/servo</a></li>
-											<li><a href="module-j5e_switch.html">j5e/switch</a></li>
-									</ul>
-								</li>
-								<li class="dropdown">
-									<a href="list_tutorial.html" class="dropdown-toggle" data-toggle="dropdown">Tutorials<b class="caret"></b></a>
-									<ul class="dropdown-menu">
-											<li><a href="tutorial-ASYNC.html">Making it Asynchronous</a></li>
-											<li><a href="tutorial-GETSTARTED.html">Getting Started</a></li>
-											<li><a href="tutorial-INSTANTIATING.html">Instantiating a Device</a></li>
-									</ul>
-								</li>
+							<li><a href="list_module.html">Modules</a></li>
+							<li><a href="list_tutorial.html">Tutorials</a></li>
 				</ul>
 					<!-- start:lunr-search-navbar.hbs -->
 					<form class="navbar-form navbar-right" role="search">
@@ -125,8 +94,11 @@
 		<section class="source-section">
 			<article></article>
 			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">/**
- * Led module - For controlling LED's
+ * LED module
  * @module j5e/led
+ * @requires module:@j5e/animation
+ * @requires module:@j5e/easing
+ * @requires module:@j5e/fn
  */
 
 import {normalizeParams, constrain, getProvider, timer} from "@j5e/fn";
@@ -135,9 +107,11 @@ import Animation from "@j5e/animation";
 
 /** 
  * Class representing an LED
- * @classdesc The Led class allows for control of LED's
+ * @classdesc The LED class allows for control of Light Emitting Diodes
+ * @async
+ * 
  */
-class Led {
+class LED {
   
   #state = {
     sink: false, 
@@ -150,12 +124,43 @@ class Led {
 
   /**
    * Instantiate an LED
-   * @param {(number|string|object)} io - A pin number, pin identifier or a complete IO options object
-   * @param {(number|string)} [io.pin] - If passing an object, a pin number or pin identifier
+   * @param {object|number|string} io - Pin identifier or IO Options
+   * @param {number} io.pin - A pin number
+   * @param {string} io.pin - A pin identifier
    * @param {boolean} [io.pwm] - If true and io.io is not passed, will use "builtin/pwm" for io
-   * @param {(string|constructor)} [io.io=builtin/digital] - If passing an object, a string specifying a path to the IO provider or a constructor
+   * @param {string} [io.io=builtin/digital] - A string specifying a path to the IO provider
+   * @param {constructor} [io.io=builtin/digital] - An I/O constructor
    * @param {object} [device={}] - An object containing device options
    * @param {boolean} [device.sink=false] - True if the device is wired for sink drive
+   * @example
+   * &lt;caption>Using a pin number&lt;/caption>
+   * import LED from "@j5e/led";
+   *
+   * (async function() {
+   *   const led = await new LED(12);
+   *   led.blink();
+   * })();
+   * 
+   * @example
+   * &lt;caption>Using a pin identifier&lt;/caption>
+   * import LED from "@j5e/led";
+   *
+   * (async function() {
+   *   const led = await new LED("A1");
+   *   led.blink();
+   * })();
+   * 
+   * @example
+   * &lt;caption>Using an IO options object&lt;/caption>
+   * import LED from "@j5e/led";
+   *
+   * (async function() {
+   *   const led = await new LED({
+   *     pin: 12,
+   *     pwm: true
+   *   });
+   *   led.blink();
+   * })();
    */
   constructor(io, device) {
     return (async () => {
@@ -207,8 +212,9 @@ class Led {
     })();
   }
 
-   /**
+  /**
    * Internal method that writes the current LED value to the IO
+   * @access private
    */
   write() {
     let value = constrain(this.#state.value, this.LOW, this.HIGH);
@@ -222,7 +228,14 @@ class Led {
 
   /**
    * Turn an led on
-   * @return {Led}
+   * @returns {LED} The instance on which the method was called
+   * @example
+   * import RGB from "@j5e/rgb";
+   *
+   * (async function() {
+   *   rgb = await new RGB([12, 13, 14])
+   *   rgb.on();
+   * })();
    */
   on() {
     this.#state.value = this.HIGH;
@@ -232,7 +245,7 @@ class Led {
 
   /**
    * Turn an led off
-   * @return {Led}
+   * @return {LED}
    */
   off() {
     this.#state.value = this.LOW;
@@ -242,7 +255,7 @@ class Led {
 
   /**
    * Toggle the on/off state of an led
-   * @return {Led}
+   * @return {LED}
    */
   toggle() {
     return this[this.isOn ? "off" : "on"]();
@@ -252,7 +265,7 @@ class Led {
    * Blink the LED on a fixed interval
    * @param {Number} duration=100 - Time in ms on, time in ms off
    * @param {Function} callback - Method to call on blink
-   * @return {Led}
+   * @return {LED}
    */
   blink(duration=100, callback) {
     // Avoid traffic jams
@@ -278,7 +291,7 @@ class Led {
   /**
    * Set the brightness of an led attached to PWM
    * @param {Integer} value - Brightness value [this.HIGH, this.LOW]
-   * @return {Led}
+   * @return {LED}
    */
   brightness(value) {
     this.#state.value = value;
@@ -289,7 +302,7 @@ class Led {
   /**
    * Set the brightness of an led 0-100
    * @param {Integer} value - Brightness value [0, 100]
-   * @return {Led}
+   * @return {LED}
    */
   intensity(value) {
     this.#state.value = map(value, 0, 100, this.LOW, this.HIGH);
@@ -298,17 +311,14 @@ class Led {
   }
 
   /**
-   * Pulse the Led in and out in a loop with specified time
+   * Pulse the LED in and out in a loop with specified time
    * @param {number} [time=1000] Time in ms that a fade in/out will elapse
    * @param {function} [callback] A function to run each time the direction of pulse changes
-   * @return {Led}
+   * @return {LED}
    */
-
   pulse(time=1000, callback) {
     
-    this.stop();
-
-    var options = {
+    let options = {
       duration: typeof time === "number" ? time : 1000,
       keyFrames: [this.LOW, this.HIGH],
       metronomic: true,
@@ -330,20 +340,32 @@ class Led {
       callback = time;
     }
 
+    return this.animate(options);
+    
+  }
+  
+  /**
+   * Animate the RGB LED
+   * @param {Object} options
+   * @return {RGB}
+   */
+  animate(options) {
+    // Avoid traffic jams
+    this.stop();
+
     this.#state.isRunning = true;
 
     this.#state.animation = this.#state.animation || new Animation(this);
     this.#state.animation.enqueue(options);
     return this;
-    
-  }  
+  }
 
   /**
    * fade Fade an led in and out
    * @param {Number} val Target brightness value
    * @param {Number} [time=1000] Time in ms that a fade will take
    * @param {function} [callback] A function to run when the fade is complete
-   * @return {Led}
+   * @return {LED}
    */
   fade(val, time=1000, callback) {
     
@@ -389,7 +411,7 @@ class Led {
    * fade Fade an led in
    * @param {Number} [time=1000] Time in ms that a fade will take
    * @param {function} [callback] A function to run when the fade is complete
-   * @return {Led}
+   * @return {LED}
    */
   fadeIn(time=1000, callback) {
     return this.fade(this.HIGH, time, callback);
@@ -399,7 +421,7 @@ class Led {
    * fade Fade an led out
    * @param {Number} [time=1000] Time in ms that a fade will take
    * @param {function} [callback] A function to run when the fade is complete
-   * @return {Led}
+   * @return {LED}
    */
   fadeOut(time=1000, callback) {
     return this.fade(this.LOW, time, callback);
@@ -407,7 +429,7 @@ class Led {
 
   /**
    * stop Stop the led from strobing, pulsing or fading
-   * @return {Led}
+   * @return {LED}
    */
   stop() {
     
@@ -427,6 +449,7 @@ class Led {
 
   /**
    * @param [number || object] keyFrames An array of step values or a keyFrame objects
+   * @access private
    */
 
   normalize(keyFrames) {
@@ -466,6 +489,7 @@ class Led {
 
   /**
    * @position [number] value to set the led to
+   * @access private
    */
   render(position) {
     this.#state.value = position[0];
@@ -474,7 +498,7 @@ class Led {
 
 };
 
-export default Led;</code></pre>
+export default LED;</code></pre>
 		</section>
 			</div>
 		</div>
