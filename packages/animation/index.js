@@ -184,7 +184,6 @@ class Animation {
     if ((this.progress === 1 && !this.reverse) || (progress === this.loopback && this.reverse)) {
 
       if (this.loop || (this.metronomic && !this.reverse)) {
-
         if (this.onloop) {
           this.onloop();
         }
@@ -193,12 +192,13 @@ class Animation {
           this.reverse = this.reverse ? false : true;
         }
 
-        this.normalizeKeyframes();
+        //This line was causing RGB to "re-normalize" and break. I'm not sure why it is here.
+        //this.normalizeKeyframes();
+        
         this.progress = this.loopback;
         this.startTime = Date.now() - this.scaledDuration * this.progress;
         this.endTime = this.startTime + this.scaledDuration;
       } else {
-
         this.isRunning = false;
 
         if (this.oncomplete) {
@@ -278,7 +278,7 @@ class Animation {
     if (this.reverse) {
       progress = 1 - progress;
     }
-
+    
     // Ease the timeline
     // to do: When reverse replace inFoo with outFoo and vice versa. skip inOutFoo
     return constrain(this.easing(progress), 0, 1);
@@ -294,7 +294,7 @@ class Animation {
       duration: null,
       progress: null
     };
-
+    
     const result = this.keyFrames.map(keyFrame => {
       const kIndices = {
         left: null,
@@ -317,7 +317,7 @@ class Animation {
       // Find our progress for the current tween
       tween.duration = this.cuePoints[kIndices.right] - this.cuePoints[kIndices.left];
       tween.progress = (progress - this.cuePoints[kIndices.left]) / tween.duration;
-
+      
       // Catch divide by zero
       if (!Number.isFinite(tween.progress)) {
         /* istanbul ignore next */
@@ -326,7 +326,7 @@ class Animation {
 
       const left = keyFrame[kIndices.left];
       const right = keyFrame[kIndices.right];
-
+      
       // Apply tween easing to tween.progress
       // to do: When reverse replace inFoo with outFoo and vice versa. skip inOutFoo
       tween.progress = right.easing(tween.progress);
@@ -342,7 +342,7 @@ class Animation {
         if (typeof right.value === "number" && typeof left.value === "number") {
           calcValue = (right.value - left.value) * tween.progress + left.value;
         } else {
-          calcValue = this.target[Animation.keys].reduce((accum, key) => {
+          calcValue = this.target.keys.reduce((accum, key) => {
             accum[key] = (right.value[key] - left.value[key]) * tween.progress + left.value[key];
             return accum;
           }, {});
@@ -365,7 +365,6 @@ class Animation {
 
     // Run through the target's normalization
     this.keyFrames = this.target.normalize(this.keyFrames);
-
     // keyFrames can be passed as a single dimensional array if
     // there is just one servo/device. If the first element is not an
     // array, nest this.keyFrames so we only have to deal with one format
