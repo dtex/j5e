@@ -1,20 +1,20 @@
 import assert from 'assert';
 import sinon from 'sinon';
 import { Digital, PWM } from "@dtex/mock-io";
-import Led from '@j5e/led';
+import LED from '@j5e/led';
 
-describe('Led - Digital', function() {
+describe('LED - Digital', function() {
   
   describe('Instantiation', function() {
     
-    it('should return a valid Led instance when passed an options object', async function() {
+    it('should return a valid LED instance when passed an options object', async function() {
       
-      const led = await new Led({
+      const led = await new LED({
         pin: 12,
         io: Digital
       });
       
-      assert.equal(led instanceof Led, true);
+      assert.equal(led instanceof LED, true);
       assert.equal(led.LOW, 0);
       assert.equal(led.HIGH, 1);
 
@@ -25,7 +25,7 @@ describe('Led - Digital', function() {
   describe('On', function() {
 
     it('should call io digital.write with 1', async function() {  
-      const led = await new Led({
+      const led = await new LED({
         pin: 12,
         io: Digital
       });
@@ -44,7 +44,7 @@ describe('Led - Digital', function() {
 
     it('should call io digital.write with 0', async function() {  
       
-      const led = await new Led({
+      const led = await new LED({
         pin: 12,
         io: Digital
       });
@@ -64,7 +64,7 @@ describe('Led - Digital', function() {
   describe('Toggle', function() {
     
     it('should call io digital.write twice, with 1 and 0', async function() {  
-      const led = await new Led({
+      const led = await new LED({
         pin: 12,
         io: Digital
       });
@@ -90,7 +90,7 @@ describe('Led - Digital', function() {
     it('should change state 10 times in 1050 millisconeds', async function() {  
       
       const clock = sinon.useFakeTimers();
-      const led = await new Led({
+      const led = await new LED({
         pin: 12,
         io: Digital
       });
@@ -113,7 +113,7 @@ describe('Led - Digital', function() {
     it('should change state only 5 times in 2050 millisconeds', async function() {  
       
       const clock = sinon.useFakeTimers();
-      const led = await new Led({
+      const led = await new LED({
         pin: 12,
         io: Digital
       });
@@ -136,18 +136,18 @@ describe('Led - Digital', function() {
 
 });
 
-describe('Led - PWM', function() {
+describe('LED - PWM', function() {
   
   describe('Instantiation', function() {
     
-    it('should return a valid Led instance when passed an options object', async function() {
+    it('should return a valid LED instance when passed an options object', async function() {
       
-      const led = await new Led({
+      const led = await new LED({
         pin: 12,
         io: PWM
       });
       
-      assert.equal(led instanceof Led, true);
+      assert.equal(led instanceof LED, true);
       assert.equal(led.LOW, 0);
       assert.equal(led.HIGH, 1023);
 
@@ -158,7 +158,7 @@ describe('Led - PWM', function() {
   describe('On', function() {
     
     it('should call io digital.write with 1', async function() {  
-      const led = await new Led({
+      const led = await new LED({
       pin: 12,
       io: PWM
     });
@@ -176,7 +176,7 @@ describe('Led - PWM', function() {
     
     it('should call io digital.write with 0', async function() {  
   
-      const led = await new Led({
+      const led = await new LED({
         pin: 12,
         io: PWM
       });
@@ -197,7 +197,7 @@ describe('Led - PWM', function() {
 
     it('should call io digital.write twice, with 1 and 0', async function() {  
 
-      const led = await new Led({
+      const led = await new LED({
         pin: 12,
         io: PWM
       });
@@ -221,7 +221,7 @@ describe('Led - PWM', function() {
 
     it('should call io digital.write twice, with 0 and 512', async function() {  
       
-      const led = await new Led({
+      const led = await new LED({
         pin: 12,
         io: PWM
       });
@@ -246,7 +246,7 @@ describe('Led - PWM', function() {
     it('should call fade and...', async function() {  
   
       const clock = sinon.useFakeTimers();
-      const led = await new Led({
+      const led = await new LED({
         pin: 12,
         io: PWM
       });
