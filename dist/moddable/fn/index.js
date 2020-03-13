@@ -21,8 +21,13 @@ export function normalizeParams(ioOpts={}, deviceOpts={}) {
  * @param {(string|constructor)} [ioOpts.io] - If passing an object, a string specifying a path to the IO provider or a constructor
  */
 export function normalizeIO(ioOpts={}) {
+  //trace(typeof ioOpts)
+  //trace(ioOpts);
+  //console.log(typeof ioOpts)
+  //console.log(ioOpts);
   if (typeof ioOpts === "number" || typeof ioOpts === "string") {
-    ioOpts = {pin: ioOpts};
+    let result = {pin: ioOpts};
+    return result;
   }
   return ioOpts;
 };

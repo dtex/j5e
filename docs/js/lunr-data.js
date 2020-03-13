@@ -416,6 +416,12 @@ window.lunrData = {
           "module:j5e/rgb~rgb",
           "rgb"
         ],
+        "module-j5e_rgb-RGB.html#color": [
+          "color",
+          "function",
+          "module:j5e/rgb~rgb#color",
+          "rgb"
+        ],
         "module-j5e_rgb-RGB.html#write": [
           "current",
           "function",
@@ -457,6 +463,36 @@ window.lunrData = {
           "led",
           "module:j5e/rgb~rgb#blink",
           "rgb"
+        ],
+        "module-j5e_rgb-RGB.html#pulse": [
+          "callback",
+          "durat",
+          "fix",
+          "function",
+          "interv",
+          "led",
+          "module:j5e/rgb~rgb#puls",
+          "puls",
+          "rgb"
+        ],
+        "module-j5e_rgb-RGB.html#animate": [
+          "anim",
+          "function",
+          "led",
+          "module:j5e/rgb~rgb#anim",
+          "option",
+          "rgb"
+        ],
+        "module-j5e_rgb-RGB.html#toScaledRGB": [
+          "base",
+          "current",
+          "function",
+          "intens",
+          "module:j5e/rgb~rgb#toscaledrgb",
+          "output",
+          "scale",
+          "toscaledrgb",
+          "valu"
         ],
         "module-j5e_servo-Servo.html": [
           "allow",
@@ -705,7 +741,7 @@ window.lunrData = {
           "switch"
         ]
       },
-      "length": 70
+      "length": 74
     },
     "tokenStore": {
       "root": {
@@ -1104,6 +1140,10 @@ window.lunrData = {
                 "module-j5e_rgb-RGB.html#blink": {
                   "ref": "module-j5e_rgb-RGB.html#blink",
                   "tf": 12.5
+                },
+                "module-j5e_rgb-RGB.html#pulse": {
+                  "ref": "module-j5e_rgb-RGB.html#pulse",
+                  "tf": 12.5
                 }
               }
             }
@@ -1241,6 +1281,10 @@ window.lunrData = {
                             "ref": "module-j5e_led-Led.html#render",
                             "tf": 110
                           },
+                          "module-j5e_rgb-RGB.html#color": {
+                            "ref": "module-j5e_rgb-RGB.html#color",
+                            "tf": 110
+                          },
                           "module-j5e_rgb-RGB.html#write": {
                             "ref": "module-j5e_rgb-RGB.html#write",
                             "tf": 110
@@ -1259,6 +1303,18 @@ window.lunrData = {
                           },
                           "module-j5e_rgb-RGB.html#blink": {
                             "ref": "module-j5e_rgb-RGB.html#blink",
+                            "tf": 110
+                          },
+                          "module-j5e_rgb-RGB.html#pulse": {
+                            "ref": "module-j5e_rgb-RGB.html#pulse",
+                            "tf": 110
+                          },
+                          "module-j5e_rgb-RGB.html#animate": {
+                            "ref": "module-j5e_rgb-RGB.html#animate",
+                            "tf": 110
+                          },
+                          "module-j5e_rgb-RGB.html#toScaledRGB": {
+                            "ref": "module-j5e_rgb-RGB.html#toScaledRGB",
                             "tf": 110
                           },
                           "module-j5e_servo-Servo.html#initialize": {
@@ -1540,6 +1596,10 @@ window.lunrData = {
                       "module-j5e_led-Led.html#intensity": {
                         "ref": "module-j5e_led-Led.html#intensity",
                         "tf": 683.3333333333334
+                      },
+                      "module-j5e_rgb-RGB.html#toScaledRGB": {
+                        "ref": "module-j5e_rgb-RGB.html#toScaledRGB",
+                        "tf": 7.142857142857142
                       }
                     }
                   }
@@ -1566,6 +1626,10 @@ window.lunrData = {
                       },
                       "module-j5e_rgb-RGB.html#blink": {
                         "ref": "module-j5e_rgb-RGB.html#blink",
+                        "tf": 12.5
+                      },
+                      "module-j5e_rgb-RGB.html#pulse": {
+                        "ref": "module-j5e_rgb-RGB.html#pulse",
                         "tf": 12.5
                       }
                     }
@@ -2102,9 +2166,21 @@ window.lunrData = {
                   "ref": "module-j5e_rgb-RGB.html",
                   "tf": 516.6666666666666
                 },
+                "module-j5e_rgb-RGB.html#color": {
+                  "ref": "module-j5e_rgb-RGB.html#color",
+                  "tf": 20
+                },
                 "module-j5e_rgb-RGB.html#blink": {
                   "ref": "module-j5e_rgb-RGB.html#blink",
                   "tf": 25
+                },
+                "module-j5e_rgb-RGB.html#pulse": {
+                  "ref": "module-j5e_rgb-RGB.html#pulse",
+                  "tf": 25
+                },
+                "module-j5e_rgb-RGB.html#animate": {
+                  "ref": "module-j5e_rgb-RGB.html#animate",
+                  "tf": 49.99999999999999
                 },
                 "module-j5e_rgb.html": {
                   "ref": "module-j5e_rgb.html",
@@ -2351,6 +2427,20 @@ window.lunrData = {
                         "ref": "module-j5e_animation-Animation.html",
                         "tf": 10
                       }
+                    }
+                  }
+                }
+              }
+            },
+            "a": {
+              "docs": {},
+              "l": {
+                "docs": {},
+                "e": {
+                  "docs": {
+                    "module-j5e_rgb-RGB.html#toScaledRGB": {
+                      "ref": "module-j5e_rgb-RGB.html#toScaledRGB",
+                      "tf": 7.142857142857142
                     }
                   }
                 }
@@ -2790,6 +2880,10 @@ window.lunrData = {
                     "module-j5e_rgb-RGB.html#blink": {
                       "ref": "module-j5e_rgb-RGB.html#blink",
                       "tf": 25
+                    },
+                    "module-j5e_rgb-RGB.html#pulse": {
+                      "ref": "module-j5e_rgb-RGB.html#pulse",
+                      "tf": 25
                     }
                   }
                 }
@@ -2991,6 +3085,10 @@ window.lunrData = {
                   "module-j5e_animation-Animation.html#loopFunction": {
                     "ref": "module-j5e_animation-Animation.html#loopFunction",
                     "tf": 7.142857142857142
+                  },
+                  "module-j5e_rgb-RGB.html#animate": {
+                    "ref": "module-j5e_rgb-RGB.html#animate",
+                    "tf": 700
                   },
                   "module-j5e_animation.html": {
                     "ref": "module-j5e_animation.html",
@@ -4301,6 +4399,26 @@ window.lunrData = {
                                             },
                                             "#": {
                                               "docs": {},
+                                              "c": {
+                                                "docs": {},
+                                                "o": {
+                                                  "docs": {},
+                                                  "l": {
+                                                    "docs": {},
+                                                    "o": {
+                                                      "docs": {},
+                                                      "r": {
+                                                        "docs": {
+                                                          "module-j5e_rgb-RGB.html#color": {
+                                                            "ref": "module-j5e_rgb-RGB.html#color",
+                                                            "tf": 1150
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
                                               "w": {
                                                 "docs": {},
                                                 "r": {
@@ -4357,6 +4475,38 @@ window.lunrData = {
                                                         }
                                                       }
                                                     }
+                                                  },
+                                                  "s": {
+                                                    "docs": {},
+                                                    "c": {
+                                                      "docs": {},
+                                                      "a": {
+                                                        "docs": {},
+                                                        "l": {
+                                                          "docs": {},
+                                                          "e": {
+                                                            "docs": {},
+                                                            "d": {
+                                                              "docs": {},
+                                                              "r": {
+                                                                "docs": {},
+                                                                "g": {
+                                                                  "docs": {},
+                                                                  "b": {
+                                                                    "docs": {
+                                                                      "module-j5e_rgb-RGB.html#toScaledRGB": {
+                                                                        "ref": "module-j5e_rgb-RGB.html#toScaledRGB",
+                                                                        "tf": 1150
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
                                                   }
                                                 }
                                               },
@@ -4374,6 +4524,40 @@ window.lunrData = {
                                                             "ref": "module-j5e_rgb-RGB.html#blink",
                                                             "tf": 1150
                                                           }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "p": {
+                                                "docs": {},
+                                                "u": {
+                                                  "docs": {},
+                                                  "l": {
+                                                    "docs": {},
+                                                    "s": {
+                                                      "docs": {
+                                                        "module-j5e_rgb-RGB.html#pulse": {
+                                                          "ref": "module-j5e_rgb-RGB.html#pulse",
+                                                          "tf": 1150
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "a": {
+                                                "docs": {},
+                                                "n": {
+                                                  "docs": {},
+                                                  "i": {
+                                                    "docs": {},
+                                                    "m": {
+                                                      "docs": {
+                                                        "module-j5e_rgb-RGB.html#animate": {
+                                                          "ref": "module-j5e_rgb-RGB.html#animate",
+                                                          "tf": 1150
                                                         }
                                                       }
                                                     }
@@ -4703,6 +4887,38 @@ window.lunrData = {
                   }
                 }
               }
+            },
+            "s": {
+              "docs": {},
+              "c": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "l": {
+                    "docs": {},
+                    "e": {
+                      "docs": {},
+                      "d": {
+                        "docs": {},
+                        "r": {
+                          "docs": {},
+                          "g": {
+                            "docs": {},
+                            "b": {
+                              "docs": {
+                                "module-j5e_rgb-RGB.html#toScaledRGB": {
+                                  "ref": "module-j5e_rgb-RGB.html#toScaledRGB",
+                                  "tf": 757.1428571428571
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           },
           "y": {
@@ -4876,6 +5092,20 @@ window.lunrData = {
                         "ref": "module-j5e_animation-Animation.html#calculateProgress",
                         "tf": 6.25
                       }
+                    }
+                  }
+                }
+              }
+            },
+            "l": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "r": {
+                  "docs": {
+                    "module-j5e_rgb-RGB.html#color": {
+                      "ref": "module-j5e_rgb-RGB.html#color",
+                      "tf": 780
                     }
                   }
                 }
@@ -5101,6 +5331,10 @@ window.lunrData = {
                           "module-j5e_rgb-RGB.html#blink": {
                             "ref": "module-j5e_rgb-RGB.html#blink",
                             "tf": 25
+                          },
+                          "module-j5e_rgb-RGB.html#pulse": {
+                            "ref": "module-j5e_rgb-RGB.html#pulse",
+                            "tf": 25
                           }
                         }
                       }
@@ -5183,6 +5417,10 @@ window.lunrData = {
                         },
                         "module-j5e_rgb-RGB.html#write": {
                           "ref": "module-j5e_rgb-RGB.html#write",
+                          "tf": 7.142857142857142
+                        },
+                        "module-j5e_rgb-RGB.html#toScaledRGB": {
+                          "ref": "module-j5e_rgb-RGB.html#toScaledRGB",
                           "tf": 7.142857142857142
                         }
                       }
@@ -5488,6 +5726,14 @@ window.lunrData = {
                   "ref": "module-j5e_rgb-RGB.html#blink",
                   "tf": 12.5
                 },
+                "module-j5e_rgb-RGB.html#pulse": {
+                  "ref": "module-j5e_rgb-RGB.html#pulse",
+                  "tf": 12.5
+                },
+                "module-j5e_rgb-RGB.html#animate": {
+                  "ref": "module-j5e_rgb-RGB.html#animate",
+                  "tf": 16.666666666666664
+                },
                 "module-j5e_led.html": {
                   "ref": "module-j5e_led.html",
                   "tf": 12.5
@@ -5758,6 +6004,10 @@ window.lunrData = {
                   "module-j5e_led-Led.html#stop": {
                     "ref": "module-j5e_led-Led.html#stop",
                     "tf": 8.333333333333332
+                  },
+                  "module-j5e_rgb-RGB.html#pulse": {
+                    "ref": "module-j5e_rgb-RGB.html#pulse",
+                    "tf": 687.5
                   }
                 }
               }
@@ -5783,6 +6033,10 @@ window.lunrData = {
                   "module-j5e_animation-Animation.html#tweenedValue": {
                     "ref": "module-j5e_animation-Animation.html#tweenedValue",
                     "tf": 4.166666666666666
+                  },
+                  "module-j5e_rgb-RGB.html#toScaledRGB": {
+                    "ref": "module-j5e_rgb-RGB.html#toScaledRGB",
+                    "tf": 7.142857142857142
                   }
                 }
               }
@@ -5964,6 +6218,10 @@ window.lunrData = {
                         "ref": "module-j5e_animation-Animation.html#enqueue",
                         "tf": 50
                       },
+                      "module-j5e_rgb-RGB.html#animate": {
+                        "ref": "module-j5e_rgb-RGB.html#animate",
+                        "tf": 33.33333333333333
+                      },
                       "module-j5e_servo-Servo.html#sweep": {
                         "ref": "module-j5e_servo-Servo.html#sweep",
                         "tf": 33.33333333333333
@@ -5989,6 +6247,20 @@ window.lunrData = {
                 "module-j5e_led-Led.html#fadeOut": {
                   "ref": "module-j5e_led-Led.html#fadeOut",
                   "tf": 12.5
+                }
+              },
+              "p": {
+                "docs": {},
+                "u": {
+                  "docs": {},
+                  "t": {
+                    "docs": {
+                      "module-j5e_rgb-RGB.html#toScaledRGB": {
+                        "ref": "module-j5e_rgb-RGB.html#toScaledRGB",
+                        "tf": 7.142857142857142
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -6226,6 +6498,10 @@ window.lunrData = {
                   "module-j5e_rgb-RGB.html#write": {
                     "ref": "module-j5e_rgb-RGB.html#write",
                     "tf": 7.142857142857142
+                  },
+                  "module-j5e_rgb-RGB.html#toScaledRGB": {
+                    "ref": "module-j5e_rgb-RGB.html#toScaledRGB",
+                    "tf": 7.142857142857142
                   }
                 }
               }
@@ -6345,7 +6621,7 @@ window.lunrData = {
           }
         }
       },
-      "length": 538
+      "length": 566
     },
     "corpusTokens": [
       "0",
@@ -6374,6 +6650,7 @@ window.lunrData = {
       "class",
       "clockwis",
       "code",
+      "color",
       "comput",
       "conform",
       "confus",
@@ -6521,10 +6798,14 @@ window.lunrData = {
       "module:j5e/led~led#writ",
       "module:j5e/rgb",
       "module:j5e/rgb~rgb",
+      "module:j5e/rgb~rgb#anim",
       "module:j5e/rgb~rgb#blink",
+      "module:j5e/rgb~rgb#color",
       "module:j5e/rgb~rgb#off",
       "module:j5e/rgb~rgb#on",
+      "module:j5e/rgb~rgb#puls",
       "module:j5e/rgb~rgb#toggl",
+      "module:j5e/rgb~rgb#toscaledrgb",
       "module:j5e/rgb~rgb#writ",
       "module:j5e/servo",
       "module:j5e/servo~servo",
@@ -6555,6 +6836,7 @@ window.lunrData = {
       "onc",
       "option",
       "out",
+      "output",
       "over",
       "overrid",
       "param",
@@ -6580,6 +6862,7 @@ window.lunrData = {
       "rgb",
       "right",
       "rotat",
+      "scale",
       "script",
       "segment",
       "seri",
@@ -6603,6 +6886,7 @@ window.lunrData = {
       "time",
       "timer",
       "toggl",
+      "toscaledrgb",
       "turn",
       "tutori",
       "tween",
@@ -7033,6 +7317,16 @@ window.lunrData = {
       "description": "The RGB class allows for control of RGB LED's",
       "body": ""
     },
+    "module-j5e_rgb-RGB.html#color": {
+      "id": "module-j5e_rgb-RGB.html#color",
+      "kind": "function",
+      "title": "color( color, color, color ) → {RGB}",
+      "longname": "module:j5e/rgb~RGB#color",
+      "name": "color",
+      "tags": "module:j5e/rgb~RGB#color color",
+      "summary": "",
+      "description": "color"
+    },
     "module-j5e_rgb-RGB.html#write": {
       "id": "module-j5e_rgb-RGB.html#write",
       "kind": "function",
@@ -7082,6 +7376,36 @@ window.lunrData = {
       "tags": "module:j5e/rgb~RGB#blink blink",
       "summary": "",
       "description": "Blink the LED on a fixed interval"
+    },
+    "module-j5e_rgb-RGB.html#pulse": {
+      "id": "module-j5e_rgb-RGB.html#pulse",
+      "kind": "function",
+      "title": "pulse( duration, callback ) → {RGB}",
+      "longname": "module:j5e/rgb~RGB#pulse",
+      "name": "pulse",
+      "tags": "module:j5e/rgb~RGB#pulse pulse",
+      "summary": "",
+      "description": "Pulse the LED on a fixed interval"
+    },
+    "module-j5e_rgb-RGB.html#animate": {
+      "id": "module-j5e_rgb-RGB.html#animate",
+      "kind": "function",
+      "title": "animate( options ) → {RGB}",
+      "longname": "module:j5e/rgb~RGB#animate",
+      "name": "animate",
+      "tags": "module:j5e/rgb~RGB#animate animate",
+      "summary": "",
+      "description": "Animate the RGB LED"
+    },
+    "module-j5e_rgb-RGB.html#toScaledRGB": {
+      "id": "module-j5e_rgb-RGB.html#toScaledRGB",
+      "kind": "function",
+      "title": "toScaledRGB()",
+      "longname": "module:j5e/rgb~RGB#toScaledRGB",
+      "name": "toScaledRGB",
+      "tags": "module:j5e/rgb~RGB#toScaledRGB toScaledRGB",
+      "summary": "",
+      "description": "toScaledRGB Scale the output values based on the current intensity"
     },
     "module-j5e_servo-Servo.html": {
       "id": "module-j5e_servo-Servo.html",
