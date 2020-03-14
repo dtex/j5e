@@ -15,6 +15,7 @@ import { inOutSine } from "@j5e/easing";
 /** 
  * Class representing a Servo
  * @classdesc The Servo class allows for control of hobby servos
+ * @async
  * @extends Emitter
  * @fires Servo#move:complete - Fires when a servo reaches its requested position
  */
