@@ -29,7 +29,7 @@ class LED {
 
   /**
    * Instantiate an LED
-   * @param {object|number|string} io - Pin identifier or IO Options (See {@tutorial INSTANTIATING})
+   * @param {object|number|string} io - Pin identifier or IO Options (See {@tutorial C-INSTANTIATING})
    * @param {object} [device={}] - An object containing device options
    * @param {boolean} [device.sink=false] - True if the device is wired for sink drive
    * @example
@@ -38,7 +38,7 @@ class LED {
    *
    * (async function() {
    *   const led = await new LED(12);
-   *   led.blink();
+   *   led.on();
    * })();
    * 
    * @example
@@ -47,7 +47,7 @@ class LED {
    *
    * (async function() {
    *   const led = await new LED("A1");
-   *   led.blink();
+   *   led.on();
    * })();
    * 
    * @example
@@ -59,7 +59,7 @@ class LED {
    *     pin: 12,
    *     pwm: true
    *   });
-   *   led.blink();
+   *   led.on();
    * })();
    */
   constructor(io, device) {
