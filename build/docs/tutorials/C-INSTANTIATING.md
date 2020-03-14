@@ -5,13 +5,13 @@ new DeviceClass(io[, device]);
 ````
 
 ## The ```io``` Argument
-In TC-53 parlance, an "I/O" is a single GPIO instance. That GPIO Instance could be Digital, PWM, Serial, I2C, SPI or something else. **The ```io``` argument describes the configuration for the I/O instance**. This configuration could include which board to use, which pins, what data rate, etc. The details depend on your situation and provider. 
+In TC-53 parlance, an "I/O" is a single GPIO (General-Purpose Input/Output) instance. That GPIO Instance could be Digital, PWM, Serial, I2C, SPI or something else. **The ```io``` argument describes the configuration for the I/O instance**. This configuration could include which board to use, which pins, what data rate, etc. The details depend on your situation and provider. 
 
 *Whoah, what's a provider?*
 
 In the physical world a provider is a "thing" (hardware or software) that provides access to some type of I/O. The I/O could be built into the device running your JavaScript, part of a physically connected device like an expander or external microcontroller, or even part of a cloud service that controls a device located halfway around the world. 
 
-In code a provider is a bundle of classes that work with that "thing". Providers could come from a board manufacturer, an expander library, an IoT cloud service, or a myriad of other places. The most basic providers are the **builtins** that are bundled with some platforms. In XS for the ESP8266, these providers are bundled with the [Moddable SDK](https://github.com/Moddable-OpenSource/moddable), and are part of the IO module. They give access to the ESP8266's built-in GPIO pins. Non-builtin providers are known as "external providers".
+In code a provider is a bundle of modules or classes that work with that "thing". Providers could come from a board manufacturer, an expander library, an IoT cloud service, an open source hero, or a myriad of other places. The most basic providers are the **builtins** that are bundled with some platforms. In XS for the ESP8266, these providers are bundled with the [Moddable SDK](https://github.com/Moddable-OpenSource/moddable), and are part of the IO module. They give access to the ESP8266's built-in GPIO pins. Non-builtin providers are known as "external providers".
 
 The ```io``` argument is always required and can take a few different forms: 
 * **Pin Identifier** - This is the simplest scenario and would be a single number of string. j5e will assume the provider is a builtin. The particular type of IO will vary by device class. For example, servo would default to ```builtin/PWM```. Button or switch would default to ```builtin/Digital```.
@@ -114,7 +114,7 @@ The ```io``` argument is always required and can take a few different forms:
   ````
 
   ## The ```device``` Argument
-  A device is something connected to your I/O. It could be a sensor, a switch, and LED, a motor, a GPS receiver, or... The universe of devices is vast. Since the details of the device argument can vary greatly we won't try and cover it here, except to say that it is optional. If it is not passed, j5e will use default values. If a string is passed in its place, it is understood to be the path to an I/O provider. Let's look at examples of those two forms:
+  A device is something connected to your I/O. It could be a sensor, a switch, and LED, a motor, a GPS receiver, or... The universe of devices is vast. Since the details of the device argument can vary greatly we won't try and cover it here, except to say that it is optional. If it is not passed, j5e will use default values. If a string is passed in its place, it is understood to be the path to an I/O provider.
   * **An Object Literal** - In this scenario, the ```device``` argument is passing a device-specific configuration.
   ````js
   import Servo from "@j5e/servo";
