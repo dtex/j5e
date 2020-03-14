@@ -14,6 +14,10 @@ h4 {
   margin-bottom: 28px;
 }
 
+code[class*=language-], pre[class*=language-] {
+  tab-size: 0;
+}
+
 .toc .nav .nav>li>a {
   font-size: 16px;
 }
