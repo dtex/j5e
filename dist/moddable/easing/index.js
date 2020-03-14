@@ -1,5 +1,5 @@
 /**
- * fn module - Easing functions.
+ * fn module - Easing functions for animiation segments.
  * @module j5e/easing
  */
 

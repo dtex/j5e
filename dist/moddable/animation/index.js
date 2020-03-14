@@ -1,6 +1,7 @@
 /**
- * Animation module - Handles tweening between a series of key frames
+ * Animation module - Handles tweening between a series of key frames. Works with LED, RGB, and Servo.
  * @module j5e/animation
+ * @requires module:@j5e/fn
  */
 
 import { constrain, timer } from "@j5e/fn";
