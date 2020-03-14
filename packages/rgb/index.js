@@ -1,6 +1,9 @@
 /**
  * RGB module - For controlling RGB LED's
  * @module j5e/rgb
+ * @requires module:@j5e/animation
+ * @requires module:@j5e/easing
+ * @requires module:@j5e/fn
  */
 
 import {normalizeIO, normalizeDevice, constrain, getProvider, timer, asyncForEach} from "@j5e/fn";

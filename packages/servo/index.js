@@ -1,7 +1,12 @@
 /**
  * Servo module - For controlling hobby servos
  * @module j5e/servo
+ * @requires module:@j5e/animation
+ * @requires module:@j5e/easing
+ * @requires module:@j5e/event
+ * @requires module:@j5e/fn
  */
+
 import Animation from "@j5e/animation";
 import { Emitter } from "@j5e/event";
 import {constrain, normalizeParams, getProvider, map, timer} from "@j5e/fn";

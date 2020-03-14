@@ -1,6 +1,8 @@
 /**
  * Switch module - For controlling switches
  * @module j5e/switch
+ * @requires module:@j5e/event
+ * @requires module:@j5e/fn
  */
 
 import { Emitter } from "@j5e/event";
