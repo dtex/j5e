@@ -93,9 +93,9 @@
 			<div class="col-md-9 main-content">
 		<section class="readme-section">
 			<article><p>j5e is a device framework built for <a href="https://www.ecma-international.org/memento/tc53.htm">ECMA TC-53's</a> I/O class pattern. The <a href="https://gist.github.com/phoddie/166c9c17b2f31d0beda9f2410a219268">I/O class pattern</a> is a standard interface for accessing underlying hardware interfaces (GPIO). j5e's API is based on the <a href="https://github.com/rwaldron.johnny-five">Johnny-Five</a> API which has been battle tested over quite some time.</p>
-<p>Right now, the only provider that matches the ECMA TC-53 I/O class pattern is <a href="https://github.com/Moddable-OpenSource/moddable/blob/public/documentation/io/io.md">Moddable's IO module for XS</a> which runs on the ESP 8266. We will hopefully see more soon.</p>
+<p>Right now, the only provider that matches the ECMA TC-53 I/O class pattern is <a href="https://github.com/Moddable-OpenSource/moddable/blob/public/documentation/io/io.md">Moddable's IO module for XS</a> which runs on the ESP8266. Hopefully, we will see more soon.</p>
 <p><em>This project is very much in a &quot;pre-alpha&quot; state so use at your own risk.</em></p>
-<p>j5e in action</p>
+<p><strong>j5e in action</strong></p>
 <pre class="prettyprint source lang-js"><code>import Led from &quot;@j5e/led&quot;;
 
 (async function() {
@@ -107,7 +107,7 @@
 <h2>j5e Repo Anatomy</h2>
 <p>One goal of j5e is write once, run anywhere. We are building toward this goal before most TC-53 IO conformant platforms exist. To this end we've settled on node.js compatability as our primary target, with a build step that will generate distributions for other platforms programmatically. The JS is the same across platforms, but the project structure has to change in order to work with different implementations of ECMAScript Modules (package.json vs manifest.json and inconsistent module resolution schemes).</p>
 <h3>It's a Mono-Repo</h3>
-<p>In order to resolve module paths by <code>namespace/modulename</code> in node.js (eg <code>@j5e/led</code>), each module needs to be its own package under the <code>@j5e</code> namespace. The <code>@j5e</code> namespace is an npm organization. Rather than having a seperate repo for what could end up being hundreds of modules we're using lerna to manage the different packages. Each module/package is contained in its own directory within <code>./packages/</code>. If you've cloned the repo and need to do some work on it, make sure you run <code>lerna bootstrap</code> to get all the dependencies wired up properly and then run <code>npm install</code> to get all the packages needed for dev.</p>
+<p>In order to resolve module paths by <code>namespace/modulename</code> in node.js (eg <code>import LED from &quot;@j5e/led&quot;;</code>), each module needs to be its own package under the <code>@j5e</code> namespace. The <code>@j5e</code> namespace is an npm organization. Rather than having a seperate repo for what could end up being hundreds of modules we're using lerna to manage the different packages. Each module/package is contained in its own directory within <code>./packages/</code>. If you've cloned the repo and need to do some work on it, make sure you run <code>lerna bootstrap</code> to get all the dependencies wired up properly and then run <code>npm install</code> to get all the packages needed for dev.</p>
 <h3>Documentation</h3>
 <p><a href="https://dtex.github.io/j5e/">Documentation</a> is handled using <a href="https://jsdoc.app/">JSDoc</a>. Nothing in the <code>./docs/</code> folder should be edited directly. It is generated from comments in the code and some miscellaneous files in the <code>./build/docs/</code> folder. To generate new documentation run <code>npm run docs</code>. Note that this can only be done outside the individual package folders.</p>
 <h3>Tests</h3>

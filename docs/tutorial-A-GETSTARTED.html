@@ -1,9 +1,10 @@
+<!-- start:readme.hbs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>Tutorials</title>
+		<title>Getting Started</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -43,7 +44,7 @@
 			</style>
 		<script type="text/javascript">
 			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"MMMM D, YYYY","systemName":"j5e","systemSummary":"Johnny Five for Embedded Systems","systemLogo":"img/j5e.png","systemColor":"#000","navMembers":[{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Copyright © 2020 The contributors to the j5e and Johnny-Five projects.","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":true,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":{"ua":"UA-36026876-4","domain":"dtex.github.io"},"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":["./static/custom.css"],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
-			window.DOCLET_TOC_ENABLED = true;
+			window.DOCLET_TOC_ENABLED = false;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
 </head>
@@ -83,58 +84,60 @@
 	</header>
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
-				<span class="kind">list</span>
-				<h1><span class="name">Tutorials</span></h1>
-				<div class="summary"><p>All available tutorials.</p></div>			</div>
+				<span class="kind">tutorial</span>
+				<h1><span class="title">Getting Started</span></h1>
+				<div class="summary"><p>You gotta start somewhere!</p></div>			</div>
 		</div>
 	<div class="container content">
 		<div class="row">
-			<div class="col-md-9 main-content">
+			<div class="col-md-12 main-content">
 						<ol class="breadcrumb">
 							<li><a href="index.html">Home</a></li>
-							<li class="active">Tutorials</li>
+							<li><a href="list_tutorial.html">Tutorials</a></li>
+							<li class="active">Getting Started</li>
 						</ol>
-					<section>
-		<h2><span class="name">Tutorials</span></h2>
-		<article class="secondary">
-				<dl class="symbol">
-						
-						<dt class="symbol-title tutorial public">
-			<h4 id="" class="tutorial public"><a href="tutorial-A-GETSTARTED.html"><span class="title">Getting Started</span></a></h4>
-		<div class="summary"><p>You gotta start somewhere!</p></div></dt>
-<dd class="symbol-details tutorial public">
-	<div class="symbol-details-inner">
-		<dl class="symbol tutorial-children">
-		</dl>
-	</div>
-</dd>
-						<hr/>
-						<dt class="symbol-title tutorial public">
-			<h4 id="" class="tutorial public"><a href="tutorial-B-ASYNC.html"><span class="title">Making it Asynchronous</span></a></h4>
-		<div class="summary"><p>What's with this <code>(async function() { })()</code> stuff?</p></div></dt>
-<dd class="symbol-details tutorial public">
-	<div class="symbol-details-inner">
-		<dl class="symbol tutorial-children">
-		</dl>
-	</div>
-</dd>
-						<hr/>
-						<dt class="symbol-title tutorial public">
-			<h4 id="" class="tutorial public"><a href="tutorial-C-INSTANTIATING.html"><span class="title">Instantiating a Device</span></a></h4>
-		<div class="summary"><p>The ioOptions parameter is powerful, flexible, and just a little confusing.</p></div></dt>
-<dd class="symbol-details tutorial public">
-	<div class="symbol-details-inner">
-		<dl class="symbol tutorial-children">
-		</dl>
-	</div>
-</dd>
-				</dl>
-		</article>
-					</section>
+		<section class="tutorial-section">
+			<article><h4>1. Make sure you have successfully <a href="https://github.com/Moddable-OpenSource/moddable/blob/public/documentation/Moddable%20SDK%20-%20Getting%20Started.md">configured your host environment</a> for the Moddable SDK.</h4>
+<h4>2. Clone the j5e repository</h4>
+<pre class="prettyprint source lang-bash"><code>cd ~/Projects
+git clone https://github.com/dtex/j5e
+</code></pre>
+<h4>3. Setup the <code>j5e</code> environment variable to point at the <code>dist/moddable</code> directory in your copy of the j5e repo</h4>
+<pre class="prettyprint source lang-bash"><code>export j5e=&quot;/Users/&lt;user>/Projects/j5e/dist/moddable&quot;
+</code></pre>
+<h4>4. Create a working directory (You can call it whatever you want):</h4>
+<pre class="prettyprint source lang-bash"><code>cd ~/Projects
+mkdir myProject
+</code></pre>
+<h4>5. Navigate into your working directory:</h4>
+<pre class="prettyprint source lang-bash"><code>cd myProject
+</code></pre>
+<h4>6. Create a manifest.json file in your working directory:</h4>
+<pre class="prettyprint source lang-js"><code>{
+	&quot;include&quot;: [
+		&quot;$(MODDABLE)/modules/io/manifest.json&quot;,
+		&quot;$(j5e)/manifest.json&quot;
+	],
+	&quot;modules&quot;: {
+		&quot;*&quot;: [
+			&quot;./main&quot;
+		]
+	}
+}
+</code></pre>
+<h4>7. Create your <code>main.js</code> program file. Here's the ubquitous &quot;Hello World&quot; for hardware to get you started:</h4>
+<pre class="prettyprint source lang-js"><code>import Led from &quot;@j5e/led&quot;;
+
+(async function() {
+	const led = await new Led(14);
+	led.blink();
+})();
+</code></pre>
+<h4>8. Now you're ready to build your program (refer back to the <a href="https://github.com/Moddable-OpenSource/moddable/tree/public/examples#building-apps">Moddable docs</a> for help with this):</h4>
+<pre class="prettyprint source lang-bash"><code>mcconfig -d -m -p esp
+</code></pre></article>
+		</section>
 			</div>
-				<div class="col-md-3 side-content">
-					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
-				</div>
 		</div>
 	</div>
 	<footer>
@@ -175,3 +178,4 @@
 	
 </body>
 </html>
+<!-- end:readme.hbs -->

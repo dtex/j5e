@@ -121,65 +121,7 @@
 								<td class="attributes"></td>
 								<td></td>
 							<td class="last">
-									Pin identifier or IO Options
-										<table class="params table table-striped">
-											<thead>
-											<tr>
-													<th>Name</th>
-												<th>Type</th>
-													<th>Attributes</th>
-													<th>Default</th>
-												<th class="last">Description</th>
-											</tr>
-											</thead>
-											<tbody>
-												<tr>
-														<td><code>pin</code></td>
-													<td><span class="param-type">number</span></td>
-														<td class="attributes"></td>
-														<td></td>
-													<td class="last">
-															A pin number
-													</td>
-												</tr>
-												<tr>
-														<td><code>pin</code></td>
-													<td><span class="param-type">string</span></td>
-														<td class="attributes"></td>
-														<td></td>
-													<td class="last">
-															A pin identifier
-													</td>
-												</tr>
-												<tr>
-														<td><code>pwm</code></td>
-													<td><span class="param-type">boolean</span></td>
-														<td class="attributes">&lt;optional&gt;<br/></td>
-														<td></td>
-													<td class="last">
-															If true and io.io is not passed, will use "builtin/pwm" for io
-													</td>
-												</tr>
-												<tr>
-														<td><code>io</code></td>
-													<td><span class="param-type">string</span></td>
-														<td class="attributes">&lt;optional&gt;<br/></td>
-														<td>builtin/digital</td>
-													<td class="last">
-															A string specifying a path to the IO provider
-													</td>
-												</tr>
-												<tr>
-														<td><code>io</code></td>
-													<td><span class="param-type">constructor</span></td>
-														<td class="attributes">&lt;optional&gt;<br/></td>
-														<td>builtin/digital</td>
-													<td class="last">
-															An I/O constructor
-													</td>
-												</tr>
-											</tbody>
-										</table>
+									Pin identifier or IO Options (See INSTANTIATING)
 							</td>
 						</tr>
 						<tr>
@@ -266,7 +208,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-70">line 70</a></p>
+									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-65">line 65</a></p>
 								</div>
 							</div>
 			
@@ -323,7 +265,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-145">line 145</a></p>
+									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-140">line 140</a></p>
 								</div>
 							</div>
 			
@@ -368,7 +310,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-155">line 155</a></p>
+									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-150">line 150</a></p>
 								</div>
 							</div>
 			
@@ -413,7 +355,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-165">line 165</a></p>
+									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-160">line 160</a></p>
 								</div>
 							</div>
 			
@@ -489,7 +431,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-175">line 175</a></p>
+									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-170">line 170</a></p>
 								</div>
 							</div>
 			
@@ -555,7 +497,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-201">line 201</a></p>
+									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-196">line 196</a></p>
 								</div>
 							</div>
 			
@@ -621,151 +563,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-212">line 212</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="pulse" class="function public"><span class="name">pulse</span><span class="signature-params">( [&nbsp;<span class="signature-param">time</span> [,&nbsp;<span class="signature-param">callback</span>&nbsp;]&nbsp;]&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{LED}</span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Pulse the LED in and out in a loop with specified time</div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-							<th>Attributes</th>
-							<th>Default</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>time</code></td>
-							<td><span class="param-type">number</span></td>
-								<td class="attributes">&lt;optional&gt;<br/></td>
-								<td>1000</td>
-							<td class="last">
-									Time in ms that a fade in/out will elapse
-							</td>
-						</tr>
-						<tr>
-								<td><code>callback</code></td>
-							<td><span class="param-type">function</span></td>
-								<td class="attributes">&lt;optional&gt;<br/></td>
-								<td></td>
-							<td class="last">
-									A function to run each time the direction of pulse changes
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">LED</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description"></div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-224">line 224</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="animate" class="function public"><span class="name">animate</span><span class="signature-params">( <span class="signature-param">options</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{RGB}</span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Animate the RGB LED</div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>options</code></td>
-							<td><span class="param-type">Object</span></td>
-							<td class="last">
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">RGB</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description"></div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-257">line 257</a></p>
+									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-207">line 207</a></p>
 								</div>
 							</div>
 			
@@ -853,7 +651,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-275">line 275</a></p>
+									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-220">line 220</a></p>
 								</div>
 							</div>
 			
@@ -932,7 +730,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-321">line 321</a></p>
+									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-263">line 263</a></p>
 								</div>
 							</div>
 			
@@ -1011,7 +809,151 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-331">line 331</a></p>
+									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-273">line 273</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id="pulse" class="function public"><span class="name">pulse</span><span class="signature-params">( [&nbsp;<span class="signature-param">time</span> [,&nbsp;<span class="signature-param">callback</span>&nbsp;]&nbsp;]&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{LED}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Pulse the LED in and out in a loop with specified time</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+							<th>Default</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>time</code></td>
+							<td><span class="param-type">number</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+								<td>1000</td>
+							<td class="last">
+									Time in ms that a fade in/out will elapse
+							</td>
+						</tr>
+						<tr>
+								<td><code>callback</code></td>
+							<td><span class="param-type">function</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+								<td></td>
+							<td class="last">
+									A function to run each time the direction of pulse changes
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">LED</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-283">line 283</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id="animate" class="function public"><span class="name">animate</span><span class="signature-params">( <span class="signature-param">options</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{RGB}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Animate the RGB LED</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>options</code></td>
+							<td><span class="param-type">Object</span></td>
+							<td class="last">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">RGB</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-316">line 316</a></p>
 								</div>
 							</div>
 			
@@ -1056,7 +998,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-339">line 339</a></p>
+									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-331">line 331</a></p>
 								</div>
 							</div>
 			

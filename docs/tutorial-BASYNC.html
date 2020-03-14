@@ -1,9 +1,10 @@
+<!-- start:readme.hbs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>Tutorials</title>
+		<title>Making it Asynchronous</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -83,54 +84,83 @@
 	</header>
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
-				<span class="kind">list</span>
-				<h1><span class="name">Tutorials</span></h1>
-				<div class="summary"><p>All available tutorials.</p></div>			</div>
+				<span class="kind">tutorial</span>
+				<h1><span class="title">Making it Asynchronous</span></h1>
+				<div class="summary"><p>What's with this <code>(async function() { })()</code> stuff?</p></div>			</div>
 		</div>
 	<div class="container content">
 		<div class="row">
 			<div class="col-md-9 main-content">
 						<ol class="breadcrumb">
 							<li><a href="index.html">Home</a></li>
-							<li class="active">Tutorials</li>
+							<li><a href="list_tutorial.html">Tutorials</a></li>
+							<li class="active">Making it Asynchronous</li>
 						</ol>
-					<section>
-		<h2><span class="name">Tutorials</span></h2>
-		<article class="secondary">
-				<dl class="symbol">
-						
-						<dt class="symbol-title tutorial public">
-			<h4 id="" class="tutorial public"><a href="tutorial-A-GETSTARTED.html"><span class="title">Getting Started</span></a></h4>
-		<div class="summary"><p>You gotta start somewhere!</p></div></dt>
-<dd class="symbol-details tutorial public">
-	<div class="symbol-details-inner">
-		<dl class="symbol tutorial-children">
-		</dl>
-	</div>
-</dd>
-						<hr/>
-						<dt class="symbol-title tutorial public">
-			<h4 id="" class="tutorial public"><a href="tutorial-B-ASYNC.html"><span class="title">Making it Asynchronous</span></a></h4>
-		<div class="summary"><p>What's with this <code>(async function() { })()</code> stuff?</p></div></dt>
-<dd class="symbol-details tutorial public">
-	<div class="symbol-details-inner">
-		<dl class="symbol tutorial-children">
-		</dl>
-	</div>
-</dd>
-						<hr/>
-						<dt class="symbol-title tutorial public">
-			<h4 id="" class="tutorial public"><a href="tutorial-C-INSTANTIATING.html"><span class="title">Instantiating a Device</span></a></h4>
-		<div class="summary"><p>The ioOptions parameter is powerful, flexible, and just a little confusing.</p></div></dt>
-<dd class="symbol-details tutorial public">
-	<div class="symbol-details-inner">
-		<dl class="symbol tutorial-children">
-		</dl>
-	</div>
-</dd>
-				</dl>
-		</article>
-					</section>
+		<section class="tutorial-section">
+			<article><p>Users of Johnny-Five may recall that asynchronous functionality was handled through the use of event listeners. Take this Johnny-Five &quot;Hello World&quot; example:</p>
+<pre class="prettyprint source lang-js"><code>var five = require(&quot;johnny-five&quot;);
+var board = new five.Board();
+
+board.on(&quot;ready&quot;, function() {
+  
+  // Yay, the board is ready! Now I can run my program
+  var led = new five.Led(13);
+  
+  led.blink(500);
+
+});
+</code></pre>
+<p>We can't instantiate our LED before the board is ready, so we wait for the board's ready event to fire and then run our program.</p>
+<p>Things have changed. The challenge of having to wait for I/O to be ready remains, but now we handle it with promises and async/await. The trick is that in order to <code>await</code> for a call to return, the code must be wrapped in an <code>async</code> function. The simplest way to do this is with an &quot;asynchronous immediately invoked function expression&quot; or &quot;AIIFE&quot;. The AIIFE wraps our program so we can use <code>await</code> on our initialization calls.</p>
+<pre class="prettyprint source lang-js"><code>import Led from &quot;@j5e/led&quot;;
+
+(async function() {
+
+  const led = await new Led(13);
+  // Yay, the I/O is ready! Now I can run my program
+
+  led.blink(500);
+
+})();
+</code></pre>
+<p>Maybe one day we'll be able to use await at the top level without the AIIFE and our code will be more concise but for now we must wrap our programs with:</p>
+<pre class="prettyprint source lang-js"><code>(async function() {
+  // ...
+})();
+</code></pre>
+<p>If you're unclear about this bit of computer vomit, perhaps this breakdown will help...</p>
+<p>It is commont to assign function expression to a variable in the global namespace, and then call it later:</p>
+<pre class="prettyprint source lang-js"><code>// Function expression assigned to global &quot;foo&quot;
+const foo = function() { 
+  // ...
+};
+
+foo();
+</code></pre>
+<p>But an anonymous function is fine here so we leave off the variable assignment:</p>
+<pre class="prettyprint source lang-js"><code>// Anonymous function in the global namespace (error)
+function() {
+  // ...
+};
+</code></pre>
+<p>But that throws an error because we can't have an anonymous function floating around in the global namespace. To get aroung this we wrap it with a grouping operator:</p>
+<pre class="prettyprint source lang-js"><code>(function() { 
+  // ...
+});
+</code></pre>
+<p>That works! The grouping operater gives the function a scope, but the scope closes immediately and our program forgets about the function without ever actually executing it.</p>
+<p>We want to make sure that the function runs so we add parens after the grouping operator to <em>immediately invoke</em> the method:</p>
+<pre class="prettyprint source lang-js"><code>(function() { 
+  // ...
+})();
+</code></pre>
+<p>It runs! Now one last thing... In order to be able to use await within our anonymous function, it has to be an async function, so we end up with:</p>
+<pre class="prettyprint source lang-js"><code>(async function() { 
+  // ...
+})();
+</code></pre>
+<p>and now we can <code>await</code> all the things.</p></article>
+		</section>
 			</div>
 				<div class="col-md-3 side-content">
 					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
@@ -175,3 +205,4 @@
 	
 </body>
 </html>
+<!-- end:readme.hbs -->

@@ -1,9 +1,10 @@
+<!-- start:readme.hbs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>Tutorials</title>
+		<title>io-options</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -83,54 +84,30 @@
 	</header>
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
-				<span class="kind">list</span>
-				<h1><span class="name">Tutorials</span></h1>
-				<div class="summary"><p>All available tutorials.</p></div>			</div>
+				<span class="kind">tutorial</span>
+				<h1><span class="title">io-options</span></h1>
+			</div>
 		</div>
 	<div class="container content">
 		<div class="row">
 			<div class="col-md-9 main-content">
 						<ol class="breadcrumb">
 							<li><a href="index.html">Home</a></li>
-							<li class="active">Tutorials</li>
+							<li><a href="list_tutorial.html">Tutorials</a></li>
+							<li class="active">io-options</li>
 						</ol>
-					<section>
-		<h2><span class="name">Tutorials</span></h2>
-		<article class="secondary">
-				<dl class="symbol">
-						
-						<dt class="symbol-title tutorial public">
-			<h4 id="" class="tutorial public"><a href="tutorial-A-GETSTARTED.html"><span class="title">Getting Started</span></a></h4>
-		<div class="summary"><p>You gotta start somewhere!</p></div></dt>
-<dd class="symbol-details tutorial public">
-	<div class="symbol-details-inner">
-		<dl class="symbol tutorial-children">
-		</dl>
-	</div>
-</dd>
-						<hr/>
-						<dt class="symbol-title tutorial public">
-			<h4 id="" class="tutorial public"><a href="tutorial-B-ASYNC.html"><span class="title">Making it Asynchronous</span></a></h4>
-		<div class="summary"><p>What's with this <code>(async function() { })()</code> stuff?</p></div></dt>
-<dd class="symbol-details tutorial public">
-	<div class="symbol-details-inner">
-		<dl class="symbol tutorial-children">
-		</dl>
-	</div>
-</dd>
-						<hr/>
-						<dt class="symbol-title tutorial public">
-			<h4 id="" class="tutorial public"><a href="tutorial-C-INSTANTIATING.html"><span class="title">Instantiating a Device</span></a></h4>
-		<div class="summary"><p>The ioOptions parameter is powerful, flexible, and just a little confusing.</p></div></dt>
-<dd class="symbol-details tutorial public">
-	<div class="symbol-details-inner">
-		<dl class="symbol tutorial-children">
-		</dl>
-	</div>
-</dd>
-				</dl>
-		</article>
-					</section>
+		<section class="tutorial-section">
+			<article><ul>
+<li>@param {number} io.pin - A pin number
+<ul>
+<li>@param {string} io.pin - A pin identifier</li>
+<li>@param {boolean} [io.pwm] - If true and io.io is not passed, will use &quot;builtin/pwm&quot; for io</li>
+<li>@param {string} [io.io=builtin/digital] - A string specifying a path to the IO provider</li>
+<li>@param {constructor} [io.io=builtin/digital] - An I/O constructor</li>
+</ul>
+</li>
+</ul></article>
+		</section>
 			</div>
 				<div class="col-md-3 side-content">
 					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
@@ -175,3 +152,4 @@
 	
 </body>
 </html>
+<!-- end:readme.hbs -->
