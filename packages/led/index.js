@@ -29,12 +29,7 @@ class LED {
 
   /**
    * Instantiate an LED
-   * @param {object|number|string} io - Pin identifier or IO Options
-   * @param {number} io.pin - A pin number
-   * @param {string} io.pin - A pin identifier
-   * @param {boolean} [io.pwm] - If true and io.io is not passed, will use "builtin/pwm" for io
-   * @param {string} [io.io=builtin/digital] - A string specifying a path to the IO provider
-   * @param {constructor} [io.io=builtin/digital] - An I/O constructor
+   * @param {object|number|string} io - Pin identifier or IO Options (See {@tutorial INSTANTIATING})
    * @param {object} [device={}] - An object containing device options
    * @param {boolean} [device.sink=false] - True if the device is wired for sink drive
    * @example
@@ -216,6 +211,70 @@ class LED {
   }
 
   /**
+   * fade Fade an led in and out
+   * @param {Number} val Target brightness value
+   * @param {Number} [time=1000] Time in ms that a fade will take
+   * @param {function} [callback] A function to run when the fade is complete
+   * @return {LED}
+   */
+  fade(val, time=1000, callback) {
+    
+    this.stop();
+
+    var options = {
+      duration: typeof time === "number" ? time : 1000,
+      keyFrames: [null, typeof val === "number" ? val : 0xff],
+      easing: outSine,
+      oncomplete: function() {
+        this.stop();
+        if (typeof callback === "function") {
+          callback();
+        }
+      }
+    };
+
+    if (typeof val === "object") {
+      Object.assign(options, val);
+    }
+
+    if (typeof val === "function") {
+      callback = val;
+    }
+
+    if (typeof time === "object") {
+      Object.assign(options, time);
+    }
+
+    if (typeof time === "function") {
+      callback = time;
+    }
+
+    this.animate(options);
+
+    return this;
+  }
+
+  /**
+   * fade Fade an led in
+   * @param {Number} [time=1000] Time in ms that a fade will take
+   * @param {function} [callback] A function to run when the fade is complete
+   * @return {LED}
+   */
+  fadeIn(time=1000, callback) {
+    return this.fade(this.HIGH, time, callback);
+  }
+
+  /**
+   * fade Fade an led out
+   * @param {Number} [time=1000] Time in ms that a fade will take
+   * @param {function} [callback] A function to run when the fade is complete
+   * @return {LED}
+   */
+  fadeOut(time=1000, callback) {
+    return this.fade(this.LOW, time, callback);
+  }
+
+  /**
    * Pulse the LED in and out in a loop with specified time
    * @param {number} [time=1000] Time in ms that a fade in/out will elapse
    * @param {function} [callback] A function to run each time the direction of pulse changes
@@ -263,73 +322,6 @@ class LED {
     this.#state.animation = this.#state.animation || new Animation(this);
     this.#state.animation.enqueue(options);
     return this;
-  }
-
-  /**
-   * fade Fade an led in and out
-   * @param {Number} val Target brightness value
-   * @param {Number} [time=1000] Time in ms that a fade will take
-   * @param {function} [callback] A function to run when the fade is complete
-   * @return {LED}
-   */
-  fade(val, time=1000, callback) {
-    
-    this.stop();
-
-    var options = {
-      duration: typeof time === "number" ? time : 1000,
-      keyFrames: [null, typeof val === "number" ? val : 0xff],
-      easing: outSine,
-      oncomplete: function() {
-        this.stop();
-        if (typeof callback === "function") {
-          callback();
-        }
-      }
-    };
-
-    if (typeof val === "object") {
-      Object.assign(options, val);
-    }
-
-    if (typeof val === "function") {
-      callback = val;
-    }
-
-    if (typeof time === "object") {
-      Object.assign(options, time);
-    }
-
-    if (typeof time === "function") {
-      callback = time;
-    }
-
-    this.#state.isRunning = true;
-
-    this.#state.animation = this.#state.animation || new Animation(this);
-    this.#state.animation.enqueue(options);
-
-    return this;
-  }
-
-  /**
-   * fade Fade an led in
-   * @param {Number} [time=1000] Time in ms that a fade will take
-   * @param {function} [callback] A function to run when the fade is complete
-   * @return {LED}
-   */
-  fadeIn(time=1000, callback) {
-    return this.fade(this.HIGH, time, callback);
-  }
-
-  /**
-   * fade Fade an led out
-   * @param {Number} [time=1000] Time in ms that a fade will take
-   * @param {function} [callback] A function to run when the fade is complete
-   * @return {LED}
-   */
-  fadeOut(time=1000, callback) {
-    return this.fade(this.LOW, time, callback);
   }
 
   /**
