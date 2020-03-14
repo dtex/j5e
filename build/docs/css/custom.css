@@ -13,3 +13,15 @@ h4 {
 .example-code {
   margin-bottom: 28px;
 }
+
+.toc .nav .nav>li>a {
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+
+  .form-horizontal .control-label {
+    text-align: left;
+  }
+
+}
