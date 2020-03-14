@@ -13,6 +13,7 @@ import Animation from "@j5e/animation";
 /** 
  * Class representing an RGB LED
  * @classdesc The RGB class allows for control of RGB LED's
+ * @async
  */
 class RGB {
   

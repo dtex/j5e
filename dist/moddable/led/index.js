@@ -14,7 +14,6 @@ import Animation from "@j5e/animation";
  * Class representing an LED
  * @classdesc The LED class allows for control of Light Emitting Diodes
  * @async
- * 
  */
 class LED {
   
@@ -29,7 +28,7 @@ class LED {
 
   /**
    * Instantiate an LED
-   * @param {object|number|string} io - Pin identifier or IO Options (See {@tutorial INSTANTIATING})
+   * @param {object|number|string} io - Pin identifier or IO Options (See {@tutorial C-INSTANTIATING})
    * @param {object} [device={}] - An object containing device options
    * @param {boolean} [device.sink=false] - True if the device is wired for sink drive
    * @example
@@ -38,7 +37,7 @@ class LED {
    *
    * (async function() {
    *   const led = await new LED(12);
-   *   led.blink();
+   *   led.on();
    * })();
    * 
    * @example
@@ -47,7 +46,7 @@ class LED {
    *
    * (async function() {
    *   const led = await new LED("A1");
-   *   led.blink();
+   *   led.on();
    * })();
    * 
    * @example
@@ -59,7 +58,7 @@ class LED {
    *     pin: 12,
    *     pwm: true
    *   });
-   *   led.blink();
+   *   led.on();
    * })();
    */
   constructor(io, device) {
@@ -130,11 +129,11 @@ class LED {
    * Turn an led on
    * @returns {LED} The instance on which the method was called
    * @example
-   * import RGB from "@j5e/rgb";
+   * import LED from "@j5e/led";
    *
    * (async function() {
-   *   rgb = await new RGB([12, 13, 14])
-   *   rgb.on();
+   *   led = await new LED(12);
+   *   led.on();
    * })();
    */
   on() {
@@ -146,6 +145,19 @@ class LED {
   /**
    * Turn an led off
    * @return {LED}
+   * @example
+   * import LED from "@j5e/led";
+   * import {timer} from "@j5e/fn";
+   *
+   * (async function() {
+   *   led = await new LED(12);
+   *   led.on();
+   *   
+   *   // Wait one second and turn the led off
+   *   timer.setTimeout(function() {
+   *     led.off();
+   *   }, 1000)
+   * })();
    */
   off() {
     this.#state.value = this.LOW;
@@ -156,6 +168,19 @@ class LED {
   /**
    * Toggle the on/off state of an led
    * @return {LED}
+   * @example
+   * import LED from "@j5e/led";
+   * import {timer} from "@j5e/fn";
+   *
+   * (async function() {
+   *   led = await new LED(12);
+   *   led.toggle(); // It's on!
+   *   
+   *   // Wait one second and turn the led off
+   *   timer.setTimeout(function() {
+   *     led.toggle(); // It's off!
+   *   }, 1000)
+   * })();
    */
   toggle() {
     return this[this.isOn ? "off" : "on"]();
@@ -166,6 +191,13 @@ class LED {
    * @param {Number} duration=100 - Time in ms on, time in ms off
    * @param {Function} callback - Method to call on blink
    * @return {LED}
+   * @example
+   * import LED from "@j5e/led";
+   * 
+   * (async function() {
+   *   led = await new LED(12);
+   *   led.blink(1000);
+   * })();
    */
   blink(duration=100, callback) {
     // Avoid traffic jams
@@ -189,9 +221,19 @@ class LED {
   }
 
   /**
-   * Set the brightness of an led attached to PWM
+   * Set the brightness of an led attached to PWM (Requires ```pwm: true```)
    * @param {Integer} value - Brightness value [this.HIGH, this.LOW]
    * @return {LED}
+   * @example
+   * import LED from "@j5e/led";
+   * 
+   * (async function() {
+   *   led = await new LED({
+   *     pin: 12,
+   *     pwm: true
+   *   });
+   *   led.brightness(512);
+   * })();
    */
   brightness(value) {
     this.#state.value = value;
@@ -200,9 +242,19 @@ class LED {
   }
 
   /**
-   * Set the brightness of an led 0-100
+   * Set the brightness of an led 0-100 (Requires ```pwm: true```)
    * @param {Integer} value - Brightness value [0, 100]
    * @return {LED}
+   * @example
+   * import LED from "@j5e/led";
+   * 
+   * (async function() {
+   *   led = await new LED({
+   *     pin: 12,
+   *     pwm: true
+   *   });
+   *   led.intensity(50);
+   * })();
    */
   intensity(value) {
     this.#state.value = map(value, 0, 100, this.LOW, this.HIGH);
@@ -211,11 +263,21 @@ class LED {
   }
 
   /**
-   * fade Fade an led in and out
+   * fade Fade an led from its current value to a new value (Requires ```pwm: true```)
    * @param {Number} val Target brightness value
    * @param {Number} [time=1000] Time in ms that a fade will take
    * @param {function} [callback] A function to run when the fade is complete
    * @return {LED}
+   * @example
+   * import LED from "@j5e/led";
+   * 
+   * (async function() {
+   *   led = await new LED({
+   *     pin: 12,
+   *     pwm: true
+   *   });
+   *   led.fade(512);
+   * })();
    */
   fade(val, time=1000, callback) {
     
@@ -255,30 +317,61 @@ class LED {
   }
 
   /**
-   * fade Fade an led in
+   * fadeIn Fade an led in to full brightness (Requires ```pwm: true```)
    * @param {Number} [time=1000] Time in ms that a fade will take
    * @param {function} [callback] A function to run when the fade is complete
    * @return {LED}
+   * @example
+   * import LED from "@j5e/led";
+   * 
+   * (async function() {
+   *   led = await new LED({
+   *     pin: 12,
+   *     pwm: true
+   *   });
+   *   led.fadeIn(500);
+   * })();
    */
   fadeIn(time=1000, callback) {
     return this.fade(this.HIGH, time, callback);
   }
 
   /**
-   * fade Fade an led out
+   * fadeOut Fade an led out until it is off (Requires ```pwm: true```)
    * @param {Number} [time=1000] Time in ms that a fade will take
    * @param {function} [callback] A function to run when the fade is complete
    * @return {LED}
+   * @example
+   * import LED from "@j5e/led";
+   * 
+   * (async function() {
+   *   led = await new LED({
+   *     pin: 12,
+   *     pwm: true
+   *   });
+   *   led.on();
+   *   led.fadeOut(500);
+   * })();
    */
   fadeOut(time=1000, callback) {
     return this.fade(this.LOW, time, callback);
   }
 
   /**
-   * Pulse the LED in and out in a loop with specified time
+   * Pulse the LED in and out in a loop with specified time using ```inOutSine``` easing (Requires ```pwm: true```)
    * @param {number} [time=1000] Time in ms that a fade in/out will elapse
    * @param {function} [callback] A function to run each time the direction of pulse changes
    * @return {LED}
+   * @example
+   * import LED from "@j5e/led";
+   * 
+   * (async function() {
+   *   led = await new LED({
+   *     pin: 12,
+   *     pwm: true
+   *   });
+   *   led.pulse(500);
+   * })();
    */
   pulse(time=1000, callback) {
     
@@ -309,9 +402,25 @@ class LED {
   }
   
   /**
-   * Animate the RGB LED
-   * @param {Object} options
-   * @return {RGB}
+   * Animate the LED by passing in a segment options object
+   * @param {Object} options (See {@tutorial D-ANIMATING})
+   * @return {LED}
+   * @example
+   * import LED from "@j5e/led";
+   * 
+   * (async function() {
+   *   led = await new LED({
+   *     pin: 12,
+   *     pwm: true
+   *   });
+   *   led.animate({
+   *     duration: 4000,
+	 *     cuePoints: [0,  0.33, 0.66, 1],
+	 *     keyFrames: [0, 750, 250, 1],
+	 *     loop: true,
+   *     metronomic: true
+   *   });
+   * })();
    */
   animate(options) {
     // Avoid traffic jams
@@ -327,6 +436,22 @@ class LED {
   /**
    * stop Stop the led from strobing, pulsing or fading
    * @return {LED}
+   * @example
+   * import {timer} from "@j5e/fn";
+   * import LED from "@j5e/led";
+   * 
+   * (async function() {
+   *   led = await new LED({
+   *     pin: 12,
+   *     pwm: true
+   *   });
+   *   led.pulse(500);
+   *   
+   *   // Stop pulsing after five seconds
+   *   timer.setTimeout(function() {
+   *     led.stop();
+   *   }, 5000)
+   * })();
    */
   stop() {
     
@@ -348,7 +473,6 @@ class LED {
    * @param [number || object] keyFrames An array of step values or a keyFrame objects
    * @access private
    */
-
   normalize(keyFrames) {
     
     // If user passes null as the first element in keyFrames use current value

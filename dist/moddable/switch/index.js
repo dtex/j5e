@@ -11,6 +11,7 @@ import {normalizeParams, getProvider} from "@j5e/fn";
 /** 
  * Class representing a switch
  * @classdesc The Switch class allows for control of digital switches
+ * @async
  * @extends Emitter
  * @fires Switch#open
  * @fires Switch#close
