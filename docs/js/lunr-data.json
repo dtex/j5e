@@ -53,16 +53,19 @@
           "global"
         ],
         "undefined": [
-          "c",
-          "confus",
+          "allow",
+          "anim",
+          "complex",
+          "d",
           "devic",
-          "flexibl",
-          "instanti",
-          "iooption",
-          "littl",
-          "paramet",
-          "power",
-          "tutori"
+          "j5e'",
+          "over",
+          "sequenc",
+          "time",
+          "timelin",
+          "tool",
+          "tutori",
+          "tween"
         ],
         "list_module.html": [
           "document",
@@ -267,6 +270,7 @@
           "control",
           "digit",
           "j5e/switch~switch",
+          "lt;async&gt",
           "module:j5e/switch~switch",
           "switch"
         ],
@@ -276,6 +280,7 @@
           "control",
           "j5e/rgb~rgb",
           "led'",
+          "lt;async&gt",
           "module:j5e/rgb~rgb",
           "rgb"
         ],
@@ -363,6 +368,7 @@
           "control",
           "hobbi",
           "j5e/servo~servo",
+          "lt;async&gt",
           "module:j5e/servo~servo",
           "servo"
         ],
@@ -562,7 +568,9 @@
           "led",
           "module:j5e/led~led#bright",
           "pwm",
+          "requir",
           "set",
+          "true",
           "valu"
         ],
         "module-j5e_led-LED.html#intensity": [
@@ -573,27 +581,40 @@
           "intens",
           "led",
           "module:j5e/led~led#intens",
+          "pwm",
+          "requir",
           "set",
+          "true",
           "valu"
         ],
         "module-j5e_led-LED.html#fade": [
           "callback",
+          "current",
           "fade",
           "function",
           "led",
           "module:j5e/led~led#fad",
-          "out",
+          "new",
+          "pwm",
+          "requir",
           "time",
-          "val"
+          "true",
+          "val",
+          "valu"
         ],
         "module-j5e_led-LED.html#fadeIn": [
+          "bright",
           "callback",
           "fade",
           "fadein",
+          "full",
           "function",
           "led",
           "module:j5e/led~led#fadein",
-          "time"
+          "pwm",
+          "requir",
+          "time",
+          "true"
         ],
         "module-j5e_led-LED.html#fadeOut": [
           "callback",
@@ -603,26 +624,38 @@
           "led",
           "module:j5e/led~led#fadeout",
           "out",
-          "time"
+          "pwm",
+          "requir",
+          "time",
+          "true",
+          "until"
         ],
         "module-j5e_led-LED.html#pulse": [
           "callback",
+          "eas",
           "function",
+          "inoutsin",
           "led",
           "loop",
           "module:j5e/led~led#puls",
           "out",
           "puls",
+          "pwm",
+          "requir",
           "specifi",
-          "time"
+          "time",
+          "true",
+          "us"
         ],
         "module-j5e_led-LED.html#animate": [
           "anim",
           "function",
           "led",
           "module:j5e/led~led#anim",
+          "object",
           "option",
-          "rgb"
+          "pass",
+          "segment"
         ],
         "module-j5e_led-LED.html#stop": [
           "fade",
@@ -736,7 +769,7 @@
           "docs": {
             "module-j5e_led-LED.html#intensity": {
               "ref": "module-j5e_led-LED.html#intensity",
-              "tf": 10
+              "tf": 6.25
             }
           },
           "d": {
@@ -760,7 +793,7 @@
               "docs": {
                 "module-j5e_led-LED.html#intensity": {
                   "ref": "module-j5e_led-LED.html#intensity",
-                  "tf": 10
+                  "tf": 6.25
                 }
               }
             },
@@ -1053,6 +1086,10 @@
             },
             "s": {
               "docs": {
+                "module-j5e_led-LED.html#pulse": {
+                  "ref": "module-j5e_led-LED.html#pulse",
+                  "tf": 4.166666666666666
+                },
                 "module-j5e_easing.html": {
                   "ref": "module-j5e_easing.html",
                   "tf": 8.333333333333332
@@ -1366,6 +1403,17 @@
                   }
                 }
               }
+            },
+            "l": {
+              "docs": {},
+              "l": {
+                "docs": {
+                  "module-j5e_led-LED.html#fadeIn": {
+                    "ref": "module-j5e_led-LED.html#fadeIn",
+                    "tf": 6.25
+                  }
+                }
+              }
             }
           },
           "l": {
@@ -1433,15 +1481,15 @@
                 "docs": {
                   "module-j5e_led-LED.html#fade": {
                     "ref": "module-j5e_led-LED.html#fade",
-                    "tf": 695
+                    "tf": 680
                   },
                   "module-j5e_led-LED.html#fadeIn": {
                     "ref": "module-j5e_led-LED.html#fadeIn",
-                    "tf": 33.33333333333333
+                    "tf": 6.25
                   },
                   "module-j5e_led-LED.html#fadeOut": {
                     "ref": "module-j5e_led-LED.html#fadeOut",
-                    "tf": 25
+                    "tf": 6.25
                   },
                   "module-j5e_led-LED.html#stop": {
                     "ref": "module-j5e_led-LED.html#stop",
@@ -1454,7 +1502,7 @@
                     "docs": {
                       "module-j5e_led-LED.html#fadeIn": {
                         "ref": "module-j5e_led-LED.html#fadeIn",
-                        "tf": 675
+                        "tf": 681.25
                       }
                     }
                   }
@@ -1467,7 +1515,7 @@
                       "docs": {
                         "module-j5e_led-LED.html#fadeOut": {
                           "ref": "module-j5e_led-LED.html#fadeOut",
-                          "tf": 675
+                          "tf": 681.25
                         }
                       }
                     }
@@ -1629,6 +1677,29 @@
                   }
                 }
               }
+            },
+            "o": {
+              "docs": {},
+              "u": {
+                "docs": {},
+                "t": {
+                  "docs": {},
+                  "s": {
+                    "docs": {},
+                    "i": {
+                      "docs": {},
+                      "n": {
+                        "docs": {
+                          "module-j5e_led-LED.html#pulse": {
+                            "ref": "module-j5e_led-LED.html#pulse",
+                            "tf": 4.166666666666666
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           },
           "o": {
@@ -1682,6 +1753,13 @@
                 "module-j5e_fn.html": {
                   "ref": "module-j5e_fn.html",
                   "tf": 5
+                }
+              },
+              "'": {
+                "docs": {
+                  "undefined": {
+                    "tf": 25
+                  }
                 }
               },
               "/": {
@@ -1853,7 +1931,7 @@
                                           "docs": {
                                             "module-j5e_switch-Switch.html": {
                                               "ref": "module-j5e_switch-Switch.html",
-                                              "tf": 100
+                                              "tf": 50
                                             }
                                           }
                                         }
@@ -1895,7 +1973,7 @@
                                       "docs": {
                                         "module-j5e_servo-Servo.html": {
                                           "ref": "module-j5e_servo-Servo.html",
-                                          "tf": 100
+                                          "tf": 50
                                         }
                                       }
                                     }
@@ -1930,7 +2008,7 @@
                               "docs": {
                                 "module-j5e_rgb-RGB.html": {
                                   "ref": "module-j5e_rgb-RGB.html",
-                                  "tf": 100
+                                  "tf": 50
                                 }
                               }
                             }
@@ -2093,6 +2171,43 @@
                 }
               }
             },
+            "q": {
+              "docs": {},
+              "u": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "r": {
+                    "docs": {
+                      "module-j5e_led-LED.html#brightness": {
+                        "ref": "module-j5e_led-LED.html#brightness",
+                        "tf": 6.25
+                      },
+                      "module-j5e_led-LED.html#intensity": {
+                        "ref": "module-j5e_led-LED.html#intensity",
+                        "tf": 6.25
+                      },
+                      "module-j5e_led-LED.html#fade": {
+                        "ref": "module-j5e_led-LED.html#fade",
+                        "tf": 5
+                      },
+                      "module-j5e_led-LED.html#fadeIn": {
+                        "ref": "module-j5e_led-LED.html#fadeIn",
+                        "tf": 6.25
+                      },
+                      "module-j5e_led-LED.html#fadeOut": {
+                        "ref": "module-j5e_led-LED.html#fadeOut",
+                        "tf": 6.25
+                      },
+                      "module-j5e_led-LED.html#pulse": {
+                        "ref": "module-j5e_led-LED.html#pulse",
+                        "tf": 4.166666666666666
+                      }
+                    }
+                  }
+                }
+              }
+            },
             "l": {
               "docs": {},
               "a": {
@@ -2151,10 +2266,6 @@
                 },
                 "module-j5e_rgb-RGB.html#animate": {
                   "ref": "module-j5e_rgb-RGB.html#animate",
-                  "tf": 49.99999999999999
-                },
-                "module-j5e_led-LED.html#animate": {
-                  "ref": "module-j5e_led-LED.html#animate",
                   "tf": 49.99999999999999
                 },
                 "module-j5e_animation.html": {
@@ -2392,42 +2503,27 @@
               }
             }
           },
-          "c": {
+          "e": {
             "docs": {},
-            "r": {
+            "q": {
               "docs": {},
-              "i": {
+              "u": {
                 "docs": {},
-                "p": {
+                "e": {
                   "docs": {},
-                  "t": {
-                    "docs": {
-                      "module-j5e_animation-Animation.html": {
-                        "ref": "module-j5e_animation-Animation.html",
-                        "tf": 10
+                  "n": {
+                    "docs": {},
+                    "c": {
+                      "docs": {
+                        "undefined": {
+                          "tf": 10
+                        }
                       }
                     }
                   }
                 }
               }
             },
-            "a": {
-              "docs": {},
-              "l": {
-                "docs": {},
-                "e": {
-                  "docs": {
-                    "module-j5e_rgb-RGB.html#toScaledRGB": {
-                      "ref": "module-j5e_rgb-RGB.html#toScaledRGB",
-                      "tf": 7.142857142857142
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "e": {
-            "docs": {},
             "r": {
               "docs": {},
               "v": {
@@ -2540,6 +2636,10 @@
                           "ref": "module-j5e_animation-Animation.html#play",
                           "tf": 10
                         },
+                        "module-j5e_led-LED.html#animate": {
+                          "ref": "module-j5e_led-LED.html#animate",
+                          "tf": 8.333333333333332
+                        },
                         "module-j5e_animation-Segment.html": {
                           "ref": "module-j5e_animation-Segment.html",
                           "tf": 500
@@ -2578,15 +2678,49 @@
                 },
                 "module-j5e_led-LED.html#brightness": {
                   "ref": "module-j5e_led-LED.html#brightness",
-                  "tf": 10
+                  "tf": 6.25
                 },
                 "module-j5e_led-LED.html#intensity": {
                   "ref": "module-j5e_led-LED.html#intensity",
-                  "tf": 10
+                  "tf": 6.25
                 },
                 "module-j5e_animation-Segment.html": {
                   "ref": "module-j5e_animation-Segment.html",
                   "tf": 12.5
+                }
+              }
+            }
+          },
+          "c": {
+            "docs": {},
+            "r": {
+              "docs": {},
+              "i": {
+                "docs": {},
+                "p": {
+                  "docs": {},
+                  "t": {
+                    "docs": {
+                      "module-j5e_animation-Animation.html": {
+                        "ref": "module-j5e_animation-Animation.html",
+                        "tf": 10
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "a": {
+              "docs": {},
+              "l": {
+                "docs": {},
+                "e": {
+                  "docs": {
+                    "module-j5e_rgb-RGB.html#toScaledRGB": {
+                      "ref": "module-j5e_rgb-RGB.html#toScaledRGB",
+                      "tf": 7.142857142857142
+                    }
+                  }
                 }
               }
             }
@@ -2632,7 +2766,7 @@
                         },
                         "module-j5e_led-LED.html#pulse": {
                           "ref": "module-j5e_led-LED.html#pulse",
-                          "tf": 8.333333333333332
+                          "tf": 4.166666666666666
                         }
                       }
                     }
@@ -2695,7 +2829,11 @@
           }
         },
         "d": {
-          "docs": {},
+          "docs": {
+            "undefined": {
+              "tf": 900
+            }
+          },
           "o": {
             "docs": {},
             "c": {
@@ -2735,7 +2873,7 @@
                 "c": {
                   "docs": {
                     "undefined": {
-                      "tf": 50
+                      "tf": 10
                     },
                     "module-j5e_event.Emitter.html": {
                       "ref": "module-j5e_event.Emitter.html",
@@ -3024,6 +3162,9 @@
               "docs": {},
               "e": {
                 "docs": {
+                  "undefined": {
+                    "tf": 10
+                  },
                   "module-j5e_event.Emitter.html#once": {
                     "ref": "module-j5e_event.Emitter.html#once",
                     "tf": 8.333333333333332
@@ -3066,7 +3207,20 @@
                   },
                   "module-j5e_led-LED.html#pulse": {
                     "ref": "module-j5e_led-LED.html#pulse",
-                    "tf": 33.33333333333333
+                    "tf": 29.166666666666664
+                  }
+                },
+                "l": {
+                  "docs": {},
+                  "i": {
+                    "docs": {},
+                    "n": {
+                      "docs": {
+                        "undefined": {
+                          "tf": 25
+                        }
+                      }
+                    }
                   }
                 },
                 "r": {
@@ -3080,52 +3234,18 @@
               }
             }
           },
-          "w": {
+          "o": {
             "docs": {},
-            "e": {
+            "o": {
               "docs": {},
-              "e": {
-                "docs": {},
-                "n": {
-                  "docs": {
-                    "module-j5e_animation-Animation.html#tweenedValue": {
-                      "ref": "module-j5e_animation-Animation.html#tweenedValue",
-                      "tf": 4.166666666666666
-                    },
-                    "module-j5e_animation.html": {
-                      "ref": "module-j5e_animation.html",
-                      "tf": 4.166666666666666
-                    }
-                  },
-                  "e": {
-                    "docs": {},
-                    "d": {
-                      "docs": {},
-                      "v": {
-                        "docs": {},
-                        "a": {
-                          "docs": {},
-                          "l": {
-                            "docs": {},
-                            "u": {
-                              "docs": {
-                                "module-j5e_animation-Animation.html#tweenedValue": {
-                                  "ref": "module-j5e_animation-Animation.html#tweenedValue",
-                                  "tf": 750
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
+              "l": {
+                "docs": {
+                  "undefined": {
+                    "tf": 25
                   }
                 }
               }
-            }
-          },
-          "o": {
-            "docs": {},
+            },
             "g": {
               "docs": {},
               "g": {
@@ -3172,6 +3292,87 @@
                         }
                       }
                     }
+                  }
+                }
+              }
+            }
+          },
+          "w": {
+            "docs": {},
+            "e": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "n": {
+                  "docs": {
+                    "undefined": {
+                      "tf": 25
+                    },
+                    "module-j5e_animation-Animation.html#tweenedValue": {
+                      "ref": "module-j5e_animation-Animation.html#tweenedValue",
+                      "tf": 4.166666666666666
+                    },
+                    "module-j5e_animation.html": {
+                      "ref": "module-j5e_animation.html",
+                      "tf": 4.166666666666666
+                    }
+                  },
+                  "e": {
+                    "docs": {},
+                    "d": {
+                      "docs": {},
+                      "v": {
+                        "docs": {},
+                        "a": {
+                          "docs": {},
+                          "l": {
+                            "docs": {},
+                            "u": {
+                              "docs": {
+                                "module-j5e_animation-Animation.html#tweenedValue": {
+                                  "ref": "module-j5e_animation-Animation.html#tweenedValue",
+                                  "tf": 750
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "r": {
+            "docs": {},
+            "u": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "module-j5e_led-LED.html#brightness": {
+                    "ref": "module-j5e_led-LED.html#brightness",
+                    "tf": 6.25
+                  },
+                  "module-j5e_led-LED.html#intensity": {
+                    "ref": "module-j5e_led-LED.html#intensity",
+                    "tf": 6.25
+                  },
+                  "module-j5e_led-LED.html#fade": {
+                    "ref": "module-j5e_led-LED.html#fade",
+                    "tf": 5
+                  },
+                  "module-j5e_led-LED.html#fadeIn": {
+                    "ref": "module-j5e_led-LED.html#fadeIn",
+                    "tf": 6.25
+                  },
+                  "module-j5e_led-LED.html#fadeOut": {
+                    "ref": "module-j5e_led-LED.html#fadeOut",
+                    "tf": 6.25
+                  },
+                  "module-j5e_led-LED.html#pulse": {
+                    "ref": "module-j5e_led-LED.html#pulse",
+                    "tf": 4.166666666666666
                   }
                 }
               }
@@ -3229,23 +3430,6 @@
               }
             }
           },
-          "v": {
-            "docs": {},
-            "a": {
-              "docs": {},
-              "i": {
-                "docs": {},
-                "l": {
-                  "docs": {
-                    "list_tutorial.html": {
-                      "ref": "list_tutorial.html",
-                      "tf": 35
-                    }
-                  }
-                }
-              }
-            }
-          },
           "l": {
             "docs": {},
             "l": {
@@ -3254,6 +3438,9 @@
                 "docs": {},
                 "w": {
                   "docs": {
+                    "undefined": {
+                      "tf": 10
+                    },
                     "module-j5e_animation-Animation.html": {
                       "ref": "module-j5e_animation-Animation.html",
                       "tf": 10
@@ -3285,6 +3472,9 @@
               "docs": {},
               "m": {
                 "docs": {
+                  "undefined": {
+                    "tf": 910
+                  },
                   "module-j5e_animation-Animation.html": {
                     "ref": "module-j5e_animation-Animation.html",
                     "tf": 500
@@ -3311,7 +3501,7 @@
                   },
                   "module-j5e_led-LED.html#animate": {
                     "ref": "module-j5e_led-LED.html#animate",
-                    "tf": 700
+                    "tf": 691.6666666666667
                   },
                   "module-j5e_animation.html": {
                     "ref": "module-j5e_animation.html",
@@ -3323,6 +3513,23 @@
                     "module-j5e_easing.html": {
                       "ref": "module-j5e_easing.html",
                       "tf": 8.333333333333332
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "v": {
+            "docs": {},
+            "a": {
+              "docs": {},
+              "i": {
+                "docs": {},
+                "l": {
+                  "docs": {
+                    "list_tutorial.html": {
+                      "ref": "list_tutorial.html",
+                      "tf": 35
                     }
                   }
                 }
@@ -3352,7 +3559,7 @@
                     "docs": {
                       "module-j5e_led-LED.html#brightness": {
                         "ref": "module-j5e_led-LED.html#brightness",
-                        "tf": 10
+                        "tf": 6.25
                       }
                     }
                   }
@@ -3453,11 +3660,15 @@
                     "docs": {
                       "module-j5e_led-LED.html#brightness": {
                         "ref": "module-j5e_led-LED.html#brightness",
-                        "tf": 693.3333333333334
+                        "tf": 689.5833333333334
                       },
                       "module-j5e_led-LED.html#intensity": {
                         "ref": "module-j5e_led-LED.html#intensity",
-                        "tf": 10
+                        "tf": 6.25
+                      },
+                      "module-j5e_led-LED.html#fadeIn": {
+                        "ref": "module-j5e_led-LED.html#fadeIn",
+                        "tf": 6.25
                       }
                     }
                   }
@@ -5167,6 +5378,19 @@
               "docs": {},
               "p": {
                 "docs": {},
+                "l": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "x": {
+                      "docs": {
+                        "undefined": {
+                          "tf": 10
+                        }
+                      }
+                    }
+                  }
+                },
                 "u": {
                   "docs": {},
                   "t": {
@@ -5497,6 +5721,10 @@
                         "module-j5e_rgb-RGB.html#toScaledRGB": {
                           "ref": "module-j5e_rgb-RGB.html#toScaledRGB",
                           "tf": 7.142857142857142
+                        },
+                        "module-j5e_led-LED.html#fade": {
+                          "ref": "module-j5e_led-LED.html#fade",
+                          "tf": 5
                         }
                       }
                     }
@@ -5769,31 +5997,31 @@
                 },
                 "module-j5e_led-LED.html#brightness": {
                   "ref": "module-j5e_led-LED.html#brightness",
-                  "tf": 43.33333333333333
+                  "tf": 39.58333333333333
                 },
                 "module-j5e_led-LED.html#intensity": {
                   "ref": "module-j5e_led-LED.html#intensity",
-                  "tf": 43.33333333333333
+                  "tf": 39.58333333333333
                 },
                 "module-j5e_led-LED.html#fade": {
                   "ref": "module-j5e_led-LED.html#fade",
-                  "tf": 32.5
+                  "tf": 25
                 },
                 "module-j5e_led-LED.html#fadeIn": {
                   "ref": "module-j5e_led-LED.html#fadeIn",
-                  "tf": 41.666666666666664
+                  "tf": 31.25
                 },
                 "module-j5e_led-LED.html#fadeOut": {
                   "ref": "module-j5e_led-LED.html#fadeOut",
-                  "tf": 37.5
+                  "tf": 31.25
                 },
                 "module-j5e_led-LED.html#pulse": {
                   "ref": "module-j5e_led-LED.html#pulse",
-                  "tf": 33.33333333333333
+                  "tf": 29.166666666666664
                 },
                 "module-j5e_led-LED.html#animate": {
                   "ref": "module-j5e_led-LED.html#animate",
-                  "tf": 16.666666666666664
+                  "tf": 41.66666666666666
                 },
                 "module-j5e_led-LED.html#stop": {
                   "ref": "module-j5e_led-LED.html#stop",
@@ -5845,7 +6073,7 @@
                 "docs": {
                   "module-j5e_led-LED.html#pulse": {
                     "ref": "module-j5e_led-LED.html#pulse",
-                    "tf": 8.333333333333332
+                    "tf": 4.166666666666666
                   }
                 },
                 "f": {
@@ -5891,6 +6119,18 @@
                             "docs": {},
                             "t": {
                               "docs": {
+                                "module-j5e_switch-Switch.html": {
+                                  "ref": "module-j5e_switch-Switch.html",
+                                  "tf": 50
+                                },
+                                "module-j5e_rgb-RGB.html": {
+                                  "ref": "module-j5e_rgb-RGB.html",
+                                  "tf": 50
+                                },
+                                "module-j5e_servo-Servo.html": {
+                                  "ref": "module-j5e_servo-Servo.html",
+                                  "tf": 50
+                                },
                                 "module-j5e_led-LED.html": {
                                   "ref": "module-j5e_led-LED.html",
                                   "tf": 50
@@ -5946,6 +6186,17 @@
                   "module-j5e_animation-Animation.html#pause": {
                     "ref": "module-j5e_animation-Animation.html#pause",
                     "tf": 757.1428571428571
+                  }
+                }
+              }
+            },
+            "s": {
+              "docs": {},
+              "s": {
+                "docs": {
+                  "module-j5e_led-LED.html#animate": {
+                    "ref": "module-j5e_led-LED.html#animate",
+                    "tf": 8.333333333333332
                   }
                 }
               }
@@ -6088,7 +6339,7 @@
                   },
                   "module-j5e_led-LED.html#pulse": {
                     "ref": "module-j5e_led-LED.html#pulse",
-                    "tf": 683.3333333333334
+                    "tf": 679.1666666666666
                   },
                   "module-j5e_led-LED.html#stop": {
                     "ref": "module-j5e_led-LED.html#stop",
@@ -6104,57 +6355,27 @@
               "docs": {
                 "module-j5e_led-LED.html#brightness": {
                   "ref": "module-j5e_led-LED.html#brightness",
-                  "tf": 10
-                }
-              }
-            }
-          }
-        },
-        "u": {
-          "docs": {},
-          "s": {
-            "docs": {
-              "module-j5e_event.Emitter.html": {
-                "ref": "module-j5e_event.Emitter.html",
-                "tf": 6.25
-              },
-              "module-j5e_fn.html": {
-                "ref": "module-j5e_fn.html",
-                "tf": 5
-              }
-            }
-          },
-          "p": {
-            "docs": {},
-            "d": {
-              "docs": {},
-              "a": {
-                "docs": {},
-                "t": {
-                  "docs": {
-                    "module-j5e_servo-Servo.html#update": {
-                      "ref": "module-j5e_servo-Servo.html#update",
-                      "tf": 683.3333333333334
-                    },
-                    "module-j5e_servo-Servo.html#step": {
-                      "ref": "module-j5e_servo-Servo.html#step",
-                      "tf": 5.555555555555555
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "t": {
-            "docs": {},
-            "i": {
-              "docs": {},
-              "l": {
-                "docs": {
-                  "module-j5e_fn.html": {
-                    "ref": "module-j5e_fn.html",
-                    "tf": 5
-                  }
+                  "tf": 12.5
+                },
+                "module-j5e_led-LED.html#intensity": {
+                  "ref": "module-j5e_led-LED.html#intensity",
+                  "tf": 6.25
+                },
+                "module-j5e_led-LED.html#fade": {
+                  "ref": "module-j5e_led-LED.html#fade",
+                  "tf": 5
+                },
+                "module-j5e_led-LED.html#fadeIn": {
+                  "ref": "module-j5e_led-LED.html#fadeIn",
+                  "tf": 6.25
+                },
+                "module-j5e_led-LED.html#fadeOut": {
+                  "ref": "module-j5e_led-LED.html#fadeOut",
+                  "tf": 6.25
+                },
+                "module-j5e_led-LED.html#pulse": {
+                  "ref": "module-j5e_led-LED.html#pulse",
+                  "tf": 4.166666666666666
                 }
               }
             }
@@ -6162,6 +6383,41 @@
         },
         "o": {
           "docs": {},
+          "v": {
+            "docs": {},
+            "e": {
+              "docs": {},
+              "r": {
+                "docs": {
+                  "undefined": {
+                    "tf": 10
+                  },
+                  "module-j5e_servo-Servo.html#to": {
+                    "ref": "module-j5e_servo-Servo.html#to",
+                    "tf": 6.25
+                  },
+                  "module-j5e_servo-Servo.html#step": {
+                    "ref": "module-j5e_servo-Servo.html#step",
+                    "tf": 5.555555555555555
+                  }
+                },
+                "r": {
+                  "docs": {},
+                  "i": {
+                    "docs": {},
+                    "d": {
+                      "docs": {
+                        "module-j5e_animation-Segment.html": {
+                          "ref": "module-j5e_animation-Segment.html",
+                          "tf": 12.5
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
           "n": {
             "docs": {
               "module-j5e_event.Emitter.html#once": {
@@ -6223,7 +6479,7 @@
                       },
                       "module-j5e_led-LED.html#animate": {
                         "ref": "module-j5e_led-LED.html#animate",
-                        "tf": 33.33333333333333
+                        "tf": 41.66666666666666
                       }
                     }
                   }
@@ -6235,17 +6491,13 @@
             "docs": {},
             "t": {
               "docs": {
-                "module-j5e_led-LED.html#fade": {
-                  "ref": "module-j5e_led-LED.html#fade",
-                  "tf": 12.5
-                },
                 "module-j5e_led-LED.html#fadeOut": {
                   "ref": "module-j5e_led-LED.html#fadeOut",
-                  "tf": 12.5
+                  "tf": 6.25
                 },
                 "module-j5e_led-LED.html#pulse": {
                   "ref": "module-j5e_led-LED.html#pulse",
-                  "tf": 8.333333333333332
+                  "tf": 4.166666666666666
                 }
               },
               "p": {
@@ -6257,38 +6509,6 @@
                       "module-j5e_rgb-RGB.html#toScaledRGB": {
                         "ref": "module-j5e_rgb-RGB.html#toScaledRGB",
                         "tf": 7.142857142857142
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "v": {
-            "docs": {},
-            "e": {
-              "docs": {},
-              "r": {
-                "docs": {
-                  "module-j5e_servo-Servo.html#to": {
-                    "ref": "module-j5e_servo-Servo.html#to",
-                    "tf": 6.25
-                  },
-                  "module-j5e_servo-Servo.html#step": {
-                    "ref": "module-j5e_servo-Servo.html#step",
-                    "tf": 5.555555555555555
-                  }
-                },
-                "r": {
-                  "docs": {},
-                  "i": {
-                    "docs": {},
-                    "d": {
-                      "docs": {
-                        "module-j5e_animation-Segment.html": {
-                          "ref": "module-j5e_animation-Segment.html",
-                          "tf": 12.5
-                        }
                       }
                     }
                   }
@@ -6321,8 +6541,83 @@
                       "module-j5e_servo-Servo.html#center": {
                         "ref": "module-j5e_servo-Servo.html#center",
                         "tf": 33.33333333333333
+                      },
+                      "module-j5e_led-LED.html#animate": {
+                        "ref": "module-j5e_led-LED.html#animate",
+                        "tf": 8.333333333333332
                       }
                     }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "u": {
+          "docs": {},
+          "s": {
+            "docs": {
+              "module-j5e_event.Emitter.html": {
+                "ref": "module-j5e_event.Emitter.html",
+                "tf": 6.25
+              },
+              "module-j5e_led-LED.html#pulse": {
+                "ref": "module-j5e_led-LED.html#pulse",
+                "tf": 4.166666666666666
+              },
+              "module-j5e_fn.html": {
+                "ref": "module-j5e_fn.html",
+                "tf": 5
+              }
+            }
+          },
+          "p": {
+            "docs": {},
+            "d": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "module-j5e_servo-Servo.html#update": {
+                      "ref": "module-j5e_servo-Servo.html#update",
+                      "tf": 683.3333333333334
+                    },
+                    "module-j5e_servo-Servo.html#step": {
+                      "ref": "module-j5e_servo-Servo.html#step",
+                      "tf": 5.555555555555555
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "n": {
+            "docs": {},
+            "t": {
+              "docs": {},
+              "i": {
+                "docs": {},
+                "l": {
+                  "docs": {
+                    "module-j5e_led-LED.html#fadeOut": {
+                      "ref": "module-j5e_led-LED.html#fadeOut",
+                      "tf": 6.25
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "t": {
+            "docs": {},
+            "i": {
+              "docs": {},
+              "l": {
+                "docs": {
+                  "module-j5e_fn.html": {
+                    "ref": "module-j5e_fn.html",
+                    "tf": 5
                   }
                 }
               }
@@ -6373,6 +6668,14 @@
                     "ref": "module-j5e_animation-Animation.html#next",
                     "tf": 757.1428571428571
                   }
+                }
+              }
+            },
+            "w": {
+              "docs": {
+                "module-j5e_led-LED.html#fade": {
+                  "ref": "module-j5e_led-LED.html#fade",
+                  "tf": 5
                 }
               }
             }
@@ -6485,6 +6788,10 @@
                   "module-j5e_led-LED.html#intensity": {
                     "ref": "module-j5e_led-LED.html#intensity",
                     "tf": 33.33333333333333
+                  },
+                  "module-j5e_led-LED.html#fade": {
+                    "ref": "module-j5e_led-LED.html#fade",
+                    "tf": 10
                   }
                 }
               }
@@ -6604,7 +6911,7 @@
           }
         }
       },
-      "length": 560
+      "length": 603
     },
     "corpusTokens": [
       "0",
@@ -6637,6 +6944,7 @@
       "clockwis",
       "code",
       "color",
+      "complex",
       "comput",
       "conform",
       "confus",
@@ -6648,6 +6956,7 @@
       "cuepoint",
       "current",
       "cw",
+      "d",
       "default",
       "degre",
       "devic",
@@ -6680,6 +6989,7 @@
       "flush",
       "fn",
       "frame",
+      "full",
       "function",
       "get",
       "getstart",
@@ -6694,6 +7004,7 @@
       "index",
       "indic",
       "initi",
+      "inoutsin",
       "instanc",
       "instanti",
       "intend",
@@ -6703,6 +7014,7 @@
       "io",
       "iooption",
       "j5e",
+      "j5e'",
       "j5e/anim",
       "j5e/animation~anim",
       "j5e/animation~seg",
@@ -6812,6 +7124,7 @@
       "module:j5e/switch",
       "module:j5e/switch~switch",
       "move",
+      "new",
       "next",
       "normal",
       "normalizekeyfram",
@@ -6827,6 +7140,7 @@
       "overrid",
       "param",
       "paramet",
+      "pass",
       "paus",
       "play",
       "playback",
@@ -6844,6 +7158,7 @@
       "remov",
       "removelisten",
       "render",
+      "requir",
       "return",
       "rgb",
       "right",
@@ -6851,6 +7166,7 @@
       "scale",
       "script",
       "segment",
+      "sequenc",
       "seri",
       "servo",
       "set",
@@ -6870,14 +7186,18 @@
       "switch",
       "system",
       "time",
+      "timelin",
       "timer",
       "toggl",
+      "tool",
       "toscaledrgb",
+      "true",
       "turn",
       "tutori",
       "tween",
       "tweenedvalu",
       "typic",
+      "until",
       "updat",
       "us",
       "util",
@@ -6918,11 +7238,11 @@
     },
     "undefined": {
       "kind": "tutorial",
-      "title": "Instantiating a Device",
-      "longname": "C-INSTANTIATING",
-      "name": "C-INSTANTIATING",
-      "tags": "C-INSTANTIATING",
-      "summary": "The ioOptions parameter is powerful, flexible, and just a little confusing.",
+      "title": "j5e's Timeline and Tweening Tools",
+      "longname": "D-ANIMATING",
+      "name": "D-ANIMATING",
+      "tags": "D-ANIMATING",
+      "summary": "Animations allow for complex sequencing of devices over time.",
       "description": "",
       "body": ""
     },
@@ -7123,7 +7443,7 @@
     "module-j5e_switch-Switch.html": {
       "id": "module-j5e_switch-Switch.html",
       "kind": "class",
-      "title": "j5e/switch~Switch",
+      "title": "&lt;async&gt; j5e/switch~Switch",
       "longname": "module:j5e/switch~Switch",
       "name": "Switch",
       "tags": "module:j5e/switch~Switch",
@@ -7134,7 +7454,7 @@
     "module-j5e_rgb-RGB.html": {
       "id": "module-j5e_rgb-RGB.html",
       "kind": "class",
-      "title": "j5e/rgb~RGB",
+      "title": "&lt;async&gt; j5e/rgb~RGB",
       "longname": "module:j5e/rgb~RGB",
       "name": "RGB",
       "tags": "module:j5e/rgb~RGB",
@@ -7235,7 +7555,7 @@
     "module-j5e_servo-Servo.html": {
       "id": "module-j5e_servo-Servo.html",
       "kind": "class",
-      "title": "j5e/servo~Servo",
+      "title": "&lt;async&gt; j5e/servo~Servo",
       "longname": "module:j5e/servo~Servo",
       "name": "Servo",
       "tags": "module:j5e/servo~Servo",
@@ -7442,7 +7762,7 @@
       "name": "brightness",
       "tags": "module:j5e/led~LED#brightness brightness",
       "summary": "",
-      "description": "Set the brightness of an led attached to PWM"
+      "description": "Set the brightness of an led attached to PWM (Requires ```pwm: true```)"
     },
     "module-j5e_led-LED.html#intensity": {
       "id": "module-j5e_led-LED.html#intensity",
@@ -7452,7 +7772,7 @@
       "name": "intensity",
       "tags": "module:j5e/led~LED#intensity intensity",
       "summary": "",
-      "description": "Set the brightness of an led 0-100"
+      "description": "Set the brightness of an led 0-100 (Requires ```pwm: true```)"
     },
     "module-j5e_led-LED.html#fade": {
       "id": "module-j5e_led-LED.html#fade",
@@ -7462,7 +7782,7 @@
       "name": "fade",
       "tags": "module:j5e/led~LED#fade fade",
       "summary": "",
-      "description": "fade Fade an led in and out"
+      "description": "fade Fade an led from its current value to a new value (Requires ```pwm: true```)"
     },
     "module-j5e_led-LED.html#fadeIn": {
       "id": "module-j5e_led-LED.html#fadeIn",
@@ -7472,7 +7792,7 @@
       "name": "fadeIn",
       "tags": "module:j5e/led~LED#fadeIn fadeIn",
       "summary": "",
-      "description": "fade Fade an led in"
+      "description": "fadeIn Fade an led in to full brightness (Requires ```pwm: true```)"
     },
     "module-j5e_led-LED.html#fadeOut": {
       "id": "module-j5e_led-LED.html#fadeOut",
@@ -7482,7 +7802,7 @@
       "name": "fadeOut",
       "tags": "module:j5e/led~LED#fadeOut fadeOut",
       "summary": "",
-      "description": "fade Fade an led out"
+      "description": "fadeOut Fade an led out until it is off (Requires ```pwm: true```)"
     },
     "module-j5e_led-LED.html#pulse": {
       "id": "module-j5e_led-LED.html#pulse",
@@ -7492,17 +7812,17 @@
       "name": "pulse",
       "tags": "module:j5e/led~LED#pulse pulse",
       "summary": "",
-      "description": "Pulse the LED in and out in a loop with specified time"
+      "description": "Pulse the LED in and out in a loop with specified time using ```inOutSine``` easing (Requires ```pwm: true```)"
     },
     "module-j5e_led-LED.html#animate": {
       "id": "module-j5e_led-LED.html#animate",
       "kind": "function",
-      "title": "animate( options ) → {RGB}",
+      "title": "animate( options ) → {LED}",
       "longname": "module:j5e/led~LED#animate",
       "name": "animate",
       "tags": "module:j5e/led~LED#animate animate",
       "summary": "",
-      "description": "Animate the RGB LED"
+      "description": "Animate the LED by passing in a segment options object"
     },
     "module-j5e_led-LED.html#stop": {
       "id": "module-j5e_led-LED.html#stop",
