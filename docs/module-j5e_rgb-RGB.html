@@ -121,74 +121,7 @@
 								<td class="attributes"></td>
 								<td></td>
 							<td class="last">
-									An array of 3 pin identifiers, IO options, or IO instances
-										<table class="params table table-striped">
-											<thead>
-											<tr>
-													<th>Name</th>
-												<th>Type</th>
-													<th>Attributes</th>
-													<th>Default</th>
-												<th class="last">Description</th>
-											</tr>
-											</thead>
-											<tbody>
-												<tr>
-														<td><code>pins</code></td>
-													<td><span class="param-type">Array.&lt;number></span> | <span class="param-type">Array.&lt;string></span> | <span class="param-type">object</span></td>
-														<td class="attributes">&lt;optional&gt;<br/></td>
-														<td></td>
-													<td class="last">
-															A pin number array, pin identifier array or a complete pins object
-																<table class="params table table-striped">
-																	<thead>
-																	<tr>
-																			<th>Name</th>
-																		<th>Type</th>
-																			<th>Attributes</th>
-																		<th class="last">Description</th>
-																	</tr>
-																	</thead>
-																	<tbody>
-																		<tr>
-																				<td><code>red</code></td>
-																			<td><span class="param-type">number</span> | <span class="param-type">string</span></td>
-																				<td class="attributes">&lt;optional&gt;<br/></td>
-																			<td class="last">
-																					A pin number or pin identifier for the red channel
-																			</td>
-																		</tr>
-																		<tr>
-																				<td><code>green</code></td>
-																			<td><span class="param-type">number</span> | <span class="param-type">string</span></td>
-																				<td class="attributes">&lt;optional&gt;<br/></td>
-																			<td class="last">
-																					A pin number or pin identifier for the green channel
-																			</td>
-																		</tr>
-																		<tr>
-																				<td><code>blue</code></td>
-																			<td><span class="param-type">number</span> | <span class="param-type">string</span></td>
-																				<td class="attributes">&lt;optional&gt;<br/></td>
-																			<td class="last">
-																					A pin number or pin identifier for the blue channel
-																			</td>
-																		</tr>
-																	</tbody>
-																</table>
-													</td>
-												</tr>
-												<tr>
-														<td><code>io</code></td>
-													<td><span class="param-type">string</span> | <span class="param-type">constructor</span> | <span class="param-type">Array.&lt;(string|constructor)></span></td>
-														<td class="attributes">&lt;optional&gt;<br/></td>
-														<td>builtin/pwm</td>
-													<td class="last">
-															A string specifying a path to the IO provider or a constructor, or an array of strings and/or constructors in RGB order
-													</td>
-												</tr>
-											</tbody>
-										</table>
+									Pin identifiers or IO Options (See <a href="tutorial-C-INSTANTIATING.html">Instantiating a Device</a>)
 							</td>
 						</tr>
 						<tr>
@@ -225,7 +158,42 @@
 					</tbody>
 				</table>
 			</div>
-			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Using pin numbers</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+			
+			(async function() {
+			  const rgb &#x3D; await new RGB([13, 12, 14]);
+			  rgb.color(&quot;#663399&quot;);
+			  rgb.blink();
+			})();</code></pre>
+					</div>
+					<div class="example-caption"><p>Using pin identifiers</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+			
+			(async function() {
+			  const rgb &#x3D; await new RGB([&quot;A1&quot;, &quot;A3&quot;, &quot;A4&quot;]);
+			  rgb.color(&quot;#663399&quot;);
+			  rgb.blink();
+			})();</code></pre>
+					</div>
+					<div class="example-caption"><p>Using io option objects</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+			import PCA9685 from &quot;PCA9685Expander&quot;
+			
+			(async function() {
+			  const rgb &#x3D; await new RGB([
+			    { pin: 0, io: PCA9685 },
+			    { pin: 1, io: PCA9685 },
+			    { pin: 2, io: PCA9685 }
+			  ]);
+			  rgb.color(&quot;#663399&quot;);
+			  rgb.blink();
+			})();</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
 			
@@ -245,7 +213,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-49">line 49</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-79">line 79</a></p>
 								</div>
 							</div>
 			
@@ -261,11 +229,11 @@
 									<dl class="symbol">
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="color" class="function public"><span class="name">color</span><span class="signature-params">( <span class="signature-param">color</span>, <span class="signature-param">color</span>, <span class="signature-param">color</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{RGB}</span></h4>
+			<h4 id="color" class="function public"><span class="name">color</span><span class="signature-params">( <span class="signature-param">red</span> [,&nbsp;<span class="signature-param">green</span> [,&nbsp;<span class="signature-param">blue</span>&nbsp;]&nbsp;]&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{RGB}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">color</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Control an RGB LED's color value. Accepts Hexadecimal strings, an array of color values, and RGB object or a separate argument for each color.</div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -273,29 +241,33 @@
 					<tr>
 							<th>Name</th>
 						<th>Type</th>
+							<th>Attributes</th>
 						<th class="last">Description</th>
 					</tr>
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>color</code></td>
-							<td><span class="param-type">String</span></td>
+								<td><code>red</code></td>
+							<td><span class="param-type">String</span> | <span class="param-type">Array</span> | <span class="param-type">Object</span> | <span class="param-type">Number</span></td>
+								<td class="attributes"></td>
 							<td class="last">
-									Hexadecimal color string or CSS color name
+									Hexadecimal color string, CSS color name, Array of color values, RGB object {red, green, blue}, or the value of the red channel
 							</td>
 						</tr>
 						<tr>
-								<td><code>color</code></td>
-							<td><span class="param-type">Array</span></td>
+								<td><code>green</code></td>
+							<td><span class="param-type">Number</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
 							<td class="last">
-									Array of color values
+									The value of the green channel
 							</td>
 						</tr>
 						<tr>
-								<td><code>color</code></td>
-							<td><span class="param-type">Object</span></td>
+								<td><code>blue</code></td>
+							<td><span class="param-type">Number</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
 							<td class="last">
-									object {red, green, blue}
+									The value of the blue channel
 							</td>
 						</tr>
 					</tbody>
@@ -309,6 +281,64 @@
 								</div>
 							</div>
 					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Use a hex value to make it purple</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+			
+			(async function() {
+			  const rgb &#x3D; await new RGB([13, 12, 14]);
+			  rgb.color(&quot;#663399&quot;);
+			})();</code></pre>
+					</div>
+					<div class="example-caption"><p>Use an RGB String to make it purple</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+			
+			(async function() {
+			  const rgb &#x3D; await new RGB([13, 12, 14]);
+			  rgb.color(&quot;rgb(102, 51, 153)&quot;);
+			})();</code></pre>
+					</div>
+					<div class="example-caption"><p>Use an RGBA String to make it darker purple</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+			
+			(async function() {
+			  const rgb &#x3D; await new RGB([13, 12, 14]);
+			  rgb.color(&quot;rgba(102, 51, 153, 50%)&quot;);
+			})();</code></pre>
+					</div>
+					<div class="example-caption"><p>Use an array to make it purple</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+			
+			(async function() {
+			  const rgb &#x3D; await new RGB([13, 12, 14]);
+			  rgb.color([408, 204, 612]); // Assumes 10-bit
+			})();</code></pre>
+					</div>
+					<div class="example-caption"><p>Use an object to make it purple</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+			
+			(async function() {
+			  const rgb &#x3D; await new RGB([13, 12, 14]);
+			  rgb.color({
+			    red: 102, 
+			    green: 51, 
+			    blue: 153
+			  });
+			})();</code></pre>
+					</div>
+					<div class="example-caption"><p>Use seperate Red, Green, and Blue arguments to make it purple</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+			
+			(async function() {
+			  const rgb &#x3D; await new RGB([13, 12, 14]);
+			  rgb.color(408, 204, 612); // Assumes 10-bit
+			})();</code></pre>
+					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -329,7 +359,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-141">line 141</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-246">line 246</a></p>
 								</div>
 							</div>
 			
@@ -341,56 +371,28 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="write" class="function public"><span class="name">write</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
+			<h4 id="on" class="function public"><span class="name">on</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{RGB}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Internal method that writes the current LED value to the IO</div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-177">line 177</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="off" class="function public"><span class="name">off</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{Led}</span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Turn the led off</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Turn an RGB LED on with whatever the current color value is</div>
 			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">Led</span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">RGB</span></label>
 								<div class="col-sm-9">
 									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Make it on</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+			
+			(async function() {
+			  const rgb &#x3D; await new RGB([13, 12, 14]);
+			  rgb.on(); // Default color is white
+			})();</code></pre>
+					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -411,7 +413,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-195">line 195</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-291">line 291</a></p>
 								</div>
 							</div>
 			
@@ -423,19 +425,33 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="on" class="function public"><span class="name">on</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{Led}</span></h4>
+			<h4 id="off" class="function public"><span class="name">off</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{RGB}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Turn an led on</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Turn an RGB LED off</div>
 			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">Led</span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">RGB</span></label>
 								<div class="col-sm-9">
 									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Make it purple for five seconds</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+			import {timer} from &quot;@j5e/fn&quot;;
+			
+			(async function() {
+			  const rgb &#x3D; await new RGB([13, 12, 14]);
+			  rgb.color(&quot;#663399&quot;);
+			
+			  time.setTimeout(function() {
+			    rgb.off();
+			  }, 5000);
+			})();</code></pre>
+					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -456,7 +472,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-222">line 222</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-324">line 324</a></p>
 								</div>
 							</div>
 			
@@ -468,19 +484,33 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="toggle" class="function public"><span class="name">toggle</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{Led}</span></h4>
+			<h4 id="toggle" class="function public"><span class="name">toggle</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{RGB}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Toggle the on/off state of an led</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Toggle the on/off state of an RGB LED</div>
 			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">Led</span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">RGB</span></label>
 								<div class="col-sm-9">
 									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Make it purple for five seconds</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+			import {timer} from &quot;@j5e/fn&quot;;
+			
+			(async function() {
+			  const rgb &#x3D; await new RGB([13, 12, 14]);
+			  rgb.color(&quot;#663399&quot;); // Turns RGB LED on
+			
+			  time.setTimeout(function() {
+			    rgb.off(); // Turns it off
+			  }, 5000);
+			})();</code></pre>
+					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -501,7 +531,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-242">line 242</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-362">line 362</a></p>
 								</div>
 							</div>
 			
@@ -517,7 +547,7 @@
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Blink the LED on a fixed interval</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Blink an RGB LED on a fixed interval</div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -557,6 +587,26 @@
 								</div>
 							</div>
 					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Make it blink</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+			
+			(async function() {
+			  const rgb &#x3D; await new RGB([13, 12, 14]);
+			  rgb.color(&quot;#663399&quot;);
+			  rgb.blink();
+			}();</code></pre>
+					</div>
+					<div class="example-caption"><p>Make it blink slowly</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+			
+			(async function() {
+			  const rgb &#x3D; await new RGB([13, 12, 14]);
+			  rgb.color(&quot;#663399&quot;);
+			  rgb.blink(5000);
+			})();</code></pre>
+					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -577,7 +627,301 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-252">line 252</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-391">line 391</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id="fade" class="function public"><span class="name">fade</span><span class="signature-params">( <span class="signature-param">val</span> [,&nbsp;<span class="signature-param">time</span> [,&nbsp;<span class="signature-param">callback</span>&nbsp;]&nbsp;]&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{RGB}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">fade Fade an RGB LED from its current value to a new value</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+							<th>Default</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>val</code></td>
+							<td><span class="param-type">Array.&lt;Number></span> | <span class="param-type">String</span> | <span class="param-type">Object</span></td>
+								<td class="attributes"></td>
+								<td></td>
+							<td class="last">
+									Hexadecimal color string, CSS color name, Array of color values, RGB object {red, green, blue}
+							</td>
+						</tr>
+						<tr>
+								<td><code>time</code></td>
+							<td><span class="param-type">Number</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+								<td>1000</td>
+							<td class="last">
+									Time in ms that a fade will take
+							</td>
+						</tr>
+						<tr>
+								<td><code>callback</code></td>
+							<td><span class="param-type">function</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+								<td></td>
+							<td class="last">
+									A function to run when the fade is complete
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">RGB</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Fade on to purple</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+			
+			(async function() {
+			  const rgb &#x3D; await new RGB([13, 12, 14]);
+			  rgb.fade(&quot;#663399&quot;);
+			})();</code></pre>
+					</div>
+					<div class="example-caption"><p>Fade on to purple over 3 seconds</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+			
+			(async function() {
+			  const rgb &#x3D; await new RGB([13, 12, 14]);
+			  rgb.fade(&quot;#663399&quot;, 3000);
+			})();</code></pre>
+					</div>
+					<div class="example-caption"><p>Fade on to purple over 3 seconds and then blink</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+			
+			(async function() {
+			  const rgb &#x3D; await new RGB([13, 12, 14]);
+			  rgb.fade(&quot;#663399&quot;, 3000, function() {
+			    rgb.blink();
+			  });
+			})();</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-445">line 445</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id="fadeIn" class="function public"><span class="name">fadeIn</span><span class="signature-params">( [&nbsp;<span class="signature-param">time</span> [,&nbsp;<span class="signature-param">callback</span>&nbsp;]&nbsp;]&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{RGB}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Fade an RGB LED to full brightness</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+							<th>Default</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>time</code></td>
+							<td><span class="param-type">Number</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+								<td>1000</td>
+							<td class="last">
+									Time in ms that a fade will take
+							</td>
+						</tr>
+						<tr>
+								<td><code>callback</code></td>
+							<td><span class="param-type">function</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+								<td></td>
+							<td class="last">
+									A function to run when the fade is complete
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">RGB</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">&lt;caption&gt;Fade an RGB LED to white over half a second
+			import RGB from &quot;@j5e/rgb&quot;;
+			
+			(async function() {
+			  const rgb &#x3D; await new RGB([13, 12, 14]);
+			  rgb.fadeIn(500);
+			})();</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-488">line 488</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id="fadeIn" class="function public"><span class="name">fadeIn</span><span class="signature-params">( [&nbsp;<span class="signature-param">time</span> [,&nbsp;<span class="signature-param">callback</span>&nbsp;]&nbsp;]&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{RGB}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Fade an RGB LED off</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+							<th>Default</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>time</code></td>
+							<td><span class="param-type">Number</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+								<td>1000</td>
+							<td class="last">
+									Time in ms that a fade will take
+							</td>
+						</tr>
+						<tr>
+								<td><code>callback</code></td>
+							<td><span class="param-type">function</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+								<td></td>
+							<td class="last">
+									A function to run when the fade is complete
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">RGB</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">&lt;caption&gt;Fade out an RGB LED over half a second
+			import RGB from &quot;@j5e/rgb&quot;;
+			
+			(async function() {
+			  const rgb &#x3D; await new RGB([13, 12, 14]);
+			  rgb.color(&quot;#663399&quot;);
+			  rgb.fadeOut(500);
+			})();</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-507">line 507</a></p>
 								</div>
 							</div>
 			
@@ -593,7 +937,7 @@
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Pulse the LED on a fixed interval</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Pulse an RGB LED on a fixed interval</div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -609,7 +953,7 @@
 						<tr>
 								<td><code>duration</code></td>
 							<td><span class="param-type">Number</span></td>
-								<td>100</td>
+								<td>1000</td>
 							<td class="last">
 									Time in ms on, time in ms off
 							</td>
@@ -633,6 +977,26 @@
 								</div>
 							</div>
 					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Make it pulse</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+			
+			(async function() {
+			  const rgb &#x3D; await new RGB([13, 12, 14]);
+			  rgb.color(&quot;#663399&quot;);
+			  rgb.pulse();
+			})();</code></pre>
+					</div>
+					<div class="example-caption"><p>Make it pulse slowly</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+			
+			(async function() {
+			  const rgb &#x3D; await new RGB([13, 12, 14]);
+			  rgb.color(&quot;#663399&quot;);
+			  rgb.pulse(5000);
+			})();</code></pre>
+					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -653,7 +1017,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-277">line 277</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-536">line 536</a></p>
 								</div>
 							</div>
 			
@@ -669,7 +1033,7 @@
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Animate the RGB LED</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Animate an RGB LED</div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -698,6 +1062,21 @@
 								</div>
 							</div>
 					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Animate an RGB LED using an animation segment options object</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+			
+			(async function() {
+			  const rgb &#x3D; await new RGB([13, 12, 14]);
+			  rgb.animate({
+			    duration: 4000,
+			    cuePoints: [0,  0.33, 0.66, 1],
+			    keyFrames: [&quot;#000000&quot;, &quot;#FF0000&quot;, &quot;#00FFFF&quot;, &quot;#FFFFFF&quot;],
+			    loop: true,
+			    metronomic: true
+			  });
+			})();</code></pre>
+					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -718,7 +1097,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-309">line 309</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-582">line 582</a></p>
 								</div>
 							</div>
 			
@@ -730,12 +1109,33 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="toScaledRGB" class="function public"><span class="name">toScaledRGB</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
+			<h4 id="stop" class="function public"><span class="name">stop</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{RGB}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">toScaledRGB
-			Scale the output values based on the current intensity</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Stop the RGB LED from pulsing, blinking, fading, or animating</div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">RGB</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Make it pulse for five seconds and then stop</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">(async function() {
+			  import RGB from &quot;@j5e/rgb&quot;;
+			  import {timer} from &quot;@j5e/fn&quot;;
+			
+			  const rgb &#x3D; await new RGB([13, 12, 14]);
+			  rgb.color(&quot;#663399&quot;);
+			  rgb.pulse(250);
+			  timer.setTimeout(function() {
+			    rgb.stop();
+			  }, 5000);
+			})();</code></pre>
+					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -756,7 +1156,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-351">line 351</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-610">line 610</a></p>
 								</div>
 							</div>
 			

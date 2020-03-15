@@ -274,94 +274,6 @@
           "module:j5e/switch~switch",
           "switch"
         ],
-        "module-j5e_rgb-RGB.html": [
-          "allow",
-          "class",
-          "control",
-          "j5e/rgb~rgb",
-          "led'",
-          "lt;async&gt",
-          "module:j5e/rgb~rgb",
-          "rgb"
-        ],
-        "module-j5e_rgb-RGB.html#color": [
-          "color",
-          "function",
-          "module:j5e/rgb~rgb#color",
-          "rgb"
-        ],
-        "module-j5e_rgb-RGB.html#write": [
-          "current",
-          "function",
-          "intern",
-          "io",
-          "led",
-          "method",
-          "module:j5e/rgb~rgb#writ",
-          "valu",
-          "write"
-        ],
-        "module-j5e_rgb-RGB.html#off": [
-          "function",
-          "led",
-          "module:j5e/rgb~rgb#off",
-          "turn"
-        ],
-        "module-j5e_rgb-RGB.html#on": [
-          "function",
-          "led",
-          "module:j5e/rgb~rgb#on",
-          "turn"
-        ],
-        "module-j5e_rgb-RGB.html#toggle": [
-          "function",
-          "led",
-          "module:j5e/rgb~rgb#toggl",
-          "on/off",
-          "state",
-          "toggl"
-        ],
-        "module-j5e_rgb-RGB.html#blink": [
-          "blink",
-          "callback",
-          "durat",
-          "fix",
-          "function",
-          "interv",
-          "led",
-          "module:j5e/rgb~rgb#blink",
-          "rgb"
-        ],
-        "module-j5e_rgb-RGB.html#pulse": [
-          "callback",
-          "durat",
-          "fix",
-          "function",
-          "interv",
-          "led",
-          "module:j5e/rgb~rgb#puls",
-          "puls",
-          "rgb"
-        ],
-        "module-j5e_rgb-RGB.html#animate": [
-          "anim",
-          "function",
-          "led",
-          "module:j5e/rgb~rgb#anim",
-          "option",
-          "rgb"
-        ],
-        "module-j5e_rgb-RGB.html#toScaledRGB": [
-          "base",
-          "current",
-          "function",
-          "intens",
-          "module:j5e/rgb~rgb#toscaledrgb",
-          "output",
-          "scale",
-          "toscaledrgb",
-          "valu"
-        ],
         "module-j5e_servo-Servo.html": [
           "allow",
           "class",
@@ -658,13 +570,135 @@
           "segment"
         ],
         "module-j5e_led-LED.html#stop": [
+          "anim",
+          "blink",
           "fade",
           "function",
           "led",
           "module:j5e/led~led#stop",
           "puls",
-          "stop",
-          "strobe"
+          "stop"
+        ],
+        "module-j5e_rgb-RGB.html": [
+          "allow",
+          "class",
+          "control",
+          "j5e/rgb~rgb",
+          "led'",
+          "lt;async&gt",
+          "module:j5e/rgb~rgb",
+          "rgb"
+        ],
+        "module-j5e_rgb-RGB.html#color": [
+          "accept",
+          "argument",
+          "array",
+          "blue",
+          "color",
+          "control",
+          "each",
+          "function",
+          "green",
+          "hexadecim",
+          "led'",
+          "module:j5e/rgb~rgb#color",
+          "object",
+          "red",
+          "rgb",
+          "separ",
+          "string",
+          "valu"
+        ],
+        "module-j5e_rgb-RGB.html#on": [
+          "color",
+          "current",
+          "function",
+          "led",
+          "module:j5e/rgb~rgb#on",
+          "rgb",
+          "turn",
+          "valu",
+          "whatev"
+        ],
+        "module-j5e_rgb-RGB.html#off": [
+          "function",
+          "led",
+          "module:j5e/rgb~rgb#off",
+          "rgb",
+          "turn"
+        ],
+        "module-j5e_rgb-RGB.html#toggle": [
+          "function",
+          "led",
+          "module:j5e/rgb~rgb#toggl",
+          "on/off",
+          "rgb",
+          "state",
+          "toggl"
+        ],
+        "module-j5e_rgb-RGB.html#blink": [
+          "blink",
+          "callback",
+          "durat",
+          "fix",
+          "function",
+          "interv",
+          "led",
+          "module:j5e/rgb~rgb#blink",
+          "rgb"
+        ],
+        "module-j5e_rgb-RGB.html#fade": [
+          "callback",
+          "current",
+          "fade",
+          "function",
+          "led",
+          "module:j5e/rgb~rgb#fad",
+          "new",
+          "rgb",
+          "time",
+          "val",
+          "valu"
+        ],
+        "module-j5e_rgb-RGB.html#fadeIn": [
+          "callback",
+          "fade",
+          "fadein",
+          "function",
+          "led",
+          "module:j5e/rgb~rgb#fadein",
+          "rgb",
+          "time"
+        ],
+        "module-j5e_rgb-RGB.html#pulse": [
+          "callback",
+          "durat",
+          "fix",
+          "function",
+          "interv",
+          "led",
+          "module:j5e/rgb~rgb#puls",
+          "puls",
+          "rgb"
+        ],
+        "module-j5e_rgb-RGB.html#animate": [
+          "anim",
+          "function",
+          "led",
+          "module:j5e/rgb~rgb#anim",
+          "option",
+          "rgb"
+        ],
+        "module-j5e_rgb-RGB.html#stop": [
+          "anim",
+          "blink",
+          "fade",
+          "function",
+          "led",
+          "module:j5e/rgb~rgb#stop",
+          "puls",
+          "rgb",
+          "stop"
         ],
         "module-j5e_animation-Timer.html": [
           "class",
@@ -761,7 +795,7 @@
           "switch"
         ]
       },
-      "length": 71
+      "length": 72
     },
     "tokenStore": {
       "root": {
@@ -1080,6 +1114,10 @@
                   "module-j5e_animation-Animation.html#loopFunction": {
                     "ref": "module-j5e_animation-Animation.html#loopFunction",
                     "tf": 7.142857142857142
+                  },
+                  "module-j5e_rgb-RGB.html#color": {
+                    "ref": "module-j5e_rgb-RGB.html#color",
+                    "tf": 2.941176470588235
                   }
                 }
               }
@@ -1161,17 +1199,17 @@
             },
             "x": {
               "docs": {
-                "module-j5e_rgb-RGB.html#blink": {
-                  "ref": "module-j5e_rgb-RGB.html#blink",
-                  "tf": 12.5
-                },
-                "module-j5e_rgb-RGB.html#pulse": {
-                  "ref": "module-j5e_rgb-RGB.html#pulse",
-                  "tf": 12.5
-                },
                 "module-j5e_led-LED.html#blink": {
                   "ref": "module-j5e_led-LED.html#blink",
                   "tf": 12.5
+                },
+                "module-j5e_rgb-RGB.html#blink": {
+                  "ref": "module-j5e_rgb-RGB.html#blink",
+                  "tf": 10
+                },
+                "module-j5e_rgb-RGB.html#pulse": {
+                  "ref": "module-j5e_rgb-RGB.html#pulse",
+                  "tf": 10
                 }
               }
             }
@@ -1251,42 +1289,6 @@
                           },
                           "module-j5e_animation-Animation.html#normalizeKeyframes": {
                             "ref": "module-j5e_animation-Animation.html#normalizeKeyframes",
-                            "tf": 110
-                          },
-                          "module-j5e_rgb-RGB.html#color": {
-                            "ref": "module-j5e_rgb-RGB.html#color",
-                            "tf": 110
-                          },
-                          "module-j5e_rgb-RGB.html#write": {
-                            "ref": "module-j5e_rgb-RGB.html#write",
-                            "tf": 110
-                          },
-                          "module-j5e_rgb-RGB.html#off": {
-                            "ref": "module-j5e_rgb-RGB.html#off",
-                            "tf": 110
-                          },
-                          "module-j5e_rgb-RGB.html#on": {
-                            "ref": "module-j5e_rgb-RGB.html#on",
-                            "tf": 110
-                          },
-                          "module-j5e_rgb-RGB.html#toggle": {
-                            "ref": "module-j5e_rgb-RGB.html#toggle",
-                            "tf": 110
-                          },
-                          "module-j5e_rgb-RGB.html#blink": {
-                            "ref": "module-j5e_rgb-RGB.html#blink",
-                            "tf": 110
-                          },
-                          "module-j5e_rgb-RGB.html#pulse": {
-                            "ref": "module-j5e_rgb-RGB.html#pulse",
-                            "tf": 110
-                          },
-                          "module-j5e_rgb-RGB.html#animate": {
-                            "ref": "module-j5e_rgb-RGB.html#animate",
-                            "tf": 110
-                          },
-                          "module-j5e_rgb-RGB.html#toScaledRGB": {
-                            "ref": "module-j5e_rgb-RGB.html#toScaledRGB",
                             "tf": 110
                           },
                           "module-j5e_servo-Servo.html#initialize": {
@@ -1393,6 +1395,46 @@
                             "ref": "module-j5e_led-LED.html#stop",
                             "tf": 110
                           },
+                          "module-j5e_rgb-RGB.html#color": {
+                            "ref": "module-j5e_rgb-RGB.html#color",
+                            "tf": 110
+                          },
+                          "module-j5e_rgb-RGB.html#on": {
+                            "ref": "module-j5e_rgb-RGB.html#on",
+                            "tf": 110
+                          },
+                          "module-j5e_rgb-RGB.html#off": {
+                            "ref": "module-j5e_rgb-RGB.html#off",
+                            "tf": 110
+                          },
+                          "module-j5e_rgb-RGB.html#toggle": {
+                            "ref": "module-j5e_rgb-RGB.html#toggle",
+                            "tf": 110
+                          },
+                          "module-j5e_rgb-RGB.html#blink": {
+                            "ref": "module-j5e_rgb-RGB.html#blink",
+                            "tf": 110
+                          },
+                          "module-j5e_rgb-RGB.html#fade": {
+                            "ref": "module-j5e_rgb-RGB.html#fade",
+                            "tf": 110
+                          },
+                          "module-j5e_rgb-RGB.html#fadeIn": {
+                            "ref": "module-j5e_rgb-RGB.html#fadeIn",
+                            "tf": 110
+                          },
+                          "module-j5e_rgb-RGB.html#pulse": {
+                            "ref": "module-j5e_rgb-RGB.html#pulse",
+                            "tf": 110
+                          },
+                          "module-j5e_rgb-RGB.html#animate": {
+                            "ref": "module-j5e_rgb-RGB.html#animate",
+                            "tf": 110
+                          },
+                          "module-j5e_rgb-RGB.html#stop": {
+                            "ref": "module-j5e_rgb-RGB.html#stop",
+                            "tf": 110
+                          },
                           "module-j5e_easing.html": {
                             "ref": "module-j5e_easing.html",
                             "tf": 8.333333333333332
@@ -1411,6 +1453,10 @@
                   "module-j5e_led-LED.html#fadeIn": {
                     "ref": "module-j5e_led-LED.html#fadeIn",
                     "tf": 6.25
+                  },
+                  "module-j5e_rgb-RGB.html#fadeIn": {
+                    "ref": "module-j5e_rgb-RGB.html#fadeIn",
+                    "tf": 10
                   }
                 }
               }
@@ -1493,7 +1539,19 @@
                   },
                   "module-j5e_led-LED.html#stop": {
                     "ref": "module-j5e_led-LED.html#stop",
-                    "tf": 8.333333333333332
+                    "tf": 7.142857142857142
+                  },
+                  "module-j5e_rgb-RGB.html#fade": {
+                    "ref": "module-j5e_rgb-RGB.html#fade",
+                    "tf": 682.5
+                  },
+                  "module-j5e_rgb-RGB.html#fadeIn": {
+                    "ref": "module-j5e_rgb-RGB.html#fadeIn",
+                    "tf": 16.666666666666664
+                  },
+                  "module-j5e_rgb-RGB.html#stop": {
+                    "ref": "module-j5e_rgb-RGB.html#stop",
+                    "tf": 7.142857142857142
                   }
                 },
                 "i": {
@@ -1503,6 +1561,10 @@
                       "module-j5e_led-LED.html#fadeIn": {
                         "ref": "module-j5e_led-LED.html#fadeIn",
                         "tf": 681.25
+                      },
+                      "module-j5e_rgb-RGB.html#fadeIn": {
+                        "ref": "module-j5e_rgb-RGB.html#fadeIn",
+                        "tf": 675
                       }
                     }
                   }
@@ -1624,10 +1686,6 @@
                   },
                   "s": {
                     "docs": {
-                      "module-j5e_rgb-RGB.html#toScaledRGB": {
-                        "ref": "module-j5e_rgb-RGB.html#toScaledRGB",
-                        "tf": 7.142857142857142
-                      },
                       "module-j5e_led-LED.html#intensity": {
                         "ref": "module-j5e_led-LED.html#intensity",
                         "tf": 683.3333333333334
@@ -1637,27 +1695,19 @@
                 },
                 "r": {
                   "docs": {},
-                  "n": {
-                    "docs": {
-                      "module-j5e_rgb-RGB.html#write": {
-                        "ref": "module-j5e_rgb-RGB.html#write",
-                        "tf": 7.142857142857142
-                      }
-                    }
-                  },
                   "v": {
                     "docs": {
-                      "module-j5e_rgb-RGB.html#blink": {
-                        "ref": "module-j5e_rgb-RGB.html#blink",
-                        "tf": 12.5
-                      },
-                      "module-j5e_rgb-RGB.html#pulse": {
-                        "ref": "module-j5e_rgb-RGB.html#pulse",
-                        "tf": 12.5
-                      },
                       "module-j5e_led-LED.html#blink": {
                         "ref": "module-j5e_led-LED.html#blink",
                         "tf": 12.5
+                      },
+                      "module-j5e_rgb-RGB.html#blink": {
+                        "ref": "module-j5e_rgb-RGB.html#blink",
+                        "tf": 10
+                      },
+                      "module-j5e_rgb-RGB.html#pulse": {
+                        "ref": "module-j5e_rgb-RGB.html#pulse",
+                        "tf": 10
                       }
                     }
                   }
@@ -1704,10 +1754,6 @@
           },
           "o": {
             "docs": {
-              "module-j5e_rgb-RGB.html#write": {
-                "ref": "module-j5e_rgb-RGB.html#write",
-                "tf": 7.142857142857142
-              },
               "module-j5e_servo-Servo.html#update": {
                 "ref": "module-j5e_servo-Servo.html#update",
                 "tf": 8.333333333333332
@@ -1987,6 +2033,31 @@
                     }
                   }
                 },
+                "l": {
+                  "docs": {
+                    "module-j5e_led.html": {
+                      "ref": "module-j5e_led.html",
+                      "tf": 600
+                    }
+                  },
+                  "e": {
+                    "docs": {},
+                    "d": {
+                      "docs": {},
+                      "~": {
+                        "docs": {},
+                        "l": {
+                          "docs": {
+                            "module-j5e_led-LED.html": {
+                              "ref": "module-j5e_led-LED.html",
+                              "tf": 50
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
                 "r": {
                   "docs": {},
                   "g": {
@@ -2011,31 +2082,6 @@
                                   "tf": 50
                                 }
                               }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                },
-                "l": {
-                  "docs": {
-                    "module-j5e_led.html": {
-                      "ref": "module-j5e_led.html",
-                      "tf": 600
-                    }
-                  },
-                  "e": {
-                    "docs": {},
-                    "d": {
-                      "docs": {},
-                      "~": {
-                        "docs": {},
-                        "l": {
-                          "docs": {
-                            "module-j5e_led-LED.html": {
-                              "ref": "module-j5e_led-LED.html",
-                              "tf": 50
                             }
                           }
                         }
@@ -2208,6 +2254,14 @@
                 }
               }
             },
+            "d": {
+              "docs": {
+                "module-j5e_rgb-RGB.html#color": {
+                  "ref": "module-j5e_rgb-RGB.html#color",
+                  "tf": 20
+                }
+              }
+            },
             "l": {
               "docs": {},
               "a": {
@@ -2240,41 +2294,6 @@
                       "tf": 4.166666666666666
                     }
                   }
-                }
-              }
-            }
-          },
-          "g": {
-            "docs": {},
-            "b": {
-              "docs": {
-                "module-j5e_rgb-RGB.html": {
-                  "ref": "module-j5e_rgb-RGB.html",
-                  "tf": 516.6666666666666
-                },
-                "module-j5e_rgb-RGB.html#color": {
-                  "ref": "module-j5e_rgb-RGB.html#color",
-                  "tf": 20
-                },
-                "module-j5e_rgb-RGB.html#blink": {
-                  "ref": "module-j5e_rgb-RGB.html#blink",
-                  "tf": 25
-                },
-                "module-j5e_rgb-RGB.html#pulse": {
-                  "ref": "module-j5e_rgb-RGB.html#pulse",
-                  "tf": 25
-                },
-                "module-j5e_rgb-RGB.html#animate": {
-                  "ref": "module-j5e_rgb-RGB.html#animate",
-                  "tf": 49.99999999999999
-                },
-                "module-j5e_animation.html": {
-                  "ref": "module-j5e_animation.html",
-                  "tf": 4.166666666666666
-                },
-                "module-j5e_rgb.html": {
-                  "ref": "module-j5e_rgb.html",
-                  "tf": 20
                 }
               }
             }
@@ -2321,6 +2340,65 @@
                       "tf": 7.142857142857142
                     }
                   }
+                }
+              }
+            }
+          },
+          "g": {
+            "docs": {},
+            "b": {
+              "docs": {
+                "module-j5e_rgb-RGB.html": {
+                  "ref": "module-j5e_rgb-RGB.html",
+                  "tf": 516.6666666666666
+                },
+                "module-j5e_rgb-RGB.html#color": {
+                  "ref": "module-j5e_rgb-RGB.html#color",
+                  "tf": 25.88235294117647
+                },
+                "module-j5e_rgb-RGB.html#on": {
+                  "ref": "module-j5e_rgb-RGB.html#on",
+                  "tf": 107.14285714285714
+                },
+                "module-j5e_rgb-RGB.html#off": {
+                  "ref": "module-j5e_rgb-RGB.html#off",
+                  "tf": 116.66666666666666
+                },
+                "module-j5e_rgb-RGB.html#toggle": {
+                  "ref": "module-j5e_rgb-RGB.html#toggle",
+                  "tf": 60
+                },
+                "module-j5e_rgb-RGB.html#blink": {
+                  "ref": "module-j5e_rgb-RGB.html#blink",
+                  "tf": 35
+                },
+                "module-j5e_rgb-RGB.html#fade": {
+                  "ref": "module-j5e_rgb-RGB.html#fade",
+                  "tf": 26.25
+                },
+                "module-j5e_rgb-RGB.html#fadeIn": {
+                  "ref": "module-j5e_rgb-RGB.html#fadeIn",
+                  "tf": 41.666666666666664
+                },
+                "module-j5e_rgb-RGB.html#pulse": {
+                  "ref": "module-j5e_rgb-RGB.html#pulse",
+                  "tf": 35
+                },
+                "module-j5e_rgb-RGB.html#animate": {
+                  "ref": "module-j5e_rgb-RGB.html#animate",
+                  "tf": 49.99999999999999
+                },
+                "module-j5e_rgb-RGB.html#stop": {
+                  "ref": "module-j5e_rgb-RGB.html#stop",
+                  "tf": 57.14285714285714
+                },
+                "module-j5e_animation.html": {
+                  "ref": "module-j5e_animation.html",
+                  "tf": 4.166666666666666
+                },
+                "module-j5e_rgb.html": {
+                  "ref": "module-j5e_rgb.html",
+                  "tf": 20
                 }
               }
             }
@@ -2430,13 +2508,13 @@
                 "docs": {},
                 "e": {
                   "docs": {
-                    "module-j5e_rgb-RGB.html#toggle": {
-                      "ref": "module-j5e_rgb-RGB.html#toggle",
-                      "tf": 12.5
-                    },
                     "module-j5e_led-LED.html#toggle": {
                       "ref": "module-j5e_led-LED.html#toggle",
                       "tf": 12.5
+                    },
+                    "module-j5e_rgb-RGB.html#toggle": {
+                      "ref": "module-j5e_rgb-RGB.html#toggle",
+                      "tf": 10
                     }
                   }
                 }
@@ -2469,7 +2547,11 @@
                   },
                   "module-j5e_led-LED.html#stop": {
                     "ref": "module-j5e_led-LED.html#stop",
-                    "tf": 716.6666666666666
+                    "tf": 714.2857142857143
+                  },
+                  "module-j5e_rgb-RGB.html#stop": {
+                    "ref": "module-j5e_rgb-RGB.html#stop",
+                    "tf": 707.1428571428571
                   }
                 }
               }
@@ -2487,15 +2569,15 @@
             },
             "r": {
               "docs": {},
-              "o": {
+              "i": {
                 "docs": {},
-                "b": {
+                "n": {
                   "docs": {},
-                  "e": {
+                  "g": {
                     "docs": {
-                      "module-j5e_led-LED.html#stop": {
-                        "ref": "module-j5e_led-LED.html#stop",
-                        "tf": 8.333333333333332
+                      "module-j5e_rgb-RGB.html#color": {
+                        "ref": "module-j5e_rgb-RGB.html#color",
+                        "tf": 2.941176470588235
                       }
                     }
                   }
@@ -2689,6 +2771,20 @@
                   "tf": 12.5
                 }
               }
+            },
+            "p": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "r": {
+                  "docs": {
+                    "module-j5e_rgb-RGB.html#color": {
+                      "ref": "module-j5e_rgb-RGB.html#color",
+                      "tf": 2.941176470588235
+                    }
+                  }
+                }
+              }
             }
           },
           "c": {
@@ -2705,20 +2801,6 @@
                         "ref": "module-j5e_animation-Animation.html",
                         "tf": 10
                       }
-                    }
-                  }
-                }
-              }
-            },
-            "a": {
-              "docs": {},
-              "l": {
-                "docs": {},
-                "e": {
-                  "docs": {
-                    "module-j5e_rgb-RGB.html#toScaledRGB": {
-                      "ref": "module-j5e_rgb-RGB.html#toScaledRGB",
-                      "tf": 7.142857142857142
                     }
                   }
                 }
@@ -3005,16 +3087,16 @@
                 "docs": {},
                 "t": {
                   "docs": {
+                    "module-j5e_led-LED.html#blink": {
+                      "ref": "module-j5e_led-LED.html#blink",
+                      "tf": 25
+                    },
                     "module-j5e_rgb-RGB.html#blink": {
                       "ref": "module-j5e_rgb-RGB.html#blink",
                       "tf": 25
                     },
                     "module-j5e_rgb-RGB.html#pulse": {
                       "ref": "module-j5e_rgb-RGB.html#pulse",
-                      "tf": 25
-                    },
-                    "module-j5e_led-LED.html#blink": {
-                      "ref": "module-j5e_led-LED.html#blink",
                       "tf": 25
                     }
                   }
@@ -3106,6 +3188,23 @@
                 }
               }
             }
+          },
+          "r": {
+            "docs": {},
+            "e": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "n": {
+                  "docs": {
+                    "module-j5e_rgb-RGB.html#color": {
+                      "ref": "module-j5e_rgb-RGB.html#color",
+                      "tf": 20
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "t": {
@@ -3136,14 +3235,6 @@
               "docs": {},
               "n": {
                 "docs": {
-                  "module-j5e_rgb-RGB.html#off": {
-                    "ref": "module-j5e_rgb-RGB.html#off",
-                    "tf": 25
-                  },
-                  "module-j5e_rgb-RGB.html#on": {
-                    "ref": "module-j5e_rgb-RGB.html#on",
-                    "tf": 25
-                  },
                   "module-j5e_led-LED.html#on": {
                     "ref": "module-j5e_led-LED.html#on",
                     "tf": 25
@@ -3151,6 +3242,14 @@
                   "module-j5e_led-LED.html#off": {
                     "ref": "module-j5e_led-LED.html#off",
                     "tf": 25
+                  },
+                  "module-j5e_rgb-RGB.html#on": {
+                    "ref": "module-j5e_rgb-RGB.html#on",
+                    "tf": 7.142857142857142
+                  },
+                  "module-j5e_rgb-RGB.html#off": {
+                    "ref": "module-j5e_rgb-RGB.html#off",
+                    "tf": 16.666666666666664
                   }
                 }
               }
@@ -3208,6 +3307,14 @@
                   "module-j5e_led-LED.html#pulse": {
                     "ref": "module-j5e_led-LED.html#pulse",
                     "tf": 29.166666666666664
+                  },
+                  "module-j5e_rgb-RGB.html#fade": {
+                    "ref": "module-j5e_rgb-RGB.html#fade",
+                    "tf": 20
+                  },
+                  "module-j5e_rgb-RGB.html#fadeIn": {
+                    "ref": "module-j5e_rgb-RGB.html#fadeIn",
+                    "tf": 25
                   }
                 },
                 "l": {
@@ -3252,45 +3359,13 @@
                 "docs": {},
                 "l": {
                   "docs": {
-                    "module-j5e_rgb-RGB.html#toggle": {
-                      "ref": "module-j5e_rgb-RGB.html#toggle",
-                      "tf": 712.5
-                    },
                     "module-j5e_led-LED.html#toggle": {
                       "ref": "module-j5e_led-LED.html#toggle",
                       "tf": 712.5
-                    }
-                  }
-                }
-              }
-            },
-            "s": {
-              "docs": {},
-              "c": {
-                "docs": {},
-                "a": {
-                  "docs": {},
-                  "l": {
-                    "docs": {},
-                    "e": {
-                      "docs": {},
-                      "d": {
-                        "docs": {},
-                        "r": {
-                          "docs": {},
-                          "g": {
-                            "docs": {},
-                            "b": {
-                              "docs": {
-                                "module-j5e_rgb-RGB.html#toScaledRGB": {
-                                  "ref": "module-j5e_rgb-RGB.html#toScaledRGB",
-                                  "tf": 757.1428571428571
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
+                    },
+                    "module-j5e_rgb-RGB.html#toggle": {
+                      "ref": "module-j5e_rgb-RGB.html#toggle",
+                      "tf": 710
                     }
                   }
                 }
@@ -3449,10 +3524,6 @@
                       "ref": "module-j5e_switch-Switch.html",
                       "tf": 8.333333333333332
                     },
-                    "module-j5e_rgb-RGB.html": {
-                      "ref": "module-j5e_rgb-RGB.html",
-                      "tf": 8.333333333333332
-                    },
                     "module-j5e_servo-Servo.html": {
                       "ref": "module-j5e_servo-Servo.html",
                       "tf": 8.333333333333332
@@ -3460,6 +3531,10 @@
                     "module-j5e_led-LED.html": {
                       "ref": "module-j5e_led-LED.html",
                       "tf": 7.142857142857142
+                    },
+                    "module-j5e_rgb-RGB.html": {
+                      "ref": "module-j5e_rgb-RGB.html",
+                      "tf": 8.333333333333332
                     }
                   }
                 }
@@ -3495,13 +3570,21 @@
                     "ref": "module-j5e_animation-Animation.html#loopFunction",
                     "tf": 7.142857142857142
                   },
+                  "module-j5e_led-LED.html#animate": {
+                    "ref": "module-j5e_led-LED.html#animate",
+                    "tf": 691.6666666666667
+                  },
+                  "module-j5e_led-LED.html#stop": {
+                    "ref": "module-j5e_led-LED.html#stop",
+                    "tf": 7.142857142857142
+                  },
                   "module-j5e_rgb-RGB.html#animate": {
                     "ref": "module-j5e_rgb-RGB.html#animate",
                     "tf": 700
                   },
-                  "module-j5e_led-LED.html#animate": {
-                    "ref": "module-j5e_led-LED.html#animate",
-                    "tf": 691.6666666666667
+                  "module-j5e_rgb-RGB.html#stop": {
+                    "ref": "module-j5e_rgb-RGB.html#stop",
+                    "tf": 7.142857142857142
                   },
                   "module-j5e_animation.html": {
                     "ref": "module-j5e_animation.html",
@@ -3566,6 +3649,66 @@
                 }
               }
             }
+          },
+          "c": {
+            "docs": {},
+            "c": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "p": {
+                  "docs": {},
+                  "t": {
+                    "docs": {
+                      "module-j5e_rgb-RGB.html#color": {
+                        "ref": "module-j5e_rgb-RGB.html#color",
+                        "tf": 2.941176470588235
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "r": {
+            "docs": {},
+            "g": {
+              "docs": {},
+              "u": {
+                "docs": {},
+                "m": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "n": {
+                      "docs": {},
+                      "t": {
+                        "docs": {
+                          "module-j5e_rgb-RGB.html#color": {
+                            "ref": "module-j5e_rgb-RGB.html#color",
+                            "tf": 2.941176470588235
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "r": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "y": {
+                  "docs": {
+                    "module-j5e_rgb-RGB.html#color": {
+                      "ref": "module-j5e_rgb-RGB.html#color",
+                      "tf": 2.941176470588235
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "b": {
@@ -3591,31 +3734,6 @@
                   "module-j5e_animation-Animation.html#tweenedValue": {
                     "ref": "module-j5e_animation-Animation.html#tweenedValue",
                     "tf": 4.166666666666666
-                  },
-                  "module-j5e_rgb-RGB.html#toScaledRGB": {
-                    "ref": "module-j5e_rgb-RGB.html#toScaledRGB",
-                    "tf": 7.142857142857142
-                  }
-                }
-              }
-            }
-          },
-          "l": {
-            "docs": {},
-            "i": {
-              "docs": {},
-              "n": {
-                "docs": {},
-                "k": {
-                  "docs": {
-                    "module-j5e_rgb-RGB.html#blink": {
-                      "ref": "module-j5e_rgb-RGB.html#blink",
-                      "tf": 687.5
-                    },
-                    "module-j5e_led-LED.html#blink": {
-                      "ref": "module-j5e_led-LED.html#blink",
-                      "tf": 687.5
-                    }
                   }
                 }
               }
@@ -3648,6 +3766,46 @@
               }
             }
           },
+          "l": {
+            "docs": {},
+            "i": {
+              "docs": {},
+              "n": {
+                "docs": {},
+                "k": {
+                  "docs": {
+                    "module-j5e_led-LED.html#blink": {
+                      "ref": "module-j5e_led-LED.html#blink",
+                      "tf": 687.5
+                    },
+                    "module-j5e_led-LED.html#stop": {
+                      "ref": "module-j5e_led-LED.html#stop",
+                      "tf": 7.142857142857142
+                    },
+                    "module-j5e_rgb-RGB.html#blink": {
+                      "ref": "module-j5e_rgb-RGB.html#blink",
+                      "tf": 685
+                    },
+                    "module-j5e_rgb-RGB.html#stop": {
+                      "ref": "module-j5e_rgb-RGB.html#stop",
+                      "tf": 7.142857142857142
+                    }
+                  }
+                }
+              }
+            },
+            "u": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "module-j5e_rgb-RGB.html#color": {
+                    "ref": "module-j5e_rgb-RGB.html#color",
+                    "tf": 20
+                  }
+                }
+              }
+            }
+          },
           "r": {
             "docs": {},
             "i": {
@@ -3669,6 +3827,10 @@
                       "module-j5e_led-LED.html#fadeIn": {
                         "ref": "module-j5e_led-LED.html#fadeIn",
                         "tf": 6.25
+                      },
+                      "module-j5e_rgb-RGB.html#fadeIn": {
+                        "ref": "module-j5e_rgb-RGB.html#fadeIn",
+                        "tf": 10
                       }
                     }
                   }
@@ -4654,205 +4816,6 @@
                                   }
                                 }
                               },
-                              "r": {
-                                "docs": {},
-                                "g": {
-                                  "docs": {},
-                                  "b": {
-                                    "docs": {
-                                      "module-j5e_rgb.html": {
-                                        "ref": "module-j5e_rgb.html",
-                                        "tf": 1300
-                                      }
-                                    },
-                                    "~": {
-                                      "docs": {},
-                                      "r": {
-                                        "docs": {},
-                                        "g": {
-                                          "docs": {},
-                                          "b": {
-                                            "docs": {
-                                              "module-j5e_rgb-RGB.html": {
-                                                "ref": "module-j5e_rgb-RGB.html",
-                                                "tf": 1300
-                                              }
-                                            },
-                                            "#": {
-                                              "docs": {},
-                                              "c": {
-                                                "docs": {},
-                                                "o": {
-                                                  "docs": {},
-                                                  "l": {
-                                                    "docs": {},
-                                                    "o": {
-                                                      "docs": {},
-                                                      "r": {
-                                                        "docs": {
-                                                          "module-j5e_rgb-RGB.html#color": {
-                                                            "ref": "module-j5e_rgb-RGB.html#color",
-                                                            "tf": 1150
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "w": {
-                                                "docs": {},
-                                                "r": {
-                                                  "docs": {},
-                                                  "i": {
-                                                    "docs": {},
-                                                    "t": {
-                                                      "docs": {
-                                                        "module-j5e_rgb-RGB.html#write": {
-                                                          "ref": "module-j5e_rgb-RGB.html#write",
-                                                          "tf": 1150
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "o": {
-                                                "docs": {},
-                                                "f": {
-                                                  "docs": {},
-                                                  "f": {
-                                                    "docs": {
-                                                      "module-j5e_rgb-RGB.html#off": {
-                                                        "ref": "module-j5e_rgb-RGB.html#off",
-                                                        "tf": 1300
-                                                      }
-                                                    }
-                                                  }
-                                                },
-                                                "n": {
-                                                  "docs": {
-                                                    "module-j5e_rgb-RGB.html#on": {
-                                                      "ref": "module-j5e_rgb-RGB.html#on",
-                                                      "tf": 1300
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "t": {
-                                                "docs": {},
-                                                "o": {
-                                                  "docs": {},
-                                                  "g": {
-                                                    "docs": {},
-                                                    "g": {
-                                                      "docs": {},
-                                                      "l": {
-                                                        "docs": {
-                                                          "module-j5e_rgb-RGB.html#toggle": {
-                                                            "ref": "module-j5e_rgb-RGB.html#toggle",
-                                                            "tf": 1150
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  },
-                                                  "s": {
-                                                    "docs": {},
-                                                    "c": {
-                                                      "docs": {},
-                                                      "a": {
-                                                        "docs": {},
-                                                        "l": {
-                                                          "docs": {},
-                                                          "e": {
-                                                            "docs": {},
-                                                            "d": {
-                                                              "docs": {},
-                                                              "r": {
-                                                                "docs": {},
-                                                                "g": {
-                                                                  "docs": {},
-                                                                  "b": {
-                                                                    "docs": {
-                                                                      "module-j5e_rgb-RGB.html#toScaledRGB": {
-                                                                        "ref": "module-j5e_rgb-RGB.html#toScaledRGB",
-                                                                        "tf": 1150
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "b": {
-                                                "docs": {},
-                                                "l": {
-                                                  "docs": {},
-                                                  "i": {
-                                                    "docs": {},
-                                                    "n": {
-                                                      "docs": {},
-                                                      "k": {
-                                                        "docs": {
-                                                          "module-j5e_rgb-RGB.html#blink": {
-                                                            "ref": "module-j5e_rgb-RGB.html#blink",
-                                                            "tf": 1150
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "p": {
-                                                "docs": {},
-                                                "u": {
-                                                  "docs": {},
-                                                  "l": {
-                                                    "docs": {},
-                                                    "s": {
-                                                      "docs": {
-                                                        "module-j5e_rgb-RGB.html#pulse": {
-                                                          "ref": "module-j5e_rgb-RGB.html#pulse",
-                                                          "tf": 1150
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "a": {
-                                                "docs": {},
-                                                "n": {
-                                                  "docs": {},
-                                                  "i": {
-                                                    "docs": {},
-                                                    "m": {
-                                                      "docs": {
-                                                        "module-j5e_rgb-RGB.html#animate": {
-                                                          "ref": "module-j5e_rgb-RGB.html#animate",
-                                                          "tf": 1150
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              },
                               "l": {
                                 "docs": {
                                   "module-j5e_led.html": {
@@ -5085,6 +5048,201 @@
                                   }
                                 }
                               },
+                              "r": {
+                                "docs": {},
+                                "g": {
+                                  "docs": {},
+                                  "b": {
+                                    "docs": {
+                                      "module-j5e_rgb.html": {
+                                        "ref": "module-j5e_rgb.html",
+                                        "tf": 1300
+                                      }
+                                    },
+                                    "~": {
+                                      "docs": {},
+                                      "r": {
+                                        "docs": {},
+                                        "g": {
+                                          "docs": {},
+                                          "b": {
+                                            "docs": {
+                                              "module-j5e_rgb-RGB.html": {
+                                                "ref": "module-j5e_rgb-RGB.html",
+                                                "tf": 1300
+                                              }
+                                            },
+                                            "#": {
+                                              "docs": {},
+                                              "c": {
+                                                "docs": {},
+                                                "o": {
+                                                  "docs": {},
+                                                  "l": {
+                                                    "docs": {},
+                                                    "o": {
+                                                      "docs": {},
+                                                      "r": {
+                                                        "docs": {
+                                                          "module-j5e_rgb-RGB.html#color": {
+                                                            "ref": "module-j5e_rgb-RGB.html#color",
+                                                            "tf": 1150
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "o": {
+                                                "docs": {},
+                                                "n": {
+                                                  "docs": {
+                                                    "module-j5e_rgb-RGB.html#on": {
+                                                      "ref": "module-j5e_rgb-RGB.html#on",
+                                                      "tf": 1300
+                                                    }
+                                                  }
+                                                },
+                                                "f": {
+                                                  "docs": {},
+                                                  "f": {
+                                                    "docs": {
+                                                      "module-j5e_rgb-RGB.html#off": {
+                                                        "ref": "module-j5e_rgb-RGB.html#off",
+                                                        "tf": 1300
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "t": {
+                                                "docs": {},
+                                                "o": {
+                                                  "docs": {},
+                                                  "g": {
+                                                    "docs": {},
+                                                    "g": {
+                                                      "docs": {},
+                                                      "l": {
+                                                        "docs": {
+                                                          "module-j5e_rgb-RGB.html#toggle": {
+                                                            "ref": "module-j5e_rgb-RGB.html#toggle",
+                                                            "tf": 1150
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "b": {
+                                                "docs": {},
+                                                "l": {
+                                                  "docs": {},
+                                                  "i": {
+                                                    "docs": {},
+                                                    "n": {
+                                                      "docs": {},
+                                                      "k": {
+                                                        "docs": {
+                                                          "module-j5e_rgb-RGB.html#blink": {
+                                                            "ref": "module-j5e_rgb-RGB.html#blink",
+                                                            "tf": 1150
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "f": {
+                                                "docs": {},
+                                                "a": {
+                                                  "docs": {},
+                                                  "d": {
+                                                    "docs": {
+                                                      "module-j5e_rgb-RGB.html#fade": {
+                                                        "ref": "module-j5e_rgb-RGB.html#fade",
+                                                        "tf": 1150
+                                                      }
+                                                    },
+                                                    "e": {
+                                                      "docs": {},
+                                                      "i": {
+                                                        "docs": {},
+                                                        "n": {
+                                                          "docs": {
+                                                            "module-j5e_rgb-RGB.html#fadeIn": {
+                                                              "ref": "module-j5e_rgb-RGB.html#fadeIn",
+                                                              "tf": 1150
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "p": {
+                                                "docs": {},
+                                                "u": {
+                                                  "docs": {},
+                                                  "l": {
+                                                    "docs": {},
+                                                    "s": {
+                                                      "docs": {
+                                                        "module-j5e_rgb-RGB.html#pulse": {
+                                                          "ref": "module-j5e_rgb-RGB.html#pulse",
+                                                          "tf": 1150
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "a": {
+                                                "docs": {},
+                                                "n": {
+                                                  "docs": {},
+                                                  "i": {
+                                                    "docs": {},
+                                                    "m": {
+                                                      "docs": {
+                                                        "module-j5e_rgb-RGB.html#animate": {
+                                                          "ref": "module-j5e_rgb-RGB.html#animate",
+                                                          "tf": 1150
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "s": {
+                                                "docs": {},
+                                                "t": {
+                                                  "docs": {},
+                                                  "o": {
+                                                    "docs": {},
+                                                    "p": {
+                                                      "docs": {
+                                                        "module-j5e_rgb-RGB.html#stop": {
+                                                          "ref": "module-j5e_rgb-RGB.html#stop",
+                                                          "tf": 1150
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
                               "f": {
                                 "docs": {},
                                 "n": {
@@ -5162,10 +5320,6 @@
                   "docs": {},
                   "d": {
                     "docs": {
-                      "module-j5e_rgb-RGB.html#write": {
-                        "ref": "module-j5e_rgb-RGB.html#write",
-                        "tf": 7.142857142857142
-                      },
                       "module-j5e_fn.html": {
                         "ref": "module-j5e_fn.html",
                         "tf": 5
@@ -5237,6 +5391,17 @@
                       "tf": 17.5
                     }
                   }
+                },
+                "e": {
+                  "docs": {},
+                  "v": {
+                    "docs": {
+                      "module-j5e_rgb-RGB.html#on": {
+                        "ref": "module-j5e_rgb-RGB.html#on",
+                        "tf": 7.142857142857142
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -5249,10 +5414,6 @@
                 "docs": {},
                 "e": {
                   "docs": {
-                    "module-j5e_rgb-RGB.html#write": {
-                      "ref": "module-j5e_rgb-RGB.html#write",
-                      "tf": 757.1428571428571
-                    },
                     "module-j5e_servo-Servo.html#update": {
                       "ref": "module-j5e_servo-Servo.html#update",
                       "tf": 8.333333333333332
@@ -5326,10 +5487,6 @@
                           "ref": "module-j5e_switch-Switch.html",
                           "tf": 8.333333333333332
                         },
-                        "module-j5e_rgb-RGB.html": {
-                          "ref": "module-j5e_rgb-RGB.html",
-                          "tf": 8.333333333333332
-                        },
                         "module-j5e_servo-Servo.html": {
                           "ref": "module-j5e_servo-Servo.html",
                           "tf": 8.333333333333332
@@ -5337,6 +5494,14 @@
                         "module-j5e_led-LED.html": {
                           "ref": "module-j5e_led-LED.html",
                           "tf": 7.142857142857142
+                        },
+                        "module-j5e_rgb-RGB.html": {
+                          "ref": "module-j5e_rgb-RGB.html",
+                          "tf": 8.333333333333332
+                        },
+                        "module-j5e_rgb-RGB.html#color": {
+                          "ref": "module-j5e_rgb-RGB.html#color",
+                          "tf": 2.941176470588235
                         },
                         "module-j5e_rgb.html": {
                           "ref": "module-j5e_rgb.html",
@@ -5404,20 +5569,6 @@
                 }
               }
             },
-            "l": {
-              "docs": {},
-              "o": {
-                "docs": {},
-                "r": {
-                  "docs": {
-                    "module-j5e_rgb-RGB.html#color": {
-                      "ref": "module-j5e_rgb-RGB.html#color",
-                      "tf": 780
-                    }
-                  }
-                }
-              }
-            },
             "d": {
               "docs": {},
               "e": {
@@ -5448,6 +5599,24 @@
                   }
                 }
               }
+            },
+            "l": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "r": {
+                  "docs": {
+                    "module-j5e_rgb-RGB.html#color": {
+                      "ref": "module-j5e_rgb-RGB.html#color",
+                      "tf": 678.8235294117648
+                    },
+                    "module-j5e_rgb-RGB.html#on": {
+                      "ref": "module-j5e_rgb-RGB.html#on",
+                      "tf": 7.142857142857142
+                    }
+                  }
+                }
+              }
             }
           },
           "l": {
@@ -5470,10 +5639,6 @@
                       "ref": "module-j5e_switch-Switch.html",
                       "tf": 118.33333333333333
                     },
-                    "module-j5e_rgb-RGB.html": {
-                      "ref": "module-j5e_rgb-RGB.html",
-                      "tf": 118.33333333333333
-                    },
                     "module-j5e_servo-Servo.html": {
                       "ref": "module-j5e_servo-Servo.html",
                       "tf": 118.33333333333333
@@ -5481,6 +5646,10 @@
                     "module-j5e_led-LED.html": {
                       "ref": "module-j5e_led-LED.html",
                       "tf": 117.14285714285714
+                    },
+                    "module-j5e_rgb-RGB.html": {
+                      "ref": "module-j5e_rgb-RGB.html",
+                      "tf": 118.33333333333333
                     },
                     "module-j5e_animation-Timer.html": {
                       "ref": "module-j5e_animation-Timer.html",
@@ -5611,14 +5780,6 @@
                       "docs": {},
                       "k": {
                         "docs": {
-                          "module-j5e_rgb-RGB.html#blink": {
-                            "ref": "module-j5e_rgb-RGB.html#blink",
-                            "tf": 25
-                          },
-                          "module-j5e_rgb-RGB.html#pulse": {
-                            "ref": "module-j5e_rgb-RGB.html#pulse",
-                            "tf": 25
-                          },
                           "module-j5e_led-LED.html#blink": {
                             "ref": "module-j5e_led-LED.html#blink",
                             "tf": 25
@@ -5637,6 +5798,22 @@
                           },
                           "module-j5e_led-LED.html#pulse": {
                             "ref": "module-j5e_led-LED.html#pulse",
+                            "tf": 25
+                          },
+                          "module-j5e_rgb-RGB.html#blink": {
+                            "ref": "module-j5e_rgb-RGB.html#blink",
+                            "tf": 25
+                          },
+                          "module-j5e_rgb-RGB.html#fade": {
+                            "ref": "module-j5e_rgb-RGB.html#fade",
+                            "tf": 20
+                          },
+                          "module-j5e_rgb-RGB.html#fadeIn": {
+                            "ref": "module-j5e_rgb-RGB.html#fadeIn",
+                            "tf": 25
+                          },
+                          "module-j5e_rgb-RGB.html#pulse": {
+                            "ref": "module-j5e_rgb-RGB.html#pulse",
                             "tf": 25
                           }
                         }
@@ -5714,17 +5891,17 @@
                           "ref": "module-j5e_animation-Animation.html#tweenedValue",
                           "tf": 4.166666666666666
                         },
-                        "module-j5e_rgb-RGB.html#write": {
-                          "ref": "module-j5e_rgb-RGB.html#write",
-                          "tf": 7.142857142857142
-                        },
-                        "module-j5e_rgb-RGB.html#toScaledRGB": {
-                          "ref": "module-j5e_rgb-RGB.html#toScaledRGB",
-                          "tf": 7.142857142857142
-                        },
                         "module-j5e_led-LED.html#fade": {
                           "ref": "module-j5e_led-LED.html#fade",
                           "tf": 5
+                        },
+                        "module-j5e_rgb-RGB.html#on": {
+                          "ref": "module-j5e_rgb-RGB.html#on",
+                          "tf": 7.142857142857142
+                        },
+                        "module-j5e_rgb-RGB.html#fade": {
+                          "ref": "module-j5e_rgb-RGB.html#fade",
+                          "tf": 6.25
                         }
                       }
                     }
@@ -5947,34 +6124,6 @@
                   "ref": "module-j5e_animation-Animation.html",
                   "tf": 10
                 },
-                "module-j5e_rgb-RGB.html#write": {
-                  "ref": "module-j5e_rgb-RGB.html#write",
-                  "tf": 7.142857142857142
-                },
-                "module-j5e_rgb-RGB.html#off": {
-                  "ref": "module-j5e_rgb-RGB.html#off",
-                  "tf": 125
-                },
-                "module-j5e_rgb-RGB.html#on": {
-                  "ref": "module-j5e_rgb-RGB.html#on",
-                  "tf": 125
-                },
-                "module-j5e_rgb-RGB.html#toggle": {
-                  "ref": "module-j5e_rgb-RGB.html#toggle",
-                  "tf": 62.5
-                },
-                "module-j5e_rgb-RGB.html#blink": {
-                  "ref": "module-j5e_rgb-RGB.html#blink",
-                  "tf": 12.5
-                },
-                "module-j5e_rgb-RGB.html#pulse": {
-                  "ref": "module-j5e_rgb-RGB.html#pulse",
-                  "tf": 12.5
-                },
-                "module-j5e_rgb-RGB.html#animate": {
-                  "ref": "module-j5e_rgb-RGB.html#animate",
-                  "tf": 16.666666666666664
-                },
                 "module-j5e_led-LED.html": {
                   "ref": "module-j5e_led-LED.html",
                   "tf": 507.14285714285717
@@ -6025,7 +6174,43 @@
                 },
                 "module-j5e_led-LED.html#stop": {
                   "ref": "module-j5e_led-LED.html#stop",
-                  "tf": 58.33333333333333
+                  "tf": 57.14285714285714
+                },
+                "module-j5e_rgb-RGB.html#on": {
+                  "ref": "module-j5e_rgb-RGB.html#on",
+                  "tf": 7.142857142857142
+                },
+                "module-j5e_rgb-RGB.html#off": {
+                  "ref": "module-j5e_rgb-RGB.html#off",
+                  "tf": 16.666666666666664
+                },
+                "module-j5e_rgb-RGB.html#toggle": {
+                  "ref": "module-j5e_rgb-RGB.html#toggle",
+                  "tf": 10
+                },
+                "module-j5e_rgb-RGB.html#blink": {
+                  "ref": "module-j5e_rgb-RGB.html#blink",
+                  "tf": 10
+                },
+                "module-j5e_rgb-RGB.html#fade": {
+                  "ref": "module-j5e_rgb-RGB.html#fade",
+                  "tf": 6.25
+                },
+                "module-j5e_rgb-RGB.html#fadeIn": {
+                  "ref": "module-j5e_rgb-RGB.html#fadeIn",
+                  "tf": 16.666666666666664
+                },
+                "module-j5e_rgb-RGB.html#pulse": {
+                  "ref": "module-j5e_rgb-RGB.html#pulse",
+                  "tf": 10
+                },
+                "module-j5e_rgb-RGB.html#animate": {
+                  "ref": "module-j5e_rgb-RGB.html#animate",
+                  "tf": 16.666666666666664
+                },
+                "module-j5e_rgb-RGB.html#stop": {
+                  "ref": "module-j5e_rgb-RGB.html#stop",
+                  "tf": 7.142857142857142
                 },
                 "module-j5e_animation.html": {
                   "ref": "module-j5e_animation.html",
@@ -6041,6 +6226,10 @@
                   "module-j5e_rgb-RGB.html": {
                     "ref": "module-j5e_rgb-RGB.html",
                     "tf": 8.333333333333332
+                  },
+                  "module-j5e_rgb-RGB.html#color": {
+                    "ref": "module-j5e_rgb-RGB.html#color",
+                    "tf": 2.941176470588235
                   },
                   "module-j5e_rgb.html": {
                     "ref": "module-j5e_rgb.html",
@@ -6123,16 +6312,16 @@
                                   "ref": "module-j5e_switch-Switch.html",
                                   "tf": 50
                                 },
-                                "module-j5e_rgb-RGB.html": {
-                                  "ref": "module-j5e_rgb-RGB.html",
-                                  "tf": 50
-                                },
                                 "module-j5e_servo-Servo.html": {
                                   "ref": "module-j5e_servo-Servo.html",
                                   "tf": 50
                                 },
                                 "module-j5e_led-LED.html": {
                                   "ref": "module-j5e_led-LED.html",
+                                  "tf": 50
+                                },
+                                "module-j5e_rgb-RGB.html": {
+                                  "ref": "module-j5e_rgb-RGB.html",
                                   "tf": 50
                                 }
                               }
@@ -6327,28 +6516,6 @@
               }
             }
           },
-          "u": {
-            "docs": {},
-            "l": {
-              "docs": {},
-              "s": {
-                "docs": {
-                  "module-j5e_rgb-RGB.html#pulse": {
-                    "ref": "module-j5e_rgb-RGB.html#pulse",
-                    "tf": 687.5
-                  },
-                  "module-j5e_led-LED.html#pulse": {
-                    "ref": "module-j5e_led-LED.html#pulse",
-                    "tf": 679.1666666666666
-                  },
-                  "module-j5e_led-LED.html#stop": {
-                    "ref": "module-j5e_led-LED.html#stop",
-                    "tf": 8.333333333333332
-                  }
-                }
-              }
-            }
-          },
           "w": {
             "docs": {},
             "m": {
@@ -6376,6 +6543,32 @@
                 "module-j5e_led-LED.html#pulse": {
                   "ref": "module-j5e_led-LED.html#pulse",
                   "tf": 4.166666666666666
+                }
+              }
+            }
+          },
+          "u": {
+            "docs": {},
+            "l": {
+              "docs": {},
+              "s": {
+                "docs": {
+                  "module-j5e_led-LED.html#pulse": {
+                    "ref": "module-j5e_led-LED.html#pulse",
+                    "tf": 679.1666666666666
+                  },
+                  "module-j5e_led-LED.html#stop": {
+                    "ref": "module-j5e_led-LED.html#stop",
+                    "tf": 7.142857142857142
+                  },
+                  "module-j5e_rgb-RGB.html#pulse": {
+                    "ref": "module-j5e_rgb-RGB.html#pulse",
+                    "tf": 685
+                  },
+                  "module-j5e_rgb-RGB.html#stop": {
+                    "ref": "module-j5e_rgb-RGB.html#stop",
+                    "tf": 7.142857142857142
+                  }
                 }
               }
             }
@@ -6441,13 +6634,13 @@
                   "docs": {},
                   "f": {
                     "docs": {
-                      "module-j5e_rgb-RGB.html#toggle": {
-                        "ref": "module-j5e_rgb-RGB.html#toggle",
-                        "tf": 12.5
-                      },
                       "module-j5e_led-LED.html#toggle": {
                         "ref": "module-j5e_led-LED.html#toggle",
                         "tf": 12.5
+                      },
+                      "module-j5e_rgb-RGB.html#toggle": {
+                        "ref": "module-j5e_rgb-RGB.html#toggle",
+                        "tf": 10
                       }
                     }
                   }
@@ -6469,10 +6662,6 @@
                         "ref": "module-j5e_animation-Animation.html#enqueue",
                         "tf": 50
                       },
-                      "module-j5e_rgb-RGB.html#animate": {
-                        "ref": "module-j5e_rgb-RGB.html#animate",
-                        "tf": 33.33333333333333
-                      },
                       "module-j5e_servo-Servo.html#sweep": {
                         "ref": "module-j5e_servo-Servo.html#sweep",
                         "tf": 33.33333333333333
@@ -6480,35 +6669,10 @@
                       "module-j5e_led-LED.html#animate": {
                         "ref": "module-j5e_led-LED.html#animate",
                         "tf": 41.66666666666666
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "u": {
-            "docs": {},
-            "t": {
-              "docs": {
-                "module-j5e_led-LED.html#fadeOut": {
-                  "ref": "module-j5e_led-LED.html#fadeOut",
-                  "tf": 6.25
-                },
-                "module-j5e_led-LED.html#pulse": {
-                  "ref": "module-j5e_led-LED.html#pulse",
-                  "tf": 4.166666666666666
-                }
-              },
-              "p": {
-                "docs": {},
-                "u": {
-                  "docs": {},
-                  "t": {
-                    "docs": {
-                      "module-j5e_rgb-RGB.html#toScaledRGB": {
-                        "ref": "module-j5e_rgb-RGB.html#toScaledRGB",
-                        "tf": 7.142857142857142
+                      },
+                      "module-j5e_rgb-RGB.html#animate": {
+                        "ref": "module-j5e_rgb-RGB.html#animate",
+                        "tf": 33.33333333333333
                       }
                     }
                   }
@@ -6545,9 +6709,28 @@
                       "module-j5e_led-LED.html#animate": {
                         "ref": "module-j5e_led-LED.html#animate",
                         "tf": 8.333333333333332
+                      },
+                      "module-j5e_rgb-RGB.html#color": {
+                        "ref": "module-j5e_rgb-RGB.html#color",
+                        "tf": 2.941176470588235
                       }
                     }
                   }
+                }
+              }
+            }
+          },
+          "u": {
+            "docs": {},
+            "t": {
+              "docs": {
+                "module-j5e_led-LED.html#fadeOut": {
+                  "ref": "module-j5e_led-LED.html#fadeOut",
+                  "tf": 6.25
+                },
+                "module-j5e_led-LED.html#pulse": {
+                  "ref": "module-j5e_led-LED.html#pulse",
+                  "tf": 4.166666666666666
                 }
               }
             }
@@ -6676,6 +6859,10 @@
                 "module-j5e_led-LED.html#fade": {
                   "ref": "module-j5e_led-LED.html#fade",
                   "tf": 5
+                },
+                "module-j5e_rgb-RGB.html#fade": {
+                  "ref": "module-j5e_rgb-RGB.html#fade",
+                  "tf": 6.25
                 }
               }
             }
@@ -6765,6 +6952,10 @@
                 "module-j5e_led-LED.html#fade": {
                   "ref": "module-j5e_led-LED.html#fade",
                   "tf": 20
+                },
+                "module-j5e_rgb-RGB.html#fade": {
+                  "ref": "module-j5e_rgb-RGB.html#fade",
+                  "tf": 20
                 }
               },
               "u": {
@@ -6772,14 +6963,6 @@
                   "module-j5e_animation-Animation.html#tweenedValue": {
                     "ref": "module-j5e_animation-Animation.html#tweenedValue",
                     "tf": 4.166666666666666
-                  },
-                  "module-j5e_rgb-RGB.html#write": {
-                    "ref": "module-j5e_rgb-RGB.html#write",
-                    "tf": 7.142857142857142
-                  },
-                  "module-j5e_rgb-RGB.html#toScaledRGB": {
-                    "ref": "module-j5e_rgb-RGB.html#toScaledRGB",
-                    "tf": 7.142857142857142
                   },
                   "module-j5e_led-LED.html#brightness": {
                     "ref": "module-j5e_led-LED.html#brightness",
@@ -6792,6 +6975,18 @@
                   "module-j5e_led-LED.html#fade": {
                     "ref": "module-j5e_led-LED.html#fade",
                     "tf": 10
+                  },
+                  "module-j5e_rgb-RGB.html#color": {
+                    "ref": "module-j5e_rgb-RGB.html#color",
+                    "tf": 5.88235294117647
+                  },
+                  "module-j5e_rgb-RGB.html#on": {
+                    "ref": "module-j5e_rgb-RGB.html#on",
+                    "tf": 7.142857142857142
+                  },
+                  "module-j5e_rgb-RGB.html#fade": {
+                    "ref": "module-j5e_rgb-RGB.html#fade",
+                    "tf": 12.5
                   }
                 }
               }
@@ -6892,6 +7087,35 @@
               }
             }
           },
+          "e": {
+            "docs": {},
+            "x": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "d": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "c": {
+                      "docs": {},
+                      "i": {
+                        "docs": {},
+                        "m": {
+                          "docs": {
+                            "module-j5e_rgb-RGB.html#color": {
+                              "ref": "module-j5e_rgb-RGB.html#color",
+                              "tf": 2.941176470588235
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
           "a": {
             "docs": {},
             "n": {
@@ -6911,7 +7135,7 @@
           }
         }
       },
-      "length": 603
+      "length": 645
     },
     "corpusTokens": [
       "0",
@@ -6919,10 +7143,13 @@
       "100",
       "180deg",
       "90deg",
+      "accept",
       "add",
       "allow",
       "anim",
       "animi",
+      "argument",
+      "array",
       "async",
       "asynchron",
       "attach",
@@ -6931,6 +7158,7 @@
       "base",
       "between",
       "blink",
+      "blue",
       "bright",
       "c",
       "calculateprogress",
@@ -6996,7 +7224,9 @@
       "given",
       "global",
       "gotta",
+      "green",
       "handl",
+      "hexadecim",
       "hobbi",
       "home",
       "horn'",
@@ -7009,7 +7239,6 @@
       "instanti",
       "intend",
       "intens",
-      "intern",
       "interv",
       "io",
       "iooption",
@@ -7099,12 +7328,13 @@
       "module:j5e/rgb~rgb#anim",
       "module:j5e/rgb~rgb#blink",
       "module:j5e/rgb~rgb#color",
+      "module:j5e/rgb~rgb#fad",
+      "module:j5e/rgb~rgb#fadein",
       "module:j5e/rgb~rgb#off",
       "module:j5e/rgb~rgb#on",
       "module:j5e/rgb~rgb#puls",
+      "module:j5e/rgb~rgb#stop",
       "module:j5e/rgb~rgb#toggl",
-      "module:j5e/rgb~rgb#toscaledrgb",
-      "module:j5e/rgb~rgb#writ",
       "module:j5e/servo",
       "module:j5e/servo~servo",
       "module:j5e/servo~servo#ccw",
@@ -7135,7 +7365,6 @@
       "onc",
       "option",
       "out",
-      "output",
       "over",
       "overrid",
       "param",
@@ -7154,6 +7383,7 @@
       "rang",
       "rate",
       "readm",
+      "red",
       "relat",
       "remov",
       "removelisten",
@@ -7163,9 +7393,9 @@
       "rgb",
       "right",
       "rotat",
-      "scale",
       "script",
       "segment",
+      "separ",
       "sequenc",
       "seri",
       "servo",
@@ -7179,7 +7409,7 @@
       "state",
       "step",
       "stop",
-      "strobe",
+      "string",
       "stuff",
       "sure",
       "sweep",
@@ -7190,7 +7420,6 @@
       "timer",
       "toggl",
       "tool",
-      "toscaledrgb",
       "true",
       "turn",
       "tutori",
@@ -7204,6 +7433,7 @@
       "val",
       "valu",
       "what'",
+      "whatev",
       "work",
       "write"
     ],
@@ -7450,107 +7680,6 @@
       "summary": "",
       "description": "The Switch class allows for control of digital switches",
       "body": ""
-    },
-    "module-j5e_rgb-RGB.html": {
-      "id": "module-j5e_rgb-RGB.html",
-      "kind": "class",
-      "title": "&lt;async&gt; j5e/rgb~RGB",
-      "longname": "module:j5e/rgb~RGB",
-      "name": "RGB",
-      "tags": "module:j5e/rgb~RGB",
-      "summary": "",
-      "description": "The RGB class allows for control of RGB LED's",
-      "body": ""
-    },
-    "module-j5e_rgb-RGB.html#color": {
-      "id": "module-j5e_rgb-RGB.html#color",
-      "kind": "function",
-      "title": "color( color, color, color ) → {RGB}",
-      "longname": "module:j5e/rgb~RGB#color",
-      "name": "color",
-      "tags": "module:j5e/rgb~RGB#color color",
-      "summary": "",
-      "description": "color"
-    },
-    "module-j5e_rgb-RGB.html#write": {
-      "id": "module-j5e_rgb-RGB.html#write",
-      "kind": "function",
-      "title": "write()",
-      "longname": "module:j5e/rgb~RGB#write",
-      "name": "write",
-      "tags": "module:j5e/rgb~RGB#write write",
-      "summary": "",
-      "description": "Internal method that writes the current LED value to the IO"
-    },
-    "module-j5e_rgb-RGB.html#off": {
-      "id": "module-j5e_rgb-RGB.html#off",
-      "kind": "function",
-      "title": "off() → {Led}",
-      "longname": "module:j5e/rgb~RGB#off",
-      "name": "off",
-      "tags": "module:j5e/rgb~RGB#off off",
-      "summary": "",
-      "description": "Turn the led off"
-    },
-    "module-j5e_rgb-RGB.html#on": {
-      "id": "module-j5e_rgb-RGB.html#on",
-      "kind": "function",
-      "title": "on() → {Led}",
-      "longname": "module:j5e/rgb~RGB#on",
-      "name": "on",
-      "tags": "module:j5e/rgb~RGB#on on",
-      "summary": "",
-      "description": "Turn an led on"
-    },
-    "module-j5e_rgb-RGB.html#toggle": {
-      "id": "module-j5e_rgb-RGB.html#toggle",
-      "kind": "function",
-      "title": "toggle() → {Led}",
-      "longname": "module:j5e/rgb~RGB#toggle",
-      "name": "toggle",
-      "tags": "module:j5e/rgb~RGB#toggle toggle",
-      "summary": "",
-      "description": "Toggle the on/off state of an led"
-    },
-    "module-j5e_rgb-RGB.html#blink": {
-      "id": "module-j5e_rgb-RGB.html#blink",
-      "kind": "function",
-      "title": "blink( duration, callback ) → {RGB}",
-      "longname": "module:j5e/rgb~RGB#blink",
-      "name": "blink",
-      "tags": "module:j5e/rgb~RGB#blink blink",
-      "summary": "",
-      "description": "Blink the LED on a fixed interval"
-    },
-    "module-j5e_rgb-RGB.html#pulse": {
-      "id": "module-j5e_rgb-RGB.html#pulse",
-      "kind": "function",
-      "title": "pulse( duration, callback ) → {RGB}",
-      "longname": "module:j5e/rgb~RGB#pulse",
-      "name": "pulse",
-      "tags": "module:j5e/rgb~RGB#pulse pulse",
-      "summary": "",
-      "description": "Pulse the LED on a fixed interval"
-    },
-    "module-j5e_rgb-RGB.html#animate": {
-      "id": "module-j5e_rgb-RGB.html#animate",
-      "kind": "function",
-      "title": "animate( options ) → {RGB}",
-      "longname": "module:j5e/rgb~RGB#animate",
-      "name": "animate",
-      "tags": "module:j5e/rgb~RGB#animate animate",
-      "summary": "",
-      "description": "Animate the RGB LED"
-    },
-    "module-j5e_rgb-RGB.html#toScaledRGB": {
-      "id": "module-j5e_rgb-RGB.html#toScaledRGB",
-      "kind": "function",
-      "title": "toScaledRGB()",
-      "longname": "module:j5e/rgb~RGB#toScaledRGB",
-      "name": "toScaledRGB",
-      "tags": "module:j5e/rgb~RGB#toScaledRGB toScaledRGB",
-      "summary": "",
-      "description": "toScaledRGB Scale the output values based on the current intensity"
     },
     "module-j5e_servo-Servo.html": {
       "id": "module-j5e_servo-Servo.html",
@@ -7832,7 +7961,118 @@
       "name": "stop",
       "tags": "module:j5e/led~LED#stop stop",
       "summary": "",
-      "description": "stop Stop the led from strobing, pulsing or fading"
+      "description": "stop Stop the led from blinking, pulsing, fading, or animating"
+    },
+    "module-j5e_rgb-RGB.html": {
+      "id": "module-j5e_rgb-RGB.html",
+      "kind": "class",
+      "title": "&lt;async&gt; j5e/rgb~RGB",
+      "longname": "module:j5e/rgb~RGB",
+      "name": "RGB",
+      "tags": "module:j5e/rgb~RGB",
+      "summary": "",
+      "description": "The RGB class allows for control of RGB LED's",
+      "body": ""
+    },
+    "module-j5e_rgb-RGB.html#color": {
+      "id": "module-j5e_rgb-RGB.html#color",
+      "kind": "function",
+      "title": "color( red [, green [, blue ] ] ) → {RGB}",
+      "longname": "module:j5e/rgb~RGB#color",
+      "name": "color",
+      "tags": "module:j5e/rgb~RGB#color color",
+      "summary": "",
+      "description": "Control an RGB LED's color value. Accepts Hexadecimal strings, an array of color values, and RGB object or a separate argument for each color."
+    },
+    "module-j5e_rgb-RGB.html#on": {
+      "id": "module-j5e_rgb-RGB.html#on",
+      "kind": "function",
+      "title": "on() → {RGB}",
+      "longname": "module:j5e/rgb~RGB#on",
+      "name": "on",
+      "tags": "module:j5e/rgb~RGB#on on",
+      "summary": "",
+      "description": "Turn an RGB LED on with whatever the current color value is"
+    },
+    "module-j5e_rgb-RGB.html#off": {
+      "id": "module-j5e_rgb-RGB.html#off",
+      "kind": "function",
+      "title": "off() → {RGB}",
+      "longname": "module:j5e/rgb~RGB#off",
+      "name": "off",
+      "tags": "module:j5e/rgb~RGB#off off",
+      "summary": "",
+      "description": "Turn an RGB LED off"
+    },
+    "module-j5e_rgb-RGB.html#toggle": {
+      "id": "module-j5e_rgb-RGB.html#toggle",
+      "kind": "function",
+      "title": "toggle() → {RGB}",
+      "longname": "module:j5e/rgb~RGB#toggle",
+      "name": "toggle",
+      "tags": "module:j5e/rgb~RGB#toggle toggle",
+      "summary": "",
+      "description": "Toggle the on/off state of an RGB LED"
+    },
+    "module-j5e_rgb-RGB.html#blink": {
+      "id": "module-j5e_rgb-RGB.html#blink",
+      "kind": "function",
+      "title": "blink( duration, callback ) → {RGB}",
+      "longname": "module:j5e/rgb~RGB#blink",
+      "name": "blink",
+      "tags": "module:j5e/rgb~RGB#blink blink",
+      "summary": "",
+      "description": "Blink an RGB LED on a fixed interval"
+    },
+    "module-j5e_rgb-RGB.html#fade": {
+      "id": "module-j5e_rgb-RGB.html#fade",
+      "kind": "function",
+      "title": "fade( val [, time [, callback ] ] ) → {RGB}",
+      "longname": "module:j5e/rgb~RGB#fade",
+      "name": "fade",
+      "tags": "module:j5e/rgb~RGB#fade fade",
+      "summary": "",
+      "description": "fade Fade an RGB LED from its current value to a new value"
+    },
+    "module-j5e_rgb-RGB.html#fadeIn": {
+      "id": "module-j5e_rgb-RGB.html#fadeIn",
+      "kind": "function",
+      "title": "fadeIn( [ time [, callback ] ] ) → {RGB}",
+      "longname": "module:j5e/rgb~RGB#fadeIn",
+      "name": "fadeIn",
+      "tags": "module:j5e/rgb~RGB#fadeIn fadeIn",
+      "summary": "",
+      "description": "Fade an RGB LED off"
+    },
+    "module-j5e_rgb-RGB.html#pulse": {
+      "id": "module-j5e_rgb-RGB.html#pulse",
+      "kind": "function",
+      "title": "pulse( duration, callback ) → {RGB}",
+      "longname": "module:j5e/rgb~RGB#pulse",
+      "name": "pulse",
+      "tags": "module:j5e/rgb~RGB#pulse pulse",
+      "summary": "",
+      "description": "Pulse an RGB LED on a fixed interval"
+    },
+    "module-j5e_rgb-RGB.html#animate": {
+      "id": "module-j5e_rgb-RGB.html#animate",
+      "kind": "function",
+      "title": "animate( options ) → {RGB}",
+      "longname": "module:j5e/rgb~RGB#animate",
+      "name": "animate",
+      "tags": "module:j5e/rgb~RGB#animate animate",
+      "summary": "",
+      "description": "Animate an RGB LED"
+    },
+    "module-j5e_rgb-RGB.html#stop": {
+      "id": "module-j5e_rgb-RGB.html#stop",
+      "kind": "function",
+      "title": "stop() → {RGB}",
+      "longname": "module:j5e/rgb~RGB#stop",
+      "name": "stop",
+      "tags": "module:j5e/rgb~RGB#stop stop",
+      "summary": "",
+      "description": "Stop the RGB LED from pulsing, blinking, fading, or animating"
     },
     "module-j5e_animation-Timer.html": {
       "id": "module-j5e_animation-Timer.html",

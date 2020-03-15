@@ -132,14 +132,44 @@ class RGB {
 
   /**
    * Instantiate an RGB LED
-   * @param {(number[]|string[]|object[])} io - An array of 3 pin identifiers, IO options, or IO instances
-   * @param {(number[]|string[]|object)} [io.pins] - A pin number array, pin identifier array or a complete pins object
-   * @param {(number|string)} [io.pins.red] - A pin number or pin identifier for the red channel
-   * @param {(number|string)} [io.pins.green] - A pin number or pin identifier for the green channel
-   * @param {(number|string)} [io.pins.blue] - A pin number or pin identifier for the blue channel
-   * @param {(string|constructor|Array&lt;string|constructor>)} [io.io=builtin/pwm] - A string specifying a path to the IO provider or a constructor, or an array of strings and/or constructors in RGB order 
+   * @param {(number[]|string[]|object[])} io - Pin identifiers or IO Options (See {@tutorial C-INSTANTIATING})
    * @param {object} [device={}] - An object containing device options
    * @param {boolean} [device.sink=false] - True if the device is wired for sink drive
+   * @example
+   * &lt;caption>Using pin numbers&lt;/caption>
+   * import RGB from "@j5e/rgb";
+   *
+   * (async function() {
+   *   const rgb = await new RGB([13, 12, 14]);
+	 *   rgb.color("#663399");
+	 *   rgb.blink();
+   * })();
+   *
+   * @example
+   * &lt;caption>Using pin identifiers&lt;/caption>
+   * import RGB from "@j5e/rgb";
+   *
+   * (async function() {
+   *   const rgb = await new RGB(["A1", "A3", "A4"]);
+	 *   rgb.color("#663399");
+	 *   rgb.blink();
+   * })();
+   *
+   * @example
+   * &lt;caption>Using io option objects&lt;/caption>
+   * import RGB from "@j5e/rgb";
+   * import PCA9685 from "PCA9685Expander"
+   *
+   * (async function() {
+   *   const rgb = await new RGB([
+   *     { pin: 0, io: PCA9685 },
+   *     { pin: 1, io: PCA9685 },
+   *     { pin: 2, io: PCA9685 }
+   *   ]);
+	 *   rgb.color("#663399");
+	 *   rgb.blink();
+   * })();
+   * 
    */
   constructor(io, device) {
     return (async () => {
@@ -225,13 +255,88 @@ class RGB {
   }
 
   /**
-   * color
+   * Internal method that writes the current LED value to the IO
+   * @private
+   */
+  write(colors) {
+    RGB.colors.forEach((color, index) => {
+      
+      let value = colors[color];
+    
+      if (this.#state.sink) {
+        value = this.HIGH[color] - value;
+      }
+    
+      this.io[color].write(value | 0);
+    });
+
+  }
+
+  /**
+   * Control an RGB LED's color value. Accepts Hexadecimal strings, an array of color values, and RGB object or a separate argument for each color.
    *
-   * @param  {String} color Hexadecimal color string or CSS color name
-   * @param  {Array} color Array of color values
-   * @param  {Object} color object {red, green, blue}
+   * @param  {String|Array|Object|Number} red Hexadecimal color string, CSS color name, Array of color values, RGB object {red, green, blue}, or the value of the red channel
+   * @param {Number} [green] The value of the green channel
+   * @param {Number} [blue] The value of the blue channel
    *
    * @return {RGB}
+   * @example
+   * &lt;caption>Use a hex value to make it purple&lt;/caption>
+   * import RGB from "@j5e/rgb";
+   *
+   * (async function() {
+   *   const rgb = await new RGB([13, 12, 14]);
+	 *   rgb.color("#663399");
+   * })();
+   * 
+   * @example
+   * &lt;caption>Use an RGB String to make it purple&lt;/caption>
+   * import RGB from "@j5e/rgb";
+   *
+   * (async function() {
+   *   const rgb = await new RGB([13, 12, 14]);
+	 *   rgb.color("rgb(102, 51, 153)");
+   * })();
+   * 
+   * @example
+   * &lt;caption>Use an RGBA String to make it darker purple&lt;/caption>
+   * import RGB from "@j5e/rgb";
+   *
+   * (async function() {
+   *   const rgb = await new RGB([13, 12, 14]);
+	 *   rgb.color("rgba(102, 51, 153, 50%)");
+   * })();
+   * 
+   * @example
+   * &lt;caption>Use an array to make it purple&lt;/caption>
+   * import RGB from "@j5e/rgb";
+   *
+   * (async function() {
+   *   const rgb = await new RGB([13, 12, 14]);
+	 *   rgb.color([408, 204, 612]); // Assumes 10-bit
+   * })();
+   * 
+   * @example
+   * &lt;caption>Use an object to make it purple&lt;/caption>
+   * import RGB from "@j5e/rgb";
+   *
+   * (async function() {
+   *   const rgb = await new RGB([13, 12, 14]);
+	 *   rgb.color({
+   *     red: 102, 
+   *     green: 51, 
+   *     blue: 153
+   *   });
+   * })();
+   * 
+   * @example
+   * &lt;caption>Use seperate Red, Green, and Blue arguments to make it purple&lt;/caption>
+   * import RGB from "@j5e/rgb";
+   *
+   * (async function() {
+   *   const rgb = await new RGB([13, 12, 14]);
+	 *   rgb.color(408, 204, 612); // Assumes 10-bit
+   * })();
    */
   color(red, green, blue) {
     
@@ -267,25 +372,49 @@ class RGB {
   };
 
   /**
-   * Internal method that writes the current LED value to the IO
+   * Turn an RGB LED on with whatever the current color value is
+   * @return {RGB}
+   * @example
+   * &lt;caption>Make it on&lt;/caption>
+   * import RGB from "@j5e/rgb";
+   *
+   * (async function() {
+   *   const rgb = await new RGB([13, 12, 14]);
+	 *   rgb.on(); // Default color is white
+   * })();
    */
-  write(colors) {
-    RGB.colors.forEach((color, index) => {
+  on() {
+    let colors;
+    if (!this.isOn) {
+      colors = this.#state.prev || {
+        red: this.HIGH.red,
+        green: this.HIGH.green,
+        blue: this.HIGH.blue
+      };
       
-      let value = colors[color];
+      this.#state.prev = null;  
+      this.update(colors);
+    }
     
-      if (this.#state.sink) {
-        value = this.HIGH[color] - value;
-      }
-    
-      this.io[color].write(value | 0);
-    });
-
+    return this;
   }
-
+  
   /**
-   * Turn the led off
-   * @return {Led}
+   * Turn an RGB LED off
+   * @return {RGB}
+   * @example
+   * &lt;caption>Make it purple for five seconds&lt;/caption>
+   * import RGB from "@j5e/rgb";
+   * import {timer} from "@j5e/fn";
+   *
+   * (async function() {
+   *   const rgb = await new RGB([13, 12, 14]);
+	 *   rgb.color("#663399");
+   * 
+   *   time.setTimeout(function() {
+   *     rgb.off();
+   *   }, 5000);
+   * })();
    */
   off() {
     
@@ -308,41 +437,51 @@ class RGB {
     return this;
   }
 
-  
-
   /**
-   * Turn an led on
-   * @return {Led}
-   */
-  on() {
-    let colors;
-    if (!this.isOn) {
-      colors = this.#state.prev || {
-        red: this.HIGH.red,
-        green: this.HIGH.green,
-        blue: this.HIGH.blue
-      };
-      
-      this.#state.prev = null;  
-      this.update(colors);
-    }
-    
-    return this;
-  }
-
-  /**
-   * Toggle the on/off state of an led
-   * @return {Led}
+   * Toggle the on/off state of an RGB LED
+   * @return {RGB}
+   * @example
+   * &lt;caption>Make it purple for five seconds&lt;/caption>
+   * import RGB from "@j5e/rgb";
+   * import {timer} from "@j5e/fn";
+   *
+   * (async function() {
+   *   const rgb = await new RGB([13, 12, 14]);
+	 *   rgb.color("#663399"); // Turns RGB LED on
+   * 
+   *   time.setTimeout(function() {
+   *     rgb.off(); // Turns it off
+   *   }, 5000);
+   * })();
    */
   toggle() {
     return this[this.isOn ? "off" : "on"]();
   }
 
   /**
-   * Blink the LED on a fixed interval
+   * Blink an RGB LED on a fixed interval
    * @param {Number} duration=100 - Time in ms on, time in ms off
    * @param {Function} callback - Method to call on blink
    * @return {RGB}
+   * @example
+   * &lt;caption>Make it blink&lt;/caption>
+   * import RGB from "@j5e/rgb";
+   *
+   * (async function() {
+   *   const rgb = await new RGB([13, 12, 14]);
+	 *   rgb.color("#663399");
+   *   rgb.blink();
+   * }();
+   * 
+   * @example
+   * &lt;caption>Make it blink slowly&lt;/caption>
+   * import RGB from "@j5e/rgb";
+   *
+   * (async function() {
+   *   const rgb = await new RGB([13, 12, 14]);
+	 *   rgb.color("#663399");
+   *   rgb.blink(5000);
+   * })();
    */
   blink(duration=100, callback) {
     // Avoid traffic jams
@@ -364,10 +503,130 @@ class RGB {
   }
 
   /**
-   * Pulse the LED on a fixed interval
-   * @param {Number} duration=100 - Time in ms on, time in ms off
+   * fade Fade an RGB LED from its current value to a new value
+   * @param {Number[]|String|Object} val Hexadecimal color string, CSS color name, Array of color values, RGB object {red, green, blue}
+   * @param {Number} [time=1000] Time in ms that a fade will take
+   * @param {function} [callback] A function to run when the fade is complete
+   * @return {RGB}
+   * @example
+   * &lt;caption>Fade on to purple&lt;/caption>
+   * import RGB from "@j5e/rgb";
+   * 
+   * (async function() {
+   *   const rgb = await new RGB([13, 12, 14]);
+   *   rgb.fade("#663399");
+   * })();
+   * 
+   * @example
+   * &lt;caption>Fade on to purple over 3 seconds&lt;/caption>
+   * import RGB from "@j5e/rgb";
+   * 
+   * (async function() {
+   *   const rgb = await new RGB([13, 12, 14]);
+   *   rgb.fade("#663399", 3000);
+   * })();
+   * 
+   * @example
+   * &lt;caption>Fade on to purple over 3 seconds and then blink&lt;/caption>
+   * import RGB from "@j5e/rgb";
+   * 
+   * (async function() {
+   *   const rgb = await new RGB([13, 12, 14]);
+   *   rgb.fade("#663399", 3000, function() {
+   *     rgb.blink();
+   *   });
+   * })();
+   */
+  fade(val, time=1000, callback) {
+    
+    this.stop();
+
+    var options = {
+      duration: typeof time === "number" ? time : 1000,
+      keyFrames: [null, val || "#ffffff"],
+      easing: outSine,
+      oncomplete: function() {
+        this.stop();
+        if (typeof callback === "function") {
+          callback();
+        }
+      }
+    };
+
+    if (typeof val === "function") {
+      callback = val;
+    }
+
+    if (typeof time === "function") {
+      callback = time;
+    }
+
+    this.animate(options);
+
+    return this;
+  }
+
+  /**
+   * Fade an RGB LED to full brightness
+   * @param {Number} [time=1000] Time in ms that a fade will take
+   * @param {function} [callback] A function to run when the fade is complete
+   * @return {RGB}
+   * @example
+   * &lt;caption>Fade an RGB LED to white over half a second
+   * import RGB from "@j5e/rgb";
+   * 
+   * (async function() {
+   *   const rgb = await new RGB([13, 12, 14]);
+   *   rgb.fadeIn(500);
+   * })();
+   */
+  fadeIn(time=1000, callback) {
+    return this.fade([this.HIGH.red, this.HIGH.green, this.HIGH.blue], time, callback);
+  }
+
+  /**
+   * Fade an RGB LED off
+   * @param {Number} [time=1000] Time in ms that a fade will take
+   * @param {function} [callback] A function to run when the fade is complete
+   * @return {RGB}
+   * @example
+   * &lt;caption>Fade out an RGB LED over half a second
+   * import RGB from "@j5e/rgb";
+   * 
+   * (async function() {
+   *   const rgb = await new RGB([13, 12, 14]);
+   *   rgb.color("#663399");
+   *   rgb.fadeOut(500);
+   * })();
+   */
+  fadeIn(time=1000, callback) {
+    return this.fade([this.LOW.red, this.LOW.green, this.LOW.blue], time, callback);
+  }
+
+  /**
+   * Pulse an RGB LED on a fixed interval
+   * @param {Number} duration=1000 - Time in ms on, time in ms off
    * @param {Function} callback - Method to call on pulse
    * @return {RGB}
+   * @example
+   * &lt;caption>Make it pulse&lt;/caption>
+   * import RGB from "@j5e/rgb";
+   *
+   * (async function() {
+   *   const rgb = await new RGB([13, 12, 14]);
+	 *   rgb.color("#663399");
+   *   rgb.pulse();
+   * })();
+   * 
+   * @example
+   * &lt;caption>Make it pulse slowly&lt;/caption>
+   * import RGB from "@j5e/rgb";
+   *
+   * (async function() {
+   *   const rgb = await new RGB([13, 12, 14]);
+	 *   rgb.color("#663399");
+   *   rgb.pulse(5000);
+   * })();
    */
   pulse(time=1000, callback) {
     
@@ -397,9 +656,23 @@ class RGB {
   }
 
   /**
-   * Animate the RGB LED
+   * Animate an RGB LED
    * @param {Object} options
    * @return {RGB}
+   * @example
+   * &lt;caption>Animate an RGB LED using an animation segment options object&lt;/caption>
+   * import RGB from "@j5e/rgb";
+   * 
+   * (async function() {
+   *   const rgb = await new RGB([13, 12, 14]);
+   *   rgb.animate({
+   *     duration: 4000,
+	 *     cuePoints: [0,  0.33, 0.66, 1],
+	 *     keyFrames: ["#000000", "#FF0000", "#00FFFF", "#FFFFFF"],
+	 *     loop: true,
+   *     metronomic: true
+   *   });
+   * })();
    */
   animate(options) {
     // Avoid traffic jams
@@ -412,6 +685,23 @@ class RGB {
     return this;
   }
 
+  /**
+   * Stop the RGB LED from pulsing, blinking, fading, or animating
+   * @return {RGB}
+   * @example
+   * &lt;caption>Make it pulse for five seconds and then stop&lt;/caption>
+   * (async function() {
+   *   import RGB from "@j5e/rgb";
+   *   import {timer} from "@j5e/fn";
+   *
+   *   const rgb = await new RGB([13, 12, 14]);
+	 *   rgb.color("#663399");
+   *   rgb.pulse(250);
+   *   timer.setTimeout(function() {
+   *     rgb.stop();
+   *   }, 5000);
+   * })();
+   */
   stop() {
   
     if (this.#state.interval) {
@@ -442,6 +732,7 @@ class RGB {
   /**
    * toScaledRGB
    * Scale the output values based on the current intensity
+   * @private
    */
   toScaledRGB(intensity, colors) {
     var scale = intensity / 100;
@@ -525,7 +816,7 @@ class RGB {
             var args = input.match(/^rgba?\(([^)]+)\)$/)[1].split(/[\s,]+/);
 
             // If the values were %...
-            if (isPercentString(args[0])) {
+            if (this.isPercentString(args[0])) {
               args[0] = Math.round((parseInt(value, 10) / 100) * this.HIGH.red);
               args[1] = Math.round((parseInt(value, 10) / 100) * this.HIGH.green);
               args[2] = Math.round((parseInt(value, 10) / 100) * this.HIGH.blue);
@@ -539,10 +830,10 @@ class RGB {
 
             // If rgba(...)
             if (args.length > 3) {
-              if (isPercentString(args[3])) {
+              if (this.isPercentString(args[3])) {
                 args[3] = parseInt(args[3], 10) / 100;
               }
-              update = RGB.toScaledRGB(100 * parseFloat(args[3]), update);
+              update = this.toScaledRGB(100 * parseFloat(args[3]), update);
             }
           } else {
             // color name
@@ -564,9 +855,7 @@ class RGB {
 
   /**
    * normalize
-   * 
    * @private
-   * 
    * @param [number || object] keyFrames An array of step values or a keyFrame objects
    */
   normalize(keyFrames) {
@@ -624,159 +913,22 @@ class RGB {
 
   /**
    * render
-   *
    * @private
-   * 
-   * @color [object] color object
    */
   render(frames) {
     return this.color(frames[0]);
   };
 
+  /**
+   * isPercentString
+   * @private
+   * @returns boolean
+   */
+  isPercentString(input) {
+    return typeof input === "string" &amp;&amp; input.endsWith("%");
+  }
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-
-
-  
-
-
-// //   /**
-// //    * Pulse the Led in and out in a loop with specified time
-// //    * @param {number} [time=1000] Time in ms that a fade in/out will elapse
-// //    * @param {function} [callback] A function to run each time the direction of pulse changes
-// //    * @return {Led}
-// //    */
-
-// //   pulse(time=1000, callback) {
-    
-// //     this.stop();
-
-// //     var options = {
-// //       duration: typeof time === "number" ? time : 1000,
-// //       keyFrames: [this.LOW, this.HIGH],
-// //       metronomic: true,
-// //       loop: true,
-// //       easing: inOutSine,
-// //       onloop: function() {
-// //         /* istanbul ignore else */
-// //         if (typeof callback === "function") {
-// //           callback();
-// //         }
-// //       }
-// //     };
-
-// //     if (typeof time === "object") {
-// //       Object.assign(options, time);
-// //     }
-
-// //     if (typeof time === "function") {
-// //       callback = time;
-// //     }
-
-// //     this.#state.isRunning = true;
-
-// //     this.#state.animation = this.#state.animation || new Animation(this);
-// //     this.#state.animation.enqueue(options);
-// //     return this;
-    
-// //   }  
-
-// //   /**
-// //    * fade Fade an led in and out
-// //    * @param {Number} val Target brightness value
-// //    * @param {Number} [time=1000] Time in ms that a fade will take
-// //    * @param {function} [callback] A function to run when the fade is complete
-// //    * @return {Led}
-// //    */
-// //   fade(val, time=1000, callback) {
-    
-// //     this.stop();
-
-// //     var options = {
-// //       duration: typeof time === "number" ? time : 1000,
-// //       keyFrames: [null, typeof val === "number" ? val : 0xff],
-// //       easing: outSine,
-// //       oncomplete: function() {
-// //         this.stop();
-// //         if (typeof callback === "function") {
-// //           callback();
-// //         }
-// //       }
-// //     };
-
-// //     if (typeof val === "object") {
-// //       Object.assign(options, val);
-// //     }
-
-// //     if (typeof val === "function") {
-// //       callback = val;
-// //     }
-
-// //     if (typeof time === "object") {
-// //       Object.assign(options, time);
-// //     }
-
-// //     if (typeof time === "function") {
-// //       callback = time;
-// //     }
-
-// //     this.#state.isRunning = true;
-
-// //     this.#state.animation = this.#state.animation || new Animation(this);
-// //     this.#state.animation.enqueue(options);
-
-// //     return this;
-// //   }
-
-// //   /**
-// //    * fade Fade an led in
-// //    * @param {Number} [time=1000] Time in ms that a fade will take
-// //    * @param {function} [callback] A function to run when the fade is complete
-// //    * @return {Led}
-// //    */
-// //   fadeIn(time=1000, callback) {
-// //     return this.fade(this.HIGH, time, callback);
-// //   }
-
-// //   /**
-// //    * fade Fade an led out
-// //    * @param {Number} [time=1000] Time in ms that a fade will take
-// //    * @param {function} [callback] A function to run when the fade is complete
-// //    * @return {Led}
-// //    */
-// //   fadeOut(time=1000, callback) {
-// //     return this.fade(this.LOW, time, callback);
-// //   }
-
-
 
 export default RGB;</code></pre>
 		</section>

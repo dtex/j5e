@@ -241,7 +241,7 @@
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;@j5e/led&quot;;
 			
 			(async function() {
-			  led &#x3D; await new LED(12);
+			  const led &#x3D; await new LED(12);
 			  led.on();
 			})();</code></pre>
 					</div>
@@ -295,7 +295,7 @@
 			import {timer} from &quot;@j5e/fn&quot;;
 			
 			(async function() {
-			  led &#x3D; await new LED(12);
+			  const led &#x3D; await new LED(12);
 			  led.on();
 			  
 			  // Wait one second and turn the led off
@@ -354,7 +354,7 @@
 			import {timer} from &quot;@j5e/fn&quot;;
 			
 			(async function() {
-			  led &#x3D; await new LED(12);
+			  const led &#x3D; await new LED(12);
 			  led.toggle(); // It&#x27;s on!
 			  
 			  // Wait one second and turn the led off
@@ -443,7 +443,7 @@
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;@j5e/led&quot;;
 			
 			(async function() {
-			  led &#x3D; await new LED(12);
+			  const led &#x3D; await new LED(12);
 			  led.blink(1000);
 			})();</code></pre>
 					</div>
@@ -517,7 +517,7 @@
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;@j5e/led&quot;;
 			
 			(async function() {
-			  led &#x3D; await new LED({
+			  const led &#x3D; await new LED({
 			    pin: 12,
 			    pwm: true
 			  });
@@ -594,7 +594,7 @@
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;@j5e/led&quot;;
 			
 			(async function() {
-			  led &#x3D; await new LED({
+			  const led &#x3D; await new LED({
 			    pin: 12,
 			    pwm: true
 			  });
@@ -693,7 +693,7 @@
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;@j5e/led&quot;;
 			
 			(async function() {
-			  led &#x3D; await new LED({
+			  const led &#x3D; await new LED({
 			    pin: 12,
 			    pwm: true
 			  });
@@ -779,11 +779,12 @@
 								</div>
 							</div>
 					</form>
-			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Fade an LED to full brightness over half a second</p></div>
+					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;@j5e/led&quot;;
 			
 			(async function() {
-			  led &#x3D; await new LED({
+			  const led &#x3D; await new LED({
 			    pin: 12,
 			    pwm: true
 			  });
@@ -810,7 +811,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-335">line 335</a></p>
+									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-336">line 336</a></p>
 								</div>
 							</div>
 			
@@ -869,11 +870,12 @@
 								</div>
 							</div>
 					</form>
-			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Fade an LED out over half a second</p></div>
+					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;@j5e/led&quot;;
 			
 			(async function() {
-			  led &#x3D; await new LED({
+			  const led &#x3D; await new LED({
 			    pin: 12,
 			    pwm: true
 			  });
@@ -901,7 +903,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-356">line 356</a></p>
+									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-358">line 358</a></p>
 								</div>
 							</div>
 			
@@ -960,11 +962,12 @@
 								</div>
 							</div>
 					</form>
-			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Pulse an LED on a half second interval</p></div>
+					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;@j5e/led&quot;;
 			
 			(async function() {
-			  led &#x3D; await new LED({
+			  const led &#x3D; await new LED({
 			    pin: 12,
 			    pwm: true
 			  });
@@ -991,7 +994,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-376">line 376</a></p>
+									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-379">line 379</a></p>
 								</div>
 							</div>
 			
@@ -1037,11 +1040,12 @@
 								</div>
 							</div>
 					</form>
-			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Animate an LED using an animation segment options object</p></div>
+					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;@j5e/led&quot;;
 			
 			(async function() {
-			  led &#x3D; await new LED({
+			  const led &#x3D; await new LED({
 			    pin: 12,
 			    pwm: true
 			  });
@@ -1074,7 +1078,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-425">line 425</a></p>
+									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-429">line 429</a></p>
 								</div>
 							</div>
 			
@@ -1090,7 +1094,7 @@
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">stop Stop the led from strobing, pulsing or fading</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">stop Stop the led from blinking, pulsing, fading, or animating</div>
 			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
 								<label class="col-sm-3 control-label returns-type"><span class="param-type">LED</span></label>
@@ -1100,11 +1104,12 @@
 							</div>
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import {timer} from &quot;@j5e/fn&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">Pulse an LED and then stop after five seconds
+			import {timer} from &quot;@j5e/fn&quot;;
 			import LED from &quot;@j5e/led&quot;;
 			
 			(async function() {
-			  led &#x3D; await new LED({
+			  const led &#x3D; await new LED({
 			    pin: 12,
 			    pwm: true
 			  });
@@ -1136,7 +1141,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-456">line 456</a></p>
+									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-461">line 461</a></p>
 								</div>
 							</div>
 			
