@@ -132,7 +132,7 @@ class LED {
    * import LED from "@j5e/led";
    *
    * (async function() {
-   *   led = await new LED(12);
+   *   const led = await new LED(12);
    *   led.on();
    * })();
    */
@@ -150,7 +150,7 @@ class LED {
    * import {timer} from "@j5e/fn";
    *
    * (async function() {
-   *   led = await new LED(12);
+   *   const led = await new LED(12);
    *   led.on();
    *   
    *   // Wait one second and turn the led off
@@ -173,7 +173,7 @@ class LED {
    * import {timer} from "@j5e/fn";
    *
    * (async function() {
-   *   led = await new LED(12);
+   *   const led = await new LED(12);
    *   led.toggle(); // It's on!
    *   
    *   // Wait one second and turn the led off
@@ -195,7 +195,7 @@ class LED {
    * import LED from "@j5e/led";
    * 
    * (async function() {
-   *   led = await new LED(12);
+   *   const led = await new LED(12);
    *   led.blink(1000);
    * })();
    */
@@ -228,7 +228,7 @@ class LED {
    * import LED from "@j5e/led";
    * 
    * (async function() {
-   *   led = await new LED({
+   *   const led = await new LED({
    *     pin: 12,
    *     pwm: true
    *   });
@@ -249,7 +249,7 @@ class LED {
    * import LED from "@j5e/led";
    * 
    * (async function() {
-   *   led = await new LED({
+   *   const led = await new LED({
    *     pin: 12,
    *     pwm: true
    *   });
@@ -272,7 +272,7 @@ class LED {
    * import LED from "@j5e/led";
    * 
    * (async function() {
-   *   led = await new LED({
+   *   const led = await new LED({
    *     pin: 12,
    *     pwm: true
    *   });
@@ -322,10 +322,11 @@ class LED {
    * @param {function} [callback] A function to run when the fade is complete
    * @return {LED}
    * @example
+   * <caption>Fade an LED to full brightness over half a second</caption>
    * import LED from "@j5e/led";
    * 
    * (async function() {
-   *   led = await new LED({
+   *   const led = await new LED({
    *     pin: 12,
    *     pwm: true
    *   });
@@ -342,10 +343,11 @@ class LED {
    * @param {function} [callback] A function to run when the fade is complete
    * @return {LED}
    * @example
+   * <caption>Fade an LED out over half a second</caption>
    * import LED from "@j5e/led";
    * 
    * (async function() {
-   *   led = await new LED({
+   *   const led = await new LED({
    *     pin: 12,
    *     pwm: true
    *   });
@@ -363,10 +365,11 @@ class LED {
    * @param {function} [callback] A function to run each time the direction of pulse changes
    * @return {LED}
    * @example
+   * <caption>Pulse an LED on a half second interval</caption>
    * import LED from "@j5e/led";
    * 
    * (async function() {
-   *   led = await new LED({
+   *   const led = await new LED({
    *     pin: 12,
    *     pwm: true
    *   });
@@ -406,10 +409,11 @@ class LED {
    * @param {Object} options (See {@tutorial D-ANIMATING})
    * @return {LED}
    * @example
+   * <caption>Animate an LED using an animation segment options object</caption>
    * import LED from "@j5e/led";
    * 
    * (async function() {
-   *   led = await new LED({
+   *   const led = await new LED({
    *     pin: 12,
    *     pwm: true
    *   });
@@ -434,14 +438,15 @@ class LED {
   }
 
   /**
-   * stop Stop the led from strobing, pulsing or fading
+   * stop Stop the led from blinking, pulsing, fading, or animating
    * @return {LED}
    * @example
+   * Pulse an LED and then stop after five seconds
    * import {timer} from "@j5e/fn";
    * import LED from "@j5e/led";
    * 
    * (async function() {
-   *   led = await new LED({
+   *   const led = await new LED({
    *     pin: 12,
    *     pwm: true
    *   });
