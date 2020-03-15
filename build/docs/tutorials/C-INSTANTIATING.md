@@ -66,7 +66,7 @@ The ```io``` argument is always required and can take a few different forms:
     
     // Instantiate an LED connected to 
     // our LED I/O
-    const led = await new Led(ledIO);
+    const led = await new LED(ledIO);
 
     led.pulse();
 

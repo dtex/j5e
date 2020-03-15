@@ -126,10 +126,10 @@ mkdir myProject
 }
 </code></pre>
 <h4>7. Create your <code>main.js</code> program file. Here's the ubquitous &quot;Hello World&quot; for hardware to get you started:</h4>
-<pre class="prettyprint source lang-js"><code>import Led from &quot;@j5e/led&quot;;
+<pre class="prettyprint source lang-js"><code>import LED from &quot;@j5e/led&quot;;
 
 (async function() {
-	const led = await new Led(14);
+	const led = await new LED(14);
 	led.blink();
 })();
 </code></pre>

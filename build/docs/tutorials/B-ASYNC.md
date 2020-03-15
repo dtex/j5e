@@ -7,7 +7,7 @@ var board = new five.Board();
 board.on("ready", function() {
   
   // Yay, the board is ready! Now I can run my program
-  var led = new five.Led(13);
+  var led = new five.LED(13);
   
   led.blink(500);
 
@@ -19,11 +19,11 @@ We can't instantiate our LED before the board is ready, so we wait for the board
 Things have changed. The challenge of having to wait for I/O to be ready remains, but now we handle it with promises and async/await. The trick is that in order to ```await``` for a call to return, the code must be wrapped in an ```async``` function. The simplest way to do this is with an "asynchronous immediately invoked function expression" or "AIIFE". The AIIFE wraps our program so we can use ```await``` on our initialization calls. 
 
 ````js
-import Led from "@j5e/led";
+import LED from "@j5e/led";
 
 (async function() {
 
-  const led = await new Led(13);
+  const led = await new LED(13);
   // Yay, the I/O is ready! Now I can run my program
 
   led.blink(500);

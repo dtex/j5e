@@ -46,10 +46,10 @@ cd myProject
 #### 7. Create your ```main.js``` program file. Here's the ubquitous "Hello World" for hardware to get you started:
 
 ````js
-import Led from "@j5e/led";
+import LED from "@j5e/led";
 
 (async function() {
-	const led = await new Led(14);
+	const led = await new LED(14);
 	led.blink();
 })();
 ````

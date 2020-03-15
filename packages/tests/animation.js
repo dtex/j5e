@@ -3,7 +3,7 @@ import sinon from 'sinon';
 
 import { Digital, PWM } from "@dtex/mock-io";
 import Animation from "@j5e/animation";
-import Led from "@j5e/led";
+import LED from "@j5e/led";
 
 describe('Animation', function() {
   
@@ -11,19 +11,19 @@ describe('Animation', function() {
     
     it('should return a valid Animation instance when passed a target', async function() {
       
-      const led = await new Led({
+      const led = await new LED({
         pin: 12,
         io: Digital
       });
 
       const animation = await new Animation(led);
       
-      assert.equal(led instanceof Led, true);
+      assert.equal(led instanceof LED, true);
       assert.equal(led.LOW, 0);
       assert.equal(led.HIGH, 1);
 
       assert.equal(animation instanceof Animation, true);
-      assert.equal(animation.defaultTarget instanceof Led, true);
+      assert.equal(animation.defaultTarget instanceof LED, true);
 
     });
 
@@ -35,7 +35,7 @@ describe('Animation', function() {
       
       const clock = sinon.useFakeTimers();
       
-      const led = await new Led({
+      const led = await new LED({
         pin: 12,
         io: Digital
       });
