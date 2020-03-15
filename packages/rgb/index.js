@@ -352,10 +352,10 @@ class RGB {
    *
    * (async function() {
    *   const rgb = await new RGB([13, 12, 14]);
-	 *   rgb.color("#663399"); // Turns RGB LED on
+	 *   rgb.toggle(); // Turns RGB LED on
    * 
    *   time.setTimeout(function() {
-   *     rgb.off(); // Turns it off
+   *     rgb.toggle(); // Turns it off
    *   }, 5000);
    * })();
    */
@@ -477,7 +477,7 @@ class RGB {
    * @param {function} [callback] A function to run when the fade is complete
    * @return {RGB}
    * @example
-   * <caption>Fade an RGB LED to white over half a second
+   * <caption>Fade an RGB LED to white over half a second</caption>
    * import RGB from "@j5e/rgb";
    * 
    * (async function() {
@@ -562,7 +562,7 @@ class RGB {
 
   /**
    * Animate an RGB LED
-   * @param {Object} options
+   * @param {Object} options (See {@tutorial D-ANIMATING})
    * @return {RGB}
    * @example
    * <caption>Animate an RGB LED using an animation segment options object</caption>
@@ -595,10 +595,10 @@ class RGB {
    * @return {RGB}
    * @example
    * <caption>Make it pulse for five seconds and then stop</caption>
+   * import RGB from "@j5e/rgb";
+   * import {timer} from "@j5e/fn";
+   * 
    * (async function() {
-   *   import RGB from "@j5e/rgb";
-   *   import {timer} from "@j5e/fn";
-   *
    *   const rgb = await new RGB([13, 12, 14]);
 	 *   rgb.color("#663399");
    *   rgb.pulse(250);

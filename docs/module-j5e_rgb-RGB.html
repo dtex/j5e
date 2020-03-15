@@ -504,10 +504,10 @@
 			
 			(async function() {
 			  const rgb &#x3D; await new RGB([13, 12, 14]);
-			  rgb.color(&quot;#663399&quot;); // Turns RGB LED on
+			  rgb.toggle(); // Turns RGB LED on
 			
 			  time.setTimeout(function() {
-			    rgb.off(); // Turns it off
+			    rgb.toggle(); // Turns it off
 			  }, 5000);
 			})();</code></pre>
 					</div>
@@ -803,9 +803,9 @@
 								</div>
 							</div>
 					</form>
-			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">&lt;caption&gt;Fade an RGB LED to white over half a second
-			import RGB from &quot;@j5e/rgb&quot;;
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Fade an RGB LED to white over half a second</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
 			
 			(async function() {
 			  const rgb &#x3D; await new RGB([13, 12, 14]);
@@ -1049,6 +1049,7 @@
 								<td><code>options</code></td>
 							<td><span class="param-type">Object</span></td>
 							<td class="last">
+									(See <a href="tutorial-D-ANIMATING.html">j5e's Timeline and Tweening Tools</a>)
 							</td>
 						</tr>
 					</tbody>
@@ -1124,10 +1125,10 @@
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Make it pulse for five seconds and then stop</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">(async function() {
-			  import RGB from &quot;@j5e/rgb&quot;;
-			  import {timer} from &quot;@j5e/fn&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+			import {timer} from &quot;@j5e/fn&quot;;
 			
+			(async function() {
 			  const rgb &#x3D; await new RGB([13, 12, 14]);
 			  rgb.color(&quot;#663399&quot;);
 			  rgb.pulse(250);
