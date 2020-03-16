@@ -66,6 +66,7 @@
 			<div class="navbar-collapse collapse" id="topNavigation">
 				<ul class="nav navbar-nav">
 							<li><a href="list_module.html">Modules</a></li>
+							<li><a href="list_namespace.html">Namespaces</a></li>
 							<li><a href="list_tutorial.html">Tutorials</a></li>
 				</ul>
 					<!-- start:lunr-search-navbar.hbs -->
@@ -112,7 +113,7 @@ import { inOutSine } from "@j5e/easing";
  * @classdesc The Servo class allows for control of hobby servos
  * @async
  * @extends Emitter
- * @fires Servo#move:complete - Fires when a servo reaches its requested position
+ * @fires move:complete - Fires when a servo reaches its requested position
  */
 class Servo extends Emitter {
   
@@ -147,6 +148,23 @@ class Servo extends Emitter {
    * @property {object[]} last.target - The user requested position
    * @property {object[]} last.degrees - The corrected position (factors in offset and invert)
    * @property {number} position - The most recent request and corrected position (factors in offset and invert)
+   * @example
+   * &lt;caption>Sweep a servo back and forth&lt;/caption>
+   * import Servo from "@j5e/servo";
+   *
+   * (async function() {
+   *   const servo = await new Servo(12);
+   *   servo.sweep();
+   * })();
+   * 
+   * @example
+   * &lt;caption>Move a continuos rotation servo forward&lt;/caption>
+   * import Servo from "@j5e/servo";
+   *
+   * (async function() {
+   *   const servo = await new Servo(12, {type: "continuous"});
+   *   servo.cw();
+   * })();
    */
   constructor(io, device) {
     return (async () => {
@@ -223,6 +241,7 @@ class Servo extends Emitter {
 
   /**
    * The initialization code for a servo
+   * @ignore
    */
   initialize(deviceOpts) {
     // No operation here... Meant to be overwritten by descendants
@@ -232,6 +251,7 @@ class Servo extends Emitter {
    * Calls the write param on the IO instance for this servo.
    * @param {number} degrees - The absolute position to move a servo to
    * @returns {Servo}
+   * @ignore
    */
   update(degrees) {
     
@@ -254,20 +274,45 @@ class Servo extends Emitter {
   }
 
   /**
-  * to
-  *
-  * Set the servo horn's position to given degree over time.
-  *
-  * @param {Number} degrees   Degrees to turn servo to.
-  * @param {Number} [time=1000]      Time to spend in motion.
-  * @param {Number} [rate=20]      The rate of the motion transiton
-  *
-  * - or -
-  *
-  * @param {Object} an Animation() segment config object
-  *
-  * @return {Servo} instance
-  */
+   * Set the servo's position to given degree over time.
+   *
+   * @param {Number|Object} degrees Degrees to move servo to or an animation object (See {@tutorial D-ANIMATING})
+   * @param {Number} [time] Time to spend in motion. If degrees is a number and this value is ommitted, the servo will move to the requested degrees as quickly as possible.
+   * @param {Number} [rate=20] The target frame rate of the motion transiton
+   * @return {Servo} instance
+   * @example
+   * &lt;caption>Move a servo to 180° as quickly as possible&lt;/caption>
+   * import Servo from "@j5e/servo";
+   *
+   * (async function() {
+   *   const servo = await new Servo(12);
+   *   servo.to(180);
+   * })();
+   * 
+   * @example
+   * &lt;caption>Move a servo to 180° over one second&lt;/caption>
+   * import Servo from "@j5e/servo";
+   *
+   * (async function() {
+   *   const servo = await new Servo(12);
+   *   servo.to(180, 1000);
+   * })();
+   * 
+   * @example
+   * &lt;caption>Move a servo to 180° using an animation segment object&lt;/caption>
+   * import Servo from "@j5e/servo";
+   * import { inOutQuad } from "@j5e/easing";
+   *
+   * (async function() {
+   *   const servo = await new Servo(12);
+   *   servo.to({
+   *     duration: 1000,
+   *     cuePoints: [0, 1.0],
+   *     keyFrames: [ null, 180 ],
+   *     easing: inOutQuad
+   *   });
+   * })();
+   */
   to(degrees, time, rate) {
 
     let options = {
@@ -346,8 +391,295 @@ class Servo extends Emitter {
     return this;
   }
 
+
+  /**
+   * Update the servo position by specified degrees (over time)
+   *
+   * @param  {Number} degrees Degrees to turn servo to.
+   * @param  {Number} [time] Time to spend in motion.
+   * @return {Servo}
+   * @example
+   * &lt;caption>Move a servo to 120° as quickly as possible&lt;/caption>
+   * import Servo from "@j5e/servo";
+   *
+   * (async function() {
+   *   const servo = await new Servo(12);
+   *   // The servo's default position is 90 degrees
+   *   servo.step(30);
+   * })();
+   * 
+   * @example
+   * &lt;caption>Move a servo to 120° over one second&lt;/caption>
+   * import Servo from "@j5e/servo";
+   *
+   * (async function() {
+   *   const servo = await new Servo(12);
+   *   // The servo's default position is 90 degrees
+   *   servo.step(30, 1000);
+   * })();
+   */
+  step(degrees, time) {
+    return this.to(this.last.target + degrees, time);
+  }
+
+  /**
+   * min Set Servo to minimum degrees, defaults to 0deg
+   * @param  {Number} [time]      Time to spend in motion.
+   * @return {Servo}
+   * @example
+   * &lt;caption>Move a servo to 0° as quickly as possible&lt;/caption>
+   * import Servo from "@j5e/servo";
+   *
+   * (async function() {
+   *   const servo = await new Servo(12);
+   *   servo.min();
+   * })();
+   * 
+   * @example
+   * &lt;caption>Move a servo to 0° over one second&lt;/caption>
+   * import Servo from "@j5e/servo";
+   *
+   * (async function() {
+   *   const servo = await new Servo(12);
+   *   servo.min(1000);
+   * })();
+   */
+  min(time) {
+    return this.to(this.#state.degreeRange[0], time);
+  };
+
+  /**
+   * max Set Servo to maximum degrees, defaults to 180deg
+   * @param  {Number} [time] Time to spend in motion.
+   * @return {Object} instance
+   * @example
+   * &lt;caption>Move a servo to 180° as quickly as possible&lt;/caption>
+   * import Servo from "@j5e/servo";
+   *
+   * (async function() {
+   *   const servo = await new Servo(12);
+   *   servo.max();
+   * })();
+   * 
+   * @example
+   * &lt;caption>Move a servo to 180° over one second&lt;/caption>
+   * import Servo from "@j5e/servo";
+   *
+   * (async function() {
+   *   const servo = await new Servo(12);
+   *   servo.max(1000);
+   * })();
+   */
+  max(time) {
+    return this.to(this.#state.degreeRange[1], time);
+  }
+
+  /**
+   * center Set Servo to centerpoint, defaults to 90deg
+   * @param  {Number} [time] Time to spend in motion.
+   * @return {Object} instance
+   * @example
+   * &lt;caption>Move a servo to 180° and then back to 90° as quickly as possible&lt;/caption>
+   * import Servo from "@j5e/servo";
+   * import { timer } from "@j5e/fn";
+   *
+   * (async function() {
+   *   const servo = await new Servo(12);
+   *   servo.to(180);
+   * 
+   *   timer.setTimeout(function() {
+   *     servo.center();
+   *   }, 1000);
+   * })();
+   * 
+   * @example
+   * &lt;caption>Move a servo to 180° and then back to 90° over one second&lt;/caption>
+   * import Servo from "@j5e/servo";
+   * import { timer } from "@j5e/fn";
+   *
+   * (async function() {
+   *   const servo = await new Servo(12);
+   *   servo.to(180);
+   * 
+   *   timer.setTimeout(function() {
+   *     servo.center(1000);
+   *   }, 1000);
+   * })();
+   */
+  center(time) {
+    return this.to(Math.abs((this.#state.degreeRange[0] + this.#state.degreeRange[1]) / 2), time);
+  }
+
+  /**
+   * Return Servo to its startAt position
+   * @return {Servo}
+   * @example
+   * &lt;caption>Move a servo to 180° and then back to 90° as quickly as possible&lt;/caption>
+   * import Servo from "@j5e/servo";
+   * import { timer } from "@j5e/fn";
+   *
+   * (async function() {
+   *   const servo = await new Servo(12);
+   *   servo.to(180);
+   * 
+   *   timer.setTimeout(function() {
+   *     servo.home();
+   *   }, 1000);
+   * })();
+   */
+  home() {
+    return this.to(this.#state.startAt);
+  }
+
+  /**
+   * sweep Sweep the servo between min and max or provided range
+   * @param  {Array|Object} opts An array describing the range of the sweep in degrees or an animation segment options object
+   * @return {Servo}
+   * @example
+   * &lt;caption>Sweep a servo back and forth between 10° to 170°&lt;/caption>
+   * import Servo from "@j5e/servo";
+   *
+   * (async function() {
+   *   const servo = await new Servo(12);
+   *   servo.sweep([10, 170]));
+   * })();
+   * 
+   * example
+   * &lt;caption>Sweep a servo back and forth between 10° to 170° with inOutCirc easing&lt;/caption>
+   * import Servo from "@j5e/servo";
+   * import {inOutCirc} from "@j5e/easing";
+   *
+   * (async function() {
+   *   const servo = await new Servo(12);
+   *   servo.sweep({
+   *     keyFrames: [10, 170],
+   *     cuePoints: [0, 1],
+   *     easing: inOutCirc
+   *   });
+   * })();
+   */
+  sweep(opts) {
+
+    var options = {
+      keyFrames: [{
+        value: this.#state.degreeRange[0]
+      }, {
+        value: this.#state.degreeRange[1]
+      }],
+      metronomic: true,
+      loop: true,
+      easing: inOutSine,
+      duration: 1000
+    };
+    
+    // If opts is an array, then assume a range was passed
+    if (Array.isArray(opts)) {
+      options.keyFrames = rangeToKeyFrames(opts);
+    } else {
+      if (typeof opts === "object" &amp;&amp; opts !== null) {
+        Object.assign(options, opts);
+        if (Array.isArray(options.range)) {
+          options.keyFrames = rangeToKeyFrames(options.range);
+        }
+      }
+    }
+
+    return this.to(options);
+  }
+
+  /**
+   * Stop a moving servo
+   * return {Servo}
+   * @example
+   * &lt;caption>Sweep a servo back and forth for two seconds then stop&lt;/caption>
+   * import Servo from "@j5e/servo";
+   *
+   * (async function() {
+   *   const servo = await new Servo(12);
+   *   servo.sweep([10, 170]));
+   * 
+   *   timer.setTimeout(function() {
+   *     servo.stop();
+   *   }, 2000);
+   * })();
+   */
+  stop() {
+    
+    if (this.#state.animation) {
+      this.#state.animation.stop();
+    }
+
+    if (this.#state.type === "continuous") {
+      this.to(
+        this.#state.deadband.reduce(function(a, b) {
+          return Math.round((a + b) / 2);
+        })
+      );
+    }
+
+    return this;
+  }
+
+  /**
+   * Move a continuous rotation servo clockwise
+   * @param  {number} speed Speed between 0 and 1.
+   * @return {Servo}
+   * @example
+   * &lt;caption>Move a continuos rotation servo clockwise&lt;/caption>
+   * import Servo from "@j5e/servo";
+   *
+   * (async function() {
+   *   const servo = await new Servo(12, {type: "continuous"});
+   *   servo.cw();
+   * })();
+   * 
+   * @example
+   * &lt;caption>Move a continuos rotation servo clockwise at half speed&lt;/caption>
+   * import Servo from "@j5e/servo";
+   *
+   * (async function() {
+   *   const servo = await new Servo(12, {type: "continuous"});
+   *   servo.cw(0.5);
+   * })();
+   */
+  cw(speed=1) {
+    speed = constrain(speed, 0, 1);
+    speed = map(speed, 0, 1, this.#state.deadband[1] + 1, this.#state.pwmRange[1]);
+    return this.to(speed);
+  }
+
+  /**
+   * Move a continuous rotation servo counter-clockwise
+   * @param  {number} speed Speed between 0 and 1.
+   * @return {Servo}
+   * @example
+   * &lt;caption>Move a continuos rotation servo counter-clockwise&lt;/caption>
+   * import Servo from "@j5e/servo";
+   *
+   * (async function() {
+   *   const servo = await new Servo(12, {type: "continuous"});
+   *   servo.ccw();
+   * })();
+   * 
+   * @example
+   * &lt;caption>Move a continuos rotation servo counter-clockwise at half speed&lt;/caption>
+   * import Servo from "@j5e/servo";
+   *
+   * (async function() {
+   *   const servo = await new Servo(12, {type: "continuous"});
+   *   servo.ccw(0.5);
+   * })();
+   */
+  ccw(speed=1) {
+    speed = constrain(speed, 0, 1);
+    speed = map(speed, 0, 1, this.#state.deadband[0] - 1, this.#state.pwmRange[0]);
+    return this.to(speed);
+  }
+
+
   /**
    * @param [number || object] keyFrames An array of step values or a keyFrame objects
+   * @ignore
    */
   normalize(keyFrames) {
     
@@ -395,134 +727,11 @@ class Servo extends Emitter {
 
   /**
    * render
-   *
    * @position [number] value to set the servo to
+   * @ignore
    */
   render(position) {
     return this.to(position[0]);
-  }
-
-  /**
-   * step
-   *
-   * Update the servo horn's position by specified degrees (over time)
-   *
-   * @param  {Number} degrees   Degrees to turn servo to.
-   * @param  {Number} [time]      Time to spend in motion.
-   *
-   * @return {Servo} instance
-   */
-  step(degrees, time) {
-    return this.to(this.last.target + degrees, time);
-  }
-
-  /**
-   * min Set Servo to minimum degrees, defaults to 0deg
-   * @param  {Number} [time]      Time to spend in motion.
-   * @return {Object} instance
-   */
-  min(time) {
-    return this.to(this.#state.degreeRange[0], time);
-  };
-
-  /**
-   * max Set Servo to maximum degrees, defaults to 180deg
-   * @param  {Number} [time]      Time to spend in motion.
-   * @return {Object} instance
-   */
-  max(time) {
-    return this.to(this.#state.degreeRange[1], time);
-  }
-
-  /**
-   * center Set Servo to centerpoint, defaults to 90deg
-   * @param  {Number} time      Time to spend in motion.
-   * @return {Object} instance
-   */
-  center(time) {
-    return this.to(Math.abs((this.#state.degreeRange[0] + this.#state.degreeRange[1]) / 2), time);
-  }
-
-  /**
-   * home Return Servo to startAt position
-   */
-  home() {
-    return this.to(this.#state.startAt);
-  }
-
-  /**
-   * sweep Sweep the servo between min and max or provided range
-   * @param  {Array} range constrain sweep to range
-   *
-   * @param {Object} options Set range or interval.
-   *
-   */
-  sweep(opts) {
-
-    var options = {
-      keyFrames: [{
-        value: this.#state.degreeRange[0]
-      }, {
-        value: this.#state.degreeRange[1]
-      }],
-      metronomic: true,
-      loop: true,
-      easing: inOutSine
-    };
-    
-    // If opts is an array, then assume a range was passed
-    if (Array.isArray(opts)) {
-      options.keyFrames = rangeToKeyFrames(opts);
-    } else {
-      if (typeof opts === "object" &amp;&amp; opts !== null) {
-        Object.assign(options, opts);
-        if (Array.isArray(options.range)) {
-          options.keyFrames = rangeToKeyFrames(options.range);
-        }
-      }
-    }
-
-    return this.to(options);
-  }
-
-  /**
-   * stop Stop a moving servo
-   */
-  stop() {
-    
-    if (this.#state.animation) {
-      this.#state.animation.stop();
-    }
-
-    if (this.#state.type === "continuous") {
-      this.to(
-        this.#state.deadband.reduce(function(a, b) {
-          return Math.round((a + b) / 2);
-        })
-      );
-    }
-
-    return this;
-  }
-
-  /**
-   * cw Move a continuous rotation servo clockwise
-   * @param  {number} speed Speed between 0 and 1.
-   */
-  cw(speed=1) {
-    speed = constrain(speed, 0, 1);
-    speed = map(speed, 0, 1, this.#state.deadband[1] + 1, this.#state.pwmRange[1]);
-    return this.to(speed);
-  }
-
-  /**
-   * csw Move a continuous rotation servo counter-clockwise
-   * @param  {number} speed Speed between 0 and 1.
-   */
-  ccw(speed=1) {
-    speed = constrain(speed, 0, 1);
-    speed = map(speed, 0, 1, this.#state.deadband[0] - 1, this.#state.pwmRange[0]);
-    return this.to(speed);
   }
 
 }
@@ -540,7 +749,7 @@ export default Servo;</code></pre>
 	</div>
 	<footer>
 				<div class="copyright">Copyright © 2020 The contributors to the j5e and Johnny-Five projects.</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on March 14, 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on March 15, 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
@@ -565,15 +774,12 @@ export default Servo;</code></pre>
 		</div>
 		<!-- end:lunr-search-modal.hbs -->		<script src="js/lunr.min.js"></script>
 	
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-			ga('create', 'UA-36026876-4', 'dtex.github.io');
-			ga('send', 'pageview');
-		</script>
-	
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-36026876-4"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());gtag('config', 'UA-36026876-4');
+</script>
 </body>
 </html>
 <!-- end:source.tmpl.hbs -->

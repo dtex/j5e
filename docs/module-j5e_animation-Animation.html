@@ -65,6 +65,7 @@
 			<div class="navbar-collapse collapse" id="topNavigation">
 				<ul class="nav navbar-nav">
 							<li><a href="list_module.html">Modules</a></li>
+							<li><a href="list_namespace.html">Namespaces</a></li>
 							<li><a href="list_tutorial.html">Tutorials</a></li>
 				</ul>
 					<!-- start:lunr-search-navbar.hbs -->
@@ -101,7 +102,7 @@
 </dt>
 <dd class="symbol-details class  collapsible-symbol expanded" style="max-height: 9999px;">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description classdesc">Allows for scripted changes of LEDs and Servos</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description classdesc">Allows for scripted control of LEDs, RGBs, and Servos</div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -117,13 +118,33 @@
 								<td><code>target</code></td>
 							<td><span class="param-type">LED</span> | <span class="param-type">Array.&lt;LED></span> | <span class="param-type">RGB</span> | <span class="param-type">Array.&lt;RGB></span> | <span class="param-type">Servo</span> | <span class="param-type">Array.&lt;Servo></span></td>
 							<td class="last">
-									LEDs, RGBs, or Servos to be animated
+									LEDs, RGBs, and/or Servos to be animated (See <a href="tutorial-D-ANIMATING.html">j5e's Timeline and Tweening Tools</a> for more information)
 							</td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
-			<div class="callout callout-warning"><h5>Fires</h5>		<form class="form-horizontal fires">
+			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Make a servo &quot;wave&quot;</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+			import Animation from &quot;@j5e/animation&quot;;
+			
+			(async function() {
+			  const servo &#x3D; new Servo(13);
+			  const ani &#x3D; new Animation(servo);
+			
+			  const wave &#x3D; {
+			    duration: 4000,
+			    cuePoints: [0,  0.375, 0.625, 1],
+			    keyFrames: [0, 135, 45, 180],
+			    loop: true,
+			    metronomic: true
+			  };
+			
+			  ani.enqueue(wave);
+			});</code></pre>
+					</div>
+			</div>			<div class="callout callout-warning"><h5>Fires</h5>		<form class="form-horizontal fires">
 							<div class="form-group">
 								<label class="col-sm-3 control-label fires-event">animation:pause</label>
 								<div class="col-sm-9">
@@ -157,7 +178,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="animation_index.js.html">animation/index.js</a>, <a href="animation_index.js.html#line-24">line 24</a></p>
+									<p class="form-control-static"><a href="animation_index.js.html">animation/index.js</a>, <a href="animation_index.js.html#line-43">line 43</a></p>
 								</div>
 							</div>
 			
@@ -177,7 +198,7 @@
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Add an animation segment to the animation queue</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Add an animation segment to the animation queue (See <a href="tutorial-D-ANIMATING.html">j5e's Timeline and Tweening Tools</a> for more information)</div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -220,7 +241,7 @@
 														<td class="attributes">&lt;optional&gt;<br/></td>
 														<td>[0, 1]</td>
 													<td class="last">
-															Animation segment cuepoints from 0-1
+															Segment cuepoints from 0-1
 													</td>
 												</tr>
 												<tr>
@@ -229,7 +250,7 @@
 														<td class="attributes">&lt;optional&gt;<br/></td>
 														<td>1000</td>
 													<td class="last">
-															Duration of animation segment in ms
+															Duration of segment in ms
 													</td>
 												</tr>
 												<tr>
@@ -319,7 +340,7 @@
 														<td class="attributes">&lt;optional&gt;<br/></td>
 														<td></td>
 													<td class="last">
-															Function to call when animation starts
+															Function to call when the segment starts
 													</td>
 												</tr>
 												<tr>
@@ -328,7 +349,7 @@
 														<td class="attributes">&lt;optional&gt;<br/></td>
 														<td></td>
 													<td class="last">
-															Function to call when animation is paused
+															Function to call when the segment is paused
 													</td>
 												</tr>
 												<tr>
@@ -337,7 +358,7 @@
 														<td class="attributes">&lt;optional&gt;<br/></td>
 														<td></td>
 													<td class="last">
-															Function to call when animation is stopped
+															Function to call when the segment is stopped
 													</td>
 												</tr>
 												<tr>
@@ -346,7 +367,7 @@
 														<td class="attributes">&lt;optional&gt;<br/></td>
 														<td></td>
 													<td class="last">
-															Function to call when animation is complete
+															Function to call when the segment is complete
 													</td>
 												</tr>
 												<tr>
@@ -355,7 +376,7 @@
 														<td class="attributes">&lt;optional&gt;<br/></td>
 														<td></td>
 													<td class="last">
-															Function to call when animation loops
+															Function to call when the segment loops
 													</td>
 												</tr>
 											</tbody>
@@ -365,51 +386,26 @@
 					</tbody>
 				</table>
 			</div>
-			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Make a servo &quot;wave&quot;</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+			import Animation from &quot;@j5e/animation&quot;;
 			
+			(async function() {
+			  const servo &#x3D; new Servo(13);
+			  const ani &#x3D; new Animation(servo);
 			
+			  const wave &#x3D; {
+			    duration: 4000,
+			    cuePoints: [0,  0.375, 0.625, 1],
+			    keyFrames: [0, 135, 45, 180],
+			    loop: true,
+			    metronomic: true
+			  };
 			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="animation_index.js.html">animation/index.js</a>, <a href="animation_index.js.html#line-51">line 51</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="next" class="function public"><span class="name">next</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Plays next segment in queue. Not meant to be called externally.</div>
-			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description">this</div>
-								</div>
-							</div>
-					</form>
+			  ani.enqueue(wave);
+			});</code></pre>
+					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -430,7 +426,81 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="animation_index.js.html">animation/index.js</a>, <a href="animation_index.js.html#line-73">line 73</a></p>
+									<p class="form-control-static"><a href="animation_index.js.html">animation/index.js</a>, <a href="animation_index.js.html#line-89">line 89</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id="play" class="function public"><span class="name">play</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Resume play on an animation after it has been paused or stopped.</div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description">Animation</div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Make a servo &quot;wave&quot; for five seconds, pause for one second and then resume waving</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+			import Animation from &quot;@j5e/animation&quot;;
+			import {timer} from &quot;@j5e/fn&quot;;
+			
+			(async function() {
+			  const servo &#x3D; new Servo(13);
+			  const ani &#x3D; new Animation(servo);
+			
+			  const wave &#x3D; {
+			    duration: 4000,
+			    cuePoints: [0,  0.375, 0.625, 1],
+			    keyFrames: [0, 135, 45, 180],
+			    loop: true,
+			    metronomic: true
+			  };
+			
+			  ani.enqueue(wave);
+			
+			  timer.setTimeout(function() { 
+			    ani.pause();
+			  }, 5000);
+			
+			  timer.setTimeout(function() { 
+			    ani.play();
+			  }, 6000);
+			});</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="animation_index.js.html">animation/index.js</a>, <a href="animation_index.js.html#line-178">line 178</a></p>
 								</div>
 							</div>
 			
@@ -447,6 +517,43 @@
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
 			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Pause animation while maintaining progress, speed and segment queue</div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description">Animation</div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Make a servo &quot;wave&quot; for five seconds, pause for one second and then resume waving</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+			import Animation from &quot;@j5e/animation&quot;;
+			import {timer} from &quot;@j5e/fn&quot;;
+			
+			(async function() {
+			  const servo &#x3D; new Servo(13);
+			  const ani &#x3D; new Animation(servo);
+			
+			  const wave &#x3D; {
+			    duration: 4000,
+			    cuePoints: [0,  0.375, 0.625, 1],
+			    keyFrames: [0, 135, 45, 180],
+			    loop: true,
+			    metronomic: true
+			  };
+			
+			  ani.enqueue(wave);
+			
+			  timer.setTimeout(function() { 
+			    ani.pause();
+			  }, 5000);
+			
+			  timer.setTimeout(function() { 
+			    ani.play();
+			  }, 6000);
+			});</code></pre>
+					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -467,7 +574,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="animation_index.js.html">animation/index.js</a>, <a href="animation_index.js.html#line-110">line 110</a></p>
+									<p class="form-control-static"><a href="animation_index.js.html">animation/index.js</a>, <a href="animation_index.js.html#line-238">line 238</a></p>
 								</div>
 							</div>
 			
@@ -483,7 +590,41 @@
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">stop the animation, flushing the segment queue</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Stop the animation, flushing the segment queue</div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description">Animation</div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Make a servo &quot;wave&quot; for five seconds and then stop, flushing the queue</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+			import Animation from &quot;@j5e/animation&quot;;
+			import {timer} from &quot;@j5e/fn&quot;;
+			
+			(async function() {
+			  const servo &#x3D; new Servo(13);
+			  const ani &#x3D; new Animation(servo);
+			
+			  const wave &#x3D; {
+			    duration: 4000,
+			    cuePoints: [0,  0.375, 0.625, 1],
+			    keyFrames: [0, 135, 45, 180],
+			    loop: true,
+			    metronomic: true
+			  };
+			
+			  ani.enqueue(wave);
+			
+			  timer.setTimeout(function() { 
+			    ani.stop();
+			  }, 5000);
+			
+			});</code></pre>
+					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -504,7 +645,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="animation_index.js.html">animation/index.js</a>, <a href="animation_index.js.html#line-128">line 128</a></p>
+									<p class="form-control-static"><a href="animation_index.js.html">animation/index.js</a>, <a href="animation_index.js.html#line-284">line 284</a></p>
 								</div>
 							</div>
 			
@@ -520,8 +661,7 @@
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">speed
-			Get or set the current playback speed</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Get or set the current playback speed</div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -545,44 +685,48 @@
 					</tbody>
 				</table>
 			</div>
-			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
+								<label class="col-sm-3 control-label returns-type"></label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="animation_index.js.html">animation/index.js</a>, <a href="animation_index.js.html#line-149">line 149</a></p>
+									<div class="form-control-static returns-description">Animation</div>
 								</div>
 							</div>
-			
-			
-			
-			
 					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="loopFunction" class="function public"><span class="name">loopFunction</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Called in each frame of the animation
-			Not intended to be called externally</div>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Make a servo &quot;wave&quot; for one second, increase the speed, wait another second and decrease the speed for one second and then stop.</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+			import Animation from &quot;@j5e/animation&quot;;
+			import {timer} from &quot;@j5e/fn&quot;;
+			
+			(async function() {
+			  const servo &#x3D; new Servo(13);
+			  const ani &#x3D; new Animation(servo);
+			
+			  const wave &#x3D; {
+			    duration: 4000,
+			    cuePoints: [0,  0.375, 0.625, 1],
+			    keyFrames: [0, 135, 45, 180],
+			    loop: true,
+			    metronomic: true
+			  };
+			
+			  ani.enqueue(wave);
+			
+			  timer.setTimeout(function() { 
+			    ani.speed(2.0); // Speed up to 2x
+			  }, 1000);
+			
+			  timer.setTimeout(function() { 
+			    ani.speed(0.5); // Speed up to 1/2x
+			  }, 2000);
+			
+			  timer.setTimeout(function() { 
+			    ani.stop(); // Note, animation speed is still 0.5
+			  }, 3000);
+			
+			});</code></pre>
+					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -603,194 +747,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="animation_index.js.html">animation/index.js</a>, <a href="animation_index.js.html#line-172">line 172</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="play" class="function public"><span class="name">play</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Start a segment. Not meant to be called externally.</div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="animation_index.js.html">animation/index.js</a>, <a href="animation_index.js.html#line-221">line 221</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="findIndices" class="function public"><span class="name">findIndices</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Find left and right cuepoints. Not meant to be called externally.</div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="animation_index.js.html">animation/index.js</a>, <a href="animation_index.js.html#line-252">line 252</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="calculateProgress" class="function public"><span class="name">calculateProgress</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Compute progress based on start time. Not intended to be called externally.</div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="animation_index.js.html">animation/index.js</a>, <a href="animation_index.js.html#line-269">line 269</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="tweenedValue" class="function public"><span class="name">tweenedValue</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Find our tweened value based on left and right indices and current progress.
-			Not intended to be called externally.</div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="animation_index.js.html">animation/index.js</a>, <a href="animation_index.js.html#line-292">line 292</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="normalizeKeyframes" class="function public"><span class="name">normalizeKeyframes</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Make sure our keyframes conform to a standard.
-			Not intended to be called externally.</div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="animation_index.js.html">animation/index.js</a>, <a href="animation_index.js.html#line-363">line 363</a></p>
+									<p class="form-control-static"><a href="animation_index.js.html">animation/index.js</a>, <a href="animation_index.js.html#line-340">line 340</a></p>
 								</div>
 							</div>
 			
@@ -811,7 +768,7 @@
 	</div>
 	<footer>
 				<div class="copyright">Copyright © 2020 The contributors to the j5e and Johnny-Five projects.</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on March 14, 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on March 15, 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
@@ -836,14 +793,11 @@
 		</div>
 		<!-- end:lunr-search-modal.hbs -->		<script src="js/lunr.min.js"></script>
 	
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-			ga('create', 'UA-36026876-4', 'dtex.github.io');
-			ga('send', 'pageview');
-		</script>
-	
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-36026876-4"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());gtag('config', 'UA-36026876-4');
+</script>
 </body>
 </html>

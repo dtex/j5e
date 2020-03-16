@@ -65,6 +65,7 @@
 			<div class="navbar-collapse collapse" id="topNavigation">
 				<ul class="nav navbar-nav">
 							<li><a href="list_module.html">Modules</a></li>
+							<li><a href="list_namespace.html">Namespaces</a></li>
 							<li><a href="list_tutorial.html">Tutorials</a></li>
 				</ul>
 					<!-- start:lunr-search-navbar.hbs -->
@@ -100,7 +101,7 @@
 			<dt class="symbol-title "></dt>
 			<dd class="symbol-details ">
 				<div class="symbol-details-inner">
-					<div class="callout callout-primary"><h5>Description</h5>		<div class="description">fn module - Easing functions for animiation segments.</div>
+					<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Easing functions for animation segments.</div>
 					</div>					<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 					
 					
@@ -126,6 +127,13 @@
 									</div>
 					
 					
+									<!-- see -->
+									<div class="form-group">
+										<label class="col-sm-3 control-label">See</label>
+										<div class="col-sm-9">
+												<p class="form-control-static"><a href="https://easings.net/en#">easings.net</a> to help understand easing functions</p>
+										</div>
+									</div>
 					
 					
 							</form>
@@ -137,73 +145,7 @@
 									<dl class="symbol">
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".linear" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">linear</span><span class="signature-params">( <span class="signature-param">Input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{number}</span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Linear</div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>Input</code></td>
-							<td><span class="param-type">n</span></td>
-							<td class="last">
-									value
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">number</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description"></div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-21">line 21</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".inQuad" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inQuad</span><span class="signature-params">( <span class="signature-param">Input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{number}</span></h4>
+			<h4 id=".inQuad" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inQuad</span><span class="signature-params">( <span class="signature-param">input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
@@ -220,10 +162,10 @@
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>Input</code></td>
-							<td><span class="param-type">n</span></td>
+								<td><code>input</code></td>
+							<td><span class="param-type">Number</span></td>
 							<td class="last">
-									value
+									value [0, 1]
 							</td>
 						</tr>
 					</tbody>
@@ -231,12 +173,32 @@
 			</div>
 			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">number</span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Number</span></label>
 								<div class="col-sm-9">
 									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Ease the entire animation. Move a servo from 0° to 180° with inQuad easing.</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+			import Animation from &quot;@j5e/animation&quot;;
+			import { inQuad } from &quot;@j5e/easing&quot;;
+			
+			(async function() {
+			  const servo &#x3D; new Servo(13);
+			  const ani &#x3D; new Animation(servo);
+			
+			  const wave &#x3D; {
+			    duration: 4000,
+			    cuePoints: [0, 1],
+			    keyFrames: [0, 180],
+			    easing: inQuad
+			  };
+			
+			  ani.enqueue(wave);
+			});</code></pre>
+					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -257,11 +219,18 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-27">line 27</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-68">line 68</a></p>
 								</div>
 							</div>
 			
 			
+							<!-- see -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">See</label>
+								<div class="col-sm-9">
+										<p class="form-control-static"><a href="https://easings.net/en#easeInQuad">easings.net</a> for details</p>
+								</div>
+							</div>
 			
 			
 					</form>
@@ -269,7 +238,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".outQuad" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">outQuad</span><span class="signature-params">( <span class="signature-param">Input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{number}</span></h4>
+			<h4 id=".outQuad" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">outQuad</span><span class="signature-params">( <span class="signature-param">input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
@@ -286,10 +255,10 @@
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>Input</code></td>
-							<td><span class="param-type">n</span></td>
+								<td><code>input</code></td>
+							<td><span class="param-type">Number</span></td>
 							<td class="last">
-									value
+									value [0, 1]
 							</td>
 						</tr>
 					</tbody>
@@ -297,12 +266,31 @@
 			</div>
 			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">number</span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Number</span></label>
 								<div class="col-sm-9">
 									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Ease an animation segment. Move a servo from 0° to 90° with linear easing and then 90° to 180° with outQuad easing.</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+			import Animation from &quot;@j5e/animation&quot;;
+			import { outQuad } from &quot;@j5e/easing&quot;;
+			
+			(async function() {
+			  const servo &#x3D; new Servo(13);
+			  const ani &#x3D; new Animation(servo);
+			
+			  const wave &#x3D; {
+			    duration: 4000,
+			    cuePoints: [0, 0.5, 1],
+			    keyFrames: [0, 90, { value: 180, easing: outQuad }]
+			  };
+			
+			  ani.enqueue(wave);
+			});</code></pre>
+					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -323,11 +311,18 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-33">line 33</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-93">line 93</a></p>
 								</div>
 							</div>
 			
 			
+							<!-- see -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">See</label>
+								<div class="col-sm-9">
+										<p class="form-control-static"><a href="https://easings.net/en#easeOutQuad">easings.net</a> for details</p>
+								</div>
+							</div>
 			
 			
 					</form>
@@ -335,7 +330,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".inOutQuad" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inOutQuad</span><span class="signature-params">( <span class="signature-param">Input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{number}</span></h4>
+			<h4 id=".inOutQuad" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inOutQuad</span><span class="signature-params">( <span class="signature-param">input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
@@ -352,10 +347,10 @@
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>Input</code></td>
-							<td><span class="param-type">n</span></td>
+								<td><code>input</code></td>
+							<td><span class="param-type">Number</span></td>
 							<td class="last">
-									value
+									value [0, 1]
 							</td>
 						</tr>
 					</tbody>
@@ -363,672 +358,32 @@
 			</div>
 			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">number</span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Number</span></label>
 								<div class="col-sm-9">
 									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-39">line 39</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".inCube" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inCube</span><span class="signature-params">( <span class="signature-param">Input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{number}</span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">inCube</div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>Input</code></td>
-							<td><span class="param-type">n</span></td>
-							<td class="last">
-									value
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">number</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description"></div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-50">line 50</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".outCube" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">outCube</span><span class="signature-params">( <span class="signature-param">Input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{number}</span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">outCube</div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>Input</code></td>
-							<td><span class="param-type">n</span></td>
-							<td class="last">
-									value
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">number</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description"></div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-56">line 56</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".inOutCube" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inOutCube</span><span class="signature-params">( <span class="signature-param">Input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{number}</span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">inOutCube</div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>Input</code></td>
-							<td><span class="param-type">n</span></td>
-							<td class="last">
-									value
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">number</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description"></div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-62">line 62</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".inQuart" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inQuart</span><span class="signature-params">( <span class="signature-param">Input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{number}</span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">inQuart</div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>Input</code></td>
-							<td><span class="param-type">n</span></td>
-							<td class="last">
-									value
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">number</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description"></div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-73">line 73</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".outQuart" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">outQuart</span><span class="signature-params">( <span class="signature-param">Input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{number}</span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">outQuart</div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>Input</code></td>
-							<td><span class="param-type">n</span></td>
-							<td class="last">
-									value
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">number</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description"></div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-79">line 79</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".inOutQuart" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inOutQuart</span><span class="signature-params">( <span class="signature-param">Input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{number}</span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">inOutQuart</div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>Input</code></td>
-							<td><span class="param-type">n</span></td>
-							<td class="last">
-									value
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">number</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description"></div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-85">line 85</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".inQuint" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inQuint</span><span class="signature-params">( <span class="signature-param">Input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{number}</span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">inQuint</div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>Input</code></td>
-							<td><span class="param-type">n</span></td>
-							<td class="last">
-									value
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">number</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description"></div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-96">line 96</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".outQuint" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">outQuint</span><span class="signature-params">( <span class="signature-param">Input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{number}</span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">outQuint</div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>Input</code></td>
-							<td><span class="param-type">n</span></td>
-							<td class="last">
-									value
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">number</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description"></div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-102">line 102</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".inOutQuint" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inOutQuint</span><span class="signature-params">( <span class="signature-param">Input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{number}</span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">inOutQuint</div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>Input</code></td>
-							<td><span class="param-type">n</span></td>
-							<td class="last">
-									value
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">number</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description"></div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-108">line 108</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".inSine" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inSine</span><span class="signature-params">( <span class="signature-param">Input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{number}</span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">inSine</div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>Input</code></td>
-							<td><span class="param-type">n</span></td>
-							<td class="last">
-									value
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">number</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description"></div>
-								</div>
-							</div>
-					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Ease the entire animation. Move a servo from 0° to 180° with inOutQuad easing.</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+			import Animation from &quot;@j5e/animation&quot;;
+			import { inOutQuad } from &quot;@j5e/easing&quot;;
+			
+			(async function() {
+			  const servo &#x3D; new Servo(13);
+			  const ani &#x3D; new Animation(servo);
+			
+			  const wave &#x3D; {
+			    duration: 4000,
+			    cuePoints: [0, 1],
+			    keyFrames: [0, 180],
+			    easing: inOutQuad
+			  };
+			
+			  ani.enqueue(wave);
+			});</code></pre>
+					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -1054,6 +409,13 @@
 							</div>
 			
 			
+							<!-- see -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">See</label>
+								<div class="col-sm-9">
+										<p class="form-control-static"><a href="https://easings.net/en#easeInOutQuad">easings.net</a> for details</p>
+								</div>
+							</div>
 			
 			
 					</form>
@@ -1061,7 +423,934 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".outSine" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">outSine</span><span class="signature-params">( <span class="signature-param">Input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{number}</span></h4>
+			<h4 id=".inCube" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inCube</span><span class="signature-params">( <span class="signature-param">input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">inCube</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>input</code></td>
+							<td><span class="param-type">Number</span></td>
+							<td class="last">
+									value [0, 1]
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Number</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Ease the entire animation. Move a servo from 0° to 180° with inCube easing.</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+			import Animation from &quot;@j5e/animation&quot;;
+			import { inCube } from &quot;@j5e/easing&quot;;
+			
+			(async function() {
+			  const servo &#x3D; new Servo(13);
+			  const ani &#x3D; new Animation(servo);
+			
+			  const wave &#x3D; {
+			    duration: 4000,
+			    cuePoints: [0, 1],
+			    keyFrames: [0, 180],
+			    easing: inCube
+			  };
+			
+			  ani.enqueue(wave);
+			});</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-150">line 150</a></p>
+								</div>
+							</div>
+			
+			
+							<!-- see -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">See</label>
+								<div class="col-sm-9">
+										<p class="form-control-static"><a href="https://easings.net/en#easeInCubic">easings.net</a> for details</p>
+								</div>
+							</div>
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id=".outCube" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">outCube</span><span class="signature-params">( <span class="signature-param">input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">outCube</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>input</code></td>
+							<td><span class="param-type">Number</span></td>
+							<td class="last">
+									value [0, 1]
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Number</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Ease an animation segment. Move a servo from 0° to 90° with linear easing and then 90° to 180° with outCube easing.</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+			import Animation from &quot;@j5e/animation&quot;;
+			import { outCube } from &quot;@j5e/easing&quot;;
+			
+			(async function() {
+			  const servo &#x3D; new Servo(13);
+			  const ani &#x3D; new Animation(servo);
+			
+			  const wave &#x3D; {
+			    duration: 4000,
+			    cuePoints: [0, 0.5, 1],
+			    keyFrames: [0, 90, { value: 180, easing: outCube }]
+			  };
+			
+			  ani.enqueue(wave);
+			});</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-175">line 175</a></p>
+								</div>
+							</div>
+			
+			
+							<!-- see -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">See</label>
+								<div class="col-sm-9">
+										<p class="form-control-static"><a href="https://easings.net/en#easeOutCubic">easings.net</a> for details</p>
+								</div>
+							</div>
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id=".inOutCube" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inOutCube</span><span class="signature-params">( <span class="signature-param">input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">inOutCube</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>input</code></td>
+							<td><span class="param-type">Number</span></td>
+							<td class="last">
+									value [0, 1]
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Number</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Ease the entire animation. Move a servo from 0° to 180° with inOutCube easing.</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+			import Animation from &quot;@j5e/animation&quot;;
+			import { inOutCube } from &quot;@j5e/easing&quot;;
+			
+			(async function() {
+			  const servo &#x3D; new Servo(13);
+			  const ani &#x3D; new Animation(servo);
+			
+			  const wave &#x3D; {
+			    duration: 4000,
+			    cuePoints: [0, 1],
+			    keyFrames: [0, 180],
+			    easing: inOutCube
+			  };
+			
+			  ani.enqueue(wave);
+			});</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-201">line 201</a></p>
+								</div>
+							</div>
+			
+			
+							<!-- see -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">See</label>
+								<div class="col-sm-9">
+										<p class="form-control-static"><a href="https://easings.net/en#easeInOutCubic">easings.net</a> for details</p>
+								</div>
+							</div>
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id=".inQuart" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inQuart</span><span class="signature-params">( <span class="signature-param">input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">inQuart</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>input</code></td>
+							<td><span class="param-type">Number</span></td>
+							<td class="last">
+									value [0, 1]
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Number</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Ease the entire animation. Move a servo from 0° to 180° with inQuart easing.</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+			import Animation from &quot;@j5e/animation&quot;;
+			import { inQuart } from &quot;@j5e/easing&quot;;
+			
+			(async function() {
+			  const servo &#x3D; new Servo(13);
+			  const ani &#x3D; new Animation(servo);
+			
+			  const wave &#x3D; {
+			    duration: 4000,
+			    cuePoints: [0, 1],
+			    keyFrames: [0, 180],
+			    easing: inQuart
+			  };
+			
+			  ani.enqueue(wave);
+			});</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-232">line 232</a></p>
+								</div>
+							</div>
+			
+			
+							<!-- see -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">See</label>
+								<div class="col-sm-9">
+										<p class="form-control-static"><a href="https://easings.net/en#easeInQuart">easings.net</a> for details</p>
+								</div>
+							</div>
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id=".outQuart" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">outQuart</span><span class="signature-params">( <span class="signature-param">input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">outQuart</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>input</code></td>
+							<td><span class="param-type">Number</span></td>
+							<td class="last">
+									value [0, 1]
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Number</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Ease an animation segment. Move a servo from 0° to 90° with linear easing and then 90° to 180° with outQuart easing.</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+			import Animation from &quot;@j5e/animation&quot;;
+			import { outQuart } from &quot;@j5e/easing&quot;;
+			
+			(async function() {
+			  const servo &#x3D; new Servo(13);
+			  const ani &#x3D; new Animation(servo);
+			
+			  const wave &#x3D; {
+			    duration: 4000,
+			    cuePoints: [0, 0.5, 1],
+			    keyFrames: [0, 90, { value: 180, easing: outQuart }]
+			  };
+			
+			  ani.enqueue(wave);
+			});</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-257">line 257</a></p>
+								</div>
+							</div>
+			
+			
+							<!-- see -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">See</label>
+								<div class="col-sm-9">
+										<p class="form-control-static"><a href="https://easings.net/en#easeOutQuart">easings.net</a> for details</p>
+								</div>
+							</div>
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id=".inOutQuart" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inOutQuart</span><span class="signature-params">( <span class="signature-param">input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">inOutQuart</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>input</code></td>
+							<td><span class="param-type">Number</span></td>
+							<td class="last">
+									value [0, 1]
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Number</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Ease the entire animation. Move a servo from 0° to 180° with inOutQuart easing.</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+			import Animation from &quot;@j5e/animation&quot;;
+			import { inOutQuart } from &quot;@j5e/easing&quot;;
+			
+			(async function() {
+			  const servo &#x3D; new Servo(13);
+			  const ani &#x3D; new Animation(servo);
+			
+			  const wave &#x3D; {
+			    duration: 4000,
+			    cuePoints: [0, 1],
+			    keyFrames: [0, 180],
+			    easing: inOutQuart
+			  };
+			
+			  ani.enqueue(wave);
+			});</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-283">line 283</a></p>
+								</div>
+							</div>
+			
+			
+							<!-- see -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">See</label>
+								<div class="col-sm-9">
+										<p class="form-control-static"><a href="https://easings.net/en#easeInOutQuart">easings.net</a> for details</p>
+								</div>
+							</div>
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id=".inQuint" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inQuint</span><span class="signature-params">( <span class="signature-param">input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">inQuint</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>input</code></td>
+							<td><span class="param-type">Number</span></td>
+							<td class="last">
+									value [0, 1]
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Number</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Ease the entire animation. Move a servo from 0° to 180° with inQuint easing.</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+			import Animation from &quot;@j5e/animation&quot;;
+			import { inQuint } from &quot;@j5e/easing&quot;;
+			
+			(async function() {
+			  const servo &#x3D; new Servo(13);
+			  const ani &#x3D; new Animation(servo);
+			
+			  const wave &#x3D; {
+			    duration: 4000,
+			    cuePoints: [0, 1],
+			    keyFrames: [0, 180],
+			    easing: inQuint
+			  };
+			
+			  ani.enqueue(wave);
+			});</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-314">line 314</a></p>
+								</div>
+							</div>
+			
+			
+							<!-- see -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">See</label>
+								<div class="col-sm-9">
+										<p class="form-control-static"><a href="https://easings.net/en#easeInQuint">easings.net</a> for details</p>
+								</div>
+							</div>
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id=".outQuint" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">outQuint</span><span class="signature-params">( <span class="signature-param">input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">outQuint</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>input</code></td>
+							<td><span class="param-type">Number</span></td>
+							<td class="last">
+									value [0, 1]
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Number</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Ease an animation segment. Move a servo from 0° to 90° with linear easing and then 90° to 180° with outQuint easing.</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+			import Animation from &quot;@j5e/animation&quot;;
+			import { outQuint } from &quot;@j5e/easing&quot;;
+			
+			(async function() {
+			  const servo &#x3D; new Servo(13);
+			  const ani &#x3D; new Animation(servo);
+			
+			  const wave &#x3D; {
+			    duration: 4000,
+			    cuePoints: [0, 0.5, 1],
+			    keyFrames: [0, 90, { value: 180, easing: outQuint }]
+			  };
+			
+			  ani.enqueue(wave);
+			});</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-339">line 339</a></p>
+								</div>
+							</div>
+			
+			
+							<!-- see -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">See</label>
+								<div class="col-sm-9">
+										<p class="form-control-static"><a href="https://easings.net/en#easeOutQuint">easings.net</a> for details</p>
+								</div>
+							</div>
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id=".inOutQuint" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inOutQuint</span><span class="signature-params">( <span class="signature-param">input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">inOutQuint</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>input</code></td>
+							<td><span class="param-type">Number</span></td>
+							<td class="last">
+									value [0, 1]
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Number</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Ease the entire animation. Move a servo from 0° to 180° with inOutQuint easing.</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+			import Animation from &quot;@j5e/animation&quot;;
+			import { inOutQuint } from &quot;@j5e/easing&quot;;
+			
+			(async function() {
+			  const servo &#x3D; new Servo(13);
+			  const ani &#x3D; new Animation(servo);
+			
+			  const wave &#x3D; {
+			    duration: 4000,
+			    cuePoints: [0, 1],
+			    keyFrames: [0, 180],
+			    easing: inOutQuint
+			  };
+			
+			  ani.enqueue(wave);
+			});</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-365">line 365</a></p>
+								</div>
+							</div>
+			
+			
+							<!-- see -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">See</label>
+								<div class="col-sm-9">
+										<p class="form-control-static"><a href="https://easings.net/en#easeInOutQuint">easings.net</a> for details</p>
+								</div>
+							</div>
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id=".inSine" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inSine</span><span class="signature-params">( <span class="signature-param">input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">inSine</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>input</code></td>
+							<td><span class="param-type">Number</span></td>
+							<td class="last">
+									value [0, 1]
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Number</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Ease the entire animation. Move a servo from 0° to 180° with inSine easing.</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+			import Animation from &quot;@j5e/animation&quot;;
+			import { inSine } from &quot;@j5e/easing&quot;;
+			
+			(async function() {
+			  const servo &#x3D; new Servo(13);
+			  const ani &#x3D; new Animation(servo);
+			
+			  const wave &#x3D; {
+			    duration: 4000,
+			    cuePoints: [0, 1],
+			    keyFrames: [0, 180],
+			    easing: inSine
+			  };
+			
+			  ani.enqueue(wave);
+			});</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-396">line 396</a></p>
+								</div>
+							</div>
+			
+			
+							<!-- see -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">See</label>
+								<div class="col-sm-9">
+										<p class="form-control-static"><a href="https://easings.net/en#easeInSine">easings.net</a> for details</p>
+								</div>
+							</div>
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id=".outSine" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">outSine</span><span class="signature-params">( <span class="signature-param">input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
@@ -1078,10 +1367,10 @@
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>Input</code></td>
-							<td><span class="param-type">n</span></td>
+								<td><code>input</code></td>
+							<td><span class="param-type">Number</span></td>
 							<td class="last">
-									value
+									value [0, 1]
 							</td>
 						</tr>
 					</tbody>
@@ -1089,12 +1378,31 @@
 			</div>
 			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">number</span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Number</span></label>
 								<div class="col-sm-9">
 									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Ease an animation segment. Move a servo from 0° to 90° with linear easing and then 90° to 180° with outSine easing.</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+			import Animation from &quot;@j5e/animation&quot;;
+			import { outSine } from &quot;@j5e/easing&quot;;
+			
+			(async function() {
+			  const servo &#x3D; new Servo(13);
+			  const ani &#x3D; new Animation(servo);
+			
+			  const wave &#x3D; {
+			    duration: 4000,
+			    cuePoints: [0, 0.5, 1],
+			    keyFrames: [0, 90, { value: 180, easing: outSine }]
+			  };
+			
+			  ani.enqueue(wave);
+			});</code></pre>
+					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -1115,11 +1423,18 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-125">line 125</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-421">line 421</a></p>
 								</div>
 							</div>
 			
 			
+							<!-- see -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">See</label>
+								<div class="col-sm-9">
+										<p class="form-control-static"><a href="https://easings.net/en#easeOutSine">easings.net</a> for details</p>
+								</div>
+							</div>
 			
 			
 					</form>
@@ -1127,7 +1442,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".inOutSine" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inOutSine</span><span class="signature-params">( <span class="signature-param">Input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{number}</span></h4>
+			<h4 id=".inOutSine" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inOutSine</span><span class="signature-params">( <span class="signature-param">input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
@@ -1144,10 +1459,10 @@
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>Input</code></td>
-							<td><span class="param-type">n</span></td>
+								<td><code>input</code></td>
+							<td><span class="param-type">Number</span></td>
 							<td class="last">
-									value
+									value [0, 1]
 							</td>
 						</tr>
 					</tbody>
@@ -1155,12 +1470,32 @@
 			</div>
 			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">number</span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Number</span></label>
 								<div class="col-sm-9">
 									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Ease the entire animation. Move a servo from 0° to 180° with inOutSine easing.</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+			import Animation from &quot;@j5e/animation&quot;;
+			import { inOutSine } from &quot;@j5e/easing&quot;;
+			
+			(async function() {
+			  const servo &#x3D; new Servo(13);
+			  const ani &#x3D; new Animation(servo);
+			
+			  const wave &#x3D; {
+			    duration: 4000,
+			    cuePoints: [0, 1],
+			    keyFrames: [0, 180],
+			    easing: inOutSine
+			  };
+			
+			  ani.enqueue(wave);
+			});</code></pre>
+					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -1181,11 +1516,18 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-131">line 131</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-447">line 447</a></p>
 								</div>
 							</div>
 			
 			
+							<!-- see -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">See</label>
+								<div class="col-sm-9">
+										<p class="form-control-static"><a href="https://easings.net/en#easeInOutSine">easings.net</a> for details</p>
+								</div>
+							</div>
 			
 			
 					</form>
@@ -1193,7 +1535,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".inExpo" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inExpo</span><span class="signature-params">( <span class="signature-param">Input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{number}</span></h4>
+			<h4 id=".inExpo" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inExpo</span><span class="signature-params">( <span class="signature-param">input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
@@ -1210,10 +1552,10 @@
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>Input</code></td>
-							<td><span class="param-type">n</span></td>
+								<td><code>input</code></td>
+							<td><span class="param-type">Number</span></td>
 							<td class="last">
-									value
+									value [0, 1]
 							</td>
 						</tr>
 					</tbody>
@@ -1221,12 +1563,32 @@
 			</div>
 			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">number</span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Number</span></label>
 								<div class="col-sm-9">
 									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Ease the entire animation. Move a servo from 0° to 180° with inExpo easing.</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+			import Animation from &quot;@j5e/animation&quot;;
+			import { inExpo } from &quot;@j5e/easing&quot;;
+			
+			(async function() {
+			  const servo &#x3D; new Servo(13);
+			  const ani &#x3D; new Animation(servo);
+			
+			  const wave &#x3D; {
+			    duration: 4000,
+			    cuePoints: [0, 1],
+			    keyFrames: [0, 180],
+			    easing: inExpo
+			  };
+			
+			  ani.enqueue(wave);
+			});</code></pre>
+					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -1247,11 +1609,18 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-137">line 137</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-473">line 473</a></p>
 								</div>
 							</div>
 			
 			
+							<!-- see -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">See</label>
+								<div class="col-sm-9">
+										<p class="form-control-static"><a href="https://easings.net/en#easeInExpo">easings.net</a> for details</p>
+								</div>
+							</div>
 			
 			
 					</form>
@@ -1259,7 +1628,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".outExpo" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">outExpo</span><span class="signature-params">( <span class="signature-param">Input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{number}</span></h4>
+			<h4 id=".outExpo" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">outExpo</span><span class="signature-params">( <span class="signature-param">input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
@@ -1276,10 +1645,10 @@
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>Input</code></td>
-							<td><span class="param-type">n</span></td>
+								<td><code>input</code></td>
+							<td><span class="param-type">Number</span></td>
 							<td class="last">
-									value
+									value [0, 1]
 							</td>
 						</tr>
 					</tbody>
@@ -1287,12 +1656,31 @@
 			</div>
 			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">number</span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Number</span></label>
 								<div class="col-sm-9">
 									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Ease an animation segment. Move a servo from 0° to 90° with linear easing and then 90° to 180° with outExpo easing.</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+			import Animation from &quot;@j5e/animation&quot;;
+			import { outExpo } from &quot;@j5e/easing&quot;;
+			
+			(async function() {
+			  const servo &#x3D; new Servo(13);
+			  const ani &#x3D; new Animation(servo);
+			
+			  const wave &#x3D; {
+			    duration: 4000,
+			    cuePoints: [0, 0.5, 1],
+			    keyFrames: [0, 90, { value: 180, easing: outExpo }]
+			  };
+			
+			  ani.enqueue(wave);
+			});</code></pre>
+					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -1313,11 +1701,18 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-143">line 143</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-498">line 498</a></p>
 								</div>
 							</div>
 			
 			
+							<!-- see -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">See</label>
+								<div class="col-sm-9">
+										<p class="form-control-static"><a href="https://easings.net/en#easeOutExpo">easings.net</a> for details</p>
+								</div>
+							</div>
 			
 			
 					</form>
@@ -1325,7 +1720,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".inOutExpo" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inOutExpo</span><span class="signature-params">( <span class="signature-param">Input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{number}</span></h4>
+			<h4 id=".inOutExpo" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inOutExpo</span><span class="signature-params">( <span class="signature-param">input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
@@ -1342,10 +1737,10 @@
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>Input</code></td>
-							<td><span class="param-type">n</span></td>
+								<td><code>input</code></td>
+							<td><span class="param-type">Number</span></td>
 							<td class="last">
-									value
+									value [0, 1]
 							</td>
 						</tr>
 					</tbody>
@@ -1353,12 +1748,32 @@
 			</div>
 			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">number</span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Number</span></label>
 								<div class="col-sm-9">
 									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Ease the entire animation. Move a servo from 0° to 180° with inOutExpo easing.</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+			import Animation from &quot;@j5e/animation&quot;;
+			import { inOutExpo } from &quot;@j5e/easing&quot;;
+			
+			(async function() {
+			  const servo &#x3D; new Servo(13);
+			  const ani &#x3D; new Animation(servo);
+			
+			  const wave &#x3D; {
+			    duration: 4000,
+			    cuePoints: [0, 1],
+			    keyFrames: [0, 180],
+			    easing: inOutExpo
+			  };
+			
+			  ani.enqueue(wave);
+			});</code></pre>
+					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -1379,11 +1794,18 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-149">line 149</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-524">line 524</a></p>
 								</div>
 							</div>
 			
 			
+							<!-- see -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">See</label>
+								<div class="col-sm-9">
+										<p class="form-control-static"><a href="https://easings.net/en#easeInOutExpo">easings.net</a> for details</p>
+								</div>
+							</div>
 			
 			
 					</form>
@@ -1391,7 +1813,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".inCirc" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inCirc</span><span class="signature-params">( <span class="signature-param">Input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{number}</span></h4>
+			<h4 id=".inCirc" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inCirc</span><span class="signature-params">( <span class="signature-param">input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
@@ -1408,10 +1830,10 @@
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>Input</code></td>
-							<td><span class="param-type">n</span></td>
+								<td><code>input</code></td>
+							<td><span class="param-type">Number</span></td>
 							<td class="last">
-									value
+									value [0, 1]
 							</td>
 						</tr>
 					</tbody>
@@ -1419,12 +1841,32 @@
 			</div>
 			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">number</span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Number</span></label>
 								<div class="col-sm-9">
 									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Ease the entire animation. Move a servo from 0° to 180° with inCirc easing.</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+			import Animation from &quot;@j5e/animation&quot;;
+			import { inCirc } from &quot;@j5e/easing&quot;;
+			
+			(async function() {
+			  const servo &#x3D; new Servo(13);
+			  const ani &#x3D; new Animation(servo);
+			
+			  const wave &#x3D; {
+			    duration: 4000,
+			    cuePoints: [0, 1],
+			    keyFrames: [0, 180],
+			    easing: inCirc
+			  };
+			
+			  ani.enqueue(wave);
+			});</code></pre>
+					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -1445,11 +1887,18 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-161">line 161</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-556">line 556</a></p>
 								</div>
 							</div>
 			
 			
+							<!-- see -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">See</label>
+								<div class="col-sm-9">
+										<p class="form-control-static"><a href="https://easings.net/en#easeInCirc">easings.net</a> for details</p>
+								</div>
+							</div>
 			
 			
 					</form>
@@ -1457,7 +1906,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".outCirc" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">outCirc</span><span class="signature-params">( <span class="signature-param">Input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{number}</span></h4>
+			<h4 id=".outCirc" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">outCirc</span><span class="signature-params">( <span class="signature-param">input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
@@ -1474,10 +1923,10 @@
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>Input</code></td>
-							<td><span class="param-type">n</span></td>
+								<td><code>input</code></td>
+							<td><span class="param-type">Number</span></td>
 							<td class="last">
-									value
+									value [0, 1]
 							</td>
 						</tr>
 					</tbody>
@@ -1485,12 +1934,31 @@
 			</div>
 			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">number</span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Number</span></label>
 								<div class="col-sm-9">
 									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Ease an animation segment. Move a servo from 0° to 90° with linear easing and then 90° to 180° with outCirc easing.</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+			import Animation from &quot;@j5e/animation&quot;;
+			import { outCirc } from &quot;@j5e/easing&quot;;
+			
+			(async function() {
+			  const servo &#x3D; new Servo(13);
+			  const ani &#x3D; new Animation(servo);
+			
+			  const wave &#x3D; {
+			    duration: 4000,
+			    cuePoints: [0, 0.5, 1],
+			    keyFrames: [0, 90, { value: 180, easing: outCirc }]
+			  };
+			
+			  ani.enqueue(wave);
+			});</code></pre>
+					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -1511,11 +1979,18 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-167">line 167</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-581">line 581</a></p>
 								</div>
 							</div>
 			
 			
+							<!-- see -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">See</label>
+								<div class="col-sm-9">
+										<p class="form-control-static"><a href="https://easings.net/en#easeOutCirc">easings.net</a> for details</p>
+								</div>
+							</div>
 			
 			
 					</form>
@@ -1523,7 +1998,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".inOutCirc" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inOutCirc</span><span class="signature-params">( <span class="signature-param">Input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{number}</span></h4>
+			<h4 id=".inOutCirc" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inOutCirc</span><span class="signature-params">( <span class="signature-param">input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
@@ -1540,10 +2015,10 @@
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>Input</code></td>
-							<td><span class="param-type">n</span></td>
+								<td><code>input</code></td>
+							<td><span class="param-type">Number</span></td>
 							<td class="last">
-									value
+									value [0, 1]
 							</td>
 						</tr>
 					</tbody>
@@ -1551,12 +2026,32 @@
 			</div>
 			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">number</span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Number</span></label>
 								<div class="col-sm-9">
 									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Ease the entire animation. Move a servo from 0° to 180° with inOutCirc easing.</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+			import Animation from &quot;@j5e/animation&quot;;
+			import { inOutCirc } from &quot;@j5e/easing&quot;;
+			
+			(async function() {
+			  const servo &#x3D; new Servo(13);
+			  const ani &#x3D; new Animation(servo);
+			
+			  const wave &#x3D; {
+			    duration: 4000,
+			    cuePoints: [0, 1],
+			    keyFrames: [0, 180],
+			    easing: inOutCirc
+			  };
+			
+			  ani.enqueue(wave);
+			});</code></pre>
+					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -1577,11 +2072,18 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-173">line 173</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-607">line 607</a></p>
 								</div>
 							</div>
 			
 			
+							<!-- see -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">See</label>
+								<div class="col-sm-9">
+										<p class="form-control-static"><a href="https://easings.net/en#easeInOutCirc">easings.net</a> for details</p>
+								</div>
+							</div>
 			
 			
 					</form>
@@ -1589,7 +2091,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".inBack" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inBack</span><span class="signature-params">( <span class="signature-param">Input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{number}</span></h4>
+			<h4 id=".inBack" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inBack</span><span class="signature-params">( <span class="signature-param">input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
@@ -1606,10 +2108,10 @@
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>Input</code></td>
-							<td><span class="param-type">n</span></td>
+								<td><code>input</code></td>
+							<td><span class="param-type">Number</span></td>
 							<td class="last">
-									value
+									value [0, 1]
 							</td>
 						</tr>
 					</tbody>
@@ -1617,12 +2119,32 @@
 			</div>
 			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">number</span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Number</span></label>
 								<div class="col-sm-9">
 									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Ease the entire animation. Move a servo from 0° to 180° with inBack easing.</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+			import Animation from &quot;@j5e/animation&quot;;
+			import { inBack } from &quot;@j5e/easing&quot;;
+			
+			(async function() {
+			  const servo &#x3D; new Servo(13);
+			  const ani &#x3D; new Animation(servo);
+			
+			  const wave &#x3D; {
+			    duration: 4000,
+			    cuePoints: [0, 1],
+			    keyFrames: [0, 180],
+			    easing: inBack
+			  };
+			
+			  ani.enqueue(wave);
+			});</code></pre>
+					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -1643,11 +2165,18 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-184">line 184</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-638">line 638</a></p>
 								</div>
 							</div>
 			
 			
+							<!-- see -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">See</label>
+								<div class="col-sm-9">
+										<p class="form-control-static"><a href="https://easings.net/en#easeInBack">easings.net</a> for details</p>
+								</div>
+							</div>
 			
 			
 					</form>
@@ -1655,7 +2184,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".outBack" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">outBack</span><span class="signature-params">( <span class="signature-param">Input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{number}</span></h4>
+			<h4 id=".outBack" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">outBack</span><span class="signature-params">( <span class="signature-param">input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
@@ -1672,10 +2201,10 @@
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>Input</code></td>
-							<td><span class="param-type">n</span></td>
+								<td><code>input</code></td>
+							<td><span class="param-type">Number</span></td>
 							<td class="last">
-									value
+									value [0, 1]
 							</td>
 						</tr>
 					</tbody>
@@ -1683,12 +2212,31 @@
 			</div>
 			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">number</span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Number</span></label>
 								<div class="col-sm-9">
 									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Ease an animation segment. Move a servo from 0° to 90° with linear easing and then 90° to 180° with outBack easing.</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+			import Animation from &quot;@j5e/animation&quot;;
+			import { outBack } from &quot;@j5e/easing&quot;;
+			
+			(async function() {
+			  const servo &#x3D; new Servo(13);
+			  const ani &#x3D; new Animation(servo);
+			
+			  const wave &#x3D; {
+			    duration: 4000,
+			    cuePoints: [0, 0.5, 1],
+			    keyFrames: [0, 90, { value: 180, easing: outBack }]
+			  };
+			
+			  ani.enqueue(wave);
+			});</code></pre>
+					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -1709,11 +2257,18 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-190">line 190</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-663">line 663</a></p>
 								</div>
 							</div>
 			
 			
+							<!-- see -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">See</label>
+								<div class="col-sm-9">
+										<p class="form-control-static"><a href="https://easings.net/en#easeOutBack">easings.net</a> for details</p>
+								</div>
+							</div>
 			
 			
 					</form>
@@ -1721,7 +2276,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".inOutBack" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inOutBack</span><span class="signature-params">( <span class="signature-param">Input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{number}</span></h4>
+			<h4 id=".inOutBack" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inOutBack</span><span class="signature-params">( <span class="signature-param">input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
@@ -1738,10 +2293,10 @@
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>Input</code></td>
-							<td><span class="param-type">n</span></td>
+								<td><code>input</code></td>
+							<td><span class="param-type">Number</span></td>
 							<td class="last">
-									value
+									value [0, 1]
 							</td>
 						</tr>
 					</tbody>
@@ -1749,12 +2304,32 @@
 			</div>
 			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">number</span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Number</span></label>
 								<div class="col-sm-9">
 									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Ease the entire animation. Move a servo from 0° to 180° with inOutBack easing.</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+			import Animation from &quot;@j5e/animation&quot;;
+			import { inOutBack } from &quot;@j5e/easing&quot;;
+			
+			(async function() {
+			  const servo &#x3D; new Servo(13);
+			  const ani &#x3D; new Animation(servo);
+			
+			  const wave &#x3D; {
+			    duration: 4000,
+			    cuePoints: [0, 1],
+			    keyFrames: [0, 180],
+			    easing: inOutBack
+			  };
+			
+			  ani.enqueue(wave);
+			});</code></pre>
+					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -1775,11 +2350,18 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-196">line 196</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-689">line 689</a></p>
 								</div>
 							</div>
 			
 			
+							<!-- see -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">See</label>
+								<div class="col-sm-9">
+										<p class="form-control-static"><a href="https://easings.net/en#easeInOutBack">easings.net</a> for details</p>
+								</div>
+							</div>
 			
 			
 					</form>
@@ -1787,73 +2369,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".outBounce" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">outBounce</span><span class="signature-params">( <span class="signature-param">Input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{number}</span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">outBounce</div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>Input</code></td>
-							<td><span class="param-type">n</span></td>
-							<td class="last">
-									value
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">number</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description"></div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-206">line 206</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".inBounce" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inBounce</span><span class="signature-params">( <span class="signature-param">Input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{number}</span></h4>
+			<h4 id=".inBounce" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inBounce</span><span class="signature-params">( <span class="signature-param">input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
@@ -1870,10 +2386,10 @@
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>Input</code></td>
-							<td><span class="param-type">n</span></td>
+								<td><code>input</code></td>
+							<td><span class="param-type">Number</span></td>
 							<td class="last">
-									value
+									value [0, 1]
 							</td>
 						</tr>
 					</tbody>
@@ -1881,12 +2397,32 @@
 			</div>
 			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">number</span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Number</span></label>
 								<div class="col-sm-9">
 									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Ease the entire animation. Move a servo from 0° to 180° with inBounce easing.</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+			import Animation from &quot;@j5e/animation&quot;;
+			import { inBounce } from &quot;@j5e/easing&quot;;
+			
+			(async function() {
+			  const servo &#x3D; new Servo(13);
+			  const ani &#x3D; new Animation(servo);
+			
+			  const wave &#x3D; {
+			    duration: 4000,
+			    cuePoints: [0, 1],
+			    keyFrames: [0, 180],
+			    easing: inBounce
+			  };
+			
+			  ani.enqueue(wave);
+			});</code></pre>
+					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -1907,11 +2443,18 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-222">line 222</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-719">line 719</a></p>
 								</div>
 							</div>
 			
 			
+							<!-- see -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">See</label>
+								<div class="col-sm-9">
+										<p class="form-control-static"><a href="https://easings.net/en#easeInBounce">easings.net</a> for details</p>
+								</div>
+							</div>
 			
 			
 					</form>
@@ -1919,7 +2462,99 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".inOutBounce" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inOutBounce</span><span class="signature-params">( <span class="signature-param">Input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{number}</span></h4>
+			<h4 id=".outBounce" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">outBounce</span><span class="signature-params">( <span class="signature-param">input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">outBounce</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>input</code></td>
+							<td><span class="param-type">Number</span></td>
+							<td class="last">
+									value [0, 1]
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Number</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Ease an animation segment. Move a servo from 0° to 90° with linear easing and then 90° to 180° with outBounce easing.</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+			import Animation from &quot;@j5e/animation&quot;;
+			import { outBounce } from &quot;@j5e/easing&quot;;
+			
+			(async function() {
+			  const servo &#x3D; new Servo(13);
+			  const ani &#x3D; new Animation(servo);
+			
+			  const wave &#x3D; {
+			    duration: 4000,
+			    cuePoints: [0, 0.5, 1],
+			    keyFrames: [0, 90, { value: 180, easing: outBounce }]
+			  };
+			
+			  ani.enqueue(wave);
+			});</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-744">line 744</a></p>
+								</div>
+							</div>
+			
+			
+							<!-- see -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">See</label>
+								<div class="col-sm-9">
+										<p class="form-control-static"><a href="https://easings.net/en#easeOutBounce">easings.net</a> for details</p>
+								</div>
+							</div>
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id=".inOutBounce" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">inOutBounce</span><span class="signature-params">( <span class="signature-param">input</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
@@ -1936,10 +2571,10 @@
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>Input</code></td>
-							<td><span class="param-type">n</span></td>
+								<td><code>input</code></td>
+							<td><span class="param-type">Number</span></td>
 							<td class="last">
-									value
+									value [0, 1]
 							</td>
 						</tr>
 					</tbody>
@@ -1947,12 +2582,32 @@
 			</div>
 			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">number</span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Number</span></label>
 								<div class="col-sm-9">
 									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Ease the entire animation. Move a servo from 0° to 180° with inOutBounce easing.</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+			import Animation from &quot;@j5e/animation&quot;;
+			import { inOutBounce } from &quot;@j5e/easing&quot;;
+			
+			(async function() {
+			  const servo &#x3D; new Servo(13);
+			  const ani &#x3D; new Animation(servo);
+			
+			  const wave &#x3D; {
+			    duration: 4000,
+			    cuePoints: [0, 1],
+			    keyFrames: [0, 180],
+			    easing: inOutBounce
+			  };
+			
+			  ani.enqueue(wave);
+			});</code></pre>
+					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -1973,11 +2628,18 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-228">line 228</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-780">line 780</a></p>
 								</div>
 							</div>
 			
 			
+							<!-- see -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">See</label>
+								<div class="col-sm-9">
+										<p class="form-control-static"><a href="https://easings.net/en#easeInOutBounce">easings.net</a> for details</p>
+								</div>
+							</div>
 			
 			
 					</form>
@@ -1994,7 +2656,7 @@
 	</div>
 	<footer>
 				<div class="copyright">Copyright © 2020 The contributors to the j5e and Johnny-Five projects.</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on March 14, 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on March 15, 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
@@ -2019,14 +2681,11 @@
 		</div>
 		<!-- end:lunr-search-modal.hbs -->		<script src="js/lunr.min.js"></script>
 	
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-			ga('create', 'UA-36026876-4', 'dtex.github.io');
-			ga('send', 'pageview');
-		</script>
-	
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-36026876-4"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());gtag('config', 'UA-36026876-4');
+</script>
 </body>
 </html>

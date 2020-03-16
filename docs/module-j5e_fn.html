@@ -65,6 +65,7 @@
 			<div class="navbar-collapse collapse" id="topNavigation">
 				<ul class="nav navbar-nav">
 							<li><a href="list_module.html">Modules</a></li>
+							<li><a href="list_namespace.html">Namespaces</a></li>
 							<li><a href="list_tutorial.html">Tutorials</a></li>
 				</ul>
 					<!-- start:lunr-search-navbar.hbs -->
@@ -133,334 +134,26 @@
 			</dd>
 		</dl>
 							<article class="secondary">
-									<h3>Methods</h3>
+									<h3>Namespaces</h3>
 									<dl class="symbol">
 											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".normalizeParams" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">normalizeParams</span><span class="signature-params">( <span class="signature-param">ioOpts</span> [,&nbsp;<span class="signature-param">deviceOpts</span>&nbsp;]&nbsp;)</span><span class="signature-type"></span></h4>
+											<dt class="symbol-title namespace public">
+			<h4 id="timer" class="namespace public"><a href="module-j5e_fn-timer.html"><span class="name">timer</span></a></h4>
 		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
+<dd class="symbol-details namespace public">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Normalize parameters passed on device instantiation</div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-							<th>Attributes</th>
-							<th>Default</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>ioOpts</code></td>
-							<td><span class="param-type">number</span> | <span class="param-type">string</span> | <span class="param-type">object</span></td>
-								<td class="attributes"></td>
-								<td></td>
-							<td class="last">
-									A pin number, pin identifier or a complete IO options object
-										<table class="params table table-striped">
-											<thead>
-											<tr>
-													<th>Name</th>
-												<th>Type</th>
-													<th>Attributes</th>
-												<th class="last">Description</th>
-											</tr>
-											</thead>
-											<tbody>
-												<tr>
-														<td><code>pin</code></td>
-													<td><span class="param-type">number</span> | <span class="param-type">string</span></td>
-														<td class="attributes">&lt;optional&gt;<br/></td>
-													<td class="last">
-															If passing an object, a pin number or pin identifier
-													</td>
-												</tr>
-												<tr>
-														<td><code>io</code></td>
-													<td><span class="param-type">string</span> | <span class="param-type">constructor</span></td>
-														<td class="attributes">&lt;optional&gt;<br/></td>
-													<td class="last">
-															If passing an object, a string specifying a path to the IO provider or a constructor
-													</td>
-												</tr>
-											</tbody>
-										</table>
-							</td>
-						</tr>
-						<tr>
-								<td><code>deviceOpts</code></td>
-							<td><span class="param-type">object</span></td>
-								<td class="attributes">&lt;optional&gt;<br/></td>
-								<td>{}</td>
-							<td class="last">
-									An object containing device options
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="fn_index.js.html">fn/index.js</a>, <a href="fn_index.js.html#line-12">line 12</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
+	</div>
 </dd>
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".normalizeIO" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">normalizeIO</span><span class="signature-params">( <span class="signature-param">ioOpts</span>&nbsp;)</span><span class="signature-type"></span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Normalize I/O parameters</div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>ioOpts</code></td>
-							<td><span class="param-type">number</span> | <span class="param-type">string</span> | <span class="param-type">object</span></td>
-							<td class="last">
-									A pin number, pin identifier or a complete IO options object
-										<table class="params table table-striped">
-											<thead>
-											<tr>
-													<th>Name</th>
-												<th>Type</th>
-													<th>Attributes</th>
-												<th class="last">Description</th>
-											</tr>
-											</thead>
-											<tbody>
-												<tr>
-														<td><code>pin</code></td>
-													<td><span class="param-type">number</span> | <span class="param-type">string</span></td>
-														<td class="attributes">&lt;optional&gt;<br/></td>
-													<td class="last">
-															If passing an object, a pin number or pin identifier
-													</td>
-												</tr>
-												<tr>
-														<td><code>io</code></td>
-													<td><span class="param-type">string</span> | <span class="param-type">constructor</span></td>
-														<td class="attributes">&lt;optional&gt;<br/></td>
-													<td class="last">
-															If passing an object, a string specifying a path to the IO provider or a constructor
-													</td>
-												</tr>
-											</tbody>
-										</table>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="fn_index.js.html">fn/index.js</a>, <a href="fn_index.js.html#line-23">line 23</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".normalizeDevice" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">normalizeDevice</span><span class="signature-params">( [&nbsp;<span class="signature-param">deviceOpts</span>&nbsp;]&nbsp;)</span><span class="signature-type"></span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Normalize Device parameter</div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-							<th>Attributes</th>
-							<th>Default</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>deviceOpts</code></td>
-							<td><span class="param-type">object</span></td>
-								<td class="attributes">&lt;optional&gt;<br/></td>
-								<td>{}</td>
-							<td class="last">
-									An object containing device options
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="fn_index.js.html">fn/index.js</a>, <a href="fn_index.js.html#line-38">line 38</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".constrain" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">constrain</span><span class="signature-params">( <span class="signature-param">value</span>, <span class="signature-param">low</span>, <span class="signature-param">high</span>&nbsp;)</span><span class="signature-type"></span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Constrain a value to a range.</div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>value</code></td>
-							<td><span class="param-type">number</span></td>
-							<td class="last">
-									An input value
-							</td>
-						</tr>
-						<tr>
-								<td><code>low</code></td>
-							<td><span class="param-type">number</span></td>
-							<td class="last">
-									The minimum allowed value (inclusive)
-							</td>
-						</tr>
-						<tr>
-								<td><code>high</code></td>
-							<td><span class="param-type">number</span></td>
-							<td class="last">
-									The maximum allowed value (inclusive)
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="fn_index.js.html">fn/index.js</a>, <a href="fn_index.js.html#line-47">line 47</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
+									</dl>
+									<h3>Methods</h3>
+									<dl class="symbol">
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
 			<h4 id=".asyncForEach" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">asyncForEach</span><span class="signature-params">( <span class="signature-param">array</span>, <span class="signature-param">callback</span>&nbsp;)</span><span class="signature-type"></span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Wait for and async forEach loop</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Wait for an async forEach loop. Does not run in parallel.</div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -489,7 +182,18 @@
 					</tbody>
 				</table>
 			</div>
-			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">const waitFor &#x3D; (ms) &#x3D;&gt; new Promise(r &#x3D;&gt; setTimeout(r, ms));
+			
+			(async function() {
+			  await asyncForEach([1, 2, 3], async (num) &#x3D;&gt; {
+			    await waitFor(50);
+			    console.log(num);
+			  });
+			  console.log(&#x27;Done&#x27;);
+			})();</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
 			
@@ -502,6 +206,13 @@
 			
 			
 			
+							<!-- author -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Author</label>
+								<div class="col-sm-9">
+										<p class="form-control-static">Sebastien Chopin</p>
+								</div>
+							</div>
 			
 			
 			
@@ -514,6 +225,13 @@
 							</div>
 			
 			
+							<!-- see -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">See</label>
+								<div class="col-sm-9">
+										<p class="form-control-static"><a href="https://codeburst.io/javascript-async-await-with-foreach-b6ba62bbf404">Sebastien's Medium article</a> for more information</p>
+								</div>
+							</div>
 			
 			
 					</form>
@@ -584,7 +302,7 @@
 							</div>
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">Fn.map(500, 0, 1000, 0, 255); // -&gt;</code></pre>
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">Fn.map(500, 0, 1000, 0, 255); // -&gt; 127</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -618,11 +336,11 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".getProvider" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">getProvider</span><span class="signature-params">( <span class="signature-param">ioOpts</span>, <span class="signature-param">defaultProvider</span>&nbsp;)</span><span class="signature-type"></span></h4>
+			<h4 id=".constrain" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">constrain</span><span class="signature-params">( <span class="signature-param">value</span>, <span class="signature-param">low</span>, <span class="signature-param">high</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Asynchronously load a provider. This allows users to simply pass a path or skip specifying a provider altogether (uses builtins).</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Constrain a value to a range.</div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -635,43 +353,41 @@
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>ioOpts</code></td>
-							<td><span class="param-type">object</span></td>
+								<td><code>value</code></td>
+							<td><span class="param-type">number</span></td>
 							<td class="last">
-									An IO options object
-										<table class="params table table-striped">
-											<thead>
-											<tr>
-													<th>Name</th>
-												<th>Type</th>
-													<th>Attributes</th>
-												<th class="last">Description</th>
-											</tr>
-											</thead>
-											<tbody>
-												<tr>
-														<td><code>io</code></td>
-													<td><span class="param-type">io</span></td>
-														<td class="attributes">&lt;optional&gt;<br/></td>
-													<td class="last">
-															The path to the IO class
-													</td>
-												</tr>
-											</tbody>
-										</table>
+									An input value
 							</td>
 						</tr>
 						<tr>
-								<td><code>defaultProvider</code></td>
-							<td><span class="param-type">string</span></td>
+								<td><code>low</code></td>
+							<td><span class="param-type">number</span></td>
 							<td class="last">
-									The default provider to use if none was passed in the io object
+									The minimum allowed value (inclusive)
+							</td>
+						</tr>
+						<tr>
+								<td><code>high</code></td>
+							<td><span class="param-type">number</span></td>
+							<td class="last">
+									The maximum allowed value (inclusive)
 							</td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
-			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Number</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description">constrained value</div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">constrain(120, 0, 100); // -&gt; 100</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
 			
@@ -691,7 +407,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="fn_index.js.html">fn/index.js</a>, <a href="fn_index.js.html#line-84">line 84</a></p>
+									<p class="form-control-static"><a href="fn_index.js.html">fn/index.js</a>, <a href="fn_index.js.html#line-87">line 87</a></p>
 								</div>
 							</div>
 			
@@ -712,7 +428,7 @@
 	</div>
 	<footer>
 				<div class="copyright">Copyright © 2020 The contributors to the j5e and Johnny-Five projects.</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on March 14, 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on March 15, 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
@@ -737,14 +453,11 @@
 		</div>
 		<!-- end:lunr-search-modal.hbs -->		<script src="js/lunr.min.js"></script>
 	
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-			ga('create', 'UA-36026876-4', 'dtex.github.io');
-			ga('send', 'pageview');
-		</script>
-	
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-36026876-4"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());gtag('config', 'UA-36026876-4');
+</script>
 </body>
 </html>

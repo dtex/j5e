@@ -73,6 +73,12 @@
           "list:modul",
           "modul"
         ],
+        "list_namespace.html": [
+          "document",
+          "list",
+          "list:namespac",
+          "namespac"
+        ],
         "list_tutorial.html": [
           "avail",
           "list",
@@ -86,7 +92,6 @@
           "directli",
           "emitt",
           "event",
-          "j5e/event.emitt",
           "meant",
           "module:j5e/event.emitt",
           "provid",
@@ -131,11 +136,12 @@
         "module-j5e_animation-Animation.html": [
           "allow",
           "anim",
-          "chang",
           "class",
+          "control",
           "j5e/animation~anim",
           "led",
           "module:j5e/animation~anim",
+          "rgb",
           "script",
           "servo"
         ],
@@ -144,21 +150,26 @@
           "anim",
           "enqueu",
           "function",
+          "inform",
+          "j5e'",
           "module:j5e/animation~animation#enqueu",
+          "more",
           "option",
           "queue",
-          "segment"
+          "see",
+          "segment",
+          "timelin",
+          "tool",
+          "tween"
         ],
-        "module-j5e_animation-Animation.html#next": [
-          "call",
-          "extern",
+        "module-j5e_animation-Animation.html#play": [
+          "anim",
           "function",
-          "meant",
-          "module:j5e/animation~animation#next",
-          "next",
+          "module:j5e/animation~animation#play",
+          "paus",
           "play",
-          "queue",
-          "segment"
+          "resum",
+          "stop"
         ],
         "module-j5e_animation-Animation.html#pause": [
           "anim",
@@ -188,82 +199,6 @@
           "set",
           "speed"
         ],
-        "module-j5e_animation-Animation.html#loopFunction": [
-          "anim",
-          "call",
-          "each",
-          "extern",
-          "frame",
-          "function",
-          "intend",
-          "loopfunct",
-          "module:j5e/animation~animation#loopfunct"
-        ],
-        "module-j5e_animation-Animation.html#play": [
-          "call",
-          "extern",
-          "function",
-          "meant",
-          "module:j5e/animation~animation#play",
-          "play",
-          "segment",
-          "start"
-        ],
-        "module-j5e_animation-Animation.html#findIndices": [
-          "call",
-          "cuepoint",
-          "extern",
-          "find",
-          "findindic",
-          "function",
-          "left",
-          "meant",
-          "module:j5e/animation~animation#findindic",
-          "right"
-        ],
-        "module-j5e_animation-Animation.html#calculateProgress": [
-          "base",
-          "calculateprogress",
-          "call",
-          "comput",
-          "extern",
-          "function",
-          "intend",
-          "module:j5e/animation~animation#calculateprogress",
-          "progress",
-          "start",
-          "time"
-        ],
-        "module-j5e_animation-Animation.html#tweenedValue": [
-          "base",
-          "call",
-          "current",
-          "extern",
-          "find",
-          "function",
-          "indic",
-          "intend",
-          "left",
-          "module:j5e/animation~animation#tweenedvalu",
-          "progress",
-          "right",
-          "tween",
-          "tweenedvalu",
-          "valu"
-        ],
-        "module-j5e_animation-Animation.html#normalizeKeyframes": [
-          "call",
-          "conform",
-          "extern",
-          "function",
-          "intend",
-          "keyfram",
-          "make",
-          "module:j5e/animation~animation#normalizekeyfram",
-          "normalizekeyfram",
-          "standard",
-          "sure"
-        ],
         "module-j5e_switch-Switch.html": [
           "allow",
           "class",
@@ -273,163 +208,6 @@
           "lt;async&gt",
           "module:j5e/switch~switch",
           "switch"
-        ],
-        "module-j5e_servo-Servo.html": [
-          "allow",
-          "class",
-          "control",
-          "hobbi",
-          "j5e/servo~servo",
-          "lt;async&gt",
-          "module:j5e/servo~servo",
-          "servo"
-        ],
-        "module-j5e_servo-Servo.html#initialize": [
-          "code",
-          "function",
-          "initi",
-          "module:j5e/servo~servo#initi",
-          "servo"
-        ],
-        "module-j5e_servo-Servo.html#update": [
-          "call",
-          "degre",
-          "function",
-          "instanc",
-          "io",
-          "module:j5e/servo~servo#upd",
-          "param",
-          "servo",
-          "updat",
-          "write"
-        ],
-        "module-j5e_servo-Servo.html#to": [
-          "degre",
-          "function",
-          "given",
-          "horn'",
-          "module:j5e/servo~servo#to",
-          "over",
-          "posit",
-          "rate",
-          "servo",
-          "set",
-          "time"
-        ],
-        "module-j5e_servo-Servo.html#normalize": [
-          "function",
-          "module:j5e/servo~servo#norm",
-          "normal",
-          "number",
-          "object"
-        ],
-        "module-j5e_servo-Servo.html#render": [
-          "function",
-          "module:j5e/servo~servo#rend",
-          "render"
-        ],
-        "module-j5e_servo-Servo.html#step": [
-          "degre",
-          "function",
-          "horn'",
-          "module:j5e/servo~servo#step",
-          "over",
-          "posit",
-          "servo",
-          "specifi",
-          "step",
-          "time",
-          "updat"
-        ],
-        "module-j5e_servo-Servo.html#min": [
-          "0deg",
-          "default",
-          "degre",
-          "function",
-          "min",
-          "minimum",
-          "module:j5e/servo~servo#min",
-          "object",
-          "servo",
-          "set",
-          "time"
-        ],
-        "module-j5e_servo-Servo.html#max": [
-          "180deg",
-          "default",
-          "degre",
-          "function",
-          "max",
-          "maximum",
-          "module:j5e/servo~servo#max",
-          "object",
-          "servo",
-          "set",
-          "time"
-        ],
-        "module-j5e_servo-Servo.html#center": [
-          "90deg",
-          "center",
-          "centerpoint",
-          "default",
-          "function",
-          "module:j5e/servo~servo#cent",
-          "object",
-          "servo",
-          "set",
-          "time"
-        ],
-        "module-j5e_servo-Servo.html#home": [
-          "function",
-          "home",
-          "module:j5e/servo~servo#hom",
-          "posit",
-          "return",
-          "servo",
-          "startat"
-        ],
-        "module-j5e_servo-Servo.html#sweep": [
-          "between",
-          "function",
-          "max",
-          "min",
-          "module:j5e/servo~servo#sweep",
-          "option",
-          "provid",
-          "rang",
-          "servo",
-          "sweep"
-        ],
-        "module-j5e_servo-Servo.html#stop": [
-          "function",
-          "module:j5e/servo~servo#stop",
-          "move",
-          "servo",
-          "stop"
-        ],
-        "module-j5e_servo-Servo.html#cw": [
-          "clockwis",
-          "continu",
-          "cw",
-          "function",
-          "module:j5e/servo~servo#cw",
-          "move",
-          "rotat",
-          "servo",
-          "speed"
-        ],
-        "module-j5e_servo-Servo.html#ccw": [
-          "ccw",
-          "clockwis",
-          "continu",
-          "counter",
-          "csw",
-          "function",
-          "module:j5e/servo~servo#ccw",
-          "move",
-          "rotat",
-          "servo",
-          "speed"
         ],
         "module-j5e_led-LED.html": [
           "allow",
@@ -579,6 +357,130 @@
           "puls",
           "stop"
         ],
+        "module-j5e_servo-Servo.html": [
+          "allow",
+          "class",
+          "control",
+          "hobbi",
+          "j5e/servo~servo",
+          "lt;async&gt",
+          "module:j5e/servo~servo",
+          "servo"
+        ],
+        "module-j5e_servo-Servo.html#to": [
+          "degre",
+          "function",
+          "given",
+          "module:j5e/servo~servo#to",
+          "over",
+          "posit",
+          "rate",
+          "servo",
+          "servo'",
+          "set",
+          "time"
+        ],
+        "module-j5e_servo-Servo.html#step": [
+          "degre",
+          "function",
+          "module:j5e/servo~servo#step",
+          "over",
+          "posit",
+          "servo",
+          "specifi",
+          "step",
+          "time",
+          "updat"
+        ],
+        "module-j5e_servo-Servo.html#min": [
+          "0deg",
+          "default",
+          "degre",
+          "function",
+          "min",
+          "minimum",
+          "module:j5e/servo~servo#min",
+          "servo",
+          "set",
+          "time"
+        ],
+        "module-j5e_servo-Servo.html#max": [
+          "180deg",
+          "default",
+          "degre",
+          "function",
+          "max",
+          "maximum",
+          "module:j5e/servo~servo#max",
+          "object",
+          "servo",
+          "set",
+          "time"
+        ],
+        "module-j5e_servo-Servo.html#center": [
+          "90deg",
+          "center",
+          "centerpoint",
+          "default",
+          "function",
+          "module:j5e/servo~servo#cent",
+          "object",
+          "servo",
+          "set",
+          "time"
+        ],
+        "module-j5e_servo-Servo.html#home": [
+          "function",
+          "home",
+          "module:j5e/servo~servo#hom",
+          "posit",
+          "return",
+          "servo",
+          "startat"
+        ],
+        "module-j5e_servo-Servo.html#sweep": [
+          "between",
+          "function",
+          "max",
+          "min",
+          "module:j5e/servo~servo#sweep",
+          "opt",
+          "provid",
+          "rang",
+          "servo",
+          "sweep"
+        ],
+        "module-j5e_servo-Servo.html#stop": [
+          "function",
+          "module:j5e/servo~servo#stop",
+          "move",
+          "return",
+          "servo",
+          "stop"
+        ],
+        "module-j5e_servo-Servo.html#cw": [
+          "clockwis",
+          "continu",
+          "cw",
+          "function",
+          "module:j5e/servo~servo#cw",
+          "move",
+          "rotat",
+          "servo",
+          "speed"
+        ],
+        "module-j5e_servo-Servo.html#ccw": [
+          "ccw",
+          "clockwis",
+          "continu",
+          "counter",
+          "function",
+          "module:j5e/servo~servo#ccw",
+          "move",
+          "rotat",
+          "servo",
+          "speed"
+        ],
         "module-j5e_rgb-RGB.html": [
           "allow",
           "class",
@@ -700,28 +602,13 @@
           "rgb",
           "stop"
         ],
-        "module-j5e_animation-Timer.html": [
-          "class",
-          "j5e/animation~tim",
-          "manag",
-          "module:j5e/animation~tim",
-          "timer"
-        ],
-        "module-j5e_animation-Segment.html": [
-          "class",
-          "default",
-          "j5e/animation~seg",
-          "module:j5e/animation~seg",
-          "overrid",
-          "param",
-          "segment",
-          "set"
-        ],
         "module-j5e_animation.html": [
           "anim",
           "between",
+          "class",
           "frame",
           "handl",
+          "j5e",
           "j5e/anim",
           "key",
           "led",
@@ -734,23 +621,13 @@
           "work"
         ],
         "module-j5e_easing.html": [
-          "animi",
+          "anim",
           "eas",
-          "fn",
           "function",
           "j5e/eas",
           "modul",
           "module:j5e/eas",
           "segment"
-        ],
-        "module-j5e_event.html": [
-          "event",
-          "hous",
-          "j5e/ev",
-          "mixin",
-          "modul",
-          "module:j5e/ev",
-          "relat"
         ],
         "module-j5e_fn.html": [
           "call",
@@ -788,14 +665,31 @@
           "servo"
         ],
         "module-j5e_switch.html": [
-          "control",
           "j5e/switch",
           "modul",
           "module:j5e/switch",
-          "switch"
+          "switch",
+          "work"
+        ],
+        "module-j5e_fn-timer.html": [
+          "clearinterv",
+          "global",
+          "j5e/fn~tim",
+          "method",
+          "module:j5e/fn~tim",
+          "namespac",
+          "necessari",
+          "node.j",
+          "setimmedi",
+          "setinterv",
+          "system",
+          "timer",
+          "us",
+          "wrapper",
+          "xs"
         ]
       },
-      "length": 72
+      "length": 61
     },
     "tokenStore": {
       "root": {
@@ -911,7 +805,7 @@
                   "docs": {
                     "module-j5e_event.Emitter.html": {
                       "ref": "module-j5e_event.Emitter.html",
-                      "tf": 650
+                      "tf": 750
                     }
                   },
                   "e": {
@@ -1031,10 +925,6 @@
                     "module-j5e_event.Emitter.html#once": {
                       "ref": "module-j5e_event.Emitter.html#once",
                       "tf": 41.66666666666666
-                    },
-                    "module-j5e_event.html": {
-                      "ref": "module-j5e_event.html",
-                      "tf": 16.666666666666664
                     }
                   }
                 }
@@ -1061,67 +951,8 @@
               }
             }
           },
-          "x": {
-            "docs": {},
-            "t": {
-              "docs": {},
-              "e": {
-                "docs": {},
-                "r": {
-                  "docs": {},
-                  "n": {
-                    "docs": {
-                      "module-j5e_animation-Animation.html#next": {
-                        "ref": "module-j5e_animation-Animation.html#next",
-                        "tf": 7.142857142857142
-                      },
-                      "module-j5e_animation-Animation.html#loopFunction": {
-                        "ref": "module-j5e_animation-Animation.html#loopFunction",
-                        "tf": 7.142857142857142
-                      },
-                      "module-j5e_animation-Animation.html#play": {
-                        "ref": "module-j5e_animation-Animation.html#play",
-                        "tf": 10
-                      },
-                      "module-j5e_animation-Animation.html#findIndices": {
-                        "ref": "module-j5e_animation-Animation.html#findIndices",
-                        "tf": 7.142857142857142
-                      },
-                      "module-j5e_animation-Animation.html#calculateProgress": {
-                        "ref": "module-j5e_animation-Animation.html#calculateProgress",
-                        "tf": 6.25
-                      },
-                      "module-j5e_animation-Animation.html#tweenedValue": {
-                        "ref": "module-j5e_animation-Animation.html#tweenedValue",
-                        "tf": 4.166666666666666
-                      },
-                      "module-j5e_animation-Animation.html#normalizeKeyframes": {
-                        "ref": "module-j5e_animation-Animation.html#normalizeKeyframes",
-                        "tf": 6.25
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
           "a": {
             "docs": {},
-            "c": {
-              "docs": {},
-              "h": {
-                "docs": {
-                  "module-j5e_animation-Animation.html#loopFunction": {
-                    "ref": "module-j5e_animation-Animation.html#loopFunction",
-                    "tf": 7.142857142857142
-                  },
-                  "module-j5e_rgb-RGB.html#color": {
-                    "ref": "module-j5e_rgb-RGB.html#color",
-                    "tf": 2.941176470588235
-                  }
-                }
-              }
-            },
             "s": {
               "docs": {
                 "module-j5e_led-LED.html#pulse": {
@@ -1130,7 +961,18 @@
                 },
                 "module-j5e_easing.html": {
                   "ref": "module-j5e_easing.html",
-                  "tf": 8.333333333333332
+                  "tf": 12.5
+                }
+              }
+            },
+            "c": {
+              "docs": {},
+              "h": {
+                "docs": {
+                  "module-j5e_rgb-RGB.html#color": {
+                    "ref": "module-j5e_rgb-RGB.html#color",
+                    "tf": 2.941176470588235
+                  }
                 }
               }
             }
@@ -1158,41 +1000,6 @@
                   "module-j5e_event.Emitter.html#once": {
                     "ref": "module-j5e_event.Emitter.html#once",
                     "tf": 8.333333333333332
-                  }
-                }
-              }
-            },
-            "n": {
-              "docs": {},
-              "d": {
-                "docs": {
-                  "module-j5e_animation-Animation.html#findIndices": {
-                    "ref": "module-j5e_animation-Animation.html#findIndices",
-                    "tf": 7.142857142857142
-                  },
-                  "module-j5e_animation-Animation.html#tweenedValue": {
-                    "ref": "module-j5e_animation-Animation.html#tweenedValue",
-                    "tf": 4.166666666666666
-                  }
-                },
-                "i": {
-                  "docs": {},
-                  "n": {
-                    "docs": {},
-                    "d": {
-                      "docs": {},
-                      "i": {
-                        "docs": {},
-                        "c": {
-                          "docs": {
-                            "module-j5e_animation-Animation.html#findIndices": {
-                              "ref": "module-j5e_animation-Animation.html#findIndices",
-                              "tf": 750
-                            }
-                          }
-                        }
-                      }
-                    }
                   }
                 }
               }
@@ -1251,8 +1058,8 @@
                             "ref": "module-j5e_animation-Animation.html#enqueue",
                             "tf": 110
                           },
-                          "module-j5e_animation-Animation.html#next": {
-                            "ref": "module-j5e_animation-Animation.html#next",
+                          "module-j5e_animation-Animation.html#play": {
+                            "ref": "module-j5e_animation-Animation.html#play",
                             "tf": 110
                           },
                           "module-j5e_animation-Animation.html#pause": {
@@ -1265,86 +1072,6 @@
                           },
                           "module-j5e_animation-Animation.html#speed": {
                             "ref": "module-j5e_animation-Animation.html#speed",
-                            "tf": 110
-                          },
-                          "module-j5e_animation-Animation.html#loopFunction": {
-                            "ref": "module-j5e_animation-Animation.html#loopFunction",
-                            "tf": 110
-                          },
-                          "module-j5e_animation-Animation.html#play": {
-                            "ref": "module-j5e_animation-Animation.html#play",
-                            "tf": 110
-                          },
-                          "module-j5e_animation-Animation.html#findIndices": {
-                            "ref": "module-j5e_animation-Animation.html#findIndices",
-                            "tf": 110
-                          },
-                          "module-j5e_animation-Animation.html#calculateProgress": {
-                            "ref": "module-j5e_animation-Animation.html#calculateProgress",
-                            "tf": 110
-                          },
-                          "module-j5e_animation-Animation.html#tweenedValue": {
-                            "ref": "module-j5e_animation-Animation.html#tweenedValue",
-                            "tf": 110
-                          },
-                          "module-j5e_animation-Animation.html#normalizeKeyframes": {
-                            "ref": "module-j5e_animation-Animation.html#normalizeKeyframes",
-                            "tf": 110
-                          },
-                          "module-j5e_servo-Servo.html#initialize": {
-                            "ref": "module-j5e_servo-Servo.html#initialize",
-                            "tf": 110
-                          },
-                          "module-j5e_servo-Servo.html#update": {
-                            "ref": "module-j5e_servo-Servo.html#update",
-                            "tf": 110
-                          },
-                          "module-j5e_servo-Servo.html#to": {
-                            "ref": "module-j5e_servo-Servo.html#to",
-                            "tf": 110
-                          },
-                          "module-j5e_servo-Servo.html#normalize": {
-                            "ref": "module-j5e_servo-Servo.html#normalize",
-                            "tf": 110
-                          },
-                          "module-j5e_servo-Servo.html#render": {
-                            "ref": "module-j5e_servo-Servo.html#render",
-                            "tf": 110
-                          },
-                          "module-j5e_servo-Servo.html#step": {
-                            "ref": "module-j5e_servo-Servo.html#step",
-                            "tf": 110
-                          },
-                          "module-j5e_servo-Servo.html#min": {
-                            "ref": "module-j5e_servo-Servo.html#min",
-                            "tf": 110
-                          },
-                          "module-j5e_servo-Servo.html#max": {
-                            "ref": "module-j5e_servo-Servo.html#max",
-                            "tf": 110
-                          },
-                          "module-j5e_servo-Servo.html#center": {
-                            "ref": "module-j5e_servo-Servo.html#center",
-                            "tf": 110
-                          },
-                          "module-j5e_servo-Servo.html#home": {
-                            "ref": "module-j5e_servo-Servo.html#home",
-                            "tf": 110
-                          },
-                          "module-j5e_servo-Servo.html#sweep": {
-                            "ref": "module-j5e_servo-Servo.html#sweep",
-                            "tf": 110
-                          },
-                          "module-j5e_servo-Servo.html#stop": {
-                            "ref": "module-j5e_servo-Servo.html#stop",
-                            "tf": 110
-                          },
-                          "module-j5e_servo-Servo.html#cw": {
-                            "ref": "module-j5e_servo-Servo.html#cw",
-                            "tf": 110
-                          },
-                          "module-j5e_servo-Servo.html#ccw": {
-                            "ref": "module-j5e_servo-Servo.html#ccw",
                             "tf": 110
                           },
                           "module-j5e_led-LED.html#on": {
@@ -1395,6 +1122,46 @@
                             "ref": "module-j5e_led-LED.html#stop",
                             "tf": 110
                           },
+                          "module-j5e_servo-Servo.html#to": {
+                            "ref": "module-j5e_servo-Servo.html#to",
+                            "tf": 110
+                          },
+                          "module-j5e_servo-Servo.html#step": {
+                            "ref": "module-j5e_servo-Servo.html#step",
+                            "tf": 110
+                          },
+                          "module-j5e_servo-Servo.html#min": {
+                            "ref": "module-j5e_servo-Servo.html#min",
+                            "tf": 110
+                          },
+                          "module-j5e_servo-Servo.html#max": {
+                            "ref": "module-j5e_servo-Servo.html#max",
+                            "tf": 110
+                          },
+                          "module-j5e_servo-Servo.html#center": {
+                            "ref": "module-j5e_servo-Servo.html#center",
+                            "tf": 110
+                          },
+                          "module-j5e_servo-Servo.html#home": {
+                            "ref": "module-j5e_servo-Servo.html#home",
+                            "tf": 110
+                          },
+                          "module-j5e_servo-Servo.html#sweep": {
+                            "ref": "module-j5e_servo-Servo.html#sweep",
+                            "tf": 110
+                          },
+                          "module-j5e_servo-Servo.html#stop": {
+                            "ref": "module-j5e_servo-Servo.html#stop",
+                            "tf": 110
+                          },
+                          "module-j5e_servo-Servo.html#cw": {
+                            "ref": "module-j5e_servo-Servo.html#cw",
+                            "tf": 110
+                          },
+                          "module-j5e_servo-Servo.html#ccw": {
+                            "ref": "module-j5e_servo-Servo.html#ccw",
+                            "tf": 110
+                          },
                           "module-j5e_rgb-RGB.html#color": {
                             "ref": "module-j5e_rgb-RGB.html#color",
                             "tf": 110
@@ -1437,7 +1204,7 @@
                           },
                           "module-j5e_easing.html": {
                             "ref": "module-j5e_easing.html",
-                            "tf": 8.333333333333332
+                            "tf": 12.5
                           }
                         }
                       }
@@ -1492,27 +1259,6 @@
                     "module-j5e_animation-Animation.html#stop": {
                       "ref": "module-j5e_animation-Animation.html#stop",
                       "tf": 10
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "r": {
-            "docs": {},
-            "a": {
-              "docs": {},
-              "m": {
-                "docs": {},
-                "e": {
-                  "docs": {
-                    "module-j5e_animation-Animation.html#loopFunction": {
-                      "ref": "module-j5e_animation-Animation.html#loopFunction",
-                      "tf": 7.142857142857142
-                    },
-                    "module-j5e_animation.html": {
-                      "ref": "module-j5e_animation.html",
-                      "tf": 4.166666666666666
                     }
                   }
                 }
@@ -1586,12 +1332,25 @@
               }
             }
           },
+          "r": {
+            "docs": {},
+            "a": {
+              "docs": {},
+              "m": {
+                "docs": {},
+                "e": {
+                  "docs": {
+                    "module-j5e_animation.html": {
+                      "ref": "module-j5e_animation.html",
+                      "tf": 3.571428571428571
+                    }
+                  }
+                }
+              }
+            }
+          },
           "n": {
             "docs": {
-              "module-j5e_easing.html": {
-                "ref": "module-j5e_easing.html",
-                "tf": 8.333333333333332
-              },
               "module-j5e_fn.html": {
                 "ref": "module-j5e_fn.html",
                 "tf": 5
@@ -1615,17 +1374,6 @@
                     }
                   }
                 }
-              },
-              "i": {
-                "docs": {},
-                "c": {
-                  "docs": {
-                    "module-j5e_animation-Animation.html#tweenedValue": {
-                      "ref": "module-j5e_animation-Animation.html#tweenedValue",
-                      "tf": 4.166666666666666
-                    }
-                  }
-                }
               }
             },
             "s": {
@@ -1645,13 +1393,22 @@
                           }
                         }
                       }
-                    },
-                    "c": {
-                      "docs": {
-                        "module-j5e_servo-Servo.html#update": {
-                          "ref": "module-j5e_servo-Servo.html#update",
-                          "tf": 8.333333333333332
-                        }
+                    }
+                  }
+                }
+              }
+            },
+            "f": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "m": {
+                    "docs": {
+                      "module-j5e_animation-Animation.html#enqueue": {
+                        "ref": "module-j5e_animation-Animation.html#enqueue",
+                        "tf": 4.166666666666666
                       }
                     }
                   }
@@ -1662,37 +1419,6 @@
               "docs": {},
               "e": {
                 "docs": {},
-                "n": {
-                  "docs": {},
-                  "d": {
-                    "docs": {
-                      "module-j5e_animation-Animation.html#loopFunction": {
-                        "ref": "module-j5e_animation-Animation.html#loopFunction",
-                        "tf": 7.142857142857142
-                      },
-                      "module-j5e_animation-Animation.html#calculateProgress": {
-                        "ref": "module-j5e_animation-Animation.html#calculateProgress",
-                        "tf": 6.25
-                      },
-                      "module-j5e_animation-Animation.html#tweenedValue": {
-                        "ref": "module-j5e_animation-Animation.html#tweenedValue",
-                        "tf": 4.166666666666666
-                      },
-                      "module-j5e_animation-Animation.html#normalizeKeyframes": {
-                        "ref": "module-j5e_animation-Animation.html#normalizeKeyframes",
-                        "tf": 6.25
-                      }
-                    }
-                  },
-                  "s": {
-                    "docs": {
-                      "module-j5e_led-LED.html#intensity": {
-                        "ref": "module-j5e_led-LED.html#intensity",
-                        "tf": 683.3333333333334
-                      }
-                    }
-                  }
-                },
                 "r": {
                   "docs": {},
                   "v": {
@@ -1711,18 +1437,15 @@
                       }
                     }
                   }
-                }
-              }
-            },
-            "i": {
-              "docs": {},
-              "t": {
-                "docs": {},
-                "i": {
-                  "docs": {
-                    "module-j5e_servo-Servo.html#initialize": {
-                      "ref": "module-j5e_servo-Servo.html#initialize",
-                      "tf": 766.6666666666666
+                },
+                "n": {
+                  "docs": {},
+                  "s": {
+                    "docs": {
+                      "module-j5e_led-LED.html#intensity": {
+                        "ref": "module-j5e_led-LED.html#intensity",
+                        "tf": 683.3333333333334
+                      }
                     }
                   }
                 }
@@ -1754,10 +1477,6 @@
           },
           "o": {
             "docs": {
-              "module-j5e_servo-Servo.html#update": {
-                "ref": "module-j5e_servo-Servo.html#update",
-                "tf": 8.333333333333332
-              },
               "module-j5e_fn.html": {
                 "ref": "module-j5e_fn.html",
                 "tf": 5
@@ -1796,6 +1515,10 @@
                   "ref": "index.html",
                   "tf": 600
                 },
+                "module-j5e_animation.html": {
+                  "ref": "module-j5e_animation.html",
+                  "tf": 3.571428571428571
+                },
                 "module-j5e_fn.html": {
                   "ref": "module-j5e_fn.html",
                   "tf": 5
@@ -1805,65 +1528,15 @@
                 "docs": {
                   "undefined": {
                     "tf": 25
+                  },
+                  "module-j5e_animation-Animation.html#enqueue": {
+                    "ref": "module-j5e_animation-Animation.html#enqueue",
+                    "tf": 4.166666666666666
                   }
                 }
               },
               "/": {
                 "docs": {},
-                "e": {
-                  "docs": {},
-                  "v": {
-                    "docs": {
-                      "module-j5e_event.html": {
-                        "ref": "module-j5e_event.html",
-                        "tf": 600
-                      }
-                    },
-                    "e": {
-                      "docs": {},
-                      "n": {
-                        "docs": {},
-                        "t": {
-                          "docs": {},
-                          ".": {
-                            "docs": {},
-                            "e": {
-                              "docs": {},
-                              "m": {
-                                "docs": {},
-                                "i": {
-                                  "docs": {},
-                                  "t": {
-                                    "docs": {},
-                                    "t": {
-                                      "docs": {
-                                        "module-j5e_event.Emitter.html": {
-                                          "ref": "module-j5e_event.Emitter.html",
-                                          "tf": 100
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  },
-                  "a": {
-                    "docs": {},
-                    "s": {
-                      "docs": {
-                        "module-j5e_easing.html": {
-                          "ref": "module-j5e_easing.html",
-                          "tf": 600
-                        }
-                      }
-                    }
-                  }
-                },
                 "a": {
                   "docs": {},
                   "n": {
@@ -1901,34 +1574,6 @@
                                                 "ref": "module-j5e_animation-Animation.html",
                                                 "tf": 100
                                               }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    },
-                                    "t": {
-                                      "docs": {},
-                                      "i": {
-                                        "docs": {},
-                                        "m": {
-                                          "docs": {
-                                            "module-j5e_animation-Timer.html": {
-                                              "ref": "module-j5e_animation-Timer.html",
-                                              "tf": 100
-                                            }
-                                          }
-                                        }
-                                      }
-                                    },
-                                    "s": {
-                                      "docs": {},
-                                      "e": {
-                                        "docs": {},
-                                        "g": {
-                                          "docs": {
-                                            "module-j5e_animation-Segment.html": {
-                                              "ref": "module-j5e_animation-Segment.html",
-                                              "tf": 100
                                             }
                                           }
                                         }
@@ -2089,6 +1734,20 @@
                     }
                   }
                 },
+                "e": {
+                  "docs": {},
+                  "a": {
+                    "docs": {},
+                    "s": {
+                      "docs": {
+                        "module-j5e_easing.html": {
+                          "ref": "module-j5e_easing.html",
+                          "tf": 600
+                        }
+                      }
+                    }
+                  }
+                },
                 "f": {
                   "docs": {},
                   "n": {
@@ -2096,6 +1755,23 @@
                       "module-j5e_fn.html": {
                         "ref": "module-j5e_fn.html",
                         "tf": 600
+                      }
+                    },
+                    "~": {
+                      "docs": {},
+                      "t": {
+                        "docs": {},
+                        "i": {
+                          "docs": {},
+                          "m": {
+                            "docs": {
+                              "module-j5e_fn-timer.html": {
+                                "ref": "module-j5e_fn-timer.html",
+                                "tf": 100
+                              }
+                            }
+                          }
+                        }
                       }
                     }
                   }
@@ -2183,35 +1859,15 @@
                 }
               }
             },
-            "n": {
-              "docs": {},
-              "d": {
-                "docs": {},
-                "e": {
-                  "docs": {},
-                  "r": {
-                    "docs": {
-                      "module-j5e_servo-Servo.html#render": {
-                        "ref": "module-j5e_servo-Servo.html#render",
-                        "tf": 800
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "t": {
+            "s": {
               "docs": {},
               "u": {
                 "docs": {},
-                "r": {
-                  "docs": {},
-                  "n": {
-                    "docs": {
-                      "module-j5e_servo-Servo.html#home": {
-                        "ref": "module-j5e_servo-Servo.html#home",
-                        "tf": 10
-                      }
+                "m": {
+                  "docs": {
+                    "module-j5e_animation-Animation.html#play": {
+                      "ref": "module-j5e_animation-Animation.html#play",
+                      "tf": 10
                     }
                   }
                 }
@@ -2254,92 +1910,32 @@
                 }
               }
             },
+            "t": {
+              "docs": {},
+              "u": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "n": {
+                    "docs": {
+                      "module-j5e_servo-Servo.html#home": {
+                        "ref": "module-j5e_servo-Servo.html#home",
+                        "tf": 12.5
+                      },
+                      "module-j5e_servo-Servo.html#stop": {
+                        "ref": "module-j5e_servo-Servo.html#stop",
+                        "tf": 10
+                      }
+                    }
+                  }
+                }
+              }
+            },
             "d": {
               "docs": {
                 "module-j5e_rgb-RGB.html#color": {
                   "ref": "module-j5e_rgb-RGB.html#color",
                   "tf": 20
-                }
-              }
-            },
-            "l": {
-              "docs": {},
-              "a": {
-                "docs": {},
-                "t": {
-                  "docs": {
-                    "module-j5e_event.html": {
-                      "ref": "module-j5e_event.html",
-                      "tf": 8.333333333333332
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "i": {
-            "docs": {},
-            "g": {
-              "docs": {},
-              "h": {
-                "docs": {},
-                "t": {
-                  "docs": {
-                    "module-j5e_animation-Animation.html#findIndices": {
-                      "ref": "module-j5e_animation-Animation.html#findIndices",
-                      "tf": 7.142857142857142
-                    },
-                    "module-j5e_animation-Animation.html#tweenedValue": {
-                      "ref": "module-j5e_animation-Animation.html#tweenedValue",
-                      "tf": 4.166666666666666
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "a": {
-            "docs": {},
-            "t": {
-              "docs": {},
-              "e": {
-                "docs": {
-                  "module-j5e_servo-Servo.html#to": {
-                    "ref": "module-j5e_servo-Servo.html#to",
-                    "tf": 25
-                  }
-                }
-              }
-            },
-            "n": {
-              "docs": {},
-              "g": {
-                "docs": {
-                  "module-j5e_servo-Servo.html#sweep": {
-                    "ref": "module-j5e_servo-Servo.html#sweep",
-                    "tf": 39.58333333333333
-                  }
-                }
-              }
-            }
-          },
-          "o": {
-            "docs": {},
-            "t": {
-              "docs": {},
-              "a": {
-                "docs": {},
-                "t": {
-                  "docs": {
-                    "module-j5e_servo-Servo.html#cw": {
-                      "ref": "module-j5e_servo-Servo.html#cw",
-                      "tf": 8.333333333333332
-                    },
-                    "module-j5e_servo-Servo.html#ccw": {
-                      "ref": "module-j5e_servo-Servo.html#ccw",
-                      "tf": 7.142857142857142
-                    }
-                  }
                 }
               }
             }
@@ -2348,6 +1944,10 @@
             "docs": {},
             "b": {
               "docs": {
+                "module-j5e_animation-Animation.html": {
+                  "ref": "module-j5e_animation-Animation.html",
+                  "tf": 8.333333333333332
+                },
                 "module-j5e_rgb-RGB.html": {
                   "ref": "module-j5e_rgb-RGB.html",
                   "tf": 516.6666666666666
@@ -2394,11 +1994,57 @@
                 },
                 "module-j5e_animation.html": {
                   "ref": "module-j5e_animation.html",
-                  "tf": 4.166666666666666
+                  "tf": 3.571428571428571
                 },
                 "module-j5e_rgb.html": {
                   "ref": "module-j5e_rgb.html",
                   "tf": 20
+                }
+              }
+            }
+          },
+          "a": {
+            "docs": {},
+            "t": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "module-j5e_servo-Servo.html#to": {
+                    "ref": "module-j5e_servo-Servo.html#to",
+                    "tf": 25
+                  }
+                }
+              }
+            },
+            "n": {
+              "docs": {},
+              "g": {
+                "docs": {
+                  "module-j5e_servo-Servo.html#sweep": {
+                    "ref": "module-j5e_servo-Servo.html#sweep",
+                    "tf": 6.25
+                  }
+                }
+              }
+            }
+          },
+          "o": {
+            "docs": {},
+            "t": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "module-j5e_servo-Servo.html#cw": {
+                      "ref": "module-j5e_servo-Servo.html#cw",
+                      "tf": 10
+                    },
+                    "module-j5e_servo-Servo.html#ccw": {
+                      "ref": "module-j5e_servo-Servo.html#ccw",
+                      "tf": 8.333333333333332
+                    }
+                  }
                 }
               }
             }
@@ -2419,6 +2065,10 @@
                       "index.html": {
                         "ref": "index.html",
                         "tf": 17.5
+                      },
+                      "module-j5e_fn-timer.html": {
+                        "ref": "module-j5e_fn-timer.html",
+                        "tf": 4.166666666666666
                       }
                     }
                   }
@@ -2461,14 +2111,6 @@
                   "docs": {
                     "undefined": {
                       "tf": 73.33333333333333
-                    },
-                    "module-j5e_animation-Animation.html#play": {
-                      "ref": "module-j5e_animation-Animation.html#play",
-                      "tf": 10
-                    },
-                    "module-j5e_animation-Animation.html#calculateProgress": {
-                      "ref": "module-j5e_animation-Animation.html#calculateProgress",
-                      "tf": 6.25
                     }
                   },
                   "a": {
@@ -2477,27 +2119,7 @@
                       "docs": {
                         "module-j5e_servo-Servo.html#home": {
                           "ref": "module-j5e_servo-Servo.html#home",
-                          "tf": 10
-                        }
-                      }
-                    }
-                  }
-                }
-              },
-              "n": {
-                "docs": {},
-                "d": {
-                  "docs": {},
-                  "a": {
-                    "docs": {},
-                    "r": {
-                      "docs": {},
-                      "d": {
-                        "docs": {
-                          "module-j5e_animation-Animation.html#normalizeKeyframes": {
-                            "ref": "module-j5e_animation-Animation.html#normalizeKeyframes",
-                            "tf": 6.25
-                          }
+                          "tf": 12.5
                         }
                       }
                     }
@@ -2537,17 +2159,21 @@
               "docs": {},
               "p": {
                 "docs": {
+                  "module-j5e_animation-Animation.html#play": {
+                    "ref": "module-j5e_animation-Animation.html#play",
+                    "tf": 10
+                  },
                   "module-j5e_animation-Animation.html#stop": {
                     "ref": "module-j5e_animation-Animation.html#stop",
                     "tf": 760
                   },
-                  "module-j5e_servo-Servo.html#stop": {
-                    "ref": "module-j5e_servo-Servo.html#stop",
-                    "tf": 775
-                  },
                   "module-j5e_led-LED.html#stop": {
                     "ref": "module-j5e_led-LED.html#stop",
                     "tf": 714.2857142857143
+                  },
+                  "module-j5e_servo-Servo.html#stop": {
+                    "ref": "module-j5e_servo-Servo.html#stop",
+                    "tf": 760
                   },
                   "module-j5e_rgb-RGB.html#stop": {
                     "ref": "module-j5e_rgb-RGB.html#stop",
@@ -2562,7 +2188,7 @@
                 "docs": {
                   "module-j5e_servo-Servo.html#step": {
                     "ref": "module-j5e_servo-Servo.html#step",
-                    "tf": 680.5555555555555
+                    "tf": 675
                   }
                 }
               }
@@ -2614,31 +2240,23 @@
                   "docs": {
                     "module-j5e_animation-Animation.html": {
                       "ref": "module-j5e_animation-Animation.html",
-                      "tf": 10
+                      "tf": 8.333333333333332
                     },
                     "module-j5e_servo-Servo.html": {
                       "ref": "module-j5e_servo-Servo.html",
                       "tf": 516.6666666666666
                     },
-                    "module-j5e_servo-Servo.html#initialize": {
-                      "ref": "module-j5e_servo-Servo.html#initialize",
-                      "tf": 16.666666666666664
-                    },
-                    "module-j5e_servo-Servo.html#update": {
-                      "ref": "module-j5e_servo-Servo.html#update",
-                      "tf": 41.66666666666666
-                    },
                     "module-j5e_servo-Servo.html#to": {
                       "ref": "module-j5e_servo-Servo.html#to",
-                      "tf": 31.25
+                      "tf": 25
                     },
                     "module-j5e_servo-Servo.html#step": {
                       "ref": "module-j5e_servo-Servo.html#step",
-                      "tf": 30.555555555555557
+                      "tf": 32.14285714285714
                     },
                     "module-j5e_servo-Servo.html#min": {
                       "ref": "module-j5e_servo-Servo.html#min",
-                      "tf": 7.142857142857142
+                      "tf": 40.47619047619047
                     },
                     "module-j5e_servo-Servo.html#max": {
                       "ref": "module-j5e_servo-Servo.html#max",
@@ -2650,31 +2268,39 @@
                     },
                     "module-j5e_servo-Servo.html#home": {
                       "ref": "module-j5e_servo-Servo.html#home",
-                      "tf": 10
+                      "tf": 62.5
                     },
                     "module-j5e_servo-Servo.html#sweep": {
                       "ref": "module-j5e_servo-Servo.html#sweep",
-                      "tf": 6.25
+                      "tf": 39.58333333333333
                     },
                     "module-j5e_servo-Servo.html#stop": {
                       "ref": "module-j5e_servo-Servo.html#stop",
-                      "tf": 12.5
+                      "tf": 20
                     },
                     "module-j5e_servo-Servo.html#cw": {
                       "ref": "module-j5e_servo-Servo.html#cw",
-                      "tf": 8.333333333333332
+                      "tf": 43.33333333333333
                     },
                     "module-j5e_servo-Servo.html#ccw": {
                       "ref": "module-j5e_servo-Servo.html#ccw",
-                      "tf": 7.142857142857142
+                      "tf": 41.66666666666666
                     },
                     "module-j5e_animation.html": {
                       "ref": "module-j5e_animation.html",
-                      "tf": 4.166666666666666
+                      "tf": 3.571428571428571
                     },
                     "module-j5e_servo.html": {
                       "ref": "module-j5e_servo.html",
                       "tf": 20
+                    }
+                  },
+                  "'": {
+                    "docs": {
+                      "module-j5e_servo-Servo.html#to": {
+                        "ref": "module-j5e_servo-Servo.html#to",
+                        "tf": 7.142857142857142
+                      }
                     }
                   }
                 }
@@ -2683,8 +2309,16 @@
                 "docs": {
                   "module-j5e_animation.html": {
                     "ref": "module-j5e_animation.html",
-                    "tf": 4.166666666666666
+                    "tf": 3.571428571428571
                   }
+                }
+              }
+            },
+            "e": {
+              "docs": {
+                "module-j5e_animation-Animation.html#enqueue": {
+                  "ref": "module-j5e_animation-Animation.html#enqueue",
+                  "tf": 4.166666666666666
                 }
               }
             },
@@ -2700,11 +2334,7 @@
                       "docs": {
                         "module-j5e_animation-Animation.html#enqueue": {
                           "ref": "module-j5e_animation-Animation.html#enqueue",
-                          "tf": 10
-                        },
-                        "module-j5e_animation-Animation.html#next": {
-                          "ref": "module-j5e_animation-Animation.html#next",
-                          "tf": 7.142857142857142
+                          "tf": 4.166666666666666
                         },
                         "module-j5e_animation-Animation.html#pause": {
                           "ref": "module-j5e_animation-Animation.html#pause",
@@ -2714,21 +2344,13 @@
                           "ref": "module-j5e_animation-Animation.html#stop",
                           "tf": 10
                         },
-                        "module-j5e_animation-Animation.html#play": {
-                          "ref": "module-j5e_animation-Animation.html#play",
-                          "tf": 10
-                        },
                         "module-j5e_led-LED.html#animate": {
                           "ref": "module-j5e_led-LED.html#animate",
                           "tf": 8.333333333333332
                         },
-                        "module-j5e_animation-Segment.html": {
-                          "ref": "module-j5e_animation-Segment.html",
-                          "tf": 500
-                        },
                         "module-j5e_easing.html": {
                           "ref": "module-j5e_easing.html",
-                          "tf": 8.333333333333332
+                          "tf": 12.5
                         }
                       }
                     }
@@ -2740,11 +2362,19 @@
               "docs": {
                 "module-j5e_animation-Animation.html#speed": {
                   "ref": "module-j5e_animation-Animation.html#speed",
-                  "tf": 10
+                  "tf": 12.5
+                },
+                "module-j5e_led-LED.html#brightness": {
+                  "ref": "module-j5e_led-LED.html#brightness",
+                  "tf": 6.25
+                },
+                "module-j5e_led-LED.html#intensity": {
+                  "ref": "module-j5e_led-LED.html#intensity",
+                  "tf": 6.25
                 },
                 "module-j5e_servo-Servo.html#to": {
                   "ref": "module-j5e_servo-Servo.html#to",
-                  "tf": 6.25
+                  "tf": 7.142857142857142
                 },
                 "module-j5e_servo-Servo.html#min": {
                   "ref": "module-j5e_servo-Servo.html#min",
@@ -2757,18 +2387,49 @@
                 "module-j5e_servo-Servo.html#center": {
                   "ref": "module-j5e_servo-Servo.html#center",
                   "tf": 8.333333333333332
+                }
+              },
+              "i": {
+                "docs": {},
+                "m": {
+                  "docs": {},
+                  "m": {
+                    "docs": {},
+                    "e": {
+                      "docs": {},
+                      "d": {
+                        "docs": {},
+                        "i": {
+                          "docs": {
+                            "module-j5e_fn-timer.html": {
+                              "ref": "module-j5e_fn-timer.html",
+                              "tf": 4.166666666666666
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
                 },
-                "module-j5e_led-LED.html#brightness": {
-                  "ref": "module-j5e_led-LED.html#brightness",
-                  "tf": 6.25
-                },
-                "module-j5e_led-LED.html#intensity": {
-                  "ref": "module-j5e_led-LED.html#intensity",
-                  "tf": 6.25
-                },
-                "module-j5e_animation-Segment.html": {
-                  "ref": "module-j5e_animation-Segment.html",
-                  "tf": 12.5
+                "n": {
+                  "docs": {},
+                  "t": {
+                    "docs": {},
+                    "e": {
+                      "docs": {},
+                      "r": {
+                        "docs": {},
+                        "v": {
+                          "docs": {
+                            "module-j5e_fn-timer.html": {
+                              "ref": "module-j5e_fn-timer.html",
+                              "tf": 4.166666666666666
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             },
@@ -2799,7 +2460,7 @@
                     "docs": {
                       "module-j5e_animation-Animation.html": {
                         "ref": "module-j5e_animation-Animation.html",
-                        "tf": 10
+                        "tf": 8.333333333333332
                       }
                     }
                   }
@@ -2821,15 +2482,15 @@
                     },
                     "module-j5e_animation-Animation.html#speed": {
                       "ref": "module-j5e_animation-Animation.html#speed",
-                      "tf": 770
+                      "tf": 762.5
                     },
                     "module-j5e_servo-Servo.html#cw": {
                       "ref": "module-j5e_servo-Servo.html#cw",
-                      "tf": 50
+                      "tf": 33.33333333333333
                     },
                     "module-j5e_servo-Servo.html#ccw": {
                       "ref": "module-j5e_servo-Servo.html#ccw",
-                      "tf": 50
+                      "tf": 33.33333333333333
                     }
                   }
                 }
@@ -2842,30 +2503,16 @@
                     "docs": {},
                     "i": {
                       "docs": {
-                        "module-j5e_servo-Servo.html#step": {
-                          "ref": "module-j5e_servo-Servo.html#step",
-                          "tf": 5.555555555555555
-                        },
                         "module-j5e_led-LED.html#pulse": {
                           "ref": "module-j5e_led-LED.html#pulse",
                           "tf": 4.166666666666666
+                        },
+                        "module-j5e_servo-Servo.html#step": {
+                          "ref": "module-j5e_servo-Servo.html#step",
+                          "tf": 7.142857142857142
                         }
                       }
                     }
-                  }
-                }
-              }
-            }
-          },
-          "u": {
-            "docs": {},
-            "r": {
-              "docs": {},
-              "e": {
-                "docs": {
-                  "module-j5e_animation-Animation.html#normalizeKeyframes": {
-                    "ref": "module-j5e_animation-Animation.html#normalizeKeyframes",
-                    "tf": 6.25
                   }
                 }
               }
@@ -2937,6 +2584,10 @@
                           "list_module.html": {
                             "ref": "list_module.html",
                             "tf": 35
+                          },
+                          "list_namespace.html": {
+                            "ref": "list_namespace.html",
+                            "tf": 35
                           }
                         }
                       }
@@ -2971,17 +2622,13 @@
                 "docs": {},
                 "e": {
                   "docs": {
-                    "module-j5e_servo-Servo.html#update": {
-                      "ref": "module-j5e_servo-Servo.html#update",
-                      "tf": 33.33333333333333
-                    },
                     "module-j5e_servo-Servo.html#to": {
                       "ref": "module-j5e_servo-Servo.html#to",
-                      "tf": 31.25
+                      "tf": 32.14285714285714
                     },
                     "module-j5e_servo-Servo.html#step": {
                       "ref": "module-j5e_servo-Servo.html#step",
-                      "tf": 30.555555555555557
+                      "tf": 32.14285714285714
                     },
                     "module-j5e_servo-Servo.html#min": {
                       "ref": "module-j5e_servo-Servo.html#min",
@@ -3016,10 +2663,6 @@
                         "module-j5e_servo-Servo.html#center": {
                           "ref": "module-j5e_servo-Servo.html#center",
                           "tf": 8.333333333333332
-                        },
-                        "module-j5e_animation-Segment.html": {
-                          "ref": "module-j5e_animation-Segment.html",
-                          "tf": 12.5
                         }
                       }
                     }
@@ -3120,6 +2763,10 @@
                       "global.html": {
                         "ref": "global.html",
                         "tf": 2045
+                      },
+                      "module-j5e_fn-timer.html": {
+                        "ref": "module-j5e_fn-timer.html",
+                        "tf": 4.166666666666666
                       }
                     }
                   }
@@ -3182,7 +2829,7 @@
                   "docs": {
                     "module-j5e_servo-Servo.html#to": {
                       "ref": "module-j5e_servo-Servo.html#to",
-                      "tf": 6.25
+                      "tf": 7.142857142857142
                     }
                   }
                 }
@@ -3268,30 +2915,6 @@
                     "ref": "module-j5e_event.Emitter.html#once",
                     "tf": 8.333333333333332
                   },
-                  "module-j5e_animation-Animation.html#calculateProgress": {
-                    "ref": "module-j5e_animation-Animation.html#calculateProgress",
-                    "tf": 6.25
-                  },
-                  "module-j5e_servo-Servo.html#to": {
-                    "ref": "module-j5e_servo-Servo.html#to",
-                    "tf": 31.25
-                  },
-                  "module-j5e_servo-Servo.html#step": {
-                    "ref": "module-j5e_servo-Servo.html#step",
-                    "tf": 30.555555555555557
-                  },
-                  "module-j5e_servo-Servo.html#min": {
-                    "ref": "module-j5e_servo-Servo.html#min",
-                    "tf": 33.33333333333333
-                  },
-                  "module-j5e_servo-Servo.html#max": {
-                    "ref": "module-j5e_servo-Servo.html#max",
-                    "tf": 33.33333333333333
-                  },
-                  "module-j5e_servo-Servo.html#center": {
-                    "ref": "module-j5e_servo-Servo.html#center",
-                    "tf": 33.33333333333333
-                  },
                   "module-j5e_led-LED.html#fade": {
                     "ref": "module-j5e_led-LED.html#fade",
                     "tf": 20
@@ -3307,6 +2930,26 @@
                   "module-j5e_led-LED.html#pulse": {
                     "ref": "module-j5e_led-LED.html#pulse",
                     "tf": 29.166666666666664
+                  },
+                  "module-j5e_servo-Servo.html#to": {
+                    "ref": "module-j5e_servo-Servo.html#to",
+                    "tf": 32.14285714285714
+                  },
+                  "module-j5e_servo-Servo.html#step": {
+                    "ref": "module-j5e_servo-Servo.html#step",
+                    "tf": 32.14285714285714
+                  },
+                  "module-j5e_servo-Servo.html#min": {
+                    "ref": "module-j5e_servo-Servo.html#min",
+                    "tf": 33.33333333333333
+                  },
+                  "module-j5e_servo-Servo.html#max": {
+                    "ref": "module-j5e_servo-Servo.html#max",
+                    "tf": 33.33333333333333
+                  },
+                  "module-j5e_servo-Servo.html#center": {
+                    "ref": "module-j5e_servo-Servo.html#center",
+                    "tf": 33.33333333333333
                   },
                   "module-j5e_rgb-RGB.html#fade": {
                     "ref": "module-j5e_rgb-RGB.html#fade",
@@ -3325,6 +2968,10 @@
                       "docs": {
                         "undefined": {
                           "tf": 25
+                        },
+                        "module-j5e_animation-Animation.html#enqueue": {
+                          "ref": "module-j5e_animation-Animation.html#enqueue",
+                          "tf": 4.166666666666666
                         }
                       }
                     }
@@ -3332,9 +2979,9 @@
                 },
                 "r": {
                   "docs": {
-                    "module-j5e_animation-Timer.html": {
-                      "ref": "module-j5e_animation-Timer.html",
-                      "tf": 516.6666666666666
+                    "module-j5e_fn-timer.html": {
+                      "ref": "module-j5e_fn-timer.html",
+                      "tf": 500
                     }
                   }
                 }
@@ -3349,6 +2996,10 @@
                 "docs": {
                   "undefined": {
                     "tf": 25
+                  },
+                  "module-j5e_animation-Animation.html#enqueue": {
+                    "ref": "module-j5e_animation-Animation.html#enqueue",
+                    "tf": 4.166666666666666
                   }
                 }
               }
@@ -3383,36 +3034,13 @@
                     "undefined": {
                       "tf": 25
                     },
-                    "module-j5e_animation-Animation.html#tweenedValue": {
-                      "ref": "module-j5e_animation-Animation.html#tweenedValue",
+                    "module-j5e_animation-Animation.html#enqueue": {
+                      "ref": "module-j5e_animation-Animation.html#enqueue",
                       "tf": 4.166666666666666
                     },
                     "module-j5e_animation.html": {
                       "ref": "module-j5e_animation.html",
-                      "tf": 4.166666666666666
-                    }
-                  },
-                  "e": {
-                    "docs": {},
-                    "d": {
-                      "docs": {},
-                      "v": {
-                        "docs": {},
-                        "a": {
-                          "docs": {},
-                          "l": {
-                            "docs": {},
-                            "u": {
-                              "docs": {
-                                "module-j5e_animation-Animation.html#tweenedValue": {
-                                  "ref": "module-j5e_animation-Animation.html#tweenedValue",
-                                  "tf": 750
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
+                      "tf": 3.571428571428571
                     }
                   }
                 }
@@ -3518,19 +3146,19 @@
                     },
                     "module-j5e_animation-Animation.html": {
                       "ref": "module-j5e_animation-Animation.html",
-                      "tf": 10
+                      "tf": 8.333333333333332
                     },
                     "module-j5e_switch-Switch.html": {
                       "ref": "module-j5e_switch-Switch.html",
                       "tf": 8.333333333333332
                     },
-                    "module-j5e_servo-Servo.html": {
-                      "ref": "module-j5e_servo-Servo.html",
-                      "tf": 8.333333333333332
-                    },
                     "module-j5e_led-LED.html": {
                       "ref": "module-j5e_led-LED.html",
                       "tf": 7.142857142857142
+                    },
+                    "module-j5e_servo-Servo.html": {
+                      "ref": "module-j5e_servo-Servo.html",
+                      "tf": 8.333333333333332
                     },
                     "module-j5e_rgb-RGB.html": {
                       "ref": "module-j5e_rgb-RGB.html",
@@ -3556,7 +3184,11 @@
                   },
                   "module-j5e_animation-Animation.html#enqueue": {
                     "ref": "module-j5e_animation-Animation.html#enqueue",
-                    "tf": 20
+                    "tf": 8.333333333333332
+                  },
+                  "module-j5e_animation-Animation.html#play": {
+                    "ref": "module-j5e_animation-Animation.html#play",
+                    "tf": 10
                   },
                   "module-j5e_animation-Animation.html#pause": {
                     "ref": "module-j5e_animation-Animation.html#pause",
@@ -3565,10 +3197,6 @@
                   "module-j5e_animation-Animation.html#stop": {
                     "ref": "module-j5e_animation-Animation.html#stop",
                     "tf": 10
-                  },
-                  "module-j5e_animation-Animation.html#loopFunction": {
-                    "ref": "module-j5e_animation-Animation.html#loopFunction",
-                    "tf": 7.142857142857142
                   },
                   "module-j5e_led-LED.html#animate": {
                     "ref": "module-j5e_led-LED.html#animate",
@@ -3588,15 +3216,11 @@
                   },
                   "module-j5e_animation.html": {
                     "ref": "module-j5e_animation.html",
-                    "tf": 4.166666666666666
-                  }
-                },
-                "i": {
-                  "docs": {
-                    "module-j5e_easing.html": {
-                      "ref": "module-j5e_easing.html",
-                      "tf": 8.333333333333332
-                    }
+                    "tf": 3.571428571428571
+                  },
+                  "module-j5e_easing.html": {
+                    "ref": "module-j5e_easing.html",
+                    "tf": 12.5
                   }
                 }
               }
@@ -3625,7 +3249,7 @@
               "docs": {
                 "module-j5e_animation-Animation.html#enqueue": {
                   "ref": "module-j5e_animation-Animation.html#enqueue",
-                  "tf": 10
+                  "tf": 4.166666666666666
                 }
               }
             }
@@ -3726,41 +3350,6 @@
                   "module-j5e_event.Emitter.html": {
                     "ref": "module-j5e_event.Emitter.html",
                     "tf": 6.25
-                  },
-                  "module-j5e_animation-Animation.html#calculateProgress": {
-                    "ref": "module-j5e_animation-Animation.html#calculateProgress",
-                    "tf": 6.25
-                  },
-                  "module-j5e_animation-Animation.html#tweenedValue": {
-                    "ref": "module-j5e_animation-Animation.html#tweenedValue",
-                    "tf": 4.166666666666666
-                  }
-                }
-              }
-            }
-          },
-          "e": {
-            "docs": {},
-            "t": {
-              "docs": {},
-              "w": {
-                "docs": {},
-                "e": {
-                  "docs": {},
-                  "e": {
-                    "docs": {},
-                    "n": {
-                      "docs": {
-                        "module-j5e_servo-Servo.html#sweep": {
-                          "ref": "module-j5e_servo-Servo.html#sweep",
-                          "tf": 6.25
-                        },
-                        "module-j5e_animation.html": {
-                          "ref": "module-j5e_animation.html",
-                          "tf": 4.166666666666666
-                        }
-                      }
-                    }
                   }
                 }
               }
@@ -3837,6 +3426,33 @@
                 }
               }
             }
+          },
+          "e": {
+            "docs": {},
+            "t": {
+              "docs": {},
+              "w": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "n": {
+                      "docs": {
+                        "module-j5e_servo-Servo.html#sweep": {
+                          "ref": "module-j5e_servo-Servo.html#sweep",
+                          "tf": 6.25
+                        },
+                        "module-j5e_animation.html": {
+                          "ref": "module-j5e_animation.html",
+                          "tf": 3.571428571428571
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "m": {
@@ -3849,10 +3465,6 @@
                 "docs": {
                   "undefined": {
                     "tf": 50
-                  },
-                  "module-j5e_animation-Animation.html#normalizeKeyframes": {
-                    "ref": "module-j5e_animation-Animation.html#normalizeKeyframes",
-                    "tf": 6.25
                   }
                 }
               }
@@ -3908,20 +3520,6 @@
                   }
                 }
               }
-            },
-            "n": {
-              "docs": {},
-              "a": {
-                "docs": {},
-                "g": {
-                  "docs": {
-                    "module-j5e_animation-Timer.html": {
-                      "ref": "module-j5e_animation-Timer.html",
-                      "tf": 16.666666666666664
-                    }
-                  }
-                }
-              }
             }
           },
           "o": {
@@ -3938,15 +3536,11 @@
                     },
                     "module-j5e_animation.html": {
                       "ref": "module-j5e_animation.html",
-                      "tf": 114.16666666666667
+                      "tf": 113.57142857142857
                     },
                     "module-j5e_easing.html": {
                       "ref": "module-j5e_easing.html",
-                      "tf": 118.33333333333333
-                    },
-                    "module-j5e_event.html": {
-                      "ref": "module-j5e_event.html",
-                      "tf": 118.33333333333333
+                      "tf": 110
                     },
                     "module-j5e_fn.html": {
                       "ref": "module-j5e_fn.html",
@@ -3966,7 +3560,7 @@
                     },
                     "module-j5e_switch.html": {
                       "ref": "module-j5e_switch.html",
-                      "tf": 122.5
+                      "tf": 110
                     }
                   },
                   "e": {
@@ -3983,12 +3577,7 @@
                               "e": {
                                 "docs": {},
                                 "v": {
-                                  "docs": {
-                                    "module-j5e_event.html": {
-                                      "ref": "module-j5e_event.html",
-                                      "tf": 1300
-                                    }
-                                  },
+                                  "docs": {},
                                   "e": {
                                     "docs": {},
                                     "n": {
@@ -4193,89 +3782,8 @@
                                                                           }
                                                                         }
                                                                       },
-                                                                      "n": {
-                                                                        "docs": {},
-                                                                        "e": {
-                                                                          "docs": {},
-                                                                          "x": {
-                                                                            "docs": {},
-                                                                            "t": {
-                                                                              "docs": {
-                                                                                "module-j5e_animation-Animation.html#next": {
-                                                                                  "ref": "module-j5e_animation-Animation.html#next",
-                                                                                  "tf": 1150
-                                                                                }
-                                                                              }
-                                                                            }
-                                                                          }
-                                                                        },
-                                                                        "o": {
-                                                                          "docs": {},
-                                                                          "r": {
-                                                                            "docs": {},
-                                                                            "m": {
-                                                                              "docs": {},
-                                                                              "a": {
-                                                                                "docs": {},
-                                                                                "l": {
-                                                                                  "docs": {},
-                                                                                  "i": {
-                                                                                    "docs": {},
-                                                                                    "z": {
-                                                                                      "docs": {},
-                                                                                      "e": {
-                                                                                        "docs": {},
-                                                                                        "k": {
-                                                                                          "docs": {},
-                                                                                          "e": {
-                                                                                            "docs": {},
-                                                                                            "y": {
-                                                                                              "docs": {},
-                                                                                              "f": {
-                                                                                                "docs": {},
-                                                                                                "r": {
-                                                                                                  "docs": {},
-                                                                                                  "a": {
-                                                                                                    "docs": {},
-                                                                                                    "m": {
-                                                                                                      "docs": {
-                                                                                                        "module-j5e_animation-Animation.html#normalizeKeyframes": {
-                                                                                                          "ref": "module-j5e_animation-Animation.html#normalizeKeyframes",
-                                                                                                          "tf": 1150
-                                                                                                        }
-                                                                                                      }
-                                                                                                    }
-                                                                                                  }
-                                                                                                }
-                                                                                              }
-                                                                                            }
-                                                                                          }
-                                                                                        }
-                                                                                      }
-                                                                                    }
-                                                                                  }
-                                                                                }
-                                                                              }
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      },
                                                                       "p": {
                                                                         "docs": {},
-                                                                        "a": {
-                                                                          "docs": {},
-                                                                          "u": {
-                                                                            "docs": {},
-                                                                            "s": {
-                                                                              "docs": {
-                                                                                "module-j5e_animation-Animation.html#pause": {
-                                                                                  "ref": "module-j5e_animation-Animation.html#pause",
-                                                                                  "tf": 1150
-                                                                                }
-                                                                              }
-                                                                            }
-                                                                          }
-                                                                        },
                                                                         "l": {
                                                                           "docs": {},
                                                                           "a": {
@@ -4284,6 +3792,20 @@
                                                                               "docs": {
                                                                                 "module-j5e_animation-Animation.html#play": {
                                                                                   "ref": "module-j5e_animation-Animation.html#play",
+                                                                                  "tf": 1150
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        },
+                                                                        "a": {
+                                                                          "docs": {},
+                                                                          "u": {
+                                                                            "docs": {},
+                                                                            "s": {
+                                                                              "docs": {
+                                                                                "module-j5e_animation-Animation.html#pause": {
+                                                                                  "ref": "module-j5e_animation-Animation.html#pause",
                                                                                   "tf": 1150
                                                                                 }
                                                                               }
@@ -4318,198 +3840,12 @@
                                                                             }
                                                                           }
                                                                         }
-                                                                      },
-                                                                      "l": {
-                                                                        "docs": {},
-                                                                        "o": {
-                                                                          "docs": {},
-                                                                          "o": {
-                                                                            "docs": {},
-                                                                            "p": {
-                                                                              "docs": {},
-                                                                              "f": {
-                                                                                "docs": {},
-                                                                                "u": {
-                                                                                  "docs": {},
-                                                                                  "n": {
-                                                                                    "docs": {},
-                                                                                    "c": {
-                                                                                      "docs": {},
-                                                                                      "t": {
-                                                                                        "docs": {
-                                                                                          "module-j5e_animation-Animation.html#loopFunction": {
-                                                                                            "ref": "module-j5e_animation-Animation.html#loopFunction",
-                                                                                            "tf": 1150
-                                                                                          }
-                                                                                        }
-                                                                                      }
-                                                                                    }
-                                                                                  }
-                                                                                }
-                                                                              }
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      },
-                                                                      "f": {
-                                                                        "docs": {},
-                                                                        "i": {
-                                                                          "docs": {},
-                                                                          "n": {
-                                                                            "docs": {},
-                                                                            "d": {
-                                                                              "docs": {},
-                                                                              "i": {
-                                                                                "docs": {},
-                                                                                "n": {
-                                                                                  "docs": {},
-                                                                                  "d": {
-                                                                                    "docs": {},
-                                                                                    "i": {
-                                                                                      "docs": {},
-                                                                                      "c": {
-                                                                                        "docs": {
-                                                                                          "module-j5e_animation-Animation.html#findIndices": {
-                                                                                            "ref": "module-j5e_animation-Animation.html#findIndices",
-                                                                                            "tf": 1150
-                                                                                          }
-                                                                                        }
-                                                                                      }
-                                                                                    }
-                                                                                  }
-                                                                                }
-                                                                              }
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      },
-                                                                      "c": {
-                                                                        "docs": {},
-                                                                        "a": {
-                                                                          "docs": {},
-                                                                          "l": {
-                                                                            "docs": {},
-                                                                            "c": {
-                                                                              "docs": {},
-                                                                              "u": {
-                                                                                "docs": {},
-                                                                                "l": {
-                                                                                  "docs": {},
-                                                                                  "a": {
-                                                                                    "docs": {},
-                                                                                    "t": {
-                                                                                      "docs": {},
-                                                                                      "e": {
-                                                                                        "docs": {},
-                                                                                        "p": {
-                                                                                          "docs": {},
-                                                                                          "r": {
-                                                                                            "docs": {},
-                                                                                            "o": {
-                                                                                              "docs": {},
-                                                                                              "g": {
-                                                                                                "docs": {},
-                                                                                                "r": {
-                                                                                                  "docs": {},
-                                                                                                  "e": {
-                                                                                                    "docs": {},
-                                                                                                    "s": {
-                                                                                                      "docs": {},
-                                                                                                      "s": {
-                                                                                                        "docs": {
-                                                                                                          "module-j5e_animation-Animation.html#calculateProgress": {
-                                                                                                            "ref": "module-j5e_animation-Animation.html#calculateProgress",
-                                                                                                            "tf": 1150
-                                                                                                          }
-                                                                                                        }
-                                                                                                      }
-                                                                                                    }
-                                                                                                  }
-                                                                                                }
-                                                                                              }
-                                                                                            }
-                                                                                          }
-                                                                                        }
-                                                                                      }
-                                                                                    }
-                                                                                  }
-                                                                                }
-                                                                              }
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      },
-                                                                      "t": {
-                                                                        "docs": {},
-                                                                        "w": {
-                                                                          "docs": {},
-                                                                          "e": {
-                                                                            "docs": {},
-                                                                            "e": {
-                                                                              "docs": {},
-                                                                              "n": {
-                                                                                "docs": {},
-                                                                                "e": {
-                                                                                  "docs": {},
-                                                                                  "d": {
-                                                                                    "docs": {},
-                                                                                    "v": {
-                                                                                      "docs": {},
-                                                                                      "a": {
-                                                                                        "docs": {},
-                                                                                        "l": {
-                                                                                          "docs": {},
-                                                                                          "u": {
-                                                                                            "docs": {
-                                                                                              "module-j5e_animation-Animation.html#tweenedValue": {
-                                                                                                "ref": "module-j5e_animation-Animation.html#tweenedValue",
-                                                                                                "tf": 1150
-                                                                                              }
-                                                                                            }
-                                                                                          }
-                                                                                        }
-                                                                                      }
-                                                                                    }
-                                                                                  }
-                                                                                }
-                                                                              }
-                                                                            }
-                                                                          }
-                                                                        }
                                                                       }
                                                                     }
                                                                   }
                                                                 }
                                                               }
                                                             }
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  },
-                                                  "t": {
-                                                    "docs": {},
-                                                    "i": {
-                                                      "docs": {},
-                                                      "m": {
-                                                        "docs": {
-                                                          "module-j5e_animation-Timer.html": {
-                                                            "ref": "module-j5e_animation-Timer.html",
-                                                            "tf": 1300
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  },
-                                                  "s": {
-                                                    "docs": {},
-                                                    "e": {
-                                                      "docs": {},
-                                                      "g": {
-                                                        "docs": {
-                                                          "module-j5e_animation-Segment.html": {
-                                                            "ref": "module-j5e_animation-Segment.html",
-                                                            "tf": 1300
                                                           }
                                                         }
                                                       }
@@ -4605,40 +3941,6 @@
                                                     },
                                                     "#": {
                                                       "docs": {},
-                                                      "i": {
-                                                        "docs": {},
-                                                        "n": {
-                                                          "docs": {},
-                                                          "i": {
-                                                            "docs": {},
-                                                            "t": {
-                                                              "docs": {},
-                                                              "i": {
-                                                                "docs": {
-                                                                  "module-j5e_servo-Servo.html#initialize": {
-                                                                    "ref": "module-j5e_servo-Servo.html#initialize",
-                                                                    "tf": 1150
-                                                                  }
-                                                                }
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                      },
-                                                      "u": {
-                                                        "docs": {},
-                                                        "p": {
-                                                          "docs": {},
-                                                          "d": {
-                                                            "docs": {
-                                                              "module-j5e_servo-Servo.html#update": {
-                                                                "ref": "module-j5e_servo-Servo.html#update",
-                                                                "tf": 1150
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                      },
                                                       "t": {
                                                         "docs": {},
                                                         "o": {
@@ -4646,40 +3948,6 @@
                                                             "module-j5e_servo-Servo.html#to": {
                                                               "ref": "module-j5e_servo-Servo.html#to",
                                                               "tf": 1300
-                                                            }
-                                                          }
-                                                        }
-                                                      },
-                                                      "n": {
-                                                        "docs": {},
-                                                        "o": {
-                                                          "docs": {},
-                                                          "r": {
-                                                            "docs": {},
-                                                            "m": {
-                                                              "docs": {
-                                                                "module-j5e_servo-Servo.html#normalize": {
-                                                                  "ref": "module-j5e_servo-Servo.html#normalize",
-                                                                  "tf": 1150
-                                                                }
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                      },
-                                                      "r": {
-                                                        "docs": {},
-                                                        "e": {
-                                                          "docs": {},
-                                                          "n": {
-                                                            "docs": {},
-                                                            "d": {
-                                                              "docs": {
-                                                                "module-j5e_servo-Servo.html#render": {
-                                                                  "ref": "module-j5e_servo-Servo.html#render",
-                                                                  "tf": 1150
-                                                                }
-                                                              }
                                                             }
                                                           }
                                                         }
@@ -5251,6 +4519,23 @@
                                       "ref": "module-j5e_fn.html",
                                       "tf": 1300
                                     }
+                                  },
+                                  "~": {
+                                    "docs": {},
+                                    "t": {
+                                      "docs": {},
+                                      "i": {
+                                        "docs": {},
+                                        "m": {
+                                          "docs": {
+                                            "module-j5e_fn-timer.html": {
+                                              "ref": "module-j5e_fn-timer.html",
+                                              "tf": 1300
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
                                   }
                                 }
                               }
@@ -5264,21 +4549,32 @@
                 }
               }
             },
+            "r": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "module-j5e_animation-Animation.html#enqueue": {
+                    "ref": "module-j5e_animation-Animation.html#enqueue",
+                    "tf": 4.166666666666666
+                  }
+                }
+              }
+            },
             "v": {
               "docs": {},
               "e": {
                 "docs": {
                   "module-j5e_servo-Servo.html#stop": {
                     "ref": "module-j5e_servo-Servo.html#stop",
-                    "tf": 12.5
+                    "tf": 10
                   },
                   "module-j5e_servo-Servo.html#cw": {
                     "ref": "module-j5e_servo-Servo.html#cw",
-                    "tf": 8.333333333333332
+                    "tf": 10
                   },
                   "module-j5e_servo-Servo.html#ccw": {
                     "ref": "module-j5e_servo-Servo.html#ccw",
-                    "tf": 7.142857142857142
+                    "tf": 8.333333333333332
                   }
                 }
               }
@@ -5295,18 +4591,6 @@
                     "module-j5e_event.Emitter.html": {
                       "ref": "module-j5e_event.Emitter.html",
                       "tf": 6.25
-                    },
-                    "module-j5e_animation-Animation.html#next": {
-                      "ref": "module-j5e_animation-Animation.html#next",
-                      "tf": 7.142857142857142
-                    },
-                    "module-j5e_animation-Animation.html#play": {
-                      "ref": "module-j5e_animation-Animation.html#play",
-                      "tf": 10
-                    },
-                    "module-j5e_animation-Animation.html#findIndices": {
-                      "ref": "module-j5e_animation-Animation.html#findIndices",
-                      "tf": 7.142857142857142
                     }
                   }
                 }
@@ -5323,6 +4607,10 @@
                       "module-j5e_fn.html": {
                         "ref": "module-j5e_fn.html",
                         "tf": 5
+                      },
+                      "module-j5e_fn-timer.html": {
+                        "ref": "module-j5e_fn-timer.html",
+                        "tf": 8.333333333333332
                       }
                     }
                   }
@@ -5360,20 +4648,6 @@
                   }
                 }
               }
-            },
-            "x": {
-              "docs": {},
-              "i": {
-                "docs": {},
-                "n": {
-                  "docs": {
-                    "module-j5e_event.html": {
-                      "ref": "module-j5e_event.html",
-                      "tf": 8.333333333333332
-                    }
-                  }
-                }
-              }
             }
           }
         },
@@ -5406,23 +4680,6 @@
               }
             }
           },
-          "r": {
-            "docs": {},
-            "i": {
-              "docs": {},
-              "t": {
-                "docs": {},
-                "e": {
-                  "docs": {
-                    "module-j5e_servo-Servo.html#update": {
-                      "ref": "module-j5e_servo-Servo.html#update",
-                      "tf": 8.333333333333332
-                    }
-                  }
-                }
-              }
-            }
-          },
           "o": {
             "docs": {},
             "r": {
@@ -5431,7 +4688,34 @@
                 "docs": {
                   "module-j5e_animation.html": {
                     "ref": "module-j5e_animation.html",
-                    "tf": 4.166666666666666
+                    "tf": 3.571428571428571
+                  },
+                  "module-j5e_switch.html": {
+                    "ref": "module-j5e_switch.html",
+                    "tf": 25
+                  }
+                }
+              }
+            }
+          },
+          "r": {
+            "docs": {},
+            "a": {
+              "docs": {},
+              "p": {
+                "docs": {},
+                "p": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "r": {
+                      "docs": {
+                        "module-j5e_fn-timer.html": {
+                          "ref": "module-j5e_fn-timer.html",
+                          "tf": 4.166666666666666
+                        }
+                      }
+                    }
                   }
                 }
               }
@@ -5459,20 +4743,6 @@
                       }
                     }
                   }
-                },
-                "o": {
-                  "docs": {},
-                  "r": {
-                    "docs": {},
-                    "m": {
-                      "docs": {
-                        "module-j5e_animation-Animation.html#normalizeKeyframes": {
-                          "ref": "module-j5e_animation-Animation.html#normalizeKeyframes",
-                          "tf": 6.25
-                        }
-                      }
-                    }
-                  }
                 }
               },
               "t": {
@@ -5483,17 +4753,21 @@
                     "docs": {},
                     "l": {
                       "docs": {
-                        "module-j5e_switch-Switch.html": {
-                          "ref": "module-j5e_switch-Switch.html",
+                        "module-j5e_animation-Animation.html": {
+                          "ref": "module-j5e_animation-Animation.html",
                           "tf": 8.333333333333332
                         },
-                        "module-j5e_servo-Servo.html": {
-                          "ref": "module-j5e_servo-Servo.html",
+                        "module-j5e_switch-Switch.html": {
+                          "ref": "module-j5e_switch-Switch.html",
                           "tf": 8.333333333333332
                         },
                         "module-j5e_led-LED.html": {
                           "ref": "module-j5e_led-LED.html",
                           "tf": 7.142857142857142
+                        },
+                        "module-j5e_servo-Servo.html": {
+                          "ref": "module-j5e_servo-Servo.html",
+                          "tf": 8.333333333333332
                         },
                         "module-j5e_rgb-RGB.html": {
                           "ref": "module-j5e_rgb-RGB.html",
@@ -5510,10 +4784,6 @@
                         "module-j5e_servo.html": {
                           "ref": "module-j5e_servo.html",
                           "tf": 10
-                        },
-                        "module-j5e_switch.html": {
-                          "ref": "module-j5e_switch.html",
-                          "tf": 12.5
                         }
                       }
                     }
@@ -5527,11 +4797,11 @@
                       "docs": {
                         "module-j5e_servo-Servo.html#cw": {
                           "ref": "module-j5e_servo-Servo.html#cw",
-                          "tf": 8.333333333333332
+                          "tf": 10
                         },
                         "module-j5e_servo-Servo.html#ccw": {
                           "ref": "module-j5e_servo-Servo.html#ccw",
-                          "tf": 7.142857142857142
+                          "tf": 8.333333333333332
                         }
                       }
                     }
@@ -5555,28 +4825,6 @@
                       }
                     }
                   }
-                },
-                "u": {
-                  "docs": {},
-                  "t": {
-                    "docs": {
-                      "module-j5e_animation-Animation.html#calculateProgress": {
-                        "ref": "module-j5e_animation-Animation.html#calculateProgress",
-                        "tf": 6.25
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "d": {
-              "docs": {},
-              "e": {
-                "docs": {
-                  "module-j5e_servo-Servo.html#initialize": {
-                    "ref": "module-j5e_servo-Servo.html#initialize",
-                    "tf": 16.666666666666664
-                  }
                 }
               }
             },
@@ -5592,7 +4840,7 @@
                       "docs": {
                         "module-j5e_servo-Servo.html#ccw": {
                           "ref": "module-j5e_servo-Servo.html#ccw",
-                          "tf": 7.142857142857142
+                          "tf": 8.333333333333332
                         }
                       }
                     }
@@ -5639,25 +4887,21 @@
                       "ref": "module-j5e_switch-Switch.html",
                       "tf": 118.33333333333333
                     },
-                    "module-j5e_servo-Servo.html": {
-                      "ref": "module-j5e_servo-Servo.html",
-                      "tf": 118.33333333333333
-                    },
                     "module-j5e_led-LED.html": {
                       "ref": "module-j5e_led-LED.html",
                       "tf": 117.14285714285714
+                    },
+                    "module-j5e_servo-Servo.html": {
+                      "ref": "module-j5e_servo-Servo.html",
+                      "tf": 118.33333333333333
                     },
                     "module-j5e_rgb-RGB.html": {
                       "ref": "module-j5e_rgb-RGB.html",
                       "tf": 118.33333333333333
                     },
-                    "module-j5e_animation-Timer.html": {
-                      "ref": "module-j5e_animation-Timer.html",
-                      "tf": 126.66666666666666
-                    },
-                    "module-j5e_animation-Segment.html": {
-                      "ref": "module-j5e_animation-Segment.html",
-                      "tf": 110
+                    "module-j5e_animation.html": {
+                      "ref": "module-j5e_animation.html",
+                      "tf": 3.571428571428571
                     }
                   }
                 }
@@ -5677,11 +4921,43 @@
                         "docs": {
                           "module-j5e_servo-Servo.html#cw": {
                             "ref": "module-j5e_servo-Servo.html#cw",
-                            "tf": 8.333333333333332
+                            "tf": 10
                           },
                           "module-j5e_servo-Servo.html#ccw": {
                             "ref": "module-j5e_servo-Servo.html#ccw",
-                            "tf": 7.142857142857142
+                            "tf": 8.333333333333332
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "e": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "i": {
+                    "docs": {},
+                    "n": {
+                      "docs": {},
+                      "t": {
+                        "docs": {},
+                        "e": {
+                          "docs": {},
+                          "r": {
+                            "docs": {},
+                            "v": {
+                              "docs": {
+                                "module-j5e_fn-timer.html": {
+                                  "ref": "module-j5e_fn-timer.html",
+                                  "tf": 4.166666666666666
+                                }
+                              }
+                            }
                           }
                         }
                       }
@@ -5712,17 +4988,35 @@
               }
             }
           },
-          "h": {
+          "u": {
             "docs": {},
-            "a": {
+            "r": {
               "docs": {},
-              "n": {
+              "r": {
                 "docs": {},
-                "g": {
-                  "docs": {
-                    "module-j5e_animation-Animation.html": {
-                      "ref": "module-j5e_animation-Animation.html",
-                      "tf": 10
+                "e": {
+                  "docs": {},
+                  "n": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "module-j5e_animation-Animation.html#speed": {
+                          "ref": "module-j5e_animation-Animation.html#speed",
+                          "tf": 12.5
+                        },
+                        "module-j5e_led-LED.html#fade": {
+                          "ref": "module-j5e_led-LED.html#fade",
+                          "tf": 5
+                        },
+                        "module-j5e_rgb-RGB.html#on": {
+                          "ref": "module-j5e_rgb-RGB.html#on",
+                          "tf": 7.142857142857142
+                        },
+                        "module-j5e_rgb-RGB.html#fade": {
+                          "ref": "module-j5e_rgb-RGB.html#fade",
+                          "tf": 6.25
+                        }
+                      }
                     }
                   }
                 }
@@ -5735,38 +5029,6 @@
               "docs": {},
               "l": {
                 "docs": {
-                  "module-j5e_animation-Animation.html#next": {
-                    "ref": "module-j5e_animation-Animation.html#next",
-                    "tf": 7.142857142857142
-                  },
-                  "module-j5e_animation-Animation.html#loopFunction": {
-                    "ref": "module-j5e_animation-Animation.html#loopFunction",
-                    "tf": 14.285714285714285
-                  },
-                  "module-j5e_animation-Animation.html#play": {
-                    "ref": "module-j5e_animation-Animation.html#play",
-                    "tf": 10
-                  },
-                  "module-j5e_animation-Animation.html#findIndices": {
-                    "ref": "module-j5e_animation-Animation.html#findIndices",
-                    "tf": 7.142857142857142
-                  },
-                  "module-j5e_animation-Animation.html#calculateProgress": {
-                    "ref": "module-j5e_animation-Animation.html#calculateProgress",
-                    "tf": 6.25
-                  },
-                  "module-j5e_animation-Animation.html#tweenedValue": {
-                    "ref": "module-j5e_animation-Animation.html#tweenedValue",
-                    "tf": 4.166666666666666
-                  },
-                  "module-j5e_animation-Animation.html#normalizeKeyframes": {
-                    "ref": "module-j5e_animation-Animation.html#normalizeKeyframes",
-                    "tf": 6.25
-                  },
-                  "module-j5e_servo-Servo.html#update": {
-                    "ref": "module-j5e_servo-Servo.html#update",
-                    "tf": 8.333333333333332
-                  },
                   "module-j5e_fn.html": {
                     "ref": "module-j5e_fn.html",
                     "tf": 5
@@ -5821,115 +5083,6 @@
                     }
                   }
                 }
-              },
-              "c": {
-                "docs": {},
-                "u": {
-                  "docs": {},
-                  "l": {
-                    "docs": {},
-                    "a": {
-                      "docs": {},
-                      "t": {
-                        "docs": {},
-                        "e": {
-                          "docs": {},
-                          "p": {
-                            "docs": {},
-                            "r": {
-                              "docs": {},
-                              "o": {
-                                "docs": {},
-                                "g": {
-                                  "docs": {},
-                                  "r": {
-                                    "docs": {},
-                                    "e": {
-                                      "docs": {},
-                                      "s": {
-                                        "docs": {},
-                                        "s": {
-                                          "docs": {
-                                            "module-j5e_animation-Animation.html#calculateProgress": {
-                                              "ref": "module-j5e_animation-Animation.html#calculateProgress",
-                                              "tf": 750
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "u": {
-            "docs": {},
-            "r": {
-              "docs": {},
-              "r": {
-                "docs": {},
-                "e": {
-                  "docs": {},
-                  "n": {
-                    "docs": {},
-                    "t": {
-                      "docs": {
-                        "module-j5e_animation-Animation.html#speed": {
-                          "ref": "module-j5e_animation-Animation.html#speed",
-                          "tf": 10
-                        },
-                        "module-j5e_animation-Animation.html#tweenedValue": {
-                          "ref": "module-j5e_animation-Animation.html#tweenedValue",
-                          "tf": 4.166666666666666
-                        },
-                        "module-j5e_led-LED.html#fade": {
-                          "ref": "module-j5e_led-LED.html#fade",
-                          "tf": 5
-                        },
-                        "module-j5e_rgb-RGB.html#on": {
-                          "ref": "module-j5e_rgb-RGB.html#on",
-                          "tf": 7.142857142857142
-                        },
-                        "module-j5e_rgb-RGB.html#fade": {
-                          "ref": "module-j5e_rgb-RGB.html#fade",
-                          "tf": 6.25
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "e": {
-              "docs": {},
-              "p": {
-                "docs": {},
-                "o": {
-                  "docs": {},
-                  "i": {
-                    "docs": {},
-                    "n": {
-                      "docs": {},
-                      "t": {
-                        "docs": {
-                          "module-j5e_animation-Animation.html#findIndices": {
-                            "ref": "module-j5e_animation-Animation.html#findIndices",
-                            "tf": 7.142857142857142
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
               }
             }
           },
@@ -5977,7 +5130,7 @@
             "docs": {
               "module-j5e_servo-Servo.html#cw": {
                 "ref": "module-j5e_servo-Servo.html#cw",
-                "tf": 708.3333333333334
+                "tf": 683.3333333333334
               }
             }
           },
@@ -5987,18 +5140,7 @@
               "docs": {
                 "module-j5e_servo-Servo.html#ccw": {
                   "ref": "module-j5e_servo-Servo.html#ccw",
-                  "tf": 700
-                }
-              }
-            }
-          },
-          "s": {
-            "docs": {},
-            "w": {
-              "docs": {
-                "module-j5e_servo-Servo.html#ccw": {
-                  "ref": "module-j5e_servo-Servo.html#ccw",
-                  "tf": 7.142857142857142
+                  "tf": 683.3333333333334
                 }
               }
             }
@@ -6029,6 +5171,10 @@
                     "ref": "list_module.html",
                     "tf": 110
                   },
+                  "list_namespace.html": {
+                    "ref": "list_namespace.html",
+                    "tf": 110
+                  },
                   "list_tutorial.html": {
                     "ref": "list_tutorial.html",
                     "tf": 110
@@ -6049,6 +5195,35 @@
                               "list_module.html": {
                                 "ref": "list_module.html",
                                 "tf": 1300
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "n": {
+                    "docs": {},
+                    "a": {
+                      "docs": {},
+                      "m": {
+                        "docs": {},
+                        "e": {
+                          "docs": {},
+                          "s": {
+                            "docs": {},
+                            "p": {
+                              "docs": {},
+                              "a": {
+                                "docs": {},
+                                "c": {
+                                  "docs": {
+                                    "list_namespace.html": {
+                                      "ref": "list_namespace.html",
+                                      "tf": 1300
+                                    }
+                                  }
+                                }
                               }
                             }
                           }
@@ -6122,7 +5297,7 @@
               "docs": {
                 "module-j5e_animation-Animation.html": {
                   "ref": "module-j5e_animation-Animation.html",
-                  "tf": 10
+                  "tf": 8.333333333333332
                 },
                 "module-j5e_led-LED.html": {
                   "ref": "module-j5e_led-LED.html",
@@ -6214,7 +5389,7 @@
                 },
                 "module-j5e_animation.html": {
                   "ref": "module-j5e_animation.html",
-                  "tf": 4.166666666666666
+                  "tf": 3.571428571428571
                 },
                 "module-j5e_led.html": {
                   "ref": "module-j5e_led.html",
@@ -6234,55 +5409,6 @@
                   "module-j5e_rgb.html": {
                     "ref": "module-j5e_rgb.html",
                     "tf": 10
-                  }
-                }
-              }
-            },
-            "f": {
-              "docs": {},
-              "t": {
-                "docs": {
-                  "module-j5e_animation-Animation.html#findIndices": {
-                    "ref": "module-j5e_animation-Animation.html#findIndices",
-                    "tf": 7.142857142857142
-                  },
-                  "module-j5e_animation-Animation.html#tweenedValue": {
-                    "ref": "module-j5e_animation-Animation.html#tweenedValue",
-                    "tf": 4.166666666666666
-                  }
-                }
-              }
-            }
-          },
-          "o": {
-            "docs": {},
-            "o": {
-              "docs": {},
-              "p": {
-                "docs": {
-                  "module-j5e_led-LED.html#pulse": {
-                    "ref": "module-j5e_led-LED.html#pulse",
-                    "tf": 4.166666666666666
-                  }
-                },
-                "f": {
-                  "docs": {},
-                  "u": {
-                    "docs": {},
-                    "n": {
-                      "docs": {},
-                      "c": {
-                        "docs": {},
-                        "t": {
-                          "docs": {
-                            "module-j5e_animation-Animation.html#loopFunction": {
-                              "ref": "module-j5e_animation-Animation.html#loopFunction",
-                              "tf": 750
-                            }
-                          }
-                        }
-                      }
-                    }
                   }
                 }
               }
@@ -6312,12 +5438,12 @@
                                   "ref": "module-j5e_switch-Switch.html",
                                   "tf": 50
                                 },
-                                "module-j5e_servo-Servo.html": {
-                                  "ref": "module-j5e_servo-Servo.html",
-                                  "tf": 50
-                                },
                                 "module-j5e_led-LED.html": {
                                   "ref": "module-j5e_led-LED.html",
+                                  "tf": 50
+                                },
+                                "module-j5e_servo-Servo.html": {
+                                  "ref": "module-j5e_servo-Servo.html",
                                   "tf": 50
                                 },
                                 "module-j5e_rgb-RGB.html": {
@@ -6334,6 +5460,20 @@
                 }
               }
             }
+          },
+          "o": {
+            "docs": {},
+            "o": {
+              "docs": {},
+              "p": {
+                "docs": {
+                  "module-j5e_led-LED.html#pulse": {
+                    "ref": "module-j5e_led-LED.html#pulse",
+                    "tf": 4.166666666666666
+                  }
+                }
+              }
+            }
           }
         },
         "p": {
@@ -6345,16 +5485,7 @@
               "a": {
                 "docs": {},
                 "m": {
-                  "docs": {
-                    "module-j5e_servo-Servo.html#update": {
-                      "ref": "module-j5e_servo-Servo.html#update",
-                      "tf": 8.333333333333332
-                    },
-                    "module-j5e_animation-Segment.html": {
-                      "ref": "module-j5e_animation-Segment.html",
-                      "tf": 12.5
-                    }
-                  },
+                  "docs": {},
                   "e": {
                     "docs": {},
                     "t": {
@@ -6372,6 +5503,10 @@
               "docs": {},
               "s": {
                 "docs": {
+                  "module-j5e_animation-Animation.html#play": {
+                    "ref": "module-j5e_animation-Animation.html#play",
+                    "tf": 10
+                  },
                   "module-j5e_animation-Animation.html#pause": {
                     "ref": "module-j5e_animation-Animation.html#pause",
                     "tf": 757.1428571428571
@@ -6414,15 +5549,15 @@
                   "docs": {
                     "module-j5e_servo-Servo.html#to": {
                       "ref": "module-j5e_servo-Servo.html#to",
-                      "tf": 6.25
+                      "tf": 7.142857142857142
                     },
                     "module-j5e_servo-Servo.html#step": {
                       "ref": "module-j5e_servo-Servo.html#step",
-                      "tf": 5.555555555555555
+                      "tf": 7.142857142857142
                     },
                     "module-j5e_servo-Servo.html#home": {
                       "ref": "module-j5e_servo-Servo.html#home",
-                      "tf": 10
+                      "tf": 12.5
                     }
                   }
                 }
@@ -6464,14 +5599,6 @@
                           "module-j5e_animation-Animation.html#pause": {
                             "ref": "module-j5e_animation-Animation.html#pause",
                             "tf": 7.142857142857142
-                          },
-                          "module-j5e_animation-Animation.html#calculateProgress": {
-                            "ref": "module-j5e_animation-Animation.html#calculateProgress",
-                            "tf": 6.25
-                          },
-                          "module-j5e_animation-Animation.html#tweenedValue": {
-                            "ref": "module-j5e_animation-Animation.html#tweenedValue",
-                            "tf": 4.166666666666666
                           }
                         }
                       }
@@ -6487,13 +5614,9 @@
               "docs": {},
               "y": {
                 "docs": {
-                  "module-j5e_animation-Animation.html#next": {
-                    "ref": "module-j5e_animation-Animation.html#next",
-                    "tf": 7.142857142857142
-                  },
                   "module-j5e_animation-Animation.html#play": {
                     "ref": "module-j5e_animation-Animation.html#play",
-                    "tf": 750
+                    "tf": 760
                   }
                 },
                 "b": {
@@ -6506,7 +5629,7 @@
                         "docs": {
                           "module-j5e_animation-Animation.html#speed": {
                             "ref": "module-j5e_animation-Animation.html#speed",
-                            "tf": 10
+                            "tf": 12.5
                           }
                         }
                       }
@@ -6587,25 +5710,11 @@
                   },
                   "module-j5e_servo-Servo.html#to": {
                     "ref": "module-j5e_servo-Servo.html#to",
-                    "tf": 6.25
+                    "tf": 7.142857142857142
                   },
                   "module-j5e_servo-Servo.html#step": {
                     "ref": "module-j5e_servo-Servo.html#step",
-                    "tf": 5.555555555555555
-                  }
-                },
-                "r": {
-                  "docs": {},
-                  "i": {
-                    "docs": {},
-                    "d": {
-                      "docs": {
-                        "module-j5e_animation-Segment.html": {
-                          "ref": "module-j5e_animation-Segment.html",
-                          "tf": 12.5
-                        }
-                      }
-                    }
+                    "tf": 7.142857142857142
                   }
                 }
               }
@@ -6651,7 +5760,12 @@
           "p": {
             "docs": {},
             "t": {
-              "docs": {},
+              "docs": {
+                "module-j5e_servo-Servo.html#sweep": {
+                  "ref": "module-j5e_servo-Servo.html#sweep",
+                  "tf": 33.33333333333333
+                }
+              },
               "i": {
                 "docs": {},
                 "o": {
@@ -6662,10 +5776,6 @@
                         "ref": "module-j5e_animation-Animation.html#enqueue",
                         "tf": 50
                       },
-                      "module-j5e_servo-Servo.html#sweep": {
-                        "ref": "module-j5e_servo-Servo.html#sweep",
-                        "tf": 33.33333333333333
-                      },
                       "module-j5e_led-LED.html#animate": {
                         "ref": "module-j5e_led-LED.html#animate",
                         "tf": 41.66666666666666
@@ -6673,46 +5783,6 @@
                       "module-j5e_rgb-RGB.html#animate": {
                         "ref": "module-j5e_rgb-RGB.html#animate",
                         "tf": 33.33333333333333
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "b": {
-            "docs": {},
-            "j": {
-              "docs": {},
-              "e": {
-                "docs": {},
-                "c": {
-                  "docs": {},
-                  "t": {
-                    "docs": {
-                      "module-j5e_servo-Servo.html#normalize": {
-                        "ref": "module-j5e_servo-Servo.html#normalize",
-                        "tf": 33.33333333333333
-                      },
-                      "module-j5e_servo-Servo.html#min": {
-                        "ref": "module-j5e_servo-Servo.html#min",
-                        "tf": 33.33333333333333
-                      },
-                      "module-j5e_servo-Servo.html#max": {
-                        "ref": "module-j5e_servo-Servo.html#max",
-                        "tf": 33.33333333333333
-                      },
-                      "module-j5e_servo-Servo.html#center": {
-                        "ref": "module-j5e_servo-Servo.html#center",
-                        "tf": 33.33333333333333
-                      },
-                      "module-j5e_led-LED.html#animate": {
-                        "ref": "module-j5e_led-LED.html#animate",
-                        "tf": 8.333333333333332
-                      },
-                      "module-j5e_rgb-RGB.html#color": {
-                        "ref": "module-j5e_rgb-RGB.html#color",
-                        "tf": 2.941176470588235
                       }
                     }
                   }
@@ -6734,6 +5804,132 @@
                 }
               }
             }
+          },
+          "b": {
+            "docs": {},
+            "j": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "c": {
+                  "docs": {},
+                  "t": {
+                    "docs": {
+                      "module-j5e_led-LED.html#animate": {
+                        "ref": "module-j5e_led-LED.html#animate",
+                        "tf": 8.333333333333332
+                      },
+                      "module-j5e_servo-Servo.html#max": {
+                        "ref": "module-j5e_servo-Servo.html#max",
+                        "tf": 33.33333333333333
+                      },
+                      "module-j5e_servo-Servo.html#center": {
+                        "ref": "module-j5e_servo-Servo.html#center",
+                        "tf": 33.33333333333333
+                      },
+                      "module-j5e_rgb-RGB.html#color": {
+                        "ref": "module-j5e_rgb-RGB.html#color",
+                        "tf": 2.941176470588235
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "n": {
+          "docs": {},
+          "a": {
+            "docs": {},
+            "m": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "s": {
+                  "docs": {},
+                  "p": {
+                    "docs": {},
+                    "a": {
+                      "docs": {},
+                      "c": {
+                        "docs": {
+                          "list_namespace.html": {
+                            "ref": "list_namespace.html",
+                            "tf": 635
+                          },
+                          "module-j5e_fn-timer.html": {
+                            "ref": "module-j5e_fn-timer.html",
+                            "tf": 110
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "e": {
+            "docs": {},
+            "w": {
+              "docs": {
+                "module-j5e_led-LED.html#fade": {
+                  "ref": "module-j5e_led-LED.html#fade",
+                  "tf": 5
+                },
+                "module-j5e_rgb-RGB.html#fade": {
+                  "ref": "module-j5e_rgb-RGB.html#fade",
+                  "tf": 6.25
+                }
+              }
+            },
+            "c": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "s": {
+                  "docs": {},
+                  "s": {
+                    "docs": {},
+                    "a": {
+                      "docs": {},
+                      "r": {
+                        "docs": {},
+                        "i": {
+                          "docs": {
+                            "module-j5e_fn-timer.html": {
+                              "ref": "module-j5e_fn-timer.html",
+                              "tf": 4.166666666666666
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "o": {
+            "docs": {},
+            "d": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                ".": {
+                  "docs": {},
+                  "j": {
+                    "docs": {
+                      "module-j5e_fn-timer.html": {
+                        "ref": "module-j5e_fn-timer.html",
+                        "tf": 4.166666666666666
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "u": {
@@ -6751,27 +5947,10 @@
               "module-j5e_fn.html": {
                 "ref": "module-j5e_fn.html",
                 "tf": 5
-              }
-            }
-          },
-          "p": {
-            "docs": {},
-            "d": {
-              "docs": {},
-              "a": {
-                "docs": {},
-                "t": {
-                  "docs": {
-                    "module-j5e_servo-Servo.html#update": {
-                      "ref": "module-j5e_servo-Servo.html#update",
-                      "tf": 683.3333333333334
-                    },
-                    "module-j5e_servo-Servo.html#step": {
-                      "ref": "module-j5e_servo-Servo.html#step",
-                      "tf": 5.555555555555555
-                    }
-                  }
-                }
+              },
+              "module-j5e_fn-timer.html": {
+                "ref": "module-j5e_fn-timer.html",
+                "tf": 4.166666666666666
               }
             }
           },
@@ -6786,6 +5965,23 @@
                     "module-j5e_led-LED.html#fadeOut": {
                       "ref": "module-j5e_led-LED.html#fadeOut",
                       "tf": 6.25
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "p": {
+            "docs": {},
+            "d": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "module-j5e_servo-Servo.html#step": {
+                      "ref": "module-j5e_servo-Servo.html#step",
+                      "tf": 7.142857142857142
                     }
                   }
                 }
@@ -6819,11 +6015,7 @@
                   "docs": {
                     "module-j5e_animation-Animation.html#enqueue": {
                       "ref": "module-j5e_animation-Animation.html#enqueue",
-                      "tf": 10
-                    },
-                    "module-j5e_animation-Animation.html#next": {
-                      "ref": "module-j5e_animation-Animation.html#next",
-                      "tf": 7.142857142857142
+                      "tf": 4.166666666666666
                     },
                     "module-j5e_animation-Animation.html#pause": {
                       "ref": "module-j5e_animation-Animation.html#pause",
@@ -6832,110 +6024,6 @@
                     "module-j5e_animation-Animation.html#stop": {
                       "ref": "module-j5e_animation-Animation.html#stop",
                       "tf": 10
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "n": {
-          "docs": {},
-          "e": {
-            "docs": {},
-            "x": {
-              "docs": {},
-              "t": {
-                "docs": {
-                  "module-j5e_animation-Animation.html#next": {
-                    "ref": "module-j5e_animation-Animation.html#next",
-                    "tf": 757.1428571428571
-                  }
-                }
-              }
-            },
-            "w": {
-              "docs": {
-                "module-j5e_led-LED.html#fade": {
-                  "ref": "module-j5e_led-LED.html#fade",
-                  "tf": 5
-                },
-                "module-j5e_rgb-RGB.html#fade": {
-                  "ref": "module-j5e_rgb-RGB.html#fade",
-                  "tf": 6.25
-                }
-              }
-            }
-          },
-          "o": {
-            "docs": {},
-            "r": {
-              "docs": {},
-              "m": {
-                "docs": {},
-                "a": {
-                  "docs": {},
-                  "l": {
-                    "docs": {
-                      "module-j5e_servo-Servo.html#normalize": {
-                        "ref": "module-j5e_servo-Servo.html#normalize",
-                        "tf": 683.3333333333334
-                      }
-                    },
-                    "i": {
-                      "docs": {},
-                      "z": {
-                        "docs": {},
-                        "e": {
-                          "docs": {},
-                          "k": {
-                            "docs": {},
-                            "e": {
-                              "docs": {},
-                              "y": {
-                                "docs": {},
-                                "f": {
-                                  "docs": {},
-                                  "r": {
-                                    "docs": {},
-                                    "a": {
-                                      "docs": {},
-                                      "m": {
-                                        "docs": {
-                                          "module-j5e_animation-Animation.html#normalizeKeyframes": {
-                                            "ref": "module-j5e_animation-Animation.html#normalizeKeyframes",
-                                            "tf": 750
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "u": {
-            "docs": {},
-            "m": {
-              "docs": {},
-              "b": {
-                "docs": {},
-                "e": {
-                  "docs": {},
-                  "r": {
-                    "docs": {
-                      "module-j5e_servo-Servo.html#normalize": {
-                        "ref": "module-j5e_servo-Servo.html#normalize",
-                        "tf": 33.33333333333333
-                      }
                     }
                   }
                 }
@@ -6960,10 +6048,6 @@
               },
               "u": {
                 "docs": {
-                  "module-j5e_animation-Animation.html#tweenedValue": {
-                    "ref": "module-j5e_animation-Animation.html#tweenedValue",
-                    "tf": 4.166666666666666
-                  },
                   "module-j5e_led-LED.html#brightness": {
                     "ref": "module-j5e_led-LED.html#brightness",
                     "tf": 33.33333333333333
@@ -6993,37 +6077,6 @@
             }
           }
         },
-        "k": {
-          "docs": {},
-          "e": {
-            "docs": {},
-            "y": {
-              "docs": {
-                "module-j5e_animation.html": {
-                  "ref": "module-j5e_animation.html",
-                  "tf": 4.166666666666666
-                }
-              },
-              "f": {
-                "docs": {},
-                "r": {
-                  "docs": {},
-                  "a": {
-                    "docs": {},
-                    "m": {
-                      "docs": {
-                        "module-j5e_animation-Animation.html#normalizeKeyframes": {
-                          "ref": "module-j5e_animation-Animation.html#normalizeKeyframes",
-                          "tf": 6.25
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
         "h": {
           "docs": {},
           "o": {
@@ -7046,42 +6099,13 @@
                 }
               }
             },
-            "r": {
-              "docs": {},
-              "n": {
-                "docs": {},
-                "'": {
-                  "docs": {
-                    "module-j5e_servo-Servo.html#to": {
-                      "ref": "module-j5e_servo-Servo.html#to",
-                      "tf": 6.25
-                    },
-                    "module-j5e_servo-Servo.html#step": {
-                      "ref": "module-j5e_servo-Servo.html#step",
-                      "tf": 5.555555555555555
-                    }
-                  }
-                }
-              }
-            },
             "m": {
               "docs": {},
               "e": {
                 "docs": {
                   "module-j5e_servo-Servo.html#home": {
                     "ref": "module-j5e_servo-Servo.html#home",
-                    "tf": 760
-                  }
-                }
-              }
-            },
-            "u": {
-              "docs": {},
-              "s": {
-                "docs": {
-                  "module-j5e_event.html": {
-                    "ref": "module-j5e_event.html",
-                    "tf": 8.333333333333332
+                    "tf": 700
                   }
                 }
               }
@@ -7126,16 +6150,41 @@
                   "docs": {
                     "module-j5e_animation.html": {
                       "ref": "module-j5e_animation.html",
-                      "tf": 4.166666666666666
+                      "tf": 3.571428571428571
                     }
                   }
                 }
               }
             }
           }
+        },
+        "k": {
+          "docs": {},
+          "e": {
+            "docs": {},
+            "y": {
+              "docs": {
+                "module-j5e_animation.html": {
+                  "ref": "module-j5e_animation.html",
+                  "tf": 3.571428571428571
+                }
+              }
+            }
+          }
+        },
+        "x": {
+          "docs": {},
+          "s": {
+            "docs": {
+              "module-j5e_fn-timer.html": {
+                "ref": "module-j5e_fn-timer.html",
+                "tf": 4.166666666666666
+              }
+            }
+          }
         }
       },
-      "length": 645
+      "length": 561
     },
     "corpusTokens": [
       "0",
@@ -7147,7 +6196,6 @@
       "add",
       "allow",
       "anim",
-      "animi",
       "argument",
       "array",
       "async",
@@ -7161,27 +6209,21 @@
       "blue",
       "bright",
       "c",
-      "calculateprogress",
       "call",
       "callback",
       "ccw",
       "center",
       "centerpoint",
-      "chang",
       "class",
+      "clearinterv",
       "clockwis",
-      "code",
       "color",
       "complex",
-      "comput",
-      "conform",
       "confus",
       "continu",
       "control",
       "counter",
       "creat",
-      "csw",
-      "cuepoint",
       "current",
       "cw",
       "d",
@@ -7204,12 +6246,9 @@
       "emitter#removelisten",
       "enqueu",
       "event",
-      "extern",
       "fade",
       "fadein",
       "fadeout",
-      "find",
-      "findindic",
       "fire",
       "five",
       "fix",
@@ -7229,15 +6268,10 @@
       "hexadecim",
       "hobbi",
       "home",
-      "horn'",
-      "hous",
       "index",
-      "indic",
-      "initi",
+      "inform",
       "inoutsin",
-      "instanc",
       "instanti",
-      "intend",
       "intens",
       "interv",
       "io",
@@ -7246,12 +6280,9 @@
       "j5e'",
       "j5e/anim",
       "j5e/animation~anim",
-      "j5e/animation~seg",
-      "j5e/animation~tim",
       "j5e/eas",
-      "j5e/ev",
-      "j5e/event.emitt",
       "j5e/fn",
+      "j5e/fn~tim",
       "j5e/l",
       "j5e/led~l",
       "j5e/rgb",
@@ -7262,53 +6293,41 @@
       "j5e/switch~switch",
       "johnni",
       "key",
-      "keyfram",
       "led",
       "led'",
-      "left",
       "light",
       "list",
       "list:modul",
+      "list:namespac",
       "list:tutori",
       "listen",
       "littl",
       "loop",
-      "loopfunct",
       "lt;async&gt",
       "maintain",
       "make",
-      "manag",
       "max",
       "maximum",
       "meant",
       "method",
       "min",
       "minimum",
-      "mixin",
       "modul",
       "module:j5e/anim",
       "module:j5e/animation~anim",
-      "module:j5e/animation~animation#calculateprogress",
       "module:j5e/animation~animation#enqueu",
-      "module:j5e/animation~animation#findindic",
-      "module:j5e/animation~animation#loopfunct",
-      "module:j5e/animation~animation#next",
-      "module:j5e/animation~animation#normalizekeyfram",
       "module:j5e/animation~animation#paus",
       "module:j5e/animation~animation#play",
       "module:j5e/animation~animation#spe",
       "module:j5e/animation~animation#stop",
-      "module:j5e/animation~animation#tweenedvalu",
-      "module:j5e/animation~seg",
-      "module:j5e/animation~tim",
       "module:j5e/eas",
-      "module:j5e/ev",
       "module:j5e/event.emitt",
       "module:j5e/event.emitter#emit",
       "module:j5e/event.emitter#on",
       "module:j5e/event.emitter#onc",
       "module:j5e/event.emitter#removelisten",
       "module:j5e/fn",
+      "module:j5e/fn~tim",
       "module:j5e/l",
       "module:j5e/led~l",
       "module:j5e/led~led#anim",
@@ -7341,33 +6360,28 @@
       "module:j5e/servo~servo#cent",
       "module:j5e/servo~servo#cw",
       "module:j5e/servo~servo#hom",
-      "module:j5e/servo~servo#initi",
       "module:j5e/servo~servo#max",
       "module:j5e/servo~servo#min",
-      "module:j5e/servo~servo#norm",
-      "module:j5e/servo~servo#rend",
       "module:j5e/servo~servo#step",
       "module:j5e/servo~servo#stop",
       "module:j5e/servo~servo#sweep",
       "module:j5e/servo~servo#to",
-      "module:j5e/servo~servo#upd",
       "module:j5e/switch",
       "module:j5e/switch~switch",
+      "more",
       "move",
+      "namespac",
+      "necessari",
       "new",
-      "next",
-      "normal",
-      "normalizekeyfram",
-      "number",
+      "node.j",
       "object",
       "on",
       "on/off",
       "onc",
+      "opt",
       "option",
       "out",
       "over",
-      "overrid",
-      "param",
       "paramet",
       "pass",
       "paus",
@@ -7384,26 +6398,27 @@
       "rate",
       "readm",
       "red",
-      "relat",
       "remov",
       "removelisten",
-      "render",
       "requir",
+      "resum",
       "return",
       "rgb",
-      "right",
       "rotat",
       "script",
+      "see",
       "segment",
       "separ",
       "sequenc",
       "seri",
       "servo",
+      "servo'",
       "set",
+      "setimmedi",
+      "setinterv",
       "somewher",
       "specifi",
       "speed",
-      "standard",
       "start",
       "startat",
       "state",
@@ -7411,7 +6426,6 @@
       "stop",
       "string",
       "stuff",
-      "sure",
       "sweep",
       "switch",
       "system",
@@ -7424,7 +6438,6 @@
       "turn",
       "tutori",
       "tween",
-      "tweenedvalu",
       "typic",
       "until",
       "updat",
@@ -7435,7 +6448,8 @@
       "what'",
       "whatev",
       "work",
-      "write"
+      "wrapper",
+      "xs"
     ],
     "pipeline": [
       "trimmer",
@@ -7487,6 +6501,17 @@
       "description": "",
       "body": ""
     },
+    "list_namespace.html": {
+      "id": "list_namespace.html",
+      "kind": "list",
+      "title": "Namespaces",
+      "longname": "list:namespace",
+      "name": "Namespaces",
+      "tags": "list:namespace",
+      "summary": "All documented namespaces.",
+      "description": "",
+      "body": ""
+    },
     "list_tutorial.html": {
       "id": "list_tutorial.html",
       "kind": "list",
@@ -7501,7 +6526,7 @@
     "module-j5e_event.Emitter.html": {
       "id": "module-j5e_event.Emitter.html",
       "kind": "class",
-      "title": "j5e/event.Emitter",
+      "title": "Emitter",
       "longname": "module:j5e/event.Emitter",
       "name": "Emitter",
       "tags": "module:j5e/event.Emitter Emitter",
@@ -7557,7 +6582,7 @@
       "name": "Animation",
       "tags": "module:j5e/animation~Animation",
       "summary": "",
-      "description": "Allows for scripted changes of LEDs and Servos",
+      "description": "Allows for scripted control of LEDs, RGBs, and Servos",
       "body": ""
     },
     "module-j5e_animation-Animation.html#enqueue": {
@@ -7568,17 +6593,17 @@
       "name": "enqueue",
       "tags": "module:j5e/animation~Animation#enqueue enqueue",
       "summary": "",
-      "description": "Add an animation segment to the animation queue"
+      "description": "Add an animation segment to the animation queue (See j5e's Timeline and Tweening Tools for more information)"
     },
-    "module-j5e_animation-Animation.html#next": {
-      "id": "module-j5e_animation-Animation.html#next",
+    "module-j5e_animation-Animation.html#play": {
+      "id": "module-j5e_animation-Animation.html#play",
       "kind": "function",
-      "title": "next()",
-      "longname": "module:j5e/animation~Animation#next",
-      "name": "next",
-      "tags": "module:j5e/animation~Animation#next next",
+      "title": "play()",
+      "longname": "module:j5e/animation~Animation#play",
+      "name": "play",
+      "tags": "module:j5e/animation~Animation#play play",
       "summary": "",
-      "description": "Plays next segment in queue. Not meant to be called externally."
+      "description": "Resume play on an animation after it has been paused or stopped."
     },
     "module-j5e_animation-Animation.html#pause": {
       "id": "module-j5e_animation-Animation.html#pause",
@@ -7598,7 +6623,7 @@
       "name": "stop",
       "tags": "module:j5e/animation~Animation#stop stop",
       "summary": "",
-      "description": "stop the animation, flushing the segment queue"
+      "description": "Stop the animation, flushing the segment queue"
     },
     "module-j5e_animation-Animation.html#speed": {
       "id": "module-j5e_animation-Animation.html#speed",
@@ -7608,67 +6633,7 @@
       "name": "speed",
       "tags": "module:j5e/animation~Animation#speed speed",
       "summary": "",
-      "description": "speed Get or set the current playback speed"
-    },
-    "module-j5e_animation-Animation.html#loopFunction": {
-      "id": "module-j5e_animation-Animation.html#loopFunction",
-      "kind": "function",
-      "title": "loopFunction()",
-      "longname": "module:j5e/animation~Animation#loopFunction",
-      "name": "loopFunction",
-      "tags": "module:j5e/animation~Animation#loopFunction loopFunction",
-      "summary": "",
-      "description": "Called in each frame of the animation Not intended to be called externally"
-    },
-    "module-j5e_animation-Animation.html#play": {
-      "id": "module-j5e_animation-Animation.html#play",
-      "kind": "function",
-      "title": "play()",
-      "longname": "module:j5e/animation~Animation#play",
-      "name": "play",
-      "tags": "module:j5e/animation~Animation#play play",
-      "summary": "",
-      "description": "Start a segment. Not meant to be called externally."
-    },
-    "module-j5e_animation-Animation.html#findIndices": {
-      "id": "module-j5e_animation-Animation.html#findIndices",
-      "kind": "function",
-      "title": "findIndices()",
-      "longname": "module:j5e/animation~Animation#findIndices",
-      "name": "findIndices",
-      "tags": "module:j5e/animation~Animation#findIndices findIndices",
-      "summary": "",
-      "description": "Find left and right cuepoints. Not meant to be called externally."
-    },
-    "module-j5e_animation-Animation.html#calculateProgress": {
-      "id": "module-j5e_animation-Animation.html#calculateProgress",
-      "kind": "function",
-      "title": "calculateProgress()",
-      "longname": "module:j5e/animation~Animation#calculateProgress",
-      "name": "calculateProgress",
-      "tags": "module:j5e/animation~Animation#calculateProgress calculateProgress",
-      "summary": "",
-      "description": "Compute progress based on start time. Not intended to be called externally."
-    },
-    "module-j5e_animation-Animation.html#tweenedValue": {
-      "id": "module-j5e_animation-Animation.html#tweenedValue",
-      "kind": "function",
-      "title": "tweenedValue()",
-      "longname": "module:j5e/animation~Animation#tweenedValue",
-      "name": "tweenedValue",
-      "tags": "module:j5e/animation~Animation#tweenedValue tweenedValue",
-      "summary": "",
-      "description": "Find our tweened value based on left and right indices and current progress. Not intended to be called externally."
-    },
-    "module-j5e_animation-Animation.html#normalizeKeyframes": {
-      "id": "module-j5e_animation-Animation.html#normalizeKeyframes",
-      "kind": "function",
-      "title": "normalizeKeyframes()",
-      "longname": "module:j5e/animation~Animation#normalizeKeyframes",
-      "name": "normalizeKeyframes",
-      "tags": "module:j5e/animation~Animation#normalizeKeyframes normalizeKeyframes",
-      "summary": "",
-      "description": "Make sure our keyframes conform to a standard. Not intended to be called externally."
+      "description": "Get or set the current playback speed"
     },
     "module-j5e_switch-Switch.html": {
       "id": "module-j5e_switch-Switch.html",
@@ -7680,157 +6645,6 @@
       "summary": "",
       "description": "The Switch class allows for control of digital switches",
       "body": ""
-    },
-    "module-j5e_servo-Servo.html": {
-      "id": "module-j5e_servo-Servo.html",
-      "kind": "class",
-      "title": "&lt;async&gt; j5e/servo~Servo",
-      "longname": "module:j5e/servo~Servo",
-      "name": "Servo",
-      "tags": "module:j5e/servo~Servo",
-      "summary": "",
-      "description": "The Servo class allows for control of hobby servos",
-      "body": ""
-    },
-    "module-j5e_servo-Servo.html#initialize": {
-      "id": "module-j5e_servo-Servo.html#initialize",
-      "kind": "function",
-      "title": "initialize()",
-      "longname": "module:j5e/servo~Servo#initialize",
-      "name": "initialize",
-      "tags": "module:j5e/servo~Servo#initialize initialize",
-      "summary": "",
-      "description": "The initialization code for a servo"
-    },
-    "module-j5e_servo-Servo.html#update": {
-      "id": "module-j5e_servo-Servo.html#update",
-      "kind": "function",
-      "title": "update( degrees ) → {Servo}",
-      "longname": "module:j5e/servo~Servo#update",
-      "name": "update",
-      "tags": "module:j5e/servo~Servo#update update",
-      "summary": "",
-      "description": "Calls the write param on the IO instance for this servo."
-    },
-    "module-j5e_servo-Servo.html#to": {
-      "id": "module-j5e_servo-Servo.html#to",
-      "kind": "function",
-      "title": "to( degrees [, time [, rate ], an ] ) → {Servo}",
-      "longname": "module:j5e/servo~Servo#to",
-      "name": "to",
-      "tags": "module:j5e/servo~Servo#to to",
-      "summary": "",
-      "description": "to Set the servo horn's position to given degree over time."
-    },
-    "module-j5e_servo-Servo.html#normalize": {
-      "id": "module-j5e_servo-Servo.html#normalize",
-      "kind": "function",
-      "title": "normalize( [ number || object ] )",
-      "longname": "module:j5e/servo~Servo#normalize",
-      "name": "normalize",
-      "tags": "module:j5e/servo~Servo#normalize normalize",
-      "summary": "",
-      "description": ""
-    },
-    "module-j5e_servo-Servo.html#render": {
-      "id": "module-j5e_servo-Servo.html#render",
-      "kind": "function",
-      "title": "render()",
-      "longname": "module:j5e/servo~Servo#render",
-      "name": "render",
-      "tags": "module:j5e/servo~Servo#render render",
-      "summary": "",
-      "description": "render"
-    },
-    "module-j5e_servo-Servo.html#step": {
-      "id": "module-j5e_servo-Servo.html#step",
-      "kind": "function",
-      "title": "step( degrees [, time ] ) → {Servo}",
-      "longname": "module:j5e/servo~Servo#step",
-      "name": "step",
-      "tags": "module:j5e/servo~Servo#step step",
-      "summary": "",
-      "description": "step Update the servo horn's position by specified degrees (over time)"
-    },
-    "module-j5e_servo-Servo.html#min": {
-      "id": "module-j5e_servo-Servo.html#min",
-      "kind": "function",
-      "title": "min( [ time ] ) → {Object}",
-      "longname": "module:j5e/servo~Servo#min",
-      "name": "min",
-      "tags": "module:j5e/servo~Servo#min min",
-      "summary": "",
-      "description": "min Set Servo to minimum degrees, defaults to 0deg"
-    },
-    "module-j5e_servo-Servo.html#max": {
-      "id": "module-j5e_servo-Servo.html#max",
-      "kind": "function",
-      "title": "max( [ time ] ) → {Object}",
-      "longname": "module:j5e/servo~Servo#max",
-      "name": "max",
-      "tags": "module:j5e/servo~Servo#max max",
-      "summary": "",
-      "description": "max Set Servo to maximum degrees, defaults to 180deg"
-    },
-    "module-j5e_servo-Servo.html#center": {
-      "id": "module-j5e_servo-Servo.html#center",
-      "kind": "function",
-      "title": "center( time ) → {Object}",
-      "longname": "module:j5e/servo~Servo#center",
-      "name": "center",
-      "tags": "module:j5e/servo~Servo#center center",
-      "summary": "",
-      "description": "center Set Servo to centerpoint, defaults to 90deg"
-    },
-    "module-j5e_servo-Servo.html#home": {
-      "id": "module-j5e_servo-Servo.html#home",
-      "kind": "function",
-      "title": "home()",
-      "longname": "module:j5e/servo~Servo#home",
-      "name": "home",
-      "tags": "module:j5e/servo~Servo#home home",
-      "summary": "",
-      "description": "home Return Servo to startAt position"
-    },
-    "module-j5e_servo-Servo.html#sweep": {
-      "id": "module-j5e_servo-Servo.html#sweep",
-      "kind": "function",
-      "title": "sweep( range, options )",
-      "longname": "module:j5e/servo~Servo#sweep",
-      "name": "sweep",
-      "tags": "module:j5e/servo~Servo#sweep sweep",
-      "summary": "",
-      "description": "sweep Sweep the servo between min and max or provided range"
-    },
-    "module-j5e_servo-Servo.html#stop": {
-      "id": "module-j5e_servo-Servo.html#stop",
-      "kind": "function",
-      "title": "stop()",
-      "longname": "module:j5e/servo~Servo#stop",
-      "name": "stop",
-      "tags": "module:j5e/servo~Servo#stop stop",
-      "summary": "",
-      "description": "stop Stop a moving servo"
-    },
-    "module-j5e_servo-Servo.html#cw": {
-      "id": "module-j5e_servo-Servo.html#cw",
-      "kind": "function",
-      "title": "cw( speed )",
-      "longname": "module:j5e/servo~Servo#cw",
-      "name": "cw",
-      "tags": "module:j5e/servo~Servo#cw cw",
-      "summary": "",
-      "description": "cw Move a continuous rotation servo clockwise"
-    },
-    "module-j5e_servo-Servo.html#ccw": {
-      "id": "module-j5e_servo-Servo.html#ccw",
-      "kind": "function",
-      "title": "ccw( speed )",
-      "longname": "module:j5e/servo~Servo#ccw",
-      "name": "ccw",
-      "tags": "module:j5e/servo~Servo#ccw ccw",
-      "summary": "",
-      "description": "csw Move a continuous rotation servo counter-clockwise"
     },
     "module-j5e_led-LED.html": {
       "id": "module-j5e_led-LED.html",
@@ -7963,6 +6777,117 @@
       "summary": "",
       "description": "stop Stop the led from blinking, pulsing, fading, or animating"
     },
+    "module-j5e_servo-Servo.html": {
+      "id": "module-j5e_servo-Servo.html",
+      "kind": "class",
+      "title": "&lt;async&gt; j5e/servo~Servo",
+      "longname": "module:j5e/servo~Servo",
+      "name": "Servo",
+      "tags": "module:j5e/servo~Servo",
+      "summary": "",
+      "description": "The Servo class allows for control of hobby servos",
+      "body": ""
+    },
+    "module-j5e_servo-Servo.html#to": {
+      "id": "module-j5e_servo-Servo.html#to",
+      "kind": "function",
+      "title": "to( degrees [, time [, rate ] ] ) → {Servo}",
+      "longname": "module:j5e/servo~Servo#to",
+      "name": "to",
+      "tags": "module:j5e/servo~Servo#to to",
+      "summary": "",
+      "description": "Set the servo's position to given degree over time."
+    },
+    "module-j5e_servo-Servo.html#step": {
+      "id": "module-j5e_servo-Servo.html#step",
+      "kind": "function",
+      "title": "step( degrees [, time ] ) → {Servo}",
+      "longname": "module:j5e/servo~Servo#step",
+      "name": "step",
+      "tags": "module:j5e/servo~Servo#step step",
+      "summary": "",
+      "description": "Update the servo position by specified degrees (over time)"
+    },
+    "module-j5e_servo-Servo.html#min": {
+      "id": "module-j5e_servo-Servo.html#min",
+      "kind": "function",
+      "title": "min( [ time ] ) → {Servo}",
+      "longname": "module:j5e/servo~Servo#min",
+      "name": "min",
+      "tags": "module:j5e/servo~Servo#min min",
+      "summary": "",
+      "description": "min Set Servo to minimum degrees, defaults to 0deg"
+    },
+    "module-j5e_servo-Servo.html#max": {
+      "id": "module-j5e_servo-Servo.html#max",
+      "kind": "function",
+      "title": "max( [ time ] ) → {Object}",
+      "longname": "module:j5e/servo~Servo#max",
+      "name": "max",
+      "tags": "module:j5e/servo~Servo#max max",
+      "summary": "",
+      "description": "max Set Servo to maximum degrees, defaults to 180deg"
+    },
+    "module-j5e_servo-Servo.html#center": {
+      "id": "module-j5e_servo-Servo.html#center",
+      "kind": "function",
+      "title": "center( [ time ] ) → {Object}",
+      "longname": "module:j5e/servo~Servo#center",
+      "name": "center",
+      "tags": "module:j5e/servo~Servo#center center",
+      "summary": "",
+      "description": "center Set Servo to centerpoint, defaults to 90deg"
+    },
+    "module-j5e_servo-Servo.html#home": {
+      "id": "module-j5e_servo-Servo.html#home",
+      "kind": "function",
+      "title": "home() → {Servo}",
+      "longname": "module:j5e/servo~Servo#home",
+      "name": "home",
+      "tags": "module:j5e/servo~Servo#home home",
+      "summary": "",
+      "description": "Return Servo to its startAt position"
+    },
+    "module-j5e_servo-Servo.html#sweep": {
+      "id": "module-j5e_servo-Servo.html#sweep",
+      "kind": "function",
+      "title": "sweep( opts ) → {Servo}",
+      "longname": "module:j5e/servo~Servo#sweep",
+      "name": "sweep",
+      "tags": "module:j5e/servo~Servo#sweep sweep",
+      "summary": "",
+      "description": "sweep Sweep the servo between min and max or provided range"
+    },
+    "module-j5e_servo-Servo.html#stop": {
+      "id": "module-j5e_servo-Servo.html#stop",
+      "kind": "function",
+      "title": "stop()",
+      "longname": "module:j5e/servo~Servo#stop",
+      "name": "stop",
+      "tags": "module:j5e/servo~Servo#stop stop",
+      "summary": "",
+      "description": "Stop a moving servo return {Servo}"
+    },
+    "module-j5e_servo-Servo.html#cw": {
+      "id": "module-j5e_servo-Servo.html#cw",
+      "kind": "function",
+      "title": "cw( speed ) → {Servo}",
+      "longname": "module:j5e/servo~Servo#cw",
+      "name": "cw",
+      "tags": "module:j5e/servo~Servo#cw cw",
+      "summary": "",
+      "description": "Move a continuous rotation servo clockwise"
+    },
+    "module-j5e_servo-Servo.html#ccw": {
+      "id": "module-j5e_servo-Servo.html#ccw",
+      "kind": "function",
+      "title": "ccw( speed ) → {Servo}",
+      "longname": "module:j5e/servo~Servo#ccw",
+      "name": "ccw",
+      "tags": "module:j5e/servo~Servo#ccw ccw",
+      "summary": "",
+      "description": "Move a continuous rotation servo counter-clockwise"
+    },
     "module-j5e_rgb-RGB.html": {
       "id": "module-j5e_rgb-RGB.html",
       "kind": "class",
@@ -8074,28 +6999,6 @@
       "summary": "",
       "description": "Stop the RGB LED from pulsing, blinking, fading, or animating"
     },
-    "module-j5e_animation-Timer.html": {
-      "id": "module-j5e_animation-Timer.html",
-      "kind": "class",
-      "title": "j5e/animation~Timer",
-      "longname": "module:j5e/animation~Timer",
-      "name": "Timer",
-      "tags": "module:j5e/animation~Timer",
-      "summary": "",
-      "description": "Class for managing the timer",
-      "body": ""
-    },
-    "module-j5e_animation-Segment.html": {
-      "id": "module-j5e_animation-Segment.html",
-      "kind": "class",
-      "title": "j5e/animation~Segment",
-      "longname": "module:j5e/animation~Segment",
-      "name": "Segment",
-      "tags": "module:j5e/animation~Segment",
-      "summary": "",
-      "description": "Sets and overrides default params",
-      "body": ""
-    },
     "module-j5e_animation.html": {
       "id": "module-j5e_animation.html",
       "kind": "module",
@@ -8104,7 +7007,7 @@
       "name": "j5e/animation",
       "tags": "module:j5e/animation",
       "summary": "",
-      "description": "Animation module - Handles tweening between a series of key frames. Works with LED, RGB, and Servo.",
+      "description": "The j5e Animation module handles tweening between a series of key frames. Works with with the LED, RGB, and Servo classes.",
       "body": ""
     },
     "module-j5e_easing.html": {
@@ -8115,18 +7018,7 @@
       "name": "j5e/easing",
       "tags": "module:j5e/easing",
       "summary": "",
-      "description": "fn module - Easing functions for animiation segments.",
-      "body": ""
-    },
-    "module-j5e_event.html": {
-      "id": "module-j5e_event.html",
-      "kind": "module",
-      "title": "j5e/event",
-      "longname": "module:j5e/event",
-      "name": "j5e/event",
-      "tags": "module:j5e/event",
-      "summary": "",
-      "description": "event module - Houses event related mixins",
+      "description": "Easing functions for animation segments.",
       "body": ""
     },
     "module-j5e_fn.html": {
@@ -8181,7 +7073,18 @@
       "name": "j5e/switch",
       "tags": "module:j5e/switch",
       "summary": "",
-      "description": "Switch module - For controlling switches",
+      "description": "For working with switches",
+      "body": ""
+    },
+    "module-j5e_fn-timer.html": {
+      "id": "module-j5e_fn-timer.html",
+      "kind": "namespace",
+      "title": "j5e/fn~timer",
+      "longname": "module:j5e/fn~timer",
+      "name": "timer",
+      "tags": "module:j5e/fn~timer",
+      "summary": "",
+      "description": "Wrapper for setInterval, clearInterval, and setImmediate. This is necessary so we can use the Global methods in node.js and the System methods in XS.",
       "body": ""
     }
   }
