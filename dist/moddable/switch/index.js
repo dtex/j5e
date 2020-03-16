@@ -1,5 +1,5 @@
 /**
- * Switch module - For controlling switches
+ * For working with switches
  * @module j5e/switch
  * @requires module:@j5e/event
  * @requires module:@j5e/fn
@@ -20,12 +20,28 @@ class Switch extends Emitter {
   
   /**
    * Instantiate a switch
-   * @param {(number|string|object)} io - A pin number, pin identifier or a complete IO options object
-   * @param {(number|string)} [io.pin] - If passing an object, a pin number or pin identifier
-   * @param {(string|constructor)} [io.io=builtin/digital] - If passing an object, a string specifying a path to the IO provider or a constructor
+   * @param {(number|string|object)} io - A pin number, pin identifier or a complete IO options object (See {@tutorial C-INSTANTIATING}
    * @param {object} [device={}] - An object containing device options
    * @property {boolean} isClosed - True if the switch is closed (current is flowing)
    * @property {boolean} isOpen - True if the switch is open (current is not flowing)
+   * @example
+   * <caption>Use a switch to control an LED</caption>
+   * import Switch from "@j5e/switch";
+   * import LED from "@j5e/led";
+   * 
+   * (async function() {
+   *   const switch = await new Switch(12);
+   *   const led = await new LED(13);
+   * 
+   *   switch.on("open", function() {
+   *     led.off();
+   *   });
+   * 
+   *   switch.on("close", function() {
+   *     led.on();
+   *   });
+   * 
+   * })();
    */
   constructor(io, device) { 
     return (async () => {

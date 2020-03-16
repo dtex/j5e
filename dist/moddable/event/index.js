@@ -1,6 +1,7 @@
 /**
  * event module - Houses event related mixins
  * @module j5e/event
+ * @ignore
  */
 
 /**

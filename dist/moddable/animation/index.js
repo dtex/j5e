@@ -1,5 +1,5 @@
 /**
- * Animation module - Handles tweening between a series of key frames. Works with LED, RGB, and Servo.
+ * The j5e Animation module handles tweening between a series of key frames. Works with with the LED, RGB, and Servo classes.
  * @module j5e/animation
  * @requires module:@j5e/fn
  */
@@ -10,7 +10,7 @@ function linear(n) { return n; }
 
 /** 
  * Class representing an Animation
- * @classdesc Allows for scripted changes of LEDs and Servos
+ * @classdesc Allows for scripted control of LEDs, RGBs, and Servos
  * @fires animation:pause
  * @fires animation:stop
  */
@@ -19,7 +19,26 @@ class Animation {
   /**
    * Animation  
    * @constructor
-   * @param {LED|LED[]|RGB|RGB[]|Servo|Servo[]} target - LEDs or Servos to be animated
+   * @param {LED|LED[]|RGB|RGB[]|Servo|Servo[]} target - LEDs, RGBs, and/or Servos to be animated (See {@tutorial D-ANIMATING} for more information)
+   * @example
+   * <caption>Make a servo "wave"</caption>
+   * import Servo from "@j5e/servo";
+   * import Animation from "@j5e/animation";
+   * 
+   * (async function() {
+   *   const servo = new Servo(13);
+   *   const ani = new Animation(servo);
+   * 
+   *   const wave = {
+   *     duration: 4000,
+	 *     cuePoints: [0,  0.375, 0.625, 1],
+	 *     keyFrames: [0, 135, 45, 180],
+	 *     loop: true,
+   *     metronomic: true
+   *   };
+   * 
+   *   ani.enqueue(wave);
+   * });
    */
   constructor(target) {
     // super();
@@ -28,11 +47,11 @@ class Animation {
   }
 
   /**
-   * Add an animation segment to the animation queue
+   * Add an animation segment to the animation queue (See {@tutorial D-ANIMATING} for more information)
    * @param {object} options - Animation segment options
    * @param {object[]} options.keyFrames - Values for each cuepoint
-   * @param {number[]} [options.cuePoints=[0, 1]] - Animation segment cuepoints from 0-1
-   * @param {number} [options.duration=1000] - Duration of animation segment in ms 
+   * @param {number[]} [options.cuePoints=[0, 1]] - Segment cuepoints from 0-1
+   * @param {number} [options.duration=1000] - Duration of segment in ms 
    * @param {fuction} [options.easing=linear()] - Easing function to use for segment 
    * @param {boolean} [options.loop=false] - If true the segment will loop back
    * @param {number} [options.loopback=0] - The time to loop back to [0-1] 
@@ -42,11 +61,30 @@ class Animation {
    * @param {number} [options.fps=50] - Frames per second 
    * @param {number} [options.rate=20] - ms between frames
    * @param {boolean} [options.paused=false] - Wether the animation is in a paused state
-   * @param {function} [options.onstart=null] - Function to call when animation starts 
-   * @param {function} [options.onpause=null] - Function to call when animation is paused
-   * @param {function} [options.onstop=null] - Function to call when animation is stopped
-   * @param {function} [options.oncomplete=null] - Function to call when animation is complete
-   * @param {function} [options.onloop=null] - Function to call when animation loops
+   * @param {function} [options.onstart=null] - Function to call when the segment starts 
+   * @param {function} [options.onpause=null] - Function to call when the segment is paused
+   * @param {function} [options.onstop=null] - Function to call when the segment is stopped
+   * @param {function} [options.oncomplete=null] - Function to call when the segment is complete
+   * @param {function} [options.onloop=null] - Function to call when the segment loops
+   * @example
+   * <caption>Make a servo "wave"</caption>
+   * import Servo from "@j5e/servo";
+   * import Animation from "@j5e/animation";
+   * 
+   * (async function() {
+   *   const servo = new Servo(13);
+   *   const ani = new Animation(servo);
+   * 
+   *   const wave = {
+   *     duration: 4000,
+	 *     cuePoints: [0,  0.375, 0.625, 1],
+	 *     keyFrames: [0, 135, 45, 180],
+	 *     loop: true,
+   *     metronomic: true
+   *   };
+   * 
+   *   ani.enqueue(wave);
+   * });
    */
   enqueue(options = {}) {
     if (typeof options.target === "undefined") {
@@ -69,6 +107,7 @@ class Animation {
   /**
    * Plays next segment in queue. Not meant to be called externally.
    * @returns this
+   * @private
    */
   next() {
 
@@ -105,11 +144,100 @@ class Animation {
   }
 
   /**
+   * Resume play on an animation after it has been paused or stopped.
+   * @returns Animation
+   * @example
+   * <caption>Make a servo "wave" for five seconds, pause for one second and then resume waving</caption>
+   * import Servo from "@j5e/servo";
+   * import Animation from "@j5e/animation";
+   * import {timer} from "@j5e/fn";
+   * 
+   * (async function() {
+   *   const servo = new Servo(13);
+   *   const ani = new Animation(servo);
+   * 
+   *   const wave = {
+   *     duration: 4000,
+	 *     cuePoints: [0,  0.375, 0.625, 1],
+	 *     keyFrames: [0, 135, 45, 180],
+	 *     loop: true,
+   *     metronomic: true
+   *   };
+   * 
+   *   ani.enqueue(wave);
+   * 
+   *   timer.setTimeout(function() { 
+   *     ani.pause();
+   *   }, 5000);
+   * 
+   *   timer.setTimeout(function() { 
+   *     ani.play();
+   *   }, 6000);
+   * });
+   */
+  play() {
+    const now = Date.now();
+
+    if (this.playLoop) {
+      this.playLoop.stop();
+    }
+
+    this.paused = false;
+    this.isRunning = true;
+
+    // Find our timeline endpoints and refresh rate
+    this.scaledDuration = this.duration / Math.abs(this.currentSpeed);
+    this.startTime = now - this.scaledDuration * this.progress;
+    this.endTime = this.startTime + this.scaledDuration;
+
+    this.frameCount = 0;
+
+    if (this.fps) {
+      this.rate = 1000 / this.fps;
+    }
+
+    this.rate = this.rate | 0;
+
+    this.playLoop = new Timer(this);
+
+    return this;
+  }
+
+  /**
    * Pause animation while maintaining progress, speed and segment queue
+   * @returns Animation
+   * @example
+   * <caption>Make a servo "wave" for five seconds, pause for one second and then resume waving</caption>
+   * import Servo from "@j5e/servo";
+   * import Animation from "@j5e/animation";
+   * import {timer} from "@j5e/fn";
+   * 
+   * (async function() {
+   *   const servo = new Servo(13);
+   *   const ani = new Animation(servo);
+   * 
+   *   const wave = {
+   *     duration: 4000,
+	 *     cuePoints: [0,  0.375, 0.625, 1],
+	 *     keyFrames: [0, 135, 45, 180],
+	 *     loop: true,
+   *     metronomic: true
+   *   };
+   * 
+   *   ani.enqueue(wave);
+   * 
+   *   timer.setTimeout(function() { 
+   *     ani.pause();
+   *   }, 5000);
+   * 
+   *   timer.setTimeout(function() { 
+   *     ani.play();
+   *   }, 6000);
+   * });
    */
   pause() {
 
-    // this.emit("animation:pause");
+    this.emit("animation:pause");
 
     if (this.playLoop) {
       this.playLoop.stop();
@@ -120,14 +248,42 @@ class Animation {
       this.onpause();
     }
 
+    return this;
+
   }
 
   /**
-   * stop the animation, flushing the segment queue
+   * Stop the animation, flushing the segment queue
+   * @returns Animation
+   * @example
+   * <caption>Make a servo "wave" for five seconds and then stop, flushing the queue</caption>
+   * import Servo from "@j5e/servo";
+   * import Animation from "@j5e/animation";
+   * import {timer} from "@j5e/fn";
+   * 
+   * (async function() {
+   *   const servo = new Servo(13);
+   *   const ani = new Animation(servo);
+   * 
+   *   const wave = {
+   *     duration: 4000,
+	 *     cuePoints: [0,  0.375, 0.625, 1],
+	 *     keyFrames: [0, 135, 45, 180],
+	 *     loop: true,
+   *     metronomic: true
+   *   };
+   * 
+   *   ani.enqueue(wave);
+   * 
+   *   timer.setTimeout(function() { 
+   *     ani.stop();
+   *   }, 5000);
+   * 
+   * });
    */
   stop() {
 
-    // this.emit("animation:stop");
+    this.emit("animation:stop");
 
     this.segments = [];
     this.isRunning = false;
@@ -139,12 +295,47 @@ class Animation {
       this.onstop();
     }
 
+    return this;
+
   }
 
   /**
-   * speed
    * Get or set the current playback speed
    * @param {Number} [speed] - The desired playback speed (1 = normal)
+   * @return Animation
+   * @example
+   * <caption>Make a servo "wave" for one second, increase the speed, wait another second and decrease the speed for one second and then stop.</caption>
+   * import Servo from "@j5e/servo";
+   * import Animation from "@j5e/animation";
+   * import {timer} from "@j5e/fn";
+   * 
+   * (async function() {
+   *   const servo = new Servo(13);
+   *   const ani = new Animation(servo);
+   * 
+   *   const wave = {
+   *     duration: 4000,
+	 *     cuePoints: [0,  0.375, 0.625, 1],
+	 *     keyFrames: [0, 135, 45, 180],
+	 *     loop: true,
+   *     metronomic: true
+   *   };
+   * 
+   *   ani.enqueue(wave);
+   * 
+   *   timer.setTimeout(function() { 
+   *     ani.speed(2.0); // Speed up to 2x
+   *   }, 1000);
+   * 
+   *   timer.setTimeout(function() { 
+   *     ani.speed(0.5); // Speed up to 1/2x
+   *   }, 2000);
+   * 
+   *   timer.setTimeout(function() { 
+   *     ani.stop(); // Note, animation speed is still 0.5
+   *   }, 3000);
+   * 
+   * });
    */
   speed(speed) {
 
@@ -167,7 +358,7 @@ class Animation {
 
   /**
    * Called in each frame of the animation
-   * Not intended to be called externally
+   * @private
    */
   loopFunction({calledAt}) {
 
@@ -216,38 +407,8 @@ class Animation {
   }
 
   /**
-   * Start a segment. Not meant to be called externally.
-   */
-  play() {
-    const now = Date.now();
-
-    if (this.playLoop) {
-      this.playLoop.stop();
-    }
-
-    this.paused = false;
-    this.isRunning = true;
-
-    // Find our timeline endpoints and refresh rate
-    this.scaledDuration = this.duration / Math.abs(this.currentSpeed);
-    this.startTime = now - this.scaledDuration * this.progress;
-    this.endTime = this.startTime + this.scaledDuration;
-
-    // If our animation runs for more than 5 seconds switch to setTimeout
-    this.frameCount = 0;
-
-    /* istanbul ignore else */
-    if (this.fps) {
-      this.rate = 1000 / this.fps;
-    }
-
-    this.rate = this.rate | 0;
-
-    this.playLoop = new Timer(this);
-  }
-
-  /**
-   * Find left and right cuepoints. Not meant to be called externally.
+   * Find left and right cuepoints. 
+   * @private
    */
   findIndices(progress) {
     const indices = {
@@ -264,7 +425,8 @@ class Animation {
   }
 
   /**
-   * Compute progress based on start time. Not intended to be called externally.
+   * Compute progress based on start time. 
+   * @private
    */
   calculateProgress(calledAt) {
 
@@ -287,7 +449,7 @@ class Animation {
 
   /**
    * Find our tweened value based on left and right indices and current progress.
-   * Not intended to be called externally.
+   * @private
    */
   tweenedValue(indices, progress) {
 
@@ -358,7 +520,7 @@ class Animation {
 
   /**
    * Make sure our keyframes conform to a standard.
-   * Not intended to be called externally.
+   * @private
    */
   normalizeKeyframes() {
     let previousVal;
@@ -437,21 +599,16 @@ class Animation {
     return this;
   }
 
-// /**
-//  * Placeholders for Symbol
-//  */
-// Animation.keys = "@@keys";
-// Animation.normalize = "@@normalize";
-// Animation.render = "@@render";
-
 };
 
 /**
- * Class for managing the timer
+ * Local wrapper class for managing the timer
+ * @private
  */
 class Timer {
   /**
    * @param {object} animation - The animation instance
+   * @private
    */
   constructor(animation) {
     this.interval = timer.setInterval(() => {
@@ -469,9 +626,10 @@ class Timer {
 };
 
 /** 
- * Class representing a default Animation Segment
+ * This class has no methods, it is a wrapper for short animation segments and not meant to be accessed publicly.
+ * @private
  * @classdesc Sets and overrides default params
- * @param {object} [options] - Animation segment options
+ * @param {object} [options] - Animation segment options (See {@tutorial D-ANIMATING} for more information)
  * @param {number[]} [options.cuePoints=[0, 1]] - Animation segment cuepoints from 0-1
  * @param {number} [options.duration=1000] - Duration of animation segment in ms 
  * @param {fuction} [options.easing=linear()] - Easing function to use for segment 
