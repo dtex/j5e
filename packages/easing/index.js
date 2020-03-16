@@ -1,6 +1,26 @@
 /**
- * fn module - Easing functions for animiation segments.
+ * Easing functions for animation segments.
  * @module j5e/easing
+ * @see {@link https://easings.net/en#|easings.net} to help understand easing functions
+   * 
+   * @example
+   * <caption>Easing by keyFrame. Move a servo from 0° to 180° with inOutQuad easing and then back to 0° with outBounce</caption>
+   * import Servo from "@j5e/servo";
+   * import Animation from "@j5e/animation";
+   * import { inOutQuad, outBunce } from "@j5e/easing";
+   * 
+   * (async function() {
+   *   const servo = new Servo(13);
+   *   const ani = new Animation(servo);
+   * 
+   *   const wave = {
+   *     duration: 8000,
+	 *     cuePoints: [0, 0.5, 1],
+	 *     keyFrames: [ 0, { value: 180, easing: inOutQuad }, {value: 0, easing: outBounce }]
+   *   };
+   * 
+   *   ani.enqueue(wave);
+   * });
  */
 
 const SI = 1.70158;
@@ -14,27 +34,87 @@ const {
   sqrt,
 } = Math;
 
-/** Linear 
- * @param {n} Input value
- * @returns {number}
+/** Linear
+ * @param {Number} input value [0, 1]
+ * @returns {Number}
+ * @ignore
  */
 export function linear(n) { return n };
 
 /** inQuad 
- * @param {n} Input value
- * @returns {number}
+ * @param {Number} input value [0, 1]
+ * @returns {Number}
+ * @see {@link https://easings.net/en#easeInQuad|easings.net} for details
+ * @example
+ * <caption>Ease the entire animation. Move a servo from 0° to 180° with inQuad easing.</caption>
+ * import Servo from "@j5e/servo";
+ * import Animation from "@j5e/animation";
+ * import { inQuad } from "@j5e/easing";
+ * 
+ * (async function() {
+ *   const servo = new Servo(13);
+ *   const ani = new Animation(servo);
+ * 
+ *   const wave = {
+ *     duration: 4000,
+ *     cuePoints: [0, 1],
+ *     keyFrames: [0, 180],
+ *     easing: inQuad
+ *   };
+ * 
+ *   ani.enqueue(wave);
+ * });
  */
 export function inQuad(n) { return n ** 2 };
 
 /** outQuad
- * @param {n} Input value
- * @returns {number}
+ * @param {Number} input value [0, 1]
+ * @returns {Number}
+ * @see {@link https://easings.net/en#easeOutQuad|easings.net} for details
+ * @example
+ * <caption>Ease an animation segment. Move a servo from 0° to 90° with linear easing and then 90° to 180° with outQuad easing.</caption>
+ * import Servo from "@j5e/servo";
+ * import Animation from "@j5e/animation";
+ * import { outQuad } from "@j5e/easing";
+ * 
+ * (async function() {
+ *   const servo = new Servo(13);
+ *   const ani = new Animation(servo);
+ * 
+ *   const wave = {
+ *     duration: 4000,
+ *     cuePoints: [0, 0.5, 1],
+ *     keyFrames: [0, 90, { value: 180, easing: outQuad }]
+ *   };
+ * 
+ *   ani.enqueue(wave);
+ * });
  */
 export function outQuad(n) { return n * (2 - n) };
 
 /** inOutQuad
- * @param {n} Input value
- * @returns {number}
+ * @param {Number} input value [0, 1]
+ * @returns {Number}
+ * @see {@link https://easings.net/en#easeInOutQuad|easings.net} for details
+ * @example
+ * <caption>Ease the entire animation. Move a servo from 0° to 180° with inOutQuad easing.</caption>
+ * import Servo from "@j5e/servo";
+ * import Animation from "@j5e/animation";
+ * import { inOutQuad } from "@j5e/easing";
+ * 
+ * (async function() {
+ *   const servo = new Servo(13);
+ *   const ani = new Animation(servo);
+ * 
+ *   const wave = {
+ *     duration: 4000,
+ *     cuePoints: [0, 1],
+ *     keyFrames: [0, 180],
+ *     easing: inOutQuad
+ *   };
+ * 
+ *   ani.enqueue(wave);
+ * });
  */
 export function inOutQuad(n) { 
   n *= 2;
@@ -44,20 +124,79 @@ export function inOutQuad(n) {
 };
 
 /** inCube
- * @param {n} Input value
- * @returns {number}
+ * @param {Number} input value [0, 1]
+ * @returns {Number}
+ * @see {@link https://easings.net/en#easeInCubic|easings.net} for details
+ * @example
+ * <caption>Ease the entire animation. Move a servo from 0° to 180° with inCube easing.</caption>
+ * import Servo from "@j5e/servo";
+ * import Animation from "@j5e/animation";
+ * import { inCube } from "@j5e/easing";
+ * 
+ * (async function() {
+ *   const servo = new Servo(13);
+ *   const ani = new Animation(servo);
+ * 
+ *   const wave = {
+ *     duration: 4000,
+ *     cuePoints: [0, 1],
+ *     keyFrames: [0, 180],
+ *     easing: inCube
+ *   };
+ * 
+ *   ani.enqueue(wave);
+ * });
  */
 export function inCube(n) { return n ** 3 };
 
 /** outCube
- * @param {n} Input value
- * @returns {number}
+ * @param {Number} input value [0, 1]
+ * @returns {Number}
+ * @see {@link https://easings.net/en#easeOutCubic|easings.net} for details
+ * @example
+ * <caption>Ease an animation segment. Move a servo from 0° to 90° with linear easing and then 90° to 180° with outCube easing.</caption>
+ * import Servo from "@j5e/servo";
+ * import Animation from "@j5e/animation";
+ * import { outCube } from "@j5e/easing";
+ * 
+ * (async function() {
+ *   const servo = new Servo(13);
+ *   const ani = new Animation(servo);
+ * 
+ *   const wave = {
+ *     duration: 4000,
+ *     cuePoints: [0, 0.5, 1],
+ *     keyFrames: [0, 90, { value: 180, easing: outCube }]
+ *   };
+ * 
+ *   ani.enqueue(wave);
+ * });
  */
 export function outCube(n) { return --n * n * n + 1 };
 
 /** inOutCube
- * @param {n} Input value
- * @returns {number}
+ * @param {Number} input value [0, 1]
+ * @returns {Number}
+ * @see {@link https://easings.net/en#easeInOutCubic|easings.net} for details
+ * @example
+ * <caption>Ease the entire animation. Move a servo from 0° to 180° with inOutCube easing.</caption>
+ * import Servo from "@j5e/servo";
+ * import Animation from "@j5e/animation";
+ * import { inOutCube } from "@j5e/easing";
+ * 
+ * (async function() {
+ *   const servo = new Servo(13);
+ *   const ani = new Animation(servo);
+ * 
+ *   const wave = {
+ *     duration: 4000,
+ *     cuePoints: [0, 1],
+ *     keyFrames: [0, 180],
+ *     easing: inOutCube
+ *   };
+ * 
+ *   ani.enqueue(wave);
+ * });
  */
 export function inOutCube(n) {
   n *= 2;
@@ -67,20 +206,79 @@ export function inOutCube(n) {
 };
 
 /** inQuart
- * @param {n} Input value
- * @returns {number}
+ * @param {Number} input value [0, 1]
+ * @returns {Number}
+ * @see {@link https://easings.net/en#easeInQuart|easings.net} for details
+ * @example
+ * <caption>Ease the entire animation. Move a servo from 0° to 180° with inQuart easing.</caption>
+ * import Servo from "@j5e/servo";
+ * import Animation from "@j5e/animation";
+ * import { inQuart } from "@j5e/easing";
+ * 
+ * (async function() {
+ *   const servo = new Servo(13);
+ *   const ani = new Animation(servo);
+ * 
+ *   const wave = {
+ *     duration: 4000,
+ *     cuePoints: [0, 1],
+ *     keyFrames: [0, 180],
+ *     easing: inQuart
+ *   };
+ * 
+ *   ani.enqueue(wave);
+ * });
  */
 export function inQuart(n) { return n ** 4 };
 
 /** outQuart
- * @param {n} Input value
- * @returns {number}
+ * @param {Number} input value [0, 1]
+ * @returns {Number}
+ * @see {@link https://easings.net/en#easeOutQuart|easings.net} for details
+ * @example
+ * <caption>Ease an animation segment. Move a servo from 0° to 90° with linear easing and then 90° to 180° with outQuart easing.</caption>
+ * import Servo from "@j5e/servo";
+ * import Animation from "@j5e/animation";
+ * import { outQuart } from "@j5e/easing";
+ * 
+ * (async function() {
+ *   const servo = new Servo(13);
+ *   const ani = new Animation(servo);
+ * 
+ *   const wave = {
+ *     duration: 4000,
+ *     cuePoints: [0, 0.5, 1],
+ *     keyFrames: [0, 90, { value: 180, easing: outQuart }]
+ *   };
+ * 
+ *   ani.enqueue(wave);
+ * });
  */
 export function outQuart(n) { return 1 - (--n * n ** 3) };
 
 /** inOutQuart
- * @param {n} Input value
- * @returns {number}
+ * @param {Number} input value [0, 1]
+ * @returns {Number}
+ * @see {@link https://easings.net/en#easeInOutQuart|easings.net} for details
+ * @example
+ * <caption>Ease the entire animation. Move a servo from 0° to 180° with inOutQuart easing.</caption>
+ * import Servo from "@j5e/servo";
+ * import Animation from "@j5e/animation";
+ * import { inOutQuart } from "@j5e/easing";
+ * 
+ * (async function() {
+ *   const servo = new Servo(13);
+ *   const ani = new Animation(servo);
+ * 
+ *   const wave = {
+ *     duration: 4000,
+ *     cuePoints: [0, 1],
+ *     keyFrames: [0, 180],
+ *     easing: inOutQuart
+ *   };
+ * 
+ *   ani.enqueue(wave);
+ * });
  */
 export function inOutQuart(n) {
   n *= 2;
@@ -90,20 +288,79 @@ export function inOutQuart(n) {
 };
 
 /** inQuint
- * @param {n} Input value
- * @returns {number}
+ * @param {Number} input value [0, 1]
+ * @returns {Number}
+ * @see {@link https://easings.net/en#easeInQuint|easings.net} for details
+ * @example
+ * <caption>Ease the entire animation. Move a servo from 0° to 180° with inQuint easing.</caption>
+ * import Servo from "@j5e/servo";
+ * import Animation from "@j5e/animation";
+ * import { inQuint } from "@j5e/easing";
+ * 
+ * (async function() {
+ *   const servo = new Servo(13);
+ *   const ani = new Animation(servo);
+ * 
+ *   const wave = {
+ *     duration: 4000,
+ *     cuePoints: [0, 1],
+ *     keyFrames: [0, 180],
+ *     easing: inQuint
+ *   };
+ * 
+ *   ani.enqueue(wave);
+ * });
  */
 export function inQuint(n) { return n ** 5 };
 
 /** outQuint
- * @param {n} Input value
- * @returns {number}
+ * @param {Number} input value [0, 1]
+ * @returns {Number}
+ * @see {@link https://easings.net/en#easeOutQuint|easings.net} for details
+ * @example
+ * <caption>Ease an animation segment. Move a servo from 0° to 90° with linear easing and then 90° to 180° with outQuint easing.</caption>
+ * import Servo from "@j5e/servo";
+ * import Animation from "@j5e/animation";
+ * import { outQuint } from "@j5e/easing";
+ * 
+ * (async function() {
+ *   const servo = new Servo(13);
+ *   const ani = new Animation(servo);
+ * 
+ *   const wave = {
+ *     duration: 4000,
+ *     cuePoints: [0, 0.5, 1],
+ *     keyFrames: [0, 90, { value: 180, easing: outQuint }]
+ *   };
+ * 
+ *   ani.enqueue(wave);
+ * });
  */
 export function outQuint(n) { return --n * n ** 4 + 1 };
 
 /** inOutQuint
- * @param {n} Input value
- * @returns {number}
+ * @param {Number} input value [0, 1]
+ * @returns {Number}
+ * @see {@link https://easings.net/en#easeInOutQuint|easings.net} for details
+ * @example
+ * <caption>Ease the entire animation. Move a servo from 0° to 180° with inOutQuint easing.</caption>
+ * import Servo from "@j5e/servo";
+ * import Animation from "@j5e/animation";
+ * import { inOutQuint } from "@j5e/easing";
+ * 
+ * (async function() {
+ *   const servo = new Servo(13);
+ *   const ani = new Animation(servo);
+ * 
+ *   const wave = {
+ *     duration: 4000,
+ *     cuePoints: [0, 1],
+ *     keyFrames: [0, 180],
+ *     easing: inOutQuint
+ *   };
+ * 
+ *   ani.enqueue(wave);
+ * });
  */
 export function inOutQuint(n) {
   n *= 2;
@@ -113,38 +370,156 @@ export function inOutQuint(n) {
 };
 
 /** inSine
- * @param {n} Input value
- * @returns {number}
+ * @param {Number} input value [0, 1]
+ * @returns {Number}
+ * @see {@link https://easings.net/en#easeInSine|easings.net} for details
+ * @example
+ * <caption>Ease the entire animation. Move a servo from 0° to 180° with inSine easing.</caption>
+ * import Servo from "@j5e/servo";
+ * import Animation from "@j5e/animation";
+ * import { inSine } from "@j5e/easing";
+ * 
+ * (async function() {
+ *   const servo = new Servo(13);
+ *   const ani = new Animation(servo);
+ * 
+ *   const wave = {
+ *     duration: 4000,
+ *     cuePoints: [0, 1],
+ *     keyFrames: [0, 180],
+ *     easing: inSine
+ *   };
+ * 
+ *   ani.enqueue(wave);
+ * });
  */
 export function inSine(n) { return 1 - cos(n * PI / 2) };
 
 /** outSine
- * @param {n} Input value
- * @returns {number}
+ * @param {Number} input value [0, 1]
+ * @returns {Number}
+ * @see {@link https://easings.net/en#easeOutSine|easings.net} for details
+ * @example
+ * <caption>Ease an animation segment. Move a servo from 0° to 90° with linear easing and then 90° to 180° with outSine easing.</caption>
+ * import Servo from "@j5e/servo";
+ * import Animation from "@j5e/animation";
+ * import { outSine } from "@j5e/easing";
+ * 
+ * (async function() {
+ *   const servo = new Servo(13);
+ *   const ani = new Animation(servo);
+ * 
+ *   const wave = {
+ *     duration: 4000,
+ *     cuePoints: [0, 0.5, 1],
+ *     keyFrames: [0, 90, { value: 180, easing: outSine }]
+ *   };
+ * 
+ *   ani.enqueue(wave);
+ * });
  */
 export function outSine(n) { return sin(n * PI / 2) };
 
 /** inOutSine
- * @param {n} Input value
- * @returns {number}
+ * @param {Number} input value [0, 1]
+ * @returns {Number}
+ * @see {@link https://easings.net/en#easeInOutSine|easings.net} for details
+ * @example
+ * <caption>Ease the entire animation. Move a servo from 0° to 180° with inOutSine easing.</caption>
+ * import Servo from "@j5e/servo";
+ * import Animation from "@j5e/animation";
+ * import { inOutSine } from "@j5e/easing";
+ * 
+ * (async function() {
+ *   const servo = new Servo(13);
+ *   const ani = new Animation(servo);
+ * 
+ *   const wave = {
+ *     duration: 4000,
+ *     cuePoints: [0, 1],
+ *     keyFrames: [0, 180],
+ *     easing: inOutSine
+ *   };
+ * 
+ *   ani.enqueue(wave);
+ * });
  */
 export function inOutSine(n) { return HALF * (1 - cos(PI * n)) };
 
 /** inExpo
- * @param {n} Input value
- * @returns {number}
+ * @param {Number} input value [0, 1]
+ * @returns {Number}
+ * @see {@link https://easings.net/en#easeInExpo|easings.net} for details
+ * @example
+ * <caption>Ease the entire animation. Move a servo from 0° to 180° with inExpo easing.</caption>
+ * import Servo from "@j5e/servo";
+ * import Animation from "@j5e/animation";
+ * import { inExpo } from "@j5e/easing";
+ * 
+ * (async function() {
+ *   const servo = new Servo(13);
+ *   const ani = new Animation(servo);
+ * 
+ *   const wave = {
+ *     duration: 4000,
+ *     cuePoints: [0, 1],
+ *     keyFrames: [0, 180],
+ *     easing: inExpo
+ *   };
+ * 
+ *   ani.enqueue(wave);
+ * });
  */
 export function inExpo(n) { return 0 === n ? 0 : 1024 ** (n - 1) };
 
 /** outExpo
- * @param {n} Input value
- * @returns {number}
+ * @param {Number} input value [0, 1]
+ * @returns {Number}
+ * @see {@link https://easings.net/en#easeOutExpo|easings.net} for details
+ * @example
+ * <caption>Ease an animation segment. Move a servo from 0° to 90° with linear easing and then 90° to 180° with outExpo easing.</caption>
+ * import Servo from "@j5e/servo";
+ * import Animation from "@j5e/animation";
+ * import { outExpo } from "@j5e/easing";
+ * 
+ * (async function() {
+ *   const servo = new Servo(13);
+ *   const ani = new Animation(servo);
+ * 
+ *   const wave = {
+ *     duration: 4000,
+ *     cuePoints: [0, 0.5, 1],
+ *     keyFrames: [0, 90, { value: 180, easing: outExpo }]
+ *   };
+ * 
+ *   ani.enqueue(wave);
+ * });
  */
 export function outExpo(n) { return 1 === n ? n : 1 - 2 ** (-10 * n) };
 
 /** inOutExpo
- * @param {n} Input value
- * @returns {number}
+ * @param {Number} input value [0, 1]
+ * @returns {Number}
+ * @see {@link https://easings.net/en#easeInOutExpo|easings.net} for details
+ * @example
+ * <caption>Ease the entire animation. Move a servo from 0° to 180° with inOutExpo easing.</caption>
+ * import Servo from "@j5e/servo";
+ * import Animation from "@j5e/animation";
+ * import { inOutExpo } from "@j5e/easing";
+ * 
+ * (async function() {
+ *   const servo = new Servo(13);
+ *   const ani = new Animation(servo);
+ * 
+ *   const wave = {
+ *     duration: 4000,
+ *     cuePoints: [0, 1],
+ *     keyFrames: [0, 180],
+ *     easing: inOutExpo
+ *   };
+ * 
+ *   ani.enqueue(wave);
+ * });
  */
 export function inOutExpo(n) {
   if (n === 0) { return 0; }
@@ -155,20 +530,79 @@ export function inOutExpo(n) {
 };
 
 /** inCirc
- * @param {n} Input value
- * @returns {number}
+ * @param {Number} input value [0, 1]
+ * @returns {Number}
+ * @see {@link https://easings.net/en#easeInCirc|easings.net} for details
+ * @example
+ * <caption>Ease the entire animation. Move a servo from 0° to 180° with inCirc easing.</caption>
+ * import Servo from "@j5e/servo";
+ * import Animation from "@j5e/animation";
+ * import { inCirc } from "@j5e/easing";
+ * 
+ * (async function() {
+ *   const servo = new Servo(13);
+ *   const ani = new Animation(servo);
+ * 
+ *   const wave = {
+ *     duration: 4000,
+ *     cuePoints: [0, 1],
+ *     keyFrames: [0, 180],
+ *     easing: inCirc
+ *   };
+ * 
+ *   ani.enqueue(wave);
+ * });
  */
 export function inCirc(n) { return 1 - sqrt(1 - n * n) };
 
 /** outCirc
- * @param {n} Input value
- * @returns {number}
+ * @param {Number} input value [0, 1]
+ * @returns {Number}
+ * @see {@link https://easings.net/en#easeOutCirc|easings.net} for details
+ * @example
+ * <caption>Ease an animation segment. Move a servo from 0° to 90° with linear easing and then 90° to 180° with outCirc easing.</caption>
+ * import Servo from "@j5e/servo";
+ * import Animation from "@j5e/animation";
+ * import { outCirc } from "@j5e/easing";
+ * 
+ * (async function() {
+ *   const servo = new Servo(13);
+ *   const ani = new Animation(servo);
+ * 
+ *   const wave = {
+ *     duration: 4000,
+ *     cuePoints: [0, 0.5, 1],
+ *     keyFrames: [0, 90, { value: 180, easing: outCirc }]
+ *   };
+ * 
+ *   ani.enqueue(wave);
+ * });
  */
 export function outCirc(n) { return sqrt(1 - (--n * n)) };
 
 /** inOutCirc
- * @param {n} Input value
- * @returns {number}
+ * @param {Number} input value [0, 1]
+ * @returns {Number}
+ * @see {@link https://easings.net/en#easeInOutCirc|easings.net} for details
+ * @example
+ * <caption>Ease the entire animation. Move a servo from 0° to 180° with inOutCirc easing.</caption>
+ * import Servo from "@j5e/servo";
+ * import Animation from "@j5e/animation";
+ * import { inOutCirc } from "@j5e/easing";
+ * 
+ * (async function() {
+ *   const servo = new Servo(13);
+ *   const ani = new Animation(servo);
+ * 
+ *   const wave = {
+ *     duration: 4000,
+ *     cuePoints: [0, 1],
+ *     keyFrames: [0, 180],
+ *     easing: inOutCirc
+ *   };
+ * 
+ *   ani.enqueue(wave);
+ * });
  */
 export function inOutCirc(n) {
   n *= 2;
@@ -178,20 +612,79 @@ export function inOutCirc(n) {
 };
 
 /** inBack
- * @param {n} Input value
- * @returns {number}
+ * @param {Number} input value [0, 1]
+ * @returns {Number}
+ * @see {@link https://easings.net/en#easeInBack|easings.net} for details
+ * @example
+ * <caption>Ease the entire animation. Move a servo from 0° to 180° with inBack easing.</caption>
+ * import Servo from "@j5e/servo";
+ * import Animation from "@j5e/animation";
+ * import { inBack } from "@j5e/easing";
+ * 
+ * (async function() {
+ *   const servo = new Servo(13);
+ *   const ani = new Animation(servo);
+ * 
+ *   const wave = {
+ *     duration: 4000,
+ *     cuePoints: [0, 1],
+ *     keyFrames: [0, 180],
+ *     easing: inBack
+ *   };
+ * 
+ *   ani.enqueue(wave);
+ * });
  */
 export function inBack(n) { return n * n * ((SI + 1) * n - SI) };
 
 /** outBack
- * @param {n} Input value
- * @returns {number}
+ * @param {Number} input value [0, 1]
+ * @returns {Number}
+ * @see {@link https://easings.net/en#easeOutBack|easings.net} for details
+ * @example
+ * <caption>Ease an animation segment. Move a servo from 0° to 90° with linear easing and then 90° to 180° with outBack easing.</caption>
+ * import Servo from "@j5e/servo";
+ * import Animation from "@j5e/animation";
+ * import { outBack } from "@j5e/easing";
+ * 
+ * (async function() {
+ *   const servo = new Servo(13);
+ *   const ani = new Animation(servo);
+ * 
+ *   const wave = {
+ *     duration: 4000,
+ *     cuePoints: [0, 0.5, 1],
+ *     keyFrames: [0, 90, { value: 180, easing: outBack }]
+ *   };
+ * 
+ *   ani.enqueue(wave);
+ * });
  */
 export function outBack(n) { return --n * n * ((SI + 1) * n + SI) + 1 };
 
 /** inOutBack
- * @param {n} Input value
- * @returns {number}
+ * @param {Number} input value [0, 1]
+ * @returns {Number}
+ * @see {@link https://easings.net/en#easeInOutBack|easings.net} for details
+ * @example
+ * <caption>Ease the entire animation. Move a servo from 0° to 180° with inOutBack easing.</caption>
+ * import Servo from "@j5e/servo";
+ * import Animation from "@j5e/animation";
+ * import { inOutBack } from "@j5e/easing";
+ * 
+ * (async function() {
+ *   const servo = new Servo(13);
+ *   const ani = new Animation(servo);
+ * 
+ *   const wave = {
+ *     duration: 4000,
+ *     cuePoints: [0, 1],
+ *     keyFrames: [0, 180],
+ *     easing: inOutBack
+ *   };
+ * 
+ *   ani.enqueue(wave);
+ * });
  */
 export function inOutBack(n) {
   return (n *= 2) < 1 ?
@@ -199,9 +692,54 @@ export function inOutBack(n) {
     HALF * ((n -= 2) * n * ((SIO + 1) * n + SIO) + 2);
 };
 
+/** inBounce
+ * @param {Number} input value [0, 1]
+ * @returns {Number}
+ * @see {@link https://easings.net/en#easeInBounce|easings.net} for details
+ * @example
+ * <caption>Ease the entire animation. Move a servo from 0° to 180° with inBounce easing.</caption>
+ * import Servo from "@j5e/servo";
+ * import Animation from "@j5e/animation";
+ * import { inBounce } from "@j5e/easing";
+ * 
+ * (async function() {
+ *   const servo = new Servo(13);
+ *   const ani = new Animation(servo);
+ * 
+ *   const wave = {
+ *     duration: 4000,
+ *     cuePoints: [0, 1],
+ *     keyFrames: [0, 180],
+ *     easing: inBounce
+ *   };
+ * 
+ *   ani.enqueue(wave);
+ * });
+ */
+export function inBounce(n) { return 1 - outBounce(1 - n); }
+
 /** outBounce
- * @param {n} Input value
- * @returns {number}
+ * @param {Number} input value [0, 1]
+ * @returns {Number}
+ * @see {@link https://easings.net/en#easeOutBounce|easings.net} for details
+ * @example
+ * <caption>Ease an animation segment. Move a servo from 0° to 90° with linear easing and then 90° to 180° with outBounce easing.</caption>
+ * import Servo from "@j5e/servo";
+ * import Animation from "@j5e/animation";
+ * import { outBounce } from "@j5e/easing";
+ * 
+ * (async function() {
+ *   const servo = new Servo(13);
+ *   const ani = new Animation(servo);
+ * 
+ *   const wave = {
+ *     duration: 4000,
+ *     cuePoints: [0, 0.5, 1],
+ *     keyFrames: [0, 90, { value: 180, easing: outBounce }]
+ *   };
+ * 
+ *   ani.enqueue(wave);
+ * });
  */
 export function outBounce(n) {
   if (n < (1 / 2.75)) {
@@ -215,15 +753,29 @@ export function outBounce(n) {
   }
 };
 
-/** inBounce
- * @param {n} Input value
- * @returns {number}
- */
-export function inBounce(n) { return 1 - outBounce(1 - n); }
-
 /** inOutBounce
- * @param {n} Input value
- * @returns {number}
+ * @param {Number} input value [0, 1]
+ * @returns {Number}
+ * @see {@link https://easings.net/en#easeInOutBounce|easings.net} for details
+ * @example
+ * <caption>Ease the entire animation. Move a servo from 0° to 180° with inOutBounce easing.</caption>
+ * import Servo from "@j5e/servo";
+ * import Animation from "@j5e/animation";
+ * import { inOutBounce } from "@j5e/easing";
+ * 
+ * (async function() {
+ *   const servo = new Servo(13);
+ *   const ani = new Animation(servo);
+ * 
+ *   const wave = {
+ *     duration: 4000,
+ *     cuePoints: [0, 1],
+ *     keyFrames: [0, 180],
+ *     easing: inOutBounce
+ *   };
+ * 
+ *   ani.enqueue(wave);
+ * });
  */
 export function inOutBounce(n) {
   return n < HALF ?
