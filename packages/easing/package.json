@@ -1,6 +1,6 @@
 {
   "name": "@j5e/easing",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "Easing methods for J5e",
   "main": "index.js",
   "type": "module",
