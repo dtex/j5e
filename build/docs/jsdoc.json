@@ -20,6 +20,7 @@
     "copyright"             : "Copyright © 2020 The contributors to the j5e and Johnny-Five projects.",
     "dateFormat"            : "MMMM D, YYYY",
     "inlineNav"             : true,
+    "includeDate"           : false,
     "navMembers"            : [
                                 {"kind": "external", "title": "Externals", "summary": "All documented external members."},
                                 {"kind": "global", "title": "Globals", "summary": "All documented globals."},
