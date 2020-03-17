@@ -16,7 +16,7 @@ import LED from "@j5e/led";
 })();
 ````
 
-New users should check out the [Getting Started](tutorial-GETSTARTED.html) guide.
+New users should check out the [Getting Started](tutorial-A-GETSTARTED.html) guide.
 
 ## j5e Repo Anatomy
 One goal of j5e is write once, run anywhere. We are building toward this goal before most TC-53 IO conformant platforms exist. To this end we've settled on node.js compatability as our primary target, with a build step that will generate distributions for other platforms programmatically. The JS is the same across platforms, but the project structure has to change in order to work with different implementations of ECMAScript Modules (package.json vs manifest.json and inconsistent module resolution schemes).
