@@ -1,4 +1,4 @@
-j5e device instantiation allows for a few different patterns. On one hand we wanted to enable the simplest possible use case where the only parameter we need is the pin number, and on the other hand we needed to be able to support complex io and device initializations whose details we could not foresee.
+j5e device instantiation allows for a few different patterns. On one hand we wanted to enable the simplest possible use case where the only parameter we need is the pin number, and on the other hand we needed to be able to support complex io and device initializations whose details we cannot foresee.
 
 ````js
 new DeviceClass(io[, device]);
@@ -46,9 +46,7 @@ The ```io``` argument is always required and can take a few different forms:
     led.blink();
 
   })();
-  ````
-
-  *Pro tip: It is also possible to instantiate 
+  ```` 
 ---
 * **I/O Instance** - Sometimes it may be necessary to explicitly instantiate the I/O and pass that instance on to j5e.
   ````js
@@ -114,7 +112,7 @@ The ```io``` argument is always required and can take a few different forms:
   ````
 
   ## The ```device``` Argument
-  A device is something connected to your I/O. It could be a sensor, a switch, and LED, a motor, a GPS receiver, or... The universe of devices is vast. Since the details of the device argument can vary greatly we won't try and cover it here, except to say that it is optional. If it is not passed, j5e will use default values. If a string is passed in its place, it is understood to be the path to an I/O provider.
+  A device is something connected to your I/O. It could be a sensor, a switch, and LED, a motor, a GPS receiver, or you name it. The universe of devices is vast. Since the details of the device argument can vary greatly we won't try and cover it here, except to say that it is optional. If it is not passed, j5e will use default values for the most common devices and scenarios. If a string is passed in its place, it is understood to be the path to an I/O provider.
   * **An Object Literal** - In this scenario, the ```device``` argument is passing a device-specific configuration.
   ````js
   import Servo from "@j5e/servo";

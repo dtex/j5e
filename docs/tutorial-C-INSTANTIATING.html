@@ -98,7 +98,7 @@
 							<li class="active">Instantiating a Device</li>
 						</ol>
 		<section class="tutorial-section">
-			<article><p>j5e device instantiation allows for a few different patterns. On one hand we wanted to enable the simplest possible use case where the only parameter we need is the pin number, and on the other hand we needed to be able to support complex io and device initializations whose details we could not foresee.</p>
+			<article><p>j5e device instantiation allows for a few different patterns. On one hand we wanted to enable the simplest possible use case where the only parameter we need is the pin number, and on the other hand we needed to be able to support complex io and device initializations whose details we cannot foresee.</p>
 <pre class="prettyprint source lang-js"><code>new DeviceClass(io[, device]);
 </code></pre>
 <h2>The <code>io</code> Argument</h2>
@@ -124,9 +124,7 @@
 </ul>
 <hr>
 <ul>
-<li>
-<p><strong>Object Literal</strong> - Sometimes it is necessary to specify more than just a pin number to instantiate an I/O. For example if you are using an external provider, or need to set the data speed.</p>
-<pre class="prettyprint source lang-js"><code>import LED from &quot;@j5e/led&quot;;
+<li><strong>Object Literal</strong> - Sometimes it is necessary to specify more than just a pin number to instantiate an I/O. For example if you are using an external provider, or need to set the data speed.<pre class="prettyprint source lang-js"><code>import LED from &quot;@j5e/led&quot;;
 
 (async function() {
 
@@ -142,7 +140,6 @@
 
 })();
 </code></pre>
-<p>*Pro tip: It is also possible to instantiate</p>
 </li>
 </ul>
 <hr>
@@ -211,7 +208,7 @@ import Motor from &quot;@j5e/motor&quot;;
 })();
 </code></pre>
 <h2>The <code>device</code> Argument</h2>
-<p>A device is something connected to your I/O. It could be a sensor, a switch, and LED, a motor, a GPS receiver, or... The universe of devices is vast. Since the details of the device argument can vary greatly we won't try and cover it here, except to say that it is optional. If it is not passed, j5e will use default values. If a string is passed in its place, it is understood to be the path to an I/O provider.</p>
+<p>A device is something connected to your I/O. It could be a sensor, a switch, and LED, a motor, a GPS receiver, or you name it. The universe of devices is vast. Since the details of the device argument can vary greatly we won't try and cover it here, except to say that it is optional. If it is not passed, j5e will use default values for the most common devices and scenarios. If a string is passed in its place, it is understood to be the path to an I/O provider.</p>
 <ul>
 <li><strong>An Object Literal</strong> - In this scenario, the <code>device</code> argument is passing a device-specific configuration.</li>
 </ul>

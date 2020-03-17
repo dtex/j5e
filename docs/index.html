@@ -93,10 +93,10 @@
 		<div class="row">
 			<div class="col-md-9 main-content">
 		<section class="readme-section">
-			<article><p>Control LED's, Servos, Switches, and more with j5e. It runs directly onboard microcontrollers like the ESP8266. Your code is 100% JavaScript. It does not require node.js, a host server or an SBC to host the app.</p>
+			<article><p>Control LED's, Servos, Switches, and more with j5e. It runs onboard microcontrollers like the ESP8266. Your code is 100% JavaScript. It does not require node.js, a host server or an SBC to host the app.</p>
 <p>j5e is a device framework built for <a href="https://www.ecma-international.org/memento/tc53.htm">ECMA TC-53's</a> I/O class pattern. The <a href="https://gist.github.com/phoddie/166c9c17b2f31d0beda9f2410a219268">I/O class pattern</a> is a standard interface for accessing underlying hardware interfaces (GPIO). j5e's API is based on the <a href="https://github.com/rwaldron.johnny-five">Johnny-Five</a> API which has been battle tested over quite some time.</p>
 <p>Right now, the only provider that matches the ECMA TC-53 I/O class pattern is <a href="https://github.com/Moddable-OpenSource/moddable/blob/public/documentation/io/io.md">Moddable's IO module for XS</a> which runs on the ESP8266. Hopefully, we will see more soon.</p>
-<p><em>TC-53's emerging standard is still in flux so understand there is some risk of changes in the future</em></p>
+<p><em>TC-53's emerging standard is still in flux so know there is some risk of changes in the future, but hopefully those wil be abstracted away by j5e</em></p>
 <p><strong>j5e in action</strong></p>
 <pre class="prettyprint source lang-js"><code>import LED from &quot;@j5e/led&quot;;
 

@@ -24,8 +24,8 @@ import LED from "@j5e/led";
 (async function() {
 
   const led = await new LED(13);
-  // Yay, the I/O is ready! Now I can run my program
 
+  // Yay, the I/O is ready! Now I can run my program
   led.blink(500);
 
 })();
@@ -37,9 +37,9 @@ Maybe one day we'll be able to use await at the top level without the AIIFE and 
   // ...
 })();
 ````
-If you're unclear about this bit of computer vomit, perhaps this breakdown will help...
+If you're unclear about this bit of computer vomit, perhaps a breakdown will help...
 
-It is commont to assign function expression to a variable in the global namespace, and then call it later:
+It is common to assign function expression to a variable in the global namespace, and then call it later:
 ````js
 // Function expression assigned to global "foo"
 const foo = function() { 
@@ -55,7 +55,7 @@ function() {
   // ...
 };
 ````
-But that throws an error because we can't have an anonymous function floating around in the global namespace. To get aroung this we wrap it with a grouping operator:
+But that throws an error because we can't have an anonymous function floating around. To get aroung this we wrap it with a grouping operator:
 
 ````js
 (function() { 
