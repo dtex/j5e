@@ -27,7 +27,7 @@ mkdir myProject
 cd myProject
 ````
 
-#### 6. Create a manifest.json file in your working directory:
+#### 6. Create a ```manifest.json``` file in your working directory:
 
 ````js
 {
@@ -38,7 +38,7 @@ cd myProject
   "modules": {
     "*": [
       "./main"
-		]
+    ]
   }
 }
 ````
