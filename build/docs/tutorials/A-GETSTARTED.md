@@ -7,7 +7,7 @@ cd ~/Projects
 git clone https://github.com/dtex/j5e
 ````
 
-#### 3. Setup the ```j5e``` environment variable to point at the ```dist/moddable``` directory in your copy of the j5e repo
+#### 3. Setup the ```j5e``` environment variable to point at the ```j5e/dist/moddable``` directory in your copy of the j5e repo
 
 ````bash
 export j5e="/Users/<user>/Projects/j5e/dist/moddable"
@@ -31,15 +31,15 @@ cd myProject
 
 ````js
 {
-	"include": [
-		"$(MODDABLE)/modules/io/manifest.json",
-		"$(j5e)/manifest.json"
-	],
-	"modules": {
-		"*": [
-			"./main"
+  "include": [
+    "$(MODDABLE)/modules/io/manifest.json",
+    "$(j5e)/manifest.json"
+  ],
+  "modules": {
+    "*": [
+      "./main"
 		]
-	}
+  }
 }
 ````
 
@@ -49,12 +49,12 @@ cd myProject
 import LED from "@j5e/led";
 
 (async function() {
-	const led = await new LED(14);
-	led.blink();
+  const led = await new LED(14);
+  led.blink();
 })();
 ````
 
-#### 8. Now you're ready to build your program (refer back to the [Moddable docs](https://github.com/Moddable-OpenSource/moddable/tree/public/examples#building-apps) for help with this):
+#### 8. Now you're ready to build your program (refer to the [Moddable docs](https://github.com/Moddable-OpenSource/moddable/tree/public/examples#building-apps) for help with this):
 
 ````bash
 mcconfig -d -m -p esp

@@ -103,7 +103,7 @@
 <pre class="prettyprint source lang-bash"><code>cd ~/Projects
 git clone https://github.com/dtex/j5e
 </code></pre>
-<h4>3. Setup the <code>j5e</code> environment variable to point at the <code>dist/moddable</code> directory in your copy of the j5e repo</h4>
+<h4>3. Setup the <code>j5e</code> environment variable to point at the <code>j5e/dist/moddable</code> directory in your copy of the j5e repo</h4>
 <pre class="prettyprint source lang-bash"><code>export j5e=&quot;/Users/&lt;user>/Projects/j5e/dist/moddable&quot;
 </code></pre>
 <h4>4. Create a working directory (You can call it whatever you want):</h4>
@@ -115,26 +115,26 @@ mkdir myProject
 </code></pre>
 <h4>6. Create a manifest.json file in your working directory:</h4>
 <pre class="prettyprint source lang-js"><code>{
-	&quot;include&quot;: [
-		&quot;$(MODDABLE)/modules/io/manifest.json&quot;,
-		&quot;$(j5e)/manifest.json&quot;
-	],
-	&quot;modules&quot;: {
-		&quot;*&quot;: [
-			&quot;./main&quot;
+  &quot;include&quot;: [
+    &quot;$(MODDABLE)/modules/io/manifest.json&quot;,
+    &quot;$(j5e)/manifest.json&quot;
+  ],
+  &quot;modules&quot;: {
+    &quot;*&quot;: [
+      &quot;./main&quot;
 		]
-	}
+  }
 }
 </code></pre>
 <h4>7. Create your <code>main.js</code> program file. Here's the ubquitous &quot;Hello World&quot; for hardware to get you started:</h4>
 <pre class="prettyprint source lang-js"><code>import LED from &quot;@j5e/led&quot;;
 
 (async function() {
-	const led = await new LED(14);
-	led.blink();
+  const led = await new LED(14);
+  led.blink();
 })();
 </code></pre>
-<h4>8. Now you're ready to build your program (refer back to the <a href="https://github.com/Moddable-OpenSource/moddable/tree/public/examples#building-apps">Moddable docs</a> for help with this):</h4>
+<h4>8. Now you're ready to build your program (refer to the <a href="https://github.com/Moddable-OpenSource/moddable/tree/public/examples#building-apps">Moddable docs</a> for help with this):</h4>
 <pre class="prettyprint source lang-bash"><code>mcconfig -d -m -p esp
 </code></pre></article>
 		</section>
