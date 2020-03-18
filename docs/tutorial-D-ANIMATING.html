@@ -98,7 +98,64 @@
 							<li class="active">j5e's Timeline and Tweening Tools</li>
 						</ol>
 		<section class="tutorial-section">
-			<article></article>
+			<article><p>Ideally robotics or IoT projects monitor and respond to changes in their environment, but sometimes we just want to follow a predetermined set of rules without regard to input. Think of the animatronic characters you've seen at theme park and sub par pizza restaurants. The Animation class allows you to do exactly that.</p>
+<p>The class constructs objects that represent a single Animation. An Animation consists of a target and an array of segments. A target is the device or list of devices that are being animated. A segment is a short modular animation sequence (i.e. sit, stand, walk, wave, etc). An animation's segments are synchronous and run first-in, first-out.</p>
+<p>Some things that can be animated:</p>
+<ul>
+<li>Servos</li>
+<li>LEDs</li>
+<li>RGB LEDs</li>
+</ul>
+<p>Before you start creating animcations you should be familiar with the API of the device(s) you will be conrolling. You don't have to call the device methods directly but if you haven't used them before this would be a hard way to learn.</p>
+<h2>Instantiate an Animation</h2>
+<p>Instantiating an Animation is simple. Invoke the constructor and pass in the instances of the devices you want to control in an array. For example:</p>
+<pre class="prettyprint source lang-js"><code>// Create an animation using three servos
+import Servo from &quot;@j5e/servo&quot;;
+import Animation from &quot;@j5e/animation&quot;;
+
+(async function() {
+  const coxa = new Servo(12);
+  const femur = new Servo(13);
+  const tibia = new Servo(14);
+
+  const leg = new Animation([coxa, femur, tibia]);
+
+  // Now we can animate the leg
+
+})();
+</code></pre>
+<p>The devices you pass in are called the &quot;Target&quot; and you can think of them as the actors on your stage. There will be a practical limit on how many things you can actually control while still achieving reasonable performance, but that's dependent on your microcontroller and all the other things happening in your program.</p>
+<h2>Enqueue a Segment</h2>
+<p>Now you need to make your Animation instance do something. You do these by enqueuing a segment or a series of segments. A segment is a short bit of an animation that represents a discreet, hopefully reusable sequence of actions. For example, you might have a walking robot with a Segment called &quot;stand&quot;. This Segment would describe all the movements that need to be made by every joints in order for your robot to stand. Let's do that for the single leg we instantiated above. The stand Segment for that leg might look like this:</p>
+<pre class="prettyprint source lang-js"><code>const stand = {
+  duration: 2000,
+  cuePoints: [0, 0.5, 1.0],
+  keyFrames: [ 
+    [{degrees: 0}, {degrees: 135}, {degrees: 180}],
+    [{degrees: 0}, {degrees: 90}, {degrees: 180}],
+    [{degrees: 0}, {degrees: 45}, {degrees: 180}]
+  ]
+};
+</code></pre>
+<p>Note that a segment is just a JavaScript Object literal. It can be defined statically like we've done here or with some clever code that will define a unique segment based on some input parameters (cool huh?). Here's a breakdown of all the properties you can include on an animation segment:</p>
+<ul>
+<li><strong>target:</strong> Overrides the target passed when the Animation was created</li>
+<li><strong>duration:</strong> Duration of the segment in milliseconds (default 1000)</li>
+<li><strong>cuePoints:</strong> Array of values from 0.0 to 1.0 representing the beginning and end of the animation respectively (default [0, 1])</li>
+<li><strong>keyFrames:</strong> A 1 or 2 dimensional array of device positions over time. See more on keyFrames below. (required)</li>
+<li><strong>easing:</strong> An easing function from ease-component to apply to the playback head on the timeline. See the ease-component docs for a list of available easing functions (default: &quot;linear&quot;)</li>
+<li><strong>loop:</strong> When true, segment will loop until animation.next() or animation.stop() is called (default: false)</li>
+<li><strong>loopback:</strong> The cuePoint that the animation will loop back to. If the animation is playing in reverse, this is the point at which the animation will &quot;loop back&quot; to 1.0 (default: 0.0)</li>
+<li><strong>metronomic:</strong> Will play to cuePoint[1] then play in reverse to cuePoint[0]. If the segment is set to loop then the animation will play back and forth until next(), pause() or stop() are called (default: false)</li>
+<li><strong>progress:</strong> The starting point for the playback head (default 0.0)</li>
+<li><strong>currentSpeed:</strong> Controls the speed of the playback head and scales the calculated duration of this and all subsequent segments until it is changed by another segment or a call to the speed() method (default: 1.0)</li>
+<li><strong>fps:</strong> The maximum frames per second for the segment (default: 60)</li>
+<li><strong>onstart:</strong> function to execute when segment is started (default: none)</li>
+<li><strong>onpause:</strong> function to execute when segment is paused (default: none)</li>
+<li><strong>onstop:</strong> function to execute when animation is stopped (default: none)</li>
+<li><strong>oncomplete:</strong> function to execute when segment is completed (default: none)</li>
+<li><strong>onloop:</strong> function to execute when segment loops (default: none)</li>
+</ul></article>
 		</section>
 			</div>
 				<div class="col-md-3 side-content">
