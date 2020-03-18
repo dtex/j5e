@@ -1,14 +1,14 @@
-Ideally robotics or IoT projects monitor and respond to changes in their environment, but sometimes we just want to follow a predetermined set of rules without regard to input. Think of the animatronic characters you've seen at theme park and sub par pizza restaurants. The Animation class allows you to do exactly that.
+Ideally robotics or IoT projects monitor and respond to changes in their environment, but sometimes we just want to follow a predetermined set of rules without regard to input. Think of the animatronic characters you've seen at theme parks and sub-par pizza restaurants. The Animation class allows you to do exactly that.
 
-The class constructs objects that represent a single Animation. An Animation consists of a target and an array of segments. A target is the device or list of devices that are being animated. A segment is a short modular animation sequence (i.e. sit, stand, walk, wave, etc). An animation's segments are synchronous and run first-in, first-out.
+The class constructs objects that represent a single Animation. An Animation consists of a target and a queue. A target is the device or list of devices that are being animated. A queue is an array of short, modular sequences (i.e. blink, fade, sit, stand, walk, etc). These sequences are called "segments" and are pushed onto the animation queue. Segments in the queue are synchronous and run first-in, first-out.
 
-Some things that can be animated:
+Things that can be animated:
 
 * Servos
 * LEDs
 * RGB LEDs
 
-Before you start creating animcations you should be familiar with the API of the device(s) you will be conrolling. You don't have to call the device methods directly but if you haven't used them before this would be a hard way to learn.
+Before you start creating animcations you should be familiar with the API of the device(s) you will be conrolling. You don't have to call the device methods directly but if you haven't used them before this will be a hard way to learn about them.
 
 ## Instantiate an Animation
 Instantiating an Animation is simple. Invoke the constructor and pass in the instances of the devices you want to control in an array. For example:
@@ -33,7 +33,7 @@ import Animation from "@j5e/animation";
 The devices you pass in are called the "Target" and you can think of them as the actors on your stage. There will be a practical limit on how many things you can actually control while still achieving reasonable performance, but that's dependent on your microcontroller and all the other things happening in your program.
 
 ## Enqueue a Segment
-Now you need to make your Animation instance do something. You do these by enqueuing a segment or a series of segments. A segment is a short bit of an animation that represents a discreet, hopefully reusable sequence of actions. For example, you might have a walking robot with a Segment called "stand". This Segment would describe all the movements that need to be made by every joints in order for your robot to stand. Let's do that for the single leg we instantiated above. The stand Segment for that leg might look like this:
+Now you need to make your Animation instance do something. You do this by enqueuing a segment or a series of segments. A segment is a short bit of an animation that represents a discreet, hopefully reusable sequence of actions. For example, you might have a walking robot with a Segment called "stand". This Segment would describe all the movements that need to be made by every joint in order for your robot to stand. Let's do that for the single leg we instantiated above. The stand Segment for that leg might look like this:
 
 ````js
 const stand = {
