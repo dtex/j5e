@@ -44,36 +44,30 @@ class RGB {
    * <caption>Using pin numbers</caption>
    * import RGB from "@j5e/rgb";
    *
-   * (async function() {
-   *   const rgb = await new RGB([13, 12, 14]);
-	 *   rgb.color("#663399");
-	 *   rgb.blink();
-   * })();
+   * const rgb = await new RGB([13, 12, 14]);
+	 * rgb.color("#663399");
+	 * rgb.blink();
    *
    * @example
    * <caption>Using pin identifiers</caption>
    * import RGB from "@j5e/rgb";
    *
-   * (async function() {
-   *   const rgb = await new RGB(["A1", "A3", "A4"]);
-	 *   rgb.color("#663399");
-	 *   rgb.blink();
-   * })();
+   * const rgb = await new RGB(["A1", "A3", "A4"]);
+	 * rgb.color("#663399");
+	 * rgb.blink();
    *
    * @example
    * <caption>Using io option objects</caption>
    * import RGB from "@j5e/rgb";
    * import PCA9685 from "PCA9685Expander"
    *
-   * (async function() {
-   *   const rgb = await new RGB([
-   *     { pin: 0, io: PCA9685 },
-   *     { pin: 1, io: PCA9685 },
-   *     { pin: 2, io: PCA9685 }
-   *   ]);
-	 *   rgb.color("#663399");
-	 *   rgb.blink();
-   * })();
+   * const rgb = await new RGB([
+   *   { pin: 0, io: PCA9685 },
+   *   { pin: 1, io: PCA9685 },
+   *   { pin: 2, io: PCA9685 }
+   * ]);
+	 * rgb.color("#663399");
+	 * rgb.blink();
    * 
    */
   constructor(io, device) {
@@ -189,59 +183,47 @@ class RGB {
    * <caption>Use a hex value to make it purple</caption>
    * import RGB from "@j5e/rgb";
    *
-   * (async function() {
-   *   const rgb = await new RGB([13, 12, 14]);
-	 *   rgb.color("#663399");
-   * })();
+   * const rgb = await new RGB([13, 12, 14]);
+	 * rgb.color("#663399");
    * 
    * @example
    * <caption>Use an RGB String to make it purple</caption>
    * import RGB from "@j5e/rgb";
    *
-   * (async function() {
-   *   const rgb = await new RGB([13, 12, 14]);
-	 *   rgb.color("rgb(102, 51, 153)");
-   * })();
+   * const rgb = await new RGB([13, 12, 14]);
+	 * rgb.color("rgb(102, 51, 153)");
    * 
    * @example
    * <caption>Use an RGBA String to make it darker purple</caption>
    * import RGB from "@j5e/rgb";
    *
-   * (async function() {
-   *   const rgb = await new RGB([13, 12, 14]);
-	 *   rgb.color("rgba(102, 51, 153, 50%)");
-   * })();
+   * const rgb = await new RGB([13, 12, 14]);
+	 * rgb.color("rgba(102, 51, 153, 50%)");
    * 
    * @example
    * <caption>Use an array to make it purple</caption>
    * import RGB from "@j5e/rgb";
    *
-   * (async function() {
-   *   const rgb = await new RGB([13, 12, 14]);
-	 *   rgb.color([408, 204, 612]); // Assumes 10-bit
-   * })();
+   * const rgb = await new RGB([13, 12, 14]);
+	 * rgb.color([408, 204, 612]); // Assumes 10-bit
    * 
    * @example
    * <caption>Use an object to make it purple</caption>
    * import RGB from "@j5e/rgb";
    *
-   * (async function() {
-   *   const rgb = await new RGB([13, 12, 14]);
-	 *   rgb.color({
-   *     red: 102, 
-   *     green: 51, 
-   *     blue: 153
-   *   });
-   * })();
+   * const rgb = await new RGB([13, 12, 14]);
+	 * rgb.color({
+   *   red: 102, 
+   *   green: 51, 
+   *   blue: 153
+   * });
    * 
    * @example
    * <caption>Use seperate Red, Green, and Blue arguments to make it purple</caption>
    * import RGB from "@j5e/rgb";
    *
-   * (async function() {
-   *   const rgb = await new RGB([13, 12, 14]);
-	 *   rgb.color(408, 204, 612); // Assumes 10-bit
-   * })();
+   * const rgb = await new RGB([13, 12, 14]);
+	 * rgb.color(408, 204, 612); // Assumes 10-bit
    */
   color(red, green, blue) {
     
@@ -283,10 +265,8 @@ class RGB {
    * <caption>Make it on</caption>
    * import RGB from "@j5e/rgb";
    *
-   * (async function() {
-   *   const rgb = await new RGB([13, 12, 14]);
-	 *   rgb.on(); // Default color is white
-   * })();
+   * const rgb = await new RGB([13, 12, 14]);
+	 * rgb.on(); // Default color is white
    */
   on() {
     let colors;
@@ -312,14 +292,12 @@ class RGB {
    * import RGB from "@j5e/rgb";
    * import {timer} from "@j5e/fn";
    *
-   * (async function() {
-   *   const rgb = await new RGB([13, 12, 14]);
-	 *   rgb.color("#663399");
+   * const rgb = await new RGB([13, 12, 14]);
+	 * rgb.color("#663399");
    * 
-   *   time.setTimeout(function() {
-   *     rgb.off();
-   *   }, 5000);
-   * })();
+   * time.setTimeout(function() {
+   *   rgb.off();
+   * }, 5000);
    */
   off() {
     
@@ -350,14 +328,12 @@ class RGB {
    * import RGB from "@j5e/rgb";
    * import {timer} from "@j5e/fn";
    *
-   * (async function() {
-   *   const rgb = await new RGB([13, 12, 14]);
-	 *   rgb.toggle(); // Turns RGB LED on
+   * const rgb = await new RGB([13, 12, 14]);
+	 * rgb.toggle(); // Turns RGB LED on
    * 
-   *   time.setTimeout(function() {
-   *     rgb.toggle(); // Turns it off
-   *   }, 5000);
-   * })();
+   * time.setTimeout(function() {
+   *   rgb.toggle(); // Turns it off
+   * }, 5000);
    */
   toggle() {
     return this[this.isOn ? "off" : "on"]();
@@ -372,21 +348,17 @@ class RGB {
    * <caption>Make it blink</caption>
    * import RGB from "@j5e/rgb";
    *
-   * (async function() {
-   *   const rgb = await new RGB([13, 12, 14]);
-	 *   rgb.color("#663399");
-   *   rgb.blink();
-   * }();
+   * const rgb = await new RGB([13, 12, 14]);
+	 * rgb.color("#663399");
+   * rgb.blink();
    * 
    * @example
    * <caption>Make it blink slowly</caption>
    * import RGB from "@j5e/rgb";
    *
-   * (async function() {
-   *   const rgb = await new RGB([13, 12, 14]);
-	 *   rgb.color("#663399");
-   *   rgb.blink(5000);
-   * })();
+   * const rgb = await new RGB([13, 12, 14]);
+	 * rgb.color("#663399");
+   * rgb.blink(5000);
    */
   blink(duration=100, callback) {
     // Avoid traffic jams
@@ -417,30 +389,24 @@ class RGB {
    * <caption>Fade on to purple</caption>
    * import RGB from "@j5e/rgb";
    * 
-   * (async function() {
-   *   const rgb = await new RGB([13, 12, 14]);
-   *   rgb.fade("#663399");
-   * })();
+   * const rgb = await new RGB([13, 12, 14]);
+   * rgb.fade("#663399");
    * 
    * @example
    * <caption>Fade on to purple over 3 seconds</caption>
    * import RGB from "@j5e/rgb";
    * 
-   * (async function() {
-   *   const rgb = await new RGB([13, 12, 14]);
-   *   rgb.fade("#663399", 3000);
-   * })();
+   * const rgb = await new RGB([13, 12, 14]);
+   * rgb.fade("#663399", 3000);
    * 
    * @example
    * <caption>Fade on to purple over 3 seconds and then blink</caption>
    * import RGB from "@j5e/rgb";
    * 
-   * (async function() {
-   *   const rgb = await new RGB([13, 12, 14]);
-   *   rgb.fade("#663399", 3000, function() {
-   *     rgb.blink();
-   *   });
-   * })();
+   * const rgb = await new RGB([13, 12, 14]);
+   * rgb.fade("#663399", 3000, function() {
+   *   rgb.blink();
+   * });
    */
   fade(val, time=1000, callback) {
     
@@ -480,10 +446,8 @@ class RGB {
    * <caption>Fade an RGB LED to white over half a second</caption>
    * import RGB from "@j5e/rgb";
    * 
-   * (async function() {
-   *   const rgb = await new RGB([13, 12, 14]);
-   *   rgb.fadeIn(500);
-   * })();
+   * const rgb = await new RGB([13, 12, 14]);
+   * rgb.fadeIn(500);
    */
   fadeIn(time=1000, callback) {
     return this.fade([this.HIGH.red, this.HIGH.green, this.HIGH.blue], time, callback);
@@ -498,11 +462,9 @@ class RGB {
    * <caption>Fade out an RGB LED over half a second
    * import RGB from "@j5e/rgb";
    * 
-   * (async function() {
-   *   const rgb = await new RGB([13, 12, 14]);
-   *   rgb.color("#663399");
-   *   rgb.fadeOut(500);
-   * })();
+   * const rgb = await new RGB([13, 12, 14]);
+   * rgb.color("#663399");
+   * rgb.fadeOut(500);
    */
   fadeIn(time=1000, callback) {
     return this.fade([this.LOW.red, this.LOW.green, this.LOW.blue], time, callback);
@@ -517,21 +479,17 @@ class RGB {
    * <caption>Make it pulse</caption>
    * import RGB from "@j5e/rgb";
    *
-   * (async function() {
-   *   const rgb = await new RGB([13, 12, 14]);
-	 *   rgb.color("#663399");
-   *   rgb.pulse();
-   * })();
+   * const rgb = await new RGB([13, 12, 14]);
+	 * rgb.color("#663399");
+   * rgb.pulse();
    * 
    * @example
    * <caption>Make it pulse slowly</caption>
    * import RGB from "@j5e/rgb";
    *
-   * (async function() {
-   *   const rgb = await new RGB([13, 12, 14]);
-	 *   rgb.color("#663399");
-   *   rgb.pulse(5000);
-   * })();
+   * const rgb = await new RGB([13, 12, 14]);
+	 * rgb.color("#663399");
+   * rgb.pulse(5000);
    */
   pulse(time=1000, callback) {
     
@@ -568,16 +526,14 @@ class RGB {
    * <caption>Animate an RGB LED using an animation segment options object</caption>
    * import RGB from "@j5e/rgb";
    * 
-   * (async function() {
-   *   const rgb = await new RGB([13, 12, 14]);
-   *   rgb.animate({
-   *     duration: 4000,
-	 *     cuePoints: [0,  0.33, 0.66, 1],
-	 *     keyFrames: ["#000000", "#FF0000", "#00FFFF", "#FFFFFF"],
-	 *     loop: true,
-   *     metronomic: true
-   *   });
-   * })();
+   * const rgb = await new RGB([13, 12, 14]);
+   * rgb.animate({
+   *   duration: 4000,
+	 *   cuePoints: [0,  0.33, 0.66, 1],
+	 *   keyFrames: ["#000000", "#FF0000", "#00FFFF", "#FFFFFF"],
+	 *   loop: true,
+   *   metronomic: true
+   * });
    */
   animate(options) {
     // Avoid traffic jams
@@ -598,14 +554,12 @@ class RGB {
    * import RGB from "@j5e/rgb";
    * import {timer} from "@j5e/fn";
    * 
-   * (async function() {
-   *   const rgb = await new RGB([13, 12, 14]);
-	 *   rgb.color("#663399");
-   *   rgb.pulse(250);
-   *   timer.setTimeout(function() {
-   *     rgb.stop();
-   *   }, 5000);
-   * })();
+   * const rgb = await new RGB([13, 12, 14]);
+	 * rgb.color("#663399");
+   * rgb.pulse(250);
+   * timer.setTimeout(function() {
+   *   rgb.stop();
+   * }, 5000);
    */
   stop() {
   

@@ -365,19 +365,15 @@
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
 			
-			(async function() {
-			  const servo &#x3D; await new Servo(12);
-			  servo.sweep();
-			})();</code></pre>
+			const servo &#x3D; await new Servo(12);
+			servo.sweep();</code></pre>
 					</div>
 					<div class="example-caption"><p>Move a continuos rotation servo forward</p></div>
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
 			
-			(async function() {
-			  const servo &#x3D; await new Servo(12, {type: &quot;continuous&quot;});
-			  servo.cw();
-			})();</code></pre>
+			const servo &#x3D; await new Servo(12, {type: &quot;continuous&quot;});
+			servo.cw();</code></pre>
 					</div>
 			</div>			<div class="callout callout-warning"><h5>Fires</h5>		<form class="form-horizontal fires">
 							<div class="form-group">
@@ -414,7 +410,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-73">line 73</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-69">line 69</a></p>
 								</div>
 							</div>
 			
@@ -490,34 +486,28 @@
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
 			
-			(async function() {
-			  const servo &#x3D; await new Servo(12);
-			  servo.to(180);
-			})();</code></pre>
+			const servo &#x3D; await new Servo(12);
+			servo.to(180);</code></pre>
 					</div>
 					<div class="example-caption"><p>Move a servo to 180° over one second</p></div>
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
 			
-			(async function() {
-			  const servo &#x3D; await new Servo(12);
-			  servo.to(180, 1000);
-			})();</code></pre>
+			const servo &#x3D; await new Servo(12);
+			servo.to(180, 1000);</code></pre>
 					</div>
 					<div class="example-caption"><p>Move a servo to 180° using an animation segment object</p></div>
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
 			import { inOutQuad } from &quot;@j5e/easing&quot;;
 			
-			(async function() {
-			  const servo &#x3D; await new Servo(12);
-			  servo.to({
-			    duration: 1000,
-			    cuePoints: [0, 1.0],
-			    keyFrames: [ null, 180 ],
-			    easing: inOutQuad
-			  });
-			})();</code></pre>
+			const servo &#x3D; await new Servo(12);
+			servo.to({
+			  duration: 1000,
+			  cuePoints: [0, 1.0],
+			  keyFrames: [ null, 180 ],
+			  easing: inOutQuad
+			});</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -539,7 +529,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-220">line 220</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-210">line 210</a></p>
 								</div>
 							</div>
 			
@@ -599,21 +589,17 @@
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
 			
-			(async function() {
-			  const servo &#x3D; await new Servo(12);
-			  // The servo&#x27;s default position is 90 degrees
-			  servo.step(30);
-			})();</code></pre>
+			const servo &#x3D; await new Servo(12);
+			// The servo&#x27;s default position is 90 degrees
+			servo.step(30);</code></pre>
 					</div>
 					<div class="example-caption"><p>Move a servo to 120° over one second</p></div>
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
 			
-			(async function() {
-			  const servo &#x3D; await new Servo(12);
-			  // The servo&#x27;s default position is 90 degrees
-			  servo.step(30, 1000);
-			})();</code></pre>
+			const servo &#x3D; await new Servo(12);
+			// The servo&#x27;s default position is 90 degrees
+			servo.step(30, 1000);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -635,7 +621,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-325">line 325</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-311">line 311</a></p>
 								</div>
 							</div>
 			
@@ -687,19 +673,15 @@
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
 			
-			(async function() {
-			  const servo &#x3D; await new Servo(12);
-			  servo.min();
-			})();</code></pre>
+			const servo &#x3D; await new Servo(12);
+			servo.min();</code></pre>
 					</div>
 					<div class="example-caption"><p>Move a servo to 0° over one second</p></div>
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
 			
-			(async function() {
-			  const servo &#x3D; await new Servo(12);
-			  servo.min(1000);
-			})();</code></pre>
+			const servo &#x3D; await new Servo(12);
+			servo.min(1000);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -721,7 +703,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-351">line 351</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-333">line 333</a></p>
 								</div>
 							</div>
 			
@@ -773,19 +755,15 @@
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
 			
-			(async function() {
-			  const servo &#x3D; await new Servo(12);
-			  servo.max();
-			})();</code></pre>
+			const servo &#x3D; await new Servo(12);
+			servo.max();</code></pre>
 					</div>
 					<div class="example-caption"><p>Move a servo to 180° over one second</p></div>
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
 			
-			(async function() {
-			  const servo &#x3D; await new Servo(12);
-			  servo.max(1000);
-			})();</code></pre>
+			const servo &#x3D; await new Servo(12);
+			servo.max(1000);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -807,7 +785,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-377">line 377</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-355">line 355</a></p>
 								</div>
 							</div>
 			
@@ -860,28 +838,24 @@
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
 			import { timer } from &quot;@j5e/fn&quot;;
 			
-			(async function() {
-			  const servo &#x3D; await new Servo(12);
-			  servo.to(180);
+			const servo &#x3D; await new Servo(12);
+			servo.to(180);
 			
-			  timer.setTimeout(function() {
-			    servo.center();
-			  }, 1000);
-			})();</code></pre>
+			timer.setTimeout(function() {
+			  servo.center();
+			}, 1000);</code></pre>
 					</div>
 					<div class="example-caption"><p>Move a servo to 180° and then back to 90° over one second</p></div>
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
 			import { timer } from &quot;@j5e/fn&quot;;
 			
-			(async function() {
-			  const servo &#x3D; await new Servo(12);
-			  servo.to(180);
+			const servo &#x3D; await new Servo(12);
+			servo.to(180);
 			
-			  timer.setTimeout(function() {
-			    servo.center(1000);
-			  }, 1000);
-			})();</code></pre>
+			timer.setTimeout(function() {
+			  servo.center(1000);
+			}, 1000);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -903,7 +877,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-413">line 413</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-387">line 387</a></p>
 								</div>
 							</div>
 			
@@ -933,14 +907,12 @@
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
 			import { timer } from &quot;@j5e/fn&quot;;
 			
-			(async function() {
-			  const servo &#x3D; await new Servo(12);
-			  servo.to(180);
+			const servo &#x3D; await new Servo(12);
+			servo.to(180);
 			
-			  timer.setTimeout(function() {
-			    servo.home();
-			  }, 1000);
-			})();</code></pre>
+			timer.setTimeout(function() {
+			  servo.home();
+			}, 1000);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -962,7 +934,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-434">line 434</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-406">line 406</a></p>
 								</div>
 							</div>
 			
@@ -1012,24 +984,20 @@
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
 			
-			(async function() {
-			  const servo &#x3D; await new Servo(12);
-			  servo.sweep([10, 170]));
-			})();
+			const servo &#x3D; await new Servo(12);
+			servo.sweep([10, 170]));
 			
 			example
 			&lt;caption&gt;Sweep a servo back and forth between 10° to 170° with inOutCirc easing&lt;/caption&gt;
 			import Servo from &quot;@j5e/servo&quot;;
 			import {inOutCirc} from &quot;@j5e/easing&quot;;
 			
-			(async function() {
-			  const servo &#x3D; await new Servo(12);
-			  servo.sweep({
-			    keyFrames: [10, 170],
-			    cuePoints: [0, 1],
-			    easing: inOutCirc
-			  });
-			})();</code></pre>
+			const servo &#x3D; await new Servo(12);
+			servo.sweep({
+			  keyFrames: [10, 170],
+			  cuePoints: [0, 1],
+			  easing: inOutCirc
+			});</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -1051,7 +1019,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-465">line 465</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-433">line 433</a></p>
 								</div>
 							</div>
 			
@@ -1073,14 +1041,12 @@
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
 			
-			(async function() {
-			  const servo &#x3D; await new Servo(12);
-			  servo.sweep([10, 170]));
+			const servo &#x3D; await new Servo(12);
+			servo.sweep([10, 170]));
 			
-			  timer.setTimeout(function() {
-			    servo.stop();
-			  }, 2000);
-			})();</code></pre>
+			timer.setTimeout(function() {
+			  servo.stop();
+			}, 2000);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -1102,7 +1068,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-510">line 510</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-476">line 476</a></p>
 								</div>
 							</div>
 			
@@ -1154,19 +1120,15 @@
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
 			
-			(async function() {
-			  const servo &#x3D; await new Servo(12, {type: &quot;continuous&quot;});
-			  servo.cw();
-			})();</code></pre>
+			const servo &#x3D; await new Servo(12, {type: &quot;continuous&quot;});
+			servo.cw();</code></pre>
 					</div>
 					<div class="example-caption"><p>Move a continuos rotation servo clockwise at half speed</p></div>
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
 			
-			(async function() {
-			  const servo &#x3D; await new Servo(12, {type: &quot;continuous&quot;});
-			  servo.cw(0.5);
-			})();</code></pre>
+			const servo &#x3D; await new Servo(12, {type: &quot;continuous&quot;});
+			servo.cw(0.5);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -1188,7 +1150,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-549">line 549</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-511">line 511</a></p>
 								</div>
 							</div>
 			
@@ -1240,19 +1202,15 @@
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
 			
-			(async function() {
-			  const servo &#x3D; await new Servo(12, {type: &quot;continuous&quot;});
-			  servo.ccw();
-			})();</code></pre>
+			const servo &#x3D; await new Servo(12, {type: &quot;continuous&quot;});
+			servo.ccw();</code></pre>
 					</div>
 					<div class="example-caption"><p>Move a continuos rotation servo counter-clockwise at half speed</p></div>
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
 			
-			(async function() {
-			  const servo &#x3D; await new Servo(12, {type: &quot;continuous&quot;});
-			  servo.ccw(0.5);
-			})();</code></pre>
+			const servo &#x3D; await new Servo(12, {type: &quot;continuous&quot;});
+			servo.ccw(0.5);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -1274,7 +1232,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-577">line 577</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-535">line 535</a></p>
 								</div>
 							</div>
 			

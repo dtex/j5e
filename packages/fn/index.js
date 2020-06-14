@@ -46,13 +46,11 @@ export function normalizeDevice(deviceOpts={}) {
  * @example
  * const waitFor = (ms) => new Promise(r => setTimeout(r, ms));
  * 
- * (async function() {
- *   await asyncForEach([1, 2, 3], async (num) => {
- *     await waitFor(50);
- *     console.log(num);
- *   });
- *   console.log('Done');
- * })();
+ * await asyncForEach([1, 2, 3], async (num) => {
+ *   await waitFor(50);
+ *   console.log(num);
+ * });
+ * console.log('Done');
  */
 export async function asyncForEach(array, callback) {
   for (let index = 0; index < array.length; index++) {
@@ -122,13 +120,11 @@ export const timer = {
    * import LED from "@j5e/led";
    * import {timer} from "@j5e/fn";
    *
-   * (async function() {
-   *   const led = await new LED(12);
-   *   
-   *   timer.setInterval(function() {
-   *     led.toggle();
-   *   }, 100)
-   * })();
+   * const led = await new LED(12);
+   * 
+   * timer.setInterval(function() {
+   *   led.toggle();
+   * }, 100);
    */ 
   setInterval(callback, duration) {
     if (global && global.setInterval) {
@@ -149,17 +145,15 @@ export const timer = {
    * import LED from "@j5e/led";
    * import {timer} from "@j5e/fn";
    *
-   * (async function() {
-   *   const led = await new LED(12);
-   *   
-   *   let myTimer = timer.setInterval(function() {
-   *     led.toggle();
-   *   }, 100)
+   * const led = await new LED(12);
    * 
-   *   timer.setTimeout(function() {
-   *     timer.clearInterval(myTimer);
-   *   }, 1000);
-   * })();
+   * let myTimer = timer.setInterval(function() {
+   *   led.toggle();
+   * }, 100)
+   * 
+   * timer.setTimeout(function() {
+   *   timer.clearInterval(myTimer);
+   * }, 1000);
    */ 
   clearInterval(identifier) {
     if (global && global.clearInterval) {
@@ -182,14 +176,12 @@ export const timer = {
    * import LED from "@j5e/led";
    * import {timer} from "@j5e/fn";
    *
-   * (async function() {
-   *   const led = await new LED(12);
-   *   led.blink();
+   * const led = await new LED(12);
+   * led.blink();
    * 
-   *   timer.setTimeout(function() {
-   *     led.stop();
-   *   }, 1000);
-   * })();
+   * timer.setTimeout(function() {
+   *   led.stop();
+   * }, 1000);
    */ 
   setTimeout(callback, duration) {
     if (global && global.setTimeout) {
@@ -216,3 +208,14 @@ export const timer = {
   }
 
 };
+
+/** left Pad a Number with zeros
+ * @param {number} value - An input value
+ * @param {number} length - The desired length
+ * @return {String} The padded string
+ * @example
+ * pad(3, 2); // -> "02"
+ */
+export function pad(value, length) {
+  return Array(length - String(value).length + 1).join("0") + value;
+}

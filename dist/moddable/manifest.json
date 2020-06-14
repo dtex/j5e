@@ -3,13 +3,16 @@
   "modules": {
     "*": [],
     "@j5e/animation": "$(j5e)/animation/*",
+    "@j5e/color": "$(j5e)/color/*",
     "@j5e/easing": "$(j5e)/easing/*",
     "@j5e/event": "$(j5e)/event/*",
     "@j5e/fn": "$(j5e)/fn/*",
+    "@j5e/isl29125": "$(j5e)/isl29125/*",
     "@j5e/led": "$(j5e)/led/*",
     "@j5e/rgb": "$(j5e)/rgb/*",
     "@j5e/servo": "$(j5e)/servo/*",
-    "@j5e/switch": "$(j5e)/switch/*"
+    "@j5e/switch": "$(j5e)/switch/*",
+    "@j5e/tcs34725": "$(j5e)/tcs34725/*"
   },
   "preload": [],
   "platforms": {

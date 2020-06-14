@@ -35,31 +35,25 @@ class LED {
    * <caption>Using a pin number</caption>
    * import LED from "@j5e/led";
    *
-   * (async function() {
-   *   const led = await new LED(12);
-   *   led.on();
-   * })();
+   * const led = await new LED(12);
+   * led.on();
    * 
    * @example
    * <caption>Using a pin identifier</caption>
    * import LED from "@j5e/led";
    *
-   * (async function() {
-   *   const led = await new LED("A1");
-   *   led.on();
-   * })();
+   * const led = await new LED("A1");
+   * led.on();
    * 
    * @example
    * <caption>Using an IO options object</caption>
    * import LED from "@j5e/led";
    *
-   * (async function() {
-   *   const led = await new LED({
-   *     pin: 12,
-   *     pwm: true
-   *   });
-   *   led.on();
-   * })();
+   * const led = await new LED({
+   *   pin: 12,
+   *   pwm: true
+   * });
+   * led.on();
    */
   constructor(io, device) {
     return (async () => {
@@ -131,10 +125,8 @@ class LED {
    * @example
    * import LED from "@j5e/led";
    *
-   * (async function() {
-   *   const led = await new LED(12);
-   *   led.on();
-   * })();
+   * const led = await new LED(12);
+   * led.on();
    */
   on() {
     this.#state.value = this.HIGH;
@@ -149,15 +141,13 @@ class LED {
    * import LED from "@j5e/led";
    * import {timer} from "@j5e/fn";
    *
-   * (async function() {
-   *   const led = await new LED(12);
-   *   led.on();
+   * const led = await new LED(12);
+   * led.on();
    *   
-   *   // Wait one second and turn the led off
-   *   timer.setTimeout(function() {
-   *     led.off();
-   *   }, 1000)
-   * })();
+   * // Wait one second and turn the led off
+   * timer.setTimeout(function() {
+   *   led.off();
+   * }, 1000)
    */
   off() {
     this.#state.value = this.LOW;
@@ -172,15 +162,13 @@ class LED {
    * import LED from "@j5e/led";
    * import {timer} from "@j5e/fn";
    *
-   * (async function() {
-   *   const led = await new LED(12);
-   *   led.toggle(); // It's on!
+   * const led = await new LED(12);
+   * led.toggle(); // It's on!
    *   
-   *   // Wait one second and turn the led off
-   *   timer.setTimeout(function() {
-   *     led.toggle(); // It's off!
-   *   }, 1000)
-   * })();
+   * // Wait one second and turn the led off
+   * timer.setTimeout(function() {
+   *   led.toggle(); // It's off!
+   * }, 1000)
    */
   toggle() {
     return this[this.isOn ? "off" : "on"]();
@@ -194,10 +182,8 @@ class LED {
    * @example
    * import LED from "@j5e/led";
    * 
-   * (async function() {
-   *   const led = await new LED(12);
-   *   led.blink(1000);
-   * })();
+   * const led = await new LED(12);
+   * led.blink(1000);
    */
   blink(duration=100, callback) {
     // Avoid traffic jams
@@ -227,13 +213,11 @@ class LED {
    * @example
    * import LED from "@j5e/led";
    * 
-   * (async function() {
-   *   const led = await new LED({
-   *     pin: 12,
-   *     pwm: true
-   *   });
-   *   led.brightness(512);
-   * })();
+   * const led = await new LED({
+   *   pin: 12,
+   *   pwm: true
+   * });
+   * led.brightness(512);
    */
   brightness(value) {
     this.#state.value = value;
@@ -248,13 +232,11 @@ class LED {
    * @example
    * import LED from "@j5e/led";
    * 
-   * (async function() {
-   *   const led = await new LED({
-   *     pin: 12,
-   *     pwm: true
-   *   });
-   *   led.intensity(50);
-   * })();
+   * const led = await new LED({
+   *   pin: 12,
+   *   pwm: true
+   * });
+   * led.intensity(50);
    */
   intensity(value) {
     this.#state.value = map(value, 0, 100, this.LOW, this.HIGH);
@@ -271,13 +253,11 @@ class LED {
    * @example
    * import LED from "@j5e/led";
    * 
-   * (async function() {
-   *   const led = await new LED({
-   *     pin: 12,
-   *     pwm: true
-   *   });
-   *   led.fade(512);
-   * })();
+   * const led = await new LED({
+   *   pin: 12,
+   *   pwm: true
+   * });
+   * led.fade(512);
    */
   fade(val, time=1000, callback) {
     
@@ -325,13 +305,11 @@ class LED {
    * <caption>Fade an LED to full brightness over half a second</caption>
    * import LED from "@j5e/led";
    * 
-   * (async function() {
-   *   const led = await new LED({
-   *     pin: 12,
-   *     pwm: true
-   *   });
-   *   led.fadeIn(500);
-   * })();
+   * const led = await new LED({
+   *   pin: 12,
+   *   pwm: true
+   * });
+   * led.fadeIn(500);
    */
   fadeIn(time=1000, callback) {
     return this.fade(this.HIGH, time, callback);
@@ -346,14 +324,12 @@ class LED {
    * <caption>Fade an LED out over half a second</caption>
    * import LED from "@j5e/led";
    * 
-   * (async function() {
-   *   const led = await new LED({
-   *     pin: 12,
-   *     pwm: true
-   *   });
-   *   led.on();
-   *   led.fadeOut(500);
-   * })();
+   * const led = await new LED({
+   *   pin: 12,
+   *   pwm: true
+   * });
+   * led.on();
+   * led.fadeOut(500);
    */
   fadeOut(time=1000, callback) {
     return this.fade(this.LOW, time, callback);
@@ -368,13 +344,11 @@ class LED {
    * <caption>Pulse an LED on a half second interval</caption>
    * import LED from "@j5e/led";
    * 
-   * (async function() {
-   *   const led = await new LED({
-   *     pin: 12,
-   *     pwm: true
-   *   });
-   *   led.pulse(500);
-   * })();
+   * const led = await new LED({
+   *   pin: 12,
+   *   pwm: true
+   * });
+   * led.pulse(500);
    */
   pulse(time=1000, callback) {
     
@@ -412,19 +386,17 @@ class LED {
    * <caption>Animate an LED using an animation segment options object</caption>
    * import LED from "@j5e/led";
    * 
-   * (async function() {
-   *   const led = await new LED({
-   *     pin: 12,
-   *     pwm: true
-   *   });
-   *   led.animate({
-   *     duration: 4000,
-	 *     cuePoints: [0,  0.33, 0.66, 1],
-	 *     keyFrames: [0, 750, 250, 1],
-	 *     loop: true,
-   *     metronomic: true
-   *   });
-   * })();
+   * const led = await new LED({
+   *   pin: 12,
+   *   pwm: true
+   * });
+   * led.animate({
+   *   duration: 4000,
+	 *   cuePoints: [0,  0.33, 0.66, 1],
+	 *   keyFrames: [0, 750, 250, 1],
+	 *   loop: true,
+   *   metronomic: true
+   * });
    */
   animate(options) {
     // Avoid traffic jams
@@ -445,18 +417,16 @@ class LED {
    * import {timer} from "@j5e/fn";
    * import LED from "@j5e/led";
    * 
-   * (async function() {
-   *   const led = await new LED({
-   *     pin: 12,
-   *     pwm: true
-   *   });
-   *   led.pulse(500);
+   * const led = await new LED({
+   *   pin: 12,
+   *   pwm: true
+   * });
+   * led.pulse(500);
    *   
-   *   // Stop pulsing after five seconds
-   *   timer.setTimeout(function() {
-   *     led.stop();
-   *   }, 5000)
-   * })();
+   * // Stop pulsing after five seconds
+   * timer.setTimeout(function() {
+   *   led.stop();
+   * }, 5000)
    */
   stop() {
     

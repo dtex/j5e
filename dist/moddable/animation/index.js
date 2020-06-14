@@ -25,20 +25,18 @@ class Animation {
    * import Servo from "@j5e/servo";
    * import Animation from "@j5e/animation";
    * 
-   * (async function() {
-   *   const servo = new Servo(13);
-   *   const ani = new Animation(servo);
+   * const servo = new Servo(13);
+   * const ani = new Animation(servo);
    * 
-   *   const wave = {
-   *     duration: 4000,
-	 *     cuePoints: [0,  0.375, 0.625, 1],
-	 *     keyFrames: [0, 135, 45, 180],
-	 *     loop: true,
-   *     metronomic: true
-   *   };
+   * const wave = {
+   *   duration: 4000,
+	 *   cuePoints: [0,  0.375, 0.625, 1],
+	 *   keyFrames: [0, 135, 45, 180],
+	 *   loop: true,
+   *   metronomic: true
+   * };
    * 
-   *   ani.enqueue(wave);
-   * });
+   * ani.enqueue(wave);
    */
   constructor(target) {
     // super();
@@ -71,20 +69,18 @@ class Animation {
    * import Servo from "@j5e/servo";
    * import Animation from "@j5e/animation";
    * 
-   * (async function() {
-   *   const servo = new Servo(13);
-   *   const ani = new Animation(servo);
+   * const servo = new Servo(13);
+   * const ani = new Animation(servo);
    * 
-   *   const wave = {
-   *     duration: 4000,
-	 *     cuePoints: [0,  0.375, 0.625, 1],
-	 *     keyFrames: [0, 135, 45, 180],
-	 *     loop: true,
-   *     metronomic: true
-   *   };
+   * const wave = {
+   *   duration: 4000,
+	 *   cuePoints: [0,  0.375, 0.625, 1],
+	 *   keyFrames: [0, 135, 45, 180],
+	 *   loop: true,
+   *   metronomic: true
+   * };
    * 
-   *   ani.enqueue(wave);
-   * });
+   * ani.enqueue(wave);
    */
   enqueue(options = {}) {
     if (typeof options.target === "undefined") {
@@ -152,28 +148,26 @@ class Animation {
    * import Animation from "@j5e/animation";
    * import {timer} from "@j5e/fn";
    * 
-   * (async function() {
-   *   const servo = new Servo(13);
-   *   const ani = new Animation(servo);
+   * const servo = new Servo(13);
+   * const ani = new Animation(servo);
    * 
-   *   const wave = {
-   *     duration: 4000,
-	 *     cuePoints: [0,  0.375, 0.625, 1],
-	 *     keyFrames: [0, 135, 45, 180],
-	 *     loop: true,
-   *     metronomic: true
-   *   };
+   * const wave = {
+   *   duration: 4000,
+	 *   cuePoints: [0,  0.375, 0.625, 1],
+	 *   keyFrames: [0, 135, 45, 180],
+	 *   loop: true,
+   *   metronomic: true
+   * };
    * 
-   *   ani.enqueue(wave);
+   * ani.enqueue(wave);
    * 
-   *   timer.setTimeout(function() { 
-   *     ani.pause();
-   *   }, 5000);
+   * timer.setTimeout(function() { 
+   *   ani.pause();
+   * }, 5000);
    * 
-   *   timer.setTimeout(function() { 
-   *     ani.play();
-   *   }, 6000);
-   * });
+   * timer.setTimeout(function() { 
+   *   ani.play();
+   * }, 6000);
    */
   play() {
     const now = Date.now();
@@ -212,28 +206,26 @@ class Animation {
    * import Animation from "@j5e/animation";
    * import {timer} from "@j5e/fn";
    * 
-   * (async function() {
-   *   const servo = new Servo(13);
-   *   const ani = new Animation(servo);
+   * const servo = new Servo(13);
+   * const ani = new Animation(servo);
    * 
-   *   const wave = {
-   *     duration: 4000,
-	 *     cuePoints: [0,  0.375, 0.625, 1],
-	 *     keyFrames: [0, 135, 45, 180],
-	 *     loop: true,
-   *     metronomic: true
-   *   };
+   * const wave = {
+   *   duration: 4000,
+	 *   cuePoints: [0,  0.375, 0.625, 1],
+	 *   keyFrames: [0, 135, 45, 180],
+	 *   loop: true,
+   *   metronomic: true
+   * };
    * 
-   *   ani.enqueue(wave);
+   * ani.enqueue(wave);
    * 
-   *   timer.setTimeout(function() { 
-   *     ani.pause();
-   *   }, 5000);
+   * timer.setTimeout(function() { 
+   *   ani.pause();
+   * }, 5000);
    * 
-   *   timer.setTimeout(function() { 
-   *     ani.play();
-   *   }, 6000);
-   * });
+   * timer.setTimeout(function() { 
+   *   ani.play();
+   * }, 6000);
    */
   pause() {
 
@@ -261,25 +253,22 @@ class Animation {
    * import Animation from "@j5e/animation";
    * import {timer} from "@j5e/fn";
    * 
-   * (async function() {
-   *   const servo = new Servo(13);
-   *   const ani = new Animation(servo);
+   * const servo = new Servo(13);
+   * const ani = new Animation(servo);
    * 
-   *   const wave = {
-   *     duration: 4000,
-	 *     cuePoints: [0,  0.375, 0.625, 1],
-	 *     keyFrames: [0, 135, 45, 180],
-	 *     loop: true,
-   *     metronomic: true
-   *   };
+   * const wave = {
+   *   duration: 4000,
+	 *   cuePoints: [0,  0.375, 0.625, 1],
+	 *   keyFrames: [0, 135, 45, 180],
+	 *   loop: true,
+   *   metronomic: true
+   * };
    * 
-   *   ani.enqueue(wave);
+   * ani.enqueue(wave);
    * 
-   *   timer.setTimeout(function() { 
-   *     ani.stop();
-   *   }, 5000);
-   * 
-   * });
+   * timer.setTimeout(function() { 
+   *   ani.stop();
+   * }, 5000);
    */
   stop() {
 
@@ -309,33 +298,30 @@ class Animation {
    * import Animation from "@j5e/animation";
    * import {timer} from "@j5e/fn";
    * 
-   * (async function() {
-   *   const servo = new Servo(13);
-   *   const ani = new Animation(servo);
+   * const servo = new Servo(13);
+   * const ani = new Animation(servo);
    * 
-   *   const wave = {
-   *     duration: 4000,
-	 *     cuePoints: [0,  0.375, 0.625, 1],
-	 *     keyFrames: [0, 135, 45, 180],
-	 *     loop: true,
-   *     metronomic: true
-   *   };
+   * const wave = {
+   *   duration: 4000,
+	 *   cuePoints: [0,  0.375, 0.625, 1],
+	 *   keyFrames: [0, 135, 45, 180],
+	 *   loop: true,
+   *   metronomic: true
+   * };
    * 
-   *   ani.enqueue(wave);
+   * ani.enqueue(wave);
    * 
-   *   timer.setTimeout(function() { 
-   *     ani.speed(2.0); // Speed up to 2x
-   *   }, 1000);
+   * timer.setTimeout(function() { 
+   *   ani.speed(2.0); // Speed up to 2x
+   * }, 1000);
    * 
-   *   timer.setTimeout(function() { 
-   *     ani.speed(0.5); // Speed up to 1/2x
-   *   }, 2000);
+   * timer.setTimeout(function() { 
+   *   ani.speed(0.5); // Speed up to 1/2x
+   * }, 2000);
    * 
-   *   timer.setTimeout(function() { 
-   *     ani.stop(); // Note, animation speed is still 0.5
-   *   }, 3000);
-   * 
-   * });
+   * timer.setTimeout(function() { 
+   *   ani.stop(); // Note, animation speed is still 0.5
+   * }, 3000);
    */
   speed(speed) {
 

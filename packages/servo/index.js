@@ -56,19 +56,15 @@ class Servo extends Emitter {
    * <caption>Sweep a servo back and forth</caption>
    * import Servo from "@j5e/servo";
    *
-   * (async function() {
-   *   const servo = await new Servo(12);
-   *   servo.sweep();
-   * })();
+   * const servo = await new Servo(12);
+   * servo.sweep();
    * 
    * @example
    * <caption>Move a continuos rotation servo forward</caption>
    * import Servo from "@j5e/servo";
    *
-   * (async function() {
-   *   const servo = await new Servo(12, {type: "continuous"});
-   *   servo.cw();
-   * })();
+   * const servo = await new Servo(12, {type: "continuous"});
+   * servo.cw();
    */
   constructor(io, device) {
     return (async () => {
@@ -188,34 +184,28 @@ class Servo extends Emitter {
    * <caption>Move a servo to 180° as quickly as possible</caption>
    * import Servo from "@j5e/servo";
    *
-   * (async function() {
-   *   const servo = await new Servo(12);
-   *   servo.to(180);
-   * })();
+   * const servo = await new Servo(12);
+   * servo.to(180);
    * 
    * @example
    * <caption>Move a servo to 180° over one second</caption>
    * import Servo from "@j5e/servo";
    *
-   * (async function() {
-   *   const servo = await new Servo(12);
-   *   servo.to(180, 1000);
-   * })();
+   * const servo = await new Servo(12);
+   * servo.to(180, 1000);
    * 
    * @example
    * <caption>Move a servo to 180° using an animation segment object</caption>
    * import Servo from "@j5e/servo";
    * import { inOutQuad } from "@j5e/easing";
    *
-   * (async function() {
-   *   const servo = await new Servo(12);
-   *   servo.to({
-   *     duration: 1000,
-   *     cuePoints: [0, 1.0],
-   *     keyFrames: [ null, 180 ],
-   *     easing: inOutQuad
-   *   });
-   * })();
+   * const servo = await new Servo(12);
+   * servo.to({
+   *   duration: 1000,
+   *   cuePoints: [0, 1.0],
+   *   keyFrames: [ null, 180 ],
+   *   easing: inOutQuad
+   * });
    */
   to(degrees, time, rate) {
 
@@ -306,21 +296,17 @@ class Servo extends Emitter {
    * <caption>Move a servo to 120° as quickly as possible</caption>
    * import Servo from "@j5e/servo";
    *
-   * (async function() {
-   *   const servo = await new Servo(12);
-   *   // The servo's default position is 90 degrees
-   *   servo.step(30);
-   * })();
+   * const servo = await new Servo(12);
+   * // The servo's default position is 90 degrees
+   * servo.step(30);
    * 
    * @example
    * <caption>Move a servo to 120° over one second</caption>
    * import Servo from "@j5e/servo";
    *
-   * (async function() {
-   *   const servo = await new Servo(12);
-   *   // The servo's default position is 90 degrees
-   *   servo.step(30, 1000);
-   * })();
+   * const servo = await new Servo(12);
+   * // The servo's default position is 90 degrees
+   * servo.step(30, 1000);
    */
   step(degrees, time) {
     return this.to(this.last.target + degrees, time);
@@ -334,19 +320,15 @@ class Servo extends Emitter {
    * <caption>Move a servo to 0° as quickly as possible</caption>
    * import Servo from "@j5e/servo";
    *
-   * (async function() {
-   *   const servo = await new Servo(12);
-   *   servo.min();
-   * })();
+   * const servo = await new Servo(12);
+   * servo.min();
    * 
    * @example
    * <caption>Move a servo to 0° over one second</caption>
    * import Servo from "@j5e/servo";
    *
-   * (async function() {
-   *   const servo = await new Servo(12);
-   *   servo.min(1000);
-   * })();
+   * const servo = await new Servo(12);
+   * servo.min(1000);
    */
   min(time) {
     return this.to(this.#state.degreeRange[0], time);
@@ -360,19 +342,15 @@ class Servo extends Emitter {
    * <caption>Move a servo to 180° as quickly as possible</caption>
    * import Servo from "@j5e/servo";
    *
-   * (async function() {
-   *   const servo = await new Servo(12);
-   *   servo.max();
-   * })();
+   * const servo = await new Servo(12);
+   * servo.max();
    * 
    * @example
    * <caption>Move a servo to 180° over one second</caption>
    * import Servo from "@j5e/servo";
    *
-   * (async function() {
-   *   const servo = await new Servo(12);
-   *   servo.max(1000);
-   * })();
+   * const servo = await new Servo(12);
+   * servo.max(1000);
    */
   max(time) {
     return this.to(this.#state.degreeRange[1], time);
@@ -387,28 +365,24 @@ class Servo extends Emitter {
    * import Servo from "@j5e/servo";
    * import { timer } from "@j5e/fn";
    *
-   * (async function() {
-   *   const servo = await new Servo(12);
-   *   servo.to(180);
+   * const servo = await new Servo(12);
+   * servo.to(180);
    * 
-   *   timer.setTimeout(function() {
-   *     servo.center();
-   *   }, 1000);
-   * })();
+   * timer.setTimeout(function() {
+   *   servo.center();
+   * }, 1000);
    * 
    * @example
    * <caption>Move a servo to 180° and then back to 90° over one second</caption>
    * import Servo from "@j5e/servo";
    * import { timer } from "@j5e/fn";
    *
-   * (async function() {
-   *   const servo = await new Servo(12);
-   *   servo.to(180);
+   * const servo = await new Servo(12);
+   * servo.to(180);
    * 
-   *   timer.setTimeout(function() {
-   *     servo.center(1000);
-   *   }, 1000);
-   * })();
+   * timer.setTimeout(function() {
+   *   servo.center(1000);
+   * }, 1000);
    */
   center(time) {
     return this.to(Math.abs((this.#state.degreeRange[0] + this.#state.degreeRange[1]) / 2), time);
@@ -422,14 +396,12 @@ class Servo extends Emitter {
    * import Servo from "@j5e/servo";
    * import { timer } from "@j5e/fn";
    *
-   * (async function() {
-   *   const servo = await new Servo(12);
-   *   servo.to(180);
+   * const servo = await new Servo(12);
+   * servo.to(180);
    * 
-   *   timer.setTimeout(function() {
-   *     servo.home();
-   *   }, 1000);
-   * })();
+   * timer.setTimeout(function() {
+   *   servo.home();
+   * }, 1000);
    */
   home() {
     return this.to(this.#state.startAt);
@@ -443,24 +415,20 @@ class Servo extends Emitter {
    * <caption>Sweep a servo back and forth between 10° to 170°</caption>
    * import Servo from "@j5e/servo";
    *
-   * (async function() {
-   *   const servo = await new Servo(12);
-   *   servo.sweep([10, 170]));
-   * })();
+   * const servo = await new Servo(12);
+   * servo.sweep([10, 170]));
    * 
    * example
    * <caption>Sweep a servo back and forth between 10° to 170° with inOutCirc easing</caption>
    * import Servo from "@j5e/servo";
    * import {inOutCirc} from "@j5e/easing";
    *
-   * (async function() {
-   *   const servo = await new Servo(12);
-   *   servo.sweep({
-   *     keyFrames: [10, 170],
-   *     cuePoints: [0, 1],
-   *     easing: inOutCirc
-   *   });
-   * })();
+   * const servo = await new Servo(12);
+   * servo.sweep({
+   *   keyFrames: [10, 170],
+   *   cuePoints: [0, 1],
+   *   easing: inOutCirc
+   * });
    */
   sweep(opts) {
 
@@ -498,14 +466,12 @@ class Servo extends Emitter {
    * <caption>Sweep a servo back and forth for two seconds then stop</caption>
    * import Servo from "@j5e/servo";
    *
-   * (async function() {
-   *   const servo = await new Servo(12);
-   *   servo.sweep([10, 170]));
+   * const servo = await new Servo(12);
+   * servo.sweep([10, 170]));
    * 
-   *   timer.setTimeout(function() {
-   *     servo.stop();
-   *   }, 2000);
-   * })();
+   * timer.setTimeout(function() {
+   *   servo.stop();
+   * }, 2000);
    */
   stop() {
     
@@ -532,19 +498,15 @@ class Servo extends Emitter {
    * <caption>Move a continuos rotation servo clockwise</caption>
    * import Servo from "@j5e/servo";
    *
-   * (async function() {
-   *   const servo = await new Servo(12, {type: "continuous"});
-   *   servo.cw();
-   * })();
+   * const servo = await new Servo(12, {type: "continuous"});
+   * servo.cw();
    * 
    * @example
    * <caption>Move a continuos rotation servo clockwise at half speed</caption>
    * import Servo from "@j5e/servo";
    *
-   * (async function() {
-   *   const servo = await new Servo(12, {type: "continuous"});
-   *   servo.cw(0.5);
-   * })();
+   * const servo = await new Servo(12, {type: "continuous"});
+   * servo.cw(0.5);
    */
   cw(speed=1) {
     speed = constrain(speed, 0, 1);
@@ -560,19 +522,15 @@ class Servo extends Emitter {
    * <caption>Move a continuos rotation servo counter-clockwise</caption>
    * import Servo from "@j5e/servo";
    *
-   * (async function() {
-   *   const servo = await new Servo(12, {type: "continuous"});
-   *   servo.ccw();
-   * })();
+   * const servo = await new Servo(12, {type: "continuous"});
+   * servo.ccw();
    * 
    * @example
    * <caption>Move a continuos rotation servo counter-clockwise at half speed</caption>
    * import Servo from "@j5e/servo";
    *
-   * (async function() {
-   *   const servo = await new Servo(12, {type: "continuous"});
-   *   servo.ccw(0.5);
-   * })();
+   * const servo = await new Servo(12, {type: "continuous"});
+   * servo.ccw(0.5);
    */
   ccw(speed=1) {
     speed = constrain(speed, 0, 1);
