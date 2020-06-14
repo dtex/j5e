@@ -18,16 +18,13 @@ Instantiating an Animation is simple. Invoke the constructor and pass in the ins
 import Servo from "@j5e/servo";
 import Animation from "@j5e/animation";
 
-(async function() {
-  const coxa = new Servo(12);
-  const femur = new Servo(13);
-  const tibia = new Servo(14);
+const coxa = await new Servo(12);
+const femur = await new Servo(13);
+const tibia = await new Servo(14);
 
-  const leg = new Animation([coxa, femur, tibia]);
+const leg = await new Animation([coxa, femur, tibia]);
 
   // Now we can animate the leg
-
-})();
 ````
 
 The devices you pass in are called the "Target" and you can think of them as the actors on your stage. There will be a practical limit on how many things you can actually control while still achieving reasonable performance, but that's dependent on your microcontroller and all the other things happening in your program.

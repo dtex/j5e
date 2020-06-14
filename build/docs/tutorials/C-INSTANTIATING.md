@@ -97,7 +97,7 @@ The ```io``` argument is always required and can take a few different forms:
 
     // Instantiate a PWM I/O connected to 
     // pin 2 of an expander
-    const speedIO = new PWM({
+    const speedIO = await new PWM({
       pin: 2,
       address: 0x40
     });

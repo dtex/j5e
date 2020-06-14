@@ -194,7 +194,7 @@ import Motor from &quot;@j5e/motor&quot;;
 
   // Instantiate a PWM I/O connected to 
   // pin 2 of an expander
-  const speedIO = new PWM({
+  const speedIO = await new PWM({
     pin: 2,
     address: 0x40
   });

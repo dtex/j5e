@@ -133,6 +133,32 @@ window.lunrData = {
           "onc",
           "time"
         ],
+        "module-j5e_isl29125-ISL29125.html": [
+          "class",
+          "color",
+          "isl29125",
+          "j5e/isl29125~isl29125",
+          "lt;async&gt",
+          "module:j5e/isl29125~isl29125",
+          "sensor"
+        ],
+        "module-j5e_tcs34725-TCS34725.html": [
+          "class",
+          "color",
+          "j5e/tcs34725~tcs34725",
+          "lt;async&gt",
+          "module:j5e/tcs34725~tcs34725",
+          "sensor",
+          "tcs34725"
+        ],
+        "module-j5e_color-Color.html": [
+          "class",
+          "color",
+          "j5e/color~color",
+          "lt;async&gt",
+          "module:j5e/color~color",
+          "sensor"
+        ],
         "module-j5e_animation-Animation.html": [
           "allow",
           "anim",
@@ -620,6 +646,13 @@ window.lunrData = {
           "tween",
           "work"
         ],
+        "module-j5e_color.html": [
+          "color",
+          "detect",
+          "j5e/color",
+          "modul",
+          "module:j5e/color"
+        ],
         "module-j5e_easing.html": [
           "anim",
           "eas",
@@ -641,6 +674,13 @@ window.lunrData = {
           "typic",
           "us",
           "util"
+        ],
+        "module-j5e_isl29125.html": [
+          "color",
+          "detect",
+          "j5e/isl29125",
+          "modul",
+          "module:j5e/isl29125"
         ],
         "module-j5e_led.html": [
           "j5e/l",
@@ -671,6 +711,13 @@ window.lunrData = {
           "switch",
           "work"
         ],
+        "module-j5e_tcs34725.html": [
+          "color",
+          "detect",
+          "j5e/tcs34725",
+          "modul",
+          "module:j5e/tcs34725"
+        ],
         "module-j5e_fn-timer.html": [
           "clearinterv",
           "global",
@@ -689,7 +736,7 @@ window.lunrData = {
           "xs"
         ]
       },
-      "length": 61
+      "length": 67
     },
     "tokenStore": {
       "root": {
@@ -1021,6 +1068,42 @@ window.lunrData = {
               }
             }
           },
+          "l": {
+            "docs": {},
+            "e": {
+              "docs": {},
+              "x": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "b": {
+                    "docs": {},
+                    "l": {
+                      "docs": {
+                        "undefined": {
+                          "tf": 11.666666666666666
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "u": {
+              "docs": {},
+              "s": {
+                "docs": {},
+                "h": {
+                  "docs": {
+                    "module-j5e_animation-Animation.html#stop": {
+                      "ref": "module-j5e_animation-Animation.html#stop",
+                      "tf": 10
+                    }
+                  }
+                }
+              }
+            }
+          },
           "u": {
             "docs": {},
             "n": {
@@ -1035,9 +1118,6 @@ window.lunrData = {
                       "docs": {},
                       "n": {
                         "docs": {
-                          "undefined": {
-                            "tf": 17.5
-                          },
                           "module-j5e_event.Emitter.html#on": {
                             "ref": "module-j5e_event.Emitter.html#on",
                             "tf": 110
@@ -1224,42 +1304,6 @@ window.lunrData = {
                   "module-j5e_rgb-RGB.html#fadeIn": {
                     "ref": "module-j5e_rgb-RGB.html#fadeIn",
                     "tf": 10
-                  }
-                }
-              }
-            }
-          },
-          "l": {
-            "docs": {},
-            "e": {
-              "docs": {},
-              "x": {
-                "docs": {},
-                "i": {
-                  "docs": {},
-                  "b": {
-                    "docs": {},
-                    "l": {
-                      "docs": {
-                        "undefined": {
-                          "tf": 11.666666666666666
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "u": {
-              "docs": {},
-              "s": {
-                "docs": {},
-                "h": {
-                  "docs": {
-                    "module-j5e_animation-Animation.html#stop": {
-                      "ref": "module-j5e_animation-Animation.html#stop",
-                      "tf": 10
-                    }
                   }
                 }
               }
@@ -1504,6 +1548,32 @@ window.lunrData = {
                 }
               }
             }
+          },
+          "s": {
+            "docs": {},
+            "l": {
+              "2": {
+                "9": {
+                  "1": {
+                    "2": {
+                      "5": {
+                        "docs": {
+                          "module-j5e_isl29125-ISL29125.html": {
+                            "ref": "module-j5e_isl29125-ISL29125.html",
+                            "tf": 500
+                          }
+                        }
+                      },
+                      "docs": {}
+                    },
+                    "docs": {}
+                  },
+                  "docs": {}
+                },
+                "docs": {}
+              },
+              "docs": {}
+            }
           }
         },
         "j": {
@@ -1537,6 +1607,171 @@ window.lunrData = {
               },
               "/": {
                 "docs": {},
+                "i": {
+                  "docs": {},
+                  "s": {
+                    "docs": {},
+                    "l": {
+                      "2": {
+                        "9": {
+                          "1": {
+                            "2": {
+                              "5": {
+                                "docs": {
+                                  "module-j5e_isl29125.html": {
+                                    "ref": "module-j5e_isl29125.html",
+                                    "tf": 600
+                                  }
+                                },
+                                "~": {
+                                  "docs": {},
+                                  "i": {
+                                    "docs": {},
+                                    "s": {
+                                      "docs": {},
+                                      "l": {
+                                        "2": {
+                                          "9": {
+                                            "1": {
+                                              "2": {
+                                                "5": {
+                                                  "docs": {
+                                                    "module-j5e_isl29125-ISL29125.html": {
+                                                      "ref": "module-j5e_isl29125-ISL29125.html",
+                                                      "tf": 50
+                                                    }
+                                                  }
+                                                },
+                                                "docs": {}
+                                              },
+                                              "docs": {}
+                                            },
+                                            "docs": {}
+                                          },
+                                          "docs": {}
+                                        },
+                                        "docs": {}
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "docs": {}
+                            },
+                            "docs": {}
+                          },
+                          "docs": {}
+                        },
+                        "docs": {}
+                      },
+                      "docs": {}
+                    }
+                  }
+                },
+                "t": {
+                  "docs": {},
+                  "c": {
+                    "docs": {},
+                    "s": {
+                      "3": {
+                        "4": {
+                          "7": {
+                            "2": {
+                              "5": {
+                                "docs": {
+                                  "module-j5e_tcs34725.html": {
+                                    "ref": "module-j5e_tcs34725.html",
+                                    "tf": 600
+                                  }
+                                },
+                                "~": {
+                                  "docs": {},
+                                  "t": {
+                                    "docs": {},
+                                    "c": {
+                                      "docs": {},
+                                      "s": {
+                                        "3": {
+                                          "4": {
+                                            "7": {
+                                              "2": {
+                                                "5": {
+                                                  "docs": {
+                                                    "module-j5e_tcs34725-TCS34725.html": {
+                                                      "ref": "module-j5e_tcs34725-TCS34725.html",
+                                                      "tf": 50
+                                                    }
+                                                  }
+                                                },
+                                                "docs": {}
+                                              },
+                                              "docs": {}
+                                            },
+                                            "docs": {}
+                                          },
+                                          "docs": {}
+                                        },
+                                        "docs": {}
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "docs": {}
+                            },
+                            "docs": {}
+                          },
+                          "docs": {}
+                        },
+                        "docs": {}
+                      },
+                      "docs": {}
+                    }
+                  }
+                },
+                "c": {
+                  "docs": {},
+                  "o": {
+                    "docs": {},
+                    "l": {
+                      "docs": {},
+                      "o": {
+                        "docs": {},
+                        "r": {
+                          "docs": {
+                            "module-j5e_color.html": {
+                              "ref": "module-j5e_color.html",
+                              "tf": 600
+                            }
+                          },
+                          "~": {
+                            "docs": {},
+                            "c": {
+                              "docs": {},
+                              "o": {
+                                "docs": {},
+                                "l": {
+                                  "docs": {},
+                                  "o": {
+                                    "docs": {},
+                                    "r": {
+                                      "docs": {
+                                        "module-j5e_color-Color.html": {
+                                          "ref": "module-j5e_color-Color.html",
+                                          "tf": 50
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
                 "a": {
                   "docs": {},
                   "n": {
@@ -2142,19 +2377,6 @@ window.lunrData = {
                 }
               }
             },
-            "u": {
-              "docs": {},
-              "f": {
-                "docs": {},
-                "f": {
-                  "docs": {
-                    "undefined": {
-                      "tf": 17.5
-                    }
-                  }
-                }
-              }
-            },
             "o": {
               "docs": {},
               "p": {
@@ -2226,6 +2448,31 @@ window.lunrData = {
                         "undefined": {
                           "tf": 10
                         }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "n": {
+              "docs": {},
+              "s": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "r": {
+                    "docs": {
+                      "module-j5e_isl29125-ISL29125.html": {
+                        "ref": "module-j5e_isl29125-ISL29125.html",
+                        "tf": 16.666666666666664
+                      },
+                      "module-j5e_tcs34725-TCS34725.html": {
+                        "ref": "module-j5e_tcs34725-TCS34725.html",
+                        "tf": 16.666666666666664
+                      },
+                      "module-j5e_color-Color.html": {
+                        "ref": "module-j5e_color-Color.html",
+                        "tf": 16.666666666666664
                       }
                     }
                   }
@@ -2669,6 +2916,31 @@ window.lunrData = {
                   }
                 }
               }
+            },
+            "t": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "c": {
+                  "docs": {},
+                  "t": {
+                    "docs": {
+                      "module-j5e_color.html": {
+                        "ref": "module-j5e_color.html",
+                        "tf": 25
+                      },
+                      "module-j5e_isl29125.html": {
+                        "ref": "module-j5e_isl29125.html",
+                        "tf": 25
+                      },
+                      "module-j5e_tcs34725.html": {
+                        "ref": "module-j5e_tcs34725.html",
+                        "tf": 25
+                      }
+                    }
+                  }
+                }
+              }
             }
           },
           "i": {
@@ -3047,6 +3319,32 @@ window.lunrData = {
               }
             }
           },
+          "c": {
+            "docs": {},
+            "s": {
+              "3": {
+                "4": {
+                  "7": {
+                    "2": {
+                      "5": {
+                        "docs": {
+                          "module-j5e_tcs34725-TCS34725.html": {
+                            "ref": "module-j5e_tcs34725-TCS34725.html",
+                            "tf": 500
+                          }
+                        }
+                      },
+                      "docs": {}
+                    },
+                    "docs": {}
+                  },
+                  "docs": {}
+                },
+                "docs": {}
+              },
+              "docs": {}
+            }
+          },
           "r": {
             "docs": {},
             "u": {
@@ -3099,30 +3397,277 @@ window.lunrData = {
             }
           }
         },
-        "a": {
-          "docs": {},
-          "s": {
+        "c": {
+          "docs": {
+            "undefined": {
+              "tf": 900
+            }
+          },
+          "o": {
             "docs": {},
-            "y": {
+            "n": {
+              "docs": {},
+              "f": {
+                "docs": {},
+                "u": {
+                  "docs": {},
+                  "s": {
+                    "docs": {
+                      "undefined": {
+                        "tf": 11.666666666666666
+                      }
+                    }
+                  }
+                }
+              },
+              "t": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "o": {
+                    "docs": {},
+                    "l": {
+                      "docs": {
+                        "module-j5e_animation-Animation.html": {
+                          "ref": "module-j5e_animation-Animation.html",
+                          "tf": 8.333333333333332
+                        },
+                        "module-j5e_switch-Switch.html": {
+                          "ref": "module-j5e_switch-Switch.html",
+                          "tf": 8.333333333333332
+                        },
+                        "module-j5e_led-LED.html": {
+                          "ref": "module-j5e_led-LED.html",
+                          "tf": 7.142857142857142
+                        },
+                        "module-j5e_servo-Servo.html": {
+                          "ref": "module-j5e_servo-Servo.html",
+                          "tf": 8.333333333333332
+                        },
+                        "module-j5e_rgb-RGB.html": {
+                          "ref": "module-j5e_rgb-RGB.html",
+                          "tf": 8.333333333333332
+                        },
+                        "module-j5e_rgb-RGB.html#color": {
+                          "ref": "module-j5e_rgb-RGB.html#color",
+                          "tf": 2.941176470588235
+                        },
+                        "module-j5e_rgb.html": {
+                          "ref": "module-j5e_rgb.html",
+                          "tf": 10
+                        },
+                        "module-j5e_servo.html": {
+                          "ref": "module-j5e_servo.html",
+                          "tf": 10
+                        }
+                      }
+                    }
+                  }
+                },
+                "i": {
+                  "docs": {},
+                  "n": {
+                    "docs": {},
+                    "u": {
+                      "docs": {
+                        "module-j5e_servo-Servo.html#cw": {
+                          "ref": "module-j5e_servo-Servo.html#cw",
+                          "tf": 10
+                        },
+                        "module-j5e_servo-Servo.html#ccw": {
+                          "ref": "module-j5e_servo-Servo.html#ccw",
+                          "tf": 8.333333333333332
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "m": {
+              "docs": {},
+              "p": {
+                "docs": {},
+                "l": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "x": {
+                      "docs": {
+                        "undefined": {
+                          "tf": 10
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "l": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "r": {
+                  "docs": {
+                    "module-j5e_isl29125-ISL29125.html": {
+                      "ref": "module-j5e_isl29125-ISL29125.html",
+                      "tf": 16.666666666666664
+                    },
+                    "module-j5e_tcs34725-TCS34725.html": {
+                      "ref": "module-j5e_tcs34725-TCS34725.html",
+                      "tf": 16.666666666666664
+                    },
+                    "module-j5e_color-Color.html": {
+                      "ref": "module-j5e_color-Color.html",
+                      "tf": 516.6666666666666
+                    },
+                    "module-j5e_rgb-RGB.html#color": {
+                      "ref": "module-j5e_rgb-RGB.html#color",
+                      "tf": 678.8235294117648
+                    },
+                    "module-j5e_rgb-RGB.html#on": {
+                      "ref": "module-j5e_rgb-RGB.html#on",
+                      "tf": 7.142857142857142
+                    },
+                    "module-j5e_color.html": {
+                      "ref": "module-j5e_color.html",
+                      "tf": 25
+                    },
+                    "module-j5e_isl29125.html": {
+                      "ref": "module-j5e_isl29125.html",
+                      "tf": 25
+                    },
+                    "module-j5e_tcs34725.html": {
+                      "ref": "module-j5e_tcs34725.html",
+                      "tf": 25
+                    }
+                  }
+                }
+              }
+            },
+            "u": {
               "docs": {},
               "n": {
                 "docs": {},
-                "c": {
-                  "docs": {
-                    "undefined": {
-                      "tf": 917.5
-                    }
-                  },
-                  "h": {
+                "t": {
+                  "docs": {},
+                  "e": {
                     "docs": {},
                     "r": {
+                      "docs": {
+                        "module-j5e_servo-Servo.html#ccw": {
+                          "ref": "module-j5e_servo-Servo.html#ccw",
+                          "tf": 8.333333333333332
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "l": {
+            "docs": {},
+            "a": {
+              "docs": {},
+              "s": {
+                "docs": {},
+                "s": {
+                  "docs": {
+                    "module-j5e_event.Emitter.html": {
+                      "ref": "module-j5e_event.Emitter.html",
+                      "tf": 116.25
+                    },
+                    "module-j5e_isl29125-ISL29125.html": {
+                      "ref": "module-j5e_isl29125-ISL29125.html",
+                      "tf": 126.66666666666666
+                    },
+                    "module-j5e_tcs34725-TCS34725.html": {
+                      "ref": "module-j5e_tcs34725-TCS34725.html",
+                      "tf": 126.66666666666666
+                    },
+                    "module-j5e_color-Color.html": {
+                      "ref": "module-j5e_color-Color.html",
+                      "tf": 126.66666666666666
+                    },
+                    "module-j5e_animation-Animation.html": {
+                      "ref": "module-j5e_animation-Animation.html",
+                      "tf": 110
+                    },
+                    "module-j5e_switch-Switch.html": {
+                      "ref": "module-j5e_switch-Switch.html",
+                      "tf": 118.33333333333333
+                    },
+                    "module-j5e_led-LED.html": {
+                      "ref": "module-j5e_led-LED.html",
+                      "tf": 117.14285714285714
+                    },
+                    "module-j5e_servo-Servo.html": {
+                      "ref": "module-j5e_servo-Servo.html",
+                      "tf": 118.33333333333333
+                    },
+                    "module-j5e_rgb-RGB.html": {
+                      "ref": "module-j5e_rgb-RGB.html",
+                      "tf": 118.33333333333333
+                    },
+                    "module-j5e_animation.html": {
+                      "ref": "module-j5e_animation.html",
+                      "tf": 3.571428571428571
+                    }
+                  }
+                }
+              }
+            },
+            "o": {
+              "docs": {},
+              "c": {
+                "docs": {},
+                "k": {
+                  "docs": {},
+                  "w": {
+                    "docs": {},
+                    "i": {
                       "docs": {},
-                      "o": {
+                      "s": {
+                        "docs": {
+                          "module-j5e_servo-Servo.html#cw": {
+                            "ref": "module-j5e_servo-Servo.html#cw",
+                            "tf": 10
+                          },
+                          "module-j5e_servo-Servo.html#ccw": {
+                            "ref": "module-j5e_servo-Servo.html#ccw",
+                            "tf": 8.333333333333332
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "e": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "i": {
+                    "docs": {},
+                    "n": {
+                      "docs": {},
+                      "t": {
                         "docs": {},
-                        "n": {
-                          "docs": {
-                            "undefined": {
-                              "tf": 50
+                        "e": {
+                          "docs": {},
+                          "r": {
+                            "docs": {},
+                            "v": {
+                              "docs": {
+                                "module-j5e_fn-timer.html": {
+                                  "ref": "module-j5e_fn-timer.html",
+                                  "tf": 4.166666666666666
+                                }
+                              }
                             }
                           }
                         }
@@ -3133,6 +3678,750 @@ window.lunrData = {
               }
             }
           },
+          "r": {
+            "docs": {},
+            "e": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "module-j5e_event.Emitter.html#on": {
+                      "ref": "module-j5e_event.Emitter.html#on",
+                      "tf": 16.666666666666664
+                    },
+                    "module-j5e_event.Emitter.html#once": {
+                      "ref": "module-j5e_event.Emitter.html#once",
+                      "tf": 8.333333333333332
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "u": {
+            "docs": {},
+            "r": {
+              "docs": {},
+              "r": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "n": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "module-j5e_animation-Animation.html#speed": {
+                          "ref": "module-j5e_animation-Animation.html#speed",
+                          "tf": 12.5
+                        },
+                        "module-j5e_led-LED.html#fade": {
+                          "ref": "module-j5e_led-LED.html#fade",
+                          "tf": 5
+                        },
+                        "module-j5e_rgb-RGB.html#on": {
+                          "ref": "module-j5e_rgb-RGB.html#on",
+                          "tf": 7.142857142857142
+                        },
+                        "module-j5e_rgb-RGB.html#fade": {
+                          "ref": "module-j5e_rgb-RGB.html#fade",
+                          "tf": 6.25
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "a": {
+            "docs": {},
+            "l": {
+              "docs": {},
+              "l": {
+                "docs": {
+                  "module-j5e_fn.html": {
+                    "ref": "module-j5e_fn.html",
+                    "tf": 5
+                  }
+                },
+                "b": {
+                  "docs": {},
+                  "a": {
+                    "docs": {},
+                    "c": {
+                      "docs": {},
+                      "k": {
+                        "docs": {
+                          "module-j5e_led-LED.html#blink": {
+                            "ref": "module-j5e_led-LED.html#blink",
+                            "tf": 25
+                          },
+                          "module-j5e_led-LED.html#fade": {
+                            "ref": "module-j5e_led-LED.html#fade",
+                            "tf": 20
+                          },
+                          "module-j5e_led-LED.html#fadeIn": {
+                            "ref": "module-j5e_led-LED.html#fadeIn",
+                            "tf": 25
+                          },
+                          "module-j5e_led-LED.html#fadeOut": {
+                            "ref": "module-j5e_led-LED.html#fadeOut",
+                            "tf": 25
+                          },
+                          "module-j5e_led-LED.html#pulse": {
+                            "ref": "module-j5e_led-LED.html#pulse",
+                            "tf": 25
+                          },
+                          "module-j5e_rgb-RGB.html#blink": {
+                            "ref": "module-j5e_rgb-RGB.html#blink",
+                            "tf": 25
+                          },
+                          "module-j5e_rgb-RGB.html#fade": {
+                            "ref": "module-j5e_rgb-RGB.html#fade",
+                            "tf": 20
+                          },
+                          "module-j5e_rgb-RGB.html#fadeIn": {
+                            "ref": "module-j5e_rgb-RGB.html#fadeIn",
+                            "tf": 25
+                          },
+                          "module-j5e_rgb-RGB.html#pulse": {
+                            "ref": "module-j5e_rgb-RGB.html#pulse",
+                            "tf": 25
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "e": {
+            "docs": {},
+            "n": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "r": {
+                    "docs": {
+                      "module-j5e_servo-Servo.html#center": {
+                        "ref": "module-j5e_servo-Servo.html#center",
+                        "tf": 691.6666666666667
+                      }
+                    },
+                    "p": {
+                      "docs": {},
+                      "o": {
+                        "docs": {},
+                        "i": {
+                          "docs": {},
+                          "n": {
+                            "docs": {},
+                            "t": {
+                              "docs": {
+                                "module-j5e_servo-Servo.html#center": {
+                                  "ref": "module-j5e_servo-Servo.html#center",
+                                  "tf": 8.333333333333332
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "w": {
+            "docs": {
+              "module-j5e_servo-Servo.html#cw": {
+                "ref": "module-j5e_servo-Servo.html#cw",
+                "tf": 683.3333333333334
+              }
+            }
+          },
+          "c": {
+            "docs": {},
+            "w": {
+              "docs": {
+                "module-j5e_servo-Servo.html#ccw": {
+                  "ref": "module-j5e_servo-Servo.html#ccw",
+                  "tf": 683.3333333333334
+                }
+              }
+            }
+          }
+        },
+        "l": {
+          "docs": {},
+          "i": {
+            "docs": {},
+            "t": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "l": {
+                  "docs": {
+                    "undefined": {
+                      "tf": 11.666666666666666
+                    }
+                  }
+                }
+              }
+            },
+            "s": {
+              "docs": {},
+              "t": {
+                "docs": {
+                  "list_module.html": {
+                    "ref": "list_module.html",
+                    "tf": 110
+                  },
+                  "list_namespace.html": {
+                    "ref": "list_namespace.html",
+                    "tf": 110
+                  },
+                  "list_tutorial.html": {
+                    "ref": "list_tutorial.html",
+                    "tf": 110
+                  }
+                },
+                ":": {
+                  "docs": {},
+                  "m": {
+                    "docs": {},
+                    "o": {
+                      "docs": {},
+                      "d": {
+                        "docs": {},
+                        "u": {
+                          "docs": {},
+                          "l": {
+                            "docs": {
+                              "list_module.html": {
+                                "ref": "list_module.html",
+                                "tf": 1300
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "n": {
+                    "docs": {},
+                    "a": {
+                      "docs": {},
+                      "m": {
+                        "docs": {},
+                        "e": {
+                          "docs": {},
+                          "s": {
+                            "docs": {},
+                            "p": {
+                              "docs": {},
+                              "a": {
+                                "docs": {},
+                                "c": {
+                                  "docs": {
+                                    "list_namespace.html": {
+                                      "ref": "list_namespace.html",
+                                      "tf": 1300
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "t": {
+                    "docs": {},
+                    "u": {
+                      "docs": {},
+                      "t": {
+                        "docs": {},
+                        "o": {
+                          "docs": {},
+                          "r": {
+                            "docs": {},
+                            "i": {
+                              "docs": {
+                                "list_tutorial.html": {
+                                  "ref": "list_tutorial.html",
+                                  "tf": 1300
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "e": {
+                  "docs": {},
+                  "n": {
+                    "docs": {
+                      "module-j5e_event.Emitter.html#on": {
+                        "ref": "module-j5e_event.Emitter.html#on",
+                        "tf": 66.66666666666666
+                      },
+                      "module-j5e_event.Emitter.html#removeListener": {
+                        "ref": "module-j5e_event.Emitter.html#removeListener",
+                        "tf": 49.99999999999999
+                      },
+                      "module-j5e_event.Emitter.html#once": {
+                        "ref": "module-j5e_event.Emitter.html#once",
+                        "tf": 41.66666666666666
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "g": {
+              "docs": {},
+              "h": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "module-j5e_led-LED.html": {
+                      "ref": "module-j5e_led-LED.html",
+                      "tf": 7.142857142857142
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "t": {
+            "docs": {},
+            ";": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "s": {
+                  "docs": {},
+                  "y": {
+                    "docs": {},
+                    "n": {
+                      "docs": {},
+                      "c": {
+                        "docs": {},
+                        "&": {
+                          "docs": {},
+                          "g": {
+                            "docs": {},
+                            "t": {
+                              "docs": {
+                                "module-j5e_isl29125-ISL29125.html": {
+                                  "ref": "module-j5e_isl29125-ISL29125.html",
+                                  "tf": 50
+                                },
+                                "module-j5e_tcs34725-TCS34725.html": {
+                                  "ref": "module-j5e_tcs34725-TCS34725.html",
+                                  "tf": 50
+                                },
+                                "module-j5e_color-Color.html": {
+                                  "ref": "module-j5e_color-Color.html",
+                                  "tf": 50
+                                },
+                                "module-j5e_switch-Switch.html": {
+                                  "ref": "module-j5e_switch-Switch.html",
+                                  "tf": 50
+                                },
+                                "module-j5e_led-LED.html": {
+                                  "ref": "module-j5e_led-LED.html",
+                                  "tf": 50
+                                },
+                                "module-j5e_servo-Servo.html": {
+                                  "ref": "module-j5e_servo-Servo.html",
+                                  "tf": 50
+                                },
+                                "module-j5e_rgb-RGB.html": {
+                                  "ref": "module-j5e_rgb-RGB.html",
+                                  "tf": 50
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "e": {
+            "docs": {},
+            "d": {
+              "docs": {
+                "module-j5e_animation-Animation.html": {
+                  "ref": "module-j5e_animation-Animation.html",
+                  "tf": 8.333333333333332
+                },
+                "module-j5e_led-LED.html": {
+                  "ref": "module-j5e_led-LED.html",
+                  "tf": 507.14285714285717
+                },
+                "module-j5e_led-LED.html#on": {
+                  "ref": "module-j5e_led-LED.html#on",
+                  "tf": 125
+                },
+                "module-j5e_led-LED.html#off": {
+                  "ref": "module-j5e_led-LED.html#off",
+                  "tf": 125
+                },
+                "module-j5e_led-LED.html#toggle": {
+                  "ref": "module-j5e_led-LED.html#toggle",
+                  "tf": 62.5
+                },
+                "module-j5e_led-LED.html#blink": {
+                  "ref": "module-j5e_led-LED.html#blink",
+                  "tf": 37.5
+                },
+                "module-j5e_led-LED.html#brightness": {
+                  "ref": "module-j5e_led-LED.html#brightness",
+                  "tf": 39.58333333333333
+                },
+                "module-j5e_led-LED.html#intensity": {
+                  "ref": "module-j5e_led-LED.html#intensity",
+                  "tf": 39.58333333333333
+                },
+                "module-j5e_led-LED.html#fade": {
+                  "ref": "module-j5e_led-LED.html#fade",
+                  "tf": 25
+                },
+                "module-j5e_led-LED.html#fadeIn": {
+                  "ref": "module-j5e_led-LED.html#fadeIn",
+                  "tf": 31.25
+                },
+                "module-j5e_led-LED.html#fadeOut": {
+                  "ref": "module-j5e_led-LED.html#fadeOut",
+                  "tf": 31.25
+                },
+                "module-j5e_led-LED.html#pulse": {
+                  "ref": "module-j5e_led-LED.html#pulse",
+                  "tf": 29.166666666666664
+                },
+                "module-j5e_led-LED.html#animate": {
+                  "ref": "module-j5e_led-LED.html#animate",
+                  "tf": 41.66666666666666
+                },
+                "module-j5e_led-LED.html#stop": {
+                  "ref": "module-j5e_led-LED.html#stop",
+                  "tf": 57.14285714285714
+                },
+                "module-j5e_rgb-RGB.html#on": {
+                  "ref": "module-j5e_rgb-RGB.html#on",
+                  "tf": 7.142857142857142
+                },
+                "module-j5e_rgb-RGB.html#off": {
+                  "ref": "module-j5e_rgb-RGB.html#off",
+                  "tf": 16.666666666666664
+                },
+                "module-j5e_rgb-RGB.html#toggle": {
+                  "ref": "module-j5e_rgb-RGB.html#toggle",
+                  "tf": 10
+                },
+                "module-j5e_rgb-RGB.html#blink": {
+                  "ref": "module-j5e_rgb-RGB.html#blink",
+                  "tf": 10
+                },
+                "module-j5e_rgb-RGB.html#fade": {
+                  "ref": "module-j5e_rgb-RGB.html#fade",
+                  "tf": 6.25
+                },
+                "module-j5e_rgb-RGB.html#fadeIn": {
+                  "ref": "module-j5e_rgb-RGB.html#fadeIn",
+                  "tf": 16.666666666666664
+                },
+                "module-j5e_rgb-RGB.html#pulse": {
+                  "ref": "module-j5e_rgb-RGB.html#pulse",
+                  "tf": 10
+                },
+                "module-j5e_rgb-RGB.html#animate": {
+                  "ref": "module-j5e_rgb-RGB.html#animate",
+                  "tf": 16.666666666666664
+                },
+                "module-j5e_rgb-RGB.html#stop": {
+                  "ref": "module-j5e_rgb-RGB.html#stop",
+                  "tf": 7.142857142857142
+                },
+                "module-j5e_animation.html": {
+                  "ref": "module-j5e_animation.html",
+                  "tf": 3.571428571428571
+                },
+                "module-j5e_led.html": {
+                  "ref": "module-j5e_led.html",
+                  "tf": 25
+                }
+              },
+              "'": {
+                "docs": {
+                  "module-j5e_rgb-RGB.html": {
+                    "ref": "module-j5e_rgb-RGB.html",
+                    "tf": 8.333333333333332
+                  },
+                  "module-j5e_rgb-RGB.html#color": {
+                    "ref": "module-j5e_rgb-RGB.html#color",
+                    "tf": 2.941176470588235
+                  },
+                  "module-j5e_rgb.html": {
+                    "ref": "module-j5e_rgb.html",
+                    "tf": 10
+                  }
+                }
+              }
+            }
+          },
+          "o": {
+            "docs": {},
+            "o": {
+              "docs": {},
+              "p": {
+                "docs": {
+                  "module-j5e_led-LED.html#pulse": {
+                    "ref": "module-j5e_led-LED.html#pulse",
+                    "tf": 4.166666666666666
+                  }
+                }
+              }
+            }
+          }
+        },
+        "p": {
+          "docs": {},
+          "a": {
+            "docs": {},
+            "r": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "m": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "undefined": {
+                          "tf": 11.666666666666666
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "u": {
+              "docs": {},
+              "s": {
+                "docs": {
+                  "module-j5e_animation-Animation.html#play": {
+                    "ref": "module-j5e_animation-Animation.html#play",
+                    "tf": 10
+                  },
+                  "module-j5e_animation-Animation.html#pause": {
+                    "ref": "module-j5e_animation-Animation.html#pause",
+                    "tf": 757.1428571428571
+                  }
+                }
+              }
+            },
+            "s": {
+              "docs": {},
+              "s": {
+                "docs": {
+                  "module-j5e_led-LED.html#animate": {
+                    "ref": "module-j5e_led-LED.html#animate",
+                    "tf": 8.333333333333332
+                  }
+                }
+              }
+            }
+          },
+          "o": {
+            "docs": {},
+            "w": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "r": {
+                  "docs": {
+                    "undefined": {
+                      "tf": 11.666666666666666
+                    }
+                  }
+                }
+              }
+            },
+            "s": {
+              "docs": {},
+              "i": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "module-j5e_servo-Servo.html#to": {
+                      "ref": "module-j5e_servo-Servo.html#to",
+                      "tf": 7.142857142857142
+                    },
+                    "module-j5e_servo-Servo.html#step": {
+                      "ref": "module-j5e_servo-Servo.html#step",
+                      "tf": 7.142857142857142
+                    },
+                    "module-j5e_servo-Servo.html#home": {
+                      "ref": "module-j5e_servo-Servo.html#home",
+                      "tf": 12.5
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "r": {
+            "docs": {},
+            "o": {
+              "docs": {},
+              "v": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "d": {
+                    "docs": {
+                      "module-j5e_event.Emitter.html": {
+                        "ref": "module-j5e_event.Emitter.html",
+                        "tf": 6.25
+                      },
+                      "module-j5e_servo-Servo.html#sweep": {
+                        "ref": "module-j5e_servo-Servo.html#sweep",
+                        "tf": 6.25
+                      }
+                    }
+                  }
+                }
+              },
+              "g": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "s": {
+                      "docs": {},
+                      "s": {
+                        "docs": {
+                          "module-j5e_animation-Animation.html#pause": {
+                            "ref": "module-j5e_animation-Animation.html#pause",
+                            "tf": 7.142857142857142
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "l": {
+            "docs": {},
+            "a": {
+              "docs": {},
+              "y": {
+                "docs": {
+                  "module-j5e_animation-Animation.html#play": {
+                    "ref": "module-j5e_animation-Animation.html#play",
+                    "tf": 760
+                  }
+                },
+                "b": {
+                  "docs": {},
+                  "a": {
+                    "docs": {},
+                    "c": {
+                      "docs": {},
+                      "k": {
+                        "docs": {
+                          "module-j5e_animation-Animation.html#speed": {
+                            "ref": "module-j5e_animation-Animation.html#speed",
+                            "tf": 12.5
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "w": {
+            "docs": {},
+            "m": {
+              "docs": {
+                "module-j5e_led-LED.html#brightness": {
+                  "ref": "module-j5e_led-LED.html#brightness",
+                  "tf": 12.5
+                },
+                "module-j5e_led-LED.html#intensity": {
+                  "ref": "module-j5e_led-LED.html#intensity",
+                  "tf": 6.25
+                },
+                "module-j5e_led-LED.html#fade": {
+                  "ref": "module-j5e_led-LED.html#fade",
+                  "tf": 5
+                },
+                "module-j5e_led-LED.html#fadeIn": {
+                  "ref": "module-j5e_led-LED.html#fadeIn",
+                  "tf": 6.25
+                },
+                "module-j5e_led-LED.html#fadeOut": {
+                  "ref": "module-j5e_led-LED.html#fadeOut",
+                  "tf": 6.25
+                },
+                "module-j5e_led-LED.html#pulse": {
+                  "ref": "module-j5e_led-LED.html#pulse",
+                  "tf": 4.166666666666666
+                }
+              }
+            }
+          },
+          "u": {
+            "docs": {},
+            "l": {
+              "docs": {},
+              "s": {
+                "docs": {
+                  "module-j5e_led-LED.html#pulse": {
+                    "ref": "module-j5e_led-LED.html#pulse",
+                    "tf": 679.1666666666666
+                  },
+                  "module-j5e_led-LED.html#stop": {
+                    "ref": "module-j5e_led-LED.html#stop",
+                    "tf": 7.142857142857142
+                  },
+                  "module-j5e_rgb-RGB.html#pulse": {
+                    "ref": "module-j5e_rgb-RGB.html#pulse",
+                    "tf": 685
+                  },
+                  "module-j5e_rgb-RGB.html#stop": {
+                    "ref": "module-j5e_rgb-RGB.html#stop",
+                    "tf": 7.142857142857142
+                  }
+                }
+              }
+            }
+          }
+        },
+        "a": {
+          "docs": {},
           "l": {
             "docs": {},
             "l": {
@@ -3335,90 +4624,58 @@ window.lunrData = {
             }
           }
         },
-        "b": {
-          "docs": {
-            "undefined": {
-              "tf": 900
-            }
-          },
-          "a": {
+        "o": {
+          "docs": {},
+          "v": {
             "docs": {},
-            "s": {
+            "e": {
               "docs": {},
-              "e": {
+              "r": {
                 "docs": {
-                  "module-j5e_event.Emitter.html": {
-                    "ref": "module-j5e_event.Emitter.html",
-                    "tf": 6.25
+                  "undefined": {
+                    "tf": 10
+                  },
+                  "module-j5e_servo-Servo.html#to": {
+                    "ref": "module-j5e_servo-Servo.html#to",
+                    "tf": 7.142857142857142
+                  },
+                  "module-j5e_servo-Servo.html#step": {
+                    "ref": "module-j5e_servo-Servo.html#step",
+                    "tf": 7.142857142857142
                   }
                 }
               }
             }
           },
-          "l": {
-            "docs": {},
-            "i": {
-              "docs": {},
-              "n": {
-                "docs": {},
-                "k": {
-                  "docs": {
-                    "module-j5e_led-LED.html#blink": {
-                      "ref": "module-j5e_led-LED.html#blink",
-                      "tf": 687.5
-                    },
-                    "module-j5e_led-LED.html#stop": {
-                      "ref": "module-j5e_led-LED.html#stop",
-                      "tf": 7.142857142857142
-                    },
-                    "module-j5e_rgb-RGB.html#blink": {
-                      "ref": "module-j5e_rgb-RGB.html#blink",
-                      "tf": 685
-                    },
-                    "module-j5e_rgb-RGB.html#stop": {
-                      "ref": "module-j5e_rgb-RGB.html#stop",
-                      "tf": 7.142857142857142
-                    }
-                  }
+          "n": {
+            "docs": {
+              "module-j5e_event.Emitter.html#once": {
+                "ref": "module-j5e_event.Emitter.html#once",
+                "tf": 8.333333333333332
+              }
+            },
+            "c": {
+              "docs": {
+                "module-j5e_event.Emitter.html#once": {
+                  "ref": "module-j5e_event.Emitter.html#once",
+                  "tf": 633.3333333333334
                 }
               }
             },
-            "u": {
+            "/": {
               "docs": {},
-              "e": {
-                "docs": {
-                  "module-j5e_rgb-RGB.html#color": {
-                    "ref": "module-j5e_rgb-RGB.html#color",
-                    "tf": 20
-                  }
-                }
-              }
-            }
-          },
-          "r": {
-            "docs": {},
-            "i": {
-              "docs": {},
-              "g": {
+              "o": {
                 "docs": {},
-                "h": {
+                "f": {
                   "docs": {},
-                  "t": {
+                  "f": {
                     "docs": {
-                      "module-j5e_led-LED.html#brightness": {
-                        "ref": "module-j5e_led-LED.html#brightness",
-                        "tf": 689.5833333333334
+                      "module-j5e_led-LED.html#toggle": {
+                        "ref": "module-j5e_led-LED.html#toggle",
+                        "tf": 12.5
                       },
-                      "module-j5e_led-LED.html#intensity": {
-                        "ref": "module-j5e_led-LED.html#intensity",
-                        "tf": 6.25
-                      },
-                      "module-j5e_led-LED.html#fadeIn": {
-                        "ref": "module-j5e_led-LED.html#fadeIn",
-                        "tf": 6.25
-                      },
-                      "module-j5e_rgb-RGB.html#fadeIn": {
-                        "ref": "module-j5e_rgb-RGB.html#fadeIn",
+                      "module-j5e_rgb-RGB.html#toggle": {
+                        "ref": "module-j5e_rgb-RGB.html#toggle",
                         "tf": 10
                       }
                     }
@@ -3427,26 +4684,79 @@ window.lunrData = {
               }
             }
           },
-          "e": {
+          "p": {
             "docs": {},
             "t": {
-              "docs": {},
-              "w": {
+              "docs": {
+                "module-j5e_servo-Servo.html#sweep": {
+                  "ref": "module-j5e_servo-Servo.html#sweep",
+                  "tf": 33.33333333333333
+                }
+              },
+              "i": {
                 "docs": {},
-                "e": {
+                "o": {
                   "docs": {},
-                  "e": {
-                    "docs": {},
-                    "n": {
-                      "docs": {
-                        "module-j5e_servo-Servo.html#sweep": {
-                          "ref": "module-j5e_servo-Servo.html#sweep",
-                          "tf": 6.25
-                        },
-                        "module-j5e_animation.html": {
-                          "ref": "module-j5e_animation.html",
-                          "tf": 3.571428571428571
-                        }
+                  "n": {
+                    "docs": {
+                      "module-j5e_animation-Animation.html#enqueue": {
+                        "ref": "module-j5e_animation-Animation.html#enqueue",
+                        "tf": 50
+                      },
+                      "module-j5e_led-LED.html#animate": {
+                        "ref": "module-j5e_led-LED.html#animate",
+                        "tf": 41.66666666666666
+                      },
+                      "module-j5e_rgb-RGB.html#animate": {
+                        "ref": "module-j5e_rgb-RGB.html#animate",
+                        "tf": 33.33333333333333
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "u": {
+            "docs": {},
+            "t": {
+              "docs": {
+                "module-j5e_led-LED.html#fadeOut": {
+                  "ref": "module-j5e_led-LED.html#fadeOut",
+                  "tf": 6.25
+                },
+                "module-j5e_led-LED.html#pulse": {
+                  "ref": "module-j5e_led-LED.html#pulse",
+                  "tf": 4.166666666666666
+                }
+              }
+            }
+          },
+          "b": {
+            "docs": {},
+            "j": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "c": {
+                  "docs": {},
+                  "t": {
+                    "docs": {
+                      "module-j5e_led-LED.html#animate": {
+                        "ref": "module-j5e_led-LED.html#animate",
+                        "tf": 8.333333333333332
+                      },
+                      "module-j5e_servo-Servo.html#max": {
+                        "ref": "module-j5e_servo-Servo.html#max",
+                        "tf": 33.33333333333333
+                      },
+                      "module-j5e_servo-Servo.html#center": {
+                        "ref": "module-j5e_servo-Servo.html#center",
+                        "tf": 33.33333333333333
+                      },
+                      "module-j5e_rgb-RGB.html#color": {
+                        "ref": "module-j5e_rgb-RGB.html#color",
+                        "tf": 2.941176470588235
                       }
                     }
                   }
@@ -3457,71 +4767,6 @@ window.lunrData = {
         },
         "m": {
           "docs": {},
-          "a": {
-            "docs": {},
-            "k": {
-              "docs": {},
-              "e": {
-                "docs": {
-                  "undefined": {
-                    "tf": 50
-                  }
-                }
-              }
-            },
-            "i": {
-              "docs": {},
-              "n": {
-                "docs": {},
-                "t": {
-                  "docs": {},
-                  "a": {
-                    "docs": {},
-                    "i": {
-                      "docs": {},
-                      "n": {
-                        "docs": {
-                          "module-j5e_animation-Animation.html#pause": {
-                            "ref": "module-j5e_animation-Animation.html#pause",
-                            "tf": 7.142857142857142
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "x": {
-              "docs": {
-                "module-j5e_servo-Servo.html#max": {
-                  "ref": "module-j5e_servo-Servo.html#max",
-                  "tf": 690.4761904761905
-                },
-                "module-j5e_servo-Servo.html#sweep": {
-                  "ref": "module-j5e_servo-Servo.html#sweep",
-                  "tf": 6.25
-                }
-              },
-              "i": {
-                "docs": {},
-                "m": {
-                  "docs": {},
-                  "u": {
-                    "docs": {},
-                    "m": {
-                      "docs": {
-                        "module-j5e_servo-Servo.html#max": {
-                          "ref": "module-j5e_servo-Servo.html#max",
-                          "tf": 7.142857142857142
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
           "o": {
             "docs": {},
             "d": {
@@ -3538,6 +4783,10 @@ window.lunrData = {
                       "ref": "module-j5e_animation.html",
                       "tf": 113.57142857142857
                     },
+                    "module-j5e_color.html": {
+                      "ref": "module-j5e_color.html",
+                      "tf": 110
+                    },
                     "module-j5e_easing.html": {
                       "ref": "module-j5e_easing.html",
                       "tf": 110
@@ -3545,6 +4794,10 @@ window.lunrData = {
                     "module-j5e_fn.html": {
                       "ref": "module-j5e_fn.html",
                       "tf": 120
+                    },
+                    "module-j5e_isl29125.html": {
+                      "ref": "module-j5e_isl29125.html",
+                      "tf": 110
                     },
                     "module-j5e_led.html": {
                       "ref": "module-j5e_led.html",
@@ -3560,6 +4813,10 @@ window.lunrData = {
                     },
                     "module-j5e_switch.html": {
                       "ref": "module-j5e_switch.html",
+                      "tf": 110
+                    },
+                    "module-j5e_tcs34725.html": {
+                      "ref": "module-j5e_tcs34725.html",
                       "tf": 110
                     }
                   },
@@ -3704,6 +4961,171 @@ window.lunrData = {
                                       "module-j5e_easing.html": {
                                         "ref": "module-j5e_easing.html",
                                         "tf": 1300
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "i": {
+                                "docs": {},
+                                "s": {
+                                  "docs": {},
+                                  "l": {
+                                    "2": {
+                                      "9": {
+                                        "1": {
+                                          "2": {
+                                            "5": {
+                                              "docs": {
+                                                "module-j5e_isl29125.html": {
+                                                  "ref": "module-j5e_isl29125.html",
+                                                  "tf": 1300
+                                                }
+                                              },
+                                              "~": {
+                                                "docs": {},
+                                                "i": {
+                                                  "docs": {},
+                                                  "s": {
+                                                    "docs": {},
+                                                    "l": {
+                                                      "2": {
+                                                        "9": {
+                                                          "1": {
+                                                            "2": {
+                                                              "5": {
+                                                                "docs": {
+                                                                  "module-j5e_isl29125-ISL29125.html": {
+                                                                    "ref": "module-j5e_isl29125-ISL29125.html",
+                                                                    "tf": 1300
+                                                                  }
+                                                                }
+                                                              },
+                                                              "docs": {}
+                                                            },
+                                                            "docs": {}
+                                                          },
+                                                          "docs": {}
+                                                        },
+                                                        "docs": {}
+                                                      },
+                                                      "docs": {}
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            },
+                                            "docs": {}
+                                          },
+                                          "docs": {}
+                                        },
+                                        "docs": {}
+                                      },
+                                      "docs": {}
+                                    },
+                                    "docs": {}
+                                  }
+                                }
+                              },
+                              "t": {
+                                "docs": {},
+                                "c": {
+                                  "docs": {},
+                                  "s": {
+                                    "3": {
+                                      "4": {
+                                        "7": {
+                                          "2": {
+                                            "5": {
+                                              "docs": {
+                                                "module-j5e_tcs34725.html": {
+                                                  "ref": "module-j5e_tcs34725.html",
+                                                  "tf": 1300
+                                                }
+                                              },
+                                              "~": {
+                                                "docs": {},
+                                                "t": {
+                                                  "docs": {},
+                                                  "c": {
+                                                    "docs": {},
+                                                    "s": {
+                                                      "3": {
+                                                        "4": {
+                                                          "7": {
+                                                            "2": {
+                                                              "5": {
+                                                                "docs": {
+                                                                  "module-j5e_tcs34725-TCS34725.html": {
+                                                                    "ref": "module-j5e_tcs34725-TCS34725.html",
+                                                                    "tf": 1300
+                                                                  }
+                                                                }
+                                                              },
+                                                              "docs": {}
+                                                            },
+                                                            "docs": {}
+                                                          },
+                                                          "docs": {}
+                                                        },
+                                                        "docs": {}
+                                                      },
+                                                      "docs": {}
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            },
+                                            "docs": {}
+                                          },
+                                          "docs": {}
+                                        },
+                                        "docs": {}
+                                      },
+                                      "docs": {}
+                                    },
+                                    "docs": {}
+                                  }
+                                }
+                              },
+                              "c": {
+                                "docs": {},
+                                "o": {
+                                  "docs": {},
+                                  "l": {
+                                    "docs": {},
+                                    "o": {
+                                      "docs": {},
+                                      "r": {
+                                        "docs": {
+                                          "module-j5e_color.html": {
+                                            "ref": "module-j5e_color.html",
+                                            "tf": 1300
+                                          }
+                                        },
+                                        "~": {
+                                          "docs": {},
+                                          "c": {
+                                            "docs": {},
+                                            "o": {
+                                              "docs": {},
+                                              "l": {
+                                                "docs": {},
+                                                "o": {
+                                                  "docs": {},
+                                                  "r": {
+                                                    "docs": {
+                                                      "module-j5e_color-Color.html": {
+                                                        "ref": "module-j5e_color-Color.html",
+                                                        "tf": 1300
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
                                       }
                                     }
                                   }
@@ -4618,6 +6040,61 @@ window.lunrData = {
               }
             }
           },
+          "a": {
+            "docs": {},
+            "i": {
+              "docs": {},
+              "n": {
+                "docs": {},
+                "t": {
+                  "docs": {},
+                  "a": {
+                    "docs": {},
+                    "i": {
+                      "docs": {},
+                      "n": {
+                        "docs": {
+                          "module-j5e_animation-Animation.html#pause": {
+                            "ref": "module-j5e_animation-Animation.html#pause",
+                            "tf": 7.142857142857142
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "x": {
+              "docs": {
+                "module-j5e_servo-Servo.html#max": {
+                  "ref": "module-j5e_servo-Servo.html#max",
+                  "tf": 690.4761904761905
+                },
+                "module-j5e_servo-Servo.html#sweep": {
+                  "ref": "module-j5e_servo-Servo.html#sweep",
+                  "tf": 6.25
+                }
+              },
+              "i": {
+                "docs": {},
+                "m": {
+                  "docs": {},
+                  "u": {
+                    "docs": {},
+                    "m": {
+                      "docs": {
+                        "module-j5e_servo-Servo.html#max": {
+                          "ref": "module-j5e_servo-Servo.html#max",
+                          "tf": 7.142857142857142
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
           "i": {
             "docs": {},
             "n": {
@@ -4643,1193 +6120,6 @@ window.lunrData = {
                           "ref": "module-j5e_servo-Servo.html#min",
                           "tf": 7.142857142857142
                         }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "w": {
-          "docs": {},
-          "h": {
-            "docs": {},
-            "a": {
-              "docs": {},
-              "t": {
-                "docs": {},
-                "'": {
-                  "docs": {
-                    "undefined": {
-                      "tf": 17.5
-                    }
-                  }
-                },
-                "e": {
-                  "docs": {},
-                  "v": {
-                    "docs": {
-                      "module-j5e_rgb-RGB.html#on": {
-                        "ref": "module-j5e_rgb-RGB.html#on",
-                        "tf": 7.142857142857142
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "o": {
-            "docs": {},
-            "r": {
-              "docs": {},
-              "k": {
-                "docs": {
-                  "module-j5e_animation.html": {
-                    "ref": "module-j5e_animation.html",
-                    "tf": 3.571428571428571
-                  },
-                  "module-j5e_switch.html": {
-                    "ref": "module-j5e_switch.html",
-                    "tf": 25
-                  }
-                }
-              }
-            }
-          },
-          "r": {
-            "docs": {},
-            "a": {
-              "docs": {},
-              "p": {
-                "docs": {},
-                "p": {
-                  "docs": {},
-                  "e": {
-                    "docs": {},
-                    "r": {
-                      "docs": {
-                        "module-j5e_fn-timer.html": {
-                          "ref": "module-j5e_fn-timer.html",
-                          "tf": 4.166666666666666
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "c": {
-          "docs": {
-            "undefined": {
-              "tf": 900
-            }
-          },
-          "o": {
-            "docs": {},
-            "n": {
-              "docs": {},
-              "f": {
-                "docs": {},
-                "u": {
-                  "docs": {},
-                  "s": {
-                    "docs": {
-                      "undefined": {
-                        "tf": 11.666666666666666
-                      }
-                    }
-                  }
-                }
-              },
-              "t": {
-                "docs": {},
-                "r": {
-                  "docs": {},
-                  "o": {
-                    "docs": {},
-                    "l": {
-                      "docs": {
-                        "module-j5e_animation-Animation.html": {
-                          "ref": "module-j5e_animation-Animation.html",
-                          "tf": 8.333333333333332
-                        },
-                        "module-j5e_switch-Switch.html": {
-                          "ref": "module-j5e_switch-Switch.html",
-                          "tf": 8.333333333333332
-                        },
-                        "module-j5e_led-LED.html": {
-                          "ref": "module-j5e_led-LED.html",
-                          "tf": 7.142857142857142
-                        },
-                        "module-j5e_servo-Servo.html": {
-                          "ref": "module-j5e_servo-Servo.html",
-                          "tf": 8.333333333333332
-                        },
-                        "module-j5e_rgb-RGB.html": {
-                          "ref": "module-j5e_rgb-RGB.html",
-                          "tf": 8.333333333333332
-                        },
-                        "module-j5e_rgb-RGB.html#color": {
-                          "ref": "module-j5e_rgb-RGB.html#color",
-                          "tf": 2.941176470588235
-                        },
-                        "module-j5e_rgb.html": {
-                          "ref": "module-j5e_rgb.html",
-                          "tf": 10
-                        },
-                        "module-j5e_servo.html": {
-                          "ref": "module-j5e_servo.html",
-                          "tf": 10
-                        }
-                      }
-                    }
-                  }
-                },
-                "i": {
-                  "docs": {},
-                  "n": {
-                    "docs": {},
-                    "u": {
-                      "docs": {
-                        "module-j5e_servo-Servo.html#cw": {
-                          "ref": "module-j5e_servo-Servo.html#cw",
-                          "tf": 10
-                        },
-                        "module-j5e_servo-Servo.html#ccw": {
-                          "ref": "module-j5e_servo-Servo.html#ccw",
-                          "tf": 8.333333333333332
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "m": {
-              "docs": {},
-              "p": {
-                "docs": {},
-                "l": {
-                  "docs": {},
-                  "e": {
-                    "docs": {},
-                    "x": {
-                      "docs": {
-                        "undefined": {
-                          "tf": 10
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "u": {
-              "docs": {},
-              "n": {
-                "docs": {},
-                "t": {
-                  "docs": {},
-                  "e": {
-                    "docs": {},
-                    "r": {
-                      "docs": {
-                        "module-j5e_servo-Servo.html#ccw": {
-                          "ref": "module-j5e_servo-Servo.html#ccw",
-                          "tf": 8.333333333333332
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "l": {
-              "docs": {},
-              "o": {
-                "docs": {},
-                "r": {
-                  "docs": {
-                    "module-j5e_rgb-RGB.html#color": {
-                      "ref": "module-j5e_rgb-RGB.html#color",
-                      "tf": 678.8235294117648
-                    },
-                    "module-j5e_rgb-RGB.html#on": {
-                      "ref": "module-j5e_rgb-RGB.html#on",
-                      "tf": 7.142857142857142
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "l": {
-            "docs": {},
-            "a": {
-              "docs": {},
-              "s": {
-                "docs": {},
-                "s": {
-                  "docs": {
-                    "module-j5e_event.Emitter.html": {
-                      "ref": "module-j5e_event.Emitter.html",
-                      "tf": 116.25
-                    },
-                    "module-j5e_animation-Animation.html": {
-                      "ref": "module-j5e_animation-Animation.html",
-                      "tf": 110
-                    },
-                    "module-j5e_switch-Switch.html": {
-                      "ref": "module-j5e_switch-Switch.html",
-                      "tf": 118.33333333333333
-                    },
-                    "module-j5e_led-LED.html": {
-                      "ref": "module-j5e_led-LED.html",
-                      "tf": 117.14285714285714
-                    },
-                    "module-j5e_servo-Servo.html": {
-                      "ref": "module-j5e_servo-Servo.html",
-                      "tf": 118.33333333333333
-                    },
-                    "module-j5e_rgb-RGB.html": {
-                      "ref": "module-j5e_rgb-RGB.html",
-                      "tf": 118.33333333333333
-                    },
-                    "module-j5e_animation.html": {
-                      "ref": "module-j5e_animation.html",
-                      "tf": 3.571428571428571
-                    }
-                  }
-                }
-              }
-            },
-            "o": {
-              "docs": {},
-              "c": {
-                "docs": {},
-                "k": {
-                  "docs": {},
-                  "w": {
-                    "docs": {},
-                    "i": {
-                      "docs": {},
-                      "s": {
-                        "docs": {
-                          "module-j5e_servo-Servo.html#cw": {
-                            "ref": "module-j5e_servo-Servo.html#cw",
-                            "tf": 10
-                          },
-                          "module-j5e_servo-Servo.html#ccw": {
-                            "ref": "module-j5e_servo-Servo.html#ccw",
-                            "tf": 8.333333333333332
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "e": {
-              "docs": {},
-              "a": {
-                "docs": {},
-                "r": {
-                  "docs": {},
-                  "i": {
-                    "docs": {},
-                    "n": {
-                      "docs": {},
-                      "t": {
-                        "docs": {},
-                        "e": {
-                          "docs": {},
-                          "r": {
-                            "docs": {},
-                            "v": {
-                              "docs": {
-                                "module-j5e_fn-timer.html": {
-                                  "ref": "module-j5e_fn-timer.html",
-                                  "tf": 4.166666666666666
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "r": {
-            "docs": {},
-            "e": {
-              "docs": {},
-              "a": {
-                "docs": {},
-                "t": {
-                  "docs": {
-                    "module-j5e_event.Emitter.html#on": {
-                      "ref": "module-j5e_event.Emitter.html#on",
-                      "tf": 16.666666666666664
-                    },
-                    "module-j5e_event.Emitter.html#once": {
-                      "ref": "module-j5e_event.Emitter.html#once",
-                      "tf": 8.333333333333332
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "u": {
-            "docs": {},
-            "r": {
-              "docs": {},
-              "r": {
-                "docs": {},
-                "e": {
-                  "docs": {},
-                  "n": {
-                    "docs": {},
-                    "t": {
-                      "docs": {
-                        "module-j5e_animation-Animation.html#speed": {
-                          "ref": "module-j5e_animation-Animation.html#speed",
-                          "tf": 12.5
-                        },
-                        "module-j5e_led-LED.html#fade": {
-                          "ref": "module-j5e_led-LED.html#fade",
-                          "tf": 5
-                        },
-                        "module-j5e_rgb-RGB.html#on": {
-                          "ref": "module-j5e_rgb-RGB.html#on",
-                          "tf": 7.142857142857142
-                        },
-                        "module-j5e_rgb-RGB.html#fade": {
-                          "ref": "module-j5e_rgb-RGB.html#fade",
-                          "tf": 6.25
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "a": {
-            "docs": {},
-            "l": {
-              "docs": {},
-              "l": {
-                "docs": {
-                  "module-j5e_fn.html": {
-                    "ref": "module-j5e_fn.html",
-                    "tf": 5
-                  }
-                },
-                "b": {
-                  "docs": {},
-                  "a": {
-                    "docs": {},
-                    "c": {
-                      "docs": {},
-                      "k": {
-                        "docs": {
-                          "module-j5e_led-LED.html#blink": {
-                            "ref": "module-j5e_led-LED.html#blink",
-                            "tf": 25
-                          },
-                          "module-j5e_led-LED.html#fade": {
-                            "ref": "module-j5e_led-LED.html#fade",
-                            "tf": 20
-                          },
-                          "module-j5e_led-LED.html#fadeIn": {
-                            "ref": "module-j5e_led-LED.html#fadeIn",
-                            "tf": 25
-                          },
-                          "module-j5e_led-LED.html#fadeOut": {
-                            "ref": "module-j5e_led-LED.html#fadeOut",
-                            "tf": 25
-                          },
-                          "module-j5e_led-LED.html#pulse": {
-                            "ref": "module-j5e_led-LED.html#pulse",
-                            "tf": 25
-                          },
-                          "module-j5e_rgb-RGB.html#blink": {
-                            "ref": "module-j5e_rgb-RGB.html#blink",
-                            "tf": 25
-                          },
-                          "module-j5e_rgb-RGB.html#fade": {
-                            "ref": "module-j5e_rgb-RGB.html#fade",
-                            "tf": 20
-                          },
-                          "module-j5e_rgb-RGB.html#fadeIn": {
-                            "ref": "module-j5e_rgb-RGB.html#fadeIn",
-                            "tf": 25
-                          },
-                          "module-j5e_rgb-RGB.html#pulse": {
-                            "ref": "module-j5e_rgb-RGB.html#pulse",
-                            "tf": 25
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "e": {
-            "docs": {},
-            "n": {
-              "docs": {},
-              "t": {
-                "docs": {},
-                "e": {
-                  "docs": {},
-                  "r": {
-                    "docs": {
-                      "module-j5e_servo-Servo.html#center": {
-                        "ref": "module-j5e_servo-Servo.html#center",
-                        "tf": 691.6666666666667
-                      }
-                    },
-                    "p": {
-                      "docs": {},
-                      "o": {
-                        "docs": {},
-                        "i": {
-                          "docs": {},
-                          "n": {
-                            "docs": {},
-                            "t": {
-                              "docs": {
-                                "module-j5e_servo-Servo.html#center": {
-                                  "ref": "module-j5e_servo-Servo.html#center",
-                                  "tf": 8.333333333333332
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "w": {
-            "docs": {
-              "module-j5e_servo-Servo.html#cw": {
-                "ref": "module-j5e_servo-Servo.html#cw",
-                "tf": 683.3333333333334
-              }
-            }
-          },
-          "c": {
-            "docs": {},
-            "w": {
-              "docs": {
-                "module-j5e_servo-Servo.html#ccw": {
-                  "ref": "module-j5e_servo-Servo.html#ccw",
-                  "tf": 683.3333333333334
-                }
-              }
-            }
-          }
-        },
-        "l": {
-          "docs": {},
-          "i": {
-            "docs": {},
-            "t": {
-              "docs": {},
-              "t": {
-                "docs": {},
-                "l": {
-                  "docs": {
-                    "undefined": {
-                      "tf": 11.666666666666666
-                    }
-                  }
-                }
-              }
-            },
-            "s": {
-              "docs": {},
-              "t": {
-                "docs": {
-                  "list_module.html": {
-                    "ref": "list_module.html",
-                    "tf": 110
-                  },
-                  "list_namespace.html": {
-                    "ref": "list_namespace.html",
-                    "tf": 110
-                  },
-                  "list_tutorial.html": {
-                    "ref": "list_tutorial.html",
-                    "tf": 110
-                  }
-                },
-                ":": {
-                  "docs": {},
-                  "m": {
-                    "docs": {},
-                    "o": {
-                      "docs": {},
-                      "d": {
-                        "docs": {},
-                        "u": {
-                          "docs": {},
-                          "l": {
-                            "docs": {
-                              "list_module.html": {
-                                "ref": "list_module.html",
-                                "tf": 1300
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  },
-                  "n": {
-                    "docs": {},
-                    "a": {
-                      "docs": {},
-                      "m": {
-                        "docs": {},
-                        "e": {
-                          "docs": {},
-                          "s": {
-                            "docs": {},
-                            "p": {
-                              "docs": {},
-                              "a": {
-                                "docs": {},
-                                "c": {
-                                  "docs": {
-                                    "list_namespace.html": {
-                                      "ref": "list_namespace.html",
-                                      "tf": 1300
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  },
-                  "t": {
-                    "docs": {},
-                    "u": {
-                      "docs": {},
-                      "t": {
-                        "docs": {},
-                        "o": {
-                          "docs": {},
-                          "r": {
-                            "docs": {},
-                            "i": {
-                              "docs": {
-                                "list_tutorial.html": {
-                                  "ref": "list_tutorial.html",
-                                  "tf": 1300
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                },
-                "e": {
-                  "docs": {},
-                  "n": {
-                    "docs": {
-                      "module-j5e_event.Emitter.html#on": {
-                        "ref": "module-j5e_event.Emitter.html#on",
-                        "tf": 66.66666666666666
-                      },
-                      "module-j5e_event.Emitter.html#removeListener": {
-                        "ref": "module-j5e_event.Emitter.html#removeListener",
-                        "tf": 49.99999999999999
-                      },
-                      "module-j5e_event.Emitter.html#once": {
-                        "ref": "module-j5e_event.Emitter.html#once",
-                        "tf": 41.66666666666666
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "g": {
-              "docs": {},
-              "h": {
-                "docs": {},
-                "t": {
-                  "docs": {
-                    "module-j5e_led-LED.html": {
-                      "ref": "module-j5e_led-LED.html",
-                      "tf": 7.142857142857142
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "e": {
-            "docs": {},
-            "d": {
-              "docs": {
-                "module-j5e_animation-Animation.html": {
-                  "ref": "module-j5e_animation-Animation.html",
-                  "tf": 8.333333333333332
-                },
-                "module-j5e_led-LED.html": {
-                  "ref": "module-j5e_led-LED.html",
-                  "tf": 507.14285714285717
-                },
-                "module-j5e_led-LED.html#on": {
-                  "ref": "module-j5e_led-LED.html#on",
-                  "tf": 125
-                },
-                "module-j5e_led-LED.html#off": {
-                  "ref": "module-j5e_led-LED.html#off",
-                  "tf": 125
-                },
-                "module-j5e_led-LED.html#toggle": {
-                  "ref": "module-j5e_led-LED.html#toggle",
-                  "tf": 62.5
-                },
-                "module-j5e_led-LED.html#blink": {
-                  "ref": "module-j5e_led-LED.html#blink",
-                  "tf": 37.5
-                },
-                "module-j5e_led-LED.html#brightness": {
-                  "ref": "module-j5e_led-LED.html#brightness",
-                  "tf": 39.58333333333333
-                },
-                "module-j5e_led-LED.html#intensity": {
-                  "ref": "module-j5e_led-LED.html#intensity",
-                  "tf": 39.58333333333333
-                },
-                "module-j5e_led-LED.html#fade": {
-                  "ref": "module-j5e_led-LED.html#fade",
-                  "tf": 25
-                },
-                "module-j5e_led-LED.html#fadeIn": {
-                  "ref": "module-j5e_led-LED.html#fadeIn",
-                  "tf": 31.25
-                },
-                "module-j5e_led-LED.html#fadeOut": {
-                  "ref": "module-j5e_led-LED.html#fadeOut",
-                  "tf": 31.25
-                },
-                "module-j5e_led-LED.html#pulse": {
-                  "ref": "module-j5e_led-LED.html#pulse",
-                  "tf": 29.166666666666664
-                },
-                "module-j5e_led-LED.html#animate": {
-                  "ref": "module-j5e_led-LED.html#animate",
-                  "tf": 41.66666666666666
-                },
-                "module-j5e_led-LED.html#stop": {
-                  "ref": "module-j5e_led-LED.html#stop",
-                  "tf": 57.14285714285714
-                },
-                "module-j5e_rgb-RGB.html#on": {
-                  "ref": "module-j5e_rgb-RGB.html#on",
-                  "tf": 7.142857142857142
-                },
-                "module-j5e_rgb-RGB.html#off": {
-                  "ref": "module-j5e_rgb-RGB.html#off",
-                  "tf": 16.666666666666664
-                },
-                "module-j5e_rgb-RGB.html#toggle": {
-                  "ref": "module-j5e_rgb-RGB.html#toggle",
-                  "tf": 10
-                },
-                "module-j5e_rgb-RGB.html#blink": {
-                  "ref": "module-j5e_rgb-RGB.html#blink",
-                  "tf": 10
-                },
-                "module-j5e_rgb-RGB.html#fade": {
-                  "ref": "module-j5e_rgb-RGB.html#fade",
-                  "tf": 6.25
-                },
-                "module-j5e_rgb-RGB.html#fadeIn": {
-                  "ref": "module-j5e_rgb-RGB.html#fadeIn",
-                  "tf": 16.666666666666664
-                },
-                "module-j5e_rgb-RGB.html#pulse": {
-                  "ref": "module-j5e_rgb-RGB.html#pulse",
-                  "tf": 10
-                },
-                "module-j5e_rgb-RGB.html#animate": {
-                  "ref": "module-j5e_rgb-RGB.html#animate",
-                  "tf": 16.666666666666664
-                },
-                "module-j5e_rgb-RGB.html#stop": {
-                  "ref": "module-j5e_rgb-RGB.html#stop",
-                  "tf": 7.142857142857142
-                },
-                "module-j5e_animation.html": {
-                  "ref": "module-j5e_animation.html",
-                  "tf": 3.571428571428571
-                },
-                "module-j5e_led.html": {
-                  "ref": "module-j5e_led.html",
-                  "tf": 25
-                }
-              },
-              "'": {
-                "docs": {
-                  "module-j5e_rgb-RGB.html": {
-                    "ref": "module-j5e_rgb-RGB.html",
-                    "tf": 8.333333333333332
-                  },
-                  "module-j5e_rgb-RGB.html#color": {
-                    "ref": "module-j5e_rgb-RGB.html#color",
-                    "tf": 2.941176470588235
-                  },
-                  "module-j5e_rgb.html": {
-                    "ref": "module-j5e_rgb.html",
-                    "tf": 10
-                  }
-                }
-              }
-            }
-          },
-          "t": {
-            "docs": {},
-            ";": {
-              "docs": {},
-              "a": {
-                "docs": {},
-                "s": {
-                  "docs": {},
-                  "y": {
-                    "docs": {},
-                    "n": {
-                      "docs": {},
-                      "c": {
-                        "docs": {},
-                        "&": {
-                          "docs": {},
-                          "g": {
-                            "docs": {},
-                            "t": {
-                              "docs": {
-                                "module-j5e_switch-Switch.html": {
-                                  "ref": "module-j5e_switch-Switch.html",
-                                  "tf": 50
-                                },
-                                "module-j5e_led-LED.html": {
-                                  "ref": "module-j5e_led-LED.html",
-                                  "tf": 50
-                                },
-                                "module-j5e_servo-Servo.html": {
-                                  "ref": "module-j5e_servo-Servo.html",
-                                  "tf": 50
-                                },
-                                "module-j5e_rgb-RGB.html": {
-                                  "ref": "module-j5e_rgb-RGB.html",
-                                  "tf": 50
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "o": {
-            "docs": {},
-            "o": {
-              "docs": {},
-              "p": {
-                "docs": {
-                  "module-j5e_led-LED.html#pulse": {
-                    "ref": "module-j5e_led-LED.html#pulse",
-                    "tf": 4.166666666666666
-                  }
-                }
-              }
-            }
-          }
-        },
-        "p": {
-          "docs": {},
-          "a": {
-            "docs": {},
-            "r": {
-              "docs": {},
-              "a": {
-                "docs": {},
-                "m": {
-                  "docs": {},
-                  "e": {
-                    "docs": {},
-                    "t": {
-                      "docs": {
-                        "undefined": {
-                          "tf": 11.666666666666666
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "u": {
-              "docs": {},
-              "s": {
-                "docs": {
-                  "module-j5e_animation-Animation.html#play": {
-                    "ref": "module-j5e_animation-Animation.html#play",
-                    "tf": 10
-                  },
-                  "module-j5e_animation-Animation.html#pause": {
-                    "ref": "module-j5e_animation-Animation.html#pause",
-                    "tf": 757.1428571428571
-                  }
-                }
-              }
-            },
-            "s": {
-              "docs": {},
-              "s": {
-                "docs": {
-                  "module-j5e_led-LED.html#animate": {
-                    "ref": "module-j5e_led-LED.html#animate",
-                    "tf": 8.333333333333332
-                  }
-                }
-              }
-            }
-          },
-          "o": {
-            "docs": {},
-            "w": {
-              "docs": {},
-              "e": {
-                "docs": {},
-                "r": {
-                  "docs": {
-                    "undefined": {
-                      "tf": 11.666666666666666
-                    }
-                  }
-                }
-              }
-            },
-            "s": {
-              "docs": {},
-              "i": {
-                "docs": {},
-                "t": {
-                  "docs": {
-                    "module-j5e_servo-Servo.html#to": {
-                      "ref": "module-j5e_servo-Servo.html#to",
-                      "tf": 7.142857142857142
-                    },
-                    "module-j5e_servo-Servo.html#step": {
-                      "ref": "module-j5e_servo-Servo.html#step",
-                      "tf": 7.142857142857142
-                    },
-                    "module-j5e_servo-Servo.html#home": {
-                      "ref": "module-j5e_servo-Servo.html#home",
-                      "tf": 12.5
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "r": {
-            "docs": {},
-            "o": {
-              "docs": {},
-              "v": {
-                "docs": {},
-                "i": {
-                  "docs": {},
-                  "d": {
-                    "docs": {
-                      "module-j5e_event.Emitter.html": {
-                        "ref": "module-j5e_event.Emitter.html",
-                        "tf": 6.25
-                      },
-                      "module-j5e_servo-Servo.html#sweep": {
-                        "ref": "module-j5e_servo-Servo.html#sweep",
-                        "tf": 6.25
-                      }
-                    }
-                  }
-                }
-              },
-              "g": {
-                "docs": {},
-                "r": {
-                  "docs": {},
-                  "e": {
-                    "docs": {},
-                    "s": {
-                      "docs": {},
-                      "s": {
-                        "docs": {
-                          "module-j5e_animation-Animation.html#pause": {
-                            "ref": "module-j5e_animation-Animation.html#pause",
-                            "tf": 7.142857142857142
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "l": {
-            "docs": {},
-            "a": {
-              "docs": {},
-              "y": {
-                "docs": {
-                  "module-j5e_animation-Animation.html#play": {
-                    "ref": "module-j5e_animation-Animation.html#play",
-                    "tf": 760
-                  }
-                },
-                "b": {
-                  "docs": {},
-                  "a": {
-                    "docs": {},
-                    "c": {
-                      "docs": {},
-                      "k": {
-                        "docs": {
-                          "module-j5e_animation-Animation.html#speed": {
-                            "ref": "module-j5e_animation-Animation.html#speed",
-                            "tf": 12.5
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "w": {
-            "docs": {},
-            "m": {
-              "docs": {
-                "module-j5e_led-LED.html#brightness": {
-                  "ref": "module-j5e_led-LED.html#brightness",
-                  "tf": 12.5
-                },
-                "module-j5e_led-LED.html#intensity": {
-                  "ref": "module-j5e_led-LED.html#intensity",
-                  "tf": 6.25
-                },
-                "module-j5e_led-LED.html#fade": {
-                  "ref": "module-j5e_led-LED.html#fade",
-                  "tf": 5
-                },
-                "module-j5e_led-LED.html#fadeIn": {
-                  "ref": "module-j5e_led-LED.html#fadeIn",
-                  "tf": 6.25
-                },
-                "module-j5e_led-LED.html#fadeOut": {
-                  "ref": "module-j5e_led-LED.html#fadeOut",
-                  "tf": 6.25
-                },
-                "module-j5e_led-LED.html#pulse": {
-                  "ref": "module-j5e_led-LED.html#pulse",
-                  "tf": 4.166666666666666
-                }
-              }
-            }
-          },
-          "u": {
-            "docs": {},
-            "l": {
-              "docs": {},
-              "s": {
-                "docs": {
-                  "module-j5e_led-LED.html#pulse": {
-                    "ref": "module-j5e_led-LED.html#pulse",
-                    "tf": 679.1666666666666
-                  },
-                  "module-j5e_led-LED.html#stop": {
-                    "ref": "module-j5e_led-LED.html#stop",
-                    "tf": 7.142857142857142
-                  },
-                  "module-j5e_rgb-RGB.html#pulse": {
-                    "ref": "module-j5e_rgb-RGB.html#pulse",
-                    "tf": 685
-                  },
-                  "module-j5e_rgb-RGB.html#stop": {
-                    "ref": "module-j5e_rgb-RGB.html#stop",
-                    "tf": 7.142857142857142
-                  }
-                }
-              }
-            }
-          }
-        },
-        "o": {
-          "docs": {},
-          "v": {
-            "docs": {},
-            "e": {
-              "docs": {},
-              "r": {
-                "docs": {
-                  "undefined": {
-                    "tf": 10
-                  },
-                  "module-j5e_servo-Servo.html#to": {
-                    "ref": "module-j5e_servo-Servo.html#to",
-                    "tf": 7.142857142857142
-                  },
-                  "module-j5e_servo-Servo.html#step": {
-                    "ref": "module-j5e_servo-Servo.html#step",
-                    "tf": 7.142857142857142
-                  }
-                }
-              }
-            }
-          },
-          "n": {
-            "docs": {
-              "module-j5e_event.Emitter.html#once": {
-                "ref": "module-j5e_event.Emitter.html#once",
-                "tf": 8.333333333333332
-              }
-            },
-            "c": {
-              "docs": {
-                "module-j5e_event.Emitter.html#once": {
-                  "ref": "module-j5e_event.Emitter.html#once",
-                  "tf": 633.3333333333334
-                }
-              }
-            },
-            "/": {
-              "docs": {},
-              "o": {
-                "docs": {},
-                "f": {
-                  "docs": {},
-                  "f": {
-                    "docs": {
-                      "module-j5e_led-LED.html#toggle": {
-                        "ref": "module-j5e_led-LED.html#toggle",
-                        "tf": 12.5
-                      },
-                      "module-j5e_rgb-RGB.html#toggle": {
-                        "ref": "module-j5e_rgb-RGB.html#toggle",
-                        "tf": 10
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "p": {
-            "docs": {},
-            "t": {
-              "docs": {
-                "module-j5e_servo-Servo.html#sweep": {
-                  "ref": "module-j5e_servo-Servo.html#sweep",
-                  "tf": 33.33333333333333
-                }
-              },
-              "i": {
-                "docs": {},
-                "o": {
-                  "docs": {},
-                  "n": {
-                    "docs": {
-                      "module-j5e_animation-Animation.html#enqueue": {
-                        "ref": "module-j5e_animation-Animation.html#enqueue",
-                        "tf": 50
-                      },
-                      "module-j5e_led-LED.html#animate": {
-                        "ref": "module-j5e_led-LED.html#animate",
-                        "tf": 41.66666666666666
-                      },
-                      "module-j5e_rgb-RGB.html#animate": {
-                        "ref": "module-j5e_rgb-RGB.html#animate",
-                        "tf": 33.33333333333333
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "u": {
-            "docs": {},
-            "t": {
-              "docs": {
-                "module-j5e_led-LED.html#fadeOut": {
-                  "ref": "module-j5e_led-LED.html#fadeOut",
-                  "tf": 6.25
-                },
-                "module-j5e_led-LED.html#pulse": {
-                  "ref": "module-j5e_led-LED.html#pulse",
-                  "tf": 4.166666666666666
-                }
-              }
-            }
-          },
-          "b": {
-            "docs": {},
-            "j": {
-              "docs": {},
-              "e": {
-                "docs": {},
-                "c": {
-                  "docs": {},
-                  "t": {
-                    "docs": {
-                      "module-j5e_led-LED.html#animate": {
-                        "ref": "module-j5e_led-LED.html#animate",
-                        "tf": 8.333333333333332
-                      },
-                      "module-j5e_servo-Servo.html#max": {
-                        "ref": "module-j5e_servo-Servo.html#max",
-                        "tf": 33.33333333333333
-                      },
-                      "module-j5e_servo-Servo.html#center": {
-                        "ref": "module-j5e_servo-Servo.html#center",
-                        "tf": 33.33333333333333
-                      },
-                      "module-j5e_rgb-RGB.html#color": {
-                        "ref": "module-j5e_rgb-RGB.html#color",
-                        "tf": 2.941176470588235
                       }
                     }
                   }
@@ -5924,6 +6214,122 @@ window.lunrData = {
                       "module-j5e_fn-timer.html": {
                         "ref": "module-j5e_fn-timer.html",
                         "tf": 4.166666666666666
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "b": {
+          "docs": {},
+          "a": {
+            "docs": {},
+            "s": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "module-j5e_event.Emitter.html": {
+                    "ref": "module-j5e_event.Emitter.html",
+                    "tf": 6.25
+                  }
+                }
+              }
+            }
+          },
+          "l": {
+            "docs": {},
+            "i": {
+              "docs": {},
+              "n": {
+                "docs": {},
+                "k": {
+                  "docs": {
+                    "module-j5e_led-LED.html#blink": {
+                      "ref": "module-j5e_led-LED.html#blink",
+                      "tf": 687.5
+                    },
+                    "module-j5e_led-LED.html#stop": {
+                      "ref": "module-j5e_led-LED.html#stop",
+                      "tf": 7.142857142857142
+                    },
+                    "module-j5e_rgb-RGB.html#blink": {
+                      "ref": "module-j5e_rgb-RGB.html#blink",
+                      "tf": 685
+                    },
+                    "module-j5e_rgb-RGB.html#stop": {
+                      "ref": "module-j5e_rgb-RGB.html#stop",
+                      "tf": 7.142857142857142
+                    }
+                  }
+                }
+              }
+            },
+            "u": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "module-j5e_rgb-RGB.html#color": {
+                    "ref": "module-j5e_rgb-RGB.html#color",
+                    "tf": 20
+                  }
+                }
+              }
+            }
+          },
+          "r": {
+            "docs": {},
+            "i": {
+              "docs": {},
+              "g": {
+                "docs": {},
+                "h": {
+                  "docs": {},
+                  "t": {
+                    "docs": {
+                      "module-j5e_led-LED.html#brightness": {
+                        "ref": "module-j5e_led-LED.html#brightness",
+                        "tf": 689.5833333333334
+                      },
+                      "module-j5e_led-LED.html#intensity": {
+                        "ref": "module-j5e_led-LED.html#intensity",
+                        "tf": 6.25
+                      },
+                      "module-j5e_led-LED.html#fadeIn": {
+                        "ref": "module-j5e_led-LED.html#fadeIn",
+                        "tf": 6.25
+                      },
+                      "module-j5e_rgb-RGB.html#fadeIn": {
+                        "ref": "module-j5e_rgb-RGB.html#fadeIn",
+                        "tf": 10
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "e": {
+            "docs": {},
+            "t": {
+              "docs": {},
+              "w": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "n": {
+                      "docs": {
+                        "module-j5e_servo-Servo.html#sweep": {
+                          "ref": "module-j5e_servo-Servo.html#sweep",
+                          "tf": 6.25
+                        },
+                        "module-j5e_animation.html": {
+                          "ref": "module-j5e_animation.html",
+                          "tf": 3.571428571428571
+                        }
                       }
                     }
                   }
@@ -6158,6 +6564,70 @@ window.lunrData = {
             }
           }
         },
+        "w": {
+          "docs": {},
+          "h": {
+            "docs": {},
+            "a": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "v": {
+                    "docs": {
+                      "module-j5e_rgb-RGB.html#on": {
+                        "ref": "module-j5e_rgb-RGB.html#on",
+                        "tf": 7.142857142857142
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "o": {
+            "docs": {},
+            "r": {
+              "docs": {},
+              "k": {
+                "docs": {
+                  "module-j5e_animation.html": {
+                    "ref": "module-j5e_animation.html",
+                    "tf": 3.571428571428571
+                  },
+                  "module-j5e_switch.html": {
+                    "ref": "module-j5e_switch.html",
+                    "tf": 25
+                  }
+                }
+              }
+            }
+          },
+          "r": {
+            "docs": {},
+            "a": {
+              "docs": {},
+              "p": {
+                "docs": {},
+                "p": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "r": {
+                      "docs": {
+                        "module-j5e_fn-timer.html": {
+                          "ref": "module-j5e_fn-timer.html",
+                          "tf": 4.166666666666666
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
         "k": {
           "docs": {},
           "e": {
@@ -6184,7 +6654,7 @@ window.lunrData = {
           }
         }
       },
-      "length": 561
+      "length": 588
     },
     "corpusTokens": [
       "0",
@@ -6198,11 +6668,8 @@ window.lunrData = {
       "anim",
       "argument",
       "array",
-      "async",
-      "asynchron",
       "attach",
       "avail",
-      "b",
       "base",
       "between",
       "blink",
@@ -6229,6 +6696,7 @@ window.lunrData = {
       "d",
       "default",
       "degre",
+      "detect",
       "devic",
       "digit",
       "diod",
@@ -6276,13 +6744,18 @@ window.lunrData = {
       "interv",
       "io",
       "iooption",
+      "isl29125",
       "j5e",
       "j5e'",
       "j5e/anim",
       "j5e/animation~anim",
+      "j5e/color",
+      "j5e/color~color",
       "j5e/eas",
       "j5e/fn",
       "j5e/fn~tim",
+      "j5e/isl29125",
+      "j5e/isl29125~isl29125",
       "j5e/l",
       "j5e/led~l",
       "j5e/rgb",
@@ -6291,6 +6764,8 @@ window.lunrData = {
       "j5e/servo~servo",
       "j5e/switch",
       "j5e/switch~switch",
+      "j5e/tcs34725",
+      "j5e/tcs34725~tcs34725",
       "johnni",
       "key",
       "led",
@@ -6305,7 +6780,6 @@ window.lunrData = {
       "loop",
       "lt;async&gt",
       "maintain",
-      "make",
       "max",
       "maximum",
       "meant",
@@ -6320,6 +6794,8 @@ window.lunrData = {
       "module:j5e/animation~animation#play",
       "module:j5e/animation~animation#spe",
       "module:j5e/animation~animation#stop",
+      "module:j5e/color",
+      "module:j5e/color~color",
       "module:j5e/eas",
       "module:j5e/event.emitt",
       "module:j5e/event.emitter#emit",
@@ -6328,6 +6804,8 @@ window.lunrData = {
       "module:j5e/event.emitter#removelisten",
       "module:j5e/fn",
       "module:j5e/fn~tim",
+      "module:j5e/isl29125",
+      "module:j5e/isl29125~isl29125",
       "module:j5e/l",
       "module:j5e/led~l",
       "module:j5e/led~led#anim",
@@ -6368,6 +6846,8 @@ window.lunrData = {
       "module:j5e/servo~servo#to",
       "module:j5e/switch",
       "module:j5e/switch~switch",
+      "module:j5e/tcs34725",
+      "module:j5e/tcs34725~tcs34725",
       "more",
       "move",
       "namespac",
@@ -6408,6 +6888,7 @@ window.lunrData = {
       "script",
       "see",
       "segment",
+      "sensor",
       "separ",
       "sequenc",
       "seri",
@@ -6425,10 +6906,10 @@ window.lunrData = {
       "step",
       "stop",
       "string",
-      "stuff",
       "sweep",
       "switch",
       "system",
+      "tcs34725",
       "time",
       "timelin",
       "timer",
@@ -6445,7 +6926,6 @@ window.lunrData = {
       "util",
       "val",
       "valu",
-      "what'",
       "whatev",
       "work",
       "wrapper",
@@ -6573,6 +7053,39 @@ window.lunrData = {
       "tags": "module:j5e/event.Emitter#once Emitter#once once",
       "summary": "",
       "description": "Create an event listener that will only fire one time."
+    },
+    "module-j5e_isl29125-ISL29125.html": {
+      "id": "module-j5e_isl29125-ISL29125.html",
+      "kind": "class",
+      "title": "&lt;async&gt; j5e/isl29125~ISL29125",
+      "longname": "module:j5e/isl29125~ISL29125",
+      "name": "ISL29125",
+      "tags": "module:j5e/isl29125~ISL29125",
+      "summary": "",
+      "description": "The Color Sensor class",
+      "body": ""
+    },
+    "module-j5e_tcs34725-TCS34725.html": {
+      "id": "module-j5e_tcs34725-TCS34725.html",
+      "kind": "class",
+      "title": "&lt;async&gt; j5e/tcs34725~TCS34725",
+      "longname": "module:j5e/tcs34725~TCS34725",
+      "name": "TCS34725",
+      "tags": "module:j5e/tcs34725~TCS34725",
+      "summary": "",
+      "description": "The Color Sensor class",
+      "body": ""
+    },
+    "module-j5e_color-Color.html": {
+      "id": "module-j5e_color-Color.html",
+      "kind": "class",
+      "title": "&lt;async&gt; j5e/color~Color",
+      "longname": "module:j5e/color~Color",
+      "name": "Color",
+      "tags": "module:j5e/color~Color",
+      "summary": "",
+      "description": "The Color Sensor class",
+      "body": ""
     },
     "module-j5e_animation-Animation.html": {
       "id": "module-j5e_animation-Animation.html",
@@ -7010,6 +7523,17 @@ window.lunrData = {
       "description": "The j5e Animation module handles tweening between a series of key frames. Works with with the LED, RGB, and Servo classes.",
       "body": ""
     },
+    "module-j5e_color.html": {
+      "id": "module-j5e_color.html",
+      "kind": "module",
+      "title": "j5e/color",
+      "longname": "module:j5e/color",
+      "name": "j5e/color",
+      "tags": "module:j5e/color",
+      "summary": "",
+      "description": "Detect colors",
+      "body": ""
+    },
     "module-j5e_easing.html": {
       "id": "module-j5e_easing.html",
       "kind": "module",
@@ -7030,6 +7554,17 @@ window.lunrData = {
       "tags": "module:j5e/fn",
       "summary": "",
       "description": "fn module - Utilities used in most IO modules. Typically called from other J5e methods.",
+      "body": ""
+    },
+    "module-j5e_isl29125.html": {
+      "id": "module-j5e_isl29125.html",
+      "kind": "module",
+      "title": "j5e/isl29125",
+      "longname": "module:j5e/isl29125",
+      "name": "j5e/isl29125",
+      "tags": "module:j5e/isl29125",
+      "summary": "",
+      "description": "Detect colors",
       "body": ""
     },
     "module-j5e_led.html": {
@@ -7074,6 +7609,17 @@ window.lunrData = {
       "tags": "module:j5e/switch",
       "summary": "",
       "description": "For working with switches",
+      "body": ""
+    },
+    "module-j5e_tcs34725.html": {
+      "id": "module-j5e_tcs34725.html",
+      "kind": "module",
+      "title": "j5e/tcs34725",
+      "longname": "module:j5e/tcs34725",
+      "name": "j5e/tcs34725",
+      "tags": "module:j5e/tcs34725",
+      "summary": "",
+      "description": "Detect colors",
       "body": ""
     },
     "module-j5e_fn-timer.html": {

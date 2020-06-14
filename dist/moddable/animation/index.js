@@ -25,8 +25,8 @@ class Animation {
    * import Servo from "@j5e/servo";
    * import Animation from "@j5e/animation";
    * 
-   * const servo = new Servo(13);
-   * const ani = new Animation(servo);
+   * const servo = await new Servo(13);
+   * const ani = await new Animation(servo);
    * 
    * const wave = {
    *   duration: 4000,
@@ -69,8 +69,8 @@ class Animation {
    * import Servo from "@j5e/servo";
    * import Animation from "@j5e/animation";
    * 
-   * const servo = new Servo(13);
-   * const ani = new Animation(servo);
+   * const servo = await new Servo(13);
+   * const ani = await new Animation(servo);
    * 
    * const wave = {
    *   duration: 4000,
@@ -148,8 +148,8 @@ class Animation {
    * import Animation from "@j5e/animation";
    * import {timer} from "@j5e/fn";
    * 
-   * const servo = new Servo(13);
-   * const ani = new Animation(servo);
+   * const servo = await new Servo(13);
+   * const ani = await new Animation(servo);
    * 
    * const wave = {
    *   duration: 4000,
@@ -206,8 +206,8 @@ class Animation {
    * import Animation from "@j5e/animation";
    * import {timer} from "@j5e/fn";
    * 
-   * const servo = new Servo(13);
-   * const ani = new Animation(servo);
+   * const servo = await new Servo(13);
+   * const ani = await new Animation(servo);
    * 
    * const wave = {
    *   duration: 4000,
@@ -253,8 +253,8 @@ class Animation {
    * import Animation from "@j5e/animation";
    * import {timer} from "@j5e/fn";
    * 
-   * const servo = new Servo(13);
-   * const ani = new Animation(servo);
+   * const servo = await new Servo(13);
+   * const ani = await new Animation(servo);
    * 
    * const wave = {
    *   duration: 4000,
@@ -298,8 +298,8 @@ class Animation {
    * import Animation from "@j5e/animation";
    * import {timer} from "@j5e/fn";
    * 
-   * const servo = new Servo(13);
-   * const ani = new Animation(servo);
+   * const servo = await new Servo(13);
+   * const ani = await new Animation(servo);
    * 
    * const wave = {
    *   duration: 4000,

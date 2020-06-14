@@ -1,9 +1,10 @@
+<!-- start:source.tmpl.hbs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>Tutorials</title>
+		<title>color/index.js</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -43,7 +44,7 @@
 			</style>
 		<script type="text/javascript">
 			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"MMMM D, YYYY","systemName":"j5e","systemSummary":"Johnny Five for Embedded Systems","systemLogo":"img/j5e.png","systemColor":"#000","navMembers":[{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Copyright © 2020 The contributors to the j5e and Johnny-Five projects.","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":true,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":{"ua":"UA-36026876-4","domain":"dtex.github.io"},"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":["./static/custom.css"],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
-			window.DOCLET_TOC_ENABLED = true;
+			window.DOCLET_TOC_ENABLED = false;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
 </head>
@@ -84,58 +85,142 @@
 	</header>
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
-				<span class="kind">list</span>
-				<h1><span class="name">Tutorials</span></h1>
-				<div class="summary"><p>All available tutorials.</p></div>			</div>
+				<span class="kind">source</span>
+				<h1><span class="name">color/index.js</span></h1>
+			</div>
 		</div>
 	<div class="container content">
 		<div class="row">
-			<div class="col-md-9 main-content">
-						<ol class="breadcrumb">
-							<li><a href="index.html">Home</a></li>
-							<li class="active">Tutorials</li>
-						</ol>
-					<section>
-		<h2><span class="name">Tutorials</span></h2>
-		<article class="secondary">
-				<dl class="symbol">
-						
-						<dt class="symbol-title tutorial public">
-			<h4 id="" class="tutorial public"><a href="tutorial-A-GETSTARTED.html"><span class="title">Getting Started</span></a></h4>
-		<div class="summary"><p>You gotta start somewhere!</p></div></dt>
-<dd class="symbol-details tutorial public">
-	<div class="symbol-details-inner">
-		<dl class="symbol tutorial-children">
-		</dl>
-	</div>
-</dd>
-						<hr/>
-						<dt class="symbol-title tutorial public">
-			<h4 id="" class="tutorial public"><a href="tutorial-C-INSTANTIATING.html"><span class="title">Instantiating a Device</span></a></h4>
-		<div class="summary"><p>The ioOptions parameter is powerful, flexible, and just a little confusing.</p></div></dt>
-<dd class="symbol-details tutorial public">
-	<div class="symbol-details-inner">
-		<dl class="symbol tutorial-children">
-		</dl>
-	</div>
-</dd>
-						<hr/>
-						<dt class="symbol-title tutorial public">
-			<h4 id="" class="tutorial public"><a href="tutorial-D-ANIMATING.html"><span class="title">j5e's Timeline and Tweening Tools</span></a></h4>
-		<div class="summary"><p>Animations allow for complex sequencing of devices over time.</p></div></dt>
-<dd class="symbol-details tutorial public">
-	<div class="symbol-details-inner">
-		<dl class="symbol tutorial-children">
-		</dl>
-	</div>
-</dd>
-				</dl>
-		</article>
-					</section>
+			<div class="col-md-12 main-content">
+		<section class="source-section">
+			<article></article>
+			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">/**
+ * Detect colors
+ * @module j5e/color
+ * @requires module:@j5e/event
+ * @requires module:@j5e/fn
+ */
+
+import { Emitter } from "@j5e/event";
+import {normalizeParams, getProvider, pad, timer} from "@j5e/fn";
+
+/** 
+ * Class representing a color sensor
+ * @classdesc The Color Sensor class
+ * @async
+ * @extends Emitter
+ * @fires Color#data
+ * @fires Color#change
+ */
+class Color extends Emitter {
+
+  static colors = ["red", "green", "blue"];
+
+  #state = {
+    
+  };
+  
+  /**
+   * Instantiate a color sensor
+   * @param {(number|string|object)} io - A pin number, pin identifier or a complete IO options object (See {@tutorial C-INSTANTIATING}
+   * @param {object} [device={}] - An object containing device options
+   * @param {number} [device.freq=25] - Desired frequency for data reads. Note this is different than Johnny-Five in that it is the frequency of reads, not the interval between reads.
+   */
+   constructor(io, device) { 
+    return (async () => {
+      
+      const {ioOpts, deviceOpts} = normalizeParams(io, device);
+      super();
+
+      const Provider = await getProvider(ioOpts, "builtin/i2c");
+      
+      this.io = new Provider(ioOpts);
+      
+      this.#state.freq = deviceOpts.freq || 25;
+      this.#state.raw = 0;
+      this.#state.last = null;
+      
+      Object.defineProperties(this, {
+        value: {
+          get: function() {
+            return this.#state.raw;
+          }
+        },
+        rgb: {
+          get: function() {
+            return this.toRGB(raw).reduce(function(accum, value, index) {
+              accum[colors[index]] = value;
+              return accum;
+            }, {});
+          }
+        }
+      });
+
+      trace("\nA\n");
+      trace(typeof this.initialize);
+      trace("\nA\n");
+      this.initialize(deviceOpts, function(data) {
+        raw = data;
+      });
+      
+      return this;
+    })();
+  
+    // timer.setInterval(() => {
+    //   if (this.#state.raw === undefined) {
+    //     return;
+    //   }
+  
+    //   let data = {
+    //     rgb: this.rgb,
+    //   };
+  
+    //   this.emit("data", data);
+  
+    //   if (raw !== last) {
+    //     last = raw;
+    //     this.emit("change", data);
+    //   }
+    // }, 1000/this.#state.freq);
+    
+  }
+
+  /*
+   * Initializes the device
+   * @abstract
+   */
+  initialize(opts, dataHandler) {
+    trace("Color initialize\n");
+  }
+  
+  /*
+   * Convert raw value to RGB
+   * @param {object} raw - RGB Object
+   * @returns {RGB Object}
+   */
+  toRGB(raw) {
+    return raw;
+  }
+
+  /*
+   * Converts and RGB object to hex value
+   * @param {object} rgb - RGB Object
+   * @returns {String}
+   */
+  hexCode(rgb) {
+    if (rgb.red === undefined || rgb.green === undefined || rgb.blue === undefined) {
+      return null;
+    }
+    return rgb.length === 0 ? "unknown" : colors.reduce(function(accum, name) {
+      return accum += pad(rgb[name].toString(16), 2);
+    }, "");
+  }
+
+}
+
+export default Color;</code></pre>
+		</section>
 			</div>
-				<div class="col-md-3 side-content">
-					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
-				</div>
 		</div>
 	</div>
 	<footer>
@@ -173,3 +258,4 @@ gtag('js', new Date());gtag('config', 'UA-36026876-4');
 </script>
 <a href="https://github.com/dtex/j5e"><img width="149" height="149" style="z-index:1000;position:absolute;top: 50px;right: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_orange_ff7600.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a></body>
 </html>
+<!-- end:source.tmpl.hbs -->

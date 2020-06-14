@@ -185,19 +185,17 @@
 			import Animation from &quot;@j5e/animation&quot;;
 			import { inQuad } from &quot;@j5e/easing&quot;;
 			
-			(async function() {
-			  const servo &#x3D; new Servo(13);
-			  const ani &#x3D; new Animation(servo);
+			const servo &#x3D; await new Servo(13);
+			const ani &#x3D; await new Animation(servo);
 			
-			  const wave &#x3D; {
-			    duration: 4000,
-			    cuePoints: [0, 1],
-			    keyFrames: [0, 180],
-			    easing: inQuad
-			  };
+			const wave &#x3D; {
+			  duration: 4000,
+			  cuePoints: [0, 1],
+			  keyFrames: [0, 180],
+			  easing: inQuad
+			};
 			
-			  ani.enqueue(wave);
-			});</code></pre>
+			ani.enqueue(wave);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -219,7 +217,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-68">line 68</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-64">line 64</a></p>
 								</div>
 							</div>
 			
@@ -278,18 +276,16 @@
 			import Animation from &quot;@j5e/animation&quot;;
 			import { outQuad } from &quot;@j5e/easing&quot;;
 			
-			(async function() {
-			  const servo &#x3D; new Servo(13);
-			  const ani &#x3D; new Animation(servo);
+			const servo &#x3D; await new Servo(13);
+			const ani &#x3D; await new Animation(servo);
 			
-			  const wave &#x3D; {
-			    duration: 4000,
-			    cuePoints: [0, 0.5, 1],
-			    keyFrames: [0, 90, { value: 180, easing: outQuad }]
-			  };
+			const wave &#x3D; {
+			  duration: 4000,
+			  cuePoints: [0, 0.5, 1],
+			  keyFrames: [0, 90, { value: 180, easing: outQuad }]
+			};
 			
-			  ani.enqueue(wave);
-			});</code></pre>
+			ani.enqueue(wave);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -311,7 +307,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-93">line 93</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-87">line 87</a></p>
 								</div>
 							</div>
 			
@@ -370,19 +366,17 @@
 			import Animation from &quot;@j5e/animation&quot;;
 			import { inOutQuad } from &quot;@j5e/easing&quot;;
 			
-			(async function() {
-			  const servo &#x3D; new Servo(13);
-			  const ani &#x3D; new Animation(servo);
+			const servo &#x3D; await new Servo(13);
+			const ani &#x3D; await new Animation(servo);
 			
-			  const wave &#x3D; {
-			    duration: 4000,
-			    cuePoints: [0, 1],
-			    keyFrames: [0, 180],
-			    easing: inOutQuad
-			  };
+			const wave &#x3D; {
+			  duration: 4000,
+			  cuePoints: [0, 1],
+			  keyFrames: [0, 180],
+			  easing: inOutQuad
+			};
 			
-			  ani.enqueue(wave);
-			});</code></pre>
+			ani.enqueue(wave);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -404,7 +398,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-119">line 119</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-111">line 111</a></p>
 								</div>
 							</div>
 			
@@ -463,19 +457,17 @@
 			import Animation from &quot;@j5e/animation&quot;;
 			import { inCube } from &quot;@j5e/easing&quot;;
 			
-			(async function() {
-			  const servo &#x3D; new Servo(13);
-			  const ani &#x3D; new Animation(servo);
+			const servo &#x3D; await new Servo(13);
+			const ani &#x3D; await new Animation(servo);
 			
-			  const wave &#x3D; {
-			    duration: 4000,
-			    cuePoints: [0, 1],
-			    keyFrames: [0, 180],
-			    easing: inCube
-			  };
+			const wave &#x3D; {
+			  duration: 4000,
+			  cuePoints: [0, 1],
+			  keyFrames: [0, 180],
+			  easing: inCube
+			};
 			
-			  ani.enqueue(wave);
-			});</code></pre>
+			ani.enqueue(wave);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -497,7 +489,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-150">line 150</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-140">line 140</a></p>
 								</div>
 							</div>
 			
@@ -556,18 +548,16 @@
 			import Animation from &quot;@j5e/animation&quot;;
 			import { outCube } from &quot;@j5e/easing&quot;;
 			
-			(async function() {
-			  const servo &#x3D; new Servo(13);
-			  const ani &#x3D; new Animation(servo);
+			const servo &#x3D; await new Servo(13);
+			const ani &#x3D; await new Animation(servo);
 			
-			  const wave &#x3D; {
-			    duration: 4000,
-			    cuePoints: [0, 0.5, 1],
-			    keyFrames: [0, 90, { value: 180, easing: outCube }]
-			  };
+			const wave &#x3D; {
+			  duration: 4000,
+			  cuePoints: [0, 0.5, 1],
+			  keyFrames: [0, 90, { value: 180, easing: outCube }]
+			};
 			
-			  ani.enqueue(wave);
-			});</code></pre>
+			ani.enqueue(wave);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -589,7 +579,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-175">line 175</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-163">line 163</a></p>
 								</div>
 							</div>
 			
@@ -648,19 +638,17 @@
 			import Animation from &quot;@j5e/animation&quot;;
 			import { inOutCube } from &quot;@j5e/easing&quot;;
 			
-			(async function() {
-			  const servo &#x3D; new Servo(13);
-			  const ani &#x3D; new Animation(servo);
+			const servo &#x3D; await new Servo(13);
+			const ani &#x3D; await new Animation(servo);
 			
-			  const wave &#x3D; {
-			    duration: 4000,
-			    cuePoints: [0, 1],
-			    keyFrames: [0, 180],
-			    easing: inOutCube
-			  };
+			const wave &#x3D; {
+			  duration: 4000,
+			  cuePoints: [0, 1],
+			  keyFrames: [0, 180],
+			  easing: inOutCube
+			};
 			
-			  ani.enqueue(wave);
-			});</code></pre>
+			ani.enqueue(wave);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -682,7 +670,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-201">line 201</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-187">line 187</a></p>
 								</div>
 							</div>
 			
@@ -741,19 +729,17 @@
 			import Animation from &quot;@j5e/animation&quot;;
 			import { inQuart } from &quot;@j5e/easing&quot;;
 			
-			(async function() {
-			  const servo &#x3D; new Servo(13);
-			  const ani &#x3D; new Animation(servo);
+			const servo &#x3D; await new Servo(13);
+			const ani &#x3D; await new Animation(servo);
 			
-			  const wave &#x3D; {
-			    duration: 4000,
-			    cuePoints: [0, 1],
-			    keyFrames: [0, 180],
-			    easing: inQuart
-			  };
+			const wave &#x3D; {
+			  duration: 4000,
+			  cuePoints: [0, 1],
+			  keyFrames: [0, 180],
+			  easing: inQuart
+			};
 			
-			  ani.enqueue(wave);
-			});</code></pre>
+			ani.enqueue(wave);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -775,7 +761,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-232">line 232</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-216">line 216</a></p>
 								</div>
 							</div>
 			
@@ -834,18 +820,16 @@
 			import Animation from &quot;@j5e/animation&quot;;
 			import { outQuart } from &quot;@j5e/easing&quot;;
 			
-			(async function() {
-			  const servo &#x3D; new Servo(13);
-			  const ani &#x3D; new Animation(servo);
+			const servo &#x3D; await new Servo(13);
+			const ani &#x3D; await new Animation(servo);
 			
-			  const wave &#x3D; {
-			    duration: 4000,
-			    cuePoints: [0, 0.5, 1],
-			    keyFrames: [0, 90, { value: 180, easing: outQuart }]
-			  };
+			const wave &#x3D; {
+			  duration: 4000,
+			  cuePoints: [0, 0.5, 1],
+			  keyFrames: [0, 90, { value: 180, easing: outQuart }]
+			};
 			
-			  ani.enqueue(wave);
-			});</code></pre>
+			ani.enqueue(wave);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -867,7 +851,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-257">line 257</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-239">line 239</a></p>
 								</div>
 							</div>
 			
@@ -926,19 +910,17 @@
 			import Animation from &quot;@j5e/animation&quot;;
 			import { inOutQuart } from &quot;@j5e/easing&quot;;
 			
-			(async function() {
-			  const servo &#x3D; new Servo(13);
-			  const ani &#x3D; new Animation(servo);
+			const servo &#x3D; await new Servo(13);
+			const ani &#x3D; await new Animation(servo);
 			
-			  const wave &#x3D; {
-			    duration: 4000,
-			    cuePoints: [0, 1],
-			    keyFrames: [0, 180],
-			    easing: inOutQuart
-			  };
+			const wave &#x3D; {
+			  duration: 4000,
+			  cuePoints: [0, 1],
+			  keyFrames: [0, 180],
+			  easing: inOutQuart
+			};
 			
-			  ani.enqueue(wave);
-			});</code></pre>
+			ani.enqueue(wave);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -960,7 +942,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-283">line 283</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-263">line 263</a></p>
 								</div>
 							</div>
 			
@@ -1019,19 +1001,17 @@
 			import Animation from &quot;@j5e/animation&quot;;
 			import { inQuint } from &quot;@j5e/easing&quot;;
 			
-			(async function() {
-			  const servo &#x3D; new Servo(13);
-			  const ani &#x3D; new Animation(servo);
+			const servo &#x3D; await new Servo(13);
+			const ani &#x3D; await new Animation(servo);
 			
-			  const wave &#x3D; {
-			    duration: 4000,
-			    cuePoints: [0, 1],
-			    keyFrames: [0, 180],
-			    easing: inQuint
-			  };
+			const wave &#x3D; {
+			  duration: 4000,
+			  cuePoints: [0, 1],
+			  keyFrames: [0, 180],
+			  easing: inQuint
+			};
 			
-			  ani.enqueue(wave);
-			});</code></pre>
+			ani.enqueue(wave);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -1053,7 +1033,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-314">line 314</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-292">line 292</a></p>
 								</div>
 							</div>
 			
@@ -1112,18 +1092,16 @@
 			import Animation from &quot;@j5e/animation&quot;;
 			import { outQuint } from &quot;@j5e/easing&quot;;
 			
-			(async function() {
-			  const servo &#x3D; new Servo(13);
-			  const ani &#x3D; new Animation(servo);
+			const servo &#x3D; await new Servo(13);
+			const ani &#x3D; await new Animation(servo);
 			
-			  const wave &#x3D; {
-			    duration: 4000,
-			    cuePoints: [0, 0.5, 1],
-			    keyFrames: [0, 90, { value: 180, easing: outQuint }]
-			  };
+			const wave &#x3D; {
+			  duration: 4000,
+			  cuePoints: [0, 0.5, 1],
+			  keyFrames: [0, 90, { value: 180, easing: outQuint }]
+			};
 			
-			  ani.enqueue(wave);
-			});</code></pre>
+			ani.enqueue(wave);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -1145,7 +1123,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-339">line 339</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-315">line 315</a></p>
 								</div>
 							</div>
 			
@@ -1204,19 +1182,17 @@
 			import Animation from &quot;@j5e/animation&quot;;
 			import { inOutQuint } from &quot;@j5e/easing&quot;;
 			
-			(async function() {
-			  const servo &#x3D; new Servo(13);
-			  const ani &#x3D; new Animation(servo);
+			const servo &#x3D; await new Servo(13);
+			const ani &#x3D; await new Animation(servo);
 			
-			  const wave &#x3D; {
-			    duration: 4000,
-			    cuePoints: [0, 1],
-			    keyFrames: [0, 180],
-			    easing: inOutQuint
-			  };
+			const wave &#x3D; {
+			  duration: 4000,
+			  cuePoints: [0, 1],
+			  keyFrames: [0, 180],
+			  easing: inOutQuint
+			};
 			
-			  ani.enqueue(wave);
-			});</code></pre>
+			ani.enqueue(wave);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -1238,7 +1214,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-365">line 365</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-339">line 339</a></p>
 								</div>
 							</div>
 			
@@ -1297,19 +1273,17 @@
 			import Animation from &quot;@j5e/animation&quot;;
 			import { inSine } from &quot;@j5e/easing&quot;;
 			
-			(async function() {
-			  const servo &#x3D; new Servo(13);
-			  const ani &#x3D; new Animation(servo);
+			const servo &#x3D; await new Servo(13);
+			const ani &#x3D; await new Animation(servo);
 			
-			  const wave &#x3D; {
-			    duration: 4000,
-			    cuePoints: [0, 1],
-			    keyFrames: [0, 180],
-			    easing: inSine
-			  };
+			const wave &#x3D; {
+			  duration: 4000,
+			  cuePoints: [0, 1],
+			  keyFrames: [0, 180],
+			  easing: inSine
+			};
 			
-			  ani.enqueue(wave);
-			});</code></pre>
+			ani.enqueue(wave);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -1331,7 +1305,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-396">line 396</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-368">line 368</a></p>
 								</div>
 							</div>
 			
@@ -1390,18 +1364,16 @@
 			import Animation from &quot;@j5e/animation&quot;;
 			import { outSine } from &quot;@j5e/easing&quot;;
 			
-			(async function() {
-			  const servo &#x3D; new Servo(13);
-			  const ani &#x3D; new Animation(servo);
+			const servo &#x3D; await new Servo(13);
+			const ani &#x3D; await new Animation(servo);
 			
-			  const wave &#x3D; {
-			    duration: 4000,
-			    cuePoints: [0, 0.5, 1],
-			    keyFrames: [0, 90, { value: 180, easing: outSine }]
-			  };
+			const wave &#x3D; {
+			  duration: 4000,
+			  cuePoints: [0, 0.5, 1],
+			  keyFrames: [0, 90, { value: 180, easing: outSine }]
+			};
 			
-			  ani.enqueue(wave);
-			});</code></pre>
+			ani.enqueue(wave);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -1423,7 +1395,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-421">line 421</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-391">line 391</a></p>
 								</div>
 							</div>
 			
@@ -1482,19 +1454,17 @@
 			import Animation from &quot;@j5e/animation&quot;;
 			import { inOutSine } from &quot;@j5e/easing&quot;;
 			
-			(async function() {
-			  const servo &#x3D; new Servo(13);
-			  const ani &#x3D; new Animation(servo);
+			const servo &#x3D; await new Servo(13);
+			const ani &#x3D; await new Animation(servo);
 			
-			  const wave &#x3D; {
-			    duration: 4000,
-			    cuePoints: [0, 1],
-			    keyFrames: [0, 180],
-			    easing: inOutSine
-			  };
+			const wave &#x3D; {
+			  duration: 4000,
+			  cuePoints: [0, 1],
+			  keyFrames: [0, 180],
+			  easing: inOutSine
+			};
 			
-			  ani.enqueue(wave);
-			});</code></pre>
+			ani.enqueue(wave);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -1516,7 +1486,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-447">line 447</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-415">line 415</a></p>
 								</div>
 							</div>
 			
@@ -1575,19 +1545,17 @@
 			import Animation from &quot;@j5e/animation&quot;;
 			import { inExpo } from &quot;@j5e/easing&quot;;
 			
-			(async function() {
-			  const servo &#x3D; new Servo(13);
-			  const ani &#x3D; new Animation(servo);
+			const servo &#x3D; await new Servo(13);
+			const ani &#x3D; await new Animation(servo);
 			
-			  const wave &#x3D; {
-			    duration: 4000,
-			    cuePoints: [0, 1],
-			    keyFrames: [0, 180],
-			    easing: inExpo
-			  };
+			const wave &#x3D; {
+			  duration: 4000,
+			  cuePoints: [0, 1],
+			  keyFrames: [0, 180],
+			  easing: inExpo
+			};
 			
-			  ani.enqueue(wave);
-			});</code></pre>
+			ani.enqueue(wave);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -1609,7 +1577,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-473">line 473</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-439">line 439</a></p>
 								</div>
 							</div>
 			
@@ -1668,18 +1636,16 @@
 			import Animation from &quot;@j5e/animation&quot;;
 			import { outExpo } from &quot;@j5e/easing&quot;;
 			
-			(async function() {
-			  const servo &#x3D; new Servo(13);
-			  const ani &#x3D; new Animation(servo);
+			const servo &#x3D; await new Servo(13);
+			const ani &#x3D; await new Animation(servo);
 			
-			  const wave &#x3D; {
-			    duration: 4000,
-			    cuePoints: [0, 0.5, 1],
-			    keyFrames: [0, 90, { value: 180, easing: outExpo }]
-			  };
+			const wave &#x3D; {
+			  duration: 4000,
+			  cuePoints: [0, 0.5, 1],
+			  keyFrames: [0, 90, { value: 180, easing: outExpo }]
+			};
 			
-			  ani.enqueue(wave);
-			});</code></pre>
+			ani.enqueue(wave);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -1701,7 +1667,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-498">line 498</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-462">line 462</a></p>
 								</div>
 							</div>
 			
@@ -1760,19 +1726,17 @@
 			import Animation from &quot;@j5e/animation&quot;;
 			import { inOutExpo } from &quot;@j5e/easing&quot;;
 			
-			(async function() {
-			  const servo &#x3D; new Servo(13);
-			  const ani &#x3D; new Animation(servo);
+			const servo &#x3D; await new Servo(13);
+			const ani &#x3D; await new Animation(servo);
 			
-			  const wave &#x3D; {
-			    duration: 4000,
-			    cuePoints: [0, 1],
-			    keyFrames: [0, 180],
-			    easing: inOutExpo
-			  };
+			const wave &#x3D; {
+			  duration: 4000,
+			  cuePoints: [0, 1],
+			  keyFrames: [0, 180],
+			  easing: inOutExpo
+			};
 			
-			  ani.enqueue(wave);
-			});</code></pre>
+			ani.enqueue(wave);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -1794,7 +1758,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-524">line 524</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-486">line 486</a></p>
 								</div>
 							</div>
 			
@@ -1853,19 +1817,17 @@
 			import Animation from &quot;@j5e/animation&quot;;
 			import { inCirc } from &quot;@j5e/easing&quot;;
 			
-			(async function() {
-			  const servo &#x3D; new Servo(13);
-			  const ani &#x3D; new Animation(servo);
+			const servo &#x3D; await new Servo(13);
+			const ani &#x3D; await new Animation(servo);
 			
-			  const wave &#x3D; {
-			    duration: 4000,
-			    cuePoints: [0, 1],
-			    keyFrames: [0, 180],
-			    easing: inCirc
-			  };
+			const wave &#x3D; {
+			  duration: 4000,
+			  cuePoints: [0, 1],
+			  keyFrames: [0, 180],
+			  easing: inCirc
+			};
 			
-			  ani.enqueue(wave);
-			});</code></pre>
+			ani.enqueue(wave);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -1887,7 +1849,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-556">line 556</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-516">line 516</a></p>
 								</div>
 							</div>
 			
@@ -1946,18 +1908,16 @@
 			import Animation from &quot;@j5e/animation&quot;;
 			import { outCirc } from &quot;@j5e/easing&quot;;
 			
-			(async function() {
-			  const servo &#x3D; new Servo(13);
-			  const ani &#x3D; new Animation(servo);
+			const servo &#x3D; await new Servo(13);
+			const ani &#x3D; await new Animation(servo);
 			
-			  const wave &#x3D; {
-			    duration: 4000,
-			    cuePoints: [0, 0.5, 1],
-			    keyFrames: [0, 90, { value: 180, easing: outCirc }]
-			  };
+			const wave &#x3D; {
+			  duration: 4000,
+			  cuePoints: [0, 0.5, 1],
+			  keyFrames: [0, 90, { value: 180, easing: outCirc }]
+			};
 			
-			  ani.enqueue(wave);
-			});</code></pre>
+			ani.enqueue(wave);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -1979,7 +1939,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-581">line 581</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-539">line 539</a></p>
 								</div>
 							</div>
 			
@@ -2038,19 +1998,17 @@
 			import Animation from &quot;@j5e/animation&quot;;
 			import { inOutCirc } from &quot;@j5e/easing&quot;;
 			
-			(async function() {
-			  const servo &#x3D; new Servo(13);
-			  const ani &#x3D; new Animation(servo);
+			const servo &#x3D; await new Servo(13);
+			const ani &#x3D; await new Animation(servo);
 			
-			  const wave &#x3D; {
-			    duration: 4000,
-			    cuePoints: [0, 1],
-			    keyFrames: [0, 180],
-			    easing: inOutCirc
-			  };
+			const wave &#x3D; {
+			  duration: 4000,
+			  cuePoints: [0, 1],
+			  keyFrames: [0, 180],
+			  easing: inOutCirc
+			};
 			
-			  ani.enqueue(wave);
-			});</code></pre>
+			ani.enqueue(wave);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -2072,7 +2030,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-607">line 607</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-563">line 563</a></p>
 								</div>
 							</div>
 			
@@ -2131,19 +2089,17 @@
 			import Animation from &quot;@j5e/animation&quot;;
 			import { inBack } from &quot;@j5e/easing&quot;;
 			
-			(async function() {
-			  const servo &#x3D; new Servo(13);
-			  const ani &#x3D; new Animation(servo);
+			const servo &#x3D; await new Servo(13);
+			const ani &#x3D; await new Animation(servo);
 			
-			  const wave &#x3D; {
-			    duration: 4000,
-			    cuePoints: [0, 1],
-			    keyFrames: [0, 180],
-			    easing: inBack
-			  };
+			const wave &#x3D; {
+			  duration: 4000,
+			  cuePoints: [0, 1],
+			  keyFrames: [0, 180],
+			  easing: inBack
+			};
 			
-			  ani.enqueue(wave);
-			});</code></pre>
+			ani.enqueue(wave);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -2165,7 +2121,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-638">line 638</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-592">line 592</a></p>
 								</div>
 							</div>
 			
@@ -2224,18 +2180,16 @@
 			import Animation from &quot;@j5e/animation&quot;;
 			import { outBack } from &quot;@j5e/easing&quot;;
 			
-			(async function() {
-			  const servo &#x3D; new Servo(13);
-			  const ani &#x3D; new Animation(servo);
+			const servo &#x3D; await new Servo(13);
+			const ani &#x3D; await new Animation(servo);
 			
-			  const wave &#x3D; {
-			    duration: 4000,
-			    cuePoints: [0, 0.5, 1],
-			    keyFrames: [0, 90, { value: 180, easing: outBack }]
-			  };
+			const wave &#x3D; {
+			  duration: 4000,
+			  cuePoints: [0, 0.5, 1],
+			  keyFrames: [0, 90, { value: 180, easing: outBack }]
+			};
 			
-			  ani.enqueue(wave);
-			});</code></pre>
+			ani.enqueue(wave);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -2257,7 +2211,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-663">line 663</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-615">line 615</a></p>
 								</div>
 							</div>
 			
@@ -2316,19 +2270,17 @@
 			import Animation from &quot;@j5e/animation&quot;;
 			import { inOutBack } from &quot;@j5e/easing&quot;;
 			
-			(async function() {
-			  const servo &#x3D; new Servo(13);
-			  const ani &#x3D; new Animation(servo);
+			const servo &#x3D; await new Servo(13);
+			const ani &#x3D; await new Animation(servo);
 			
-			  const wave &#x3D; {
-			    duration: 4000,
-			    cuePoints: [0, 1],
-			    keyFrames: [0, 180],
-			    easing: inOutBack
-			  };
+			const wave &#x3D; {
+			  duration: 4000,
+			  cuePoints: [0, 1],
+			  keyFrames: [0, 180],
+			  easing: inOutBack
+			};
 			
-			  ani.enqueue(wave);
-			});</code></pre>
+			ani.enqueue(wave);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -2350,7 +2302,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-689">line 689</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-639">line 639</a></p>
 								</div>
 							</div>
 			
@@ -2409,19 +2361,17 @@
 			import Animation from &quot;@j5e/animation&quot;;
 			import { inBounce } from &quot;@j5e/easing&quot;;
 			
-			(async function() {
-			  const servo &#x3D; new Servo(13);
-			  const ani &#x3D; new Animation(servo);
+			const servo &#x3D; await new Servo(13);
+			const ani &#x3D; await new Animation(servo);
 			
-			  const wave &#x3D; {
-			    duration: 4000,
-			    cuePoints: [0, 1],
-			    keyFrames: [0, 180],
-			    easing: inBounce
-			  };
+			const wave &#x3D; {
+			  duration: 4000,
+			  cuePoints: [0, 1],
+			  keyFrames: [0, 180],
+			  easing: inBounce
+			};
 			
-			  ani.enqueue(wave);
-			});</code></pre>
+			ani.enqueue(wave);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -2443,7 +2393,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-719">line 719</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-667">line 667</a></p>
 								</div>
 							</div>
 			
@@ -2502,18 +2452,16 @@
 			import Animation from &quot;@j5e/animation&quot;;
 			import { outBounce } from &quot;@j5e/easing&quot;;
 			
-			(async function() {
-			  const servo &#x3D; new Servo(13);
-			  const ani &#x3D; new Animation(servo);
+			const servo &#x3D; await new Servo(13);
+			const ani &#x3D; await new Animation(servo);
 			
-			  const wave &#x3D; {
-			    duration: 4000,
-			    cuePoints: [0, 0.5, 1],
-			    keyFrames: [0, 90, { value: 180, easing: outBounce }]
-			  };
+			const wave &#x3D; {
+			  duration: 4000,
+			  cuePoints: [0, 0.5, 1],
+			  keyFrames: [0, 90, { value: 180, easing: outBounce }]
+			};
 			
-			  ani.enqueue(wave);
-			});</code></pre>
+			ani.enqueue(wave);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -2535,7 +2483,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-744">line 744</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-690">line 690</a></p>
 								</div>
 							</div>
 			
@@ -2594,19 +2542,17 @@
 			import Animation from &quot;@j5e/animation&quot;;
 			import { inOutBounce } from &quot;@j5e/easing&quot;;
 			
-			(async function() {
-			  const servo &#x3D; new Servo(13);
-			  const ani &#x3D; new Animation(servo);
+			const servo &#x3D; await new Servo(13);
+			const ani &#x3D; await new Animation(servo);
 			
-			  const wave &#x3D; {
-			    duration: 4000,
-			    cuePoints: [0, 1],
-			    keyFrames: [0, 180],
-			    easing: inOutBounce
-			  };
+			const wave &#x3D; {
+			  duration: 4000,
+			  cuePoints: [0, 1],
+			  keyFrames: [0, 180],
+			  easing: inOutBounce
+			};
 			
-			  ani.enqueue(wave);
-			});</code></pre>
+			ani.enqueue(wave);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -2628,7 +2574,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-780">line 780</a></p>
+									<p class="form-control-static"><a href="easing_index.js.html">easing/index.js</a>, <a href="easing_index.js.html#line-724">line 724</a></p>
 								</div>
 							</div>
 			

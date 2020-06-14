@@ -1,0 +1,16 @@
+{
+  "include": [],
+  "modules": {
+    "*": [],
+    "@j5e/color": "$(j5e)/color/*",
+    "@j5e/fn": "$(j5e)/fn/*",
+    "@j5e/tcs34725": "$(j5e)/tcs34725/*"
+  },
+  "preload": [],
+  "platforms": {
+    "esp": {},
+    "...": {
+      "error": "Experimental TC53 IO modules unsupported"
+    }
+  }
+}

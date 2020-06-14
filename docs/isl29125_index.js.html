@@ -1,9 +1,10 @@
+<!-- start:source.tmpl.hbs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>Tutorials</title>
+		<title>isl29125/index.js</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -43,7 +44,7 @@
 			</style>
 		<script type="text/javascript">
 			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"MMMM D, YYYY","systemName":"j5e","systemSummary":"Johnny Five for Embedded Systems","systemLogo":"img/j5e.png","systemColor":"#000","navMembers":[{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Copyright © 2020 The contributors to the j5e and Johnny-Five projects.","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":true,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":{"ua":"UA-36026876-4","domain":"dtex.github.io"},"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":["./static/custom.css"],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
-			window.DOCLET_TOC_ENABLED = true;
+			window.DOCLET_TOC_ENABLED = false;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
 </head>
@@ -84,58 +85,112 @@
 	</header>
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
-				<span class="kind">list</span>
-				<h1><span class="name">Tutorials</span></h1>
-				<div class="summary"><p>All available tutorials.</p></div>			</div>
+				<span class="kind">source</span>
+				<h1><span class="name">isl29125/index.js</span></h1>
+			</div>
 		</div>
 	<div class="container content">
 		<div class="row">
-			<div class="col-md-9 main-content">
-						<ol class="breadcrumb">
-							<li><a href="index.html">Home</a></li>
-							<li class="active">Tutorials</li>
-						</ol>
-					<section>
-		<h2><span class="name">Tutorials</span></h2>
-		<article class="secondary">
-				<dl class="symbol">
-						
-						<dt class="symbol-title tutorial public">
-			<h4 id="" class="tutorial public"><a href="tutorial-A-GETSTARTED.html"><span class="title">Getting Started</span></a></h4>
-		<div class="summary"><p>You gotta start somewhere!</p></div></dt>
-<dd class="symbol-details tutorial public">
-	<div class="symbol-details-inner">
-		<dl class="symbol tutorial-children">
-		</dl>
-	</div>
-</dd>
-						<hr/>
-						<dt class="symbol-title tutorial public">
-			<h4 id="" class="tutorial public"><a href="tutorial-C-INSTANTIATING.html"><span class="title">Instantiating a Device</span></a></h4>
-		<div class="summary"><p>The ioOptions parameter is powerful, flexible, and just a little confusing.</p></div></dt>
-<dd class="symbol-details tutorial public">
-	<div class="symbol-details-inner">
-		<dl class="symbol tutorial-children">
-		</dl>
-	</div>
-</dd>
-						<hr/>
-						<dt class="symbol-title tutorial public">
-			<h4 id="" class="tutorial public"><a href="tutorial-D-ANIMATING.html"><span class="title">j5e's Timeline and Tweening Tools</span></a></h4>
-		<div class="summary"><p>Animations allow for complex sequencing of devices over time.</p></div></dt>
-<dd class="symbol-details tutorial public">
-	<div class="symbol-details-inner">
-		<dl class="symbol tutorial-children">
-		</dl>
-	</div>
-</dd>
-				</dl>
-		</article>
-					</section>
+			<div class="col-md-12 main-content">
+		<section class="source-section">
+			<article></article>
+			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">/**
+ * Detect colors
+ * @module j5e/isl29125
+ * @requires module:@j5e/color
+ */
+
+import Color from "@j5e/color";
+import { constrain, normalizeParams } from "@j5e/fn";
+
+/** 
+ * Class representing an ISL29125 sensor
+ * @classdesc The Color Sensor class
+ * @async
+ */
+class ISL29125 extends Color {
+
+  static REGISTER = {
+    RESET: 0x00,
+    CONFIG1: 0x01, // mode/lux range
+    CONFIG2: 0x02, // ir adjust/filtering
+    CONFIG3: 0x03, // interrupt control
+    READ: 0x09     // Same as "GREEN DATA - LOW BYTE"
+  }
+  
+  /**
+   * Instantiate an ISL29125 color sensor
+   * @param {(number|string|object)} io - A pin number, pin identifier or a complete IO options object (See {@tutorial C-INSTANTIATING}
+   * @param {object} [device={}] - An object containing device options
+   * @param {number} [device.freq=25] - Desired frequency for data reads. Note this is different than Johnny-Five in that it is the frequency of reads, not the interval between reads.
+   */
+   constructor(io, device) { 
+    return (async () => {
+      const {ioOpts, deviceOpts} = normalizeParams(io, device);
+      ioOpts.address = ioOpts.address || 0x44;
+      ioOpts.hz = ioOpts.hz || 600000;
+      super(ioOpts, deviceOpts);
+
+      return this;
+    })();  
+  }
+
+  /*
+   * Initializes the device
+   */
+  initialize(opts, dataHandler) {
+    
+    // Reset chip
+    this.io.write(Uint8Array.of(ISL29125.REGISTER.RESET, 0x46));
+    
+    // RGB | 10K Lux | 16bits
+    this.io.write(Uint8Array.of(ISL29125.REGISTER.CONFIG1, 0x05 | 0x08 | 0x00));
+
+    // High adjust
+    this.io.write(Uint8Array.of(ISL29125.REGISTER.CONFIG2, 0x3F));
+
+    // No Interrupts
+    this.io.write(Uint8Array.of(ISL29125.REGISTER.CONFIG3, 0x00));
+    
+  }
+
+  read() {
+    
+    this.io.write(ISL29125.REGISTER.READ);
+    let data = this.io.read(6);
+    let value = "";
+
+    // Register order: GLSB, GMSB, RLSB, RMSB, BLSB, BMSB
+    const g = (data[1] &lt;&lt; 8) | data[0];
+    const r = (data[3] &lt;&lt; 8) | data[2];
+    const b = (data[5] &lt;&lt; 8) | data[4];
+
+    const rgb = [r >> 2, g >> 2, b >> 2].map(function(value) {
+      return constrain(value, 0, 255);
+    });
+
+    for (let i = 0; i &lt; 3; i++) {
+      value += this.pad(rgb[i].toString(16), 2);
+    }
+
+    trace(value);
+
+  }
+  
+  /*
+   * Convert raw value to RGB
+   * @param {object} raw - RGB Object
+   * @returns {RGB Object}
+   */
+  toRGB(raw) {
+    return raw;
+  }
+
+}
+
+export default ISL29125;</code></pre>
+		</section>
 			</div>
-				<div class="col-md-3 side-content">
-					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
-				</div>
 		</div>
 	</div>
 	<footer>
@@ -173,3 +228,4 @@ gtag('js', new Date());gtag('config', 'UA-36026876-4');
 </script>
 <a href="https://github.com/dtex/j5e"><img width="149" height="149" style="z-index:1000;position:absolute;top: 50px;right: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_orange_ff7600.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a></body>
 </html>
+<!-- end:source.tmpl.hbs -->

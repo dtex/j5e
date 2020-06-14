@@ -16,7 +16,7 @@ const packages = fs.readdirSync("./packages");
 
 packages.forEach(package => {
   
-  if (package === "tests") return;
+  if (package === "tests" || package === ".DS_Store") return;
    // Add to the top level manifest
   j5eManifest.modules[`@j5e/${package}`] = `$(j5e)/${package}/*`;
 

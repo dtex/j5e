@@ -2,25 +2,23 @@
  * Easing functions for animation segments.
  * @module j5e/easing
  * @see {@link https://easings.net/en#|easings.net} to help understand easing functions
-   * 
-   * @example
-   * <caption>Easing by keyFrame. Move a servo from 0° to 180° with inOutQuad easing and then back to 0° with outBounce</caption>
-   * import Servo from "@j5e/servo";
-   * import Animation from "@j5e/animation";
-   * import { inOutQuad, outBunce } from "@j5e/easing";
-   * 
-   * (async function() {
-   *   const servo = new Servo(13);
-   *   const ani = new Animation(servo);
-   * 
-   *   const wave = {
-   *     duration: 8000,
-	 *     cuePoints: [0, 0.5, 1],
-	 *     keyFrames: [ 0, { value: 180, easing: inOutQuad }, {value: 0, easing: outBounce }]
-   *   };
-   * 
-   *   ani.enqueue(wave);
-   * });
+ * 
+ * @example
+ * <caption>Easing by keyFrame. Move a servo from 0° to 180° with inOutQuad easing and then back to 0° with outBounce</caption>
+ * import Servo from "@j5e/servo";
+ * import Animation from "@j5e/animation";
+ * import { inOutQuad, outBunce } from "@j5e/easing";
+ * 
+ * const servo = await new Servo(13);
+ * const ani = await new Animation(servo);
+ * 
+ * const wave = {
+ * duration: 8000,
+ * cuePoints: [0, 0.5, 1],
+ * keyFrames: [ 0, { value: 180, easing: inOutQuad }, {value: 0, easing: outBounce }]
+ * };
+ * 
+ * ani.enqueue(wave);
  */
 
 const SI = 1.70158;
@@ -51,19 +49,17 @@ export function linear(n) { return n };
  * import Animation from "@j5e/animation";
  * import { inQuad } from "@j5e/easing";
  * 
- * (async function() {
- *   const servo = new Servo(13);
- *   const ani = new Animation(servo);
+ * const servo = await new Servo(13);
+ * const ani = await new Animation(servo);
  * 
- *   const wave = {
- *     duration: 4000,
- *     cuePoints: [0, 1],
- *     keyFrames: [0, 180],
- *     easing: inQuad
- *   };
+ * const wave = {
+ *   duration: 4000,
+ *   cuePoints: [0, 1],
+ *   keyFrames: [0, 180],
+ *   easing: inQuad
+ * };
  * 
- *   ani.enqueue(wave);
- * });
+ * ani.enqueue(wave);
  */
 export function inQuad(n) { return n ** 2 };
 
@@ -77,18 +73,16 @@ export function inQuad(n) { return n ** 2 };
  * import Animation from "@j5e/animation";
  * import { outQuad } from "@j5e/easing";
  * 
- * (async function() {
- *   const servo = new Servo(13);
- *   const ani = new Animation(servo);
+ * const servo = await new Servo(13);
+ * const ani = await new Animation(servo);
  * 
- *   const wave = {
- *     duration: 4000,
- *     cuePoints: [0, 0.5, 1],
- *     keyFrames: [0, 90, { value: 180, easing: outQuad }]
- *   };
+ * const wave = {
+ *   duration: 4000,
+ *   cuePoints: [0, 0.5, 1],
+ *   keyFrames: [0, 90, { value: 180, easing: outQuad }]
+ * };
  * 
- *   ani.enqueue(wave);
- * });
+ * ani.enqueue(wave);
  */
 export function outQuad(n) { return n * (2 - n) };
 
@@ -102,19 +96,17 @@ export function outQuad(n) { return n * (2 - n) };
  * import Animation from "@j5e/animation";
  * import { inOutQuad } from "@j5e/easing";
  * 
- * (async function() {
- *   const servo = new Servo(13);
- *   const ani = new Animation(servo);
+ * const servo = await new Servo(13);
+ * const ani = await new Animation(servo);
  * 
- *   const wave = {
- *     duration: 4000,
- *     cuePoints: [0, 1],
- *     keyFrames: [0, 180],
- *     easing: inOutQuad
- *   };
+ * const wave = {
+ *   duration: 4000,
+ *   cuePoints: [0, 1],
+ *   keyFrames: [0, 180],
+ *   easing: inOutQuad
+ * };
  * 
- *   ani.enqueue(wave);
- * });
+ * ani.enqueue(wave);
  */
 export function inOutQuad(n) { 
   n *= 2;
@@ -133,19 +125,17 @@ export function inOutQuad(n) {
  * import Animation from "@j5e/animation";
  * import { inCube } from "@j5e/easing";
  * 
- * (async function() {
- *   const servo = new Servo(13);
- *   const ani = new Animation(servo);
+ * const servo = await new Servo(13);
+ * const ani = await new Animation(servo);
  * 
- *   const wave = {
- *     duration: 4000,
- *     cuePoints: [0, 1],
- *     keyFrames: [0, 180],
- *     easing: inCube
- *   };
+ * const wave = {
+ *   duration: 4000,
+ *   cuePoints: [0, 1],
+ *   keyFrames: [0, 180],
+ *   easing: inCube
+ * };
  * 
- *   ani.enqueue(wave);
- * });
+ * ani.enqueue(wave);
  */
 export function inCube(n) { return n ** 3 };
 
@@ -159,18 +149,16 @@ export function inCube(n) { return n ** 3 };
  * import Animation from "@j5e/animation";
  * import { outCube } from "@j5e/easing";
  * 
- * (async function() {
- *   const servo = new Servo(13);
- *   const ani = new Animation(servo);
+ * const servo = await new Servo(13);
+ * const ani = await new Animation(servo);
  * 
- *   const wave = {
- *     duration: 4000,
- *     cuePoints: [0, 0.5, 1],
- *     keyFrames: [0, 90, { value: 180, easing: outCube }]
- *   };
+ * const wave = {
+ *   duration: 4000,
+ *   cuePoints: [0, 0.5, 1],
+ *   keyFrames: [0, 90, { value: 180, easing: outCube }]
+ * };
  * 
- *   ani.enqueue(wave);
- * });
+ * ani.enqueue(wave);
  */
 export function outCube(n) { return --n * n * n + 1 };
 
@@ -184,19 +172,17 @@ export function outCube(n) { return --n * n * n + 1 };
  * import Animation from "@j5e/animation";
  * import { inOutCube } from "@j5e/easing";
  * 
- * (async function() {
- *   const servo = new Servo(13);
- *   const ani = new Animation(servo);
+ * const servo = await new Servo(13);
+ * const ani = await new Animation(servo);
  * 
- *   const wave = {
- *     duration: 4000,
- *     cuePoints: [0, 1],
- *     keyFrames: [0, 180],
- *     easing: inOutCube
- *   };
+ * const wave = {
+ *   duration: 4000,
+ *   cuePoints: [0, 1],
+ *   keyFrames: [0, 180],
+ *   easing: inOutCube
+ * };
  * 
- *   ani.enqueue(wave);
- * });
+ * ani.enqueue(wave);
  */
 export function inOutCube(n) {
   n *= 2;
@@ -215,19 +201,17 @@ export function inOutCube(n) {
  * import Animation from "@j5e/animation";
  * import { inQuart } from "@j5e/easing";
  * 
- * (async function() {
- *   const servo = new Servo(13);
- *   const ani = new Animation(servo);
+ * const servo = await new Servo(13);
+ * const ani = await new Animation(servo);
  * 
- *   const wave = {
- *     duration: 4000,
- *     cuePoints: [0, 1],
- *     keyFrames: [0, 180],
- *     easing: inQuart
- *   };
+ * const wave = {
+ *   duration: 4000,
+ *   cuePoints: [0, 1],
+ *   keyFrames: [0, 180],
+ *   easing: inQuart
+ * };
  * 
- *   ani.enqueue(wave);
- * });
+ * ani.enqueue(wave);
  */
 export function inQuart(n) { return n ** 4 };
 
@@ -241,18 +225,16 @@ export function inQuart(n) { return n ** 4 };
  * import Animation from "@j5e/animation";
  * import { outQuart } from "@j5e/easing";
  * 
- * (async function() {
- *   const servo = new Servo(13);
- *   const ani = new Animation(servo);
+ * const servo = await new Servo(13);
+ * const ani = await new Animation(servo);
  * 
- *   const wave = {
- *     duration: 4000,
- *     cuePoints: [0, 0.5, 1],
- *     keyFrames: [0, 90, { value: 180, easing: outQuart }]
- *   };
+ * const wave = {
+ *   duration: 4000,
+ *   cuePoints: [0, 0.5, 1],
+ *   keyFrames: [0, 90, { value: 180, easing: outQuart }]
+ * };
  * 
- *   ani.enqueue(wave);
- * });
+ * ani.enqueue(wave);
  */
 export function outQuart(n) { return 1 - (--n * n ** 3) };
 
@@ -266,19 +248,17 @@ export function outQuart(n) { return 1 - (--n * n ** 3) };
  * import Animation from "@j5e/animation";
  * import { inOutQuart } from "@j5e/easing";
  * 
- * (async function() {
- *   const servo = new Servo(13);
- *   const ani = new Animation(servo);
+ * const servo = await new Servo(13);
+ * const ani = await new Animation(servo);
  * 
- *   const wave = {
- *     duration: 4000,
- *     cuePoints: [0, 1],
- *     keyFrames: [0, 180],
- *     easing: inOutQuart
- *   };
+ * const wave = {
+ *   duration: 4000,
+ *   cuePoints: [0, 1],
+ *   keyFrames: [0, 180],
+ *   easing: inOutQuart
+ * };
  * 
- *   ani.enqueue(wave);
- * });
+ * ani.enqueue(wave);
  */
 export function inOutQuart(n) {
   n *= 2;
@@ -297,19 +277,17 @@ export function inOutQuart(n) {
  * import Animation from "@j5e/animation";
  * import { inQuint } from "@j5e/easing";
  * 
- * (async function() {
- *   const servo = new Servo(13);
- *   const ani = new Animation(servo);
+ * const servo = await new Servo(13);
+ * const ani = await new Animation(servo);
  * 
- *   const wave = {
- *     duration: 4000,
- *     cuePoints: [0, 1],
- *     keyFrames: [0, 180],
- *     easing: inQuint
- *   };
+ * const wave = {
+ *   duration: 4000,
+ *   cuePoints: [0, 1],
+ *   keyFrames: [0, 180],
+ *   easing: inQuint
+ * };
  * 
- *   ani.enqueue(wave);
- * });
+ * ani.enqueue(wave);
  */
 export function inQuint(n) { return n ** 5 };
 
@@ -323,18 +301,16 @@ export function inQuint(n) { return n ** 5 };
  * import Animation from "@j5e/animation";
  * import { outQuint } from "@j5e/easing";
  * 
- * (async function() {
- *   const servo = new Servo(13);
- *   const ani = new Animation(servo);
+ * const servo = await new Servo(13);
+ * const ani = await new Animation(servo);
  * 
- *   const wave = {
- *     duration: 4000,
- *     cuePoints: [0, 0.5, 1],
- *     keyFrames: [0, 90, { value: 180, easing: outQuint }]
- *   };
+ * const wave = {
+ *   duration: 4000,
+ *   cuePoints: [0, 0.5, 1],
+ *   keyFrames: [0, 90, { value: 180, easing: outQuint }]
+ * };
  * 
- *   ani.enqueue(wave);
- * });
+ * ani.enqueue(wave);
  */
 export function outQuint(n) { return --n * n ** 4 + 1 };
 
@@ -348,19 +324,17 @@ export function outQuint(n) { return --n * n ** 4 + 1 };
  * import Animation from "@j5e/animation";
  * import { inOutQuint } from "@j5e/easing";
  * 
- * (async function() {
- *   const servo = new Servo(13);
- *   const ani = new Animation(servo);
+ * const servo = await new Servo(13);
+ * const ani = await new Animation(servo);
  * 
- *   const wave = {
- *     duration: 4000,
- *     cuePoints: [0, 1],
- *     keyFrames: [0, 180],
- *     easing: inOutQuint
- *   };
+ * const wave = {
+ *   duration: 4000,
+ *   cuePoints: [0, 1],
+ *   keyFrames: [0, 180],
+ *   easing: inOutQuint
+ * };
  * 
- *   ani.enqueue(wave);
- * });
+ * ani.enqueue(wave);
  */
 export function inOutQuint(n) {
   n *= 2;
@@ -379,19 +353,17 @@ export function inOutQuint(n) {
  * import Animation from "@j5e/animation";
  * import { inSine } from "@j5e/easing";
  * 
- * (async function() {
- *   const servo = new Servo(13);
- *   const ani = new Animation(servo);
+ * const servo = await new Servo(13);
+ * const ani = await new Animation(servo);
  * 
- *   const wave = {
- *     duration: 4000,
- *     cuePoints: [0, 1],
- *     keyFrames: [0, 180],
- *     easing: inSine
- *   };
+ * const wave = {
+ *   duration: 4000,
+ *   cuePoints: [0, 1],
+ *   keyFrames: [0, 180],
+ *   easing: inSine
+ * };
  * 
- *   ani.enqueue(wave);
- * });
+ * ani.enqueue(wave);
  */
 export function inSine(n) { return 1 - cos(n * PI / 2) };
 
@@ -405,18 +377,16 @@ export function inSine(n) { return 1 - cos(n * PI / 2) };
  * import Animation from "@j5e/animation";
  * import { outSine } from "@j5e/easing";
  * 
- * (async function() {
- *   const servo = new Servo(13);
- *   const ani = new Animation(servo);
+ * const servo = await new Servo(13);
+ * const ani = await new Animation(servo);
  * 
- *   const wave = {
- *     duration: 4000,
- *     cuePoints: [0, 0.5, 1],
- *     keyFrames: [0, 90, { value: 180, easing: outSine }]
- *   };
+ * const wave = {
+ *   duration: 4000,
+ *   cuePoints: [0, 0.5, 1],
+ *   keyFrames: [0, 90, { value: 180, easing: outSine }]
+ * };
  * 
- *   ani.enqueue(wave);
- * });
+ * ani.enqueue(wave);
  */
 export function outSine(n) { return sin(n * PI / 2) };
 
@@ -430,19 +400,17 @@ export function outSine(n) { return sin(n * PI / 2) };
  * import Animation from "@j5e/animation";
  * import { inOutSine } from "@j5e/easing";
  * 
- * (async function() {
- *   const servo = new Servo(13);
- *   const ani = new Animation(servo);
+ * const servo = await new Servo(13);
+ * const ani = await new Animation(servo);
  * 
- *   const wave = {
- *     duration: 4000,
- *     cuePoints: [0, 1],
- *     keyFrames: [0, 180],
- *     easing: inOutSine
- *   };
+ * const wave = {
+ *   duration: 4000,
+ *   cuePoints: [0, 1],
+ *   keyFrames: [0, 180],
+ *   easing: inOutSine
+ * };
  * 
- *   ani.enqueue(wave);
- * });
+ * ani.enqueue(wave);
  */
 export function inOutSine(n) { return HALF * (1 - cos(PI * n)) };
 
@@ -456,19 +424,17 @@ export function inOutSine(n) { return HALF * (1 - cos(PI * n)) };
  * import Animation from "@j5e/animation";
  * import { inExpo } from "@j5e/easing";
  * 
- * (async function() {
- *   const servo = new Servo(13);
- *   const ani = new Animation(servo);
+ * const servo = await new Servo(13);
+ * const ani = await new Animation(servo);
  * 
- *   const wave = {
- *     duration: 4000,
- *     cuePoints: [0, 1],
- *     keyFrames: [0, 180],
- *     easing: inExpo
- *   };
+ * const wave = {
+ *   duration: 4000,
+ *   cuePoints: [0, 1],
+ *   keyFrames: [0, 180],
+ *   easing: inExpo
+ * };
  * 
- *   ani.enqueue(wave);
- * });
+ * ani.enqueue(wave);
  */
 export function inExpo(n) { return 0 === n ? 0 : 1024 ** (n - 1) };
 
@@ -482,18 +448,16 @@ export function inExpo(n) { return 0 === n ? 0 : 1024 ** (n - 1) };
  * import Animation from "@j5e/animation";
  * import { outExpo } from "@j5e/easing";
  * 
- * (async function() {
- *   const servo = new Servo(13);
- *   const ani = new Animation(servo);
+ * const servo = await new Servo(13);
+ * const ani = await new Animation(servo);
  * 
- *   const wave = {
- *     duration: 4000,
- *     cuePoints: [0, 0.5, 1],
- *     keyFrames: [0, 90, { value: 180, easing: outExpo }]
- *   };
+ * const wave = {
+ *   duration: 4000,
+ *   cuePoints: [0, 0.5, 1],
+ *   keyFrames: [0, 90, { value: 180, easing: outExpo }]
+ * };
  * 
- *   ani.enqueue(wave);
- * });
+ * ani.enqueue(wave);
  */
 export function outExpo(n) { return 1 === n ? n : 1 - 2 ** (-10 * n) };
 
@@ -507,19 +471,17 @@ export function outExpo(n) { return 1 === n ? n : 1 - 2 ** (-10 * n) };
  * import Animation from "@j5e/animation";
  * import { inOutExpo } from "@j5e/easing";
  * 
- * (async function() {
- *   const servo = new Servo(13);
- *   const ani = new Animation(servo);
+ * const servo = await new Servo(13);
+ * const ani = await new Animation(servo);
  * 
- *   const wave = {
- *     duration: 4000,
- *     cuePoints: [0, 1],
- *     keyFrames: [0, 180],
- *     easing: inOutExpo
- *   };
+ * const wave = {
+ *   duration: 4000,
+ *   cuePoints: [0, 1],
+ *   keyFrames: [0, 180],
+ *   easing: inOutExpo
+ * };
  * 
- *   ani.enqueue(wave);
- * });
+ * ani.enqueue(wave);
  */
 export function inOutExpo(n) {
   if (n === 0) { return 0; }
@@ -539,19 +501,17 @@ export function inOutExpo(n) {
  * import Animation from "@j5e/animation";
  * import { inCirc } from "@j5e/easing";
  * 
- * (async function() {
- *   const servo = new Servo(13);
- *   const ani = new Animation(servo);
+ * const servo = await new Servo(13);
+ * const ani = await new Animation(servo);
  * 
- *   const wave = {
- *     duration: 4000,
- *     cuePoints: [0, 1],
- *     keyFrames: [0, 180],
- *     easing: inCirc
- *   };
+ * const wave = {
+ *   duration: 4000,
+ *   cuePoints: [0, 1],
+ *   keyFrames: [0, 180],
+ *   easing: inCirc
+ * };
  * 
- *   ani.enqueue(wave);
- * });
+ * ani.enqueue(wave);
  */
 export function inCirc(n) { return 1 - sqrt(1 - n * n) };
 
@@ -565,18 +525,16 @@ export function inCirc(n) { return 1 - sqrt(1 - n * n) };
  * import Animation from "@j5e/animation";
  * import { outCirc } from "@j5e/easing";
  * 
- * (async function() {
- *   const servo = new Servo(13);
- *   const ani = new Animation(servo);
+ * const servo = await new Servo(13);
+ * const ani = await new Animation(servo);
  * 
- *   const wave = {
- *     duration: 4000,
- *     cuePoints: [0, 0.5, 1],
- *     keyFrames: [0, 90, { value: 180, easing: outCirc }]
- *   };
+ * const wave = {
+ *   duration: 4000,
+ *   cuePoints: [0, 0.5, 1],
+ *   keyFrames: [0, 90, { value: 180, easing: outCirc }]
+ * };
  * 
- *   ani.enqueue(wave);
- * });
+ * ani.enqueue(wave);
  */
 export function outCirc(n) { return sqrt(1 - (--n * n)) };
 
@@ -590,19 +548,17 @@ export function outCirc(n) { return sqrt(1 - (--n * n)) };
  * import Animation from "@j5e/animation";
  * import { inOutCirc } from "@j5e/easing";
  * 
- * (async function() {
- *   const servo = new Servo(13);
- *   const ani = new Animation(servo);
+ * const servo = await new Servo(13);
+ * const ani = await new Animation(servo);
  * 
- *   const wave = {
- *     duration: 4000,
- *     cuePoints: [0, 1],
- *     keyFrames: [0, 180],
- *     easing: inOutCirc
- *   };
+ * const wave = {
+ *   duration: 4000,
+ *   cuePoints: [0, 1],
+ *   keyFrames: [0, 180],
+ *   easing: inOutCirc
+ * };
  * 
- *   ani.enqueue(wave);
- * });
+ * ani.enqueue(wave);
  */
 export function inOutCirc(n) {
   n *= 2;
@@ -621,19 +577,17 @@ export function inOutCirc(n) {
  * import Animation from "@j5e/animation";
  * import { inBack } from "@j5e/easing";
  * 
- * (async function() {
- *   const servo = new Servo(13);
- *   const ani = new Animation(servo);
+ * const servo = await new Servo(13);
+ * const ani = await new Animation(servo);
  * 
- *   const wave = {
- *     duration: 4000,
- *     cuePoints: [0, 1],
- *     keyFrames: [0, 180],
- *     easing: inBack
- *   };
+ * const wave = {
+ *   duration: 4000,
+ *   cuePoints: [0, 1],
+ *   keyFrames: [0, 180],
+ *   easing: inBack
+ * };
  * 
- *   ani.enqueue(wave);
- * });
+ * ani.enqueue(wave);
  */
 export function inBack(n) { return n * n * ((SI + 1) * n - SI) };
 
@@ -647,18 +601,16 @@ export function inBack(n) { return n * n * ((SI + 1) * n - SI) };
  * import Animation from "@j5e/animation";
  * import { outBack } from "@j5e/easing";
  * 
- * (async function() {
- *   const servo = new Servo(13);
- *   const ani = new Animation(servo);
+ * const servo = await new Servo(13);
+ * const ani = await new Animation(servo);
  * 
- *   const wave = {
- *     duration: 4000,
- *     cuePoints: [0, 0.5, 1],
- *     keyFrames: [0, 90, { value: 180, easing: outBack }]
- *   };
+ * const wave = {
+ *   duration: 4000,
+ *   cuePoints: [0, 0.5, 1],
+ *   keyFrames: [0, 90, { value: 180, easing: outBack }]
+ * };
  * 
- *   ani.enqueue(wave);
- * });
+ * ani.enqueue(wave);
  */
 export function outBack(n) { return --n * n * ((SI + 1) * n + SI) + 1 };
 
@@ -672,19 +624,17 @@ export function outBack(n) { return --n * n * ((SI + 1) * n + SI) + 1 };
  * import Animation from "@j5e/animation";
  * import { inOutBack } from "@j5e/easing";
  * 
- * (async function() {
- *   const servo = new Servo(13);
- *   const ani = new Animation(servo);
+ * const servo = await new Servo(13);
+ * const ani = await new Animation(servo);
  * 
- *   const wave = {
- *     duration: 4000,
- *     cuePoints: [0, 1],
- *     keyFrames: [0, 180],
- *     easing: inOutBack
- *   };
+ * const wave = {
+ *   duration: 4000,
+ *   cuePoints: [0, 1],
+ *   keyFrames: [0, 180],
+ *   easing: inOutBack
+ * };
  * 
- *   ani.enqueue(wave);
- * });
+ * ani.enqueue(wave);
  */
 export function inOutBack(n) {
   return (n *= 2) < 1 ?
@@ -702,19 +652,17 @@ export function inOutBack(n) {
  * import Animation from "@j5e/animation";
  * import { inBounce } from "@j5e/easing";
  * 
- * (async function() {
- *   const servo = new Servo(13);
- *   const ani = new Animation(servo);
+ * const servo = await new Servo(13);
+ * const ani = await new Animation(servo);
  * 
- *   const wave = {
- *     duration: 4000,
- *     cuePoints: [0, 1],
- *     keyFrames: [0, 180],
- *     easing: inBounce
- *   };
+ * const wave = {
+ *   duration: 4000,
+ *   cuePoints: [0, 1],
+ *   keyFrames: [0, 180],
+ *   easing: inBounce
+ * };
  * 
- *   ani.enqueue(wave);
- * });
+ * ani.enqueue(wave);
  */
 export function inBounce(n) { return 1 - outBounce(1 - n); }
 
@@ -728,18 +676,16 @@ export function inBounce(n) { return 1 - outBounce(1 - n); }
  * import Animation from "@j5e/animation";
  * import { outBounce } from "@j5e/easing";
  * 
- * (async function() {
- *   const servo = new Servo(13);
- *   const ani = new Animation(servo);
+ * const servo = await new Servo(13);
+ * const ani = await new Animation(servo);
  * 
- *   const wave = {
- *     duration: 4000,
- *     cuePoints: [0, 0.5, 1],
- *     keyFrames: [0, 90, { value: 180, easing: outBounce }]
- *   };
+ * const wave = {
+ *   duration: 4000,
+ *   cuePoints: [0, 0.5, 1],
+ *   keyFrames: [0, 90, { value: 180, easing: outBounce }]
+ * };
  * 
- *   ani.enqueue(wave);
- * });
+ * ani.enqueue(wave);
  */
 export function outBounce(n) {
   if (n < (1 / 2.75)) {
@@ -763,19 +709,17 @@ export function outBounce(n) {
  * import Animation from "@j5e/animation";
  * import { inOutBounce } from "@j5e/easing";
  * 
- * (async function() {
- *   const servo = new Servo(13);
- *   const ani = new Animation(servo);
+ * const servo = await new Servo(13);
+ * const ani = await new Animation(servo);
  * 
- *   const wave = {
- *     duration: 4000,
- *     cuePoints: [0, 1],
- *     keyFrames: [0, 180],
- *     easing: inOutBounce
- *   };
+ * const wave = {
+ *   duration: 4000,
+ *   cuePoints: [0, 1],
+ *   keyFrames: [0, 180],
+ *   easing: inOutBounce
+ * };
  * 
- *   ani.enqueue(wave);
- * });
+ * ani.enqueue(wave);
  */
 export function inOutBounce(n) {
   return n < HALF ?
