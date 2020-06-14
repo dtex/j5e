@@ -1,6 +1,6 @@
 {
   "name": "@j5e/switch",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Switch class for J5e",
   "main": "index.js",
   "type": "module",
@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@j5e/event": "^0.1.0",
-    "@j5e/fn": "^0.1.0"
+    "@j5e/fn": "^0.1.1"
   },
   "keywords": [
     "j5e",

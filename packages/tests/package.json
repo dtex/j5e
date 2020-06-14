@@ -1,6 +1,6 @@
 {
   "name": "@j5e/tests",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Unit tests for J5e",
   "type": "module",
   "publishConfig": {
@@ -11,14 +11,14 @@
     "url": "git+https://github.com/dtex/j5e.git"
   },
   "dependencies": {
-    "@j5e/animation": "^0.1.0",
-    "@j5e/easing": "^0.1.0",
+    "@j5e/animation": "^0.1.1",
+    "@j5e/easing": "^0.1.1",
     "@j5e/event": "^0.1.0",
-    "@j5e/fn": "^0.1.0",
-    "@j5e/led": "^0.1.0",
-    "@j5e/rgb": "^0.1.0",
-    "@j5e/servo": "^0.1.0",
-    "@j5e/switch": "^0.1.0"
+    "@j5e/fn": "^0.1.1",
+    "@j5e/led": "^0.1.1",
+    "@j5e/rgb": "^0.1.1",
+    "@j5e/servo": "^0.1.1",
+    "@j5e/switch": "^0.1.1"
   },
   "devDependencies": {
     "@dtex/mock-io": "^0.0.2",
