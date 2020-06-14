@@ -10,10 +10,8 @@ Right now, the only provider that matches the ECMA TC-53 I/O class pattern is [M
 ````js
 import LED from "@j5e/led";
 
-(async function() {
-  const led = await new LED(14);
-  led.blink();
-})();
+const led = await new LED(14);
+led.blink();
 ````
 
 New users should check out the [Getting Started](tutorial-A-GETSTARTED.html) guide.
