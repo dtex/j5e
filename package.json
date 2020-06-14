@@ -36,10 +36,10 @@
   "homepage": "https://dtex.github.com/j5e",
   "devDependencies": {
     "@dtex/mock-io": "^0.0.2",
-    "foodoc": "dtex/foodoc#master",
+    "foodoc": "github:dtex/foodoc#master",
     "fs-extra": "^8.1.0",
-    "jsdoc": "^3.6.3",
-    "lerna": "^3.20.2"
+    "jsdoc": "^3.6.4",
+    "lerna": "^3.22.1"
   },
   "dependencies": {}
 }
