@@ -163,36 +163,30 @@
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
 			
-			(async function() {
-			  const rgb &#x3D; await new RGB([13, 12, 14]);
-			  rgb.color(&quot;#663399&quot;);
-			  rgb.blink();
-			})();</code></pre>
+			const rgb &#x3D; await new RGB([13, 12, 14]);
+			rgb.color(&quot;#663399&quot;);
+			rgb.blink();</code></pre>
 					</div>
 					<div class="example-caption"><p>Using pin identifiers</p></div>
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
 			
-			(async function() {
-			  const rgb &#x3D; await new RGB([&quot;A1&quot;, &quot;A3&quot;, &quot;A4&quot;]);
-			  rgb.color(&quot;#663399&quot;);
-			  rgb.blink();
-			})();</code></pre>
+			const rgb &#x3D; await new RGB([&quot;A1&quot;, &quot;A3&quot;, &quot;A4&quot;]);
+			rgb.color(&quot;#663399&quot;);
+			rgb.blink();</code></pre>
 					</div>
 					<div class="example-caption"><p>Using io option objects</p></div>
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
 			import PCA9685 from &quot;PCA9685Expander&quot;
 			
-			(async function() {
-			  const rgb &#x3D; await new RGB([
-			    { pin: 0, io: PCA9685 },
-			    { pin: 1, io: PCA9685 },
-			    { pin: 2, io: PCA9685 }
-			  ]);
-			  rgb.color(&quot;#663399&quot;);
-			  rgb.blink();
-			})();</code></pre>
+			const rgb &#x3D; await new RGB([
+			  { pin: 0, io: PCA9685 },
+			  { pin: 1, io: PCA9685 },
+			  { pin: 2, io: PCA9685 }
+			]);
+			rgb.color(&quot;#663399&quot;);
+			rgb.blink();</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -214,7 +208,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-79">line 79</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-73">line 73</a></p>
 								</div>
 							</div>
 			
@@ -286,59 +280,47 @@
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
 			
-			(async function() {
-			  const rgb &#x3D; await new RGB([13, 12, 14]);
-			  rgb.color(&quot;#663399&quot;);
-			})();</code></pre>
+			const rgb &#x3D; await new RGB([13, 12, 14]);
+			rgb.color(&quot;#663399&quot;);</code></pre>
 					</div>
 					<div class="example-caption"><p>Use an RGB String to make it purple</p></div>
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
 			
-			(async function() {
-			  const rgb &#x3D; await new RGB([13, 12, 14]);
-			  rgb.color(&quot;rgb(102, 51, 153)&quot;);
-			})();</code></pre>
+			const rgb &#x3D; await new RGB([13, 12, 14]);
+			rgb.color(&quot;rgb(102, 51, 153)&quot;);</code></pre>
 					</div>
 					<div class="example-caption"><p>Use an RGBA String to make it darker purple</p></div>
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
 			
-			(async function() {
-			  const rgb &#x3D; await new RGB([13, 12, 14]);
-			  rgb.color(&quot;rgba(102, 51, 153, 50%)&quot;);
-			})();</code></pre>
+			const rgb &#x3D; await new RGB([13, 12, 14]);
+			rgb.color(&quot;rgba(102, 51, 153, 50%)&quot;);</code></pre>
 					</div>
 					<div class="example-caption"><p>Use an array to make it purple</p></div>
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
 			
-			(async function() {
-			  const rgb &#x3D; await new RGB([13, 12, 14]);
-			  rgb.color([408, 204, 612]); // Assumes 10-bit
-			})();</code></pre>
+			const rgb &#x3D; await new RGB([13, 12, 14]);
+			rgb.color([408, 204, 612]); // Assumes 10-bit</code></pre>
 					</div>
 					<div class="example-caption"><p>Use an object to make it purple</p></div>
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
 			
-			(async function() {
-			  const rgb &#x3D; await new RGB([13, 12, 14]);
-			  rgb.color({
-			    red: 102, 
-			    green: 51, 
-			    blue: 153
-			  });
-			})();</code></pre>
+			const rgb &#x3D; await new RGB([13, 12, 14]);
+			rgb.color({
+			  red: 102, 
+			  green: 51, 
+			  blue: 153
+			});</code></pre>
 					</div>
 					<div class="example-caption"><p>Use seperate Red, Green, and Blue arguments to make it purple</p></div>
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
 			
-			(async function() {
-			  const rgb &#x3D; await new RGB([13, 12, 14]);
-			  rgb.color(408, 204, 612); // Assumes 10-bit
-			})();</code></pre>
+			const rgb &#x3D; await new RGB([13, 12, 14]);
+			rgb.color(408, 204, 612); // Assumes 10-bit</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -360,7 +342,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-246">line 246</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-228">line 228</a></p>
 								</div>
 							</div>
 			
@@ -389,10 +371,8 @@
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
 			
-			(async function() {
-			  const rgb &#x3D; await new RGB([13, 12, 14]);
-			  rgb.on(); // Default color is white
-			})();</code></pre>
+			const rgb &#x3D; await new RGB([13, 12, 14]);
+			rgb.on(); // Default color is white</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -414,7 +394,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-291">line 291</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-271">line 271</a></p>
 								</div>
 							</div>
 			
@@ -444,14 +424,12 @@
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
 			import {timer} from &quot;@j5e/fn&quot;;
 			
-			(async function() {
-			  const rgb &#x3D; await new RGB([13, 12, 14]);
-			  rgb.color(&quot;#663399&quot;);
+			const rgb &#x3D; await new RGB([13, 12, 14]);
+			rgb.color(&quot;#663399&quot;);
 			
-			  time.setTimeout(function() {
-			    rgb.off();
-			  }, 5000);
-			})();</code></pre>
+			time.setTimeout(function() {
+			  rgb.off();
+			}, 5000);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -473,7 +451,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-324">line 324</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-302">line 302</a></p>
 								</div>
 							</div>
 			
@@ -503,14 +481,12 @@
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
 			import {timer} from &quot;@j5e/fn&quot;;
 			
-			(async function() {
-			  const rgb &#x3D; await new RGB([13, 12, 14]);
-			  rgb.toggle(); // Turns RGB LED on
+			const rgb &#x3D; await new RGB([13, 12, 14]);
+			rgb.toggle(); // Turns RGB LED on
 			
-			  time.setTimeout(function() {
-			    rgb.toggle(); // Turns it off
-			  }, 5000);
-			})();</code></pre>
+			time.setTimeout(function() {
+			  rgb.toggle(); // Turns it off
+			}, 5000);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -532,7 +508,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-362">line 362</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-338">line 338</a></p>
 								</div>
 							</div>
 			
@@ -592,21 +568,17 @@
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
 			
-			(async function() {
-			  const rgb &#x3D; await new RGB([13, 12, 14]);
-			  rgb.color(&quot;#663399&quot;);
-			  rgb.blink();
-			}();</code></pre>
+			const rgb &#x3D; await new RGB([13, 12, 14]);
+			rgb.color(&quot;#663399&quot;);
+			rgb.blink();</code></pre>
 					</div>
 					<div class="example-caption"><p>Make it blink slowly</p></div>
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
 			
-			(async function() {
-			  const rgb &#x3D; await new RGB([13, 12, 14]);
-			  rgb.color(&quot;#663399&quot;);
-			  rgb.blink(5000);
-			})();</code></pre>
+			const rgb &#x3D; await new RGB([13, 12, 14]);
+			rgb.color(&quot;#663399&quot;);
+			rgb.blink(5000);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -628,7 +600,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-391">line 391</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-363">line 363</a></p>
 								</div>
 							</div>
 			
@@ -700,30 +672,24 @@
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
 			
-			(async function() {
-			  const rgb &#x3D; await new RGB([13, 12, 14]);
-			  rgb.fade(&quot;#663399&quot;);
-			})();</code></pre>
+			const rgb &#x3D; await new RGB([13, 12, 14]);
+			rgb.fade(&quot;#663399&quot;);</code></pre>
 					</div>
 					<div class="example-caption"><p>Fade on to purple over 3 seconds</p></div>
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
 			
-			(async function() {
-			  const rgb &#x3D; await new RGB([13, 12, 14]);
-			  rgb.fade(&quot;#663399&quot;, 3000);
-			})();</code></pre>
+			const rgb &#x3D; await new RGB([13, 12, 14]);
+			rgb.fade(&quot;#663399&quot;, 3000);</code></pre>
 					</div>
 					<div class="example-caption"><p>Fade on to purple over 3 seconds and then blink</p></div>
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
 			
-			(async function() {
-			  const rgb &#x3D; await new RGB([13, 12, 14]);
-			  rgb.fade(&quot;#663399&quot;, 3000, function() {
-			    rgb.blink();
-			  });
-			})();</code></pre>
+			const rgb &#x3D; await new RGB([13, 12, 14]);
+			rgb.fade(&quot;#663399&quot;, 3000, function() {
+			  rgb.blink();
+			});</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -745,7 +711,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-445">line 445</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-411">line 411</a></p>
 								</div>
 							</div>
 			
@@ -808,10 +774,8 @@
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
 			
-			(async function() {
-			  const rgb &#x3D; await new RGB([13, 12, 14]);
-			  rgb.fadeIn(500);
-			})();</code></pre>
+			const rgb &#x3D; await new RGB([13, 12, 14]);
+			rgb.fadeIn(500);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -833,7 +797,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-488">line 488</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-452">line 452</a></p>
 								</div>
 							</div>
 			
@@ -896,11 +860,9 @@
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">&lt;caption&gt;Fade out an RGB LED over half a second
 			import RGB from &quot;@j5e/rgb&quot;;
 			
-			(async function() {
-			  const rgb &#x3D; await new RGB([13, 12, 14]);
-			  rgb.color(&quot;#663399&quot;);
-			  rgb.fadeOut(500);
-			})();</code></pre>
+			const rgb &#x3D; await new RGB([13, 12, 14]);
+			rgb.color(&quot;#663399&quot;);
+			rgb.fadeOut(500);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -922,7 +884,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-507">line 507</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-469">line 469</a></p>
 								</div>
 							</div>
 			
@@ -982,21 +944,17 @@
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
 			
-			(async function() {
-			  const rgb &#x3D; await new RGB([13, 12, 14]);
-			  rgb.color(&quot;#663399&quot;);
-			  rgb.pulse();
-			})();</code></pre>
+			const rgb &#x3D; await new RGB([13, 12, 14]);
+			rgb.color(&quot;#663399&quot;);
+			rgb.pulse();</code></pre>
 					</div>
 					<div class="example-caption"><p>Make it pulse slowly</p></div>
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
 			
-			(async function() {
-			  const rgb &#x3D; await new RGB([13, 12, 14]);
-			  rgb.color(&quot;#663399&quot;);
-			  rgb.pulse(5000);
-			})();</code></pre>
+			const rgb &#x3D; await new RGB([13, 12, 14]);
+			rgb.color(&quot;#663399&quot;);
+			rgb.pulse(5000);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -1018,7 +976,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-536">line 536</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-494">line 494</a></p>
 								</div>
 							</div>
 			
@@ -1068,16 +1026,14 @@
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
 			
-			(async function() {
-			  const rgb &#x3D; await new RGB([13, 12, 14]);
-			  rgb.animate({
-			    duration: 4000,
-			    cuePoints: [0,  0.33, 0.66, 1],
-			    keyFrames: [&quot;#000000&quot;, &quot;#FF0000&quot;, &quot;#00FFFF&quot;, &quot;#FFFFFF&quot;],
-			    loop: true,
-			    metronomic: true
-			  });
-			})();</code></pre>
+			const rgb &#x3D; await new RGB([13, 12, 14]);
+			rgb.animate({
+			  duration: 4000,
+			  cuePoints: [0,  0.33, 0.66, 1],
+			  keyFrames: [&quot;#000000&quot;, &quot;#FF0000&quot;, &quot;#00FFFF&quot;, &quot;#FFFFFF&quot;],
+			  loop: true,
+			  metronomic: true
+			});</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -1099,7 +1055,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-582">line 582</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-538">line 538</a></p>
 								</div>
 							</div>
 			
@@ -1129,14 +1085,12 @@
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
 			import {timer} from &quot;@j5e/fn&quot;;
 			
-			(async function() {
-			  const rgb &#x3D; await new RGB([13, 12, 14]);
-			  rgb.color(&quot;#663399&quot;);
-			  rgb.pulse(250);
-			  timer.setTimeout(function() {
-			    rgb.stop();
-			  }, 5000);
-			})();</code></pre>
+			const rgb &#x3D; await new RGB([13, 12, 14]);
+			rgb.color(&quot;#663399&quot;);
+			rgb.pulse(250);
+			timer.setTimeout(function() {
+			  rgb.stop();
+			}, 5000);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -1158,7 +1112,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-610">line 610</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-564">line 564</a></p>
 								</div>
 							</div>
 			

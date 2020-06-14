@@ -170,19 +170,16 @@
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Switch from &quot;@j5e/switch&quot;;
 			import LED from &quot;@j5e/led&quot;;
 			
-			(async function() {
-			  const switch &#x3D; await new Switch(12);
-			  const led &#x3D; await new LED(13);
+			const switch &#x3D; await new Switch(12);
+			const led &#x3D; await new LED(13);
 			
-			  switch.on(&quot;open&quot;, function() {
-			    led.off();
-			  });
+			switch.on(&quot;open&quot;, function() {
+			  led.off();
+			});
 			
-			  switch.on(&quot;close&quot;, function() {
-			    led.on();
-			  });
-			
-			})();</code></pre>
+			switch.on(&quot;close&quot;, function() {
+			  led.on();
+			});</code></pre>
 					</div>
 			</div>			<div class="callout callout-warning"><h5>Fires</h5>		<form class="form-horizontal fires">
 							<div class="form-group">
@@ -225,7 +222,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="switch_index.js.html">switch/index.js</a>, <a href="switch_index.js.html#line-46">line 46</a></p>
+									<p class="form-control-static"><a href="switch_index.js.html">switch/index.js</a>, <a href="switch_index.js.html#line-43">line 43</a></p>
 								</div>
 							</div>
 			

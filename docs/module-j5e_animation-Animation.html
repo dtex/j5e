@@ -129,20 +129,18 @@
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
 			import Animation from &quot;@j5e/animation&quot;;
 			
-			(async function() {
-			  const servo &#x3D; new Servo(13);
-			  const ani &#x3D; new Animation(servo);
+			const servo &#x3D; new Servo(13);
+			const ani &#x3D; new Animation(servo);
 			
-			  const wave &#x3D; {
-			    duration: 4000,
-			    cuePoints: [0,  0.375, 0.625, 1],
-			    keyFrames: [0, 135, 45, 180],
-			    loop: true,
-			    metronomic: true
-			  };
+			const wave &#x3D; {
+			  duration: 4000,
+			  cuePoints: [0,  0.375, 0.625, 1],
+			  keyFrames: [0, 135, 45, 180],
+			  loop: true,
+			  metronomic: true
+			};
 			
-			  ani.enqueue(wave);
-			});</code></pre>
+			ani.enqueue(wave);</code></pre>
 					</div>
 			</div>			<div class="callout callout-warning"><h5>Fires</h5>		<form class="form-horizontal fires">
 							<div class="form-group">
@@ -178,7 +176,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="animation_index.js.html">animation/index.js</a>, <a href="animation_index.js.html#line-43">line 43</a></p>
+									<p class="form-control-static"><a href="animation_index.js.html">animation/index.js</a>, <a href="animation_index.js.html#line-41">line 41</a></p>
 								</div>
 							</div>
 			
@@ -391,20 +389,18 @@
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
 			import Animation from &quot;@j5e/animation&quot;;
 			
-			(async function() {
-			  const servo &#x3D; new Servo(13);
-			  const ani &#x3D; new Animation(servo);
+			const servo &#x3D; new Servo(13);
+			const ani &#x3D; new Animation(servo);
 			
-			  const wave &#x3D; {
-			    duration: 4000,
-			    cuePoints: [0,  0.375, 0.625, 1],
-			    keyFrames: [0, 135, 45, 180],
-			    loop: true,
-			    metronomic: true
-			  };
+			const wave &#x3D; {
+			  duration: 4000,
+			  cuePoints: [0,  0.375, 0.625, 1],
+			  keyFrames: [0, 135, 45, 180],
+			  loop: true,
+			  metronomic: true
+			};
 			
-			  ani.enqueue(wave);
-			});</code></pre>
+			ani.enqueue(wave);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -426,7 +422,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="animation_index.js.html">animation/index.js</a>, <a href="animation_index.js.html#line-89">line 89</a></p>
+									<p class="form-control-static"><a href="animation_index.js.html">animation/index.js</a>, <a href="animation_index.js.html#line-85">line 85</a></p>
 								</div>
 							</div>
 			
@@ -457,28 +453,26 @@
 			import Animation from &quot;@j5e/animation&quot;;
 			import {timer} from &quot;@j5e/fn&quot;;
 			
-			(async function() {
-			  const servo &#x3D; new Servo(13);
-			  const ani &#x3D; new Animation(servo);
+			const servo &#x3D; new Servo(13);
+			const ani &#x3D; new Animation(servo);
 			
-			  const wave &#x3D; {
-			    duration: 4000,
-			    cuePoints: [0,  0.375, 0.625, 1],
-			    keyFrames: [0, 135, 45, 180],
-			    loop: true,
-			    metronomic: true
-			  };
+			const wave &#x3D; {
+			  duration: 4000,
+			  cuePoints: [0,  0.375, 0.625, 1],
+			  keyFrames: [0, 135, 45, 180],
+			  loop: true,
+			  metronomic: true
+			};
 			
-			  ani.enqueue(wave);
+			ani.enqueue(wave);
 			
-			  timer.setTimeout(function() { 
-			    ani.pause();
-			  }, 5000);
+			timer.setTimeout(function() { 
+			  ani.pause();
+			}, 5000);
 			
-			  timer.setTimeout(function() { 
-			    ani.play();
-			  }, 6000);
-			});</code></pre>
+			timer.setTimeout(function() { 
+			  ani.play();
+			}, 6000);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -500,7 +494,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="animation_index.js.html">animation/index.js</a>, <a href="animation_index.js.html#line-178">line 178</a></p>
+									<p class="form-control-static"><a href="animation_index.js.html">animation/index.js</a>, <a href="animation_index.js.html#line-172">line 172</a></p>
 								</div>
 							</div>
 			
@@ -531,28 +525,26 @@
 			import Animation from &quot;@j5e/animation&quot;;
 			import {timer} from &quot;@j5e/fn&quot;;
 			
-			(async function() {
-			  const servo &#x3D; new Servo(13);
-			  const ani &#x3D; new Animation(servo);
+			const servo &#x3D; new Servo(13);
+			const ani &#x3D; new Animation(servo);
 			
-			  const wave &#x3D; {
-			    duration: 4000,
-			    cuePoints: [0,  0.375, 0.625, 1],
-			    keyFrames: [0, 135, 45, 180],
-			    loop: true,
-			    metronomic: true
-			  };
+			const wave &#x3D; {
+			  duration: 4000,
+			  cuePoints: [0,  0.375, 0.625, 1],
+			  keyFrames: [0, 135, 45, 180],
+			  loop: true,
+			  metronomic: true
+			};
 			
-			  ani.enqueue(wave);
+			ani.enqueue(wave);
 			
-			  timer.setTimeout(function() { 
-			    ani.pause();
-			  }, 5000);
+			timer.setTimeout(function() { 
+			  ani.pause();
+			}, 5000);
 			
-			  timer.setTimeout(function() { 
-			    ani.play();
-			  }, 6000);
-			});</code></pre>
+			timer.setTimeout(function() { 
+			  ani.play();
+			}, 6000);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -574,7 +566,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="animation_index.js.html">animation/index.js</a>, <a href="animation_index.js.html#line-238">line 238</a></p>
+									<p class="form-control-static"><a href="animation_index.js.html">animation/index.js</a>, <a href="animation_index.js.html#line-230">line 230</a></p>
 								</div>
 							</div>
 			
@@ -605,25 +597,22 @@
 			import Animation from &quot;@j5e/animation&quot;;
 			import {timer} from &quot;@j5e/fn&quot;;
 			
-			(async function() {
-			  const servo &#x3D; new Servo(13);
-			  const ani &#x3D; new Animation(servo);
+			const servo &#x3D; new Servo(13);
+			const ani &#x3D; new Animation(servo);
 			
-			  const wave &#x3D; {
-			    duration: 4000,
-			    cuePoints: [0,  0.375, 0.625, 1],
-			    keyFrames: [0, 135, 45, 180],
-			    loop: true,
-			    metronomic: true
-			  };
+			const wave &#x3D; {
+			  duration: 4000,
+			  cuePoints: [0,  0.375, 0.625, 1],
+			  keyFrames: [0, 135, 45, 180],
+			  loop: true,
+			  metronomic: true
+			};
 			
-			  ani.enqueue(wave);
+			ani.enqueue(wave);
 			
-			  timer.setTimeout(function() { 
-			    ani.stop();
-			  }, 5000);
-			
-			});</code></pre>
+			timer.setTimeout(function() { 
+			  ani.stop();
+			}, 5000);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -645,7 +634,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="animation_index.js.html">animation/index.js</a>, <a href="animation_index.js.html#line-284">line 284</a></p>
+									<p class="form-control-static"><a href="animation_index.js.html">animation/index.js</a>, <a href="animation_index.js.html#line-273">line 273</a></p>
 								</div>
 							</div>
 			
@@ -699,33 +688,30 @@
 			import Animation from &quot;@j5e/animation&quot;;
 			import {timer} from &quot;@j5e/fn&quot;;
 			
-			(async function() {
-			  const servo &#x3D; new Servo(13);
-			  const ani &#x3D; new Animation(servo);
+			const servo &#x3D; new Servo(13);
+			const ani &#x3D; new Animation(servo);
 			
-			  const wave &#x3D; {
-			    duration: 4000,
-			    cuePoints: [0,  0.375, 0.625, 1],
-			    keyFrames: [0, 135, 45, 180],
-			    loop: true,
-			    metronomic: true
-			  };
+			const wave &#x3D; {
+			  duration: 4000,
+			  cuePoints: [0,  0.375, 0.625, 1],
+			  keyFrames: [0, 135, 45, 180],
+			  loop: true,
+			  metronomic: true
+			};
 			
-			  ani.enqueue(wave);
+			ani.enqueue(wave);
 			
-			  timer.setTimeout(function() { 
-			    ani.speed(2.0); // Speed up to 2x
-			  }, 1000);
+			timer.setTimeout(function() { 
+			  ani.speed(2.0); // Speed up to 2x
+			}, 1000);
 			
-			  timer.setTimeout(function() { 
-			    ani.speed(0.5); // Speed up to 1/2x
-			  }, 2000);
+			timer.setTimeout(function() { 
+			  ani.speed(0.5); // Speed up to 1/2x
+			}, 2000);
 			
-			  timer.setTimeout(function() { 
-			    ani.stop(); // Note, animation speed is still 0.5
-			  }, 3000);
-			
-			});</code></pre>
+			timer.setTimeout(function() { 
+			  ani.stop(); // Note, animation speed is still 0.5
+			}, 3000);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -747,7 +733,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="animation_index.js.html">animation/index.js</a>, <a href="animation_index.js.html#line-340">line 340</a></p>
+									<p class="form-control-static"><a href="animation_index.js.html">animation/index.js</a>, <a href="animation_index.js.html#line-326">line 326</a></p>
 								</div>
 							</div>
 			
