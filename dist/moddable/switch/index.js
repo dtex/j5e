@@ -29,14 +29,14 @@ class Switch extends Emitter {
    * import Switch from "@j5e/switch";
    * import LED from "@j5e/led";
    * 
-   * const switch = await new Switch(12);
+   * const mySwitch = await new Switch(12);
    * const led = await new LED(13);
    * 
-   * switch.on("open", function() {
+   * mySwitch.on("open", function() {
    *   led.off();
    * });
    * 
-   * switch.on("close", function() {
+   * mySwitch.on("close", function() {
    *   led.on();
    * });
    */
