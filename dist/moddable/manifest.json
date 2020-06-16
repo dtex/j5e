@@ -8,6 +8,7 @@
     "@j5e/fn": "$(j5e)/fn/*",
     "@j5e/led": "$(j5e)/led/*",
     "@j5e/rgb": "$(j5e)/rgb/*",
+    "@j5e/sensor": "$(j5e)/sensor/*",
     "@j5e/servo": "$(j5e)/servo/*",
     "@j5e/switch": "$(j5e)/switch/*"
   },
