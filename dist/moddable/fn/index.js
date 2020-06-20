@@ -86,7 +86,7 @@ export function map(value, fromLow, fromHigh, toLow, toHigh) {
  */
 const f32A = new Float32Array(1);
 
-export function fmap(value, fromLow, fromHigh, toLow, toHigh) => {
+export function fmap(value, fromLow, fromHigh, toLow, toHigh) {
   f32A[0] = (value - fromLow) * (toHigh - toLow) / (fromHigh - fromLow) + toLow;
   return f32A[0];
 };
