@@ -170,14 +170,14 @@
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Switch from &quot;@j5e/switch&quot;;
 			import LED from &quot;@j5e/led&quot;;
 			
-			const switch &#x3D; await new Switch(12);
+			const mySwitch &#x3D; await new Switch(12);
 			const led &#x3D; await new LED(13);
 			
-			switch.on(&quot;open&quot;, function() {
+			mySwitch.on(&quot;open&quot;, function() {
 			  led.off();
 			});
 			
-			switch.on(&quot;close&quot;, function() {
+			mySwitch.on(&quot;close&quot;, function() {
 			  led.on();
 			});</code></pre>
 					</div>

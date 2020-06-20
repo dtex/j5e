@@ -1,10 +1,9 @@
-<!-- start:source.tmpl.hbs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>switch/index.js</title>
+		<title>j5e/sensor</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -44,7 +43,7 @@
 			</style>
 		<script type="text/javascript">
 			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"MMMM D, YYYY","systemName":"j5e","systemSummary":"Johnny Five for Embedded Systems","systemLogo":"img/j5e.png","systemColor":"#000","navMembers":[{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Copyright © 2020 The contributors to the j5e and Johnny-Five projects.","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":true,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":{"ua":"UA-36026876-4","domain":"dtex.github.io"},"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":["./static/custom.css"],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
-			window.DOCLET_TOC_ENABLED = false;
+			window.DOCLET_TOC_ENABLED = true;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
 </head>
@@ -85,94 +84,87 @@
 	</header>
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
-				<span class="kind">source</span>
-				<h1><span class="name">switch/index.js</span></h1>
+				<span class="kind">module</span>
+				<h1><span class="name">j5e/sensor</span></h1>
 			</div>
 		</div>
 	<div class="container content">
 		<div class="row">
-			<div class="col-md-12 main-content">
-		<section class="source-section">
-			<article></article>
-			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">/**
- * For working with switches
- * @module j5e/switch
- * @requires module:@j5e/event
- * @requires module:@j5e/fn
- */
-
-import { Emitter } from "@j5e/event";
-import {normalizeParams, getProvider} from "@j5e/fn";
-
-/** 
- * Class representing a switch
- * @classdesc The Switch class allows for control of digital switches
- * @async
- * @extends Emitter
- * @fires Switch#open
- * @fires Switch#close
- */
-class Switch extends Emitter {
-  
-  /**
-   * Instantiate a switch
-   * @param {(number|string|object)} io - A pin number, pin identifier or a complete IO options object (See {@tutorial C-INSTANTIATING}
-   * @param {object} [device={}] - An object containing device options
-   * @property {boolean} isClosed - True if the switch is closed (current is flowing)
-   * @property {boolean} isOpen - True if the switch is open (current is not flowing)
-   * @example
-   * &lt;caption>Use a switch to control an LED&lt;/caption>
-   * import Switch from "@j5e/switch";
-   * import LED from "@j5e/led";
-   * 
-   * const mySwitch = await new Switch(12);
-   * const led = await new LED(13);
-   * 
-   * mySwitch.on("open", function() {
-   *   led.off();
-   * });
-   * 
-   * mySwitch.on("close", function() {
-   *   led.on();
-   * });
-   */
-  constructor(io, device) { 
-    return (async () => {
-      const {ioOpts, deviceOpts} = normalizeParams(io, device);
-      super();
-
-      const Provider = await getProvider(ioOpts, "builtin/digital");
-      this.io = new Provider({
-        pin: ioOpts.pin,
-        mode: Provider.Input,
-        edge: Provider.Rising | Provider.Falling,
-        onReadable: () => { this.emit(this.isOpen ? "open" : "close") }
-      });
-
-      Object.defineProperties(this, {
-        isClosed: {
-          get: () => {
-            return !this.io.read();
-          }
-        },
-        isOpen: {
-          get: () => {
-            return this.io.read();
-          }
-        }
-      });
-      
-      return this;
-    })();
-    
-    
-  }
-
-}
-
-export default Switch;</code></pre>
-		</section>
+			<div class="col-md-9 main-content">
+						<ol class="breadcrumb">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="list_module.html">Modules</a></li>
+							<li class="active">j5e/sensor</li>
+						</ol>
+					<section>
+		<dl class="symbol">
+			<dt class="symbol-title "></dt>
+			<dd class="symbol-details ">
+				<div class="symbol-details-inner">
+					<div class="callout callout-primary"><h5>Description</h5>		<div class="description">For working with generic sensor components</div>
+					</div>					<div class="callout callout-warning"><h5>Requires</h5>		<form class="form-horizontal requires">
+									<div class="form-group">
+										<label class="col-sm-3 control-label requires-type">module:@j5e/event</label>
+										<div class="col-sm-9">
+											<div class="form-control-static requires-summary"></div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label requires-type">module:@j5e/fn</label>
+										<div class="col-sm-9">
+											<div class="form-control-static requires-summary"></div>
+										</div>
+									</div>
+							</form>
+					</div>					<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+									<!-- source -->
+									<div class="form-group">
+										<label class="col-sm-3 control-label">Source</label>
+										<div class="col-sm-9">
+											<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-1">line 1</a></p>
+										</div>
+									</div>
+					
+					
+					
+					
+							</form>
+					</div>				</div>
+			</dd>
+		</dl>
+							<article class="secondary">
+									<h3>Classes</h3>
+									<dl class="symbol">
+											<hr/>
+											<dt class="symbol-title class public">
+			<h4 id="Sensor" class="class public"><a href="module-j5e_sensor-Sensor.html"><span class="signature-new">new&nbsp;</span><span class="signature-attribs">&lt;async> </span><span class="name">Sensor</span><span class="signature-params">( <span class="signature-param">io</span> [,&nbsp;<span class="signature-param">device</span>&nbsp;]&nbsp;)</span><span class="signature-type"></span></a></h4>
+		</dt>
+<dd class="symbol-details class public">
+	<div class="symbol-details-inner">
+	</div>
+</dd>
+									</dl>
+							</article>
+					</section>
 			</div>
+				<div class="col-md-3 side-content">
+					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
+				</div>
 		</div>
 	</div>
 	<footer>
@@ -210,4 +202,3 @@ gtag('js', new Date());gtag('config', 'UA-36026876-4');
 </script>
 <a href="https://github.com/dtex/j5e"><img width="149" height="149" style="z-index:1000;position:absolute;top: 50px;right: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_orange_ff7600.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a></body>
 </html>
-<!-- end:source.tmpl.hbs -->

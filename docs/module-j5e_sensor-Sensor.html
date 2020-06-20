@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>j5e/fn</title>
+		<title>&lt;async&gt; j5e/sensor~Sensor</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -84,8 +84,8 @@
 	</header>
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
-				<span class="kind">module</span>
-				<h1><span class="name">j5e/fn</span></h1>
+				<span class="kind">class</span>
+				<h1><span class="signature-attribs">&lt;async> </span><span class="ancestors"><a href="module-j5e_sensor.html">j5e/sensor</a>~</span><span class="name">Sensor</span></h1>
 			</div>
 		</div>
 	<div class="container content">
@@ -93,104 +93,106 @@
 			<div class="col-md-9 main-content">
 						<ol class="breadcrumb">
 							<li><a href="index.html">Home</a></li>
-							<li><a href="list_module.html">Modules</a></li>
-							<li class="active">j5e/fn</li>
+							<li class="active"><a href="module-j5e_sensor.html">j5e/sensor</a>~Sensor</li>
 						</ol>
 					<section>
-		<dl class="symbol">
-			<dt class="symbol-title "></dt>
-			<dd class="symbol-details ">
-				<div class="symbol-details-inner">
-					<div class="callout callout-primary"><h5>Description</h5>		<div class="description">fn module - Utilities used in most IO modules. Typically called from other J5e methods.</div>
-					</div>					<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-									<!-- source -->
-									<div class="form-group">
-										<label class="col-sm-3 control-label">Source</label>
-										<div class="col-sm-9">
-											<p class="form-control-static"><a href="fn_index.js.html">fn/index.js</a>, <a href="fn_index.js.html#line-1">line 1</a></p>
-										</div>
-									</div>
-					
-					
-					
-					
-							</form>
-					</div>				</div>
-			</dd>
-		</dl>
-							<article class="secondary">
-									<h3>Namespaces</h3>
-									<dl class="symbol">
-											<hr/>
-											<dt class="symbol-title namespace public">
-			<h4 id="timer" class="namespace public"><a href="module-j5e_fn-timer.html"><span class="name">timer</span></a></h4>
-		</dt>
-<dd class="symbol-details namespace public">
+							<dl class="symbol primary">
+								<dt class="symbol-title class collapsible-symbol expanded">
+			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="signature-attribs">&lt;async> </span><span class="name">Sensor</span><span class="signature-params">( <span class="signature-param">io</span> [,&nbsp;<span class="signature-param">device</span>&nbsp;]&nbsp;)</span><span class="signature-type"></span></h2>
+</dt>
+<dd class="symbol-details class  collapsible-symbol expanded" style="max-height: 9999px;">
 	<div class="symbol-details-inner">
-	</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description classdesc">The Sensor class allows for input from sensor devices that connect to an ADC</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+							<th>Default</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>io</code></td>
+							<td><span class="param-type">number</span> | <span class="param-type">string</span> | <span class="param-type">object</span></td>
+								<td class="attributes"></td>
+								<td></td>
+							<td class="last">
+									A pin number, pin identifier or a complete IO options object (See <a href="tutorial-C-INSTANTIATING.html">Instantiating a Device</a>
+							</td>
+						</tr>
+						<tr>
+								<td><code>device</code></td>
+							<td><span class="param-type">object</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+								<td>{}</td>
+							<td class="last">
+									An object containing device options
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+							<!-- augments -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Augments</label>
+								<div class="col-sm-9">
+										<p class="form-control-static">Emitter</p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-43">line 43</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
 </dd>
-									</dl>
+							</dl>
+							<article class="secondary">
 									<h3>Methods</h3>
 									<dl class="symbol">
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".asyncForEach" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">asyncForEach</span><span class="signature-params">( <span class="signature-param">array</span>, <span class="signature-param">callback</span>&nbsp;)</span><span class="signature-type"></span></h4>
+			<h4 id="enable" class="function public"><span class="name">enable</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{Object}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Wait for an async forEach loop. Does not run in parallel.</div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>array</code></td>
-							<td><span class="param-type">Array.&lt;array></span></td>
-							<td class="last">
-									An input array
-							</td>
-						</tr>
-						<tr>
-								<td><code>callback</code></td>
-							<td><span class="param-type">function</span></td>
-							<td class="last">
-									A function to execute when iteration is complete
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">const waitFor &#x3D; (ms) &#x3D;&gt; new Promise(r &#x3D;&gt; setTimeout(r, ms));
-			
-			await asyncForEach([1, 2, 3], async (num) &#x3D;&gt; {
-			  await waitFor(50);
-			  console.log(num);
-			});
-			console.log(&#x27;Done&#x27;);</code></pre>
-					</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">enable Enable a disabled sensor.</div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Object</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description">instance</div>
+								</div>
+							</div>
+					</form>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -204,13 +206,6 @@
 			
 			
 			
-							<!-- author -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Author</label>
-								<div class="col-sm-9">
-										<p class="form-control-static">Sebastien Chopin</p>
-								</div>
-							</div>
 			
 			
 			
@@ -218,18 +213,11 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="fn_index.js.html">fn/index.js</a>, <a href="fn_index.js.html#line-55">line 55</a></p>
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-166">line 166</a></p>
 								</div>
 							</div>
 			
 			
-							<!-- see -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">See</label>
-								<div class="col-sm-9">
-										<p class="form-control-static"><a href="https://codeburst.io/javascript-async-await-with-foreach-b6ba62bbf404">Sebastien's Medium article</a> for more information</p>
-								</div>
-							</div>
 			
 			
 					</form>
@@ -237,71 +225,64 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".map" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">map</span><span class="signature-params">( <span class="signature-param">value</span>, <span class="signature-param">fromLow</span>, <span class="signature-param">fromHigh</span>, <span class="signature-param">toLow</span>, <span class="signature-param">toHigh</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
+			<h4 id="disable" class="function public"><span class="name">disable</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{Object}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Map a value (number) from one range to another. Based on Arduino's map().</div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>value</code></td>
-							<td><span class="param-type">Number</span></td>
-							<td class="last">
-									value to map
-							</td>
-						</tr>
-						<tr>
-								<td><code>fromLow</code></td>
-							<td><span class="param-type">Number</span></td>
-							<td class="last">
-									low end of originating range
-							</td>
-						</tr>
-						<tr>
-								<td><code>fromHigh</code></td>
-							<td><span class="param-type">Number</span></td>
-							<td class="last">
-									high end of originating range
-							</td>
-						</tr>
-						<tr>
-								<td><code>toLow</code></td>
-							<td><span class="param-type">Number</span></td>
-							<td class="last">
-									low end of target range
-							</td>
-						</tr>
-						<tr>
-								<td><code>toHigh</code></td>
-							<td><span class="param-type">Number</span></td>
-							<td class="last">
-									high end of target range
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">disable Disable an enabled sensor.</div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Object</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description">instance</div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-182">line 182</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id="read" class="function public"><span class="name">read</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">read Synchronous read of a sensor.</div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
 								<label class="col-sm-3 control-label returns-type"><span class="param-type">Number</span></label>
 								<div class="col-sm-9">
-									<div class="form-control-static returns-description">mapped value (integer)</div>
+									<div class="form-control-static returns-description">sensor value</div>
 								</div>
 							</div>
 					</form>
-			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">Fn.map(500, 0, 1000, 0, 255); // -&gt; 127</code></pre>
-					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -322,7 +303,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="fn_index.js.html">fn/index.js</a>, <a href="fn_index.js.html#line-73">line 73</a></p>
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-198">line 198</a></p>
 								</div>
 							</div>
 			
@@ -334,11 +315,11 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".constrain" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">constrain</span><span class="signature-params">( <span class="signature-param">value</span>, <span class="signature-param">low</span>, <span class="signature-param">high</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
+			<h4 id="scale" class="function public"><span class="name">scale</span><span class="signature-params">( <span class="signature-param">low</span>, <span class="signature-param">high</span> [,&nbsp;<span class="signature-param">low, high</span>&nbsp;]&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Object}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Constrain a value to a range.</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">scale/scaleTo Set a value scaling range</div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -346,29 +327,33 @@
 					<tr>
 							<th>Name</th>
 						<th>Type</th>
+							<th>Attributes</th>
 						<th class="last">Description</th>
 					</tr>
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>value</code></td>
-							<td><span class="param-type">number</span></td>
-							<td class="last">
-									An input value
-							</td>
-						</tr>
-						<tr>
 								<td><code>low</code></td>
-							<td><span class="param-type">number</span></td>
+							<td><span class="param-type">Number</span></td>
+								<td class="attributes"></td>
 							<td class="last">
-									The minimum allowed value (inclusive)
+									Lowerbound
 							</td>
 						</tr>
 						<tr>
 								<td><code>high</code></td>
-							<td><span class="param-type">number</span></td>
+							<td><span class="param-type">Number</span></td>
+								<td class="attributes"></td>
 							<td class="last">
-									The maximum allowed value (inclusive)
+									Upperbound
+							</td>
+						</tr>
+						<tr>
+								<td><code>low, high</code></td>
+							<td><span class="param-type">Array</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Lowerbound
 							</td>
 						</tr>
 					</tbody>
@@ -376,15 +361,18 @@
 			</div>
 			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">Number</span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Object</span></label>
 								<div class="col-sm-9">
-									<div class="form-control-static returns-description">constrained value</div>
+									<div class="form-control-static returns-description">instance</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Object</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description">instance</div>
 								</div>
 							</div>
 					</form>
-			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">constrain(120, 0, 100); // -&gt; 100</code></pre>
-					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -405,7 +393,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="fn_index.js.html">fn/index.js</a>, <a href="fn_index.js.html#line-102">line 102</a></p>
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-266">line 266</a></p>
 								</div>
 							</div>
 			
@@ -417,11 +405,11 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".pad" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">pad</span><span class="signature-params">( <span class="signature-param">value</span>, <span class="signature-param">length</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{String}</span></h4>
+			<h4 id="scaleTo" class="function public"><span class="name">scaleTo</span><span class="signature-params">( <span class="signature-param">low</span>, <span class="signature-param">low</span>, <span class="signature-param">high</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">left Pad a Number with zeros</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">scaleTo Scales value to integer representation</div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -434,17 +422,24 @@
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>value</code></td>
-							<td><span class="param-type">number</span></td>
+								<td><code>low</code></td>
+							<td><span class="param-type">Number</span></td>
 							<td class="last">
-									An input value
+									An array containing a lower and upper bound
 							</td>
 						</tr>
 						<tr>
-								<td><code>length</code></td>
-							<td><span class="param-type">number</span></td>
+								<td><code>low</code></td>
+							<td><span class="param-type">Number</span></td>
 							<td class="last">
-									The desired length
+									A number to use as a lower bound
+							</td>
+						</tr>
+						<tr>
+								<td><code>high</code></td>
+							<td><span class="param-type">Number</span></td>
+							<td class="last">
+									A number to use as an upper bound
 							</td>
 						</tr>
 					</tbody>
@@ -452,15 +447,12 @@
 			</div>
 			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">String</span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Number</span></label>
 								<div class="col-sm-9">
-									<div class="form-control-static returns-description">The padded string</div>
+									<div class="form-control-static returns-description">The scaled value</div>
 								</div>
 							</div>
 					</form>
-			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">pad(3, 2); // -&gt; &quot;02&quot;</code></pre>
-					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -481,7 +473,87 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="fn_index.js.html">fn/index.js</a>, <a href="fn_index.js.html#line-236">line 236</a></p>
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-283">line 283</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id="fscaleTo" class="function public"><span class="name">fscaleTo</span><span class="signature-params">( <span class="signature-param">low</span>, <span class="signature-param">low</span>, <span class="signature-param">high</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">fscaleTo Scales value to single precision float representation</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>low</code></td>
+							<td><span class="param-type">Number</span></td>
+							<td class="last">
+									An array containing a lower and upper bound
+							</td>
+						</tr>
+						<tr>
+								<td><code>low</code></td>
+							<td><span class="param-type">Number</span></td>
+							<td class="last">
+									A number to use as a lower bound
+							</td>
+						</tr>
+						<tr>
+								<td><code>high</code></td>
+							<td><span class="param-type">Number</span></td>
+							<td class="last">
+									A number to use as an upper bound
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Number</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description">The scaled value</div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-296">line 296</a></p>
 								</div>
 							</div>
 			
