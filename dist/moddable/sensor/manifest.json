@@ -2,9 +2,9 @@
   "include": [],
   "modules": {
     "*": [],
-    "@j5e/fn": "$(j5e)/fn/*",
     "@j5e/event": "$(j5e)/event/*",
-    "@j5e/animation": "$(j5e)/animation/*"
+    "@j5e/fn": "$(j5e)/fn/*",
+    "@j5e/sensor": "$(j5e)/sensor/*"
   },
   "preload": [],
   "platforms": {

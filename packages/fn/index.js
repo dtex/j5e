@@ -74,6 +74,23 @@ export function map(value, fromLow, fromHigh, toLow, toHigh) {
   return ((value - fromLow) * (toHigh - toLow) / (fromHigh - fromLow) + toLow) | 0;
 };
 
+/**
+ * Like map, but returns a Float32
+ *
+ * @param {Number} value    - value to map
+ * @param {Number} fromLow  - low end of originating range
+ * @param {Number} fromHigh - high end of originating range
+ * @param {Number} toLow    - low end of target range
+ * @param {Number} toHigh   - high end of target range
+ * @return {Float32}
+ */
+const f32A = new Float32Array(1);
+
+export function fmap(value, fromLow, fromHigh, toLow, toHigh) {
+  f32A[0] = (value - fromLow) * (toHigh - toLow) / (fromHigh - fromLow) + toLow;
+  return f32A[0];
+};
+
 /** Constrain a value to a range. 
  * @param {number} value - An input value
  * @param {number} low - The minimum allowed value (inclusive)

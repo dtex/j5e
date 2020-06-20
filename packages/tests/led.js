@@ -273,5 +273,6 @@ describe('LED - PWM', function() {
       clock.restore();
     });
   });
+  
 
 });

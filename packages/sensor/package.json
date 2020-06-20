@@ -1,34 +1,36 @@
 {
-  "name": "@j5e/animation",
-  "version": "0.1.1",
-  "description": "Animation class for J5e used for scripting LEDs and Servos",
+  "name": "@j5e/sensor",
+  "version": "0.1.0",
+  "description": "Generic sensor class for J5e",
   "main": "index.js",
   "type": "module",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "test": "../../node_modules/mocha/bin/mocha ../tests/animation.js"
+    "test": "../../node_modules/mocha/bin/mocha ../tests/sensor.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dtex/j5e.git"
   },
   "dependencies": {
-    "@j5e/fn": "^0.1.1",
-    "@j5e/event": "^0.1.0"
+    "@j5e/event": "^0.1.0",
+    "@j5e/fn": "^0.1.0"
   },
   "keywords": [
     "j5e",
     "iot",
     "robotics",
     "ecmascript",
-    "builtin"
+    "builtin",
+    "sensor"
   ],
   "author": "Donovan Buck <donovan@donovan.bz>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dtex/j5e/issues"
   },
-  "homepage": "https://github.com/dtex/j5e#readme"
+  "homepage": "https://dtex.github.com/j5e",
+  "gitHead": "10354fdd0d5620b1bd08e4281c829df607471467"
 }

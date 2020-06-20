@@ -187,13 +187,15 @@ class RGB {
       this.keys = ["red", "green", "blue"];
     
       await asyncForEach(RGB.colors, async (color, index) => {
+        
         let ioOpts = normalizeIO(io[index]);
         const Provider = await getProvider(ioOpts, "builtin/pwm");
-        this.io[color] = await new Provider({
+        
+        this.io[color] = new Provider({
           pin: ioOpts.pin,
           mode: Provider.Output
         });
-    
+
         if (this.io[color].resolution) {
           this.HIGH[color] = (1 &lt;&lt; this.io[color].resolution) -1;
         } else {
