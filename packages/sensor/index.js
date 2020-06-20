@@ -18,15 +18,15 @@ class Sensor extends Emitter {
   
   #state = {
     intervalId: null,
-    enabled: true,
+    enabled: null,
     scale: null,
     range: null,
     isScaled: false,
-    raw: 0,
-    value: 0,
-    median: 0,
+    raw: null,
+    value: null,
+    median: null,
     smoothing: 10,
-    interval: 100,
+    interval: null,
     previousInterval: 100,
     limit: null,
     threshold: 1,
@@ -57,29 +57,24 @@ class Sensor extends Emitter {
           },
           set(newInterval) {
             this.#state.interval = newInterval;
+            
             if (this.#state.intervalId) {
               timer.clearInterval(this.#state.intervalId);
             }
   
-            if (this.#state.interval !== null) {
+            if (this.#state.interval !== 0) {
               this.#state.intervalId = timer.setInterval(this.eventProcessing.bind(this), newInterval);
             }
           }
         },
         value: {
           get() {
-            return this.#state.value;
-          },
-          set(newValue) {
-            this.#state.value = newValue;
+            return this.scaled;
           }
         },
-        median: {
+        raw: {
           get() {
-            return this.#state.median;
-          },
-          set(newMedian) {
-            this.#state.median = newMedian;
+            return this.#state.raw;
           }
         },
         samples: {
@@ -115,15 +110,7 @@ class Sensor extends Emitter {
         },
         resolution: {
           get() {
-            return this.io.resolution ** 2;
-          }
-        },
-        scale: {
-          get() {
-            return this.#state.scale;
-          },
-          set(newScale) {
-            this.#state.scale = newScale;
+            return 2 ** this.io.resolution - 1;
           }
         },
         isScaled: {
@@ -137,32 +124,31 @@ class Sensor extends Emitter {
         scaled: {
           get() {
             let mapped;
-            let constrain;
+            let constrained;
           
             if (this.#state.scale && this.#state.raw !== null) {
               mapped = fmap(this.#state.raw, this.#state.range[0], this.#state.range[1], this.#state.scale[0], this.#state.scale[1]);
               constrained = constrain(mapped, this.#state.scale[0], this.#state.scale[1]);
               return constrained;
             }
-            return this.raw;
+            return this.#state.raw;
           }
         }   
       });
-
-      if (typeof deviceOpts.enabled !== "undefined") {
-        this.#state.enabled = Boolean(deviceOpts.enabled);
-      }
 
       if (typeof deviceOpts.interval !== "undefined") {
         this.#state.interval = deviceOpts.interval;
       }
 
-      this.#state.range = deviceOpts.range || [0, 2 ** this.io.resolution];
+      this.#state.range = deviceOpts.range || [0, 2 ** this.io.resolution - 1];
+      this.#state.scale = deviceOpts.scale || [0, 2 ** this.io.resolution - 1];
       this.#state.limit = deviceOpts.limit || null;
       this.#state.threshold = deviceOpts.threshold === undefined ? 1 : deviceOpts.threshold;
       
-      if (this.#state.enabled) {
-        this.interval = this.#state.interval;
+      if (deviceOpts.enabled === false) {
+        this.disable();
+      } else {
+        this.enable();
       }
       
       return this;
@@ -181,6 +167,7 @@ class Sensor extends Emitter {
     
     if (!this.#state.enabled) {
       this.interval = this.#state.interval || this.#state.previousInterval;
+      this.#state.enabled = true;
     }
 
     return this;
@@ -193,45 +180,55 @@ class Sensor extends Emitter {
    *
    */
   disable() {
-  
     if (this.#state.enabled) {
       this.#state.enabled = false;
       this.#state.previousInterval = this.#state.interval;
-      this.interval = null;
+      this.interval = 0;
     }
 
     return this;
   }
 
+  /**
+   * read Synchronous read of a sensor.
+   *
+   * @return {Number} sensor value
+   *
+   */
+  read() {
+    this.#state.raw = this.io.read();
+    return this.value;
+  }
+
   eventProcessing() {
     let err = null;
-    this.raw = this.io.read();
+    this.#state.raw = this.io.read();
     let boundary;
     let samples = this.samples;
 
     samples.push(this.value);
-  
+    
     // // Keep the previous calculated value if there were no new readings
     if (samples.length >= this.smoothing) {
       // Filter the accumulated sample values to reduce analog reading noise
-      this.median = median(samples);
-      const roundMedian = Math.round(this.median);
+      this.#state.median = median(samples);
+      const roundMedian = Math.round(this.#state.median);
       this.emit("data", roundMedian);
 
-      // If the filtered (state.median) value for this interval is at least ± the
+      // If the filtered (#state.median) value for this interval is at least ± the
       // configured threshold from last, fire change events
-      if (this.median <= (this.last - this.threshold) || this.median >= (this.last + this.threshold)) {
+      if (this.#state.median <= (this.last - this.threshold) || this.#state.median >= (this.last + this.threshold)) {
         this.emit("change", roundMedian);
         // Update the instance-local `last` value (only) when a new change event
         // has been emitted.  For comparison in the next interval
-        this.last = this.median;
+        this.last = this.#state.median;
       }
     
       if (this.limit) {
-        if (this.median <= this.limit[0]) {
+        if (this.#state.median <= this.limit[0]) {
           boundary = "lower";
         }
-        if (this.median >= this.limit[1]) {
+        if (this.#state.median >= this.limit[1]) {
           boundary = "upper";
         }
     
@@ -249,11 +246,12 @@ class Sensor extends Emitter {
 
     }
     
-    this.emit("raw", this.raw);
+    this.emit("raw", this.#state.raw);
     this.samples = samples;  
         
   }
 
+  
   /**
    * scale/scaleTo Set a value scaling range
    *
@@ -268,7 +266,7 @@ class Sensor extends Emitter {
   scale(low, high) {
     this.isScaled = true;
 
-    this.scale = Array.isArray(low) ?
+    this.#state.scale = Array.isArray(low) ?
       low : [low, high];
 
     return this;
@@ -297,7 +295,7 @@ class Sensor extends Emitter {
    */
   fscaleTo(low, high) {
     const scale = Array.isArray(low) ? low : [low, high];
-    return fmap(this.#state.raw, 0, this.resolution ** 2, scale[0], scale[1]);
+    return fmap(this.#state.raw, 0, this.resolution, scale[0], scale[1]);
   }
 
 }
