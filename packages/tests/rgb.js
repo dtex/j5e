@@ -136,9 +136,3 @@ describe('RGB', function() {
   });
 
 });
-
-/*
-      const writeSpy = {
-        red: sinon.spy(rgb.io.red, "write")
-      };
-*/
