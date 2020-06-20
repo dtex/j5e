@@ -2,19 +2,22 @@
  * The j5e Animation module handles tweening between a series of key frames. Works with with the LED, RGB, and Servo classes.
  * @module j5e/animation
  * @requires module:@j5e/fn
+ * @requires module:@j5e/event
  */
 
 import { constrain, timer } from "@j5e/fn";
+import { Emitter } from "@j5e/event";
 
 function linear(n) { return n; }
 
 /** 
  * Class representing an Animation
  * @classdesc Allows for scripted control of LEDs, RGBs, and Servos
+ * @extends Emitter
  * @fires animation:pause
  * @fires animation:stop
  */
-class Animation {
+class Animation extends Emitter {
 
   /**
    * Animation  
@@ -39,7 +42,7 @@ class Animation {
    * ani.enqueue(wave);
    */
   constructor(target) {
-    // super();
+    super();
     Object.assign(this, new Segment());
     this.defaultTarget = target || {};
   }
