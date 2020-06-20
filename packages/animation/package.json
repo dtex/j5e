@@ -15,7 +15,8 @@
     "url": "git+https://github.com/dtex/j5e.git"
   },
   "dependencies": {
-    "@j5e/fn": "^0.1.1"
+    "@j5e/fn": "^0.1.1",
+    "@j5e/event": "^0.1.0"
   },
   "keywords": [
     "j5e",
