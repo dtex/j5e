@@ -1,0 +1,22 @@
+{
+  "include": [],
+  "modules": {
+    "*": [],
+    "j5e/animation": "$(j5e)/lib/animation/*",
+    "j5e/easing": "$(j5e)/lib/easing/*",
+    "j5e/event": "$(j5e)/lib/event/*",
+    "j5e/fn": "$(j5e)/lib/fn/*",
+    "j5e/led": "$(j5e)/lib/led/*",
+    "j5e/rgb": "$(j5e)/lib/rgb/*",
+    "j5e/sensor": "$(j5e)/lib/sensor/*",
+    "j5e/servo": "$(j5e)/lib/servo/*",
+    "j5e/switch": "$(j5e)/lib/switch/*"
+  },
+  "preload": [],
+  "platforms": {
+    "esp": {},
+    "...": {
+      "error": "Experimental TC53 IO modules unsupported"
+    }
+  }
+}

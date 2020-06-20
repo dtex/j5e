@@ -1,0 +1,14 @@
+{
+  "include": [],
+  "modules": {
+    "*": [],
+    "j5e/event": "$(j5e)/lib/event/*"
+  },
+  "preload": [],
+  "platforms": {
+    "esp": {},
+    "...": {
+      "error": "Experimental TC53 IO modules unsupported"
+    }
+  }
+}

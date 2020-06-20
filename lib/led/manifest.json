@@ -1,0 +1,17 @@
+{
+  "include": [],
+  "modules": {
+    "*": [],
+    "j5e/animation": "$(j5e)/lib/animation/*",
+    "j5e/easing": "$(j5e)/lib/easing/*",
+    "j5e/fn": "$(j5e)/lib/fn/*",
+    "j5e/led": "$(j5e)/lib/led/*"
+  },
+  "preload": [],
+  "platforms": {
+    "esp": {},
+    "...": {
+      "error": "Experimental TC53 IO modules unsupported"
+    }
+  }
+}

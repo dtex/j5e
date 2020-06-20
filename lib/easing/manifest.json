@@ -1,0 +1,14 @@
+{
+  "include": [],
+  "modules": {
+    "*": [],
+    "j5e/easing": "$(j5e)/lib/easing/*"
+  },
+  "preload": [],
+  "platforms": {
+    "esp": {},
+    "...": {
+      "error": "Experimental TC53 IO modules unsupported"
+    }
+  }
+}
