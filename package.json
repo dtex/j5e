@@ -3,15 +3,25 @@
   "version": "0.0.8",
   "description": "j5e is a device framework built for ECMA TC-53's IO pattern",
   "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./animation": "./lib/animation/index.js",
+    "./easing": "./lib/easing/index.js",
+    "./event": "./lib/event/index.js",
+    "./fn": "./lib/fn/index.js",
+    "./led": "./lib/led/index.js",
+    "./rgb": "./lib/rgb/index.js",
+    "./sensor": "./lib/sensor/index.js",
+    "./servo": "./lib/servo/index.js",
+    "./switch": "./lib/switch/index.js"
+  },
   "type": "module",
   "directories": {
     "test": "tests"
   },
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha --harmony --require esm",
-    "docs": "./node_modules/jsdoc/jsdoc.js -t ./node_modules/foodoc/template -u ./build/docs/tutorials -c ./build/docs/jsdoc.json -d docs",
-    "dist": "npm run dist-moddable",
-    "dist-moddable": "node ./build/dist-moddable.cjs --experimental-modules"
+    "test": "./node_modules/mocha/bin/mocha",
+    "docs": "./node_modules/jsdoc/jsdoc.js -t ./node_modules/foodoc/template -u ./build/docs/tutorials -c ./build/docs/jsdoc.json -d docs"
   },
   "repository": {
     "type": "git",
@@ -36,11 +46,13 @@
   "homepage": "https://dtex.github.com/j5e",
   "devDependencies": {
     "@dtex/mock-io": "0.0.5",
+    "chai": "^4.2.0",
     "foodoc": "github:dtex/foodoc#master",
     "fs-extra": "^8.1.0",
     "jsdoc": "^3.6.4",
     "lerna": "^3.22.1",
-    "mocha": "^8.0.1"
+    "mocha": "^8.0.1",
+    "sinon": "^9.0.2"
   },
   "dependencies": {}
 }
