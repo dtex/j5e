@@ -1,5 +1,7 @@
+build/
 docs/
 examples/
 test/
 .gitignore
-jsdoc.conf.json
+contributing.md
+README.md
