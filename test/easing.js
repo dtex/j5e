@@ -1,6 +1,6 @@
 import assert from 'assert';
 import expectWrapper from 'chai';
-import * as easing from '@j5e/easing';
+import * as easing from 'j5e/easing';
 
 const expect = expectWrapper.expect;
 

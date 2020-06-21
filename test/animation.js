@@ -2,8 +2,8 @@ import assert from 'assert';
 import sinon from 'sinon';
 
 import { Digital, PWM } from "@dtex/mock-io";
-import Animation from "@j5e/animation";
-import LED from "@j5e/led";
+import Animation from "j5e/animation";
+import LED from "j5e/led";
 
 describe('Animation', function() {
   

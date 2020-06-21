@@ -1,8 +1,7 @@
 import assert from 'assert';
 import sinon from 'sinon';
 import { Analog } from "@dtex/mock-io";
-import Sensor from '@j5e/sensor';
-import { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } from 'constants';
+import Sensor from 'j5e/sensor';
 
 describe('Sensor - Generic', function() {
   

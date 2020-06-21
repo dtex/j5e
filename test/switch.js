@@ -1,7 +1,7 @@
 import assert from 'assert';
 
 import { Digital } from "@dtex/mock-io";
-import Switch from '@j5e/switch';
+import Switch from 'j5e/switch';
 
 describe('Switch', function() {
   

@@ -1,7 +1,7 @@
 import assert from 'assert';
 import sinon from 'sinon';
 import { Digital, PWM } from "@dtex/mock-io";
-import Servo from '@j5e/servo';
+import Servo from 'j5e/servo';
 
 describe('Servo - Standard', function() {
   

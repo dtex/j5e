@@ -1,7 +1,7 @@
 import assert from 'assert';
 import sinon from 'sinon';
 import { Digital } from "@dtex/mock-io";
-import { constrain, normalizeParams, timer } from '@j5e/fn';
+import { constrain, normalizeParams, timer } from 'j5e/fn';
 
 describe('Fn', function() {
   

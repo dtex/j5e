@@ -1,7 +1,7 @@
 import assert from 'assert';
 import sinon from 'sinon';
-import { Emitter } from '@j5e/event';
-import Switch from '@j5e/switch';
+import { Emitter } from 'j5e/event';
+import Switch from 'j5e/switch';
 import { Digital } from "@dtex/mock-io";
 
 describe('Event', function() {

@@ -1,7 +1,7 @@
 import assert from 'assert';
 import sinon from 'sinon';
 import { Digital, PWM } from "@dtex/mock-io";
-import LED from '@j5e/led';
+import LED from 'j5e/led';
 
 describe('LED - Digital', function() {
   

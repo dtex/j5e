@@ -1,7 +1,7 @@
 import assert from 'assert';
 import sinon from 'sinon';
 import { PWM } from "@dtex/mock-io";
-import RGB from '@j5e/rgb';
+import RGB from 'j5e/rgb';
 
 describe('RGB', function() {
   
