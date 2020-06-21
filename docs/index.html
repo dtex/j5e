@@ -105,15 +105,11 @@ led.blink();
 </code></pre>
 <p>New users should check out the <a href="tutorial-A-GETSTARTED.html">Getting Started</a> guide.</p>
 <h2>j5e Repo Anatomy</h2>
-<p>One goal of j5e is write once, run anywhere. We are building toward this goal before most TC-53 IO conformant platforms exist. To this end we've settled on node.js compatability as our primary target, with a build step that will generate distributions for other platforms programmatically. The JS is the same across platforms, but the project structure has to change in order to work with different implementations of ECMAScript Modules (package.json vs manifest.json and inconsistent module resolution schemes).</p>
-<h3>It's a Mono-Repo</h3>
-<p>In order to resolve module paths by <code>namespace/modulename</code> in node.js (eg <code>import LED from &quot;@j5e/led&quot;;</code>), each module needs to be its own package under the <code>@j5e</code> namespace. The <code>@j5e</code> namespace is an npm organization. Rather than having a seperate repo for what could end up being hundreds of modules we're using lerna to manage the different packages. Each module/package is contained in its own directory within <code>./packages/</code>. If you've cloned the repo and need to do some work on it, make sure you run <code>lerna bootstrap</code> to get all the dependencies wired up properly and then run <code>npm install</code> to get all the packages needed for dev.</p>
+<p>One goal of j5e is write once, run anywhere. We are building toward this goal before most TC-53 IO conformant platforms exist. To that end, the structure of this repo may change to help us support more platforms. The JS is the same across platforms, but the different implementations of ECMAScript Modules may require special concessions (package.json vs manifest.json and inconsistent module resolution schemes).</p>
 <h3>Documentation</h3>
 <p><a href="https://dtex.github.io/j5e/">Documentation</a> is handled using <a href="https://jsdoc.app/">JSDoc</a>. Nothing in the <code>./docs/</code> folder should be edited directly. It is generated from comments in the code and some miscellaneous files in the <code>./build/docs/</code> folder. To generate new documentation run <code>npm run docs</code>. Note that this can only be done outside the individual package folders.</p>
 <h3>Tests</h3>
-<p>Tests are run using mocha and chai. Each package has its own js file in the <code>./tests/</code> folder. You can test a single package by navigating to the package folder and running <code>npm run test</code>. You can run all tests from anywhere in the repo by running <code>lerna run test</code>.</p>
-<h3>Build Process</h3>
-<p>Creating new builds for the <code>./dist/</code> folder is handled with simple node.js scripts (no task runner). A build script is necessary for every platform except node.js. To generate new dists, just run <code>npm run dist</code>. Note that this can only be done outside the individual package folders.</p></article>
+<p>Tests are run using Mocha, Sinon, and node built-in Assert module. Each class has its own js file in the <code>./tests/</code> folder. You can test a single class by running <code>npm run test &lt;class&gt;</code>. You can run all tests by running <code>npm run test</code>.</p></article>
 		</section>
 			</div>
 				<div class="col-md-3 side-content">

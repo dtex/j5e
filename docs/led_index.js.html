@@ -97,14 +97,14 @@
 			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">/**
  * LED module
  * @module j5e/led
- * @requires module:@j5e/animation
- * @requires module:@j5e/easing
- * @requires module:@j5e/fn
+ * @requires module:j5e/animation
+ * @requires module:j5e/easing
+ * @requires module:j5e/fn
  */
 
-import {normalizeParams, constrain, getProvider, timer} from "@j5e/fn";
-import {inOutSine, outSine} from "@j5e/easing";
-import Animation from "@j5e/animation";
+import {normalizeParams, constrain, getProvider, timer} from "j5e/fn";
+import {inOutSine, outSine} from "j5e/easing";
+import Animation from "j5e/animation";
 
 /** 
  * Class representing an LED
@@ -129,21 +129,21 @@ class LED {
    * @param {boolean} [device.sink=false] - True if the device is wired for sink drive
    * @example
    * &lt;caption>Using a pin number&lt;/caption>
-   * import LED from "@j5e/led";
+   * import LED from "j5e/led";
    *
    * const led = await new LED(12);
    * led.on();
    * 
    * @example
    * &lt;caption>Using a pin identifier&lt;/caption>
-   * import LED from "@j5e/led";
+   * import LED from "j5e/led";
    *
    * const led = await new LED("A1");
    * led.on();
    * 
    * @example
    * &lt;caption>Using an IO options object&lt;/caption>
-   * import LED from "@j5e/led";
+   * import LED from "j5e/led";
    *
    * const led = await new LED({
    *   pin: 12,
@@ -219,7 +219,7 @@ class LED {
    * Turn an led on
    * @returns {LED} The instance on which the method was called
    * @example
-   * import LED from "@j5e/led";
+   * import LED from "j5e/led";
    *
    * const led = await new LED(12);
    * led.on();
@@ -234,8 +234,8 @@ class LED {
    * Turn an led off
    * @return {LED}
    * @example
-   * import LED from "@j5e/led";
-   * import {timer} from "@j5e/fn";
+   * import LED from "j5e/led";
+   * import {timer} from "j5e/fn";
    *
    * const led = await new LED(12);
    * led.on();
@@ -255,8 +255,8 @@ class LED {
    * Toggle the on/off state of an led
    * @return {LED}
    * @example
-   * import LED from "@j5e/led";
-   * import {timer} from "@j5e/fn";
+   * import LED from "j5e/led";
+   * import {timer} from "j5e/fn";
    *
    * const led = await new LED(12);
    * led.toggle(); // It's on!
@@ -276,7 +276,7 @@ class LED {
    * @param {Function} callback - Method to call on blink
    * @return {LED}
    * @example
-   * import LED from "@j5e/led";
+   * import LED from "j5e/led";
    * 
    * const led = await new LED(12);
    * led.blink(1000);
@@ -307,7 +307,7 @@ class LED {
    * @param {Integer} value - Brightness value [this.HIGH, this.LOW]
    * @return {LED}
    * @example
-   * import LED from "@j5e/led";
+   * import LED from "j5e/led";
    * 
    * const led = await new LED({
    *   pin: 12,
@@ -326,7 +326,7 @@ class LED {
    * @param {Integer} value - Brightness value [0, 100]
    * @return {LED}
    * @example
-   * import LED from "@j5e/led";
+   * import LED from "j5e/led";
    * 
    * const led = await new LED({
    *   pin: 12,
@@ -347,7 +347,7 @@ class LED {
    * @param {function} [callback] A function to run when the fade is complete
    * @return {LED}
    * @example
-   * import LED from "@j5e/led";
+   * import LED from "j5e/led";
    * 
    * const led = await new LED({
    *   pin: 12,
@@ -399,7 +399,7 @@ class LED {
    * @return {LED}
    * @example
    * &lt;caption>Fade an LED to full brightness over half a second&lt;/caption>
-   * import LED from "@j5e/led";
+   * import LED from "j5e/led";
    * 
    * const led = await new LED({
    *   pin: 12,
@@ -418,7 +418,7 @@ class LED {
    * @return {LED}
    * @example
    * &lt;caption>Fade an LED out over half a second&lt;/caption>
-   * import LED from "@j5e/led";
+   * import LED from "j5e/led";
    * 
    * const led = await new LED({
    *   pin: 12,
@@ -438,7 +438,7 @@ class LED {
    * @return {LED}
    * @example
    * &lt;caption>Pulse an LED on a half second interval&lt;/caption>
-   * import LED from "@j5e/led";
+   * import LED from "j5e/led";
    * 
    * const led = await new LED({
    *   pin: 12,
@@ -480,7 +480,7 @@ class LED {
    * @return {LED}
    * @example
    * &lt;caption>Animate an LED using an animation segment options object&lt;/caption>
-   * import LED from "@j5e/led";
+   * import LED from "j5e/led";
    * 
    * const led = await new LED({
    *   pin: 12,
@@ -510,8 +510,8 @@ class LED {
    * @return {LED}
    * @example
    * Pulse an LED and then stop after five seconds
-   * import {timer} from "@j5e/fn";
-   * import LED from "@j5e/led";
+   * import {timer} from "j5e/fn";
+   * import LED from "j5e/led";
    * 
    * const led = await new LED({
    *   pin: 12,

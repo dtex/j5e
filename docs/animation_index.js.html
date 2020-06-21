@@ -97,12 +97,12 @@
 			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">/**
  * The j5e Animation module handles tweening between a series of key frames. Works with with the LED, RGB, and Servo classes.
  * @module j5e/animation
- * @requires module:@j5e/fn
- * @requires module:@j5e/event
+ * @requires module:j5e/fn
+ * @requires module:j5e/event
  */
 
-import { constrain, timer } from "@j5e/fn";
-import { Emitter } from "@j5e/event";
+import { constrain, timer } from "j5e/fn";
+import { Emitter } from "j5e/event";
 
 function linear(n) { return n; }
 
@@ -121,8 +121,8 @@ class Animation extends Emitter {
    * @param {LED|LED[]|RGB|RGB[]|Servo|Servo[]} target - LEDs, RGBs, and/or Servos to be animated (See {@tutorial D-ANIMATING} for more information)
    * @example
    * &lt;caption>Make a servo "wave"&lt;/caption>
-   * import Servo from "@j5e/servo";
-   * import Animation from "@j5e/animation";
+   * import Servo from "j5e/servo";
+   * import Animation from "j5e/animation";
    * 
    * const servo = await new Servo(13);
    * const ani = await new Animation(servo);
@@ -165,8 +165,8 @@ class Animation extends Emitter {
    * @param {function} [options.onloop=null] - Function to call when the segment loops
    * @example
    * &lt;caption>Make a servo "wave"&lt;/caption>
-   * import Servo from "@j5e/servo";
-   * import Animation from "@j5e/animation";
+   * import Servo from "j5e/servo";
+   * import Animation from "j5e/animation";
    * 
    * const servo = await new Servo(13);
    * const ani = await new Animation(servo);
@@ -243,9 +243,9 @@ class Animation extends Emitter {
    * @returns Animation
    * @example
    * &lt;caption>Make a servo "wave" for five seconds, pause for one second and then resume waving&lt;/caption>
-   * import Servo from "@j5e/servo";
-   * import Animation from "@j5e/animation";
-   * import {timer} from "@j5e/fn";
+   * import Servo from "j5e/servo";
+   * import Animation from "j5e/animation";
+   * import {timer} from "j5e/fn";
    * 
    * const servo = await new Servo(13);
    * const ani = await new Animation(servo);
@@ -301,9 +301,9 @@ class Animation extends Emitter {
    * @returns Animation
    * @example
    * &lt;caption>Make a servo "wave" for five seconds, pause for one second and then resume waving&lt;/caption>
-   * import Servo from "@j5e/servo";
-   * import Animation from "@j5e/animation";
-   * import {timer} from "@j5e/fn";
+   * import Servo from "j5e/servo";
+   * import Animation from "j5e/animation";
+   * import {timer} from "j5e/fn";
    * 
    * const servo = await new Servo(13);
    * const ani = await new Animation(servo);
@@ -348,9 +348,9 @@ class Animation extends Emitter {
    * @returns Animation
    * @example
    * &lt;caption>Make a servo "wave" for five seconds and then stop, flushing the queue&lt;/caption>
-   * import Servo from "@j5e/servo";
-   * import Animation from "@j5e/animation";
-   * import {timer} from "@j5e/fn";
+   * import Servo from "j5e/servo";
+   * import Animation from "j5e/animation";
+   * import {timer} from "j5e/fn";
    * 
    * const servo = await new Servo(13);
    * const ani = await new Animation(servo);
@@ -393,9 +393,9 @@ class Animation extends Emitter {
    * @return Animation
    * @example
    * &lt;caption>Make a servo "wave" for one second, increase the speed, wait another second and decrease the speed for one second and then stop.&lt;/caption>
-   * import Servo from "@j5e/servo";
-   * import Animation from "@j5e/animation";
-   * import {timer} from "@j5e/fn";
+   * import Servo from "j5e/servo";
+   * import Animation from "j5e/animation";
+   * import {timer} from "j5e/fn";
    * 
    * const servo = await new Servo(13);
    * const ani = await new Animation(servo);
