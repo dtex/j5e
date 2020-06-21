@@ -101,9 +101,9 @@
  * 
  * @example
  * &lt;caption>Easing by keyFrame. Move a servo from 0° to 180° with inOutQuad easing and then back to 0° with outBounce&lt;/caption>
- * import Servo from "@j5e/servo";
- * import Animation from "@j5e/animation";
- * import { inOutQuad, outBunce } from "@j5e/easing";
+ * import Servo from "j5e/servo";
+ * import Animation from "j5e/animation";
+ * import { inOutQuad, outBunce } from "j5e/easing";
  * 
  * const servo = await new Servo(13);
  * const ani = await new Animation(servo);
@@ -141,9 +141,9 @@ export function linear(n) { return n };
  * @see {@link https://easings.net/en#easeInQuad|easings.net} for details
  * @example
  * &lt;caption>Ease the entire animation. Move a servo from 0° to 180° with inQuad easing.&lt;/caption>
- * import Servo from "@j5e/servo";
- * import Animation from "@j5e/animation";
- * import { inQuad } from "@j5e/easing";
+ * import Servo from "j5e/servo";
+ * import Animation from "j5e/animation";
+ * import { inQuad } from "j5e/easing";
  * 
  * const servo = await new Servo(13);
  * const ani = await new Animation(servo);
@@ -165,9 +165,9 @@ export function inQuad(n) { return n ** 2 };
  * @see {@link https://easings.net/en#easeOutQuad|easings.net} for details
  * @example
  * &lt;caption>Ease an animation segment. Move a servo from 0° to 90° with linear easing and then 90° to 180° with outQuad easing.&lt;/caption>
- * import Servo from "@j5e/servo";
- * import Animation from "@j5e/animation";
- * import { outQuad } from "@j5e/easing";
+ * import Servo from "j5e/servo";
+ * import Animation from "j5e/animation";
+ * import { outQuad } from "j5e/easing";
  * 
  * const servo = await new Servo(13);
  * const ani = await new Animation(servo);
@@ -188,9 +188,9 @@ export function outQuad(n) { return n * (2 - n) };
  * @see {@link https://easings.net/en#easeInOutQuad|easings.net} for details
  * @example
  * &lt;caption>Ease the entire animation. Move a servo from 0° to 180° with inOutQuad easing.&lt;/caption>
- * import Servo from "@j5e/servo";
- * import Animation from "@j5e/animation";
- * import { inOutQuad } from "@j5e/easing";
+ * import Servo from "j5e/servo";
+ * import Animation from "j5e/animation";
+ * import { inOutQuad } from "j5e/easing";
  * 
  * const servo = await new Servo(13);
  * const ani = await new Animation(servo);
@@ -217,9 +217,9 @@ export function inOutQuad(n) {
  * @see {@link https://easings.net/en#easeInCubic|easings.net} for details
  * @example
  * &lt;caption>Ease the entire animation. Move a servo from 0° to 180° with inCube easing.&lt;/caption>
- * import Servo from "@j5e/servo";
- * import Animation from "@j5e/animation";
- * import { inCube } from "@j5e/easing";
+ * import Servo from "j5e/servo";
+ * import Animation from "j5e/animation";
+ * import { inCube } from "j5e/easing";
  * 
  * const servo = await new Servo(13);
  * const ani = await new Animation(servo);
@@ -241,9 +241,9 @@ export function inCube(n) { return n ** 3 };
  * @see {@link https://easings.net/en#easeOutCubic|easings.net} for details
  * @example
  * &lt;caption>Ease an animation segment. Move a servo from 0° to 90° with linear easing and then 90° to 180° with outCube easing.&lt;/caption>
- * import Servo from "@j5e/servo";
- * import Animation from "@j5e/animation";
- * import { outCube } from "@j5e/easing";
+ * import Servo from "j5e/servo";
+ * import Animation from "j5e/animation";
+ * import { outCube } from "j5e/easing";
  * 
  * const servo = await new Servo(13);
  * const ani = await new Animation(servo);
@@ -264,9 +264,9 @@ export function outCube(n) { return --n * n * n + 1 };
  * @see {@link https://easings.net/en#easeInOutCubic|easings.net} for details
  * @example
  * &lt;caption>Ease the entire animation. Move a servo from 0° to 180° with inOutCube easing.&lt;/caption>
- * import Servo from "@j5e/servo";
- * import Animation from "@j5e/animation";
- * import { inOutCube } from "@j5e/easing";
+ * import Servo from "j5e/servo";
+ * import Animation from "j5e/animation";
+ * import { inOutCube } from "j5e/easing";
  * 
  * const servo = await new Servo(13);
  * const ani = await new Animation(servo);
@@ -293,9 +293,9 @@ export function inOutCube(n) {
  * @see {@link https://easings.net/en#easeInQuart|easings.net} for details
  * @example
  * &lt;caption>Ease the entire animation. Move a servo from 0° to 180° with inQuart easing.&lt;/caption>
- * import Servo from "@j5e/servo";
- * import Animation from "@j5e/animation";
- * import { inQuart } from "@j5e/easing";
+ * import Servo from "j5e/servo";
+ * import Animation from "j5e/animation";
+ * import { inQuart } from "j5e/easing";
  * 
  * const servo = await new Servo(13);
  * const ani = await new Animation(servo);
@@ -317,9 +317,9 @@ export function inQuart(n) { return n ** 4 };
  * @see {@link https://easings.net/en#easeOutQuart|easings.net} for details
  * @example
  * &lt;caption>Ease an animation segment. Move a servo from 0° to 90° with linear easing and then 90° to 180° with outQuart easing.&lt;/caption>
- * import Servo from "@j5e/servo";
- * import Animation from "@j5e/animation";
- * import { outQuart } from "@j5e/easing";
+ * import Servo from "j5e/servo";
+ * import Animation from "j5e/animation";
+ * import { outQuart } from "j5e/easing";
  * 
  * const servo = await new Servo(13);
  * const ani = await new Animation(servo);
@@ -340,9 +340,9 @@ export function outQuart(n) { return 1 - (--n * n ** 3) };
  * @see {@link https://easings.net/en#easeInOutQuart|easings.net} for details
  * @example
  * &lt;caption>Ease the entire animation. Move a servo from 0° to 180° with inOutQuart easing.&lt;/caption>
- * import Servo from "@j5e/servo";
- * import Animation from "@j5e/animation";
- * import { inOutQuart } from "@j5e/easing";
+ * import Servo from "j5e/servo";
+ * import Animation from "j5e/animation";
+ * import { inOutQuart } from "j5e/easing";
  * 
  * const servo = await new Servo(13);
  * const ani = await new Animation(servo);
@@ -369,9 +369,9 @@ export function inOutQuart(n) {
  * @see {@link https://easings.net/en#easeInQuint|easings.net} for details
  * @example
  * &lt;caption>Ease the entire animation. Move a servo from 0° to 180° with inQuint easing.&lt;/caption>
- * import Servo from "@j5e/servo";
- * import Animation from "@j5e/animation";
- * import { inQuint } from "@j5e/easing";
+ * import Servo from "j5e/servo";
+ * import Animation from "j5e/animation";
+ * import { inQuint } from "j5e/easing";
  * 
  * const servo = await new Servo(13);
  * const ani = await new Animation(servo);
@@ -393,9 +393,9 @@ export function inQuint(n) { return n ** 5 };
  * @see {@link https://easings.net/en#easeOutQuint|easings.net} for details
  * @example
  * &lt;caption>Ease an animation segment. Move a servo from 0° to 90° with linear easing and then 90° to 180° with outQuint easing.&lt;/caption>
- * import Servo from "@j5e/servo";
- * import Animation from "@j5e/animation";
- * import { outQuint } from "@j5e/easing";
+ * import Servo from "j5e/servo";
+ * import Animation from "j5e/animation";
+ * import { outQuint } from "j5e/easing";
  * 
  * const servo = await new Servo(13);
  * const ani = await new Animation(servo);
@@ -416,9 +416,9 @@ export function outQuint(n) { return --n * n ** 4 + 1 };
  * @see {@link https://easings.net/en#easeInOutQuint|easings.net} for details
  * @example
  * &lt;caption>Ease the entire animation. Move a servo from 0° to 180° with inOutQuint easing.&lt;/caption>
- * import Servo from "@j5e/servo";
- * import Animation from "@j5e/animation";
- * import { inOutQuint } from "@j5e/easing";
+ * import Servo from "j5e/servo";
+ * import Animation from "j5e/animation";
+ * import { inOutQuint } from "j5e/easing";
  * 
  * const servo = await new Servo(13);
  * const ani = await new Animation(servo);
@@ -445,9 +445,9 @@ export function inOutQuint(n) {
  * @see {@link https://easings.net/en#easeInSine|easings.net} for details
  * @example
  * &lt;caption>Ease the entire animation. Move a servo from 0° to 180° with inSine easing.&lt;/caption>
- * import Servo from "@j5e/servo";
- * import Animation from "@j5e/animation";
- * import { inSine } from "@j5e/easing";
+ * import Servo from "j5e/servo";
+ * import Animation from "j5e/animation";
+ * import { inSine } from "j5e/easing";
  * 
  * const servo = await new Servo(13);
  * const ani = await new Animation(servo);
@@ -469,9 +469,9 @@ export function inSine(n) { return 1 - cos(n * PI / 2) };
  * @see {@link https://easings.net/en#easeOutSine|easings.net} for details
  * @example
  * &lt;caption>Ease an animation segment. Move a servo from 0° to 90° with linear easing and then 90° to 180° with outSine easing.&lt;/caption>
- * import Servo from "@j5e/servo";
- * import Animation from "@j5e/animation";
- * import { outSine } from "@j5e/easing";
+ * import Servo from "j5e/servo";
+ * import Animation from "j5e/animation";
+ * import { outSine } from "j5e/easing";
  * 
  * const servo = await new Servo(13);
  * const ani = await new Animation(servo);
@@ -492,9 +492,9 @@ export function outSine(n) { return sin(n * PI / 2) };
  * @see {@link https://easings.net/en#easeInOutSine|easings.net} for details
  * @example
  * &lt;caption>Ease the entire animation. Move a servo from 0° to 180° with inOutSine easing.&lt;/caption>
- * import Servo from "@j5e/servo";
- * import Animation from "@j5e/animation";
- * import { inOutSine } from "@j5e/easing";
+ * import Servo from "j5e/servo";
+ * import Animation from "j5e/animation";
+ * import { inOutSine } from "j5e/easing";
  * 
  * const servo = await new Servo(13);
  * const ani = await new Animation(servo);
@@ -516,9 +516,9 @@ export function inOutSine(n) { return HALF * (1 - cos(PI * n)) };
  * @see {@link https://easings.net/en#easeInExpo|easings.net} for details
  * @example
  * &lt;caption>Ease the entire animation. Move a servo from 0° to 180° with inExpo easing.&lt;/caption>
- * import Servo from "@j5e/servo";
- * import Animation from "@j5e/animation";
- * import { inExpo } from "@j5e/easing";
+ * import Servo from "j5e/servo";
+ * import Animation from "j5e/animation";
+ * import { inExpo } from "j5e/easing";
  * 
  * const servo = await new Servo(13);
  * const ani = await new Animation(servo);
@@ -540,9 +540,9 @@ export function inExpo(n) { return 0 === n ? 0 : 1024 ** (n - 1) };
  * @see {@link https://easings.net/en#easeOutExpo|easings.net} for details
  * @example
  * &lt;caption>Ease an animation segment. Move a servo from 0° to 90° with linear easing and then 90° to 180° with outExpo easing.&lt;/caption>
- * import Servo from "@j5e/servo";
- * import Animation from "@j5e/animation";
- * import { outExpo } from "@j5e/easing";
+ * import Servo from "j5e/servo";
+ * import Animation from "j5e/animation";
+ * import { outExpo } from "j5e/easing";
  * 
  * const servo = await new Servo(13);
  * const ani = await new Animation(servo);
@@ -563,9 +563,9 @@ export function outExpo(n) { return 1 === n ? n : 1 - 2 ** (-10 * n) };
  * @see {@link https://easings.net/en#easeInOutExpo|easings.net} for details
  * @example
  * &lt;caption>Ease the entire animation. Move a servo from 0° to 180° with inOutExpo easing.&lt;/caption>
- * import Servo from "@j5e/servo";
- * import Animation from "@j5e/animation";
- * import { inOutExpo } from "@j5e/easing";
+ * import Servo from "j5e/servo";
+ * import Animation from "j5e/animation";
+ * import { inOutExpo } from "j5e/easing";
  * 
  * const servo = await new Servo(13);
  * const ani = await new Animation(servo);
@@ -593,9 +593,9 @@ export function inOutExpo(n) {
  * @see {@link https://easings.net/en#easeInCirc|easings.net} for details
  * @example
  * &lt;caption>Ease the entire animation. Move a servo from 0° to 180° with inCirc easing.&lt;/caption>
- * import Servo from "@j5e/servo";
- * import Animation from "@j5e/animation";
- * import { inCirc } from "@j5e/easing";
+ * import Servo from "j5e/servo";
+ * import Animation from "j5e/animation";
+ * import { inCirc } from "j5e/easing";
  * 
  * const servo = await new Servo(13);
  * const ani = await new Animation(servo);
@@ -617,9 +617,9 @@ export function inCirc(n) { return 1 - sqrt(1 - n * n) };
  * @see {@link https://easings.net/en#easeOutCirc|easings.net} for details
  * @example
  * &lt;caption>Ease an animation segment. Move a servo from 0° to 90° with linear easing and then 90° to 180° with outCirc easing.&lt;/caption>
- * import Servo from "@j5e/servo";
- * import Animation from "@j5e/animation";
- * import { outCirc } from "@j5e/easing";
+ * import Servo from "j5e/servo";
+ * import Animation from "j5e/animation";
+ * import { outCirc } from "j5e/easing";
  * 
  * const servo = await new Servo(13);
  * const ani = await new Animation(servo);
@@ -640,9 +640,9 @@ export function outCirc(n) { return sqrt(1 - (--n * n)) };
  * @see {@link https://easings.net/en#easeInOutCirc|easings.net} for details
  * @example
  * &lt;caption>Ease the entire animation. Move a servo from 0° to 180° with inOutCirc easing.&lt;/caption>
- * import Servo from "@j5e/servo";
- * import Animation from "@j5e/animation";
- * import { inOutCirc } from "@j5e/easing";
+ * import Servo from "j5e/servo";
+ * import Animation from "j5e/animation";
+ * import { inOutCirc } from "j5e/easing";
  * 
  * const servo = await new Servo(13);
  * const ani = await new Animation(servo);
@@ -669,9 +669,9 @@ export function inOutCirc(n) {
  * @see {@link https://easings.net/en#easeInBack|easings.net} for details
  * @example
  * &lt;caption>Ease the entire animation. Move a servo from 0° to 180° with inBack easing.&lt;/caption>
- * import Servo from "@j5e/servo";
- * import Animation from "@j5e/animation";
- * import { inBack } from "@j5e/easing";
+ * import Servo from "j5e/servo";
+ * import Animation from "j5e/animation";
+ * import { inBack } from "j5e/easing";
  * 
  * const servo = await new Servo(13);
  * const ani = await new Animation(servo);
@@ -693,9 +693,9 @@ export function inBack(n) { return n * n * ((SI + 1) * n - SI) };
  * @see {@link https://easings.net/en#easeOutBack|easings.net} for details
  * @example
  * &lt;caption>Ease an animation segment. Move a servo from 0° to 90° with linear easing and then 90° to 180° with outBack easing.&lt;/caption>
- * import Servo from "@j5e/servo";
- * import Animation from "@j5e/animation";
- * import { outBack } from "@j5e/easing";
+ * import Servo from "j5e/servo";
+ * import Animation from "j5e/animation";
+ * import { outBack } from "j5e/easing";
  * 
  * const servo = await new Servo(13);
  * const ani = await new Animation(servo);
@@ -716,9 +716,9 @@ export function outBack(n) { return --n * n * ((SI + 1) * n + SI) + 1 };
  * @see {@link https://easings.net/en#easeInOutBack|easings.net} for details
  * @example
  * &lt;caption>Ease the entire animation. Move a servo from 0° to 180° with inOutBack easing.&lt;/caption>
- * import Servo from "@j5e/servo";
- * import Animation from "@j5e/animation";
- * import { inOutBack } from "@j5e/easing";
+ * import Servo from "j5e/servo";
+ * import Animation from "j5e/animation";
+ * import { inOutBack } from "j5e/easing";
  * 
  * const servo = await new Servo(13);
  * const ani = await new Animation(servo);
@@ -744,9 +744,9 @@ export function inOutBack(n) {
  * @see {@link https://easings.net/en#easeInBounce|easings.net} for details
  * @example
  * &lt;caption>Ease the entire animation. Move a servo from 0° to 180° with inBounce easing.&lt;/caption>
- * import Servo from "@j5e/servo";
- * import Animation from "@j5e/animation";
- * import { inBounce } from "@j5e/easing";
+ * import Servo from "j5e/servo";
+ * import Animation from "j5e/animation";
+ * import { inBounce } from "j5e/easing";
  * 
  * const servo = await new Servo(13);
  * const ani = await new Animation(servo);
@@ -768,9 +768,9 @@ export function inBounce(n) { return 1 - outBounce(1 - n); }
  * @see {@link https://easings.net/en#easeOutBounce|easings.net} for details
  * @example
  * &lt;caption>Ease an animation segment. Move a servo from 0° to 90° with linear easing and then 90° to 180° with outBounce easing.&lt;/caption>
- * import Servo from "@j5e/servo";
- * import Animation from "@j5e/animation";
- * import { outBounce } from "@j5e/easing";
+ * import Servo from "j5e/servo";
+ * import Animation from "j5e/animation";
+ * import { outBounce } from "j5e/easing";
  * 
  * const servo = await new Servo(13);
  * const ani = await new Animation(servo);
@@ -801,9 +801,9 @@ export function outBounce(n) {
  * @see {@link https://easings.net/en#easeInOutBounce|easings.net} for details
  * @example
  * &lt;caption>Ease the entire animation. Move a servo from 0° to 180° with inOutBounce easing.&lt;/caption>
- * import Servo from "@j5e/servo";
- * import Animation from "@j5e/animation";
- * import { inOutBounce } from "@j5e/easing";
+ * import Servo from "j5e/servo";
+ * import Animation from "j5e/animation";
+ * import { inOutBounce } from "j5e/easing";
  * 
  * const servo = await new Servo(13);
  * const ani = await new Animation(servo);

@@ -161,7 +161,7 @@
 			</div>
 			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Using pin numbers</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;j5e/rgb&quot;;
 			
 			const rgb &#x3D; await new RGB([13, 12, 14]);
 			rgb.color(&quot;#663399&quot;);
@@ -169,7 +169,7 @@
 					</div>
 					<div class="example-caption"><p>Using pin identifiers</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;j5e/rgb&quot;;
 			
 			const rgb &#x3D; await new RGB([&quot;A1&quot;, &quot;A3&quot;, &quot;A4&quot;]);
 			rgb.color(&quot;#663399&quot;);
@@ -177,7 +177,7 @@
 					</div>
 					<div class="example-caption"><p>Using io option objects</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;j5e/rgb&quot;;
 			import PCA9685 from &quot;PCA9685Expander&quot;
 			
 			const rgb &#x3D; await new RGB([
@@ -278,35 +278,35 @@
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Use a hex value to make it purple</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;j5e/rgb&quot;;
 			
 			const rgb &#x3D; await new RGB([13, 12, 14]);
 			rgb.color(&quot;#663399&quot;);</code></pre>
 					</div>
 					<div class="example-caption"><p>Use an RGB String to make it purple</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;j5e/rgb&quot;;
 			
 			const rgb &#x3D; await new RGB([13, 12, 14]);
 			rgb.color(&quot;rgb(102, 51, 153)&quot;);</code></pre>
 					</div>
 					<div class="example-caption"><p>Use an RGBA String to make it darker purple</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;j5e/rgb&quot;;
 			
 			const rgb &#x3D; await new RGB([13, 12, 14]);
 			rgb.color(&quot;rgba(102, 51, 153, 50%)&quot;);</code></pre>
 					</div>
 					<div class="example-caption"><p>Use an array to make it purple</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;j5e/rgb&quot;;
 			
 			const rgb &#x3D; await new RGB([13, 12, 14]);
 			rgb.color([408, 204, 612]); // Assumes 10-bit</code></pre>
 					</div>
 					<div class="example-caption"><p>Use an object to make it purple</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;j5e/rgb&quot;;
 			
 			const rgb &#x3D; await new RGB([13, 12, 14]);
 			rgb.color({
@@ -317,7 +317,7 @@
 					</div>
 					<div class="example-caption"><p>Use seperate Red, Green, and Blue arguments to make it purple</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;j5e/rgb&quot;;
 			
 			const rgb &#x3D; await new RGB([13, 12, 14]);
 			rgb.color(408, 204, 612); // Assumes 10-bit</code></pre>
@@ -369,7 +369,7 @@
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Make it on</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;j5e/rgb&quot;;
 			
 			const rgb &#x3D; await new RGB([13, 12, 14]);
 			rgb.on(); // Default color is white</code></pre>
@@ -421,8 +421,8 @@
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Make it purple for five seconds</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
-			import {timer} from &quot;@j5e/fn&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;j5e/rgb&quot;;
+			import {timer} from &quot;j5e/fn&quot;;
 			
 			const rgb &#x3D; await new RGB([13, 12, 14]);
 			rgb.color(&quot;#663399&quot;);
@@ -478,8 +478,8 @@
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Make it purple for five seconds</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
-			import {timer} from &quot;@j5e/fn&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;j5e/rgb&quot;;
+			import {timer} from &quot;j5e/fn&quot;;
 			
 			const rgb &#x3D; await new RGB([13, 12, 14]);
 			rgb.toggle(); // Turns RGB LED on
@@ -566,7 +566,7 @@
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Make it blink</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;j5e/rgb&quot;;
 			
 			const rgb &#x3D; await new RGB([13, 12, 14]);
 			rgb.color(&quot;#663399&quot;);
@@ -574,7 +574,7 @@
 					</div>
 					<div class="example-caption"><p>Make it blink slowly</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;j5e/rgb&quot;;
 			
 			const rgb &#x3D; await new RGB([13, 12, 14]);
 			rgb.color(&quot;#663399&quot;);
@@ -670,21 +670,21 @@
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Fade on to purple</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;j5e/rgb&quot;;
 			
 			const rgb &#x3D; await new RGB([13, 12, 14]);
 			rgb.fade(&quot;#663399&quot;);</code></pre>
 					</div>
 					<div class="example-caption"><p>Fade on to purple over 3 seconds</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;j5e/rgb&quot;;
 			
 			const rgb &#x3D; await new RGB([13, 12, 14]);
 			rgb.fade(&quot;#663399&quot;, 3000);</code></pre>
 					</div>
 					<div class="example-caption"><p>Fade on to purple over 3 seconds and then blink</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;j5e/rgb&quot;;
 			
 			const rgb &#x3D; await new RGB([13, 12, 14]);
 			rgb.fade(&quot;#663399&quot;, 3000, function() {
@@ -772,7 +772,7 @@
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Fade an RGB LED to white over half a second</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;j5e/rgb&quot;;
 			
 			const rgb &#x3D; await new RGB([13, 12, 14]);
 			rgb.fadeIn(500);</code></pre>
@@ -858,7 +858,7 @@
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">&lt;caption&gt;Fade out an RGB LED over half a second
-			import RGB from &quot;@j5e/rgb&quot;;
+			import RGB from &quot;j5e/rgb&quot;;
 			
 			const rgb &#x3D; await new RGB([13, 12, 14]);
 			rgb.color(&quot;#663399&quot;);
@@ -942,7 +942,7 @@
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Make it pulse</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;j5e/rgb&quot;;
 			
 			const rgb &#x3D; await new RGB([13, 12, 14]);
 			rgb.color(&quot;#663399&quot;);
@@ -950,7 +950,7 @@
 					</div>
 					<div class="example-caption"><p>Make it pulse slowly</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;j5e/rgb&quot;;
 			
 			const rgb &#x3D; await new RGB([13, 12, 14]);
 			rgb.color(&quot;#663399&quot;);
@@ -1024,7 +1024,7 @@
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Animate an RGB LED using an animation segment options object</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;j5e/rgb&quot;;
 			
 			const rgb &#x3D; await new RGB([13, 12, 14]);
 			rgb.animate({
@@ -1082,8 +1082,8 @@
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Make it pulse for five seconds and then stop</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;@j5e/rgb&quot;;
-			import {timer} from &quot;@j5e/fn&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;j5e/rgb&quot;;
+			import {timer} from &quot;j5e/fn&quot;;
 			
 			const rgb &#x3D; await new RGB([13, 12, 14]);
 			rgb.color(&quot;#663399&quot;);

@@ -161,21 +161,21 @@
 			</div>
 			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Using a pin number</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;@j5e/led&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;j5e/led&quot;;
 			
 			const led &#x3D; await new LED(12);
 			led.on();</code></pre>
 					</div>
 					<div class="example-caption"><p>Using a pin identifier</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;@j5e/led&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;j5e/led&quot;;
 			
 			const led &#x3D; await new LED(&quot;A1&quot;);
 			led.on();</code></pre>
 					</div>
 					<div class="example-caption"><p>Using an IO options object</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;@j5e/led&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;j5e/led&quot;;
 			
 			const led &#x3D; await new LED({
 			  pin: 12,
@@ -233,7 +233,7 @@
 							</div>
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;@j5e/led&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;j5e/led&quot;;
 			
 			const led &#x3D; await new LED(12);
 			led.on();</code></pre>
@@ -284,8 +284,8 @@
 							</div>
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;@j5e/led&quot;;
-			import {timer} from &quot;@j5e/fn&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;j5e/led&quot;;
+			import {timer} from &quot;j5e/fn&quot;;
 			
 			const led &#x3D; await new LED(12);
 			led.on();
@@ -341,8 +341,8 @@
 							</div>
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;@j5e/led&quot;;
-			import {timer} from &quot;@j5e/fn&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;j5e/led&quot;;
+			import {timer} from &quot;j5e/fn&quot;;
 			
 			const led &#x3D; await new LED(12);
 			led.toggle(); // It&#x27;s on!
@@ -429,7 +429,7 @@
 							</div>
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;@j5e/led&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;j5e/led&quot;;
 			
 			const led &#x3D; await new LED(12);
 			led.blink(1000);</code></pre>
@@ -501,7 +501,7 @@
 							</div>
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;@j5e/led&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;j5e/led&quot;;
 			
 			const led &#x3D; await new LED({
 			  pin: 12,
@@ -576,7 +576,7 @@
 							</div>
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;@j5e/led&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;j5e/led&quot;;
 			
 			const led &#x3D; await new LED({
 			  pin: 12,
@@ -673,7 +673,7 @@
 							</div>
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;@j5e/led&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;j5e/led&quot;;
 			
 			const led &#x3D; await new LED({
 			  pin: 12,
@@ -762,7 +762,7 @@
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Fade an LED to full brightness over half a second</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;@j5e/led&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;j5e/led&quot;;
 			
 			const led &#x3D; await new LED({
 			  pin: 12,
@@ -851,7 +851,7 @@
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Fade an LED out over half a second</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;@j5e/led&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;j5e/led&quot;;
 			
 			const led &#x3D; await new LED({
 			  pin: 12,
@@ -941,7 +941,7 @@
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Pulse an LED on a half second interval</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;@j5e/led&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;j5e/led&quot;;
 			
 			const led &#x3D; await new LED({
 			  pin: 12,
@@ -1017,7 +1017,7 @@
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Animate an LED using an animation segment options object</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;@j5e/led&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;j5e/led&quot;;
 			
 			const led &#x3D; await new LED({
 			  pin: 12,
@@ -1078,8 +1078,8 @@
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">Pulse an LED and then stop after five seconds
-			import {timer} from &quot;@j5e/fn&quot;;
-			import LED from &quot;@j5e/led&quot;;
+			import {timer} from &quot;j5e/fn&quot;;
+			import LED from &quot;j5e/led&quot;;
 			
 			const led &#x3D; await new LED({
 			  pin: 12,

@@ -97,12 +97,12 @@
 			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">/**
  * For working with switches
  * @module j5e/switch
- * @requires module:@j5e/event
- * @requires module:@j5e/fn
+ * @requires module:j5e/event
+ * @requires module:j5e/fn
  */
 
-import { Emitter } from "@j5e/event";
-import {normalizeParams, getProvider} from "@j5e/fn";
+import { Emitter } from "j5e/event";
+import {normalizeParams, getProvider} from "j5e/fn";
 
 /** 
  * Class representing a switch
@@ -122,8 +122,8 @@ class Switch extends Emitter {
    * @property {boolean} isOpen - True if the switch is open (current is not flowing)
    * @example
    * &lt;caption>Use a switch to control an LED&lt;/caption>
-   * import Switch from "@j5e/switch";
-   * import LED from "@j5e/led";
+   * import Switch from "j5e/switch";
+   * import LED from "j5e/led";
    * 
    * const mySwitch = await new Switch(12);
    * const led = await new LED(13);

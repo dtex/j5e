@@ -363,14 +363,14 @@
 			</div>
 			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Sweep a servo back and forth</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;j5e/servo&quot;;
 			
 			const servo &#x3D; await new Servo(12);
 			servo.sweep();</code></pre>
 					</div>
 					<div class="example-caption"><p>Move a continuos rotation servo forward</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;j5e/servo&quot;;
 			
 			const servo &#x3D; await new Servo(12, {type: &quot;continuous&quot;});
 			servo.cw();</code></pre>
@@ -484,22 +484,22 @@
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Move a servo to 180° as quickly as possible</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;j5e/servo&quot;;
 			
 			const servo &#x3D; await new Servo(12);
 			servo.to(180);</code></pre>
 					</div>
 					<div class="example-caption"><p>Move a servo to 180° over one second</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;j5e/servo&quot;;
 			
 			const servo &#x3D; await new Servo(12);
 			servo.to(180, 1000);</code></pre>
 					</div>
 					<div class="example-caption"><p>Move a servo to 180° using an animation segment object</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
-			import { inOutQuad } from &quot;@j5e/easing&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;j5e/servo&quot;;
+			import { inOutQuad } from &quot;j5e/easing&quot;;
 			
 			const servo &#x3D; await new Servo(12);
 			servo.to({
@@ -587,7 +587,7 @@
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Move a servo to 120° as quickly as possible</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;j5e/servo&quot;;
 			
 			const servo &#x3D; await new Servo(12);
 			// The servo&#x27;s default position is 90 degrees
@@ -595,7 +595,7 @@
 					</div>
 					<div class="example-caption"><p>Move a servo to 120° over one second</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;j5e/servo&quot;;
 			
 			const servo &#x3D; await new Servo(12);
 			// The servo&#x27;s default position is 90 degrees
@@ -671,14 +671,14 @@
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Move a servo to 0° as quickly as possible</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;j5e/servo&quot;;
 			
 			const servo &#x3D; await new Servo(12);
 			servo.min();</code></pre>
 					</div>
 					<div class="example-caption"><p>Move a servo to 0° over one second</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;j5e/servo&quot;;
 			
 			const servo &#x3D; await new Servo(12);
 			servo.min(1000);</code></pre>
@@ -753,14 +753,14 @@
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Move a servo to 180° as quickly as possible</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;j5e/servo&quot;;
 			
 			const servo &#x3D; await new Servo(12);
 			servo.max();</code></pre>
 					</div>
 					<div class="example-caption"><p>Move a servo to 180° over one second</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;j5e/servo&quot;;
 			
 			const servo &#x3D; await new Servo(12);
 			servo.max(1000);</code></pre>
@@ -835,8 +835,8 @@
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Move a servo to 180° and then back to 90° as quickly as possible</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
-			import { timer } from &quot;@j5e/fn&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;j5e/servo&quot;;
+			import { timer } from &quot;j5e/fn&quot;;
 			
 			const servo &#x3D; await new Servo(12);
 			servo.to(180);
@@ -847,8 +847,8 @@
 					</div>
 					<div class="example-caption"><p>Move a servo to 180° and then back to 90° over one second</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
-			import { timer } from &quot;@j5e/fn&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;j5e/servo&quot;;
+			import { timer } from &quot;j5e/fn&quot;;
 			
 			const servo &#x3D; await new Servo(12);
 			servo.to(180);
@@ -904,8 +904,8 @@
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Move a servo to 180° and then back to 90° as quickly as possible</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
-			import { timer } from &quot;@j5e/fn&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;j5e/servo&quot;;
+			import { timer } from &quot;j5e/fn&quot;;
 			
 			const servo &#x3D; await new Servo(12);
 			servo.to(180);
@@ -982,15 +982,15 @@
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Sweep a servo back and forth between 10° to 170°</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;j5e/servo&quot;;
 			
 			const servo &#x3D; await new Servo(12);
 			servo.sweep([10, 170]));
 			
 			example
 			&lt;caption&gt;Sweep a servo back and forth between 10° to 170° with inOutCirc easing&lt;/caption&gt;
-			import Servo from &quot;@j5e/servo&quot;;
-			import {inOutCirc} from &quot;@j5e/easing&quot;;
+			import Servo from &quot;j5e/servo&quot;;
+			import {inOutCirc} from &quot;j5e/easing&quot;;
 			
 			const servo &#x3D; await new Servo(12);
 			servo.sweep({
@@ -1039,7 +1039,7 @@
 			return {Servo}</div>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Sweep a servo back and forth for two seconds then stop</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;j5e/servo&quot;;
 			
 			const servo &#x3D; await new Servo(12);
 			servo.sweep([10, 170]));
@@ -1118,14 +1118,14 @@
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Move a continuos rotation servo clockwise</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;j5e/servo&quot;;
 			
 			const servo &#x3D; await new Servo(12, {type: &quot;continuous&quot;});
 			servo.cw();</code></pre>
 					</div>
 					<div class="example-caption"><p>Move a continuos rotation servo clockwise at half speed</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;j5e/servo&quot;;
 			
 			const servo &#x3D; await new Servo(12, {type: &quot;continuous&quot;});
 			servo.cw(0.5);</code></pre>
@@ -1200,14 +1200,14 @@
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Move a continuos rotation servo counter-clockwise</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;j5e/servo&quot;;
 			
 			const servo &#x3D; await new Servo(12, {type: &quot;continuous&quot;});
 			servo.ccw();</code></pre>
 					</div>
 					<div class="example-caption"><p>Move a continuos rotation servo counter-clockwise at half speed</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;@j5e/servo&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;j5e/servo&quot;;
 			
 			const servo &#x3D; await new Servo(12, {type: &quot;continuous&quot;});
 			servo.ccw(0.5);</code></pre>
