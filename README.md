@@ -8,7 +8,7 @@ Right now, the only provider that matches the ECMA TC-53 I/O class pattern is [M
 
 **j5e in action**
 ````js
-import LED from "@j5e/led";
+import LED from "j5e/led";
 
 const led = await new LED(14);
 led.blink();
