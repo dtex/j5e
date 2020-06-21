@@ -8,7 +8,7 @@ Right now, the only provider that matches the ECMA TC-53 I/O class pattern is [M
 
 **j5e in action**
 ````js
-import LED from "@j5e/led";
+import LED from "j5e/led";
 
 const led = await new LED(14);
 led.blink();
@@ -16,17 +16,4 @@ led.blink();
 
 New users should check out the [Getting Started](tutorial-A-GETSTARTED.html) guide.
 
-## j5e Repo Anatomy
-One goal of j5e is write once, run anywhere. We are building toward this goal before most TC-53 IO conformant platforms exist. To this end we've settled on node.js compatability as our primary target, with a build step that will generate distributions for other platforms programmatically. The JS is the same across platforms, but the project structure has to change in order to work with different implementations of ECMAScript Modules (package.json vs manifest.json and inconsistent module resolution schemes).
-
-### It's a Mono-Repo
-In order to resolve module paths by ```namespace/modulename``` in node.js (eg ```import LED from "@j5e/led";```), each module needs to be its own package under the ```@j5e``` namespace. The ```@j5e``` namespace is an npm organization. Rather than having a seperate repo for what could end up being hundreds of modules we're using lerna to manage the different packages. Each module/package is contained in its own directory within ```./packages/```. If you've cloned the repo and need to do some work on it, make sure you run ```lerna bootstrap``` to get all the dependencies wired up properly and then run ```npm install``` to get all the packages needed for dev.
-
-### Documentation
-[Documentation](https://dtex.github.io/j5e/) is handled using [JSDoc](https://jsdoc.app/). Nothing in the ```./docs/``` folder should be edited directly. It is generated from comments in the code and some miscellaneous files in the ```./build/docs/``` folder. To generate new documentation run ```npm run docs```. Note that this can only be done outside the individual package folders.
-
-### Tests
-Tests are run using mocha and chai. Each package has its own js file in the ```./tests/``` folder. You can test a single package by navigating to the package folder and running ```npm run test```. You can run all tests from anywhere in the repo by running ```lerna run test```.
-
-### Build Process
-Creating new builds for the ```./dist/``` folder is handled with simple node.js scripts (no task runner). A build script is necessary for every platform except node.js. To generate new dists, just run ```npm run dist```. Note that this can only be done outside the individual package folders.
+Interested in contributing? Check out [contributing.md](https://github.com/dtex/j5e/blob/master/contributing.md) in the repo.
