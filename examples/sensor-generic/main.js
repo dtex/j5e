@@ -1,4 +1,4 @@
-import Sensor from "@j5e/sensor";
+import Sensor from "j5e/sensor";
 
 const sensor = await new Sensor(17);
 

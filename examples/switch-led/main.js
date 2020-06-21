@@ -1,5 +1,5 @@
-import Switch from "@j5e/switch";
-import LED from "@j5e/led";
+import Switch from "j5e/switch";
+import LED from "j5e/led";
 
 const mySwitch = await new Switch(14);
 const led = await new LED(12);

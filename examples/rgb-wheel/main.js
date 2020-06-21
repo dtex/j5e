@@ -1,4 +1,4 @@
-import RGB from "@j5e/rgb";
+import RGB from "j5e/rgb";
 
 const rgb = await new RGB([13, 12, 14]);
 	
