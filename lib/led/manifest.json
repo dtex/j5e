@@ -5,7 +5,8 @@
     "j5e/animation": "$(j5e)/lib/animation/*",
     "j5e/easing": "$(j5e)/lib/easing/*",
     "j5e/fn": "$(j5e)/lib/fn/*",
-    "j5e/led": "$(j5e)/lib/led/*"
+    "j5e/led": "$(j5e)/lib/led/*",
+    "j5e/event": "$(j5e)/lib/event/*"
   },
   "preload": [],
   "platforms": {
