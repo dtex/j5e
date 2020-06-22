@@ -43,7 +43,7 @@
 				}
 			</style>
 		<script type="text/javascript">
-			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"MMMM D, YYYY","systemName":"j5e","systemSummary":"Johnny Five for Embedded Systems","systemLogo":"img/j5e.png","systemColor":"#000","navMembers":[{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Copyright © 2020 The contributors to the j5e and Johnny-Five projects.","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":true,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":{"ua":"UA-36026876-4","domain":"dtex.github.io"},"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":["./static/custom.css"],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
+			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"MMMM D, YYYY","systemName":"J5e","systemSummary":"Johnny Five for Embedded Systems","systemLogo":"img/j5e.png","systemColor":"#000","navMembers":[{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Copyright © 2019—2020 The contributors to the j5e and Johnny-Five projects.","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":true,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":{"ua":"UA-36026876-4","domain":"dtex.github.io"},"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":["./static/custom.css"],"scripts":[],"monospaceLinks":false,"cleverLinks":false,"forkMe":"./build/docs/fork/forkme_right_white_ffffff.webp"};
 			window.DOCLET_TOC_ENABLED = false;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
@@ -54,7 +54,7 @@
 		<div class="container">
 			<div class="navbar-header">
 				<a class="navbar-brand branding-logo" href="index.html" style="background-image: url(img/j5e.png);">
-					j5e
+					J5e
 				</a>
 				<!-- displayed on small devices -->
 				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
@@ -98,13 +98,18 @@
 							<li class="active">Getting Started</li>
 						</ol>
 		<section class="tutorial-section">
-			<article><h4>1. Make sure you have successfully <a href="https://github.com/Moddable-OpenSource/moddable/blob/public/documentation/Moddable%20SDK%20-%20Getting%20Started.md">configured your host environment</a> for the Moddable SDK.</h4>
-<h4>2. Clone the j5e repository</h4>
+			<article><h2>This tutorial is for using J5e with the Moddable SDK.</h2>
+<h4>1. Make sure you have successfully <a href="https://github.com/Moddable-OpenSource/moddable/blob/public/documentation/Moddable%20SDK%20-%20Getting%20Started.md">configured your host environment</a> for the Moddable SDK.</h4>
+<h4>2. Get the J5e repository</h4>
+<p>There are a few ways to do this.</p>
+<p>You can clone the repo:</p>
 <pre class="prettyprint source lang-bash"><code>cd ~/Projects
 git clone https://github.com/dtex/j5e
 </code></pre>
-<h4>3. Setup the <code>j5e</code> environment variable to point at the <code>j5e/dist/moddable</code> directory in your copy of the j5e repo</h4>
-<pre class="prettyprint source lang-bash"><code>export j5e=&quot;/Users/&lt;user>/Projects/j5e/dist/moddable&quot;
+<p>You can <a href="https://github.com/dtex/j5e/releases">download the latest release</a> from Github.</p>
+<p>You can install it from npm with <code>npm install j5e</code>.</p>
+<h4>3. Setup the <code>j5e</code> environment variable to point at your <code>j5e</code> directory</h4>
+<pre class="prettyprint source lang-bash"><code>export j5e=&quot;/Users/&lt;user>/Projects/j5e&quot;
 </code></pre>
 <h4>4. Create a working directory (You can call it whatever you want):</h4>
 <pre class="prettyprint source lang-bash"><code>cd ~/Projects
@@ -117,7 +122,7 @@ mkdir myProject
 <pre class="prettyprint source lang-js"><code>{
   &quot;include&quot;: [
     &quot;$(MODDABLE)/modules/io/manifest.json&quot;,
-    &quot;$(j5e)/manifest.json&quot;
+    &quot;$(j5e)/lib/led/manifest.json&quot;
   ],
   &quot;modules&quot;: {
     &quot;*&quot;: [
@@ -127,14 +132,12 @@ mkdir myProject
 }
 </code></pre>
 <h4>7. Create your <code>main.js</code> program file. Here's the ubquitous &quot;Hello World&quot; for hardware to get you started:</h4>
-<pre class="prettyprint source lang-js"><code>import LED from &quot;@j5e/led&quot;;
+<pre class="prettyprint source lang-js"><code>import LED from &quot;j5e/led&quot;;
 
-(async function() {
-  const led = await new LED(14);
-  led.blink();
-})();
+const led = await new LED(14);
+led.blink();
 </code></pre>
-<h4>8. Now you're ready to build your program (refer to the <a href="https://github.com/Moddable-OpenSource/moddable/tree/public/examples#building-apps">Moddable docs</a> for help with this):</h4>
+<h4>8. Now you're ready to build your program and upload it to your microcontroller (refer to the <a href="https://github.com/Moddable-OpenSource/moddable/tree/public/examples#building-apps">Moddable docs</a> for help with this):</h4>
 <pre class="prettyprint source lang-bash"><code>mcconfig -d -m -p esp
 </code></pre></article>
 		</section>
@@ -142,7 +145,7 @@ mkdir myProject
 		</div>
 	</div>
 	<footer>
-				<div class="copyright">Copyright © 2020 The contributors to the j5e and Johnny-Five projects.</div>
+				<div class="copyright">Copyright © 2019—2020 The contributors to the j5e and Johnny-Five projects.</div>
 			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a> using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
@@ -174,6 +177,6 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());gtag('config', 'UA-36026876-4');
 </script>
-<a href="https://github.com/dtex/j5e"><img width="149" height="149" style="z-index:1000;position:absolute;top: 50px;right: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_orange_ff7600.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a></body>
+<a href="https://github.com/dtex/j5e"><img width="149" height="149" style="z-index:1000;position:absolute;top: 50px;right: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_white_ffffff.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a></body>
 </html>
 <!-- end:readme.hbs -->

@@ -13,11 +13,12 @@
     "include": ["static:./build/docs/css", "img:./build/docs/img"]
   },
   "templates": {
-    "systemName"            : "j5e",
+    "systemName"            : "J5e",
     "systemSummary"         : "Johnny Five for Embedded Systems",
     "systemLogo"            : "./build/docs/favicon/j5e.png",
+    "forkMe"                : "./build/docs/fork/forkme_right_white_ffffff.webp",
     "systemColor"           : "#000",
-    "copyright"             : "Copyright © 2020 The contributors to the j5e and Johnny-Five projects.",
+    "copyright"             : "Copyright © 2019—2020 The contributors to the j5e and Johnny-Five projects.",
     "dateFormat"            : "MMMM D, YYYY",
     "inlineNav"             : true,
     "includeDate"           : false,

@@ -133,80 +133,6 @@ window.lunrData = {
           "onc",
           "time"
         ],
-        "module-j5e_sensor-Sensor.html": [
-          "adc",
-          "allow",
-          "class",
-          "connect",
-          "devic",
-          "input",
-          "j5e/sensor~sensor",
-          "lt;async&gt",
-          "module:j5e/sensor~sensor",
-          "sensor"
-        ],
-        "module-j5e_sensor-Sensor.html#enable": [
-          "disabl",
-          "enabl",
-          "function",
-          "module:j5e/sensor~sensor#en",
-          "object",
-          "sensor"
-        ],
-        "module-j5e_sensor-Sensor.html#disable": [
-          "disabl",
-          "enabl",
-          "function",
-          "module:j5e/sensor~sensor#dis",
-          "object",
-          "sensor"
-        ],
-        "module-j5e_sensor-Sensor.html#read": [
-          "function",
-          "module:j5e/sensor~sensor#read",
-          "number",
-          "read",
-          "sensor",
-          "synchron"
-        ],
-        "module-j5e_sensor-Sensor.html#scale": [
-          "function",
-          "high",
-          "low",
-          "module:j5e/sensor~sensor#scal",
-          "object",
-          "rang",
-          "scale",
-          "scale/scaleto",
-          "set",
-          "valu"
-        ],
-        "module-j5e_sensor-Sensor.html#scaleTo": [
-          "function",
-          "high",
-          "integ",
-          "low",
-          "module:j5e/sensor~sensor#scaleto",
-          "number",
-          "represent",
-          "scale",
-          "scaleto",
-          "valu"
-        ],
-        "module-j5e_sensor-Sensor.html#fscaleTo": [
-          "float",
-          "fscaleto",
-          "function",
-          "high",
-          "low",
-          "module:j5e/sensor~sensor#fscaleto",
-          "number",
-          "precis",
-          "represent",
-          "scale",
-          "singl",
-          "valu"
-        ],
         "module-j5e_switch-Switch.html": [
           "allow",
           "class",
@@ -282,6 +208,80 @@ window.lunrData = {
           "playback",
           "set",
           "speed"
+        ],
+        "module-j5e_sensor-Sensor.html": [
+          "adc",
+          "allow",
+          "class",
+          "connect",
+          "devic",
+          "input",
+          "j5e/sensor~sensor",
+          "lt;async&gt",
+          "module:j5e/sensor~sensor",
+          "sensor"
+        ],
+        "module-j5e_sensor-Sensor.html#enable": [
+          "disabl",
+          "enabl",
+          "function",
+          "module:j5e/sensor~sensor#en",
+          "object",
+          "sensor"
+        ],
+        "module-j5e_sensor-Sensor.html#disable": [
+          "disabl",
+          "enabl",
+          "function",
+          "module:j5e/sensor~sensor#dis",
+          "object",
+          "sensor"
+        ],
+        "module-j5e_sensor-Sensor.html#read": [
+          "function",
+          "module:j5e/sensor~sensor#read",
+          "number",
+          "read",
+          "sensor",
+          "synchron"
+        ],
+        "module-j5e_sensor-Sensor.html#scale": [
+          "function",
+          "high",
+          "low",
+          "module:j5e/sensor~sensor#scal",
+          "object",
+          "rang",
+          "scale",
+          "scale/scaleto",
+          "set",
+          "valu"
+        ],
+        "module-j5e_sensor-Sensor.html#scaleTo": [
+          "function",
+          "high",
+          "integ",
+          "low",
+          "module:j5e/sensor~sensor#scaleto",
+          "number",
+          "represent",
+          "scale",
+          "scaleto",
+          "valu"
+        ],
+        "module-j5e_sensor-Sensor.html#fscaleTo": [
+          "float",
+          "fscaleto",
+          "function",
+          "high",
+          "low",
+          "module:j5e/sensor~sensor#fscaleto",
+          "number",
+          "precis",
+          "represent",
+          "scale",
+          "singl",
+          "valu"
         ],
         "module-j5e_led-LED.html": [
           "allow",
@@ -705,7 +705,7 @@ window.lunrData = {
         ],
         "module-j5e_fn.html": [
           "call",
-          "fn",
+          "code",
           "io",
           "j5e",
           "j5e/fn",
@@ -714,13 +714,27 @@ window.lunrData = {
           "module:j5e/fn",
           "typic",
           "us",
+          "user",
           "util"
         ],
         "module-j5e_led.html": [
+          "bright",
+          "class",
+          "connect",
+          "digit",
+          "diod",
+          "emit",
+          "io",
           "j5e/l",
-          "led",
+          "led'",
+          "librari",
+          "light",
+          "manag",
           "modul",
-          "module:j5e/l"
+          "module:j5e/l",
+          "on/off",
+          "pwm",
+          "vari"
         ],
         "module-j5e_rgb.html": [
           "control",
@@ -731,7 +745,7 @@ window.lunrData = {
           "rgb"
         ],
         "module-j5e_sensor.html": [
-          "compon",
+          "devic",
           "gener",
           "j5e/sensor",
           "modul",
@@ -740,11 +754,13 @@ window.lunrData = {
           "work"
         ],
         "module-j5e_servo.html": [
+          "continu",
           "control",
           "hobbi",
           "j5e/servo",
           "modul",
           "module:j5e/servo",
+          "rotat",
           "servo"
         ],
         "module-j5e_switch.html": [
@@ -821,7 +837,7 @@ window.lunrData = {
                     "docs": {
                       "module-j5e_servo-Servo.html#max": {
                         "ref": "module-j5e_servo-Servo.html#max",
-                        "tf": 7.142857142857142
+                        "tf": 8.333333333333332
                       }
                     }
                   }
@@ -843,7 +859,7 @@ window.lunrData = {
                   "docs": {
                     "module-j5e_servo-Servo.html#center": {
                       "ref": "module-j5e_servo-Servo.html#center",
-                      "tf": 8.333333333333332
+                      "tf": 10
                     }
                   }
                 }
@@ -882,6 +898,10 @@ window.lunrData = {
                   "module-j5e_led-LED.html": {
                     "ref": "module-j5e_led-LED.html",
                     "tf": 7.142857142857142
+                  },
+                  "module-j5e_led.html": {
+                    "ref": "module-j5e_led.html",
+                    "tf": 3.3333333333333335
                   }
                 },
                 "t": {
@@ -1016,24 +1036,6 @@ window.lunrData = {
           },
           "n": {
             "docs": {},
-            "a": {
-              "docs": {},
-              "b": {
-                "docs": {},
-                "l": {
-                  "docs": {
-                    "module-j5e_sensor-Sensor.html#enable": {
-                      "ref": "module-j5e_sensor-Sensor.html#enable",
-                      "tf": 725
-                    },
-                    "module-j5e_sensor-Sensor.html#disable": {
-                      "ref": "module-j5e_sensor-Sensor.html#disable",
-                      "tf": 12.5
-                    }
-                  }
-                }
-              }
-            },
             "q": {
               "docs": {},
               "u": {
@@ -1046,6 +1048,24 @@ window.lunrData = {
                         "ref": "module-j5e_animation-Animation.html#enqueue",
                         "tf": 700
                       }
+                    }
+                  }
+                }
+              }
+            },
+            "a": {
+              "docs": {},
+              "b": {
+                "docs": {},
+                "l": {
+                  "docs": {
+                    "module-j5e_sensor-Sensor.html#enable": {
+                      "ref": "module-j5e_sensor-Sensor.html#enable",
+                      "tf": 716.6666666666666
+                    },
+                    "module-j5e_sensor-Sensor.html#disable": {
+                      "ref": "module-j5e_sensor-Sensor.html#disable",
+                      "tf": 16.666666666666664
                     }
                   }
                 }
@@ -1143,20 +1163,6 @@ window.lunrData = {
                 }
               }
             },
-            "o": {
-              "docs": {},
-              "a": {
-                "docs": {},
-                "t": {
-                  "docs": {
-                    "module-j5e_sensor-Sensor.html#fscaleTo": {
-                      "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
-                      "tf": 7.142857142857142
-                    }
-                  }
-                }
-              }
-            },
             "u": {
               "docs": {},
               "s": {
@@ -1166,6 +1172,20 @@ window.lunrData = {
                     "module-j5e_animation-Animation.html#stop": {
                       "ref": "module-j5e_animation-Animation.html#stop",
                       "tf": 10
+                    }
+                  }
+                }
+              }
+            },
+            "o": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "module-j5e_sensor-Sensor.html#fscaleTo": {
+                      "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
+                      "tf": 7.142857142857142
                     }
                   }
                 }
@@ -1202,6 +1222,26 @@ window.lunrData = {
                             "ref": "module-j5e_event.Emitter.html#once",
                             "tf": 110
                           },
+                          "module-j5e_animation-Animation.html#enqueue": {
+                            "ref": "module-j5e_animation-Animation.html#enqueue",
+                            "tf": 110
+                          },
+                          "module-j5e_animation-Animation.html#play": {
+                            "ref": "module-j5e_animation-Animation.html#play",
+                            "tf": 110
+                          },
+                          "module-j5e_animation-Animation.html#pause": {
+                            "ref": "module-j5e_animation-Animation.html#pause",
+                            "tf": 110
+                          },
+                          "module-j5e_animation-Animation.html#stop": {
+                            "ref": "module-j5e_animation-Animation.html#stop",
+                            "tf": 110
+                          },
+                          "module-j5e_animation-Animation.html#speed": {
+                            "ref": "module-j5e_animation-Animation.html#speed",
+                            "tf": 110
+                          },
                           "module-j5e_sensor-Sensor.html#enable": {
                             "ref": "module-j5e_sensor-Sensor.html#enable",
                             "tf": 110
@@ -1224,26 +1264,6 @@ window.lunrData = {
                           },
                           "module-j5e_sensor-Sensor.html#fscaleTo": {
                             "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
-                            "tf": 110
-                          },
-                          "module-j5e_animation-Animation.html#enqueue": {
-                            "ref": "module-j5e_animation-Animation.html#enqueue",
-                            "tf": 110
-                          },
-                          "module-j5e_animation-Animation.html#play": {
-                            "ref": "module-j5e_animation-Animation.html#play",
-                            "tf": 110
-                          },
-                          "module-j5e_animation-Animation.html#pause": {
-                            "ref": "module-j5e_animation-Animation.html#pause",
-                            "tf": 110
-                          },
-                          "module-j5e_animation-Animation.html#stop": {
-                            "ref": "module-j5e_animation-Animation.html#stop",
-                            "tf": 110
-                          },
-                          "module-j5e_animation-Animation.html#speed": {
-                            "ref": "module-j5e_animation-Animation.html#speed",
                             "tf": 110
                           },
                           "module-j5e_led-LED.html#on": {
@@ -1435,7 +1455,7 @@ window.lunrData = {
                 "docs": {
                   "module-j5e_led-LED.html#fade": {
                     "ref": "module-j5e_led-LED.html#fade",
-                    "tf": 680
+                    "tf": 675.5555555555555
                   },
                   "module-j5e_led-LED.html#fadeIn": {
                     "ref": "module-j5e_led-LED.html#fadeIn",
@@ -1510,14 +1530,6 @@ window.lunrData = {
                 }
               }
             }
-          },
-          "n": {
-            "docs": {
-              "module-j5e_fn.html": {
-                "ref": "module-j5e_fn.html",
-                "tf": 5
-              }
-            }
           }
         },
         "i": {
@@ -1554,6 +1566,23 @@ window.lunrData = {
                             "tf": 950
                           }
                         }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "f": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "m": {
+                    "docs": {
+                      "module-j5e_animation-Animation.html#enqueue": {
+                        "ref": "module-j5e_animation-Animation.html#enqueue",
+                        "tf": 4.166666666666666
                       }
                     }
                   }
@@ -1618,23 +1647,6 @@ window.lunrData = {
                 }
               }
             },
-            "f": {
-              "docs": {},
-              "o": {
-                "docs": {},
-                "r": {
-                  "docs": {},
-                  "m": {
-                    "docs": {
-                      "module-j5e_animation-Animation.html#enqueue": {
-                        "ref": "module-j5e_animation-Animation.html#enqueue",
-                        "tf": 4.166666666666666
-                      }
-                    }
-                  }
-                }
-              }
-            },
             "o": {
               "docs": {},
               "u": {
@@ -1664,6 +1676,10 @@ window.lunrData = {
               "module-j5e_fn.html": {
                 "ref": "module-j5e_fn.html",
                 "tf": 5
+              },
+              "module-j5e_led.html": {
+                "ref": "module-j5e_led.html",
+                "tf": 6.666666666666667
               }
             },
             "o": {
@@ -1723,6 +1739,52 @@ window.lunrData = {
                 "docs": {},
                 "s": {
                   "docs": {},
+                  "w": {
+                    "docs": {},
+                    "i": {
+                      "docs": {},
+                      "t": {
+                        "docs": {},
+                        "c": {
+                          "docs": {},
+                          "h": {
+                            "docs": {
+                              "module-j5e_switch.html": {
+                                "ref": "module-j5e_switch.html",
+                                "tf": 600
+                              }
+                            },
+                            "~": {
+                              "docs": {},
+                              "s": {
+                                "docs": {},
+                                "w": {
+                                  "docs": {},
+                                  "i": {
+                                    "docs": {},
+                                    "t": {
+                                      "docs": {},
+                                      "c": {
+                                        "docs": {},
+                                        "h": {
+                                          "docs": {
+                                            "module-j5e_switch-Switch.html": {
+                                              "ref": "module-j5e_switch-Switch.html",
+                                              "tf": 50
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
                   "e": {
                     "docs": {},
                     "n": {
@@ -1794,52 +1856,6 @@ window.lunrData = {
                                         "module-j5e_servo-Servo.html": {
                                           "ref": "module-j5e_servo-Servo.html",
                                           "tf": 50
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  },
-                  "w": {
-                    "docs": {},
-                    "i": {
-                      "docs": {},
-                      "t": {
-                        "docs": {},
-                        "c": {
-                          "docs": {},
-                          "h": {
-                            "docs": {
-                              "module-j5e_switch.html": {
-                                "ref": "module-j5e_switch.html",
-                                "tf": 600
-                              }
-                            },
-                            "~": {
-                              "docs": {},
-                              "s": {
-                                "docs": {},
-                                "w": {
-                                  "docs": {},
-                                  "i": {
-                                    "docs": {},
-                                    "t": {
-                                      "docs": {},
-                                      "c": {
-                                        "docs": {},
-                                        "h": {
-                                          "docs": {
-                                            "module-j5e_switch-Switch.html": {
-                                              "ref": "module-j5e_switch-Switch.html",
-                                              "tf": 50
-                                            }
-                                          }
                                         }
                                       }
                                     }
@@ -2038,7 +2054,7 @@ window.lunrData = {
                 "docs": {
                   "module-j5e_sensor-Sensor.html#read": {
                     "ref": "module-j5e_sensor-Sensor.html#read",
-                    "tf": 725
+                    "tf": 716.6666666666666
                   }
                 },
                 "m": {
@@ -2091,6 +2107,20 @@ window.lunrData = {
                 }
               }
             },
+            "s": {
+              "docs": {},
+              "u": {
+                "docs": {},
+                "m": {
+                  "docs": {
+                    "module-j5e_animation-Animation.html#play": {
+                      "ref": "module-j5e_animation-Animation.html#play",
+                      "tf": 10
+                    }
+                  }
+                }
+              }
+            },
             "p": {
               "docs": {},
               "r": {
@@ -2121,20 +2151,6 @@ window.lunrData = {
                 }
               }
             },
-            "s": {
-              "docs": {},
-              "u": {
-                "docs": {},
-                "m": {
-                  "docs": {
-                    "module-j5e_animation-Animation.html#play": {
-                      "ref": "module-j5e_animation-Animation.html#play",
-                      "tf": 10
-                    }
-                  }
-                }
-              }
-            },
             "q": {
               "docs": {},
               "u": {
@@ -2153,7 +2169,7 @@ window.lunrData = {
                       },
                       "module-j5e_led-LED.html#fade": {
                         "ref": "module-j5e_led-LED.html#fade",
-                        "tf": 5
+                        "tf": 5.555555555555555
                       },
                       "module-j5e_led-LED.html#fadeIn": {
                         "ref": "module-j5e_led-LED.html#fadeIn",
@@ -2198,35 +2214,6 @@ window.lunrData = {
                 "module-j5e_rgb-RGB.html#color": {
                   "ref": "module-j5e_rgb-RGB.html#color",
                   "tf": 20
-                }
-              }
-            }
-          },
-          "a": {
-            "docs": {},
-            "n": {
-              "docs": {},
-              "g": {
-                "docs": {
-                  "module-j5e_sensor-Sensor.html#scale": {
-                    "ref": "module-j5e_sensor-Sensor.html#scale",
-                    "tf": 10
-                  },
-                  "module-j5e_servo-Servo.html#sweep": {
-                    "ref": "module-j5e_servo-Servo.html#sweep",
-                    "tf": 6.25
-                  }
-                }
-              }
-            },
-            "t": {
-              "docs": {},
-              "e": {
-                "docs": {
-                  "module-j5e_servo-Servo.html#to": {
-                    "ref": "module-j5e_servo-Servo.html#to",
-                    "tf": 25
-                  }
                 }
               }
             }
@@ -2294,6 +2281,35 @@ window.lunrData = {
               }
             }
           },
+          "a": {
+            "docs": {},
+            "n": {
+              "docs": {},
+              "g": {
+                "docs": {
+                  "module-j5e_sensor-Sensor.html#scale": {
+                    "ref": "module-j5e_sensor-Sensor.html#scale",
+                    "tf": 10
+                  },
+                  "module-j5e_servo-Servo.html#sweep": {
+                    "ref": "module-j5e_servo-Servo.html#sweep",
+                    "tf": 7.142857142857142
+                  }
+                }
+              }
+            },
+            "t": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "module-j5e_servo-Servo.html#to": {
+                    "ref": "module-j5e_servo-Servo.html#to",
+                    "tf": 25
+                  }
+                }
+              }
+            }
+          },
           "o": {
             "docs": {},
             "t": {
@@ -2308,6 +2324,10 @@ window.lunrData = {
                     },
                     "module-j5e_servo-Servo.html#ccw": {
                       "ref": "module-j5e_servo-Servo.html#ccw",
+                      "tf": 8.333333333333332
+                    },
+                    "module-j5e_servo.html": {
+                      "ref": "module-j5e_servo.html",
                       "tf": 8.333333333333332
                     }
                   }
@@ -2355,7 +2375,7 @@ window.lunrData = {
                         "docs": {
                           "module-j5e_sensor-Sensor.html#read": {
                             "ref": "module-j5e_sensor-Sensor.html#read",
-                            "tf": 12.5
+                            "tf": 16.666666666666664
                           }
                         }
                       }
@@ -2508,118 +2528,6 @@ window.lunrData = {
                 }
               }
             },
-            "n": {
-              "docs": {},
-              "s": {
-                "docs": {},
-                "o": {
-                  "docs": {},
-                  "r": {
-                    "docs": {
-                      "module-j5e_sensor-Sensor.html": {
-                        "ref": "module-j5e_sensor-Sensor.html",
-                        "tf": 512.5
-                      },
-                      "module-j5e_sensor-Sensor.html#enable": {
-                        "ref": "module-j5e_sensor-Sensor.html#enable",
-                        "tf": 12.5
-                      },
-                      "module-j5e_sensor-Sensor.html#disable": {
-                        "ref": "module-j5e_sensor-Sensor.html#disable",
-                        "tf": 12.5
-                      },
-                      "module-j5e_sensor-Sensor.html#read": {
-                        "ref": "module-j5e_sensor-Sensor.html#read",
-                        "tf": 12.5
-                      },
-                      "module-j5e_sensor.html": {
-                        "ref": "module-j5e_sensor.html",
-                        "tf": 12.5
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "t": {
-              "docs": {
-                "module-j5e_sensor-Sensor.html#scale": {
-                  "ref": "module-j5e_sensor-Sensor.html#scale",
-                  "tf": 10
-                },
-                "module-j5e_animation-Animation.html#speed": {
-                  "ref": "module-j5e_animation-Animation.html#speed",
-                  "tf": 12.5
-                },
-                "module-j5e_led-LED.html#brightness": {
-                  "ref": "module-j5e_led-LED.html#brightness",
-                  "tf": 6.25
-                },
-                "module-j5e_led-LED.html#intensity": {
-                  "ref": "module-j5e_led-LED.html#intensity",
-                  "tf": 6.25
-                },
-                "module-j5e_servo-Servo.html#to": {
-                  "ref": "module-j5e_servo-Servo.html#to",
-                  "tf": 7.142857142857142
-                },
-                "module-j5e_servo-Servo.html#min": {
-                  "ref": "module-j5e_servo-Servo.html#min",
-                  "tf": 7.142857142857142
-                },
-                "module-j5e_servo-Servo.html#max": {
-                  "ref": "module-j5e_servo-Servo.html#max",
-                  "tf": 7.142857142857142
-                },
-                "module-j5e_servo-Servo.html#center": {
-                  "ref": "module-j5e_servo-Servo.html#center",
-                  "tf": 8.333333333333332
-                }
-              },
-              "i": {
-                "docs": {},
-                "m": {
-                  "docs": {},
-                  "m": {
-                    "docs": {},
-                    "e": {
-                      "docs": {},
-                      "d": {
-                        "docs": {},
-                        "i": {
-                          "docs": {
-                            "module-j5e_fn-timer.html": {
-                              "ref": "module-j5e_fn-timer.html",
-                              "tf": 4.166666666666666
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                },
-                "n": {
-                  "docs": {},
-                  "t": {
-                    "docs": {},
-                    "e": {
-                      "docs": {},
-                      "r": {
-                        "docs": {},
-                        "v": {
-                          "docs": {
-                            "module-j5e_fn-timer.html": {
-                              "ref": "module-j5e_fn-timer.html",
-                              "tf": 4.166666666666666
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
             "r": {
               "docs": {},
               "v": {
@@ -2648,11 +2556,11 @@ window.lunrData = {
                     },
                     "module-j5e_servo-Servo.html#max": {
                       "ref": "module-j5e_servo-Servo.html#max",
-                      "tf": 7.142857142857142
+                      "tf": 8.333333333333332
                     },
                     "module-j5e_servo-Servo.html#center": {
                       "ref": "module-j5e_servo-Servo.html#center",
-                      "tf": 8.333333333333332
+                      "tf": 10
                     },
                     "module-j5e_servo-Servo.html#home": {
                       "ref": "module-j5e_servo-Servo.html#home",
@@ -2660,7 +2568,7 @@ window.lunrData = {
                     },
                     "module-j5e_servo-Servo.html#sweep": {
                       "ref": "module-j5e_servo-Servo.html#sweep",
-                      "tf": 39.58333333333333
+                      "tf": 40.47619047619047
                     },
                     "module-j5e_servo-Servo.html#stop": {
                       "ref": "module-j5e_servo-Servo.html#stop",
@@ -2680,7 +2588,7 @@ window.lunrData = {
                     },
                     "module-j5e_servo.html": {
                       "ref": "module-j5e_servo.html",
-                      "tf": 20
+                      "tf": 16.666666666666664
                     }
                   },
                   "'": {
@@ -2746,6 +2654,118 @@ window.lunrData = {
                 }
               }
             },
+            "t": {
+              "docs": {
+                "module-j5e_animation-Animation.html#speed": {
+                  "ref": "module-j5e_animation-Animation.html#speed",
+                  "tf": 12.5
+                },
+                "module-j5e_sensor-Sensor.html#scale": {
+                  "ref": "module-j5e_sensor-Sensor.html#scale",
+                  "tf": 10
+                },
+                "module-j5e_led-LED.html#brightness": {
+                  "ref": "module-j5e_led-LED.html#brightness",
+                  "tf": 6.25
+                },
+                "module-j5e_led-LED.html#intensity": {
+                  "ref": "module-j5e_led-LED.html#intensity",
+                  "tf": 6.25
+                },
+                "module-j5e_servo-Servo.html#to": {
+                  "ref": "module-j5e_servo-Servo.html#to",
+                  "tf": 7.142857142857142
+                },
+                "module-j5e_servo-Servo.html#min": {
+                  "ref": "module-j5e_servo-Servo.html#min",
+                  "tf": 7.142857142857142
+                },
+                "module-j5e_servo-Servo.html#max": {
+                  "ref": "module-j5e_servo-Servo.html#max",
+                  "tf": 8.333333333333332
+                },
+                "module-j5e_servo-Servo.html#center": {
+                  "ref": "module-j5e_servo-Servo.html#center",
+                  "tf": 10
+                }
+              },
+              "i": {
+                "docs": {},
+                "m": {
+                  "docs": {},
+                  "m": {
+                    "docs": {},
+                    "e": {
+                      "docs": {},
+                      "d": {
+                        "docs": {},
+                        "i": {
+                          "docs": {
+                            "module-j5e_fn-timer.html": {
+                              "ref": "module-j5e_fn-timer.html",
+                              "tf": 4.166666666666666
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "n": {
+                  "docs": {},
+                  "t": {
+                    "docs": {},
+                    "e": {
+                      "docs": {},
+                      "r": {
+                        "docs": {},
+                        "v": {
+                          "docs": {
+                            "module-j5e_fn-timer.html": {
+                              "ref": "module-j5e_fn-timer.html",
+                              "tf": 4.166666666666666
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "n": {
+              "docs": {},
+              "s": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "r": {
+                    "docs": {
+                      "module-j5e_sensor-Sensor.html": {
+                        "ref": "module-j5e_sensor-Sensor.html",
+                        "tf": 512.5
+                      },
+                      "module-j5e_sensor-Sensor.html#enable": {
+                        "ref": "module-j5e_sensor-Sensor.html#enable",
+                        "tf": 16.666666666666664
+                      },
+                      "module-j5e_sensor-Sensor.html#disable": {
+                        "ref": "module-j5e_sensor-Sensor.html#disable",
+                        "tf": 16.666666666666664
+                      },
+                      "module-j5e_sensor-Sensor.html#read": {
+                        "ref": "module-j5e_sensor-Sensor.html#read",
+                        "tf": 16.666666666666664
+                      },
+                      "module-j5e_sensor.html": {
+                        "ref": "module-j5e_sensor.html",
+                        "tf": 12.5
+                      }
+                    }
+                  }
+                }
+              }
+            },
             "p": {
               "docs": {},
               "a": {
@@ -2761,8 +2781,63 @@ window.lunrData = {
               }
             }
           },
+          "w": {
+            "docs": {},
+            "i": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "c": {
+                  "docs": {},
+                  "h": {
+                    "docs": {
+                      "module-j5e_switch-Switch.html": {
+                        "ref": "module-j5e_switch-Switch.html",
+                        "tf": 516.6666666666666
+                      },
+                      "module-j5e_switch.html": {
+                        "ref": "module-j5e_switch.html",
+                        "tf": 25
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "e": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "p": {
+                  "docs": {
+                    "module-j5e_servo-Servo.html#sweep": {
+                      "ref": "module-j5e_servo-Servo.html#sweep",
+                      "tf": 690.4761904761905
+                    }
+                  }
+                }
+              }
+            }
+          },
           "c": {
             "docs": {},
+            "r": {
+              "docs": {},
+              "i": {
+                "docs": {},
+                "p": {
+                  "docs": {},
+                  "t": {
+                    "docs": {
+                      "module-j5e_animation-Animation.html": {
+                        "ref": "module-j5e_animation-Animation.html",
+                        "tf": 8.333333333333332
+                      }
+                    }
+                  }
+                }
+              }
+            },
             "a": {
               "docs": {},
               "l": {
@@ -2824,78 +2899,6 @@ window.lunrData = {
                   }
                 }
               }
-            },
-            "r": {
-              "docs": {},
-              "i": {
-                "docs": {},
-                "p": {
-                  "docs": {},
-                  "t": {
-                    "docs": {
-                      "module-j5e_animation-Animation.html": {
-                        "ref": "module-j5e_animation-Animation.html",
-                        "tf": 8.333333333333332
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "i": {
-            "docs": {},
-            "n": {
-              "docs": {},
-              "g": {
-                "docs": {},
-                "l": {
-                  "docs": {
-                    "module-j5e_sensor-Sensor.html#fscaleTo": {
-                      "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
-                      "tf": 7.142857142857142
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "w": {
-            "docs": {},
-            "i": {
-              "docs": {},
-              "t": {
-                "docs": {},
-                "c": {
-                  "docs": {},
-                  "h": {
-                    "docs": {
-                      "module-j5e_switch-Switch.html": {
-                        "ref": "module-j5e_switch-Switch.html",
-                        "tf": 516.6666666666666
-                      },
-                      "module-j5e_switch.html": {
-                        "ref": "module-j5e_switch.html",
-                        "tf": 25
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "e": {
-              "docs": {},
-              "e": {
-                "docs": {},
-                "p": {
-                  "docs": {
-                    "module-j5e_servo-Servo.html#sweep": {
-                      "ref": "module-j5e_servo-Servo.html#sweep",
-                      "tf": 695.8333333333334
-                    }
-                  }
-                }
-              }
             }
           },
           "p": {
@@ -2942,6 +2945,23 @@ window.lunrData = {
                           "tf": 7.142857142857142
                         }
                       }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "i": {
+            "docs": {},
+            "n": {
+              "docs": {},
+              "g": {
+                "docs": {},
+                "l": {
+                  "docs": {
+                    "module-j5e_sensor-Sensor.html#fscaleTo": {
+                      "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
+                      "tf": 7.142857142857142
                     }
                   }
                 }
@@ -3007,6 +3027,10 @@ window.lunrData = {
                     "module-j5e_sensor-Sensor.html": {
                       "ref": "module-j5e_sensor-Sensor.html",
                       "tf": 6.25
+                    },
+                    "module-j5e_sensor.html": {
+                      "ref": "module-j5e_sensor.html",
+                      "tf": 12.5
                     }
                   }
                 }
@@ -3032,7 +3056,7 @@ window.lunrData = {
                     },
                     "module-j5e_servo-Servo.html#max": {
                       "ref": "module-j5e_servo-Servo.html#max",
-                      "tf": 7.142857142857142
+                      "tf": 8.333333333333332
                     }
                   }
                 }
@@ -3054,11 +3078,11 @@ window.lunrData = {
                         },
                         "module-j5e_servo-Servo.html#max": {
                           "ref": "module-j5e_servo-Servo.html#max",
-                          "tf": 7.142857142857142
+                          "tf": 8.333333333333332
                         },
                         "module-j5e_servo-Servo.html#center": {
                           "ref": "module-j5e_servo-Servo.html#center",
-                          "tf": 8.333333333333332
+                          "tf": 10
                         }
                       }
                     }
@@ -3092,6 +3116,24 @@ window.lunrData = {
                 }
               }
             },
+            "g": {
+              "docs": {},
+              "i": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "module-j5e_switch-Switch.html": {
+                      "ref": "module-j5e_switch-Switch.html",
+                      "tf": 8.333333333333332
+                    },
+                    "module-j5e_led.html": {
+                      "ref": "module-j5e_led.html",
+                      "tf": 3.3333333333333335
+                    }
+                  }
+                }
+              }
+            },
             "s": {
               "docs": {},
               "a": {
@@ -3102,26 +3144,12 @@ window.lunrData = {
                     "docs": {
                       "module-j5e_sensor-Sensor.html#enable": {
                         "ref": "module-j5e_sensor-Sensor.html#enable",
-                        "tf": 12.5
+                        "tf": 16.666666666666664
                       },
                       "module-j5e_sensor-Sensor.html#disable": {
                         "ref": "module-j5e_sensor-Sensor.html#disable",
-                        "tf": 725
+                        "tf": 716.6666666666666
                       }
-                    }
-                  }
-                }
-              }
-            },
-            "g": {
-              "docs": {},
-              "i": {
-                "docs": {},
-                "t": {
-                  "docs": {
-                    "module-j5e_switch-Switch.html": {
-                      "ref": "module-j5e_switch-Switch.html",
-                      "tf": 8.333333333333332
                     }
                   }
                 }
@@ -3134,6 +3162,10 @@ window.lunrData = {
                   "module-j5e_led-LED.html": {
                     "ref": "module-j5e_led-LED.html",
                     "tf": 7.142857142857142
+                  },
+                  "module-j5e_led.html": {
+                    "ref": "module-j5e_led.html",
+                    "tf": 3.3333333333333335
                   }
                 }
               }
@@ -3494,7 +3526,7 @@ window.lunrData = {
                   },
                   "module-j5e_led-LED.html#fade": {
                     "ref": "module-j5e_led-LED.html#fade",
-                    "tf": 5
+                    "tf": 5.555555555555555
                   },
                   "module-j5e_led-LED.html#fadeIn": {
                     "ref": "module-j5e_led-LED.html#fadeIn",
@@ -3553,23 +3585,6 @@ window.lunrData = {
                   }
                 }
               },
-              "n": {
-                "docs": {},
-                "e": {
-                  "docs": {},
-                  "c": {
-                    "docs": {},
-                    "t": {
-                      "docs": {
-                        "module-j5e_sensor-Sensor.html": {
-                          "ref": "module-j5e_sensor-Sensor.html",
-                          "tf": 6.25
-                        }
-                      }
-                    }
-                  }
-                }
-              },
               "t": {
                 "docs": {},
                 "r": {
@@ -3608,7 +3623,7 @@ window.lunrData = {
                         },
                         "module-j5e_servo.html": {
                           "ref": "module-j5e_servo.html",
-                          "tf": 10
+                          "tf": 8.333333333333332
                         }
                       }
                     }
@@ -3627,6 +3642,31 @@ window.lunrData = {
                         "module-j5e_servo-Servo.html#ccw": {
                           "ref": "module-j5e_servo-Servo.html#ccw",
                           "tf": 8.333333333333332
+                        },
+                        "module-j5e_servo.html": {
+                          "ref": "module-j5e_servo.html",
+                          "tf": 8.333333333333332
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "n": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "c": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "module-j5e_sensor-Sensor.html": {
+                          "ref": "module-j5e_sensor-Sensor.html",
+                          "tf": 6.25
+                        },
+                        "module-j5e_led.html": {
+                          "ref": "module-j5e_led.html",
+                          "tf": 3.3333333333333335
                         }
                       }
                     }
@@ -3647,17 +3687,6 @@ window.lunrData = {
                         "undefined": {
                           "tf": 10
                         }
-                      }
-                    }
-                  }
-                },
-                "o": {
-                  "docs": {},
-                  "n": {
-                    "docs": {
-                      "module-j5e_sensor.html": {
-                        "ref": "module-j5e_sensor.html",
-                        "tf": 12.5
                       }
                     }
                   }
@@ -3701,6 +3730,17 @@ window.lunrData = {
                   }
                 }
               }
+            },
+            "d": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "module-j5e_fn.html": {
+                    "ref": "module-j5e_fn.html",
+                    "tf": 5
+                  }
+                }
+              }
             }
           },
           "l": {
@@ -3715,10 +3755,6 @@ window.lunrData = {
                       "ref": "module-j5e_event.Emitter.html",
                       "tf": 116.25
                     },
-                    "module-j5e_sensor-Sensor.html": {
-                      "ref": "module-j5e_sensor-Sensor.html",
-                      "tf": 116.25
-                    },
                     "module-j5e_switch-Switch.html": {
                       "ref": "module-j5e_switch-Switch.html",
                       "tf": 118.33333333333333
@@ -3726,6 +3762,10 @@ window.lunrData = {
                     "module-j5e_animation-Animation.html": {
                       "ref": "module-j5e_animation-Animation.html",
                       "tf": 110
+                    },
+                    "module-j5e_sensor-Sensor.html": {
+                      "ref": "module-j5e_sensor-Sensor.html",
+                      "tf": 116.25
                     },
                     "module-j5e_led-LED.html": {
                       "ref": "module-j5e_led-LED.html",
@@ -3742,6 +3782,10 @@ window.lunrData = {
                     "module-j5e_animation.html": {
                       "ref": "module-j5e_animation.html",
                       "tf": 3.571428571428571
+                    },
+                    "module-j5e_led.html": {
+                      "ref": "module-j5e_led.html",
+                      "tf": 3.3333333333333335
                     }
                   }
                 }
@@ -3846,7 +3890,7 @@ window.lunrData = {
                         },
                         "module-j5e_led-LED.html#fade": {
                           "ref": "module-j5e_led-LED.html#fade",
-                          "tf": 5
+                          "tf": 5.555555555555555
                         },
                         "module-j5e_rgb-RGB.html#on": {
                           "ref": "module-j5e_rgb-RGB.html#on",
@@ -3938,7 +3982,7 @@ window.lunrData = {
                     "docs": {
                       "module-j5e_servo-Servo.html#center": {
                         "ref": "module-j5e_servo-Servo.html#center",
-                        "tf": 691.6666666666667
+                        "tf": 683.3333333333334
                       }
                     },
                     "p": {
@@ -3953,7 +3997,7 @@ window.lunrData = {
                               "docs": {
                                 "module-j5e_servo-Servo.html#center": {
                                   "ref": "module-j5e_servo-Servo.html#center",
-                                  "tf": 8.333333333333332
+                                  "tf": 10
                                 }
                               }
                             }
@@ -4125,6 +4169,30 @@ window.lunrData = {
                     "module-j5e_led-LED.html": {
                       "ref": "module-j5e_led-LED.html",
                       "tf": 7.142857142857142
+                    },
+                    "module-j5e_led.html": {
+                      "ref": "module-j5e_led.html",
+                      "tf": 3.3333333333333335
+                    }
+                  }
+                }
+              }
+            },
+            "b": {
+              "docs": {},
+              "r": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "r": {
+                    "docs": {},
+                    "i": {
+                      "docs": {
+                        "module-j5e_led.html": {
+                          "ref": "module-j5e_led.html",
+                          "tf": 3.3333333333333335
+                        }
+                      }
                     }
                   }
                 }
@@ -4151,12 +4219,12 @@ window.lunrData = {
                             "docs": {},
                             "t": {
                               "docs": {
-                                "module-j5e_sensor-Sensor.html": {
-                                  "ref": "module-j5e_sensor-Sensor.html",
-                                  "tf": 50
-                                },
                                 "module-j5e_switch-Switch.html": {
                                   "ref": "module-j5e_switch-Switch.html",
+                                  "tf": 50
+                                },
+                                "module-j5e_sensor-Sensor.html": {
+                                  "ref": "module-j5e_sensor-Sensor.html",
                                   "tf": 50
                                 },
                                 "module-j5e_led-LED.html": {
@@ -4177,36 +4245,6 @@ window.lunrData = {
                         }
                       }
                     }
-                  }
-                }
-              }
-            }
-          },
-          "o": {
-            "docs": {},
-            "w": {
-              "docs": {
-                "module-j5e_sensor-Sensor.html#scale": {
-                  "ref": "module-j5e_sensor-Sensor.html#scale",
-                  "tf": 33.33333333333333
-                },
-                "module-j5e_sensor-Sensor.html#scaleTo": {
-                  "ref": "module-j5e_sensor-Sensor.html#scaleTo",
-                  "tf": 40
-                },
-                "module-j5e_sensor-Sensor.html#fscaleTo": {
-                  "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
-                  "tf": 40
-                }
-              }
-            },
-            "o": {
-              "docs": {},
-              "p": {
-                "docs": {
-                  "module-j5e_led-LED.html#pulse": {
-                    "ref": "module-j5e_led-LED.html#pulse",
-                    "tf": 4.166666666666666
                   }
                 }
               }
@@ -4250,7 +4288,7 @@ window.lunrData = {
                 },
                 "module-j5e_led-LED.html#fade": {
                   "ref": "module-j5e_led-LED.html#fade",
-                  "tf": 25
+                  "tf": 25.555555555555557
                 },
                 "module-j5e_led-LED.html#fadeIn": {
                   "ref": "module-j5e_led-LED.html#fadeIn",
@@ -4311,10 +4349,6 @@ window.lunrData = {
                 "module-j5e_animation.html": {
                   "ref": "module-j5e_animation.html",
                   "tf": 3.571428571428571
-                },
-                "module-j5e_led.html": {
-                  "ref": "module-j5e_led.html",
-                  "tf": 25
                 }
               },
               "'": {
@@ -4327,9 +4361,43 @@ window.lunrData = {
                     "ref": "module-j5e_rgb-RGB.html#color",
                     "tf": 2.941176470588235
                   },
+                  "module-j5e_led.html": {
+                    "ref": "module-j5e_led.html",
+                    "tf": 3.3333333333333335
+                  },
                   "module-j5e_rgb.html": {
                     "ref": "module-j5e_rgb.html",
                     "tf": 10
+                  }
+                }
+              }
+            }
+          },
+          "o": {
+            "docs": {},
+            "w": {
+              "docs": {
+                "module-j5e_sensor-Sensor.html#scale": {
+                  "ref": "module-j5e_sensor-Sensor.html#scale",
+                  "tf": 33.33333333333333
+                },
+                "module-j5e_sensor-Sensor.html#scaleTo": {
+                  "ref": "module-j5e_sensor-Sensor.html#scaleTo",
+                  "tf": 40
+                },
+                "module-j5e_sensor-Sensor.html#fscaleTo": {
+                  "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
+                  "tf": 40
+                }
+              }
+            },
+            "o": {
+              "docs": {},
+              "p": {
+                "docs": {
+                  "module-j5e_led-LED.html#pulse": {
+                    "ref": "module-j5e_led-LED.html#pulse",
+                    "tf": 4.166666666666666
                   }
                 }
               }
@@ -4440,7 +4508,7 @@ window.lunrData = {
                       },
                       "module-j5e_servo-Servo.html#sweep": {
                         "ref": "module-j5e_servo-Servo.html#sweep",
-                        "tf": 6.25
+                        "tf": 7.142857142857142
                       }
                     }
                   }
@@ -4530,7 +4598,7 @@ window.lunrData = {
                 },
                 "module-j5e_led-LED.html#fade": {
                   "ref": "module-j5e_led-LED.html#fade",
-                  "tf": 5
+                  "tf": 5.555555555555555
                 },
                 "module-j5e_led-LED.html#fadeIn": {
                   "ref": "module-j5e_led-LED.html#fadeIn",
@@ -4543,6 +4611,10 @@ window.lunrData = {
                 "module-j5e_led-LED.html#pulse": {
                   "ref": "module-j5e_led-LED.html#pulse",
                   "tf": 4.166666666666666
+                },
+                "module-j5e_led.html": {
+                  "ref": "module-j5e_led.html",
+                  "tf": 3.3333333333333335
                 }
               }
             }
@@ -4587,10 +4659,6 @@ window.lunrData = {
                     "undefined": {
                       "tf": 10
                     },
-                    "module-j5e_sensor-Sensor.html": {
-                      "ref": "module-j5e_sensor-Sensor.html",
-                      "tf": 6.25
-                    },
                     "module-j5e_switch-Switch.html": {
                       "ref": "module-j5e_switch-Switch.html",
                       "tf": 8.333333333333332
@@ -4598,6 +4666,10 @@ window.lunrData = {
                     "module-j5e_animation-Animation.html": {
                       "ref": "module-j5e_animation-Animation.html",
                       "tf": 8.333333333333332
+                    },
+                    "module-j5e_sensor-Sensor.html": {
+                      "ref": "module-j5e_sensor-Sensor.html",
+                      "tf": 6.25
                     },
                     "module-j5e_led-LED.html": {
                       "ref": "module-j5e_led-LED.html",
@@ -4692,19 +4764,19 @@ window.lunrData = {
           },
           "d": {
             "docs": {},
-            "c": {
-              "docs": {
-                "module-j5e_sensor-Sensor.html": {
-                  "ref": "module-j5e_sensor-Sensor.html",
-                  "tf": 6.25
-                }
-              }
-            },
             "d": {
               "docs": {
                 "module-j5e_animation-Animation.html#enqueue": {
                   "ref": "module-j5e_animation-Animation.html#enqueue",
                   "tf": 4.166666666666666
+                }
+              }
+            },
+            "c": {
+              "docs": {
+                "module-j5e_sensor-Sensor.html": {
+                  "ref": "module-j5e_sensor-Sensor.html",
+                  "tf": 6.25
                 }
               }
             }
@@ -4843,6 +4915,43 @@ window.lunrData = {
                       "module-j5e_rgb-RGB.html#toggle": {
                         "ref": "module-j5e_rgb-RGB.html#toggle",
                         "tf": 10
+                      },
+                      "module-j5e_led.html": {
+                        "ref": "module-j5e_led.html",
+                        "tf": 3.3333333333333335
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "p": {
+            "docs": {},
+            "t": {
+              "docs": {
+                "module-j5e_servo-Servo.html#sweep": {
+                  "ref": "module-j5e_servo-Servo.html#sweep",
+                  "tf": 33.33333333333333
+                }
+              },
+              "i": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "n": {
+                    "docs": {
+                      "module-j5e_animation-Animation.html#enqueue": {
+                        "ref": "module-j5e_animation-Animation.html#enqueue",
+                        "tf": 50
+                      },
+                      "module-j5e_led-LED.html#animate": {
+                        "ref": "module-j5e_led-LED.html#animate",
+                        "tf": 41.66666666666666
+                      },
+                      "module-j5e_rgb-RGB.html#animate": {
+                        "ref": "module-j5e_rgb-RGB.html#animate",
+                        "tf": 33.33333333333333
                       }
                     }
                   }
@@ -4894,39 +5003,6 @@ window.lunrData = {
               }
             }
           },
-          "p": {
-            "docs": {},
-            "t": {
-              "docs": {
-                "module-j5e_servo-Servo.html#sweep": {
-                  "ref": "module-j5e_servo-Servo.html#sweep",
-                  "tf": 33.33333333333333
-                }
-              },
-              "i": {
-                "docs": {},
-                "o": {
-                  "docs": {},
-                  "n": {
-                    "docs": {
-                      "module-j5e_animation-Animation.html#enqueue": {
-                        "ref": "module-j5e_animation-Animation.html#enqueue",
-                        "tf": 50
-                      },
-                      "module-j5e_led-LED.html#animate": {
-                        "ref": "module-j5e_led-LED.html#animate",
-                        "tf": 41.66666666666666
-                      },
-                      "module-j5e_rgb-RGB.html#animate": {
-                        "ref": "module-j5e_rgb-RGB.html#animate",
-                        "tf": 33.33333333333333
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
           "u": {
             "docs": {},
             "t": {
@@ -4967,11 +5043,11 @@ window.lunrData = {
                     },
                     "module-j5e_fn.html": {
                       "ref": "module-j5e_fn.html",
-                      "tf": 120
+                      "tf": 115
                     },
                     "module-j5e_led.html": {
                       "ref": "module-j5e_led.html",
-                      "tf": 135
+                      "tf": 110
                     },
                     "module-j5e_rgb.html": {
                       "ref": "module-j5e_rgb.html",
@@ -4983,7 +5059,7 @@ window.lunrData = {
                     },
                     "module-j5e_servo.html": {
                       "ref": "module-j5e_servo.html",
-                      "tf": 120
+                      "tf": 110
                     },
                     "module-j5e_switch.html": {
                       "ref": "module-j5e_switch.html",
@@ -5138,6 +5214,52 @@ window.lunrData = {
                               },
                               "s": {
                                 "docs": {},
+                                "w": {
+                                  "docs": {},
+                                  "i": {
+                                    "docs": {},
+                                    "t": {
+                                      "docs": {},
+                                      "c": {
+                                        "docs": {},
+                                        "h": {
+                                          "docs": {
+                                            "module-j5e_switch.html": {
+                                              "ref": "module-j5e_switch.html",
+                                              "tf": 1300
+                                            }
+                                          },
+                                          "~": {
+                                            "docs": {},
+                                            "s": {
+                                              "docs": {},
+                                              "w": {
+                                                "docs": {},
+                                                "i": {
+                                                  "docs": {},
+                                                  "t": {
+                                                    "docs": {},
+                                                    "c": {
+                                                      "docs": {},
+                                                      "h": {
+                                                        "docs": {
+                                                          "module-j5e_switch-Switch.html": {
+                                                            "ref": "module-j5e_switch-Switch.html",
+                                                            "tf": 1300
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
                                 "e": {
                                   "docs": {},
                                   "n": {
@@ -5446,52 +5568,6 @@ window.lunrData = {
                                                                 "tf": 1150
                                                               }
                                                             }
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                },
-                                "w": {
-                                  "docs": {},
-                                  "i": {
-                                    "docs": {},
-                                    "t": {
-                                      "docs": {},
-                                      "c": {
-                                        "docs": {},
-                                        "h": {
-                                          "docs": {
-                                            "module-j5e_switch.html": {
-                                              "ref": "module-j5e_switch.html",
-                                              "tf": 1300
-                                            }
-                                          },
-                                          "~": {
-                                            "docs": {},
-                                            "s": {
-                                              "docs": {},
-                                              "w": {
-                                                "docs": {},
-                                                "i": {
-                                                  "docs": {},
-                                                  "t": {
-                                                    "docs": {},
-                                                    "c": {
-                                                      "docs": {},
-                                                      "h": {
-                                                        "docs": {
-                                                          "module-j5e_switch-Switch.html": {
-                                                            "ref": "module-j5e_switch-Switch.html",
-                                                            "tf": 1300
                                                           }
                                                         }
                                                       }
@@ -6222,11 +6298,11 @@ window.lunrData = {
               "docs": {
                 "module-j5e_servo-Servo.html#max": {
                   "ref": "module-j5e_servo-Servo.html#max",
-                  "tf": 690.4761904761905
+                  "tf": 683.3333333333334
                 },
                 "module-j5e_servo-Servo.html#sweep": {
                   "ref": "module-j5e_servo-Servo.html#sweep",
-                  "tf": 6.25
+                  "tf": 7.142857142857142
                 }
               },
               "i": {
@@ -6239,9 +6315,23 @@ window.lunrData = {
                       "docs": {
                         "module-j5e_servo-Servo.html#max": {
                           "ref": "module-j5e_servo-Servo.html#max",
-                          "tf": 7.142857142857142
+                          "tf": 8.333333333333332
                         }
                       }
+                    }
+                  }
+                }
+              }
+            },
+            "n": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "g": {
+                  "docs": {
+                    "module-j5e_led.html": {
+                      "ref": "module-j5e_led.html",
+                      "tf": 3.3333333333333335
                     }
                   }
                 }
@@ -6258,7 +6348,7 @@ window.lunrData = {
                 },
                 "module-j5e_servo-Servo.html#sweep": {
                   "ref": "module-j5e_servo-Servo.html#sweep",
-                  "tf": 6.25
+                  "tf": 7.142857142857142
                 }
               },
               "i": {
@@ -6347,7 +6437,7 @@ window.lunrData = {
               "docs": {
                 "module-j5e_led-LED.html#fade": {
                   "ref": "module-j5e_led-LED.html#fade",
-                  "tf": 5
+                  "tf": 5.555555555555555
                 },
                 "module-j5e_rgb-RGB.html#fade": {
                   "ref": "module-j5e_rgb-RGB.html#fade",
@@ -6484,6 +6574,10 @@ window.lunrData = {
                       "module-j5e_rgb-RGB.html#fadeIn": {
                         "ref": "module-j5e_rgb-RGB.html#fadeIn",
                         "tf": 10
+                      },
+                      "module-j5e_led.html": {
+                        "ref": "module-j5e_led.html",
+                        "tf": 3.3333333333333335
                       }
                     }
                   }
@@ -6505,7 +6599,7 @@ window.lunrData = {
                       "docs": {
                         "module-j5e_servo-Servo.html#sweep": {
                           "ref": "module-j5e_servo-Servo.html#sweep",
-                          "tf": 6.25
+                          "tf": 7.142857142857142
                         },
                         "module-j5e_animation.html": {
                           "ref": "module-j5e_animation.html",
@@ -6538,6 +6632,17 @@ window.lunrData = {
               "module-j5e_fn-timer.html": {
                 "ref": "module-j5e_fn-timer.html",
                 "tf": 4.166666666666666
+              }
+            },
+            "e": {
+              "docs": {},
+              "r": {
+                "docs": {
+                  "module-j5e_fn.html": {
+                    "ref": "module-j5e_fn.html",
+                    "tf": 5
+                  }
+                }
               }
             }
           },
@@ -6590,6 +6695,34 @@ window.lunrData = {
             }
           }
         },
+        "q": {
+          "docs": {},
+          "u": {
+            "docs": {},
+            "e": {
+              "docs": {},
+              "u": {
+                "docs": {},
+                "e": {
+                  "docs": {
+                    "module-j5e_animation-Animation.html#enqueue": {
+                      "ref": "module-j5e_animation-Animation.html#enqueue",
+                      "tf": 4.166666666666666
+                    },
+                    "module-j5e_animation-Animation.html#pause": {
+                      "ref": "module-j5e_animation-Animation.html#pause",
+                      "tf": 7.142857142857142
+                    },
+                    "module-j5e_animation-Animation.html#stop": {
+                      "ref": "module-j5e_animation-Animation.html#stop",
+                      "tf": 10
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
         "h": {
           "docs": {},
           "i": {
@@ -6628,7 +6761,7 @@ window.lunrData = {
                     },
                     "module-j5e_servo.html": {
                       "ref": "module-j5e_servo.html",
-                      "tf": 10
+                      "tf": 8.333333333333332
                     }
                   }
                 }
@@ -6732,7 +6865,7 @@ window.lunrData = {
                   },
                   "module-j5e_led-LED.html#fade": {
                     "ref": "module-j5e_led-LED.html#fade",
-                    "tf": 10
+                    "tf": 11.11111111111111
                   },
                   "module-j5e_rgb-RGB.html#color": {
                     "ref": "module-j5e_rgb-RGB.html#color",
@@ -6748,31 +6881,14 @@ window.lunrData = {
                   }
                 }
               }
-            }
-          }
-        },
-        "q": {
-          "docs": {},
-          "u": {
-            "docs": {},
-            "e": {
+            },
+            "r": {
               "docs": {},
-              "u": {
-                "docs": {},
-                "e": {
-                  "docs": {
-                    "module-j5e_animation-Animation.html#enqueue": {
-                      "ref": "module-j5e_animation-Animation.html#enqueue",
-                      "tf": 4.166666666666666
-                    },
-                    "module-j5e_animation-Animation.html#pause": {
-                      "ref": "module-j5e_animation-Animation.html#pause",
-                      "tf": 7.142857142857142
-                    },
-                    "module-j5e_animation-Animation.html#stop": {
-                      "ref": "module-j5e_animation-Animation.html#stop",
-                      "tf": 10
-                    }
+              "i": {
+                "docs": {
+                  "module-j5e_led.html": {
+                    "ref": "module-j5e_led.html",
+                    "tf": 3.3333333333333335
                   }
                 }
               }
@@ -6873,7 +6989,7 @@ window.lunrData = {
           }
         }
       },
-      "length": 620
+      "length": 636
     },
     "corpusTokens": [
       "0",
@@ -6904,9 +7020,9 @@ window.lunrData = {
       "class",
       "clearinterv",
       "clockwis",
+      "code",
       "color",
       "complex",
-      "compon",
       "confus",
       "connect",
       "continu",
@@ -6946,7 +7062,6 @@ window.lunrData = {
       "flexibl",
       "float",
       "flush",
-      "fn",
       "frame",
       "fscaleto",
       "full",
@@ -6994,6 +7109,7 @@ window.lunrData = {
       "key",
       "led",
       "led'",
+      "librari",
       "light",
       "list",
       "list:modul",
@@ -7005,6 +7121,7 @@ window.lunrData = {
       "low",
       "lt;async&gt",
       "maintain",
+      "manag",
       "max",
       "maximum",
       "meant",
@@ -7158,9 +7275,11 @@ window.lunrData = {
       "until",
       "updat",
       "us",
+      "user",
       "util",
       "val",
       "valu",
+      "vari",
       "whatev",
       "work",
       "wrapper",
@@ -7176,9 +7295,9 @@ window.lunrData = {
     "index.html": {
       "id": "index.html",
       "kind": "readme",
-      "title": "j5e",
+      "title": "J5e",
       "longname": "index",
-      "name": "j5e",
+      "name": "J5e",
       "tags": "index",
       "summary": "Johnny Five for Embedded Systems",
       "description": "",
@@ -7289,77 +7408,6 @@ window.lunrData = {
       "summary": "",
       "description": "Create an event listener that will only fire one time."
     },
-    "module-j5e_sensor-Sensor.html": {
-      "id": "module-j5e_sensor-Sensor.html",
-      "kind": "class",
-      "title": "&lt;async&gt; j5e/sensor~Sensor",
-      "longname": "module:j5e/sensor~Sensor",
-      "name": "Sensor",
-      "tags": "module:j5e/sensor~Sensor",
-      "summary": "",
-      "description": "The Sensor class allows for input from sensor devices that connect to an ADC",
-      "body": ""
-    },
-    "module-j5e_sensor-Sensor.html#enable": {
-      "id": "module-j5e_sensor-Sensor.html#enable",
-      "kind": "function",
-      "title": "enable() → {Object}",
-      "longname": "module:j5e/sensor~Sensor#enable",
-      "name": "enable",
-      "tags": "module:j5e/sensor~Sensor#enable enable",
-      "summary": "",
-      "description": "enable Enable a disabled sensor."
-    },
-    "module-j5e_sensor-Sensor.html#disable": {
-      "id": "module-j5e_sensor-Sensor.html#disable",
-      "kind": "function",
-      "title": "disable() → {Object}",
-      "longname": "module:j5e/sensor~Sensor#disable",
-      "name": "disable",
-      "tags": "module:j5e/sensor~Sensor#disable disable",
-      "summary": "",
-      "description": "disable Disable an enabled sensor."
-    },
-    "module-j5e_sensor-Sensor.html#read": {
-      "id": "module-j5e_sensor-Sensor.html#read",
-      "kind": "function",
-      "title": "read() → {Number}",
-      "longname": "module:j5e/sensor~Sensor#read",
-      "name": "read",
-      "tags": "module:j5e/sensor~Sensor#read read",
-      "summary": "",
-      "description": "read Synchronous read of a sensor."
-    },
-    "module-j5e_sensor-Sensor.html#scale": {
-      "id": "module-j5e_sensor-Sensor.html#scale",
-      "kind": "function",
-      "title": "scale( low, high [, low, high ] ) → {Object}",
-      "longname": "module:j5e/sensor~Sensor#scale",
-      "name": "scale",
-      "tags": "module:j5e/sensor~Sensor#scale scale",
-      "summary": "",
-      "description": "scale/scaleTo Set a value scaling range"
-    },
-    "module-j5e_sensor-Sensor.html#scaleTo": {
-      "id": "module-j5e_sensor-Sensor.html#scaleTo",
-      "kind": "function",
-      "title": "scaleTo( low, low, high ) → {Number}",
-      "longname": "module:j5e/sensor~Sensor#scaleTo",
-      "name": "scaleTo",
-      "tags": "module:j5e/sensor~Sensor#scaleTo scaleTo",
-      "summary": "",
-      "description": "scaleTo Scales value to integer representation"
-    },
-    "module-j5e_sensor-Sensor.html#fscaleTo": {
-      "id": "module-j5e_sensor-Sensor.html#fscaleTo",
-      "kind": "function",
-      "title": "fscaleTo( low, low, high ) → {Number}",
-      "longname": "module:j5e/sensor~Sensor#fscaleTo",
-      "name": "fscaleTo",
-      "tags": "module:j5e/sensor~Sensor#fscaleTo fscaleTo",
-      "summary": "",
-      "description": "fscaleTo Scales value to single precision float representation"
-    },
     "module-j5e_switch-Switch.html": {
       "id": "module-j5e_switch-Switch.html",
       "kind": "class",
@@ -7431,6 +7479,77 @@ window.lunrData = {
       "tags": "module:j5e/animation~Animation#speed speed",
       "summary": "",
       "description": "Get or set the current playback speed"
+    },
+    "module-j5e_sensor-Sensor.html": {
+      "id": "module-j5e_sensor-Sensor.html",
+      "kind": "class",
+      "title": "&lt;async&gt; j5e/sensor~Sensor",
+      "longname": "module:j5e/sensor~Sensor",
+      "name": "Sensor",
+      "tags": "module:j5e/sensor~Sensor",
+      "summary": "",
+      "description": "The Sensor class allows for input from sensor devices that connect to an ADC",
+      "body": ""
+    },
+    "module-j5e_sensor-Sensor.html#enable": {
+      "id": "module-j5e_sensor-Sensor.html#enable",
+      "kind": "function",
+      "title": "enable() → {Object}",
+      "longname": "module:j5e/sensor~Sensor#enable",
+      "name": "enable",
+      "tags": "module:j5e/sensor~Sensor#enable enable",
+      "summary": "",
+      "description": "Enable a disabled sensor."
+    },
+    "module-j5e_sensor-Sensor.html#disable": {
+      "id": "module-j5e_sensor-Sensor.html#disable",
+      "kind": "function",
+      "title": "disable() → {Object}",
+      "longname": "module:j5e/sensor~Sensor#disable",
+      "name": "disable",
+      "tags": "module:j5e/sensor~Sensor#disable disable",
+      "summary": "",
+      "description": "Disable an enabled sensor."
+    },
+    "module-j5e_sensor-Sensor.html#read": {
+      "id": "module-j5e_sensor-Sensor.html#read",
+      "kind": "function",
+      "title": "read() → {Number}",
+      "longname": "module:j5e/sensor~Sensor#read",
+      "name": "read",
+      "tags": "module:j5e/sensor~Sensor#read read",
+      "summary": "",
+      "description": "Synchronous read of a sensor."
+    },
+    "module-j5e_sensor-Sensor.html#scale": {
+      "id": "module-j5e_sensor-Sensor.html#scale",
+      "kind": "function",
+      "title": "scale( low, high [, low, high ] ) → {Object}",
+      "longname": "module:j5e/sensor~Sensor#scale",
+      "name": "scale",
+      "tags": "module:j5e/sensor~Sensor#scale scale",
+      "summary": "",
+      "description": "scale/scaleTo Set a value scaling range"
+    },
+    "module-j5e_sensor-Sensor.html#scaleTo": {
+      "id": "module-j5e_sensor-Sensor.html#scaleTo",
+      "kind": "function",
+      "title": "scaleTo( low, low, high ) → {Number}",
+      "longname": "module:j5e/sensor~Sensor#scaleTo",
+      "name": "scaleTo",
+      "tags": "module:j5e/sensor~Sensor#scaleTo scaleTo",
+      "summary": "",
+      "description": "scaleTo Scales value to integer representation"
+    },
+    "module-j5e_sensor-Sensor.html#fscaleTo": {
+      "id": "module-j5e_sensor-Sensor.html#fscaleTo",
+      "kind": "function",
+      "title": "fscaleTo( low, low, high ) → {Number}",
+      "longname": "module:j5e/sensor~Sensor#fscaleTo",
+      "name": "fscaleTo",
+      "tags": "module:j5e/sensor~Sensor#fscaleTo fscaleTo",
+      "summary": "",
+      "description": "fscaleTo Scales value to single precision float representation"
     },
     "module-j5e_led-LED.html": {
       "id": "module-j5e_led-LED.html",
@@ -7511,7 +7630,7 @@ window.lunrData = {
       "name": "fade",
       "tags": "module:j5e/led~LED#fade fade",
       "summary": "",
-      "description": "fade Fade an led from its current value to a new value (Requires ```pwm: true```)"
+      "description": "Fade an led from its current value to a new value (Requires ```pwm: true```)"
     },
     "module-j5e_led-LED.html#fadeIn": {
       "id": "module-j5e_led-LED.html#fadeIn",
@@ -7612,7 +7731,7 @@ window.lunrData = {
       "name": "max",
       "tags": "module:j5e/servo~Servo#max max",
       "summary": "",
-      "description": "max Set Servo to maximum degrees, defaults to 180deg"
+      "description": "Set Servo to maximum degrees, defaults to 180deg"
     },
     "module-j5e_servo-Servo.html#center": {
       "id": "module-j5e_servo-Servo.html#center",
@@ -7622,7 +7741,7 @@ window.lunrData = {
       "name": "center",
       "tags": "module:j5e/servo~Servo#center center",
       "summary": "",
-      "description": "center Set Servo to centerpoint, defaults to 90deg"
+      "description": "Set Servo to centerpoint, defaults to 90deg"
     },
     "module-j5e_servo-Servo.html#home": {
       "id": "module-j5e_servo-Servo.html#home",
@@ -7642,7 +7761,7 @@ window.lunrData = {
       "name": "sweep",
       "tags": "module:j5e/servo~Servo#sweep sweep",
       "summary": "",
-      "description": "sweep Sweep the servo between min and max or provided range"
+      "description": "Sweep the servo between min and max or provided range"
     },
     "module-j5e_servo-Servo.html#stop": {
       "id": "module-j5e_servo-Servo.html#stop",
@@ -7815,7 +7934,7 @@ window.lunrData = {
       "name": "j5e/fn",
       "tags": "module:j5e/fn",
       "summary": "",
-      "description": "fn module - Utilities used in most IO modules. Typically called from other J5e methods.",
+      "description": "Utilities used in most IO modules. Typically called from other J5e methods, not by user code.",
       "body": ""
     },
     "module-j5e_led.html": {
@@ -7826,7 +7945,7 @@ window.lunrData = {
       "name": "j5e/led",
       "tags": "module:j5e/led",
       "summary": "",
-      "description": "LED module",
+      "description": "Class library for managing LED's (Light Emitting Diodes). They can be connected to a digital IO (On/Off), or to a PWM IO (varying brightness).",
       "body": ""
     },
     "module-j5e_rgb.html": {
@@ -7848,7 +7967,7 @@ window.lunrData = {
       "name": "j5e/sensor",
       "tags": "module:j5e/sensor",
       "summary": "",
-      "description": "For working with generic sensor components",
+      "description": "For working with generic sensor devices",
       "body": ""
     },
     "module-j5e_servo.html": {
@@ -7859,7 +7978,7 @@ window.lunrData = {
       "name": "j5e/servo",
       "tags": "module:j5e/servo",
       "summary": "",
-      "description": "Servo module - For controlling hobby servos",
+      "description": "For controlling hobby servos, continuous rotation servos,",
       "body": ""
     },
     "module-j5e_switch.html": {

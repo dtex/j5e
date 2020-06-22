@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>j5e</title>
+		<title>J5e</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -43,7 +43,7 @@
 				}
 			</style>
 		<script type="text/javascript">
-			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"MMMM D, YYYY","systemName":"j5e","systemSummary":"Johnny Five for Embedded Systems","systemLogo":"img/j5e.png","systemColor":"#000","navMembers":[{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Copyright © 2020 The contributors to the j5e and Johnny-Five projects.","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":true,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":{"ua":"UA-36026876-4","domain":"dtex.github.io"},"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":["./static/custom.css"],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
+			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"MMMM D, YYYY","systemName":"J5e","systemSummary":"Johnny Five for Embedded Systems","systemLogo":"img/j5e.png","systemColor":"#000","navMembers":[{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Copyright © 2019—2020 The contributors to the j5e and Johnny-Five projects.","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":true,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":{"ua":"UA-36026876-4","domain":"dtex.github.io"},"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":["./static/custom.css"],"scripts":[],"monospaceLinks":false,"cleverLinks":false,"forkMe":"./build/docs/fork/forkme_right_white_ffffff.webp"};
 			window.DOCLET_TOC_ENABLED = true;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
@@ -54,7 +54,7 @@
 		<div class="container">
 			<div class="navbar-header">
 				<a class="navbar-brand branding-logo" href="index.html" style="background-image: url(img/j5e.png);">
-					j5e
+					J5e
 				</a>
 				<!-- displayed on small devices -->
 				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
@@ -86,30 +86,25 @@
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
 				<span class="kind">readme</span>
-				<h1><span class="name">j5e</span></h1>
+				<h1><span class="name">J5e</span></h1>
 				<div class="summary"><p>Johnny Five for Embedded Systems</p></div>			</div>
 		</div>
 	<div class="container content">
 		<div class="row">
 			<div class="col-md-9 main-content">
 		<section class="readme-section">
-			<article><p>Control LED's, Servos, Switches, and more with j5e. It runs onboard microcontrollers like the ESP8266. Your code is 100% JavaScript. It does not require node.js, a host server or an SBC to host the app.</p>
-<p>j5e is a device framework built for <a href="https://www.ecma-international.org/memento/tc53.htm">ECMA TC-53's</a> I/O class pattern. The <a href="https://gist.github.com/phoddie/166c9c17b2f31d0beda9f2410a219268">I/O class pattern</a> is a standard interface for accessing underlying hardware interfaces (GPIO). j5e's API is based on the <a href="https://github.com/rwaldron.johnny-five">Johnny-Five</a> API which has been battle tested over quite some time.</p>
-<p>Right now, the only provider that matches the ECMA TC-53 I/O class pattern is <a href="https://github.com/Moddable-OpenSource/moddable/blob/public/documentation/io/io.md">Moddable's IO module for XS</a> which runs on the ESP8266. Hopefully, we will see more soon.</p>
-<p><em>TC-53's emerging standard is still in flux so know there is some risk of changes in the future, but hopefully those wil be abstracted away by j5e</em></p>
-<p><strong>j5e in action</strong></p>
-<pre class="prettyprint source lang-js"><code>import LED from &quot;@j5e/led&quot;;
+			<article><p>Control LED's, Servos, Switches, and more with J5e. It runs onboard microcontrollers like the ESP8266. Your code is 100% JavaScript. It does not require node.js, a host server or an SBC to host the app.</p>
+<p>J5e is a device framework built upon <a href="https://www.ecma-international.org/memento/tc53.htm">ECMA TC-53's</a> I/O class pattern. The <a href="https://gist.github.com/phoddie/166c9c17b2f31d0beda9f2410a219268">I/O class pattern</a> is a standard interface for accessing underlying hardware interfaces (GPIO). J5e's API is based on the <a href="https://github.com/rwaldron.johnny-five">Johnny-Five</a> API which has been battle tested over quite some time.</p>
+<p>Currently, the only provider that matches the ECMA TC-53 I/O class pattern is <a href="https://github.com/Moddable-OpenSource/moddable/blob/public/documentation/io/io.md">Moddable's IO module for XS</a> which runs on the ESP8266. Hopefully, we will see more soon.</p>
+<p><em>TC-53's emerging standard is still in flux so know there is some risk of changes in the future, but hopefully those changes will be abstracted away by J5e.</em></p>
+<p><strong>J5e in action</strong></p>
+<pre class="prettyprint source lang-js"><code>import LED from &quot;j5e/led&quot;;
 
 const led = await new LED(14);
 led.blink();
 </code></pre>
 <p>New users should check out the <a href="tutorial-A-GETSTARTED.html">Getting Started</a> guide.</p>
-<h2>j5e Repo Anatomy</h2>
-<p>One goal of j5e is write once, run anywhere. We are building toward this goal before most TC-53 IO conformant platforms exist. To that end, the structure of this repo may change to help us support more platforms. The JS is the same across platforms, but the different implementations of ECMAScript Modules may require special concessions (package.json vs manifest.json and inconsistent module resolution schemes).</p>
-<h3>Documentation</h3>
-<p><a href="https://dtex.github.io/j5e/">Documentation</a> is handled using <a href="https://jsdoc.app/">JSDoc</a>. Nothing in the <code>./docs/</code> folder should be edited directly. It is generated from comments in the code and some miscellaneous files in the <code>./build/docs/</code> folder. To generate new documentation run <code>npm run docs</code>. Note that this can only be done outside the individual package folders.</p>
-<h3>Tests</h3>
-<p>Tests are run using Mocha, Sinon, and node built-in Assert module. Each class has its own js file in the <code>./tests/</code> folder. You can test a single class by running <code>npm run test &lt;class&gt;</code>. You can run all tests by running <code>npm run test</code>.</p></article>
+<p>Interested in contributing? Check out <a href="https://github.com/dtex/J5e/blob/master/contributing.md">contributing.md</a> in the repo.</p></article>
 		</section>
 			</div>
 				<div class="col-md-3 side-content">
@@ -118,7 +113,7 @@ led.blink();
 		</div>
 	</div>
 	<footer>
-				<div class="copyright">Copyright © 2020 The contributors to the j5e and Johnny-Five projects.</div>
+				<div class="copyright">Copyright © 2019—2020 The contributors to the j5e and Johnny-Five projects.</div>
 			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a> using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
@@ -150,6 +145,6 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());gtag('config', 'UA-36026876-4');
 </script>
-<a href="https://github.com/dtex/j5e"><img width="149" height="149" style="z-index:1000;position:absolute;top: 50px;right: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_orange_ff7600.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a></body>
+<a href="https://github.com/dtex/j5e"><img width="149" height="149" style="z-index:1000;position:absolute;top: 50px;right: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_white_ffffff.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a></body>
 </html>
 <!-- end:readme.hbs -->

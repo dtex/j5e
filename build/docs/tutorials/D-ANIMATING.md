@@ -1,4 +1,4 @@
-Ideally robotics or IoT projects monitor and respond to changes in their environment, but sometimes we just want to follow a predetermined set of rules without regard to input. Think of the animatronic characters you've seen at theme parks and sub-par pizza restaurants. The Animation class allows you to do exactly that.
+Ideally robotics or IoT projects monitor and respond to changes in their environment, but sometimes we just want to follow a predetermined set of rules without regard to input. Think of the animatronic characters you've seen at theme parks and sub-par pizza restaurants. They follow a scripted behavior that never varies. The Animation class allows you to do exactly that.
 
 The class constructs objects that represent a single Animation. An Animation consists of a target and a queue. A target is the device or list of devices that are being animated. A queue is an array of short, modular sequences (i.e. blink, fade, sit, stand, walk, etc). These sequences are called "segments" and are pushed onto the animation queue. Segments in the queue are synchronous and run first-in, first-out.
 
@@ -8,15 +8,15 @@ Things that can be animated:
 * LEDs
 * RGB LEDs
 
-Before you start creating animcations you should be familiar with the API of the device(s) you will be conrolling. You don't have to call the device methods directly but if you haven't used them before this will be a hard way to learn about them.
+Before you start creating animations you should be familiar with the API of the device(s) you will be conrolling. You don't have to call the device methods directly but if you haven't used them before this will be a hard way to learn about them.
 
 ## Instantiate an Animation
 Instantiating an Animation is simple. Invoke the constructor and pass in the instances of the devices you want to control in an array. For example:
 
 ````js
 // Create an animation using three servos
-import Servo from "@j5e/servo";
-import Animation from "@j5e/animation";
+import Servo from "j5e/servo";
+import Animation from "j5e/animation";
 
 const coxa = await new Servo(12);
 const femur = await new Servo(13);
@@ -30,7 +30,7 @@ const leg = await new Animation([coxa, femur, tibia]);
 The devices you pass in are called the "Target" and you can think of them as the actors on your stage. There will be a practical limit on how many things you can actually control while still achieving reasonable performance, but that's dependent on your microcontroller and all the other things happening in your program.
 
 ## Enqueue a Segment
-Now you need to make your Animation instance do something. You do this by enqueuing a segment or a series of segments. A segment is a short bit of an animation that represents a discreet, hopefully reusable sequence of actions. For example, you might have a walking robot with a Segment called "stand". This Segment would describe all the movements that need to be made by every joint in order for your robot to stand. Let's do that for the single leg we instantiated above. The stand Segment for that leg might look like this:
+Now you need to make your Animation instance do something. You do this by enqueuing a segment or a series of segments. A segment is a short bit of an animation that represents a discreet, hopefully reusable sequence of actions. For example, you might have a walking robot with a segment called "stand". This Segment would describe all the movements that need to be made by every joint in order for your robot to stand. Let's do that for the single leg we instantiated above. The stand segment for that leg might look like this:
 
 ````js
 const stand = {
@@ -49,7 +49,7 @@ Note that a segment is just a JavaScript Object literal. It can be defined stati
 * **duration:** Duration of the segment in milliseconds (default 1000)
 * **cuePoints:** Array of values from 0.0 to 1.0 representing the beginning and end of the animation respectively (default [0, 1])
 * **keyFrames:** A 1 or 2 dimensional array of device positions over time. See more on keyFrames below. (required)
-* **easing:** An easing function from ```@j5e/easing``` to apply to the playback head on the timeline. (default: "linear")
+* **easing:** An easing function from ```j5e/easing``` to apply to the playback head on the timeline. (default: "linear")
 * **loop:** When true, segment will loop until animation.next() or animation.stop() is called (default: false)
 * **loopback:** The cuePoint that the animation will loop back to. If the animation is playing in reverse, this is the point at which the animation will "loop back" to 1.0 (default: 0.0)
 * **metronomic:** Will play to cuePoint[1] then play in reverse to cuePoint[0]. If the segment is set to loop then the animation will play back and forth until next(), pause() or stop() are called (default: false)

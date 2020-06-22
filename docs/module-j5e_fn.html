@@ -42,7 +42,7 @@
 				}
 			</style>
 		<script type="text/javascript">
-			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"MMMM D, YYYY","systemName":"j5e","systemSummary":"Johnny Five for Embedded Systems","systemLogo":"img/j5e.png","systemColor":"#000","navMembers":[{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Copyright © 2020 The contributors to the j5e and Johnny-Five projects.","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":true,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":{"ua":"UA-36026876-4","domain":"dtex.github.io"},"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":["./static/custom.css"],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
+			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"MMMM D, YYYY","systemName":"J5e","systemSummary":"Johnny Five for Embedded Systems","systemLogo":"img/j5e.png","systemColor":"#000","navMembers":[{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Copyright © 2019—2020 The contributors to the j5e and Johnny-Five projects.","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":true,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":{"ua":"UA-36026876-4","domain":"dtex.github.io"},"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":["./static/custom.css"],"scripts":[],"monospaceLinks":false,"cleverLinks":false,"forkMe":"./build/docs/fork/forkme_right_white_ffffff.webp"};
 			window.DOCLET_TOC_ENABLED = true;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
@@ -53,7 +53,7 @@
 		<div class="container">
 			<div class="navbar-header">
 				<a class="navbar-brand branding-logo" href="index.html" style="background-image: url(img/j5e.png);">
-					j5e
+					J5e
 				</a>
 				<!-- displayed on small devices -->
 				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
@@ -101,7 +101,7 @@
 			<dt class="symbol-title "></dt>
 			<dd class="symbol-details ">
 				<div class="symbol-details-inner">
-					<div class="callout callout-primary"><h5>Description</h5>		<div class="description">fn module - Utilities used in most IO modules. Typically called from other J5e methods.</div>
+					<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Utilities used in most IO modules. Typically called from other J5e methods, not by user code.</div>
 					</div>					<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 					
 					
@@ -334,6 +334,100 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id=".fmap" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">fmap</span><span class="signature-params">( <span class="signature-param">value</span>, <span class="signature-param">fromLow</span>, <span class="signature-param">fromHigh</span>, <span class="signature-param">toLow</span>, <span class="signature-param">toHigh</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Float32}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Like map, but returns a Float32</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>value</code></td>
+							<td><span class="param-type">Number</span></td>
+							<td class="last">
+									value to map
+							</td>
+						</tr>
+						<tr>
+								<td><code>fromLow</code></td>
+							<td><span class="param-type">Number</span></td>
+							<td class="last">
+									low end of originating range
+							</td>
+						</tr>
+						<tr>
+								<td><code>fromHigh</code></td>
+							<td><span class="param-type">Number</span></td>
+							<td class="last">
+									high end of originating range
+							</td>
+						</tr>
+						<tr>
+								<td><code>toLow</code></td>
+							<td><span class="param-type">Number</span></td>
+							<td class="last">
+									low end of target range
+							</td>
+						</tr>
+						<tr>
+								<td><code>toHigh</code></td>
+							<td><span class="param-type">Number</span></td>
+							<td class="last">
+									high end of target range
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Float32</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="fn_index.js.html">fn/index.js</a>, <a href="fn_index.js.html#line-88">line 88</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
 			<h4 id=".constrain" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">constrain</span><span class="signature-params">( <span class="signature-param">value</span>, <span class="signature-param">low</span>, <span class="signature-param">high</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
@@ -405,7 +499,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="fn_index.js.html">fn/index.js</a>, <a href="fn_index.js.html#line-102">line 102</a></p>
+									<p class="form-control-static"><a href="fn_index.js.html">fn/index.js</a>, <a href="fn_index.js.html#line-101">line 101</a></p>
 								</div>
 							</div>
 			
@@ -459,7 +553,7 @@
 							</div>
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">pad(3, 2); // -&gt; &quot;02&quot;</code></pre>
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">pad(3, 2); // -&gt; &quot;03&quot;</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -481,7 +575,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="fn_index.js.html">fn/index.js</a>, <a href="fn_index.js.html#line-236">line 236</a></p>
+									<p class="form-control-static"><a href="fn_index.js.html">fn/index.js</a>, <a href="fn_index.js.html#line-235">line 235</a></p>
 								</div>
 							</div>
 			
@@ -501,7 +595,7 @@
 		</div>
 	</div>
 	<footer>
-				<div class="copyright">Copyright © 2020 The contributors to the j5e and Johnny-Five projects.</div>
+				<div class="copyright">Copyright © 2019—2020 The contributors to the j5e and Johnny-Five projects.</div>
 			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a> using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
@@ -533,5 +627,5 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());gtag('config', 'UA-36026876-4');
 </script>
-<a href="https://github.com/dtex/j5e"><img width="149" height="149" style="z-index:1000;position:absolute;top: 50px;right: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_orange_ff7600.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a></body>
+<a href="https://github.com/dtex/j5e"><img width="149" height="149" style="z-index:1000;position:absolute;top: 50px;right: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_white_ffffff.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a></body>
 </html>

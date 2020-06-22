@@ -43,7 +43,7 @@
 				}
 			</style>
 		<script type="text/javascript">
-			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"MMMM D, YYYY","systemName":"j5e","systemSummary":"Johnny Five for Embedded Systems","systemLogo":"img/j5e.png","systemColor":"#000","navMembers":[{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Copyright © 2020 The contributors to the j5e and Johnny-Five projects.","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":true,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":{"ua":"UA-36026876-4","domain":"dtex.github.io"},"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":["./static/custom.css"],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
+			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"MMMM D, YYYY","systemName":"J5e","systemSummary":"Johnny Five for Embedded Systems","systemLogo":"img/j5e.png","systemColor":"#000","navMembers":[{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Copyright © 2019—2020 The contributors to the j5e and Johnny-Five projects.","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":true,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":{"ua":"UA-36026876-4","domain":"dtex.github.io"},"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":["./static/custom.css"],"scripts":[],"monospaceLinks":false,"cleverLinks":false,"forkMe":"./build/docs/fork/forkme_right_white_ffffff.webp"};
 			window.DOCLET_TOC_ENABLED = false;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
@@ -54,7 +54,7 @@
 		<div class="container">
 			<div class="navbar-header">
 				<a class="navbar-brand branding-logo" href="index.html" style="background-image: url(img/j5e.png);">
-					j5e
+					J5e
 				</a>
 				<!-- displayed on small devices -->
 				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
@@ -95,7 +95,7 @@
 		<section class="source-section">
 			<article></article>
 			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">/**
- * LED module
+ * Class library for managing LED's (Light Emitting Diodes). They can be connected to a digital IO (On/Off), or to a PWM IO (varying brightness).
  * @module j5e/led
  * @requires module:j5e/animation
  * @requires module:j5e/easing
@@ -107,7 +107,7 @@ import {inOutSine, outSine} from "j5e/easing";
 import Animation from "j5e/animation";
 
 /** 
- * Class representing an LED
+ * The Led class constructs objects that represent a single Led attached to the physical board. Connect the LED to a digital IO for on/off functionality. Use a PWM IO for varying brightness.
  * @classdesc The LED class allows for control of Light Emitting Diodes
  * @async
  */
@@ -124,8 +124,9 @@ class LED {
 
   /**
    * Instantiate an LED
-   * @param {object|number|string} io - Pin identifier or IO Options (See {@tutorial C-INSTANTIATING})
-   * @param {object} [device={}] - An object containing device options
+   * @param {object} io - Pin identifier or IO Options (See {@tutorial C-INSTANTIATING})
+   * @param {boolean} [io.pwm=false] - True if the device is wired to a PWM pin
+   * @param {object} device - An optional object containing device specific options
    * @param {boolean} [device.sink=false] - True if the device is wired for sink drive
    * @example
    * &lt;caption>Using a pin number&lt;/caption>
@@ -243,7 +244,7 @@ class LED {
    * // Wait one second and turn the led off
    * timer.setTimeout(function() {
    *   led.off();
-   * }, 1000)
+   * }, 1000);
    */
   off() {
     this.#state.value = this.LOW;
@@ -304,7 +305,7 @@ class LED {
 
   /**
    * Set the brightness of an led attached to PWM (Requires ```pwm: true```)
-   * @param {Integer} value - Brightness value [this.HIGH, this.LOW]
+   * @param {Integer} value - Brightness value [this.LOW, this.HIGH]
    * @return {LED}
    * @example
    * import LED from "j5e/led";
@@ -341,7 +342,7 @@ class LED {
   }
 
   /**
-   * fade Fade an led from its current value to a new value (Requires ```pwm: true```)
+   * Fade an led from its current value to a new value (Requires ```pwm: true```)
    * @param {Number} val Target brightness value
    * @param {Number} [time=1000] Time in ms that a fade will take
    * @param {function} [callback] A function to run when the fade is complete
@@ -522,7 +523,7 @@ class LED {
    * // Stop pulsing after five seconds
    * timer.setTimeout(function() {
    *   led.stop();
-   * }, 5000)
+   * }, 5000);
    */
   stop() {
     
@@ -596,7 +597,7 @@ export default LED;</code></pre>
 		</div>
 	</div>
 	<footer>
-				<div class="copyright">Copyright © 2020 The contributors to the j5e and Johnny-Five projects.</div>
+				<div class="copyright">Copyright © 2019—2020 The contributors to the j5e and Johnny-Five projects.</div>
 			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a> using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
@@ -628,6 +629,6 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());gtag('config', 'UA-36026876-4');
 </script>
-<a href="https://github.com/dtex/j5e"><img width="149" height="149" style="z-index:1000;position:absolute;top: 50px;right: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_orange_ff7600.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a></body>
+<a href="https://github.com/dtex/j5e"><img width="149" height="149" style="z-index:1000;position:absolute;top: 50px;right: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_white_ffffff.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a></body>
 </html>
 <!-- end:source.tmpl.hbs -->

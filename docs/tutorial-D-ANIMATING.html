@@ -43,7 +43,7 @@
 				}
 			</style>
 		<script type="text/javascript">
-			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"MMMM D, YYYY","systemName":"j5e","systemSummary":"Johnny Five for Embedded Systems","systemLogo":"img/j5e.png","systemColor":"#000","navMembers":[{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Copyright © 2020 The contributors to the j5e and Johnny-Five projects.","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":true,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":{"ua":"UA-36026876-4","domain":"dtex.github.io"},"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":["./static/custom.css"],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
+			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"MMMM D, YYYY","systemName":"J5e","systemSummary":"Johnny Five for Embedded Systems","systemLogo":"img/j5e.png","systemColor":"#000","navMembers":[{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Copyright © 2019—2020 The contributors to the j5e and Johnny-Five projects.","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":true,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":{"ua":"UA-36026876-4","domain":"dtex.github.io"},"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":["./static/custom.css"],"scripts":[],"monospaceLinks":false,"cleverLinks":false,"forkMe":"./build/docs/fork/forkme_right_white_ffffff.webp"};
 			window.DOCLET_TOC_ENABLED = true;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
@@ -54,7 +54,7 @@
 		<div class="container">
 			<div class="navbar-header">
 				<a class="navbar-brand branding-logo" href="index.html" style="background-image: url(img/j5e.png);">
-					j5e
+					J5e
 				</a>
 				<!-- displayed on small devices -->
 				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
@@ -98,7 +98,7 @@
 							<li class="active">j5e's Timeline and Tweening Tools</li>
 						</ol>
 		<section class="tutorial-section">
-			<article><p>Ideally robotics or IoT projects monitor and respond to changes in their environment, but sometimes we just want to follow a predetermined set of rules without regard to input. Think of the animatronic characters you've seen at theme parks and sub-par pizza restaurants. The Animation class allows you to do exactly that.</p>
+			<article><p>Ideally robotics or IoT projects monitor and respond to changes in their environment, but sometimes we just want to follow a predetermined set of rules without regard to input. Think of the animatronic characters you've seen at theme parks and sub-par pizza restaurants. They follow a scripted behavior that never varies. The Animation class allows you to do exactly that.</p>
 <p>The class constructs objects that represent a single Animation. An Animation consists of a target and a queue. A target is the device or list of devices that are being animated. A queue is an array of short, modular sequences (i.e. blink, fade, sit, stand, walk, etc). These sequences are called &quot;segments&quot; and are pushed onto the animation queue. Segments in the queue are synchronous and run first-in, first-out.</p>
 <p>Things that can be animated:</p>
 <ul>
@@ -106,12 +106,12 @@
 <li>LEDs</li>
 <li>RGB LEDs</li>
 </ul>
-<p>Before you start creating animcations you should be familiar with the API of the device(s) you will be conrolling. You don't have to call the device methods directly but if you haven't used them before this will be a hard way to learn about them.</p>
+<p>Before you start creating animations you should be familiar with the API of the device(s) you will be conrolling. You don't have to call the device methods directly but if you haven't used them before this will be a hard way to learn about them.</p>
 <h2>Instantiate an Animation</h2>
 <p>Instantiating an Animation is simple. Invoke the constructor and pass in the instances of the devices you want to control in an array. For example:</p>
 <pre class="prettyprint source lang-js"><code>// Create an animation using three servos
-import Servo from &quot;@j5e/servo&quot;;
-import Animation from &quot;@j5e/animation&quot;;
+import Servo from &quot;j5e/servo&quot;;
+import Animation from &quot;j5e/animation&quot;;
 
 const coxa = await new Servo(12);
 const femur = await new Servo(13);
@@ -123,7 +123,7 @@ const leg = await new Animation([coxa, femur, tibia]);
 </code></pre>
 <p>The devices you pass in are called the &quot;Target&quot; and you can think of them as the actors on your stage. There will be a practical limit on how many things you can actually control while still achieving reasonable performance, but that's dependent on your microcontroller and all the other things happening in your program.</p>
 <h2>Enqueue a Segment</h2>
-<p>Now you need to make your Animation instance do something. You do this by enqueuing a segment or a series of segments. A segment is a short bit of an animation that represents a discreet, hopefully reusable sequence of actions. For example, you might have a walking robot with a Segment called &quot;stand&quot;. This Segment would describe all the movements that need to be made by every joint in order for your robot to stand. Let's do that for the single leg we instantiated above. The stand Segment for that leg might look like this:</p>
+<p>Now you need to make your Animation instance do something. You do this by enqueuing a segment or a series of segments. A segment is a short bit of an animation that represents a discreet, hopefully reusable sequence of actions. For example, you might have a walking robot with a segment called &quot;stand&quot;. This Segment would describe all the movements that need to be made by every joint in order for your robot to stand. Let's do that for the single leg we instantiated above. The stand segment for that leg might look like this:</p>
 <pre class="prettyprint source lang-js"><code>const stand = {
   duration: 2000,
   cuePoints: [0, 0.5, 1.0],
@@ -140,7 +140,7 @@ const leg = await new Animation([coxa, femur, tibia]);
 <li><strong>duration:</strong> Duration of the segment in milliseconds (default 1000)</li>
 <li><strong>cuePoints:</strong> Array of values from 0.0 to 1.0 representing the beginning and end of the animation respectively (default [0, 1])</li>
 <li><strong>keyFrames:</strong> A 1 or 2 dimensional array of device positions over time. See more on keyFrames below. (required)</li>
-<li><strong>easing:</strong> An easing function from <code>@j5e/easing</code> to apply to the playback head on the timeline. (default: &quot;linear&quot;)</li>
+<li><strong>easing:</strong> An easing function from <code>j5e/easing</code> to apply to the playback head on the timeline. (default: &quot;linear&quot;)</li>
 <li><strong>loop:</strong> When true, segment will loop until animation.next() or animation.stop() is called (default: false)</li>
 <li><strong>loopback:</strong> The cuePoint that the animation will loop back to. If the animation is playing in reverse, this is the point at which the animation will &quot;loop back&quot; to 1.0 (default: 0.0)</li>
 <li><strong>metronomic:</strong> Will play to cuePoint[1] then play in reverse to cuePoint[0]. If the segment is set to loop then the animation will play back and forth until next(), pause() or stop() are called (default: false)</li>
@@ -243,7 +243,7 @@ If a single device is being animated, keyFrames may be a single dimensional arra
 		</div>
 	</div>
 	<footer>
-				<div class="copyright">Copyright © 2020 The contributors to the j5e and Johnny-Five projects.</div>
+				<div class="copyright">Copyright © 2019—2020 The contributors to the j5e and Johnny-Five projects.</div>
 			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a> using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
@@ -275,6 +275,6 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());gtag('config', 'UA-36026876-4');
 </script>
-<a href="https://github.com/dtex/j5e"><img width="149" height="149" style="z-index:1000;position:absolute;top: 50px;right: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_orange_ff7600.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a></body>
+<a href="https://github.com/dtex/j5e"><img width="149" height="149" style="z-index:1000;position:absolute;top: 50px;right: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_white_ffffff.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a></body>
 </html>
 <!-- end:readme.hbs -->
