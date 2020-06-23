@@ -1,4 +1,4 @@
-![A robot poking its head out from inside washing machine](https://github.com/dtex/j5e/raw/master/build/docs/img/j5-embedded-666x666.png)
+<img width="50%" align="right" alt="A robot poking its head out from inside washing machine" src="https://github.com/dtex/j5e/raw/master/build/docs/img/J5-embedded-666x666.png" />
 
 Control LED's, Servos, Switches, and more with J5e. It runs onboard microcontrollers like the ESP8266. Your code is 100% JavaScript. It does not require node.js, a host server or an SBC to host the app.
 
