@@ -1,3 +1,5 @@
+![A robot poking its head out from inside washing machine](https://github.com/dtex/j5e/raw/image/build/docs/img/j5-embedded-666x666.png?raw=true)
+
 Control LED's, Servos, Switches, and more with J5e. It runs onboard microcontrollers like the ESP8266. Your code is 100% JavaScript. It does not require node.js, a host server or an SBC to host the app.
 
 J5e is a device framework built upon [ECMA TC-53's](https://www.ecma-international.org/memento/tc53.htm) I/O class pattern. The [I/O class pattern](https://gist.github.com/phoddie/166c9c17b2f31d0beda9f2410a219268) is a standard interface for accessing underlying hardware interfaces (GPIO). J5e's API is based on the [Johnny-Five](https://github.com/rwaldron.johnny-five) API which has been battle tested over quite some time. 
