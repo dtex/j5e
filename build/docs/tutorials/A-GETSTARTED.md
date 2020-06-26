@@ -11,7 +11,12 @@ You can clone the repo:
 cd ~/Projects
 git clone https://github.com/dtex/j5e
 ````
+
+- or -
+
 You can [download the latest release](https://github.com/dtex/j5e/releases) from Github.
+
+- or -
 
 You can install it from npm with ```npm install j5e```.
 
