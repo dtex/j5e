@@ -216,7 +216,7 @@ describe('Sensor - Generic', function() {
       
       let sensor = await new Sensor(
         { pin: 17, io: Analog },
-        { range: [256, 758] }
+        { limit: [256, 758] }
       );
 
       assert.equal(sensor.interval, 100);
@@ -226,7 +226,8 @@ describe('Sensor - Generic', function() {
       assert.equal(sensor.median, null);
       assert.equal(sensor.last, null);
       assert.equal(sensor.threshold, 1);
-      assert.equal(sensor.limit, null);
+      assert.equal(sensor.limit[0], 256);
+      assert.equal(sensor.limit[1], 758);
       assert.equal(sensor.resolution, 1023);
 
       sensor.disable();
@@ -281,6 +282,7 @@ describe('Sensor - Generic', function() {
       clock.tick(1005);
       sensor.io.value = 1023;
       clock.tick(1005);
+      console.log(calls);
 
       assert.equal(calls.lower, 3);
       assert.equal(calls.upper, 3);
