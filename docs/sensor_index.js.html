@@ -191,6 +191,22 @@ class Sensor extends Emitter {
             this.#state.smoothing = newSmoothing;
           }
         },
+        threshold: {
+          get() {
+            return this.#state.threshold;
+          },
+          set(newThreshold) {
+            this.#state.threshold = newThreshold;
+          }
+        },
+        limit: {
+          get() {
+            return this.#state.limit;
+          },
+          set(newLimit) {
+            this.#state.limit = newLimit;
+          }
+        },
         resolution: {
           get() {
             return 2 ** this.io.resolution - 1;
