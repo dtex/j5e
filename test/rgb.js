@@ -1,13 +1,13 @@
 import assert from 'assert';
 import sinon from 'sinon';
-import { PWM } from "@dtex/mock-io";
+import { Digital, PWM } from "@dtex/mock-io";
 import RGB from 'j5e/rgb';
 
 describe('RGB', function() {
   
   describe('Instantiation', function() {
     
-    it('should return a valid RGB instance when passed three pin numbers', async function() {
+    it('should return a valid RGB instance when passed three pin objects in an array', async function() {
       const rgb = await new RGB([{ pin: 12, io: PWM }, { pin: 13, io: PWM }, { pin: 14, io: PWM }]);
       assert.equal(rgb instanceof RGB, true);
       assert.equal(rgb.LOW.red, 0);
@@ -18,7 +18,22 @@ describe('RGB', function() {
       assert.equal(rgb.HIGH.blue, 1023);
     });
 
-    it('should return set the LOW values to 0', async function() {
+    it('should return a valid RGB instance when passed an object with three pins in an array', async function() {
+      const rgb = await new RGB({
+        pins: [12, 13, 14],
+        io: PWM,
+        sink: true
+      });
+      assert.equal(rgb instanceof RGB, true);
+      assert.equal(rgb.LOW.red, 0);
+      assert.equal(rgb.LOW.green, 0);
+      assert.equal(rgb.LOW.blue, 0);
+      assert.equal(rgb.HIGH.red, 1023);
+      assert.equal(rgb.HIGH.green, 1023);
+      assert.equal(rgb.HIGH.blue, 1023);
+    });
+
+    it('should set the LOW values to 0', async function() {
       const rgb = await new RGB([{ pin: 12, io: PWM }, { pin: 13, io: PWM }, { pin: 14, io: PWM }]);
       
       assert.equal(rgb.LOW.red, 0);

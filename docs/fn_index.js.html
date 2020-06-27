@@ -112,7 +112,7 @@ export function normalizeParams(options={}) {
   return options;
 };
 
- /** Normalize I/O parameters
+ /** Normalize IO parameters
  * @param {(number|string|object)} options - A pin number, pin identifier or a complete IO options object
  * @param {(number|string)} [ioOpts.pin] - If passing an object, a pin number or pin identifier
  * @param {(string|constructor)} [ioOpts.io] - If passing an object, a string specifying a path to the IO provider or a constructor
@@ -131,6 +131,31 @@ export function normalizeIO(options={}) {
  * @ignore
  */
 export function normalizeDevice(options={}) {
+  return options;
+};
+
+/** Normalize Multi-pin Device parameter
+ * @param {object} [options={}] - An object containing device options
+ * @ignore
+ */
+export function normalizeMulti(options={}) {
+  if (!Array.isArray(options)) {
+    // Loop through the pins property array and make sure each is an object
+    let pins = options.pins.map(pin => {
+      return normalizeIO(pin);
+    });
+    
+    // If IO is defined on options use it as default
+    if (options.io) {
+      pins.forEach(pin => pin.io = pin.io || options.io);
+      delete options.io;
+    }
+    
+    // Copy each property that is not ```pins``` onto each member of the pins array
+    delete options.pins;
+    pins.map(pin => { return Object.assign(pin, options) });
+    options = pins;
+  }
   return options;
 };
 
