@@ -8,28 +8,26 @@ describe('Fn', function() {
   describe('normalizeParams', function() {
   
     it('should return valid ioOpts and deviceOpts when passed a provider object', function() {
-      const {ioOpts, deviceOpts} = normalizeParams({
+      const options = normalizeParams({
         io: Digital,
         pin: 13
       });
-      assert.equal(Object.is(ioOpts.io, Digital), true);
-      assert.equal(ioOpts.pin, 13);
-      assert.equal(typeof deviceOpts, "object");
-      assert.equal(Object.keys(deviceOpts).length, 0);
+      assert.equal(Object.is(options.io, Digital), true);
+      assert.equal(options.pin, 13);
+      assert.equal(typeof options, "object");
+      assert.equal(Object.keys(options).length, 2);
     });
 
     it('should return valid ioOpts and deviceOpts when passed a provider object and device object', function() {
-      const {ioOpts, deviceOpts} = normalizeParams({
+      const options = normalizeParams({
         io: Digital,
-        pin: 13
-      }, {
+        pin: 13,
         someProp: 1
       });
-      assert.equal(Object.is(ioOpts.io, Digital), true);
-      assert.equal(ioOpts.pin, 13);
-      assert.equal(typeof deviceOpts, "object");
-      assert.equal(Object.keys(deviceOpts).length, 1);
-      assert.equal(Object.keys(deviceOpts)[0], "someProp");
+      assert.equal(typeof options, "object");
+      assert.equal(Object.is(options.io, Digital), true);
+      assert.equal(options.pin, 13);
+      assert.equal(Object.keys(options).length, 3);
     });
 
   });
