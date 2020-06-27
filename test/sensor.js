@@ -68,10 +68,11 @@ describe('Sensor - Generic', function() {
 
     it('should return the correct default property values', async function() {
       
-      let sensor = await new Sensor(
-        { pin: 17, io: Analog },
-        { enabled: false }
-      );
+      let sensor = await new Sensor({ 
+        pin: 17, 
+        io: Analog,
+        enabled: false
+      });
       assert.equal(sensor.interval, null);
       assert.equal(sensor.smoothing, 10);
       assert.equal(sensor.raw, null);
@@ -89,10 +90,11 @@ describe('Sensor - Generic', function() {
     it('should not start making readings', async function() {
       
       const clock = sinon.useFakeTimers();
-      let sensor = await new Sensor(
-        { pin: 17, io: Analog },
-        { enabled: false }
-      );
+      let sensor = await new Sensor({ 
+        pin: 17,
+        io: Analog,
+        enabled: false
+      });
     
       const writeSpy = sinon.spy(sensor.io, "read");
 
@@ -110,10 +112,11 @@ describe('Sensor - Generic', function() {
 
     it('should return the correct default property values', async function() {
       
-      let sensor = await new Sensor(
-        { pin: 17, io: Analog },
-        { interval: 50 }
-      );
+      let sensor = await new Sensor({
+        pin: 17,
+        io: Analog,
+        interval: 50
+      });
       assert.equal(sensor.interval, 50);
       assert.equal(sensor.smoothing, 10);
       assert.equal(sensor.raw, null);
@@ -131,10 +134,11 @@ describe('Sensor - Generic', function() {
     it('should make 20 readings per second', async function() {
       
       const clock = sinon.useFakeTimers();
-      let sensor = await new Sensor(
-        { pin: 17, io: Analog },
-        { interval: 50 }
-      );
+      let sensor = await new Sensor({
+        pin: 17, 
+        io: Analog,
+        interval: 50
+      });
     
       const writeSpy = sinon.spy(sensor.io, "read");
 
@@ -152,10 +156,11 @@ describe('Sensor - Generic', function() {
 
     it('should return the correct default property values', async function() {
       
-      let sensor = await new Sensor(
-        { pin: 17, io: Analog },
-        { range: [256, 758] }
-      );
+      let sensor = await new Sensor({
+        pin: 17, 
+        io: Analog,
+        range: [256, 758]
+      });
       assert.equal(sensor.interval, 100);
       assert.equal(sensor.smoothing, 10);
       assert.equal(sensor.raw, null);
@@ -172,10 +177,11 @@ describe('Sensor - Generic', function() {
     
     it('should map value properly', async function() {
       
-      let sensor = await new Sensor(
-        { pin: 17, io: Analog },
-        { range: [256, 768] }
-      );
+      let sensor = await new Sensor({
+        pin: 17,
+        io: Analog,
+        range: [256, 768] 
+      });
     
       sensor.io.value = 0;
       assert.equal(sensor.raw, null);
@@ -214,10 +220,11 @@ describe('Sensor - Generic', function() {
 
     it('should return the correct default property values', async function() {
       
-      let sensor = await new Sensor(
-        { pin: 17, io: Analog },
-        { limit: [256, 758] }
-      );
+      let sensor = await new Sensor({
+        pin: 17, 
+        io: Analog,
+        limit: [256, 758] 
+      });
 
       assert.equal(sensor.interval, 100);
       assert.equal(sensor.smoothing, 10);
@@ -237,10 +244,11 @@ describe('Sensor - Generic', function() {
     it('should emit upper and lower limit events', async function() {
       
       const clock = sinon.useFakeTimers();
-      let sensor = await new Sensor(
-        { pin: 17, io: Analog },
-        { limit: [256, 768] }
-      );
+      let sensor = await new Sensor({ 
+        pin: 17, 
+        io: Analog,
+        limit: [256, 768] 
+      });
 
       const calls = {
         "lower": 0,
@@ -282,8 +290,7 @@ describe('Sensor - Generic', function() {
       clock.tick(1005);
       sensor.io.value = 1023;
       clock.tick(1005);
-      console.log(calls);
-
+      
       assert.equal(calls.lower, 3);
       assert.equal(calls.upper, 3);
       assert.equal(calls["limit:lower"], 3);
@@ -300,10 +307,11 @@ describe('Sensor - Generic', function() {
 
     it('should return the correct default property values', async function() {
       
-      let sensor = await new Sensor(
-        { pin: 17, io: Analog },
-        { threshold: 20 }
-      );
+      let sensor = await new Sensor({ 
+        pin: 17, 
+        io: Analog,
+        threshold: 20 
+      });
 
       assert.equal(sensor.interval, 100);
       assert.equal(sensor.smoothing, 10);
@@ -323,10 +331,11 @@ describe('Sensor - Generic', function() {
       
       const clock = sinon.useFakeTimers();
       
-      let sensor = await new Sensor(
-        { pin: 17, io: Analog },
-        { threshold: 20 }
-      );
+      let sensor = await new Sensor({ 
+        pin: 17, 
+        io: Analog,
+        threshold: 20
+      });
       
       let last = 0;
       let count = 0;
