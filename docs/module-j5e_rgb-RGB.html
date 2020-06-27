@@ -98,7 +98,7 @@
 					<section>
 							<dl class="symbol primary">
 								<dt class="symbol-title class collapsible-symbol expanded">
-			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="signature-attribs">&lt;async> </span><span class="name">RGB</span><span class="signature-params">( <span class="signature-param">io</span>, <span class="signature-param">device</span>&nbsp;)</span><span class="signature-type"></span></h2>
+			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="signature-attribs">&lt;async> </span><span class="name">RGB</span><span class="signature-params">( <span class="signature-param">options</span>&nbsp;)</span><span class="signature-type"></span></h2>
 </dt>
 <dd class="symbol-details class  collapsible-symbol expanded" style="max-height: 9999px;">
 	<div class="symbol-details-inner">
@@ -115,17 +115,10 @@
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>io</code></td>
+								<td><code>options</code></td>
 							<td><span class="param-type">Array.&lt;object></span></td>
 							<td class="last">
-									Pin identifiers or IO Options (See <a href="tutorial-C-INSTANTIATING.html">Instantiating a Device</a>)
-							</td>
-						</tr>
-						<tr>
-								<td><code>device</code></td>
-							<td><span class="param-type">object</span></td>
-							<td class="last">
-									An optional object containing device specific options
+									Pin identifiers or Options object (See <a href="tutorial-C-INSTANTIATING.html">Instantiating a Device</a>)
 										<table class="params table table-striped">
 											<thead>
 											<tr>
@@ -169,7 +162,7 @@
 			rgb.color(&quot;#663399&quot;);
 			rgb.blink();</code></pre>
 					</div>
-					<div class="example-caption"><p>Using io option objects</p></div>
+					<div class="example-caption"><p>Using an array option objects</p></div>
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;j5e/rgb&quot;;
 			import PCA9685 from &quot;PCA9685Expander&quot;
@@ -179,6 +172,18 @@
 			  { pin: 1, io: PCA9685 },
 			  { pin: 2, io: PCA9685 }
 			]);
+			rgb.color(&quot;#663399&quot;);
+			rgb.blink();
+			
+			* @example
+			&lt;caption&gt;Using on options.io parameter with a pins array&lt;/caption&gt;
+			import RGB from &quot;j5e/rgb&quot;;
+			import PCA9685 from &quot;PCA9685Expander&quot;
+			
+			const rgb &#x3D; await new RGB({
+			  pins:[ 0, 1, 2 ],
+			  io: PCA9685
+			});
 			rgb.color(&quot;#663399&quot;);
 			rgb.blink();</code></pre>
 					</div>
@@ -202,7 +207,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-75">line 75</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-86">line 86</a></p>
 								</div>
 							</div>
 			
@@ -336,7 +341,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-232">line 232</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-246">line 246</a></p>
 								</div>
 							</div>
 			
@@ -388,7 +393,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-275">line 275</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-289">line 289</a></p>
 								</div>
 							</div>
 			
@@ -445,7 +450,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-306">line 306</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-320">line 320</a></p>
 								</div>
 							</div>
 			
@@ -502,7 +507,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-342">line 342</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-356">line 356</a></p>
 								</div>
 							</div>
 			
@@ -594,7 +599,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-367">line 367</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-381">line 381</a></p>
 								</div>
 							</div>
 			
@@ -705,7 +710,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-415">line 415</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-429">line 429</a></p>
 								</div>
 							</div>
 			
@@ -791,7 +796,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-456">line 456</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-470">line 470</a></p>
 								</div>
 							</div>
 			
@@ -878,7 +883,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-473">line 473</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-487">line 487</a></p>
 								</div>
 							</div>
 			
@@ -970,7 +975,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-498">line 498</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-512">line 512</a></p>
 								</div>
 							</div>
 			
@@ -1049,7 +1054,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-542">line 542</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-556">line 556</a></p>
 								</div>
 							</div>
 			
@@ -1106,7 +1111,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-568">line 568</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-582">line 582</a></p>
 								</div>
 							</div>
 			

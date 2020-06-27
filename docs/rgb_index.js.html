@@ -104,7 +104,7 @@
  * @requires module:j5e/fn
  */
 
-import {normalizeIO, normalizeDevice, constrain, getProvider, timer, asyncForEach} from "j5e/fn";
+import {normalizeIO, normalizeDevice, normalizeMulti, constrain, getProvider, timer, asyncForEach} from "j5e/fn";
 import {inOutSine, outSine} from "j5e/easing";
 import Animation from "j5e/animation";
 
@@ -135,9 +135,8 @@ class RGB {
 
   /**
    * Instantiate an RGB LED
-   * @param {object[]} io - Pin identifiers or IO Options (See {@tutorial C-INSTANTIATING})
-   * @param {object} device - An optional object containing device specific options
-   * @param {boolean} [device.sink=false] - True if the device is wired for sink drive
+   * @param {object[]} options - Pin identifiers or Options object (See {@tutorial C-INSTANTIATING})
+   * @param {boolean} [options.sink=false] - True if the device is wired for sink drive
    * @example
    * &lt;caption>Using pin numbers&lt;/caption>
    * import RGB from "j5e/rgb";
@@ -155,7 +154,7 @@ class RGB {
 	 * rgb.blink();
    *
    * @example
-   * &lt;caption>Using io option objects&lt;/caption>
+   * &lt;caption>Using an array option objects&lt;/caption>
    * import RGB from "j5e/rgb";
    * import PCA9685 from "PCA9685Expander"
    *
@@ -167,13 +166,29 @@ class RGB {
 	 * rgb.color("#663399");
 	 * rgb.blink();
    * 
+   * * @example
+   * &lt;caption>Using on options.io parameter with a pins array&lt;/caption>
+   * import RGB from "j5e/rgb";
+   * import PCA9685 from "PCA9685Expander"
+   *
+   * const rgb = await new RGB({
+   *   pins:[ 0, 1, 2 ],
+   *   io: PCA9685
+   * });
+	 * rgb.color("#663399");
+	 * rgb.blink();
+   * 
    */
   constructor(options) {
     return (async () => {
-      if (!Array.isArray(options) || options.length !== 3) {
-        throw "RGB expects an array of three elements for the io parameter";
+      options = normalizeMulti(options);
+
+      if (options.length !== 3) {
+        throw "RGB expects three pins"
       }
+
       options = normalizeDevice(options);
+      
       if (options.sink) {
         this.#state.sink = true;
       }
@@ -190,12 +205,11 @@ class RGB {
     
       await asyncForEach(RGB.colors, async (color, index) => {
         
-        options = normalizeIO(options[index]);
-        
-        const Provider = await getProvider(options, "builtin/pwm");
+        let ioOptions = options[index];
+        const Provider = await getProvider(ioOptions, "builtin/pwm");
         
         this.io[color] = new Provider({
-          pin: options.pin
+          pin: ioOptions.pin
         });
 
         if (this.io[color].resolution) {
