@@ -132,28 +132,27 @@ class Sensor extends Emitter {
   
   /**
    * Instantiate a sensor
-   * @param {object} io - A pin number, pin identifier or a complete IO options object (See {@tutorial C-INSTANTIATING}
-   * @param {object} device - An optional object containing device specific options
-   * @param {number} [device.interval=100] - Inteval between readings in millseconds
-   * @param {number[]} [device.range=[0, N]] - The input range of the sensor
-   * @param {number[]} [device.scale=[0, N]] - The output range for the sensor's value
-   * @param {number[]} [device.limit=null] - 
-   * @param {number} [device.threshold=1] - The minimum amount fo change required to emit a "change" event
-   * @param {boolean} [device.enabled=true] - Wether the device is currently performing reads based on the interval value
+   * @param {object} options - A pin number, pin identifier or a complete IO options object (See {@tutorial C-INSTANTIATING}
+   * @param {number} [options.interval=100] - Inteval between readings in millseconds
+   * @param {number[]} [options.range=[0, N]] - The input range of the sensor
+   * @param {number[]} [options.scale=[0, N]] - The output range for the sensor's value
+   * @param {number[]} [options.limit=null] - 
+   * @param {number} [options.threshold=1] - The minimum amount fo change required to emit a "change" event
+   * @param {boolean} [options.enabled=true] - Wether the device is currently performing reads based on the interval value
    * @property {number} value - Get the most recent scaled median value
    * @property {number} scaled - Get the most recent scaled raw value
    * @property {number} raw - Get the most recent raw ADC reading
    * @property {number} resolution - The maximum possible ADC reading
    * @property {number} smoothing - The number of samples to take before finding the median value
    */
-  constructor(io, device) { 
+  constructor(options) { 
     return (async () => {
-      const {ioOpts, deviceOpts} = normalizeParams(io, device);
+      options = normalizeParams(options);
       super();
 
-      const Provider = await getProvider(ioOpts, "builtin/analog");
+      const Provider = await getProvider(options, "builtin/analog");
       this.io = new Provider({
-        pin: ioOpts.pin,
+        pin: options.pin,
       });
 
       Object.defineProperties(this, {
@@ -227,16 +226,16 @@ class Sensor extends Emitter {
         }   
       });
 
-      if (typeof deviceOpts.interval !== "undefined") {
-        this.#state.interval = deviceOpts.interval;
+      if (typeof options.interval !== "undefined") {
+        this.#state.interval = options.interval;
       }
 
-      this.#state.range = deviceOpts.range || [0, 2 ** this.io.resolution - 1];
-      this.#state.scale = deviceOpts.scale || [0, 2 ** this.io.resolution - 1];
-      this.#state.limit = deviceOpts.limit || null;
-      this.#state.threshold = deviceOpts.threshold === undefined ? 1 : deviceOpts.threshold;
+      this.#state.range = options.range || [0, 2 ** this.io.resolution - 1];
+      this.#state.scale = options.scale || [0, 2 ** this.io.resolution - 1];
+      this.#state.limit = options.limit || null;
+      this.#state.threshold = options.threshold === undefined ? 1 : options.threshold;
       
-      if (deviceOpts.enabled === false) {
+      if (options.enabled === false) {
         this.disable();
       } else {
         this.enable();

@@ -738,11 +738,17 @@
         ],
         "module-j5e_rgb.html": [
           "control",
+          "don't",
+          "ia",
           "j5e/rgb",
           "led'",
+          "mess",
           "modul",
           "module:j5e/rgb",
-          "rgb"
+          "now",
+          "rgb",
+          "right",
+          "us"
         ],
         "module-j5e_sensor.html": [
           "devic",
@@ -1704,6 +1710,14 @@
                 }
               }
             }
+          },
+          "a": {
+            "docs": {
+              "module-j5e_rgb.html": {
+                "ref": "module-j5e_rgb.html",
+                "tf": 4.166666666666666
+              }
+            }
           }
         },
         "j": {
@@ -2276,7 +2290,7 @@
                 },
                 "module-j5e_rgb.html": {
                   "ref": "module-j5e_rgb.html",
-                  "tf": 20
+                  "tf": 12.5
                 }
               }
             }
@@ -2329,6 +2343,23 @@
                     "module-j5e_servo.html": {
                       "ref": "module-j5e_servo.html",
                       "tf": 8.333333333333332
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "i": {
+            "docs": {},
+            "g": {
+              "docs": {},
+              "h": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "module-j5e_rgb.html": {
+                      "ref": "module-j5e_rgb.html",
+                      "tf": 4.166666666666666
                     }
                   }
                 }
@@ -3007,6 +3038,20 @@
                   }
                 }
               }
+            },
+            "n": {
+              "docs": {},
+              "'": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "module-j5e_rgb.html": {
+                      "ref": "module-j5e_rgb.html",
+                      "tf": 4.166666666666666
+                    }
+                  }
+                }
+              }
             }
           },
           "e": {
@@ -3619,7 +3664,7 @@
                         },
                         "module-j5e_rgb.html": {
                           "ref": "module-j5e_rgb.html",
-                          "tf": 10
+                          "tf": 4.166666666666666
                         },
                         "module-j5e_servo.html": {
                           "ref": "module-j5e_servo.html",
@@ -4367,7 +4412,7 @@
                   },
                   "module-j5e_rgb.html": {
                     "ref": "module-j5e_rgb.html",
-                    "tf": 10
+                    "tf": 4.166666666666666
                   }
                 }
               }
@@ -5051,7 +5096,7 @@
                     },
                     "module-j5e_rgb.html": {
                       "ref": "module-j5e_rgb.html",
-                      "tf": 120
+                      "tf": 114.16666666666667
                     },
                     "module-j5e_sensor.html": {
                       "ref": "module-j5e_sensor.html",
@@ -6267,6 +6312,17 @@
                   }
                 }
               }
+            },
+            "s": {
+              "docs": {},
+              "s": {
+                "docs": {
+                  "module-j5e_rgb.html": {
+                    "ref": "module-j5e_rgb.html",
+                    "tf": 4.166666666666666
+                  }
+                }
+              }
             }
           },
           "a": {
@@ -6474,6 +6530,14 @@
           },
           "o": {
             "docs": {},
+            "w": {
+              "docs": {
+                "module-j5e_rgb.html": {
+                  "ref": "module-j5e_rgb.html",
+                  "tf": 4.166666666666666
+                }
+              }
+            },
             "d": {
               "docs": {},
               "e": {
@@ -6628,6 +6692,10 @@
               "module-j5e_fn.html": {
                 "ref": "module-j5e_fn.html",
                 "tf": 5
+              },
+              "module-j5e_rgb.html": {
+                "ref": "module-j5e_rgb.html",
+                "tf": 4.166666666666666
               },
               "module-j5e_fn-timer.html": {
                 "ref": "module-j5e_fn-timer.html",
@@ -6989,7 +7057,7 @@
           }
         }
       },
-      "length": 636
+      "length": 642
     },
     "corpusTokens": [
       "0",
@@ -7040,6 +7108,7 @@
       "directli",
       "disabl",
       "document",
+      "don't",
       "durat",
       "each",
       "eas",
@@ -7078,6 +7147,7 @@
       "high",
       "hobbi",
       "home",
+      "ia",
       "index",
       "inform",
       "inoutsin",
@@ -7125,6 +7195,7 @@
       "max",
       "maximum",
       "meant",
+      "mess",
       "method",
       "min",
       "minimum",
@@ -7198,6 +7269,7 @@
       "necessari",
       "new",
       "node.j",
+      "now",
       "number",
       "object",
       "on",
@@ -7232,6 +7304,7 @@
       "resum",
       "return",
       "rgb",
+      "right",
       "rotat",
       "scale",
       "scale/scaleto",
@@ -7956,7 +8029,7 @@
       "name": "j5e/rgb",
       "tags": "module:j5e/rgb",
       "summary": "",
-      "description": "RGB module - For controlling RGB LED's",
+      "description": "RGB IA A MESS RIGHT NOW. DON'T USE RGB module - For controlling RGB LED's",
       "body": ""
     },
     "module-j5e_sensor.html": {

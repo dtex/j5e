@@ -98,7 +98,7 @@
 					<section>
 							<dl class="symbol primary">
 								<dt class="symbol-title class collapsible-symbol expanded">
-			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="signature-attribs">&lt;async> </span><span class="name">Servo</span><span class="signature-params">( <span class="signature-param">io</span>, <span class="signature-param">device</span>&nbsp;)</span><span class="signature-type"></span></h2>
+			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="signature-attribs">&lt;async> </span><span class="name">Servo</span><span class="signature-params">( <span class="signature-param">options</span>&nbsp;)</span><span class="signature-type"></span></h2>
 </dt>
 <dd class="symbol-details class  collapsible-symbol expanded" style="max-height: 9999px;">
 	<div class="symbol-details-inner">
@@ -115,7 +115,7 @@
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>io</code></td>
+								<td><code>options</code></td>
 							<td><span class="param-type">object</span></td>
 							<td class="last">
 									A pin number, pin identifier or a complete IO options object
@@ -148,26 +148,6 @@
 															If passing an object, a string specifying a path to the IO provider or a constructor
 													</td>
 												</tr>
-											</tbody>
-										</table>
-							</td>
-						</tr>
-						<tr>
-								<td><code>device</code></td>
-							<td><span class="param-type">object</span></td>
-							<td class="last">
-									An optional object containing device specific settings
-										<table class="params table table-striped">
-											<thead>
-											<tr>
-													<th>Name</th>
-												<th>Type</th>
-													<th>Attributes</th>
-													<th>Default</th>
-												<th class="last">Description</th>
-											</tr>
-											</thead>
-											<tbody>
 												<tr>
 														<td><code>type</code></td>
 													<td><span class="param-type">string</span></td>
@@ -217,7 +197,7 @@
 														<td><code>startAt</code></td>
 													<td><span class="param-type">number</span></td>
 														<td class="attributes">&lt;optional&gt;<br/></td>
-														<td>&quot;Any value within device.range&quot;</td>
+														<td>&quot;Any value within options.range&quot;</td>
 													<td class="last">
 															The desired start position of the servo
 													</td>
@@ -366,7 +346,7 @@
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;j5e/servo&quot;;
 			
-			const servo &#x3D; await new Servo(12, {type: &quot;continuous&quot;});
+			const servo &#x3D; await new Servo({ pin: 12, type: &quot;continuous&quot;});
 			servo.cw();</code></pre>
 					</div>
 			</div>			<div class="callout callout-warning"><h5>Fires</h5>		<form class="form-horizontal fires">
@@ -404,7 +384,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-69">line 69</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-68">line 68</a></p>
 								</div>
 							</div>
 			
@@ -523,7 +503,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-210">line 210</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-209">line 209</a></p>
 								</div>
 							</div>
 			
@@ -615,7 +595,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-311">line 311</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-310">line 310</a></p>
 								</div>
 							</div>
 			
@@ -697,7 +677,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-333">line 333</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-332">line 332</a></p>
 								</div>
 							</div>
 			
@@ -779,7 +759,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-355">line 355</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-354">line 354</a></p>
 								</div>
 							</div>
 			
@@ -871,7 +851,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-387">line 387</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-386">line 386</a></p>
 								</div>
 							</div>
 			
@@ -928,7 +908,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-406">line 406</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-405">line 405</a></p>
 								</div>
 							</div>
 			
@@ -1013,7 +993,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-433">line 433</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-432">line 432</a></p>
 								</div>
 							</div>
 			
@@ -1062,7 +1042,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-476">line 476</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-475">line 475</a></p>
 								</div>
 							</div>
 			
@@ -1114,14 +1094,14 @@
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;j5e/servo&quot;;
 			
-			const servo &#x3D; await new Servo(12, {type: &quot;continuous&quot;});
+			const servo &#x3D; await new Servo({ pin: 12, type: &quot;continuous&quot;});
 			servo.cw();</code></pre>
 					</div>
 					<div class="example-caption"><p>Move a continuos rotation servo clockwise at half speed</p></div>
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;j5e/servo&quot;;
 			
-			const servo &#x3D; await new Servo(12, {type: &quot;continuous&quot;});
+			const servo &#x3D; await new Servo({ pin: 12, type: &quot;continuous&quot;});
 			servo.cw(0.5);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
@@ -1144,7 +1124,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-511">line 511</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-510">line 510</a></p>
 								</div>
 							</div>
 			
@@ -1196,14 +1176,14 @@
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;j5e/servo&quot;;
 			
-			const servo &#x3D; await new Servo(12, {type: &quot;continuous&quot;});
+			const servo &#x3D; await new Servo({ pin: 12, type: &quot;continuous&quot;});
 			servo.ccw();</code></pre>
 					</div>
 					<div class="example-caption"><p>Move a continuos rotation servo counter-clockwise at half speed</p></div>
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;j5e/servo&quot;;
 			
-			const servo &#x3D; await new Servo(12, {type: &quot;continuous&quot;});
+			const servo &#x3D; await new Servo({ pin: 12, type: &quot;continuous&quot;});
 			servo.ccw(0.5);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
@@ -1226,7 +1206,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-535">line 535</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-534">line 534</a></p>
 								</div>
 							</div>
 			

@@ -124,10 +124,9 @@ class LED {
 
   /**
    * Instantiate an LED
-   * @param {object} io - Pin identifier or IO Options (See {@tutorial C-INSTANTIATING})
-   * @param {boolean} [io.pwm=false] - True if the device is wired to a PWM pin
-   * @param {object} device - An optional object containing device specific options
-   * @param {boolean} [device.sink=false] - True if the device is wired for sink drive
+   * @param {object} options - Pin identifier or IO Options (See {@tutorial C-INSTANTIATING})
+   * @param {boolean} [options.pwm=false] - True if the device is wired to a PWM pin
+   * @param {boolean} [options.sink=false] - True if the device is wired for sink drive
    * @example
    * &lt;caption>Using a pin number&lt;/caption>
    * import LED from "j5e/led";
@@ -152,14 +151,14 @@ class LED {
    * });
    * led.on();
    */
-  constructor(io, device) {
+  constructor(options) {
     return (async () => {
-      const {ioOpts, deviceOpts} = normalizeParams(io, device);
+      options = normalizeParams(options);
 
-      const Provider = await getProvider(ioOpts, ioOpts.pwm ? "builtin/pwm" : "builtin/digital");
+      const Provider = await getProvider(options, options.pwm ? "builtin/pwm" : "builtin/digital");
       
       this.io = new Provider({
-        pin: ioOpts.pin,
+        pin: options.pin,
         mode: Provider.Output
       });
       
@@ -188,7 +187,7 @@ class LED {
         }
       });
 
-      if (deviceOpts.sink) {
+      if (options.sink) {
         this.#state.sink = true;
       }
       
