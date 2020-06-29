@@ -7,22 +7,27 @@ import { Segment } from "j5e/animation";
 import LED from "j5e/led";
 import Servo from "j5e/servo";
 
+let a, b, c;
 
-const a = new Servo({
-  pin: 3,
-  io: PWM
-});
+(async () => {
+  a = await new Servo({
+    pin: 3,
+    io: PWM
+  });
 
-const b = new Servo({
-  pin: 5,
-  io: PWM,
-  startAt: 20
-});
+  b = await new Servo({
+    pin: 5,
+    io: PWM,
+    startAt: 20
+  });
 
-const c = new Servo({
-  pin: 6,
-  io: PWM
-});
+  c = await new Servo({
+    pin: 6,
+    io: PWM
+  });
+})();
+
+let linear = (x) => { return x };
 
 const chain = {
   result: [],
@@ -146,84 +151,71 @@ describe('Animation', function() {
 
   describe('next', function() {
     
-    it('should handle next for recursive segments', async function() {
+    it('should handle next for multiple segments', async function() {
 
       const onstart = sinon.spy();
-      const stop = sinon.spy();
-
-      const animation = await new Animation(chain);
-
-      animation.segments.push(await new Segment());
-      animation.segments[0].segments.push(await new Segment());
-      animation.segments[0].segments[0].segments.push(await new Segment());
-
-      animation.segments[0].currentSpeed = 0;
-      animation.segments[0].onstart = onstart;
-      animation.segments[0].reverse = true;
-
-      animation.segments[0].segments[0].currentSpeed = 1;
-      animation.segments[0].segments[0].onstart = null;
-
-      animation.segments[0].segments[0].segments[0].currentSpeed = 1;
-      animation.segments[0].segments[0].segments[0].onstart = onstart;
-      animation.segments[0].segments[0].segments[0].playLoop = {
-        stop,
-      };
-
+      const clock = sinon.useFakeTimers();
+      const animation = await new Animation(a);
       const normalizeKeyframes = sinon.stub(animation, "normalizeKeyframes");
 
-      assert.equal(animation.segments.length, 1);
-      assert.equal(animation.next(), animation);
+      animation.enqueue({ keyFrames: [[0, 1]], onstart: onstart, reverse: true });
+
+      // First segment is immediately shifted of the queue
+      assert.equal(animation.segments.length, 0);
       assert.equal(onstart.callCount, 1);
       assert.equal(normalizeKeyframes.callCount, 1);
-      assert.equal(animation.paused, true);
+      assert.equal(animation.paused, false);
+      assert.equal(animation.segments.length, 0);
+
+      animation.enqueue({ keyFrames: [[0, 1]], onstart: onstart, reverse: true });
       assert.equal(animation.segments.length, 1);
 
-      // animation.next();
-      // assert.equal(normalizeKeyframes.callCount, 2);
-      // assert.equal(animation.paused, false);
-      // assert.equal(animation.segments.length, 1);
+      animation.enqueue({ keyFrames: [[0, 1]], onstart: onstart, reverse: true });
+      assert.equal(animation.segments.length, 2);
+      
+      animation.next();
+      assert.equal(animation.segments.length, 1);
+      assert.equal(normalizeKeyframes.callCount, 2);
+      assert.equal(animation.paused, false);
+      assert.equal(animation.segments.length, 1);
 
-      // animation.next();
-      // assert.equal(onstart.callCount, 2);
-      // assert.equal(animation.segments.length, 0);
+      animation.next();
+      assert.equal(animation.segments.length, 0);
+      assert.equal(normalizeKeyframes.callCount, 3);
+      assert.equal(animation.paused, false);
+      assert.equal(animation.segments.length, 0);
 
-      // // No segments left
-      // animation.next();
-      // assert.equal(stop.callCount, 1);
+      // No segments left
+      animation.next();
+      
+      clock.restore();
     });
 
-    it('should shift queued segment onto self on next()', async function() {
+   it('should shift queued segment onto self on next()', async function() {
       
       const stop = sinon.spy();
-  
-      const animation = await new Animation(chain);
+      const clock = sinon.useFakeTimers();
+      
+      const animation = await new Animation(a);
       animation.paused = true;
-      animation.normalizeKeyframes = sinon.stub(animation, "normalizeKeyframes");
+      // animation.normalizeKeyframes = sinon.stub(animation, "normalizeKeyframes");
   
       assert.equal(animation.BRAND, undefined);
   
-      animation.enqueue({ BRAND: 1 });
+      animation.enqueue({ keyFrames: [[0, 1]], reverse: true, BRAND: 1 });
   
       assert.equal(animation.segments.length, 1);
       assert.equal(animation.BRAND, undefined);
   
-      // animation.next();
+      animation.next();
+      assert.equal(animation.BRAND, 1);
   
-      // assert.equal(animation.BRAND, 1);
-  
-      // animation.enqueue({ BRAND: Infinity });
-  
-      // animation.playLoop = {
-      //   stop,
-      // };
-  
-  
-      // animation.next();
-  
-      // assert.equal(animation.BRAND, Infinity);
+      animation.enqueue({ keyFrames: [[0, 1]], reverse: true, BRAND: Infinity });
+      animation.next();
+      assert.equal(animation.BRAND, Infinity);
+      clock.restore();
     });
-  
+
   });
 
   describe('pause', function() {
@@ -231,9 +223,10 @@ describe('Animation', function() {
     it('should pause and unpause', async function() {
       const stop = sinon.spy();
       const onpause = sinon.spy();
+      const clock = sinon.useFakeTimers();
       const normalizeKeyframes = sinon.stub();
 
-      const animation = new Animation(chain);
+      const animation = new Animation(a);
       animation.playLoop = {
         stop,
       };
@@ -261,6 +254,7 @@ describe('Animation', function() {
       animation.pause();
 
       assert.equal(animation.paused, true);
+      clock.restore();
     });
   
   });
@@ -270,6 +264,7 @@ describe('Animation', function() {
     it('should empty the segment queue on stop', async function() {
       const stop = sinon.spy();
       const onstop = sinon.spy();
+      const clock = sinon.useFakeTimers();
       const normalizeKeyframes = sinon.stub();
 
       const animation = await new Animation(chain);
@@ -302,23 +297,25 @@ describe('Animation', function() {
         assert.equal(animation.segments.length, 0);
         assert.equal(stop.callCount, 1);
         assert.equal(onstop.callCount, 1);
+        clock.restore();
     });
 
   });
-
   describe('speed', function() {
 
     it('should scale the duration and call play when speed is set', async function() {
       const stop = sinon.spy();
       const onstop = sinon.spy();
+      const clock = sinon.useFakeTimers();
       const normalizeKeyframes = sinon.stub();
-
+      
       const animation = await new Animation(chain);
       animation.playLoop = {
         stop
       };
       animation.onstop = onstop;
       animation.normalizeKeyframes = normalizeKeyframes;
+      sinon.stub(animation, "play");
 
       animation.segments.push(await new Segment());
 
@@ -327,192 +324,99 @@ describe('Animation', function() {
       assert.equal(animation.startTime, undefined);
       assert.equal(animation.endTime, undefined);
 
-      // assert.equal(animation.speed(2), animation);
-      // assert.equal(animation.currentSpeed, 2);
-      // assert.equal(animation.speed(), 2);
+      assert.equal(animation.speed(2), animation);
+      assert.equal(animation.currentSpeed, 2);
+      assert.equal(animation.speed(), 2);
 
-      // assert.equal(animation.scaledDuration, 500);
-      // assert.notEqual(animation.startTime, undefined);
-      // assert.notEqual(animation.endTime, undefined);
-      // assert.equal(typeof animation.startTime, "number");
-      // assert.equal(typeof animation.endTime, "number");
+      assert.equal(animation.scaledDuration, 500);
+      assert.notEqual(animation.startTime, undefined);
+      assert.notEqual(animation.endTime, undefined);
+      assert.equal(typeof animation.startTime, "number");
+      assert.equal(typeof animation.endTime, "number");
 
-      // assert.equal(animation.play.callCount, 1);
-      // animation.paused = false;
-      // assert.equal(animation.speed(3), animation);
-      // assert.equal(animation.play.callCount, 2);
+      assert.equal(animation.play.callCount, 1);
+      animation.paused = false;
+      assert.equal(animation.speed(3), animation);
+      assert.equal(animation.play.callCount, 2);
 
-      // animation.paused = true;
-      // assert.equal(animation.speed(3), animation);
-      // assert.equal(animation.play.callCount, 2);
+      animation.paused = true;
+      assert.equal(animation.speed(3), animation);
+      assert.equal(animation.play.callCount, 2);
+      clock.restore();
     });
   
   });
 
+
   describe('loop', function() {
 
     it('should change directions when metronomic is true', async function() {
-      const stop = sinon.spy();
-      const onstop = sinon.spy();
-      const normalizeKeyframes = sinon.stub();
-
-      const animation = await new Animation(chain);
-      animation.playLoop = {
-        stop
-      };
-      animation.onstop = onstop;
-      animation.normalizeKeyframes = normalizeKeyframes;
-
       const clock = sinon.useFakeTimers();
-      animation.normalizeKeyframes = sinon.stub(Animation.prototype, "normalizeKeyframes").callsFake(() => {
-        animation.loopback = 1;
-      });
-
-      const startTime = Date.now();
-      const loop = {
-        calledAt: startTime + 1000
-      };
-
-      animation.startTime = startTime;
-      animation.normalizedKeyFrames = [];
-      animation.target = {};
-      animation.target[Animation.render] = () => {};
-      animation.speed(1);
-
-      animation.metronomic = true;
-      animation.reverse = false;
-      animation.loop = false;
+      
+      const animation = await new Animation(a);
+      animation.enqueue({ keyFrames: [[0, 1]], metronomic: true });
+      
       animation.onloop = sinon.spy();
-      // animation.loopFunction(loop);
-
-      // assert.equal(animation.onloop.callCount, 1);
-      // animation.reverse = false;
-      animation.normalizeKeyframes.restore();
+      
+      clock.tick(1050);
+      assert.equal(animation.onloop.callCount, 1);
+      assert.equal(animation.reverse, true);
+      clock.restore();
 
     });
 
     it('should call onloop when reaching the end of a segment', async function() {
-      const stop = sinon.spy();
-      const onstop = sinon.spy();
-      const normalizeKeyframes = sinon.stub();
-
-      const animation = await new Animation(chain);
-      animation.playLoop = {
-        stop
-      };
-      animation.onstop = onstop;
-      animation.normalizeKeyframes = normalizeKeyframes;
-
       const clock = sinon.useFakeTimers();
-      animation.normalizeKeyframes = sinon.stub(Animation.prototype, "normalizeKeyframes").callsFake(() => {
-        animation.loopback = 1;
-        animation.normalizedKeyFrames = [[
-          { value: 90, easing: "linear" },
-          { step: false, easing: "linear", value: 90 },
-          { value: 45, easing: "linear" },
-          { step: 33, easing: "linear", value: 78 }
-        ]];
-      });
-  
-      const startTime = Date.now();
-      const loop = {
-        calledAt: startTime + 1000
-      };
-  
-      animation.startTime = startTime;
-      animation.target = {};
-      animation.target[Animation.render] = () => {};
-      animation.speed(1);
-  
-      animation.metronomic = true;
-      animation.reverse = false;
-      animation.loop = true;
-      animation.fps = 10;
-      animation.onloop = sinon.spy();
-      animation.normalizeKeyframes();
-      // animation.loopFunction(loop);
-  
-      // test.equal(animation.onloop.callCount, 1);
-      // animation.stop();
-      animation.normalizeKeyframes.restore();
+      const onloop = sinon.stub();
+      const animation = await new Animation(a);
+      animation.enqueue({ keyFrames: [[0, 1]], loop: true, onloop });
+
+      clock.tick(1050);
+      assert.equal(onloop.callCount, 1);
+      
+      clock.restore();
 
     });
 
     it('should run forward on loop when reverse, metronomic, and loop are all true', async function() {
-      const stop = sinon.spy();
-      const onstop = sinon.spy();
-      const normalizeKeyframes = sinon.stub(Animation.prototype, "normalizeKeyframes").callsFake(() => {
-        this.loopback = 1;
-      });
-
-      const animation = await new Animation(chain);
-      animation.playLoop = {
-        stop
-      };
-      animation.onstop = onstop;
-      animation.normalizeKeyframes = normalizeKeyframes;
-
       const clock = sinon.useFakeTimers();
+      const onloop = sinon.stub();
+      const animation = await new Animation(a);
       
-      const startTime = Date.now();
-      const loop = {
-        calledAt: startTime + 1000
-      };
-  
-      animation.startTime = startTime;
-      animation.normalizedKeyFrames = [];
-      animation.target = {};
-      animation.target[Animation.render] = () => {};
-      animation.speed(1);
-  
-      animation.metronomic = true;
-      animation.reverse = true;
-      animation.loop = true;
-      animation.onloop = sinon.spy();
-      // animation.loopFunction(loop);
-  
-      // assert.equal(animation.reverse, false);
+      animation.enqueue({ keyFrames: [[0, 1]], loop: true, reverse: true, metronomic: true, onloop });
+      assert.equal(animation.reverse, true);
+      assert.equal(onloop.callCount, 0);
 
-      animation.normalizeKeyframes.restore();
+      clock.tick(1050);
+      assert.equal(animation.reverse, false);
+      assert.equal(onloop.callCount, 1);
+      
+      clock.tick(1050);
+      assert.equal(animation.reverse, true);
+      assert.equal(onloop.callCount, 2);
+      
+      clock.restore();
     });
 
     it('should run in reverse on loop when metronomic and loop are both true', async function() {
-      const stop = sinon.spy();
-      const onstop = sinon.spy();
-      const normalizeKeyframes = sinon.stub(Animation.prototype, "normalizeKeyframes").callsFake(() => {
-        this.loopback = 1;
-      });
-
-      const animation = await new Animation(chain);
-      animation.playLoop = {
-        stop
-      };
-      animation.onstop = onstop;
-      animation.normalizeKeyframes = normalizeKeyframes;
-
       const clock = sinon.useFakeTimers();
-      const startTime = Date.now();
-      const loop = {
-        calledAt: startTime + 1000
-      };
+      const onloop = sinon.stub();
+      const animation = await new Animation(a);
+      
+      animation.enqueue({ keyFrames: [[0, 1]], loop: true, metronomic: true, onloop });
+      assert.equal(animation.reverse, undefined);
+      assert.equal(onloop.callCount, 0);
 
-      animation.startTime = startTime;
-      animation.normalizedKeyFrames = [];
-      animation.target = {};
-      animation.target[Animation.render] = () => {};
-      animation.speed(1);
-
-      animation.metronomic = true;
-      animation.reverse = false;
-      animation.loop = true;
-      animation.onloop = sinon.spy();
-      // animation.loopFunction(loop);
-
-      // assert.equal(animation.reverse, true);
-
-      animation.normalizeKeyframes.restore();
+      clock.tick(1050);
+      assert.equal(animation.reverse, true);
+      assert.equal(onloop.callCount, 1);
+      
+      clock.tick(1050);
+      assert.equal(animation.reverse, false);
+      assert.equal(onloop.callCount, 2);
+      
+      clock.restore();
     });
-
 
   });
 
