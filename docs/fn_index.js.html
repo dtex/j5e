@@ -154,9 +154,13 @@ export function normalizeMulti(options={}) {
     // Copy each property that is not ```pins``` onto each member of the pins array
     delete options.pins;
     pins.map(pin => { return Object.assign(pin, options) });
-    options = pins;
+    return pins;
+  } else {
+    return options.map(pin => {
+      return normalizeIO(pin)
+    });
   }
-  return options;
+  
 };
 
 /** Wait for an async forEach loop. Does not run in parallel.

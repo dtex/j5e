@@ -206,16 +206,14 @@ class Animation extends Emitter {
    */
   next() {
 
-    if (this.isRunning) {
-      return this;
-    } else {
-      this.isRunning = true;
-    }
-
+    this.isRunning = true;
+    
     if (this.segments.length > 0) {
-      Object.assign(this, new Segment(this.segments.shift()));
+      let segments = this.segments;
+      Object.assign(this, new Segment(segments.shift()));
+      this.segments = segments;
       this.paused = this.currentSpeed === 0 ? true : false;
-
+      
       if (this.onstart) {
         this.onstart();
       }
@@ -447,6 +445,8 @@ class Animation extends Emitter {
    */
   loopFunction({calledAt}) {
 
+    const localTarget = this.target || this.defaultTarget;
+    
     // Find the current timeline progress
     const progress = this.calculateProgress(calledAt);
 
@@ -454,7 +454,7 @@ class Animation extends Emitter {
     const indices = this.findIndices(progress);
 
     // call render function with tweened value
-    this.target.render(this.tweenedValue(indices, progress));
+    localTarget.render(this.tweenedValue(indices, progress));
 
     // See if we have reached the end of the animation
     /* istanbul ignore else */
@@ -732,7 +732,7 @@ class Timer {
  * @param {function} [options.oncomplete=null] - Function to call when animation is complete
  * @param {function} [options.onloop=null] - Function to call when animation loops
  */
-class Segment {
+export class Segment {
   constructor(options) {
     this.cuePoints = [0, 1];
     this.duration = 1000;

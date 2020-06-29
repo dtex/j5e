@@ -240,7 +240,37 @@
 					</tbody>
 				</table>
 			</div>
-			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Using a pin number</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Sensor from &quot;j5e/sensor&quot;;
+			
+			const sensor &#x3D; await new Sensor(12);
+			sensor.on(&quot;change&quot;, data &#x3D;&gt; {
+			 trace(data);
+			});</code></pre>
+					</div>
+					<div class="example-caption"><p>Using a pin identifier</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Sensor from &quot;j5e/sensor&quot;;
+			
+			const sensor &#x3D; await new Sensor(&quot;A1&quot;);
+			sensor.on(&quot;change&quot;, data &#x3D;&gt; {
+			 trace(data);
+			});</code></pre>
+					</div>
+					<div class="example-caption"><p>Using an options object</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Sensor from &quot;j5e/sensor&quot;;
+			
+			const sensor &#x3D; await new Sensor({
+			 pin: 12,
+			 interval: 500
+			});
+			sensor.on(&quot;change&quot;, data &#x3D;&gt; {
+			 trace(data);
+			});</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
 			
@@ -267,7 +297,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-52">line 52</a></p>
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-81">line 81</a></p>
 								</div>
 							</div>
 			
@@ -296,6 +326,17 @@
 								</div>
 							</div>
 					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Sensor from &quot;j5e/sensor&quot;;
+			const sensor &#x3D; await new Sensor(12);
+			
+			sensor.disable();
+			
+			// Wait 5 seconds and then take readings
+			timer.setTimeout(function() {
+			 sensor.enable();
+			});</code></pre>
+					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -316,7 +357,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-158">line 158</a></p>
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-197">line 197</a></p>
 								</div>
 							</div>
 			
@@ -341,6 +382,15 @@
 								</div>
 							</div>
 					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Sensor from &quot;j5e/sensor&quot;;
+			const sensor &#x3D; await new Sensor(12);
+			
+			// Take reading for 5 seconds and then stop
+			timer.setTimeout(function() {
+			 sensor.disable();
+			});</code></pre>
+					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -361,7 +411,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-172">line 172</a></p>
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-219">line 219</a></p>
 								</div>
 							</div>
 			
@@ -386,6 +436,12 @@
 								</div>
 							</div>
 					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Sensor from &quot;j5e/sensor&quot;;
+			const sensor &#x3D; await new Sensor(12);
+			
+			let myValue &#x3D; sensor.read();</code></pre>
+					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -406,7 +462,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-186">line 186</a></p>
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-238">line 238</a></p>
 								</div>
 							</div>
 			
@@ -476,6 +532,13 @@
 								</div>
 							</div>
 					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Sensor from &quot;j5e/sensor&quot;;
+			const sensor &#x3D; await new Sensor(12);
+			
+			// Scale all future values to 8-bit range
+			sensor.scale([0, 255]);</code></pre>
+					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -496,7 +559,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-255">line 255</a></p>
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-313">line 313</a></p>
 								</div>
 							</div>
 			
@@ -556,6 +619,13 @@
 								</div>
 							</div>
 					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Sensor from &quot;j5e/sensor&quot;;
+			const sensor &#x3D; await new Sensor(12);
+			
+			// Scale the current value to 8-bit range
+			sensor.scaleTo([0, 255]);</code></pre>
+					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -576,7 +646,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-272">line 272</a></p>
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-336">line 336</a></p>
 								</div>
 							</div>
 			
@@ -636,6 +706,13 @@
 								</div>
 							</div>
 					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Sensor from &quot;j5e/sensor&quot;;
+			const sensor &#x3D; await new Sensor(12);
+			
+			// Scale the current value to float between 0 and 1
+			sensor.fscaleTo([0, 1]);</code></pre>
+					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -656,7 +733,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-285">line 285</a></p>
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-355">line 355</a></p>
 								</div>
 							</div>
 			
