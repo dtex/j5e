@@ -7,27 +7,14 @@ import { Segment } from "j5e/animation";
 import LED from "j5e/led";
 import Servo from "j5e/servo";
 
-let a, b, c;
+let servo;
 
 (async () => {
-  a = await new Servo({
+  servo = await new Servo({
     pin: 3,
     io: PWM
   });
-
-  b = await new Servo({
-    pin: 5,
-    io: PWM,
-    startAt: 20
-  });
-
-  c = await new Servo({
-    pin: 6,
-    io: PWM
-  });
 })();
-
-let linear = (x) => { return x };
 
 const chain = {
   result: [],
@@ -48,63 +35,44 @@ const chain = {
   }
 };
 
-const segment = {
-  single: {
-    duration: 500,
-    fps: 10,
-    cuePoints: [0, 0.33, 0.66, 1.0],
-    keyFrames: [null, false, {
-      degrees: 45
-    }, 33],
-    paused: true
-  },
-  multi: {
-    duration: 500,
-    fps: 10,
-    cuePoints: [0, 0.33, 0.66, 1.0],
-    keyFrames: [
-      [null, false, {
-        degrees: 45
-      }, 33],
-      [null, 46, {
-        degrees: 180
-      }, -120],
-      [null, {
-        degrees: 120
-      }, {
-        step: 60
-      }]
-    ],
-    paused: true
-  }
-};
-
-describe('Animation', function() {
+describe('Instantiation', function() {
   
-  describe('instantiation', function() {
-    
-    it('should return a valid Animation instance when passed a target', async function() {
+  it('should return a valid Animation instance when passed a target', async function() {
       
-      const led = await new LED({
-        pin: 12,
-        io: Digital
-      });
-
-      const animation = await new Animation(led);
-      
-      assert.equal(led instanceof LED, true);
-      assert.equal(led.LOW, 0);
-      assert.equal(led.HIGH, 1);
-
-      assert.equal(animation instanceof Animation, true);
-      assert.equal(animation.defaultTarget instanceof LED, true);
-
+    const led = await new LED({
+      pin: 12,
+      io: Digital
     });
+
+    const animation = await new Animation(led);
+    
+    assert.equal(led instanceof LED, true);
+    assert.equal(led.LOW, 0);
+    assert.equal(led.HIGH, 1);
+
+    assert.equal(animation instanceof Animation, true);
+    assert.equal(animation.defaultTarget instanceof LED, true);
 
   });
 
-  describe('enqueue', function() {
+  it('should return a valid Animation instance when not passed a target', async function() {
+      
+    const led = await new LED({
+      pin: 12,
+      io: Digital
+    });
+
+    const animation = await new Animation();
     
+    assert.equal(animation instanceof Animation, true);
+    assert.deepEqual(animation.defaultTarget, {});
+
+  });
+
+});
+
+describe('Methods', function() {
+  describe('enqueue', function() {
     it('should create a segment opts object with all the default values', async function() {
       
       const clock = sinon.useFakeTimers();
@@ -145,8 +113,88 @@ describe('Animation', function() {
       animation.paused = true;
       assert.equal(animation.enqueue(), animation);
       assert.equal(animation.segments.length, 1);
-    })
+    });
 
+    describe('Options', function() {
+      describe('metronomic', function() {
+        it('should change directions when metronomic is true', async function() {
+          const clock = sinon.useFakeTimers();
+          
+          const animation = await new Animation(servo);
+          animation.enqueue({ keyFrames: [[0, 1]], metronomic: true });
+          
+          animation.onloop = sinon.spy();
+          
+          clock.tick(1050);
+          assert.equal(animation.onloop.callCount, 1);
+          assert.equal(animation.reverse, true);
+          clock.restore();
+    
+        });
+    
+        it('should run in reverse on loop when metronomic and loop are both true', async function() {
+          const clock = sinon.useFakeTimers();
+          const onloop = sinon.stub();
+          const animation = await new Animation(servo);
+          
+          animation.enqueue({ keyFrames: [[0, 1]], loop: true, metronomic: true, onloop });
+          assert.equal(animation.reverse, undefined);
+          assert.equal(onloop.callCount, 0);
+    
+          clock.tick(1050);
+          assert.equal(animation.reverse, true);
+          assert.equal(onloop.callCount, 1);
+          
+          clock.tick(1050);
+          assert.equal(animation.reverse, false);
+          assert.equal(onloop.callCount, 2);
+          
+          clock.restore();
+        });
+      
+      });
+    
+      describe('onloop', function() {
+    
+        it('should call the onloop callback when reaching the end of a segment', async function() {
+          const clock = sinon.useFakeTimers();
+          const onloop = sinon.stub();
+          const animation = await new Animation(servo);
+          animation.enqueue({ keyFrames: [[0, 1]], loop: true, onloop });
+    
+          clock.tick(1050);
+          assert.equal(onloop.callCount, 1);
+          
+          clock.restore();
+    
+        });
+      
+      });
+    
+      describe('reverse', function() {
+    
+        it('should run forward on loop when reverse, metronomic, and loop are all true', async function() {
+          const clock = sinon.useFakeTimers();
+          const onloop = sinon.stub();
+          const animation = await new Animation(servo);
+          
+          animation.enqueue({ keyFrames: [[0, 1]], loop: true, reverse: true, metronomic: true, onloop });
+          assert.equal(animation.reverse, true);
+          assert.equal(onloop.callCount, 0);
+    
+          clock.tick(1050);
+          assert.equal(animation.reverse, false);
+          assert.equal(onloop.callCount, 1);
+          
+          clock.tick(1050);
+          assert.equal(animation.reverse, true);
+          assert.equal(onloop.callCount, 2);
+          
+          clock.restore();
+        });
+      });
+      
+    });
   });
 
   describe('next', function() {
@@ -155,7 +203,7 @@ describe('Animation', function() {
 
       const onstart = sinon.spy();
       const clock = sinon.useFakeTimers();
-      const animation = await new Animation(a);
+      const animation = await new Animation(servo);
       const normalizeKeyframes = sinon.stub(animation, "normalizeKeyframes");
 
       animation.enqueue({ keyFrames: [[0, 1]], onstart: onstart, reverse: true });
@@ -196,7 +244,7 @@ describe('Animation', function() {
       const stop = sinon.spy();
       const clock = sinon.useFakeTimers();
       
-      const animation = await new Animation(a);
+      const animation = await new Animation(servo);
       animation.paused = true;
       // animation.normalizeKeyframes = sinon.stub(animation, "normalizeKeyframes");
   
@@ -226,7 +274,7 @@ describe('Animation', function() {
       const clock = sinon.useFakeTimers();
       const normalizeKeyframes = sinon.stub();
 
-      const animation = new Animation(a);
+      const animation = new Animation(servo);
       animation.playLoop = {
         stop,
       };
@@ -346,80 +394,15 @@ describe('Animation', function() {
     });
   
   });
-
-
-  describe('loop', function() {
-
-    it('should change directions when metronomic is true', async function() {
-      const clock = sinon.useFakeTimers();
-      
-      const animation = await new Animation(a);
-      animation.enqueue({ keyFrames: [[0, 1]], metronomic: true });
-      
-      animation.onloop = sinon.spy();
-      
-      clock.tick(1050);
-      assert.equal(animation.onloop.callCount, 1);
-      assert.equal(animation.reverse, true);
-      clock.restore();
-
-    });
-
-    it('should call onloop when reaching the end of a segment', async function() {
-      const clock = sinon.useFakeTimers();
-      const onloop = sinon.stub();
-      const animation = await new Animation(a);
-      animation.enqueue({ keyFrames: [[0, 1]], loop: true, onloop });
-
-      clock.tick(1050);
-      assert.equal(onloop.callCount, 1);
-      
-      clock.restore();
-
-    });
-
-    it('should run forward on loop when reverse, metronomic, and loop are all true', async function() {
-      const clock = sinon.useFakeTimers();
-      const onloop = sinon.stub();
-      const animation = await new Animation(a);
-      
-      animation.enqueue({ keyFrames: [[0, 1]], loop: true, reverse: true, metronomic: true, onloop });
-      assert.equal(animation.reverse, true);
-      assert.equal(onloop.callCount, 0);
-
-      clock.tick(1050);
-      assert.equal(animation.reverse, false);
-      assert.equal(onloop.callCount, 1);
-      
-      clock.tick(1050);
-      assert.equal(animation.reverse, true);
-      assert.equal(onloop.callCount, 2);
-      
-      clock.restore();
-    });
-
-    it('should run in reverse on loop when metronomic and loop are both true', async function() {
-      const clock = sinon.useFakeTimers();
-      const onloop = sinon.stub();
-      const animation = await new Animation(a);
-      
-      animation.enqueue({ keyFrames: [[0, 1]], loop: true, metronomic: true, onloop });
-      assert.equal(animation.reverse, undefined);
-      assert.equal(onloop.callCount, 0);
-
-      clock.tick(1050);
-      assert.equal(animation.reverse, true);
-      assert.equal(onloop.callCount, 1);
-      
-      clock.tick(1050);
-      assert.equal(animation.reverse, false);
-      assert.equal(onloop.callCount, 2);
-      
-      clock.restore();
-    });
-
-  });
-
   
-
 });
+
+// describe('Events', function() {
+//   describe('close', function() {
+//     it('should fire "close" when a pin goes high', async function() {
+//       // ...
+//     });
+//     // [ all other tests related to close ]
+//   });
+//   // [ All other Events, each with it's own describe ]
+// });
