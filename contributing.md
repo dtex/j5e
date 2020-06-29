@@ -14,46 +14,50 @@ Tests are run using Mocha, Chai,  Sinon, and node's built-in Assert module. Each
 Test files should be organized with the following heirarchy
 
 ````js
-describe('Switch', function() {. // Class name at top level
-  
+describe('className', function() {
+
   describe('Instantiation', function() {
     // All tests related to default instantiation 
-    describe('sink', function() { 
-      it('should be configured for sink drive', async function() {
-        // ...
+    /* describe('Options', function() { 
+      describe('someOptionProperty', async function() {
+        
+        it('should be configured appropriately for the option', async function() {
+          // ...
+        });
+        // [ All other tests related to sink ]
       });
-      // [ All other tests related to sink ]
-    }
+    }); */
     // [ All other options, each with it's own describe ]
   }
 
   describe('Properties', function() {
-    describe('isClosed', function() {
-      it('should report isClosed === true when pin is high', async function() {
+    /* describe('someProperty', function() {
+      it('should respong with the property value', async function() {
         // ...
       });
-      // [ all other tests related to isClosed ]
+      [ all other tests related to someProperty ]
     });
+    */
     // [ All other properties, each with it's own describe ]
   });
   
   describe('Methods', function() {
-    describe('doSomething', function() {
+    /* describe('doSomething', function() {
       it('should doSomething', async function() {
         // ...
       });
     // [ all other tests related to doSomething ]
-    });
+    }); */
     // [ All other methods, each with it's own describe ]
   });
   
   describe('Events', function() {
-    describe('close', function() {
-      it('should fire "close" when a pin goes high', async function() {
+    /* describe('someEvent', function() {
+      it('should fire the event at the right time', async function() {
         // ...
       });
-      // [ all other tests related to close ]
-    });
+      // [ all other tests related to the event ]
+    }); */
     // [ All other Events, each with it's own describe ]
   });
 
