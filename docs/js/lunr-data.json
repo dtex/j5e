@@ -209,80 +209,6 @@
           "set",
           "speed"
         ],
-        "module-j5e_sensor-Sensor.html": [
-          "adc",
-          "allow",
-          "class",
-          "connect",
-          "devic",
-          "input",
-          "j5e/sensor~sensor",
-          "lt;async&gt",
-          "module:j5e/sensor~sensor",
-          "sensor"
-        ],
-        "module-j5e_sensor-Sensor.html#enable": [
-          "disabl",
-          "enabl",
-          "function",
-          "module:j5e/sensor~sensor#en",
-          "object",
-          "sensor"
-        ],
-        "module-j5e_sensor-Sensor.html#disable": [
-          "disabl",
-          "enabl",
-          "function",
-          "module:j5e/sensor~sensor#dis",
-          "object",
-          "sensor"
-        ],
-        "module-j5e_sensor-Sensor.html#read": [
-          "function",
-          "module:j5e/sensor~sensor#read",
-          "number",
-          "read",
-          "sensor",
-          "synchron"
-        ],
-        "module-j5e_sensor-Sensor.html#scale": [
-          "function",
-          "high",
-          "low",
-          "module:j5e/sensor~sensor#scal",
-          "object",
-          "rang",
-          "scale",
-          "scale/scaleto",
-          "set",
-          "valu"
-        ],
-        "module-j5e_sensor-Sensor.html#scaleTo": [
-          "function",
-          "high",
-          "integ",
-          "low",
-          "module:j5e/sensor~sensor#scaleto",
-          "number",
-          "represent",
-          "scale",
-          "scaleto",
-          "valu"
-        ],
-        "module-j5e_sensor-Sensor.html#fscaleTo": [
-          "float",
-          "fscaleto",
-          "function",
-          "high",
-          "low",
-          "module:j5e/sensor~sensor#fscaleto",
-          "number",
-          "precis",
-          "represent",
-          "scale",
-          "singl",
-          "valu"
-        ],
         "module-j5e_led-LED.html": [
           "allow",
           "class",
@@ -555,6 +481,80 @@
           "servo",
           "speed"
         ],
+        "module-j5e_sensor-Sensor.html": [
+          "adc",
+          "allow",
+          "class",
+          "connect",
+          "devic",
+          "input",
+          "j5e/sensor~sensor",
+          "lt;async&gt",
+          "module:j5e/sensor~sensor",
+          "sensor"
+        ],
+        "module-j5e_sensor-Sensor.html#enable": [
+          "disabl",
+          "enabl",
+          "function",
+          "module:j5e/sensor~sensor#en",
+          "object",
+          "sensor"
+        ],
+        "module-j5e_sensor-Sensor.html#disable": [
+          "disabl",
+          "enabl",
+          "function",
+          "module:j5e/sensor~sensor#dis",
+          "object",
+          "sensor"
+        ],
+        "module-j5e_sensor-Sensor.html#read": [
+          "function",
+          "module:j5e/sensor~sensor#read",
+          "number",
+          "read",
+          "sensor",
+          "synchron"
+        ],
+        "module-j5e_sensor-Sensor.html#scale": [
+          "function",
+          "high",
+          "low",
+          "module:j5e/sensor~sensor#scal",
+          "object",
+          "rang",
+          "scale",
+          "scale/scaleto",
+          "set",
+          "valu"
+        ],
+        "module-j5e_sensor-Sensor.html#scaleTo": [
+          "function",
+          "high",
+          "integ",
+          "low",
+          "module:j5e/sensor~sensor#scaleto",
+          "number",
+          "represent",
+          "scale",
+          "scaleto",
+          "valu"
+        ],
+        "module-j5e_sensor-Sensor.html#fscaleTo": [
+          "float",
+          "fscaleto",
+          "function",
+          "high",
+          "low",
+          "module:j5e/sensor~sensor#fscaleto",
+          "number",
+          "precis",
+          "represent",
+          "scale",
+          "singl",
+          "valu"
+        ],
         "module-j5e_rgb-RGB.html": [
           "allow",
           "class",
@@ -738,17 +738,11 @@
         ],
         "module-j5e_rgb.html": [
           "control",
-          "don't",
-          "ia",
           "j5e/rgb",
           "led'",
-          "mess",
           "modul",
           "module:j5e/rgb",
-          "now",
-          "rgb",
-          "right",
-          "us"
+          "rgb"
         ],
         "module-j5e_sensor.html": [
           "devic",
@@ -1248,30 +1242,6 @@
                             "ref": "module-j5e_animation-Animation.html#speed",
                             "tf": 110
                           },
-                          "module-j5e_sensor-Sensor.html#enable": {
-                            "ref": "module-j5e_sensor-Sensor.html#enable",
-                            "tf": 110
-                          },
-                          "module-j5e_sensor-Sensor.html#disable": {
-                            "ref": "module-j5e_sensor-Sensor.html#disable",
-                            "tf": 110
-                          },
-                          "module-j5e_sensor-Sensor.html#read": {
-                            "ref": "module-j5e_sensor-Sensor.html#read",
-                            "tf": 110
-                          },
-                          "module-j5e_sensor-Sensor.html#scale": {
-                            "ref": "module-j5e_sensor-Sensor.html#scale",
-                            "tf": 110
-                          },
-                          "module-j5e_sensor-Sensor.html#scaleTo": {
-                            "ref": "module-j5e_sensor-Sensor.html#scaleTo",
-                            "tf": 110
-                          },
-                          "module-j5e_sensor-Sensor.html#fscaleTo": {
-                            "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
-                            "tf": 110
-                          },
                           "module-j5e_led-LED.html#on": {
                             "ref": "module-j5e_led-LED.html#on",
                             "tf": 110
@@ -1360,6 +1330,30 @@
                             "ref": "module-j5e_servo-Servo.html#ccw",
                             "tf": 110
                           },
+                          "module-j5e_sensor-Sensor.html#enable": {
+                            "ref": "module-j5e_sensor-Sensor.html#enable",
+                            "tf": 110
+                          },
+                          "module-j5e_sensor-Sensor.html#disable": {
+                            "ref": "module-j5e_sensor-Sensor.html#disable",
+                            "tf": 110
+                          },
+                          "module-j5e_sensor-Sensor.html#read": {
+                            "ref": "module-j5e_sensor-Sensor.html#read",
+                            "tf": 110
+                          },
+                          "module-j5e_sensor-Sensor.html#scale": {
+                            "ref": "module-j5e_sensor-Sensor.html#scale",
+                            "tf": 110
+                          },
+                          "module-j5e_sensor-Sensor.html#scaleTo": {
+                            "ref": "module-j5e_sensor-Sensor.html#scaleTo",
+                            "tf": 110
+                          },
+                          "module-j5e_sensor-Sensor.html#fscaleTo": {
+                            "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
+                            "tf": 110
+                          },
                           "module-j5e_rgb-RGB.html#color": {
                             "ref": "module-j5e_rgb-RGB.html#color",
                             "tf": 110
@@ -1427,32 +1421,6 @@
               }
             }
           },
-          "s": {
-            "docs": {},
-            "c": {
-              "docs": {},
-              "a": {
-                "docs": {},
-                "l": {
-                  "docs": {},
-                  "e": {
-                    "docs": {},
-                    "t": {
-                      "docs": {},
-                      "o": {
-                        "docs": {
-                          "module-j5e_sensor-Sensor.html#fscaleTo": {
-                            "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
-                            "tf": 677.1428571428571
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
           "a": {
             "docs": {},
             "d": {
@@ -1512,6 +1480,32 @@
                         "module-j5e_led-LED.html#fadeOut": {
                           "ref": "module-j5e_led-LED.html#fadeOut",
                           "tf": 681.25
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "s": {
+            "docs": {},
+            "c": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "l": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "t": {
+                      "docs": {},
+                      "o": {
+                        "docs": {
+                          "module-j5e_sensor-Sensor.html#fscaleTo": {
+                            "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
+                            "tf": 677.1428571428571
+                          }
                         }
                       }
                     }
@@ -1595,32 +1589,10 @@
                 }
               }
             },
-            "p": {
-              "docs": {},
-              "u": {
-                "docs": {},
-                "t": {
-                  "docs": {
-                    "module-j5e_sensor-Sensor.html": {
-                      "ref": "module-j5e_sensor-Sensor.html",
-                      "tf": 6.25
-                    }
-                  }
-                }
-              }
-            },
             "t": {
               "docs": {},
               "e": {
                 "docs": {},
-                "g": {
-                  "docs": {
-                    "module-j5e_sensor-Sensor.html#scaleTo": {
-                      "ref": "module-j5e_sensor-Sensor.html#scaleTo",
-                      "tf": 10
-                    }
-                  }
-                },
                 "r": {
                   "docs": {},
                   "v": {
@@ -1650,6 +1622,14 @@
                       }
                     }
                   }
+                },
+                "g": {
+                  "docs": {
+                    "module-j5e_sensor-Sensor.html#scaleTo": {
+                      "ref": "module-j5e_sensor-Sensor.html#scaleTo",
+                      "tf": 10
+                    }
+                  }
                 }
               }
             },
@@ -1671,6 +1651,20 @@
                           }
                         }
                       }
+                    }
+                  }
+                }
+              }
+            },
+            "p": {
+              "docs": {},
+              "u": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "module-j5e_sensor-Sensor.html": {
+                      "ref": "module-j5e_sensor-Sensor.html",
+                      "tf": 6.25
                     }
                   }
                 }
@@ -1708,14 +1702,6 @@
                     }
                   }
                 }
-              }
-            }
-          },
-          "a": {
-            "docs": {
-              "module-j5e_rgb.html": {
-                "ref": "module-j5e_rgb.html",
-                "tf": 4.166666666666666
               }
             }
           }
@@ -1801,6 +1787,43 @@
                   },
                   "e": {
                     "docs": {},
+                    "r": {
+                      "docs": {},
+                      "v": {
+                        "docs": {},
+                        "o": {
+                          "docs": {
+                            "module-j5e_servo.html": {
+                              "ref": "module-j5e_servo.html",
+                              "tf": 600
+                            }
+                          },
+                          "~": {
+                            "docs": {},
+                            "s": {
+                              "docs": {},
+                              "e": {
+                                "docs": {},
+                                "r": {
+                                  "docs": {},
+                                  "v": {
+                                    "docs": {},
+                                    "o": {
+                                      "docs": {
+                                        "module-j5e_servo-Servo.html": {
+                                          "ref": "module-j5e_servo-Servo.html",
+                                          "tf": 50
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
                     "n": {
                       "docs": {},
                       "s": {
@@ -1833,43 +1856,6 @@
                                               "tf": 50
                                             }
                                           }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    },
-                    "r": {
-                      "docs": {},
-                      "v": {
-                        "docs": {},
-                        "o": {
-                          "docs": {
-                            "module-j5e_servo.html": {
-                              "ref": "module-j5e_servo.html",
-                              "tf": 600
-                            }
-                          },
-                          "~": {
-                            "docs": {},
-                            "s": {
-                              "docs": {},
-                              "e": {
-                                "docs": {},
-                                "r": {
-                                  "docs": {},
-                                  "v": {
-                                    "docs": {},
-                                    "o": {
-                                      "docs": {
-                                        "module-j5e_servo-Servo.html": {
-                                          "ref": "module-j5e_servo-Servo.html",
-                                          "tf": 50
                                         }
                                       }
                                     }
@@ -2135,36 +2121,6 @@
                 }
               }
             },
-            "p": {
-              "docs": {},
-              "r": {
-                "docs": {},
-                "e": {
-                  "docs": {},
-                  "s": {
-                    "docs": {},
-                    "e": {
-                      "docs": {},
-                      "n": {
-                        "docs": {},
-                        "t": {
-                          "docs": {
-                            "module-j5e_sensor-Sensor.html#scaleTo": {
-                              "ref": "module-j5e_sensor-Sensor.html#scaleTo",
-                              "tf": 10
-                            },
-                            "module-j5e_sensor-Sensor.html#fscaleTo": {
-                              "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
-                              "tf": 7.142857142857142
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
             "q": {
               "docs": {},
               "u": {
@@ -2217,6 +2173,36 @@
                       "module-j5e_servo-Servo.html#stop": {
                         "ref": "module-j5e_servo-Servo.html#stop",
                         "tf": 10
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "p": {
+              "docs": {},
+              "r": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "s": {
+                    "docs": {},
+                    "e": {
+                      "docs": {},
+                      "n": {
+                        "docs": {},
+                        "t": {
+                          "docs": {
+                            "module-j5e_sensor-Sensor.html#scaleTo": {
+                              "ref": "module-j5e_sensor-Sensor.html#scaleTo",
+                              "tf": 10
+                            },
+                            "module-j5e_sensor-Sensor.html#fscaleTo": {
+                              "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
+                              "tf": 7.142857142857142
+                            }
+                          }
+                        }
                       }
                     }
                   }
@@ -2290,28 +2276,13 @@
                 },
                 "module-j5e_rgb.html": {
                   "ref": "module-j5e_rgb.html",
-                  "tf": 12.5
+                  "tf": 20
                 }
               }
             }
           },
           "a": {
             "docs": {},
-            "n": {
-              "docs": {},
-              "g": {
-                "docs": {
-                  "module-j5e_sensor-Sensor.html#scale": {
-                    "ref": "module-j5e_sensor-Sensor.html#scale",
-                    "tf": 10
-                  },
-                  "module-j5e_servo-Servo.html#sweep": {
-                    "ref": "module-j5e_servo-Servo.html#sweep",
-                    "tf": 7.142857142857142
-                  }
-                }
-              }
-            },
             "t": {
               "docs": {},
               "e": {
@@ -2319,6 +2290,21 @@
                   "module-j5e_servo-Servo.html#to": {
                     "ref": "module-j5e_servo-Servo.html#to",
                     "tf": 25
+                  }
+                }
+              }
+            },
+            "n": {
+              "docs": {},
+              "g": {
+                "docs": {
+                  "module-j5e_servo-Servo.html#sweep": {
+                    "ref": "module-j5e_servo-Servo.html#sweep",
+                    "tf": 7.142857142857142
+                  },
+                  "module-j5e_sensor-Sensor.html#scale": {
+                    "ref": "module-j5e_sensor-Sensor.html#scale",
+                    "tf": 10
                   }
                 }
               }
@@ -2343,23 +2329,6 @@
                     "module-j5e_servo.html": {
                       "ref": "module-j5e_servo.html",
                       "tf": 8.333333333333332
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "i": {
-            "docs": {},
-            "g": {
-              "docs": {},
-              "h": {
-                "docs": {},
-                "t": {
-                  "docs": {
-                    "module-j5e_rgb.html": {
-                      "ref": "module-j5e_rgb.html",
-                      "tf": 4.166666666666666
                     }
                   }
                 }
@@ -2691,10 +2660,6 @@
                   "ref": "module-j5e_animation-Animation.html#speed",
                   "tf": 12.5
                 },
-                "module-j5e_sensor-Sensor.html#scale": {
-                  "ref": "module-j5e_sensor-Sensor.html#scale",
-                  "tf": 10
-                },
                 "module-j5e_led-LED.html#brightness": {
                   "ref": "module-j5e_led-LED.html#brightness",
                   "tf": 6.25
@@ -2717,6 +2682,10 @@
                 },
                 "module-j5e_servo-Servo.html#center": {
                   "ref": "module-j5e_servo-Servo.html#center",
+                  "tf": 10
+                },
+                "module-j5e_sensor-Sensor.html#scale": {
+                  "ref": "module-j5e_sensor-Sensor.html#scale",
                   "tf": 10
                 }
               },
@@ -3038,20 +3007,6 @@
                   }
                 }
               }
-            },
-            "n": {
-              "docs": {},
-              "'": {
-                "docs": {},
-                "t": {
-                  "docs": {
-                    "module-j5e_rgb.html": {
-                      "ref": "module-j5e_rgb.html",
-                      "tf": 4.166666666666666
-                    }
-                  }
-                }
-              }
             }
           },
           "e": {
@@ -3179,6 +3134,21 @@
                 }
               }
             },
+            "o": {
+              "docs": {},
+              "d": {
+                "docs": {
+                  "module-j5e_led-LED.html": {
+                    "ref": "module-j5e_led-LED.html",
+                    "tf": 7.142857142857142
+                  },
+                  "module-j5e_led.html": {
+                    "ref": "module-j5e_led.html",
+                    "tf": 3.3333333333333335
+                  }
+                }
+              }
+            },
             "s": {
               "docs": {},
               "a": {
@@ -3196,21 +3166,6 @@
                         "tf": 716.6666666666666
                       }
                     }
-                  }
-                }
-              }
-            },
-            "o": {
-              "docs": {},
-              "d": {
-                "docs": {
-                  "module-j5e_led-LED.html": {
-                    "ref": "module-j5e_led-LED.html",
-                    "tf": 7.142857142857142
-                  },
-                  "module-j5e_led.html": {
-                    "ref": "module-j5e_led.html",
-                    "tf": 3.3333333333333335
                   }
                 }
               }
@@ -3664,7 +3619,7 @@
                         },
                         "module-j5e_rgb.html": {
                           "ref": "module-j5e_rgb.html",
-                          "tf": 4.166666666666666
+                          "tf": 10
                         },
                         "module-j5e_servo.html": {
                           "ref": "module-j5e_servo.html",
@@ -3808,10 +3763,6 @@
                       "ref": "module-j5e_animation-Animation.html",
                       "tf": 110
                     },
-                    "module-j5e_sensor-Sensor.html": {
-                      "ref": "module-j5e_sensor-Sensor.html",
-                      "tf": 116.25
-                    },
                     "module-j5e_led-LED.html": {
                       "ref": "module-j5e_led-LED.html",
                       "tf": 117.14285714285714
@@ -3819,6 +3770,10 @@
                     "module-j5e_servo-Servo.html": {
                       "ref": "module-j5e_servo-Servo.html",
                       "tf": 118.33333333333333
+                    },
+                    "module-j5e_sensor-Sensor.html": {
+                      "ref": "module-j5e_sensor-Sensor.html",
+                      "tf": 116.25
                     },
                     "module-j5e_rgb-RGB.html": {
                       "ref": "module-j5e_rgb-RGB.html",
@@ -4268,16 +4223,16 @@
                                   "ref": "module-j5e_switch-Switch.html",
                                   "tf": 50
                                 },
-                                "module-j5e_sensor-Sensor.html": {
-                                  "ref": "module-j5e_sensor-Sensor.html",
-                                  "tf": 50
-                                },
                                 "module-j5e_led-LED.html": {
                                   "ref": "module-j5e_led-LED.html",
                                   "tf": 50
                                 },
                                 "module-j5e_servo-Servo.html": {
                                   "ref": "module-j5e_servo-Servo.html",
+                                  "tf": 50
+                                },
+                                "module-j5e_sensor-Sensor.html": {
+                                  "ref": "module-j5e_sensor-Sensor.html",
                                   "tf": 50
                                 },
                                 "module-j5e_rgb-RGB.html": {
@@ -4412,7 +4367,7 @@
                   },
                   "module-j5e_rgb.html": {
                     "ref": "module-j5e_rgb.html",
-                    "tf": 4.166666666666666
+                    "tf": 10
                   }
                 }
               }
@@ -4420,6 +4375,17 @@
           },
           "o": {
             "docs": {},
+            "o": {
+              "docs": {},
+              "p": {
+                "docs": {
+                  "module-j5e_led-LED.html#pulse": {
+                    "ref": "module-j5e_led-LED.html#pulse",
+                    "tf": 4.166666666666666
+                  }
+                }
+              }
+            },
             "w": {
               "docs": {
                 "module-j5e_sensor-Sensor.html#scale": {
@@ -4433,17 +4399,6 @@
                 "module-j5e_sensor-Sensor.html#fscaleTo": {
                   "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
                   "tf": 40
-                }
-              }
-            },
-            "o": {
-              "docs": {},
-              "p": {
-                "docs": {
-                  "module-j5e_led-LED.html#pulse": {
-                    "ref": "module-j5e_led-LED.html#pulse",
-                    "tf": 4.166666666666666
-                  }
                 }
               }
             }
@@ -4712,10 +4667,6 @@
                       "ref": "module-j5e_animation-Animation.html",
                       "tf": 8.333333333333332
                     },
-                    "module-j5e_sensor-Sensor.html": {
-                      "ref": "module-j5e_sensor-Sensor.html",
-                      "tf": 6.25
-                    },
                     "module-j5e_led-LED.html": {
                       "ref": "module-j5e_led-LED.html",
                       "tf": 7.142857142857142
@@ -4723,6 +4674,10 @@
                     "module-j5e_servo-Servo.html": {
                       "ref": "module-j5e_servo-Servo.html",
                       "tf": 8.333333333333332
+                    },
+                    "module-j5e_sensor-Sensor.html": {
+                      "ref": "module-j5e_sensor-Sensor.html",
+                      "tf": 6.25
                     },
                     "module-j5e_rgb-RGB.html": {
                       "ref": "module-j5e_rgb-RGB.html",
@@ -5004,6 +4959,21 @@
               }
             }
           },
+          "u": {
+            "docs": {},
+            "t": {
+              "docs": {
+                "module-j5e_led-LED.html#fadeOut": {
+                  "ref": "module-j5e_led-LED.html#fadeOut",
+                  "tf": 6.25
+                },
+                "module-j5e_led-LED.html#pulse": {
+                  "ref": "module-j5e_led-LED.html#pulse",
+                  "tf": 4.166666666666666
+                }
+              }
+            }
+          },
           "b": {
             "docs": {},
             "j": {
@@ -5014,18 +4984,6 @@
                   "docs": {},
                   "t": {
                     "docs": {
-                      "module-j5e_sensor-Sensor.html#enable": {
-                        "ref": "module-j5e_sensor-Sensor.html#enable",
-                        "tf": 50
-                      },
-                      "module-j5e_sensor-Sensor.html#disable": {
-                        "ref": "module-j5e_sensor-Sensor.html#disable",
-                        "tf": 50
-                      },
-                      "module-j5e_sensor-Sensor.html#scale": {
-                        "ref": "module-j5e_sensor-Sensor.html#scale",
-                        "tf": 16.666666666666664
-                      },
                       "module-j5e_led-LED.html#animate": {
                         "ref": "module-j5e_led-LED.html#animate",
                         "tf": 8.333333333333332
@@ -5038,27 +4996,24 @@
                         "ref": "module-j5e_servo-Servo.html#center",
                         "tf": 33.33333333333333
                       },
+                      "module-j5e_sensor-Sensor.html#enable": {
+                        "ref": "module-j5e_sensor-Sensor.html#enable",
+                        "tf": 50
+                      },
+                      "module-j5e_sensor-Sensor.html#disable": {
+                        "ref": "module-j5e_sensor-Sensor.html#disable",
+                        "tf": 50
+                      },
+                      "module-j5e_sensor-Sensor.html#scale": {
+                        "ref": "module-j5e_sensor-Sensor.html#scale",
+                        "tf": 16.666666666666664
+                      },
                       "module-j5e_rgb-RGB.html#color": {
                         "ref": "module-j5e_rgb-RGB.html#color",
                         "tf": 2.941176470588235
                       }
                     }
                   }
-                }
-              }
-            }
-          },
-          "u": {
-            "docs": {},
-            "t": {
-              "docs": {
-                "module-j5e_led-LED.html#fadeOut": {
-                  "ref": "module-j5e_led-LED.html#fadeOut",
-                  "tf": 6.25
-                },
-                "module-j5e_led-LED.html#pulse": {
-                  "ref": "module-j5e_led-LED.html#pulse",
-                  "tf": 4.166666666666666
                 }
               }
             }
@@ -5096,7 +5051,7 @@
                     },
                     "module-j5e_rgb.html": {
                       "ref": "module-j5e_rgb.html",
-                      "tf": 114.16666666666667
+                      "tf": 120
                     },
                     "module-j5e_sensor.html": {
                       "ref": "module-j5e_sensor.html",
@@ -5307,154 +5262,6 @@
                                 },
                                 "e": {
                                   "docs": {},
-                                  "n": {
-                                    "docs": {},
-                                    "s": {
-                                      "docs": {},
-                                      "o": {
-                                        "docs": {},
-                                        "r": {
-                                          "docs": {
-                                            "module-j5e_sensor.html": {
-                                              "ref": "module-j5e_sensor.html",
-                                              "tf": 1300
-                                            }
-                                          },
-                                          "~": {
-                                            "docs": {},
-                                            "s": {
-                                              "docs": {},
-                                              "e": {
-                                                "docs": {},
-                                                "n": {
-                                                  "docs": {},
-                                                  "s": {
-                                                    "docs": {},
-                                                    "o": {
-                                                      "docs": {},
-                                                      "r": {
-                                                        "docs": {
-                                                          "module-j5e_sensor-Sensor.html": {
-                                                            "ref": "module-j5e_sensor-Sensor.html",
-                                                            "tf": 1300
-                                                          }
-                                                        },
-                                                        "#": {
-                                                          "docs": {},
-                                                          "e": {
-                                                            "docs": {},
-                                                            "n": {
-                                                              "docs": {
-                                                                "module-j5e_sensor-Sensor.html#enable": {
-                                                                  "ref": "module-j5e_sensor-Sensor.html#enable",
-                                                                  "tf": 1150
-                                                                }
-                                                              }
-                                                            }
-                                                          },
-                                                          "d": {
-                                                            "docs": {},
-                                                            "i": {
-                                                              "docs": {},
-                                                              "s": {
-                                                                "docs": {
-                                                                  "module-j5e_sensor-Sensor.html#disable": {
-                                                                    "ref": "module-j5e_sensor-Sensor.html#disable",
-                                                                    "tf": 1150
-                                                                  }
-                                                                }
-                                                              }
-                                                            }
-                                                          },
-                                                          "r": {
-                                                            "docs": {},
-                                                            "e": {
-                                                              "docs": {},
-                                                              "a": {
-                                                                "docs": {},
-                                                                "d": {
-                                                                  "docs": {
-                                                                    "module-j5e_sensor-Sensor.html#read": {
-                                                                      "ref": "module-j5e_sensor-Sensor.html#read",
-                                                                      "tf": 1150
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            }
-                                                          },
-                                                          "s": {
-                                                            "docs": {},
-                                                            "c": {
-                                                              "docs": {},
-                                                              "a": {
-                                                                "docs": {},
-                                                                "l": {
-                                                                  "docs": {
-                                                                    "module-j5e_sensor-Sensor.html#scale": {
-                                                                      "ref": "module-j5e_sensor-Sensor.html#scale",
-                                                                      "tf": 1150
-                                                                    }
-                                                                  },
-                                                                  "e": {
-                                                                    "docs": {},
-                                                                    "t": {
-                                                                      "docs": {},
-                                                                      "o": {
-                                                                        "docs": {
-                                                                          "module-j5e_sensor-Sensor.html#scaleTo": {
-                                                                            "ref": "module-j5e_sensor-Sensor.html#scaleTo",
-                                                                            "tf": 1150
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            }
-                                                          },
-                                                          "f": {
-                                                            "docs": {},
-                                                            "s": {
-                                                              "docs": {},
-                                                              "c": {
-                                                                "docs": {},
-                                                                "a": {
-                                                                  "docs": {},
-                                                                  "l": {
-                                                                    "docs": {},
-                                                                    "e": {
-                                                                      "docs": {},
-                                                                      "t": {
-                                                                        "docs": {},
-                                                                        "o": {
-                                                                          "docs": {
-                                                                            "module-j5e_sensor-Sensor.html#fscaleTo": {
-                                                                              "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
-                                                                              "tf": 1150
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  },
                                   "r": {
                                     "docs": {},
                                     "v": {
@@ -5611,6 +5418,154 @@
                                                               "module-j5e_servo-Servo.html#home": {
                                                                 "ref": "module-j5e_servo-Servo.html#home",
                                                                 "tf": 1150
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "n": {
+                                    "docs": {},
+                                    "s": {
+                                      "docs": {},
+                                      "o": {
+                                        "docs": {},
+                                        "r": {
+                                          "docs": {
+                                            "module-j5e_sensor.html": {
+                                              "ref": "module-j5e_sensor.html",
+                                              "tf": 1300
+                                            }
+                                          },
+                                          "~": {
+                                            "docs": {},
+                                            "s": {
+                                              "docs": {},
+                                              "e": {
+                                                "docs": {},
+                                                "n": {
+                                                  "docs": {},
+                                                  "s": {
+                                                    "docs": {},
+                                                    "o": {
+                                                      "docs": {},
+                                                      "r": {
+                                                        "docs": {
+                                                          "module-j5e_sensor-Sensor.html": {
+                                                            "ref": "module-j5e_sensor-Sensor.html",
+                                                            "tf": 1300
+                                                          }
+                                                        },
+                                                        "#": {
+                                                          "docs": {},
+                                                          "e": {
+                                                            "docs": {},
+                                                            "n": {
+                                                              "docs": {
+                                                                "module-j5e_sensor-Sensor.html#enable": {
+                                                                  "ref": "module-j5e_sensor-Sensor.html#enable",
+                                                                  "tf": 1150
+                                                                }
+                                                              }
+                                                            }
+                                                          },
+                                                          "d": {
+                                                            "docs": {},
+                                                            "i": {
+                                                              "docs": {},
+                                                              "s": {
+                                                                "docs": {
+                                                                  "module-j5e_sensor-Sensor.html#disable": {
+                                                                    "ref": "module-j5e_sensor-Sensor.html#disable",
+                                                                    "tf": 1150
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          },
+                                                          "r": {
+                                                            "docs": {},
+                                                            "e": {
+                                                              "docs": {},
+                                                              "a": {
+                                                                "docs": {},
+                                                                "d": {
+                                                                  "docs": {
+                                                                    "module-j5e_sensor-Sensor.html#read": {
+                                                                      "ref": "module-j5e_sensor-Sensor.html#read",
+                                                                      "tf": 1150
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          },
+                                                          "s": {
+                                                            "docs": {},
+                                                            "c": {
+                                                              "docs": {},
+                                                              "a": {
+                                                                "docs": {},
+                                                                "l": {
+                                                                  "docs": {
+                                                                    "module-j5e_sensor-Sensor.html#scale": {
+                                                                      "ref": "module-j5e_sensor-Sensor.html#scale",
+                                                                      "tf": 1150
+                                                                    }
+                                                                  },
+                                                                  "e": {
+                                                                    "docs": {},
+                                                                    "t": {
+                                                                      "docs": {},
+                                                                      "o": {
+                                                                        "docs": {
+                                                                          "module-j5e_sensor-Sensor.html#scaleTo": {
+                                                                            "ref": "module-j5e_sensor-Sensor.html#scaleTo",
+                                                                            "tf": 1150
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          },
+                                                          "f": {
+                                                            "docs": {},
+                                                            "s": {
+                                                              "docs": {},
+                                                              "c": {
+                                                                "docs": {},
+                                                                "a": {
+                                                                  "docs": {},
+                                                                  "l": {
+                                                                    "docs": {},
+                                                                    "e": {
+                                                                      "docs": {},
+                                                                      "t": {
+                                                                        "docs": {},
+                                                                        "o": {
+                                                                          "docs": {
+                                                                            "module-j5e_sensor-Sensor.html#fscaleTo": {
+                                                                              "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
+                                                                              "tf": 1150
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
                                                               }
                                                             }
                                                           }
@@ -6312,17 +6267,6 @@
                   }
                 }
               }
-            },
-            "s": {
-              "docs": {},
-              "s": {
-                "docs": {
-                  "module-j5e_rgb.html": {
-                    "ref": "module-j5e_rgb.html",
-                    "tf": 4.166666666666666
-                  }
-                }
-              }
             }
           },
           "a": {
@@ -6459,34 +6403,6 @@
               }
             }
           },
-          "u": {
-            "docs": {},
-            "m": {
-              "docs": {},
-              "b": {
-                "docs": {},
-                "e": {
-                  "docs": {},
-                  "r": {
-                    "docs": {
-                      "module-j5e_sensor-Sensor.html#read": {
-                        "ref": "module-j5e_sensor-Sensor.html#read",
-                        "tf": 50
-                      },
-                      "module-j5e_sensor-Sensor.html#scaleTo": {
-                        "ref": "module-j5e_sensor-Sensor.html#scaleTo",
-                        "tf": 20
-                      },
-                      "module-j5e_sensor-Sensor.html#fscaleTo": {
-                        "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
-                        "tf": 20
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
           "e": {
             "docs": {},
             "w": {
@@ -6528,16 +6444,36 @@
               }
             }
           },
-          "o": {
+          "u": {
             "docs": {},
-            "w": {
-              "docs": {
-                "module-j5e_rgb.html": {
-                  "ref": "module-j5e_rgb.html",
-                  "tf": 4.166666666666666
+            "m": {
+              "docs": {},
+              "b": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "r": {
+                    "docs": {
+                      "module-j5e_sensor-Sensor.html#read": {
+                        "ref": "module-j5e_sensor-Sensor.html#read",
+                        "tf": 50
+                      },
+                      "module-j5e_sensor-Sensor.html#scaleTo": {
+                        "ref": "module-j5e_sensor-Sensor.html#scaleTo",
+                        "tf": 20
+                      },
+                      "module-j5e_sensor-Sensor.html#fscaleTo": {
+                        "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
+                        "tf": 20
+                      }
+                    }
+                  }
                 }
               }
-            },
+            }
+          },
+          "o": {
+            "docs": {},
             "d": {
               "docs": {},
               "e": {
@@ -6693,10 +6629,6 @@
                 "ref": "module-j5e_fn.html",
                 "tf": 5
               },
-              "module-j5e_rgb.html": {
-                "ref": "module-j5e_rgb.html",
-                "tf": 4.166666666666666
-              },
               "module-j5e_fn-timer.html": {
                 "ref": "module-j5e_fn-timer.html",
                 "tf": 4.166666666666666
@@ -6791,30 +6723,77 @@
             }
           }
         },
-        "h": {
+        "v": {
           "docs": {},
-          "i": {
+          "a": {
             "docs": {},
-            "g": {
-              "docs": {},
-              "h": {
+            "l": {
+              "docs": {
+                "module-j5e_led-LED.html#fade": {
+                  "ref": "module-j5e_led-LED.html#fade",
+                  "tf": 20
+                },
+                "module-j5e_rgb-RGB.html#fade": {
+                  "ref": "module-j5e_rgb-RGB.html#fade",
+                  "tf": 20
+                }
+              },
+              "u": {
                 "docs": {
+                  "module-j5e_led-LED.html#brightness": {
+                    "ref": "module-j5e_led-LED.html#brightness",
+                    "tf": 33.33333333333333
+                  },
+                  "module-j5e_led-LED.html#intensity": {
+                    "ref": "module-j5e_led-LED.html#intensity",
+                    "tf": 33.33333333333333
+                  },
+                  "module-j5e_led-LED.html#fade": {
+                    "ref": "module-j5e_led-LED.html#fade",
+                    "tf": 11.11111111111111
+                  },
                   "module-j5e_sensor-Sensor.html#scale": {
                     "ref": "module-j5e_sensor-Sensor.html#scale",
-                    "tf": 33.33333333333333
+                    "tf": 10
                   },
                   "module-j5e_sensor-Sensor.html#scaleTo": {
                     "ref": "module-j5e_sensor-Sensor.html#scaleTo",
-                    "tf": 20
+                    "tf": 10
                   },
                   "module-j5e_sensor-Sensor.html#fscaleTo": {
                     "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
-                    "tf": 20
+                    "tf": 7.142857142857142
+                  },
+                  "module-j5e_rgb-RGB.html#color": {
+                    "ref": "module-j5e_rgb-RGB.html#color",
+                    "tf": 5.88235294117647
+                  },
+                  "module-j5e_rgb-RGB.html#on": {
+                    "ref": "module-j5e_rgb-RGB.html#on",
+                    "tf": 7.142857142857142
+                  },
+                  "module-j5e_rgb-RGB.html#fade": {
+                    "ref": "module-j5e_rgb-RGB.html#fade",
+                    "tf": 12.5
+                  }
+                }
+              }
+            },
+            "r": {
+              "docs": {},
+              "i": {
+                "docs": {
+                  "module-j5e_led.html": {
+                    "ref": "module-j5e_led.html",
+                    "tf": 3.3333333333333335
                   }
                 }
               }
             }
-          },
+          }
+        },
+        "h": {
+          "docs": {},
           "o": {
             "docs": {},
             "b": {
@@ -6842,6 +6821,28 @@
                   "module-j5e_servo-Servo.html#home": {
                     "ref": "module-j5e_servo-Servo.html#home",
                     "tf": 700
+                  }
+                }
+              }
+            }
+          },
+          "i": {
+            "docs": {},
+            "g": {
+              "docs": {},
+              "h": {
+                "docs": {
+                  "module-j5e_sensor-Sensor.html#scale": {
+                    "ref": "module-j5e_sensor-Sensor.html#scale",
+                    "tf": 33.33333333333333
+                  },
+                  "module-j5e_sensor-Sensor.html#scaleTo": {
+                    "ref": "module-j5e_sensor-Sensor.html#scaleTo",
+                    "tf": 20
+                  },
+                  "module-j5e_sensor-Sensor.html#fscaleTo": {
+                    "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
+                    "tf": 20
                   }
                 }
               }
@@ -6888,75 +6889,6 @@
                       "ref": "module-j5e_animation.html",
                       "tf": 3.571428571428571
                     }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "v": {
-          "docs": {},
-          "a": {
-            "docs": {},
-            "l": {
-              "docs": {
-                "module-j5e_led-LED.html#fade": {
-                  "ref": "module-j5e_led-LED.html#fade",
-                  "tf": 20
-                },
-                "module-j5e_rgb-RGB.html#fade": {
-                  "ref": "module-j5e_rgb-RGB.html#fade",
-                  "tf": 20
-                }
-              },
-              "u": {
-                "docs": {
-                  "module-j5e_sensor-Sensor.html#scale": {
-                    "ref": "module-j5e_sensor-Sensor.html#scale",
-                    "tf": 10
-                  },
-                  "module-j5e_sensor-Sensor.html#scaleTo": {
-                    "ref": "module-j5e_sensor-Sensor.html#scaleTo",
-                    "tf": 10
-                  },
-                  "module-j5e_sensor-Sensor.html#fscaleTo": {
-                    "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
-                    "tf": 7.142857142857142
-                  },
-                  "module-j5e_led-LED.html#brightness": {
-                    "ref": "module-j5e_led-LED.html#brightness",
-                    "tf": 33.33333333333333
-                  },
-                  "module-j5e_led-LED.html#intensity": {
-                    "ref": "module-j5e_led-LED.html#intensity",
-                    "tf": 33.33333333333333
-                  },
-                  "module-j5e_led-LED.html#fade": {
-                    "ref": "module-j5e_led-LED.html#fade",
-                    "tf": 11.11111111111111
-                  },
-                  "module-j5e_rgb-RGB.html#color": {
-                    "ref": "module-j5e_rgb-RGB.html#color",
-                    "tf": 5.88235294117647
-                  },
-                  "module-j5e_rgb-RGB.html#on": {
-                    "ref": "module-j5e_rgb-RGB.html#on",
-                    "tf": 7.142857142857142
-                  },
-                  "module-j5e_rgb-RGB.html#fade": {
-                    "ref": "module-j5e_rgb-RGB.html#fade",
-                    "tf": 12.5
-                  }
-                }
-              }
-            },
-            "r": {
-              "docs": {},
-              "i": {
-                "docs": {
-                  "module-j5e_led.html": {
-                    "ref": "module-j5e_led.html",
-                    "tf": 3.3333333333333335
                   }
                 }
               }
@@ -7057,7 +6989,7 @@
           }
         }
       },
-      "length": 642
+      "length": 636
     },
     "corpusTokens": [
       "0",
@@ -7108,7 +7040,6 @@
       "directli",
       "disabl",
       "document",
-      "don't",
       "durat",
       "each",
       "eas",
@@ -7147,7 +7078,6 @@
       "high",
       "hobbi",
       "home",
-      "ia",
       "index",
       "inform",
       "inoutsin",
@@ -7195,7 +7125,6 @@
       "max",
       "maximum",
       "meant",
-      "mess",
       "method",
       "min",
       "minimum",
@@ -7269,7 +7198,6 @@
       "necessari",
       "new",
       "node.j",
-      "now",
       "number",
       "object",
       "on",
@@ -7304,7 +7232,6 @@
       "resum",
       "return",
       "rgb",
-      "right",
       "rotat",
       "scale",
       "scale/scaleto",
@@ -7553,77 +7480,6 @@
       "summary": "",
       "description": "Get or set the current playback speed"
     },
-    "module-j5e_sensor-Sensor.html": {
-      "id": "module-j5e_sensor-Sensor.html",
-      "kind": "class",
-      "title": "&lt;async&gt; j5e/sensor~Sensor",
-      "longname": "module:j5e/sensor~Sensor",
-      "name": "Sensor",
-      "tags": "module:j5e/sensor~Sensor",
-      "summary": "",
-      "description": "The Sensor class allows for input from sensor devices that connect to an ADC",
-      "body": ""
-    },
-    "module-j5e_sensor-Sensor.html#enable": {
-      "id": "module-j5e_sensor-Sensor.html#enable",
-      "kind": "function",
-      "title": "enable() → {Object}",
-      "longname": "module:j5e/sensor~Sensor#enable",
-      "name": "enable",
-      "tags": "module:j5e/sensor~Sensor#enable enable",
-      "summary": "",
-      "description": "Enable a disabled sensor."
-    },
-    "module-j5e_sensor-Sensor.html#disable": {
-      "id": "module-j5e_sensor-Sensor.html#disable",
-      "kind": "function",
-      "title": "disable() → {Object}",
-      "longname": "module:j5e/sensor~Sensor#disable",
-      "name": "disable",
-      "tags": "module:j5e/sensor~Sensor#disable disable",
-      "summary": "",
-      "description": "Disable an enabled sensor."
-    },
-    "module-j5e_sensor-Sensor.html#read": {
-      "id": "module-j5e_sensor-Sensor.html#read",
-      "kind": "function",
-      "title": "read() → {Number}",
-      "longname": "module:j5e/sensor~Sensor#read",
-      "name": "read",
-      "tags": "module:j5e/sensor~Sensor#read read",
-      "summary": "",
-      "description": "Synchronous read of a sensor."
-    },
-    "module-j5e_sensor-Sensor.html#scale": {
-      "id": "module-j5e_sensor-Sensor.html#scale",
-      "kind": "function",
-      "title": "scale( low, high [, low, high ] ) → {Object}",
-      "longname": "module:j5e/sensor~Sensor#scale",
-      "name": "scale",
-      "tags": "module:j5e/sensor~Sensor#scale scale",
-      "summary": "",
-      "description": "scale/scaleTo Set a value scaling range"
-    },
-    "module-j5e_sensor-Sensor.html#scaleTo": {
-      "id": "module-j5e_sensor-Sensor.html#scaleTo",
-      "kind": "function",
-      "title": "scaleTo( low, low, high ) → {Number}",
-      "longname": "module:j5e/sensor~Sensor#scaleTo",
-      "name": "scaleTo",
-      "tags": "module:j5e/sensor~Sensor#scaleTo scaleTo",
-      "summary": "",
-      "description": "scaleTo Scales value to integer representation"
-    },
-    "module-j5e_sensor-Sensor.html#fscaleTo": {
-      "id": "module-j5e_sensor-Sensor.html#fscaleTo",
-      "kind": "function",
-      "title": "fscaleTo( low, low, high ) → {Number}",
-      "longname": "module:j5e/sensor~Sensor#fscaleTo",
-      "name": "fscaleTo",
-      "tags": "module:j5e/sensor~Sensor#fscaleTo fscaleTo",
-      "summary": "",
-      "description": "fscaleTo Scales value to single precision float representation"
-    },
     "module-j5e_led-LED.html": {
       "id": "module-j5e_led-LED.html",
       "kind": "class",
@@ -7866,6 +7722,77 @@
       "summary": "",
       "description": "Move a continuous rotation servo counter-clockwise"
     },
+    "module-j5e_sensor-Sensor.html": {
+      "id": "module-j5e_sensor-Sensor.html",
+      "kind": "class",
+      "title": "&lt;async&gt; j5e/sensor~Sensor",
+      "longname": "module:j5e/sensor~Sensor",
+      "name": "Sensor",
+      "tags": "module:j5e/sensor~Sensor",
+      "summary": "",
+      "description": "The Sensor class allows for input from sensor devices that connect to an ADC",
+      "body": ""
+    },
+    "module-j5e_sensor-Sensor.html#enable": {
+      "id": "module-j5e_sensor-Sensor.html#enable",
+      "kind": "function",
+      "title": "enable() → {Object}",
+      "longname": "module:j5e/sensor~Sensor#enable",
+      "name": "enable",
+      "tags": "module:j5e/sensor~Sensor#enable enable",
+      "summary": "",
+      "description": "Enable a disabled sensor."
+    },
+    "module-j5e_sensor-Sensor.html#disable": {
+      "id": "module-j5e_sensor-Sensor.html#disable",
+      "kind": "function",
+      "title": "disable() → {Object}",
+      "longname": "module:j5e/sensor~Sensor#disable",
+      "name": "disable",
+      "tags": "module:j5e/sensor~Sensor#disable disable",
+      "summary": "",
+      "description": "Disable an enabled sensor."
+    },
+    "module-j5e_sensor-Sensor.html#read": {
+      "id": "module-j5e_sensor-Sensor.html#read",
+      "kind": "function",
+      "title": "read() → {Number}",
+      "longname": "module:j5e/sensor~Sensor#read",
+      "name": "read",
+      "tags": "module:j5e/sensor~Sensor#read read",
+      "summary": "",
+      "description": "Synchronous read of a sensor."
+    },
+    "module-j5e_sensor-Sensor.html#scale": {
+      "id": "module-j5e_sensor-Sensor.html#scale",
+      "kind": "function",
+      "title": "scale( low, high [, low, high ] ) → {Object}",
+      "longname": "module:j5e/sensor~Sensor#scale",
+      "name": "scale",
+      "tags": "module:j5e/sensor~Sensor#scale scale",
+      "summary": "",
+      "description": "scale/scaleTo Set a value scaling range"
+    },
+    "module-j5e_sensor-Sensor.html#scaleTo": {
+      "id": "module-j5e_sensor-Sensor.html#scaleTo",
+      "kind": "function",
+      "title": "scaleTo( low, low, high ) → {Number}",
+      "longname": "module:j5e/sensor~Sensor#scaleTo",
+      "name": "scaleTo",
+      "tags": "module:j5e/sensor~Sensor#scaleTo scaleTo",
+      "summary": "",
+      "description": "scaleTo Scales value to integer representation"
+    },
+    "module-j5e_sensor-Sensor.html#fscaleTo": {
+      "id": "module-j5e_sensor-Sensor.html#fscaleTo",
+      "kind": "function",
+      "title": "fscaleTo( low, low, high ) → {Number}",
+      "longname": "module:j5e/sensor~Sensor#fscaleTo",
+      "name": "fscaleTo",
+      "tags": "module:j5e/sensor~Sensor#fscaleTo fscaleTo",
+      "summary": "",
+      "description": "fscaleTo Scales value to single precision float representation"
+    },
     "module-j5e_rgb-RGB.html": {
       "id": "module-j5e_rgb-RGB.html",
       "kind": "class",
@@ -8029,7 +7956,7 @@
       "name": "j5e/rgb",
       "tags": "module:j5e/rgb",
       "summary": "",
-      "description": "RGB IA A MESS RIGHT NOW. DON'T USE RGB module - For controlling RGB LED's",
+      "description": "RGB module - For controlling RGB LED's",
       "body": ""
     },
     "module-j5e_sensor.html": {
