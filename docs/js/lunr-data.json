@@ -357,6 +357,16 @@
           "puls",
           "stop"
         ],
+        "module-j5e_button-Button.html": [
+          "allow",
+          "button",
+          "class",
+          "control",
+          "digit",
+          "j5e/button~button",
+          "lt;async&gt",
+          "module:j5e/button~button"
+        ],
         "module-j5e_servo-Servo.html": [
           "allow",
           "class",
@@ -694,6 +704,13 @@
           "tween",
           "work"
         ],
+        "module-j5e_button.html": [
+          "button",
+          "j5e/button",
+          "modul",
+          "module:j5e/button",
+          "work"
+        ],
         "module-j5e_easing.html": [
           "anim",
           "eas",
@@ -788,7 +805,7 @@
           "xs"
         ]
       },
-      "length": 69
+      "length": 71
     },
     "tokenStore": {
       "root": {
@@ -1939,6 +1956,55 @@
                             "module-j5e_led-LED.html": {
                               "ref": "module-j5e_led-LED.html",
                               "tf": 50
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "b": {
+                  "docs": {},
+                  "u": {
+                    "docs": {},
+                    "t": {
+                      "docs": {},
+                      "t": {
+                        "docs": {},
+                        "o": {
+                          "docs": {},
+                          "n": {
+                            "docs": {
+                              "module-j5e_button.html": {
+                                "ref": "module-j5e_button.html",
+                                "tf": 600
+                              }
+                            },
+                            "~": {
+                              "docs": {},
+                              "b": {
+                                "docs": {},
+                                "u": {
+                                  "docs": {},
+                                  "t": {
+                                    "docs": {},
+                                    "t": {
+                                      "docs": {},
+                                      "o": {
+                                        "docs": {},
+                                        "n": {
+                                          "docs": {
+                                            "module-j5e_button-Button.html": {
+                                              "ref": "module-j5e_button-Button.html",
+                                              "tf": 50
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
                             }
                           }
                         }
@@ -3126,6 +3192,10 @@
                       "ref": "module-j5e_switch-Switch.html",
                       "tf": 8.333333333333332
                     },
+                    "module-j5e_button-Button.html": {
+                      "ref": "module-j5e_button-Button.html",
+                      "tf": 8.333333333333332
+                    },
                     "module-j5e_led.html": {
                       "ref": "module-j5e_led.html",
                       "tf": 3.3333333333333335
@@ -3605,6 +3675,10 @@
                           "ref": "module-j5e_led-LED.html",
                           "tf": 7.142857142857142
                         },
+                        "module-j5e_button-Button.html": {
+                          "ref": "module-j5e_button-Button.html",
+                          "tf": 8.333333333333332
+                        },
                         "module-j5e_servo-Servo.html": {
                           "ref": "module-j5e_servo-Servo.html",
                           "tf": 8.333333333333332
@@ -3766,6 +3840,10 @@
                     "module-j5e_led-LED.html": {
                       "ref": "module-j5e_led-LED.html",
                       "tf": 117.14285714285714
+                    },
+                    "module-j5e_button-Button.html": {
+                      "ref": "module-j5e_button-Button.html",
+                      "tf": 118.33333333333333
                     },
                     "module-j5e_servo-Servo.html": {
                       "ref": "module-j5e_servo-Servo.html",
@@ -4227,6 +4305,10 @@
                                   "ref": "module-j5e_led-LED.html",
                                   "tf": 50
                                 },
+                                "module-j5e_button-Button.html": {
+                                  "ref": "module-j5e_button-Button.html",
+                                  "tf": 50
+                                },
                                 "module-j5e_servo-Servo.html": {
                                   "ref": "module-j5e_servo-Servo.html",
                                   "tf": 50
@@ -4671,6 +4753,10 @@
                       "ref": "module-j5e_led-LED.html",
                       "tf": 7.142857142857142
                     },
+                    "module-j5e_button-Button.html": {
+                      "ref": "module-j5e_button-Button.html",
+                      "tf": 8.333333333333332
+                    },
                     "module-j5e_servo-Servo.html": {
                       "ref": "module-j5e_servo-Servo.html",
                       "tf": 8.333333333333332
@@ -5036,6 +5122,10 @@
                     "module-j5e_animation.html": {
                       "ref": "module-j5e_animation.html",
                       "tf": 113.57142857142857
+                    },
+                    "module-j5e_button.html": {
+                      "ref": "module-j5e_button.html",
+                      "tf": 110
                     },
                     "module-j5e_easing.html": {
                       "ref": "module-j5e_easing.html",
@@ -5967,6 +6057,55 @@
                                   }
                                 }
                               },
+                              "b": {
+                                "docs": {},
+                                "u": {
+                                  "docs": {},
+                                  "t": {
+                                    "docs": {},
+                                    "t": {
+                                      "docs": {},
+                                      "o": {
+                                        "docs": {},
+                                        "n": {
+                                          "docs": {
+                                            "module-j5e_button.html": {
+                                              "ref": "module-j5e_button.html",
+                                              "tf": 1300
+                                            }
+                                          },
+                                          "~": {
+                                            "docs": {},
+                                            "b": {
+                                              "docs": {},
+                                              "u": {
+                                                "docs": {},
+                                                "t": {
+                                                  "docs": {},
+                                                  "t": {
+                                                    "docs": {},
+                                                    "o": {
+                                                      "docs": {},
+                                                      "n": {
+                                                        "docs": {
+                                                          "module-j5e_button-Button.html": {
+                                                            "ref": "module-j5e_button-Button.html",
+                                                            "tf": 1300
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
                               "r": {
                                 "docs": {},
                                 "g": {
@@ -6585,6 +6724,30 @@
               }
             }
           },
+          "u": {
+            "docs": {},
+            "t": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "n": {
+                    "docs": {
+                      "module-j5e_button-Button.html": {
+                        "ref": "module-j5e_button-Button.html",
+                        "tf": 516.6666666666666
+                      },
+                      "module-j5e_button.html": {
+                        "ref": "module-j5e_button.html",
+                        "tf": 25
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
           "e": {
             "docs": {},
             "t": {
@@ -6927,6 +7090,10 @@
                     "ref": "module-j5e_animation.html",
                     "tf": 3.571428571428571
                   },
+                  "module-j5e_button.html": {
+                    "ref": "module-j5e_button.html",
+                    "tf": 25
+                  },
                   "module-j5e_sensor.html": {
                     "ref": "module-j5e_sensor.html",
                     "tf": 12.5
@@ -6989,7 +7156,7 @@
           }
         }
       },
-      "length": 636
+      "length": 649
     },
     "corpusTokens": [
       "0",
@@ -7011,6 +7178,7 @@
       "blink",
       "blue",
       "bright",
+      "button",
       "c",
       "call",
       "callback",
@@ -7092,6 +7260,8 @@
       "j5e'",
       "j5e/anim",
       "j5e/animation~anim",
+      "j5e/button",
+      "j5e/button~button",
       "j5e/eas",
       "j5e/fn",
       "j5e/fn~tim",
@@ -7136,6 +7306,8 @@
       "module:j5e/animation~animation#play",
       "module:j5e/animation~animation#spe",
       "module:j5e/animation~animation#stop",
+      "module:j5e/button",
+      "module:j5e/button~button",
       "module:j5e/eas",
       "module:j5e/event.emitt",
       "module:j5e/event.emitter#emit",
@@ -7611,6 +7783,17 @@
       "summary": "",
       "description": "stop Stop the led from blinking, pulsing, fading, or animating"
     },
+    "module-j5e_button-Button.html": {
+      "id": "module-j5e_button-Button.html",
+      "kind": "class",
+      "title": "&lt;async&gt; j5e/button~Button",
+      "longname": "module:j5e/button~Button",
+      "name": "Button",
+      "tags": "module:j5e/button~Button",
+      "summary": "",
+      "description": "The Button class allows for control of digital buttons",
+      "body": ""
+    },
     "module-j5e_servo-Servo.html": {
       "id": "module-j5e_servo-Servo.html",
       "kind": "class",
@@ -7913,6 +8096,17 @@
       "tags": "module:j5e/animation",
       "summary": "",
       "description": "The j5e Animation module handles tweening between a series of key frames. Works with with the LED, RGB, and Servo classes.",
+      "body": ""
+    },
+    "module-j5e_button.html": {
+      "id": "module-j5e_button.html",
+      "kind": "module",
+      "title": "j5e/button",
+      "longname": "module:j5e/button",
+      "name": "j5e/button",
+      "tags": "module:j5e/button",
+      "summary": "",
+      "description": "For working with buttons",
       "body": ""
     },
     "module-j5e_easing.html": {

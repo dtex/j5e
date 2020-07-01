@@ -1,8 +1,8 @@
 {
 	"include": [
 		"$(MODDABLE)/modules/io/manifest.json",
-		"$(j5e)/lib/switch/manifest.json",
-		"$(j5e)/lib/led/manifest.json"
+    "$(j5e)/lib/button/manifest.json",
+    "$(j5e)/lib/led/manifest.json"
 	],
 	"modules": {
 		"*": "./main"
