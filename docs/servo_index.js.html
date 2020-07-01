@@ -95,7 +95,7 @@
 		<section class="source-section">
 			<article></article>
 			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">/**
- * For controlling hobby servos, continuous rotation servos, 
+ * For controlling hobby servos, continuous rotation servos
  * @module j5e/servo
  * @requires module:j5e/animation
  * @requires module:j5e/easing
@@ -105,10 +105,10 @@
 
 import Animation from "j5e/animation";
 import { Emitter } from "j5e/event";
-import {constrain, normalizeParams, getProvider, map, timer} from "j5e/fn";
-import { inOutSine } from "j5e/easing"; 
+import { constrain, normalizeParams, getProvider, map, timer } from "j5e/fn";
+import { inOutSine } from "j5e/easing";
 
-/** 
+/**
  * Class representing a Servo
  * @classdesc The Servo class allows for control of hobby servos
  * @async
@@ -116,7 +116,7 @@ import { inOutSine } from "j5e/easing";
  * @fires move:complete - Fires when a servo reaches its requested position
  */
 class Servo extends Emitter {
-  
+
   #state = {
     history: [],
     isRunning: false,
@@ -153,7 +153,7 @@ class Servo extends Emitter {
    *
    * const servo = await new Servo(12);
    * servo.sweep();
-   * 
+   *
    * @example
    * &lt;caption>Move a continuos rotation servo forward&lt;/caption>
    * import Servo from "j5e/servo";
@@ -162,12 +162,12 @@ class Servo extends Emitter {
    * servo.cw();
    */
   constructor(options) {
-    return (async () => {
+    return (async() => {
       options = normalizeParams(options);
 
       const Provider = await getProvider(options, "builtin/pwm");
       super();
-      
+
       this.io = new Provider({
         pin: options.pin,
         mode: Provider.Output,
@@ -175,10 +175,14 @@ class Servo extends Emitter {
       });
 
       this.#state.pwmRange = options.pwmRange || [600, 2400];
-      this.#state.pwmRange = [34, 120]; // This line is a hack until we can write in µs
+
+      // This line is a hack until we can write in µs
+      this.#state.pwmRange = [34, 120];
       this.#state.degreeRange = options.degreeRange || [0, 180];
       this.#state.deadband = options.deadband || [1500, 1500];
-      this.#state.deadband = options.deadband || [77, 77]; // This line is a hack until we can write in µs
+
+      // This line is a hack until we can write in µs
+      this.#state.deadband = options.deadband || [77, 77];
       this.#state.offset = options.offset || 0;
       this.#state.startAt = options.startAt || (this.#state.degreeRange[1] - this.#state.degreeRange[0]) / 2;
       this.#state.range = options.range || [0 - this.offset, 180 - this.offset];
@@ -201,7 +205,7 @@ class Servo extends Emitter {
                 timestamp: Date.now(),
                 degrees: this.#state.startAt,
                 target: this.#state.startAt
-              }
+              };
             }
           }
         },
@@ -227,7 +231,7 @@ class Servo extends Emitter {
         if (options.type === "continuous") {
           this.stop();
         }
-      
+
       }
 
       return this;
@@ -249,7 +253,7 @@ class Servo extends Emitter {
    * @ignore
    */
   update(degrees) {
-    
+
     // If same degrees return immediately.
     if (this.last &amp;&amp; this.last.degrees === degrees) {
       return this;
@@ -281,14 +285,14 @@ class Servo extends Emitter {
    *
    * const servo = await new Servo(12);
    * servo.to(180);
-   * 
+   *
    * @example
    * &lt;caption>Move a servo to 180° over one second&lt;/caption>
    * import Servo from "j5e/servo";
    *
    * const servo = await new Servo(12);
    * servo.to(180, 1000);
-   * 
+   *
    * @example
    * &lt;caption>Move a servo to 180° using an animation segment object&lt;/caption>
    * import Servo from "j5e/servo";
@@ -327,9 +331,9 @@ class Servo extends Emitter {
     if (typeof degrees === "object") {
 
       Object.assign(options, degrees);
-      
+
       this.#state.isRunning = true;
-      this.#state.animation =  this.#state.animation || new Animation(this);
+      this.#state.animation = this.#state.animation || new Animation(this);
       this.#state.animation.enqueue(options);
 
     } else {
@@ -394,7 +398,7 @@ class Servo extends Emitter {
    * const servo = await new Servo(12);
    * // The servo's default position is 90 degrees
    * servo.step(30);
-   * 
+   *
    * @example
    * &lt;caption>Move a servo to 120° over one second&lt;/caption>
    * import Servo from "j5e/servo";
@@ -417,7 +421,7 @@ class Servo extends Emitter {
    *
    * const servo = await new Servo(12);
    * servo.min();
-   * 
+   *
    * @example
    * &lt;caption>Move a servo to 0° over one second&lt;/caption>
    * import Servo from "j5e/servo";
@@ -439,7 +443,7 @@ class Servo extends Emitter {
    *
    * const servo = await new Servo(12);
    * servo.max();
-   * 
+   *
    * @example
    * &lt;caption>Move a standard servo to 180° over one second&lt;/caption>
    * import Servo from "j5e/servo";
@@ -462,11 +466,11 @@ class Servo extends Emitter {
    *
    * const servo = await new Servo(12);
    * servo.to(180);
-   * 
+   *
    * timer.setTimeout(function() {
    *   servo.center();
    * }, 1000);
-   * 
+   *
    * @example
    * &lt;caption>Move a servo to 180° and then back to 90° over one second&lt;/caption>
    * import Servo from "j5e/servo";
@@ -474,7 +478,7 @@ class Servo extends Emitter {
    *
    * const servo = await new Servo(12);
    * servo.to(180);
-   * 
+   *
    * timer.setTimeout(function() {
    *   servo.center(1000);
    * }, 1000);
@@ -493,7 +497,7 @@ class Servo extends Emitter {
    *
    * const servo = await new Servo(12);
    * servo.to(180);
-   * 
+   *
    * timer.setTimeout(function() {
    *   servo.home();
    * }, 1000);
@@ -512,7 +516,7 @@ class Servo extends Emitter {
    *
    * const servo = await new Servo(12);
    * servo.sweep([10, 170]));
-   * 
+   *
    * example
    * &lt;caption>Sweep a servo back and forth between 10° to 170° with inOutCirc easing&lt;/caption>
    * import Servo from "j5e/servo";
@@ -538,7 +542,7 @@ class Servo extends Emitter {
       easing: inOutSine,
       duration: 1000
     };
-    
+
     // If opts is an array, then assume a range was passed
     if (Array.isArray(opts)) {
       options.keyFrames = rangeToKeyFrames(opts);
@@ -563,20 +567,20 @@ class Servo extends Emitter {
    *
    * const servo = await new Servo(12);
    * servo.sweep([10, 170]));
-   * 
+   *
    * timer.setTimeout(function() {
    *   servo.stop();
    * }, 2000);
    */
   stop() {
-    
+
     if (this.#state.animation) {
       this.#state.animation.stop();
     }
 
     if (this.#state.type === "continuous") {
       this.to(
-        this.#state.deadband.reduce(function(a, b) {
+        this.#state.deadband.reduce(function reduceDeadband(a, b) {
           return Math.round((a + b) / 2);
         })
       );
@@ -595,7 +599,7 @@ class Servo extends Emitter {
    *
    * const servo = await new Servo({ pin: 12, type: "continuous"});
    * servo.cw();
-   * 
+   *
    * @example
    * &lt;caption>Move a continuos rotation servo clockwise at half speed&lt;/caption>
    * import Servo from "j5e/servo";
@@ -603,7 +607,7 @@ class Servo extends Emitter {
    * const servo = await new Servo({ pin: 12, type: "continuous"});
    * servo.cw(0.5);
    */
-  cw(speed=1) {
+  cw(speed = 1) {
     speed = constrain(speed, 0, 1);
     speed = map(speed, 0, 1, this.#state.deadband[1] + 1, this.#state.pwmRange[1]);
     return this.to(speed);
@@ -619,7 +623,7 @@ class Servo extends Emitter {
    *
    * const servo = await new Servo({ pin: 12, type: "continuous"});
    * servo.ccw();
-   * 
+   *
    * @example
    * &lt;caption>Move a continuos rotation servo counter-clockwise at half speed&lt;/caption>
    * import Servo from "j5e/servo";
@@ -627,7 +631,7 @@ class Servo extends Emitter {
    * const servo = await new Servo({ pin: 12, type: "continuous"});
    * servo.ccw(0.5);
    */
-  ccw(speed=1) {
+  ccw(speed = 1) {
     speed = constrain(speed, 0, 1);
     speed = map(speed, 0, 1, this.#state.deadband[0] - 1, this.#state.pwmRange[0]);
     return this.to(speed);
@@ -639,7 +643,7 @@ class Servo extends Emitter {
    * @ignore
    */
   normalize(keyFrames) {
-    
+
     let last = this.last ? this.last.target : this.startAt;
 
     // If user passes null as the first element in keyFrames use current position
@@ -656,7 +660,7 @@ class Servo extends Emitter {
       };
     }
 
-    return keyFrames.map(function(frame) {
+    return keyFrames.map(function mapKeyFrames(frame) {
       let value = frame;
 
       /* istanbul ignore else */
@@ -694,12 +698,13 @@ class Servo extends Emitter {
 }
 
 function rangeToKeyFrames(range) {
-  return range.map(function(value) {
+  return range.map(function mapRange(value) {
     return { value: value };
   });
 }
 
-export default Servo;</code></pre>
+export default Servo;
+</code></pre>
 		</section>
 			</div>
 		</div>

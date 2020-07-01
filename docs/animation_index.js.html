@@ -104,9 +104,11 @@
 import { constrain, timer } from "j5e/fn";
 import { Emitter } from "j5e/event";
 
-function linear(n) { return n; }
+function linear(n) {
+  return n;
+}
 
-/** 
+/**
  * Class representing an Animation
  * @classdesc Allows for scripted control of LEDs, RGBs, and Servos
  * @extends Emitter
@@ -116,17 +118,17 @@ function linear(n) { return n; }
 class Animation extends Emitter {
 
   /**
-   * Animation  
+   * Animation
    * @constructor
    * @param {LED|LED[]|RGB|RGB[]|Servo|Servo[]} target - LEDs, RGBs, and/or Servos to be animated (See {@tutorial D-ANIMATING} for more information)
    * @example
    * &lt;caption>Make a servo "wave"&lt;/caption>
    * import Servo from "j5e/servo";
    * import Animation from "j5e/animation";
-   * 
+   *
    * const servo = await new Servo(13);
    * const ani = await new Animation(servo);
-   * 
+   *
    * const wave = {
    *   duration: 4000,
 	 *   cuePoints: [0,  0.375, 0.625, 1],
@@ -134,7 +136,7 @@ class Animation extends Emitter {
 	 *   loop: true,
    *   metronomic: true
    * };
-   * 
+   *
    * ani.enqueue(wave);
    */
   constructor(target) {
@@ -148,17 +150,17 @@ class Animation extends Emitter {
    * @param {object} options - Animation segment options
    * @param {object[]} options.keyFrames - Values for each cuepoint
    * @param {number[]} [options.cuePoints=[0, 1]] - Segment cuepoints from 0-1
-   * @param {number} [options.duration=1000] - Duration of segment in ms 
-   * @param {fuction} [options.easing=linear()] - Easing function to use for segment 
+   * @param {number} [options.duration=1000] - Duration of segment in ms
+   * @param {fuction} [options.easing=linear()] - Easing function to use for segment
    * @param {boolean} [options.loop=false] - If true the segment will loop back
-   * @param {number} [options.loopback=0] - The time to loop back to [0-1] 
-   * @param {boolean} [options.metronomic=false] - Instead of looping back to the beginning it will reverse direction at the end of the segment 
-   * @param {number} [options.currentSpeed=1] - The playback speed [0-1] 
-   * @param {number} [options.progress] - The current progress 
-   * @param {number} [options.fps=50] - Frames per second 
+   * @param {number} [options.loopback=0] - The time to loop back to [0-1]
+   * @param {boolean} [options.metronomic=false] - Instead of looping back to the beginning it will reverse direction at the end of the segment
+   * @param {number} [options.currentSpeed=1] - The playback speed [0-1]
+   * @param {number} [options.progress] - The current progress
+   * @param {number} [options.fps=50] - Frames per second
    * @param {number} [options.rate=20] - ms between frames
    * @param {boolean} [options.paused=false] - Wether the animation is in a paused state
-   * @param {function} [options.onstart=null] - Function to call when the segment starts 
+   * @param {function} [options.onstart=null] - Function to call when the segment starts
    * @param {function} [options.onpause=null] - Function to call when the segment is paused
    * @param {function} [options.onstop=null] - Function to call when the segment is stopped
    * @param {function} [options.oncomplete=null] - Function to call when the segment is complete
@@ -167,10 +169,10 @@ class Animation extends Emitter {
    * &lt;caption>Make a servo "wave"&lt;/caption>
    * import Servo from "j5e/servo";
    * import Animation from "j5e/animation";
-   * 
+   *
    * const servo = await new Servo(13);
    * const ani = await new Animation(servo);
-   * 
+   *
    * const wave = {
    *   duration: 4000,
 	 *   cuePoints: [0,  0.375, 0.625, 1],
@@ -178,7 +180,7 @@ class Animation extends Emitter {
 	 *   loop: true,
    *   metronomic: true
    * };
-   * 
+   *
    * ani.enqueue(wave);
    */
   enqueue(options = {}) {
@@ -207,13 +209,13 @@ class Animation extends Emitter {
   next() {
 
     this.isRunning = true;
-    
+
     if (this.segments.length > 0) {
       let segments = this.segments;
       Object.assign(this, new Segment(segments.shift()));
       this.segments = segments;
       this.paused = this.currentSpeed === 0 ? true : false;
-      
+
       if (this.onstart) {
         this.onstart();
       }
@@ -244,10 +246,10 @@ class Animation extends Emitter {
    * import Servo from "j5e/servo";
    * import Animation from "j5e/animation";
    * import {timer} from "j5e/fn";
-   * 
+   *
    * const servo = await new Servo(13);
    * const ani = await new Animation(servo);
-   * 
+   *
    * const wave = {
    *   duration: 4000,
 	 *   cuePoints: [0,  0.375, 0.625, 1],
@@ -255,14 +257,14 @@ class Animation extends Emitter {
 	 *   loop: true,
    *   metronomic: true
    * };
-   * 
+   *
    * ani.enqueue(wave);
-   * 
-   * timer.setTimeout(function() { 
+   *
+   * timer.setTimeout(function() {
    *   ani.pause();
    * }, 5000);
-   * 
-   * timer.setTimeout(function() { 
+   *
+   * timer.setTimeout(function() {
    *   ani.play();
    * }, 6000);
    */
@@ -302,10 +304,10 @@ class Animation extends Emitter {
    * import Servo from "j5e/servo";
    * import Animation from "j5e/animation";
    * import {timer} from "j5e/fn";
-   * 
+   *
    * const servo = await new Servo(13);
    * const ani = await new Animation(servo);
-   * 
+   *
    * const wave = {
    *   duration: 4000,
 	 *   cuePoints: [0,  0.375, 0.625, 1],
@@ -313,14 +315,14 @@ class Animation extends Emitter {
 	 *   loop: true,
    *   metronomic: true
    * };
-   * 
+   *
    * ani.enqueue(wave);
-   * 
-   * timer.setTimeout(function() { 
+   *
+   * timer.setTimeout(function() {
    *   ani.pause();
    * }, 5000);
-   * 
-   * timer.setTimeout(function() { 
+   *
+   * timer.setTimeout(function() {
    *   ani.play();
    * }, 6000);
    */
@@ -349,10 +351,10 @@ class Animation extends Emitter {
    * import Servo from "j5e/servo";
    * import Animation from "j5e/animation";
    * import {timer} from "j5e/fn";
-   * 
+   *
    * const servo = await new Servo(13);
    * const ani = await new Animation(servo);
-   * 
+   *
    * const wave = {
    *   duration: 4000,
 	 *   cuePoints: [0,  0.375, 0.625, 1],
@@ -360,10 +362,10 @@ class Animation extends Emitter {
 	 *   loop: true,
    *   metronomic: true
    * };
-   * 
+   *
    * ani.enqueue(wave);
-   * 
-   * timer.setTimeout(function() { 
+   *
+   * timer.setTimeout(function() {
    *   ani.stop();
    * }, 5000);
    */
@@ -394,10 +396,10 @@ class Animation extends Emitter {
    * import Servo from "j5e/servo";
    * import Animation from "j5e/animation";
    * import {timer} from "j5e/fn";
-   * 
+   *
    * const servo = await new Servo(13);
    * const ani = await new Animation(servo);
-   * 
+   *
    * const wave = {
    *   duration: 4000,
 	 *   cuePoints: [0,  0.375, 0.625, 1],
@@ -405,18 +407,18 @@ class Animation extends Emitter {
 	 *   loop: true,
    *   metronomic: true
    * };
-   * 
+   *
    * ani.enqueue(wave);
-   * 
-   * timer.setTimeout(function() { 
+   *
+   * timer.setTimeout(function() {
    *   ani.speed(2.0); // Speed up to 2x
    * }, 1000);
-   * 
-   * timer.setTimeout(function() { 
+   *
+   * timer.setTimeout(function() {
    *   ani.speed(0.5); // Speed up to 1/2x
    * }, 2000);
-   * 
-   * timer.setTimeout(function() { 
+   *
+   * timer.setTimeout(function() {
    *   ani.stop(); // Note, animation speed is still 0.5
    * }, 3000);
    */
@@ -443,10 +445,10 @@ class Animation extends Emitter {
    * Called in each frame of the animation
    * @private
    */
-  loopFunction({calledAt}) {
+  loopFunction({ calledAt }) {
 
     const localTarget = this.target || this.defaultTarget;
-    
+
     // Find the current timeline progress
     const progress = this.calculateProgress(calledAt);
 
@@ -471,7 +473,7 @@ class Animation extends Emitter {
 
         //This line was causing RGB to "re-normalize" and break. I'm not sure why it is here.
         //this.normalizeKeyframes();
-        
+
         this.progress = this.loopback;
         this.startTime = Date.now() - this.scaledDuration * this.progress;
         this.endTime = this.startTime + this.scaledDuration;
@@ -483,7 +485,9 @@ class Animation extends Emitter {
         }
 
         if (this.segments.length > 0) {
-          timer.setImmediate(() => { this.next(); });
+          timer.setImmediate(() => {
+            this.next();
+          });
         } else {
           this.stop();
         }
@@ -492,7 +496,7 @@ class Animation extends Emitter {
   }
 
   /**
-   * Find left and right cuepoints. 
+   * Find left and right cuepoints.
    * @private
    */
   findIndices(progress) {
@@ -504,13 +508,13 @@ class Animation extends Emitter {
     // Find our current before and after cuePoints. Not intended to be called externally.
     indices.right = this.cuePoints.findIndex(point => point >= progress);
 
-    indices.left = indices.right === 0 ? /* istanbul ignore next */ 0 : indices.right - 1;
+    indices.left = indices.right === 0 ? 0 : indices.right - 1;
 
     return indices;
   }
 
   /**
-   * Compute progress based on start time. 
+   * Compute progress based on start time.
    * @private
    */
   calculateProgress(calledAt) {
@@ -526,7 +530,7 @@ class Animation extends Emitter {
     if (this.reverse) {
       progress = 1 - progress;
     }
-    
+
     // Ease the timeline
     // to do: When reverse replace inFoo with outFoo and vice versa. skip inOutFoo
     return constrain(this.easing(progress), 0, 1);
@@ -542,7 +546,7 @@ class Animation extends Emitter {
       duration: null,
       progress: null
     };
-    
+
     const result = this.keyFrames.map(keyFrame => {
       const kIndices = {
         left: null,
@@ -565,7 +569,7 @@ class Animation extends Emitter {
       // Find our progress for the current tween
       tween.duration = this.cuePoints[kIndices.right] - this.cuePoints[kIndices.left];
       tween.progress = (progress - this.cuePoints[kIndices.left]) / tween.duration;
-      
+
       // Catch divide by zero
       if (!Number.isFinite(tween.progress)) {
         /* istanbul ignore next */
@@ -574,7 +578,7 @@ class Animation extends Emitter {
 
       const left = keyFrame[kIndices.left];
       const right = keyFrame[kIndices.right];
-      
+
       // Apply tween easing to tween.progress
       // to do: When reverse replace inFoo with outFoo and vice versa. skip inOutFoo
       tween.progress = right.easing(tween.progress);
@@ -620,7 +624,7 @@ class Animation extends Emitter {
       this.keyFrames = [this.keyFrames];
     }
 
-    this.keyFrames.forEach(function(keyFrames) {
+    this.keyFrames.forEach(function keyFramesLoop(keyFrames) {
 
       // Pad the right side of keyFrames arrays with null
       for (let i = keyFrames.length; i &lt; cuePoints.length; i++) {
@@ -710,23 +714,23 @@ class Timer {
   }
 };
 
-/** 
+/**
  * This class has no methods, it is a wrapper for short animation segments and not meant to be accessed publicly.
  * @private
  * @classdesc Sets and overrides default params
  * @param {object} [options] - Animation segment options (See {@tutorial D-ANIMATING} for more information)
  * @param {number[]} [options.cuePoints=[0, 1]] - Animation segment cuepoints from 0-1
- * @param {number} [options.duration=1000] - Duration of animation segment in ms 
- * @param {fuction} [options.easing=linear()] - Easing function to use for segment 
+ * @param {number} [options.duration=1000] - Duration of animation segment in ms
+ * @param {fuction} [options.easing=linear()] - Easing function to use for segment
  * @param {boolean} [options.loop=false] - If true the segment will loop back
- * @param {number} [options.loopback=0] - The time to loop back to [0-1] 
- * @param {boolean} [options.metronomic=false] - Instead of looping back to the beginning it will reverse direction at the end of the segment 
- * @param {number} [options.currentSpeed=1] - The playback speed [0-1] 
- * @param {number} [options.progress] - The current progress 
- * @param {number} [options.fps=50] - Frames per second 
+ * @param {number} [options.loopback=0] - The time to loop back to [0-1]
+ * @param {boolean} [options.metronomic=false] - Instead of looping back to the beginning it will reverse direction at the end of the segment
+ * @param {number} [options.currentSpeed=1] - The playback speed [0-1]
+ * @param {number} [options.progress] - The current progress
+ * @param {number} [options.fps=50] - Frames per second
  * @param {number} [options.rate=20] - ms between frames
  * @param {boolean} [options.paused=false] - Wether the animation is in a paused state
- * @param {function} [options.onstart=null] - Function to call when animation starts 
+ * @param {function} [options.onstart=null] - Function to call when animation starts
  * @param {function} [options.onpause=null] - Function to call when animation is paused
  * @param {function} [options.onstop=null] - Function to call when animation is stopped
  * @param {function} [options.oncomplete=null] - Function to call when animation is complete
@@ -763,7 +767,8 @@ export class Segment {
   }
 }
 
-export default Animation;</code></pre>
+export default Animation;
+</code></pre>
 		</section>
 			</div>
 		</div>

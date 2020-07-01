@@ -285,7 +285,7 @@
 			
 			const led &#x3D; await new LED(12);
 			led.on();
-			  
+			
 			// Wait one second and turn the led off
 			timer.setTimeout(function() {
 			  led.off();
@@ -342,7 +342,7 @@
 			
 			const led &#x3D; await new LED(12);
 			led.toggle(); // It&#x27;s on!
-			  
+			
 			// Wait one second and turn the led off
 			timer.setTimeout(function() {
 			  led.toggle(); // It&#x27;s off!
@@ -1082,7 +1082,7 @@
 			  pwm: true
 			});
 			led.pulse(500);
-			  
+			
 			// Stop pulsing after five seconds
 			timer.setTimeout(function() {
 			  led.stop();
