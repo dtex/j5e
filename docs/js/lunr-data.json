@@ -8172,7 +8172,7 @@
       "name": "j5e/servo",
       "tags": "module:j5e/servo",
       "summary": "",
-      "description": "For controlling hobby servos, continuous rotation servos,",
+      "description": "For controlling hobby servos, continuous rotation servos",
       "body": ""
     },
     "module-j5e_switch.html": {

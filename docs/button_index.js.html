@@ -102,14 +102,14 @@
  */
 
 import { Emitter } from "j5e/event";
-import {debounce, normalizeParams, getProvider, timer} from "j5e/fn";
+import { debounce, normalizeParams, getProvider, timer } from "j5e/fn";
 
 const aliases = {
   down: ["down", "press"],
   up: ["up", "release"]
 };
 
-/** 
+/**
  * Class representing a button
  * @classdesc The Button class allows for control of digital buttons
  * @async
@@ -118,7 +118,7 @@ const aliases = {
  * @fires Button#close
  */
 class Button extends Emitter {
-  
+
   #state = {
     holdtime: null,
     last: null,
@@ -142,38 +142,44 @@ class Button extends Emitter {
    * &lt;caption>Use a button to control an LED&lt;/caption>
    * import Button from "j5e/button";
    * import LED from "j5e/led";
-   * 
+   *
    * const button = await new Button(12);
    * const led = await new LED(13);
-   * 
+   *
    * button.on("open", function() {
    *   led.off();
    * });
-   * 
+   *
    * button.on("close", function() {
    *   led.on();
    * });
    */
-  constructor(options) { 
-    return (async () => {
+  constructor(options) {
+    return (async() => {
 
       let raw;
       let invert = false;
-      
+
       options = normalizeParams(options);
       super();
-      
+
       const Provider = await getProvider(options, "builtin/digital");
-      
+
       let mode = Provider.Input;
-      if (!options.isPullup) mode = Provider.InputPullUp;
-      if (!options.isPulldown) mode = Provider.InputPullDown;
-      
+      if (!options.isPullup) {
+        mode = Provider.InputPullUp;
+      }
+      if (!options.isPulldown) {
+        mode = Provider.InputPullDown;
+      }
+
       this.io = new Provider({
         pin: options.pin,
         mode,
         edge: Provider.Rising | Provider.Falling,
-        onReadable: () => { this.trigger(); }
+        onReadable: () => {
+          this.trigger();
+        }
       });
 
       Object.defineProperties(this, {
@@ -221,7 +227,7 @@ class Button extends Emitter {
       this.#state.holdtime = options.holdtime || 500;
 
       this.#state.last = this.upValue;
-      
+
       // Create a debounce boundary on event triggers
       // this avoids button events firing on
       // press noise and false positives
@@ -229,13 +235,13 @@ class Button extends Emitter {
       this.trigger = debounce(this.processRead.bind(this), 7);
       return this;
     })();
-    
+
   }
 
   intialize(options, callback) { }
 
   processRead() {
-    
+
     if (this.isOpen) {
       this.emit("open");
       timer.clearTimeout(this.#state.interval);
@@ -251,7 +257,8 @@ class Button extends Emitter {
   }
 }
 
-export default Button;</code></pre>
+export default Button;
+</code></pre>
 		</section>
 			</div>
 		</div>

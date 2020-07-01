@@ -173,11 +173,11 @@
 			  { pin: 2, io: PCA9685 }
 			]);
 			rgb.color(&quot;#663399&quot;);
-			rgb.blink();
-			
-			* @example
-			&lt;caption&gt;Using on options.io parameter with a pins array&lt;/caption&gt;
-			import RGB from &quot;j5e/rgb&quot;;
+			rgb.blink();</code></pre>
+					</div>
+					<div class="example-caption"><p>Using on options.io parameter with a pins array</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;j5e/rgb&quot;;
 			import PCA9685 from &quot;PCA9685Expander&quot;
 			
 			const rgb &#x3D; await new RGB({
@@ -309,8 +309,8 @@
 			
 			const rgb &#x3D; await new RGB([13, 12, 14]);
 			rgb.color({
-			  red: 102, 
-			  green: 51, 
+			  red: 102,
+			  green: 51,
 			  blue: 153
 			});</code></pre>
 					</div>
