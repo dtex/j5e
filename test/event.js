@@ -1,26 +1,26 @@
-import assert from 'assert';
-import sinon from 'sinon';
-import { Emitter } from 'j5e/event';
-import Switch from 'j5e/switch';
+import assert from "assert";
+import sinon from "sinon";
+import { Emitter } from "j5e/event";
+import Switch from "j5e/switch";
 import { Digital } from "@dtex/mock-io";
 
-describe('Event', function() {
-  
-  describe('Instantiation', function() {
-    
-    it('should return a valid Emitter instance', async function() {
-      
+describe("Event", function() {
+
+  describe("Instantiation", function() {
+
+    it("should return a valid Emitter instance", async function() {
+
       const event = await new Emitter();
-      
+
       assert.equal(event instanceof Emitter, true);
 
     });
 
   });
 
-  describe('Intantiate a device with listener', function() {
-    it('should be an instance of Emitter', async function() {
-      
+  describe("Intantiate a device with listener", function() {
+    it("should be an instance of Emitter", async function() {
+
       const mySwitch = await new Switch({
         pin: 12,
         io: Digital
@@ -30,8 +30,8 @@ describe('Event', function() {
 
     });
 
-    it('should emit twice', async function() {
-      
+    it("should emit twice", async function() {
+
       const mySwitch = await new Switch({
         pin: 12,
         io: Digital
@@ -50,6 +50,6 @@ describe('Event', function() {
 
     });
   });
-  
+
 
 });

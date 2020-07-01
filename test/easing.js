@@ -1,6 +1,5 @@
-import assert from 'assert';
-import expectWrapper from 'chai';
-import * as easing from 'j5e/easing';
+import expectWrapper from "chai";
+import * as easing from "j5e/easing";
 
 const expect = expectWrapper.expect;
 
@@ -34,13 +33,13 @@ const results = {
   "outBounce": [0, 0.075625, 0.472656, 0.765625, 0.972656, 0.988125, 1],
   "inBounce": [0, 0.011875, 0.027344, 0.234375, 0.527344, 0.924375, 1],
   "inOutBounce": [0, 0.03, 0.117188, 0.5, 0.882813, 0.97, 1]
-}
+};
 
-describe('easing', function() {
-  
+describe("easing", function() {
+
   Object.keys(results).forEach(ef => {
     describe(ef, function() {
-      it('It should return the expected values', function() {
+      it("It should return the expected values", function() {
         inputs.forEach((val, idx) => {
           expect(Math.abs(easing[ef](val) - results[ef][idx])).to.be.below(0.000001);
         });
