@@ -6,6 +6,7 @@
   "exports": {
     ".": "./index.js",
     "./animation": "./lib/animation/index.js",
+    "./button": "./lib/button/index.js",
     "./easing": "./lib/easing/index.js",
     "./event": "./lib/event/index.js",
     "./fn": "./lib/fn/index.js",
