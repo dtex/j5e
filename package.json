@@ -22,7 +22,11 @@
   },
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha",
-    "docs": "./node_modules/jsdoc/jsdoc.js -t ./node_modules/foodoc/template -u ./build/docs/tutorials -c ./build/docs/jsdoc.json -d docs"
+    "docs": "./node_modules/jsdoc/jsdoc.js -t ./node_modules/foodoc/template -u ./build/docs/tutorials -c ./build/docs/jsdoc.json -d docs",
+    "lint": "npm run lintLib;npm run lintTest",
+    "lintLib": "node ./node_modules/eslint/bin/eslint.js lib/*/*.js",
+    "lintExamples": "node ./node_modules/eslint/bin/eslint.js examples/*/*.js",
+    "lintTest": "node ./node_modules/eslint/bin/eslint.js test/*.js --rule '\"func-names\": [\"error\", \"never\"]'"
   },
   "repository": {
     "type": "git",
@@ -45,9 +49,13 @@
     "url": "https://github.com/dtex/j5e/issues"
   },
   "homepage": "https://dtex.github.com/j5e",
+  "sourceType": "module",
   "devDependencies": {
     "@dtex/mock-io": "0.0.5",
+    "babel-eslint": "^10.1.0",
     "chai": "^4.2.0",
+    "eslint": "^7.3.1",
+    "eslint-config-idiomatic": "^4.0.0",
     "foodoc": "github:dtex/foodoc#master",
     "fs-extra": "^8.1.0",
     "jsdoc": "^3.6.4",
