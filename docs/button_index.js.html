@@ -1,9 +1,10 @@
+<!-- start:source.tmpl.hbs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>j5e/fn~timer</title>
+		<title>button/index.js</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -43,7 +44,7 @@
 			</style>
 		<script type="text/javascript">
 			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"MMMM D, YYYY","systemName":"J5e","systemSummary":"Johnny Five for Embedded Systems","systemLogo":"img/j5e.png","systemColor":"#000","navMembers":[{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Copyright © 2019—2020 The contributors to the j5e and Johnny-Five projects.","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":true,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":{"ua":"UA-36026876-4","domain":"dtex.github.io"},"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":["./static/custom.css"],"scripts":[],"monospaceLinks":false,"cleverLinks":false,"forkMe":"./build/docs/fork/forkme_right_white_ffffff.webp"};
-			window.DOCLET_TOC_ENABLED = true;
+			window.DOCLET_TOC_ENABLED = false;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
 </head>
@@ -84,64 +85,175 @@
 	</header>
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
-				<span class="kind">namespace</span>
-				<h1><span class="ancestors"><a href="module-j5e_fn.html">j5e/fn</a>~</span><span class="name">timer</span></h1>
+				<span class="kind">source</span>
+				<h1><span class="name">button/index.js</span></h1>
 			</div>
 		</div>
 	<div class="container content">
 		<div class="row">
-			<div class="col-md-9 main-content">
-						<ol class="breadcrumb">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="list_namespace.html">Namespaces</a></li>
-							<li class="active"><a href="module-j5e_fn.html">j5e/fn</a>~timer</li>
-						</ol>
-					<section>
-							<dl class="symbol primary">
-								<dt class="symbol-title namespace collapsible-symbol expanded">
-			<h2 class="namespace"><span class="name">timer</span></h2>
-</dt>
-<dd class="symbol-details namespace  collapsible-symbol expanded" style="max-height: 9999px;">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Wrapper for setInterval, clearInterval, and setImmediate. This is necessary so we can use the Global methods in node.js and the System methods in XS.</div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="fn_index.js.html">fn/index.js</a>, <a href="fn_index.js.html#line-140">line 140</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-							</dl>
-							<article class="secondary">
-							</article>
-					</section>
+			<div class="col-md-12 main-content">
+		<section class="source-section">
+			<article></article>
+			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">/**
+ * For working with buttons
+ * @module j5e/button
+ * @requires module:j5e/event
+ * @requires module:j5e/fn
+ */
+
+import { Emitter } from "j5e/event";
+import {debounce, normalizeParams, getProvider, timer} from "j5e/fn";
+
+const aliases = {
+  down: ["down", "press"],
+  up: ["up", "release"]
+};
+
+/** 
+ * Class representing a button
+ * @classdesc The Button class allows for control of digital buttons
+ * @async
+ * @extends Emitter
+ * @fires Button#open
+ * @fires Button#close
+ */
+class Button extends Emitter {
+  
+  #state = {
+    holdtime: null,
+    last: null,
+    isPullup: null,
+    interval: null
+  };
+
+  /**
+   * Instantiate a button
+   * @param {object} options - A pin number, pin identifier or a complete IO options object (See {@tutorial C-INSTANTIATING}
+   * @param {boolean} [options.invert=false] - Inverts the up and down values
+   * @param {boolean} [options.isPullup=false] - Initialize as a pullup button
+   * @param {boolean} [options.isPulldown=false] - Initialize as a pulldown button
+   * @param {number} [options.holdtime=500] - The amount of time a button must be held down before emitting an hold event
+   * @property {boolean} isClosed - True if the button is being pressed
+   * @property {boolean} isOpen - True if the button is not being pressed
+   * @property {number} downValue - Get the raw downValue (depends on invert, isPullup and isPulldown)
+   * @property {number} upValue - Get the raw upValue (depends on invert, isPullup and, isPulldown)
+   * @property {number} holdtime - Get/Set the holdtime
+   * @example
+   * &lt;caption>Use a button to control an LED&lt;/caption>
+   * import Button from "j5e/button";
+   * import LED from "j5e/led";
+   * 
+   * const button = await new Button(12);
+   * const led = await new LED(13);
+   * 
+   * button.on("open", function() {
+   *   led.off();
+   * });
+   * 
+   * button.on("close", function() {
+   *   led.on();
+   * });
+   */
+  constructor(options) { 
+    return (async () => {
+
+      let raw;
+      let invert = false;
+      
+      options = normalizeParams(options);
+      super();
+      
+      const Provider = await getProvider(options, "builtin/digital");
+      
+      let mode = Provider.Input;
+      if (!options.isPullup) mode = Provider.InputPullUp;
+      if (!options.isPulldown) mode = Provider.InputPullDown;
+      
+      this.io = new Provider({
+        pin: options.pin,
+        mode,
+        edge: Provider.Rising | Provider.Falling,
+        onReadable: () => { this.trigger(); }
+      });
+
+      Object.defineProperties(this, {
+        isClosed: {
+          get: () => {
+            return this.io.read() === this.downValue;
+          }
+        },
+        isOpen: {
+          get: () => {
+            return this.io.read() === this.upValue;
+          }
+        },
+        downValue: {
+          get: () => {
+            return 1 ^ this.isPullup ^ this.invert;
+          }
+        },
+        upValue: {
+          get: () => {
+            return 0 ^ this.isPullup ^ this.invert;
+          }
+        },
+        holdtime: {
+          get: () => {
+            return this.#state.holdtime;
+          },
+          set: (newHoldtime) => {
+            this.#state.holdtime = newHoldtime;
+          }
+        }
+      });
+
+      if (typeof options.invert !== "undefined") {
+        this.invert = options.invert;
+      }
+
+      if (typeof options.isPullup !== "undefined") {
+        this.#state.isPullup = options.isPullup;
+      }
+      if (typeof options.isPulldown !== "undefined") {
+        this.#state.isPulldown = options.isPulldown;
+      }
+
+      this.#state.holdtime = options.holdtime || 500;
+
+      this.#state.last = this.upValue;
+      
+      // Create a debounce boundary on event triggers
+      // this avoids button events firing on
+      // press noise and false positives
+      // this.trigger = debounce(send, 7);
+      this.trigger = debounce(this.processRead.bind(this), 7);
+      return this;
+    })();
+    
+  }
+
+  intialize(options, callback) { }
+
+  processRead() {
+    
+    if (this.isOpen) {
+      this.emit("open");
+      timer.clearTimeout(this.#state.interval);
+    } else {
+      this.emit("close");
+      this.#state.interval = timer.setTimeout(() => {
+        this.#state.interval = null;
+        if (this.isClosed) {
+          this.emit("hold");
+        }
+      }, this.#state.holdtime);
+    }
+  }
+}
+
+export default Button;</code></pre>
+		</section>
 			</div>
-				<div class="col-md-3 side-content">
-					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
-				</div>
 		</div>
 	</div>
 	<footer>
@@ -179,3 +291,4 @@ gtag('js', new Date());gtag('config', 'UA-36026876-4');
 </script>
 <a href="https://github.com/dtex/j5e"><img width="149" height="149" style="z-index:1000;position:absolute;top: 50px;right: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_white_ffffff.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a></body>
 </html>
+<!-- end:source.tmpl.hbs -->
