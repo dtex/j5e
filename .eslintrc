@@ -5,7 +5,7 @@
     "space-in-parens": ["warn","never"],
     "array-bracket-spacing": ["warn","never"],
     "computed-property-spacing": ["warn","never"],
-    "func-names": ["error", "as-needed"],
+    "func-names": ["warn", "never"],
     "one-var-declaration-per-line": ["warn","initializations"],
     "semi": ["error","always",{
       "omitLastInOneLineBlock": false

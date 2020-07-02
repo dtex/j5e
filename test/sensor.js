@@ -2,34 +2,28 @@ import assert from "assert";
 import sinon from "sinon";
 import { Analog } from "@dtex/mock-io";
 import Sensor from "j5e/sensor";
+import { Emitter } from "j5e/event";
 
 describe("Sensor", function() {
 
-  describe("Instantiation", function() {
+  describe("Instantiation", async function() {
 
     it("should return a valid Sensor instance when passed an options object", async function() {
-
       let sensor = await new Sensor({
         pin: 17,
         io: Analog
       });
-
       assert.equal(sensor instanceof Sensor, true);
+      assert.equal(sensor instanceof Emitter, true);
       assert.equal(sensor.io instanceof Analog, true);
-      assert.equal(sensor.interval, 100);
-      assert.equal(sensor.smoothing, 10);
-
       sensor.disable();
-
     });
 
     it("should return the correct default property values", async function() {
-
       let sensor = await new Sensor({
         pin: 17,
         io: Analog
       });
-
       assert.equal(sensor.interval, 100);
       assert.equal(sensor.smoothing, 10);
       assert.equal(sensor.raw, null);
@@ -39,27 +33,20 @@ describe("Sensor", function() {
       assert.equal(sensor.threshold, 1);
       assert.equal(sensor.limit, null);
       assert.equal(sensor.resolution, 1023);
-
       sensor.disable();
-
     });
 
     it("should make 10 readings per second", async function() {
-
       const clock = sinon.useFakeTimers();
       let sensor = await new Sensor({
         pin: 17,
         io: Analog
       });
-
-      const writeSpy = sinon.spy(sensor.io, "read");
-
+      const readSpy = sinon.spy(sensor.io, "read");
       clock.tick(1050);
-      assert.equal(writeSpy.callCount, 10);
+      assert.equal(readSpy.callCount, 10);
       clock.restore();
-
       sensor.disable();
-
     });
 
     describe("Options", function() {
@@ -367,7 +354,225 @@ describe("Sensor", function() {
 
       });
     });
-    // [ All other options, each with it's own describe ]
+  });
+
+  describe("Properties", function() {
+
+    describe("interval", function() {
+
+      it("should return the correct default value", async function() {
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog
+        });
+        assert.equal(sensor.interval, 100);
+        sensor.disable();
+      });
+
+      it("should run at the correct default frequency", async function() {
+        const clock = sinon.useFakeTimers();
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog
+        });
+        const readSpy = sinon.spy(sensor.io, "read");
+        clock.tick(1050);
+        assert.equal(readSpy.callCount, 10);
+        clock.restore();
+        sensor.disable();
+      });
+
+      it("should return the correct value when passed the interval param", async function() {
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog,
+          interval: 10
+        });
+        assert.equal(sensor.interval, 10);
+        sensor.disable();
+      });
+
+      it("should run at the correct frequency when passed the interval param", async function() {
+        const clock = sinon.useFakeTimers();
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog,
+          interval: 10
+        });
+        const readSpy = sinon.spy(sensor.io, "read");
+        clock.tick(1005);
+        assert.equal(readSpy.callCount, 100);
+        clock.restore();
+        sensor.disable();
+      });
+
+      it("should return the correct value when set", async function() {
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog,
+          interval: 10
+        });
+        sensor.interval = 20;
+        assert.equal(sensor.interval, 20);
+        sensor.disable();
+      });
+
+      it("should run at the correct frequency when set", async function() {
+        const clock = sinon.useFakeTimers();
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog,
+          interval: 10
+        });
+        sensor.interval = 20;
+        const readSpy = sinon.spy(sensor.io, "read");
+        clock.tick(1005);
+        assert.equal(readSpy.callCount, 50);
+        clock.restore();
+        sensor.disable();
+      });
+
+    });
+
+    describe("raw", function() {
+
+      it("should return the correct value", async function() {
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog
+        });
+        sensor.io.value = 123;
+        sensor.read();
+        assert.equal(sensor.raw, 123);
+        sensor.disable();
+      });
+
+      it("should return the correct value regardless of range", async function() {
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog,
+          range: [400, 800]
+        });
+        sensor.io.value = 123;
+        sensor.read();
+        assert.equal(sensor.raw, 123);
+        sensor.disable();
+      });
+
+      it("should return the correct value regardless of limit", async function() {
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog,
+          limit: [400, 800]
+        });
+        sensor.io.value = 123;
+        sensor.read();
+        assert.equal(sensor.raw, 123);
+        sensor.disable();
+      });
+
+      it("should return the correct value regardless of scale", async function() {
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog,
+          scale: [400, 800]
+        });
+        sensor.io.value = 123;
+        sensor.read();
+        assert.equal(sensor.raw, 123);
+        sensor.disable();
+      });
+
+    });
+
+    describe("value", function() {
+
+      it("should return the correct value", async function() {
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog
+        });
+        sensor.io.value = 123;
+        sensor.read();
+        assert.equal(sensor.value, 123);
+        sensor.disable();
+      });
+
+      it("should return the correct value based on range", async function() {
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog,
+          range: [400, 800]
+        });
+        [[123, 0], [400, 0], [600, 511.5], [800, 1023], [1000, 1023]].forEach(inAndOut => {
+          sensor.io.value = inAndOut[0];
+          sensor.read();
+          assert.equal(sensor.value, inAndOut[1]);
+        });
+
+        sensor.disable();
+      });
+
+      it("should return the correct value based on scale", async function() {
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog,
+          scale: [400, 800]
+        });
+        [[0, 400], [400, 556], [600, 634], [800, 712], [1000, 791]].forEach(inAndOut => {
+          sensor.io.value = inAndOut[0];
+          sensor.read();
+          assert.equal(Math.abs(sensor.value - inAndOut[1]) < 1, true);
+        });
+
+        sensor.disable();
+      });
+
+      it("should return the correct value based on scale and range", async function() {
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog,
+          range: [400, 800],
+          scale: [0, 255]
+        });
+        [[0, 0], [400, 0], [600, 127.5], [800, 255], [1000, 255]].forEach(inAndOut => {
+          sensor.io.value = inAndOut[0];
+          sensor.read();
+          assert.equal(Math.abs(sensor.value - inAndOut[1]) < 1, true);
+        });
+
+        sensor.disable();
+      });
+    });
+
+    // smoothing
+    // threshold
+    // limit
+    // resolution
+    // scaled
+
+  });
+
+  describe("Methods", function() {
+
+    // enable
+    // disable
+    // read
+    // scale
+    // scaleto
+    // fscaleto
+  });
+
+  describe("Events", function() {
+
+    // data
+    // change
+    // limit
+    // limit:upper
+    // limit:lower
+    // raw
   });
 
 });
+
+
