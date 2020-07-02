@@ -545,11 +545,293 @@ describe("Sensor", function() {
       });
     });
 
+    describe("scaled", function() {
+
+      it("should return the correct value", async function() {
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog
+        });
+        sensor.io.value = 123;
+        sensor.read();
+        assert.equal(sensor.scaled, 123);
+        sensor.disable();
+      });
+
+      it("should return the correct value based on range", async function() {
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog,
+          range: [400, 800]
+        });
+        [[123, 0], [400, 0], [600, 511.5], [800, 1023], [1000, 1023]].forEach(inAndOut => {
+          sensor.io.value = inAndOut[0];
+          sensor.read();
+          assert.equal(sensor.scaled, inAndOut[1]);
+        });
+
+        sensor.disable();
+      });
+
+      it("should return the correct value based on scale", async function() {
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog,
+          scale: [400, 800]
+        });
+        [[0, 400], [400, 556], [600, 634], [800, 712], [1000, 791]].forEach(inAndOut => {
+          sensor.io.value = inAndOut[0];
+          sensor.read();
+          assert.equal(Math.abs(sensor.scaled - inAndOut[1]) < 1, true);
+        });
+
+        sensor.disable();
+      });
+
+      it("should return the correct value based on scale and range", async function() {
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog,
+          range: [400, 800],
+          scale: [0, 255]
+        });
+        [[0, 0], [400, 0], [600, 127.5], [800, 255], [1000, 255]].forEach(inAndOut => {
+          sensor.io.value = inAndOut[0];
+          sensor.read();
+          assert.equal(Math.abs(sensor.scaled - inAndOut[1]) < 1, true);
+        });
+
+        sensor.disable();
+      });
+    });
+
+    describe("resolution", function() {
+
+      it("should return 2^10-1", async function() {
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog
+        });
+        assert.equal(sensor.resolution, 1023);
+        sensor.disable();
+      });
+    });
+
+    describe("limit", function() {
+
+      it("should return null when limit is not set", async function() {
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog
+        });
+        assert.equal(sensor.limit, null);
+        sensor.disable();
+      });
+
+      it("should return limit set in options", async function() {
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog,
+          limit: [200, 823]
+        });
+        assert.equal(sensor.limit[0], 200);
+        assert.equal(sensor.limit[1], 823);
+        sensor.disable();
+      });
+
+      it("should be settable", async function() {
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog,
+          limit: [200, 823]
+        });
+        assert.equal(sensor.limit[0], 200);
+        assert.equal(sensor.limit[1], 823);
+        sensor.limit = [300, 900];
+        assert.equal(sensor.limit[0], 300);
+        assert.equal(sensor.limit[1], 900);
+        sensor.disable();
+      });
+
+      it("should be settable", async function() {
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog,
+          limit: [200, 800]
+        });
+        assert.equal(sensor.limit[0], 200);
+        assert.equal(sensor.limit[1], 800);
+        sensor.limit = [300, 900];
+        assert.equal(sensor.limit[0], 300);
+        assert.equal(sensor.limit[1], 900);
+        sensor.disable();
+      });
+
+      it("should adjust when the limit changes", async function() {
+
+        const clock = sinon.useFakeTimers();
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog,
+          limit: [256, 768]
+        });
+
+        const calls = {
+          "lower": 0,
+          "upper": 0,
+          "limit:lower": 0,
+          "limit:upper": 0
+        };
+
+        sensor.on("limit", function(data) {
+          if (data.boundary === "lower") {
+            assert.equal(sensor.raw <= 256, true);
+            calls.lower++;
+          } else {
+            assert.equal(sensor.raw >= 768, true);
+            calls.upper++;
+          }
+        });
+
+        sensor.on("limit:lower", function(data) {
+          assert.equal(sensor.raw <= 256, true);
+          calls["limit:lower"]++;
+        });
+
+        sensor.on("limit:upper", function(data) {
+          assert.equal(sensor.raw >= 768, true);
+          calls["limit:upper"]++;
+        });
+
+        clock.tick(1005);
+        sensor.io.value = 127;
+        clock.tick(1005);
+        sensor.io.value = 256;
+        clock.tick(1005);
+        sensor.io.value = 512;
+        clock.tick(1005);
+        sensor.io.value = 768;
+        clock.tick(1005);
+        sensor.io.value = 895;
+        clock.tick(1005);
+        sensor.io.value = 1023;
+        clock.tick(1005);
+
+        assert.equal(calls.lower, 3);
+        assert.equal(calls.upper, 3);
+        assert.equal(calls["limit:lower"], 3);
+        assert.equal(calls["limit:upper"], 3);
+
+        sensor.limit = [200, 800];
+
+        sensor.io.value = 127;
+        clock.tick(1005);
+        sensor.io.value = 256;
+        clock.tick(1005);
+        sensor.io.value = 512;
+        clock.tick(1005);
+        sensor.io.value = 768;
+        clock.tick(1005);
+        sensor.io.value = 895;
+        clock.tick(1005);
+        sensor.io.value = 1023;
+        clock.tick(1005);
+
+        assert.equal(calls.lower, 4);
+        assert.equal(calls.upper, 5);
+        assert.equal(calls["limit:lower"], 4);
+        assert.equal(calls["limit:upper"], 5);
+
+        clock.restore();
+        sensor.disable();
+
+      });
+
+    });
+
+    describe("threshold", function() {
+
+      it("should return null when threshold is not set", async function() {
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog
+        });
+        assert.equal(sensor.threshold, 1);
+        sensor.disable();
+      });
+
+      it("should return the threshold set in options", async function() {
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog,
+          threshold: 5
+        });
+        assert.equal(sensor.threshold, 5);
+        sensor.disable();
+      });
+
+      it("should be settable", async function() {
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog
+        });
+        assert.equal(sensor.threshold, 1);
+        sensor.threshold = 5;
+        assert.equal(sensor.threshold, 5);
+        sensor.disable();
+      });
+
+      it("should adjust when the threshold changes", async function() {
+
+        const clock = sinon.useFakeTimers();
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog
+        });
+
+        const changeSpy = sinon.spy();
+
+        sensor.on("change", changeSpy);
+
+        clock.tick(1005);
+        sensor.io.value = 1;
+        clock.tick(1005);
+        sensor.io.value = 2;
+        clock.tick(1005);
+        sensor.io.value = 5;
+        clock.tick(1005);
+        sensor.io.value = 7;
+        clock.tick(1005);
+        sensor.io.value = 10;
+        clock.tick(1005);
+
+        assert.equal(changeSpy.callCount, 5);
+
+        sensor.threshold = 5;
+
+        sensor.io.value = 11;
+        clock.tick(1005);
+        sensor.io.value = 14;
+        clock.tick(1005);
+        sensor.io.value = 20;
+        clock.tick(1005);
+        sensor.io.value = 25;
+        clock.tick(1005);
+        sensor.io.value = 27;
+        clock.tick(1005);
+        sensor.io.value = 1023;
+        clock.tick(1005);
+
+        assert.equal(changeSpy.callCount, 8);
+
+        clock.restore();
+        sensor.disable();
+
+      });
+
+    });
+
     // smoothing
-    // threshold
-    // limit
-    // resolution
-    // scaled
 
   });
 
