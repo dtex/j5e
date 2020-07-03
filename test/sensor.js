@@ -831,18 +831,268 @@ describe("Sensor", function() {
 
     });
 
-    // smoothing
+    describe("smoothing", function() {
+
+      it("should return 10 when smoothing options is not passed", async function() {
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog
+        });
+        assert.equal(sensor.smoothing, 10);
+        sensor.disable();
+      });
+
+      it("should return the smoothing set in options", async function() {
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog,
+          smoothing: 5
+        });
+        assert.equal(sensor.smoothing, 5);
+        sensor.disable();
+      });
+
+      it("should be settable", async function() {
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog
+        });
+        assert.equal(sensor.smoothing, 10);
+        sensor.smoothing = 5;
+        assert.equal(sensor.smoothing, 5);
+        sensor.disable();
+      });
+
+      it("should emit the correct events and values when smoothing is ", async function() {
+        const clock = sinon.useFakeTimers();
+        const dataSpy = sinon.spy();
+
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog
+        });
+
+        sensor.on("data", dataSpy);
+
+        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].forEach(value => {
+          sensor.io.value = value;
+          clock.tick(101);
+        });
+        assert.equal(dataSpy.callCount, 1);
+        assert.equal(dataSpy.lastCall.args, 6);
+
+        [11, 12, 13, 14, 15, 16, 17, 18, 19, 20].forEach(value => {
+          sensor.io.value = value;
+          clock.tick(101);
+        });
+        assert.equal(dataSpy.callCount, 2);
+        assert.equal(dataSpy.lastCall.args, 16);
+      });
+
+      it("should emit the correct events and values when smoothing is 5", async function() {
+        const clock = sinon.useFakeTimers();
+        const dataSpy = sinon.spy();
+
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog
+        });
+
+        sensor.on("data", dataSpy);
+
+        sensor.smoothing = 5;
+
+        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].forEach(value => {
+          sensor.io.value = value;
+          clock.tick(101);
+        });
+        assert.equal(dataSpy.callCount, 2);
+        assert.equal(dataSpy.lastCall.args, 8);
+
+        [11, 12, 13, 14, 15, 16, 17, 18, 19, 20].forEach(value => {
+          sensor.io.value = value;
+          clock.tick(101);
+        });
+        assert.equal(dataSpy.callCount, 4);
+        assert.equal(dataSpy.lastCall.args, 18);
+      });
+
+      it("should emit the correct events and values when smoothing changes during runtime", async function() {
+        const clock = sinon.useFakeTimers();
+        const dataSpy = sinon.spy();
+
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog
+        });
+
+        sensor.on("data", dataSpy);
+
+        sensor.smoothing = 5;
+
+        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].forEach(value => {
+          sensor.io.value = value;
+          clock.tick(101);
+        });
+        assert.equal(dataSpy.callCount, 2);
+        assert.equal(dataSpy.lastCall.args, 8);
+
+        sensor.smoothing = 10;
+
+        [11, 12, 13, 14, 15, 16, 17, 18, 19, 20].forEach(value => {
+          sensor.io.value = value;
+          clock.tick(101);
+        });
+        assert.equal(dataSpy.callCount, 3);
+        assert.equal(dataSpy.lastCall.args, 16);
+      });
+
+    });
 
   });
 
   describe("Methods", function() {
 
-    // enable
-    // disable
-    // read
-    // scale
-    // scaleto
-    // fscaleto
+    describe("disable", function() {
+      it("should disable the reading interval when called", async function() {
+        const dataSpy = sinon.spy();
+        const clock = sinon.useFakeTimers();
+
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog
+        });
+
+        sensor.on("data", dataSpy);
+
+        clock.tick(10000);
+        assert.equal(dataSpy.callCount, 10);
+
+        sensor.disable();
+
+        clock.tick(10000);
+        assert.equal(dataSpy.callCount, 10);
+
+        clock.restore();
+      });
+    });
+
+    describe("enable", function() {
+      it("should enable the reading interval when called", async function() {
+        const dataSpy = sinon.spy();
+        const clock = sinon.useFakeTimers();
+
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog,
+          enabled: false
+        });
+
+        sensor.on("data", dataSpy);
+
+        clock.tick(10000);
+        assert.equal(dataSpy.callCount, 0);
+
+        sensor.enable();
+
+        clock.tick(10000);
+        assert.equal(dataSpy.callCount, 10);
+
+        sensor.disable();
+        clock.restore();
+      });
+    });
+
+    describe("read", function() {
+      it("should return the current value when called", async function() {
+        const dataSpy = sinon.spy();
+
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog
+        });
+
+        sensor.io.value = 123;
+        assert.equal(sensor.read(), 123);
+
+        sensor.io.value = 456;
+        assert.equal(sensor.read(), 456);
+
+        sensor.disable();
+      });
+    });
+
+    describe("scale", function() {
+
+      it("should accept two params or an array", async function() {
+
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog
+        });
+
+        sensor.scale(0, 255);
+        sensor.io.value = 123;
+        assert.equal(Math.abs(sensor.read() - 31) < 1, true);
+
+        sensor.scale([0, 512]);
+        sensor.io.value = 123;
+        assert.equal(Math.abs(sensor.read() - 62) < 1, true);
+
+        sensor.disable();
+      });
+
+      it("should scale the current value when read", async function() {
+
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog
+        });
+
+        sensor.io.value = 123;
+        assert.equal(sensor.read(), 123);
+
+        sensor.io.value = 456;
+        assert.equal(sensor.read(), 456);
+
+        sensor.scale(0, 255);
+        sensor.io.value = 123;
+        assert.equal(Math.abs(sensor.read() - 31) < 1, true);
+
+        sensor.io.value = 456;
+        assert.equal(Math.abs(sensor.read() - 114) < 1, true);
+
+        sensor.disable();
+      });
+    });
+
+    describe("scaleto", function() {
+      it("should scale the returned value only", async function() {
+
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog
+        });
+
+        sensor.io.value = 123;
+        assert.equal(sensor.read(), 123);
+        assert.equal(sensor.value, 123);
+        assert.equal(sensor.scaleTo(0, 2047), 246);
+        assert.equal(sensor.value, 123);
+
+        sensor.scale(0, 255);
+        sensor.io.value = 123;
+        assert.equal(Math.abs(sensor.read() - 30) < 1, true);
+        assert.equal(Math.abs(sensor.scaleTo(0, 2047) - 246) < 1, true);
+
+        sensor.disable();
+      });
+    });
+
+    describe("fscaleto", function() {
+
+    });
+
   });
 
   describe("Events", function() {
