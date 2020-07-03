@@ -102,7 +102,7 @@
  */
 
 import { Emitter } from "j5e/event";
-import { normalizeParams, getProvider, timer, fmap, constrain } from "j5e/fn";
+import { normalizeParams, getProvider, timer, map, fmap, constrain } from "j5e/fn";
 
 /**
  * Class representing a generic sensor
@@ -258,10 +258,14 @@ class Sensor extends Emitter {
         this.#state.interval = options.interval;
       }
 
+      if (typeof options.smoothing !== "undefined") {
+        this.#state.smoothing = options.smoothing;
+      }
+
       this.#state.range = options.range || [0, 2 ** this.io.resolution - 1];
       this.#state.scale = options.scale || [0, 2 ** this.io.resolution - 1];
       this.#state.limit = options.limit || null;
-      this.#state.threshold = options.threshold === undefined ? 1 : options.threshold;
+      this.#state.threshold = typeof options.threshold === "undefined" ? 1 : options.threshold;
 
       if (options.enabled === false) {
         this.disable();
@@ -424,7 +428,7 @@ class Sensor extends Emitter {
    * import Sensor from "j5e/sensor";
    * const sensor = await new Sensor(12);
    *
-   * // Scale the current value to 8-bit range
+   * // Scale the returned value to 8-bit range
    * sensor.scaleTo([0, 255]);
    */
   scaleTo(low, high) {
@@ -443,7 +447,7 @@ class Sensor extends Emitter {
    * import Sensor from "j5e/sensor";
    * const sensor = await new Sensor(12);
    *
-   * // Scale the current value to float between 0 and 1
+   * // Scale the returned value to float between 0 and 1
    * sensor.fscaleTo([0, 1]);
    */
   fscaleTo(low, high) {

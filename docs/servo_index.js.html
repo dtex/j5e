@@ -580,7 +580,7 @@ class Servo extends Emitter {
 
     if (this.#state.type === "continuous") {
       this.to(
-        this.#state.deadband.reduce(function reduceDeadband(a, b) {
+        this.#state.deadband.reduce(function(a, b) {
           return Math.round((a + b) / 2);
         })
       );
@@ -660,7 +660,7 @@ class Servo extends Emitter {
       };
     }
 
-    return keyFrames.map(function mapKeyFrames(frame) {
+    return keyFrames.map(function(frame) {
       let value = frame;
 
       /* istanbul ignore else */
@@ -698,7 +698,7 @@ class Servo extends Emitter {
 }
 
 function rangeToKeyFrames(range) {
-  return range.map(function mapRange(value) {
+  return range.map(function(value) {
     return { value: value };
   });
 }
