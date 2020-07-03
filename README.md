@@ -20,4 +20,4 @@ led.blink();
 
 New users should check out the [Getting Started](https://dtex.github.io/j5e/tutorial-A-GETSTARTED.html) guide.
 
-Interested in contributing? Check out [contributing.md](https://github.com/dtex/J5e/blob/master/contributing.md) in the repo.
+Interested in contributing? Check out [contributing.md](https://github.com/dtex/J5e/blob/master/CONTRIBUTING.md) in the repo.
