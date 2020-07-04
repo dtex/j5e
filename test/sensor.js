@@ -252,8 +252,8 @@ describe("Sensor", function() {
             }
           });
 
-          assert.equal(sensor.raw <= 256, true);
           sensor.on("limit:lower", function(data) {
+            assert.equal(sensor.raw <= 256, true);
             calls["limit:lower"]++;
           });
 
@@ -917,7 +917,7 @@ describe("Sensor", function() {
         assert.equal(dataSpy.lastCall.args, 18);
       });
 
-      it("should emit the correct events and values when smoothing changes during runtime", async function() {
+      it("should emit the correct events and values when smoothing changes", async function() {
         const clock = sinon.useFakeTimers();
         const dataSpy = sinon.spy();
 
@@ -1078,12 +1078,14 @@ describe("Sensor", function() {
         assert.equal(sensor.read(), 123);
         assert.equal(sensor.value, 123);
         assert.equal(sensor.scaleTo(0, 2047), 246);
+        assert.equal(sensor.scaleTo(0, 255), 30);
         assert.equal(sensor.value, 123);
 
         sensor.scale(0, 255);
         sensor.io.value = 123;
         assert.equal(Math.abs(sensor.read() - 30) < 1, true);
-        assert.equal(Math.abs(sensor.scaleTo(0, 2047) - 246) < 1, true);
+        assert.equal(Math.abs(sensor.read() - 30) !== 0, true);
+        assert.equal(sensor.scaleTo(0, 2047), 246);
 
         sensor.disable();
       });
@@ -1097,14 +1099,504 @@ describe("Sensor", function() {
 
   describe("Events", function() {
 
-    // data
-    // change
-    // limit
-    // limit:upper
-    // limit:lower
-    // raw
+    describe("data", function() {
+
+      it("should emit data events when enabled", async function() {
+
+        const clock = sinon.useFakeTimers();
+        const dataSpy = sinon.spy();
+
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog
+        });
+
+        sensor.on("data", dataSpy);
+
+        clock.tick(10001);
+        assert.equal(dataSpy.callCount, 10);
+
+        sensor.disable();
+
+        clock.tick(10001);
+        assert.equal(dataSpy.callCount, 10);
+
+        sensor.enable();
+
+        clock.tick(10001);
+        assert.equal(dataSpy.callCount, 20);
+
+        sensor.disable();
+        clock.restore();
+      });
+
+      it("should pass the correct value to the callback", async function() {
+
+        const clock = sinon.useFakeTimers();
+        const dataSpy = sinon.spy();
+
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog
+        });
+
+        sensor.on("data", dataSpy);
+
+        sensor.io.value = 432;
+
+        clock.tick(1001);
+        assert.equal(dataSpy.callCount, 1);
+        assert.equal(dataSpy.getCall(0).args[0], 432);
+
+        sensor.disable();
+        clock.restore();
+      });
+
+      it("should pass the scaled value to the callback", async function() {
+
+        const clock = sinon.useFakeTimers();
+        const dataSpy = sinon.spy();
+
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog,
+          scale: [0, 255]
+        });
+
+        sensor.on("data", dataSpy);
+
+        sensor.io.value = 432;
+
+        clock.tick(1001);
+        assert.equal(dataSpy.callCount, 1);
+        assert.equal(sensor.raw, 432);
+        assert.equal(dataSpy.getCall(0).args[0], 108);
+
+        sensor.disable();
+        clock.restore();
+      });
+
+    });
+
+    describe("change", function() {
+      it("should emit change events when enabled", async function() {
+
+        const clock = sinon.useFakeTimers();
+        const changeSpy = sinon.spy();
+
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog
+        });
+
+        sensor.on("change", changeSpy);
+
+        clock.tick(1001);
+        assert.equal(changeSpy.callCount, 0);
+
+        sensor.io.value = 123;
+        clock.tick(1001);
+        assert.equal(changeSpy.callCount, 1);
+
+        sensor.disable();
+        sensor.io.value = 234;
+        clock.tick(1001);
+        assert.equal(changeSpy.callCount, 1);
+
+        sensor.enable();
+        sensor.io.value = 456;
+        clock.tick(1001);
+        assert.equal(changeSpy.callCount, 2);
+
+        sensor.disable();
+        clock.restore();
+      });
+
+      it("should pass the correct value to the callback", async function() {
+
+        const clock = sinon.useFakeTimers();
+        const changeSpy = sinon.spy();
+
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog
+        });
+
+        sensor.on("change", changeSpy);
+
+        clock.tick(1001);
+        assert.equal(changeSpy.callCount, 0);
+
+        sensor.io.value = 123;
+        clock.tick(1001);
+        assert.equal(changeSpy.callCount, 1);
+        assert.equal(changeSpy.getCall(0).args[0], 123);
+        assert.equal(sensor.value, 123);
+
+        sensor.disable();
+        sensor.io.value = 234;
+        clock.tick(1001);
+        assert.equal(changeSpy.callCount, 1);
+        assert.equal(sensor.value, 123);
+
+        sensor.enable();
+        sensor.io.value = 456;
+        clock.tick(1001);
+        assert.equal(changeSpy.callCount, 2);
+        assert.equal(changeSpy.getCall(1).args[0], 456);
+        assert.equal(sensor.value, 456);
+
+        sensor.io.value = 432;
+
+        clock.tick(1001);
+        assert.equal(changeSpy.callCount, 3);
+        assert.equal(changeSpy.getCall(2).args[0], 432);
+
+        sensor.disable();
+        clock.restore();
+      });
+
+      it("should pass the scaled value to the callback", async function() {
+
+        const clock = sinon.useFakeTimers();
+        const changeSpy = sinon.spy();
+
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog,
+          scale: [0, 255]
+        });
+
+        sensor.on("change", changeSpy);
+
+        clock.tick(1001);
+        assert.equal(changeSpy.callCount, 0);
+
+        sensor.io.value = 123;
+        clock.tick(1001);
+        assert.equal(changeSpy.callCount, 1);
+        assert.equal(changeSpy.getCall(0).args[0], 31);
+        assert.equal(Math.abs(sensor.value - 30) !== 0, true);
+
+        sensor.disable();
+        sensor.io.value = 234;
+        clock.tick(1001);
+        assert.equal(changeSpy.callCount, 1);
+        assert.equal(Math.abs(sensor.value - 30) !== 0, true);
+
+        sensor.enable();
+        sensor.io.value = 456;
+        clock.tick(1001);
+        assert.equal(changeSpy.callCount, 2);
+        assert.equal(changeSpy.getCall(1).args[0], 114);
+        assert.equal(Math.abs(sensor.value - 114) !== 0, true);
+
+        sensor.io.value = 432;
+
+        clock.tick(1001);
+        assert.equal(changeSpy.callCount, 3);
+        assert.equal(changeSpy.getCall(2).args[0], 108);
+
+        sensor.disable();
+        clock.restore();
+      });
+    });
+
+    describe("limit", function() {
+
+      it("should emit limit events when enabled", async function() {
+
+        const clock = sinon.useFakeTimers();
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog,
+          limit: [256, 768]
+        });
+
+        const calls = {
+          "lower": 0,
+          "upper": 0
+        };
+
+        sensor.on("limit", function(data) {
+          if (data.boundary === "lower") {
+            assert.equal(sensor.raw <= 256, true);
+            calls.lower++;
+          } else {
+            assert.equal(sensor.raw >= 768, true);
+            calls.upper++;
+          }
+        });
+
+        clock.tick(1005);
+        sensor.io.value = 127;
+        clock.tick(1005);
+        sensor.io.value = 256;
+        clock.tick(1005);
+        sensor.io.value = 512;
+        clock.tick(1005);
+        sensor.io.value = 768;
+        clock.tick(1005);
+        sensor.io.value = 895;
+        clock.tick(1005);
+        sensor.io.value = 1023;
+        clock.tick(1005);
+
+        assert.equal(calls.lower, 3);
+        assert.equal(calls.upper, 3);
+
+        sensor.disable();
+
+        clock.tick(1005);
+        sensor.io.value = 127;
+        clock.tick(1005);
+        sensor.io.value = 256;
+        clock.tick(1005);
+        sensor.io.value = 512;
+        clock.tick(1005);
+        sensor.io.value = 768;
+        clock.tick(1005);
+        sensor.io.value = 895;
+        clock.tick(1005);
+        sensor.io.value = 1023;
+        clock.tick(1005);
+
+        assert.equal(calls.lower, 3);
+        assert.equal(calls.upper, 3);
+
+        sensor.enable();
+
+        clock.tick(1005);
+        sensor.io.value = 127;
+        clock.tick(1005);
+        sensor.io.value = 256;
+        clock.tick(1005);
+        sensor.io.value = 512;
+        clock.tick(1005);
+        sensor.io.value = 768;
+        clock.tick(1005);
+        sensor.io.value = 895;
+        clock.tick(1005);
+        sensor.io.value = 1023;
+        clock.tick(1005);
+
+        assert.equal(calls.lower, 5);
+        assert.equal(calls.upper, 7);
+
+        clock.restore();
+        sensor.disable();
+
+      });
+
+    });
+
+    describe("limit:lower", function() {
+      it("should emit limit:lower events when enabled", async function() {
+
+        const clock = sinon.useFakeTimers();
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog,
+          limit: [256, 768]
+        });
+
+        const calls = {
+          "limit:lower": 0
+        };
+
+        sensor.on("limit:lower", function(data) {
+          assert.equal(sensor.raw <= 256, true);
+          calls["limit:lower"]++;
+        });
+
+        clock.tick(1005);
+        sensor.io.value = 127;
+        clock.tick(1005);
+        sensor.io.value = 256;
+        clock.tick(1005);
+        sensor.io.value = 512;
+        clock.tick(1005);
+        sensor.io.value = 768;
+        clock.tick(1005);
+        sensor.io.value = 895;
+        clock.tick(1005);
+        sensor.io.value = 1023;
+        clock.tick(1005);
+
+        assert.equal(calls["limit:lower"], 3);
+
+        sensor.disable();
+
+        clock.tick(1005);
+        sensor.io.value = 127;
+        clock.tick(1005);
+        sensor.io.value = 256;
+        clock.tick(1005);
+        sensor.io.value = 512;
+        clock.tick(1005);
+        sensor.io.value = 768;
+        clock.tick(1005);
+        sensor.io.value = 895;
+        clock.tick(1005);
+        sensor.io.value = 1023;
+        clock.tick(1005);
+
+        assert.equal(calls["limit:lower"], 3);
+
+        sensor.enable();
+
+        clock.tick(1005);
+        sensor.io.value = 127;
+        clock.tick(1005);
+        sensor.io.value = 256;
+        clock.tick(1005);
+        sensor.io.value = 512;
+        clock.tick(1005);
+        sensor.io.value = 768;
+        clock.tick(1005);
+        sensor.io.value = 895;
+        clock.tick(1005);
+        sensor.io.value = 1023;
+        clock.tick(1005);
+
+        assert.equal(calls["limit:lower"], 5);
+
+        clock.restore();
+        sensor.disable();
+
+      });
+    });
+
+    describe("limit:upper", function() {
+      it("should emit limit:upper events when enabled", async function() {
+
+        const clock = sinon.useFakeTimers();
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog,
+          limit: [256, 768]
+        });
+
+        const calls = {
+          "limit:upper": 0
+        };
+
+        sensor.on("limit:upper", function(data) {
+          assert.equal(sensor.raw >= 768, true);
+          calls["limit:upper"]++;
+        });
+
+        clock.tick(1005);
+        sensor.io.value = 127;
+        clock.tick(1005);
+        sensor.io.value = 256;
+        clock.tick(1005);
+        sensor.io.value = 512;
+        clock.tick(1005);
+        sensor.io.value = 768;
+        clock.tick(1005);
+        sensor.io.value = 895;
+        clock.tick(1005);
+        sensor.io.value = 1023;
+        clock.tick(1005);
+
+        assert.equal(calls["limit:upper"], 3);
+
+        sensor.disable();
+
+        clock.tick(1005);
+        sensor.io.value = 127;
+        clock.tick(1005);
+        sensor.io.value = 256;
+        clock.tick(1005);
+        sensor.io.value = 512;
+        clock.tick(1005);
+        sensor.io.value = 768;
+        clock.tick(1005);
+        sensor.io.value = 895;
+        clock.tick(1005);
+        sensor.io.value = 1023;
+        clock.tick(1005);
+
+        assert.equal(calls["limit:upper"], 3);
+
+        sensor.enable();
+
+        clock.tick(1005);
+        sensor.io.value = 127;
+        clock.tick(1005);
+        sensor.io.value = 256;
+        clock.tick(1005);
+        sensor.io.value = 512;
+        clock.tick(1005);
+        sensor.io.value = 768;
+        clock.tick(1005);
+        sensor.io.value = 895;
+        clock.tick(1005);
+        sensor.io.value = 1023;
+        clock.tick(1005);
+
+        assert.equal(calls["limit:upper"], 7);
+
+        clock.restore();
+        sensor.disable();
+
+      });
+    });
+
+    describe("raw", function() {
+      it("should emit data events when enabled", async function() {
+
+        const clock = sinon.useFakeTimers();
+        const rawSpy = sinon.spy();
+
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog
+        });
+
+        sensor.on("raw", rawSpy);
+
+        clock.tick(10001);
+        assert.equal(rawSpy.callCount, 100);
+
+        sensor.disable();
+
+        clock.tick(10001);
+        assert.equal(rawSpy.callCount, 100);
+
+        sensor.enable();
+
+        clock.tick(10001);
+        assert.equal(rawSpy.callCount, 200);
+
+        sensor.disable();
+        clock.restore();
+      });
+
+      it("should pass the correct value to the callback", async function() {
+
+        const clock = sinon.useFakeTimers();
+        const rawSpy = sinon.spy();
+
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog
+        });
+
+        sensor.on("raw", rawSpy);
+
+        sensor.io.value = 432;
+
+        clock.tick(1001);
+        assert.equal(rawSpy.callCount, 10);
+        assert.equal(rawSpy.getCall(0).args[0], 432);
+
+        sensor.disable();
+        clock.restore();
+      });
+    });
+
   });
 
 });
-
-

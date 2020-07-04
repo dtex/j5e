@@ -185,7 +185,7 @@ export async function asyncForEach(array, callback) {
  * Fn.map(500, 0, 1000, 0, 255); // -> 127
  */
 export function map(value, fromLow, fromHigh, toLow, toHigh) {
-  return ((value - fromLow) * (toHigh - toLow) / (fromHigh - fromLow) + toLow) | 0;
+  return (((value - fromLow) * (toHigh - toLow) / (fromHigh - fromLow) + toLow) | 0);
 };
 
 const f32A = new Float32Array(1);
