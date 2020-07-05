@@ -1,48 +1,23 @@
 import assert from "assert";
 import sinon from "sinon";
-import { PWM } from "@dtex/mock-io";
-import Servo from "j5e/servo";
+import { Digital, PWM } from "@dtex/mock-io";
+import ClassName from "j5e/classname";
 
-describe("Servo - Standard", function() {
+describe("ClassName", function() {
 
   describe("Instantiation", function() {
 
-    it("should return a valid Servo instance when passed an options object", async function() {
-
-      const servo = await new Servo({
-        pin: 12,
-        io: PWM
-      });
-      assert.equal(servo instanceof Servo, true);
-
-    });
+    // All tests related to default instantiation
 
     describe("Options", function() {
 
-      // pwmRange
-      // deadband
-      // Range
-      // deviceRange
-      // startAt
-      // offset
-      // invert
-      // center
+      describe("someOptionProperty", async function() {
 
-      describe("type", async function() {
-
-        it("should behave as contiuous rotation servo when type is \"continuous\"", async function() {
-          const servo = await new Servo({
-            pin: 12,
-            io: PWM,
-            type: "continuous"
-          });
-
-          servo.cw();
-          assert.equal(servo.position, 180);
-
-          servo.stop();
-          assert.equal(servo.position, 90);
+        it("should be configured appropriately for the option", async function() {
+          // ...
         });
+
+        // [ All other tests related to this option ]
 
       });
     });
@@ -52,10 +27,6 @@ describe("Servo - Standard", function() {
   });
 
   describe("Properties", function() {
-
-    // history
-    // last
-    // position
 
     describe("someProperty", function() {
 
@@ -73,18 +44,6 @@ describe("Servo - Standard", function() {
 
   describe("Methods", function() {
 
-    // to
-    // step
-    // min
-    // max
-    // center
-    // home
-    // sweep
-    // stop
-    // cw
-    // ccw
-    // normalize
-    // rangeToKeyFrames
     describe("someMethod", function() {
 
       it("should do the right thing", async function() {
@@ -101,7 +60,6 @@ describe("Servo - Standard", function() {
 
   describe("Events", function() {
 
-    //moveComplete
     describe("someEvent", function() {
 
       it("should emit the event at the appropriate time", async function() {

@@ -170,9 +170,9 @@
 														<td><code>deadband</code></td>
 													<td><span class="param-type">Array.&lt;number></span></td>
 														<td class="attributes">&lt;optional&gt;<br/></td>
-														<td>[1500,1500]</td>
+														<td>[90,90]</td>
 													<td class="last">
-															The range at which a continuos motion servo will not turn
+															The degree range at which a continuos motion servo will not turn
 													</td>
 												</tr>
 												<tr>
@@ -321,6 +321,13 @@
 															The corrected position (factors in offset and invert)
 													</td>
 												</tr>
+												<tr>
+														<td><code>pulseWidth</code></td>
+													<td><span class="param-type">Array.&lt;object></span></td>
+													<td class="last">
+															The corrected pulseWidth (factors in offset and invert)
+													</td>
+												</tr>
 											</tbody>
 										</table>
 							</td>
@@ -384,7 +391,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-68">line 68</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-69">line 69</a></p>
 								</div>
 							</div>
 			
@@ -503,7 +510,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-213">line 213</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-208">line 208</a></p>
 								</div>
 							</div>
 			
@@ -595,7 +602,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-314">line 314</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-310">line 310</a></p>
 								</div>
 							</div>
 			
@@ -677,7 +684,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-336">line 336</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-332">line 332</a></p>
 								</div>
 							</div>
 			
@@ -759,7 +766,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-358">line 358</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-354">line 354</a></p>
 								</div>
 							</div>
 			
@@ -851,7 +858,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-390">line 390</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-386">line 386</a></p>
 								</div>
 							</div>
 			
@@ -908,7 +915,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-409">line 409</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-405">line 405</a></p>
 								</div>
 							</div>
 			
@@ -993,7 +1000,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-436">line 436</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-432">line 432</a></p>
 								</div>
 							</div>
 			
@@ -1042,7 +1049,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-479">line 479</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-475">line 475</a></p>
 								</div>
 							</div>
 			
@@ -1124,7 +1131,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-514">line 514</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-510">line 510</a></p>
 								</div>
 							</div>
 			
@@ -1206,7 +1213,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-538">line 538</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-534">line 534</a></p>
 								</div>
 							</div>
 			

@@ -1,6 +1,6 @@
 {
   "name": "j5e",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "description": "j5e is a device framework built for ECMA TC-53's IO pattern",
   "main": "index.js",
   "exports": {
