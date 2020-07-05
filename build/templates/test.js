@@ -30,7 +30,7 @@ describe("ClassName", function() {
 
     describe("someProperty", function() {
 
-      it("should respong with the property value", async function() {
+      it("should respond with the property value", async function() {
         // ...
       });
 
