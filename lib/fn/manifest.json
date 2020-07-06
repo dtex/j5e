@@ -4,7 +4,9 @@
     "*": [],
     "j5e/fn": "$(j5e)/lib/fn/*"
   },
-  "preload": [],
+  "preload": [
+    "j5e/fn"
+  ],
   "platforms": {
     "esp": {},
     "...": {
