@@ -188,7 +188,6 @@ export function map(value, fromLow, fromHigh, toLow, toHigh) {
   return (((value - fromLow) * (toHigh - toLow) / (fromHigh - fromLow) + toLow) | 0);
 };
 
-const f32A = new Float32Array(1);
 /**
  * Like map, but returns a Float32
  *
@@ -200,8 +199,7 @@ const f32A = new Float32Array(1);
  * @return {Float32}
  */
 export function fmap(value, fromLow, fromHigh, toLow, toHigh) {
-  f32A[0] = (value - fromLow) * (toHigh - toLow) / (fromHigh - fromLow) + toLow;
-  return f32A[0];
+  return (value - fromLow) * (toHigh - toLow) / (fromHigh - fromLow) + toLow;
 };
 
 /** Constrain a value to a range.
@@ -240,7 +238,7 @@ export async function getProvider(ioOpts, defaultProvider) {
 /** Wrapper for setInterval, clearInterval, and setImmediate. This is necessary so we can use the Global methods in node.js and the System methods in XS.
  * @namespace timer
  */
-export const timer = {
+export const timer = Object.freeze({
 
   /**
    * Execute a callback on a recurring interval
@@ -371,7 +369,7 @@ export const timer = {
     }
   }
 
-};
+});
 
 /** Debounce a function so that it is not invoked unless it stops being called for N milliseconds
  * @function debounce
