@@ -6,7 +6,11 @@
     "j5e/event": "$(j5e)/lib/event/*",
     "j5e/animation": "$(j5e)/lib/animation/*"
   },
-  "preload": [],
+  "preload": [
+    "j5e/animation",
+    "j5e/event",
+    "j5e/fn"
+  ],
   "platforms": {
     "esp": {},
     "...": {

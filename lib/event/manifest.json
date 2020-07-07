@@ -4,7 +4,9 @@
     "*": [],
     "j5e/event": "$(j5e)/lib/event/*"
   },
-  "preload": [],
+  "preload": [
+    "j5e/event"
+  ],
   "platforms": {
     "esp": {},
     "...": {

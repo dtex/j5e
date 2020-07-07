@@ -8,7 +8,13 @@
     "j5e/fn": "$(j5e)/lib/fn/*",
     "j5e/rgb": "$(j5e)/lib/rgb/*"
   },
-  "preload": [],
+  "preload": [
+    "j5e/animation",
+    "j5e/easing",
+    "j5e/event",
+    "j5e/fn",
+    "j5e/rgb"
+  ],
   "platforms": {
     "esp": {},
     "...": {
