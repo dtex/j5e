@@ -4,7 +4,9 @@
     "*": [],
     "j5e/easing": "$(j5e)/lib/easing/*"
   },
-  "preload": [],
+  "preload": [
+    "j5e/easing"
+  ],
   "platforms": {
     "esp": {},
     "...": {
