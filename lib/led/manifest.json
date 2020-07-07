@@ -8,7 +8,13 @@
     "j5e/led": "$(j5e)/lib/led/*",
     "j5e/event": "$(j5e)/lib/event/*"
   },
-  "preload": [],
+  "preload": [
+    "j5e/animation",
+    "j5e/easing",
+    "j5e/fn",
+    "j5e/led",
+    "j5e/event"
+  ],
   "platforms": {
     "esp": {},
     "...": {
