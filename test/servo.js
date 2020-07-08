@@ -186,8 +186,6 @@ describe("Servo - Standard", function() {
 
   describe("Properties", function() {
 
-    // position
-
     describe("history", function() {
 
       it("should respond with the five most recent target positions", async function() {
@@ -251,14 +249,10 @@ describe("Servo - Standard", function() {
 
     });
 
-    // [ All other properties, each with it's own describe ]
-
   });
 
   describe("Methods", function() {
 
-    // to
-    // step
     // min
     // max
     // center
@@ -339,11 +333,54 @@ describe("Servo - Standard", function() {
         clock.restore();
       });
 
-      // [ all other tests related to someMethod ]
-
     });
 
-    // [ All other methods, each with it's own describe ]
+    describe("step", function() {
+
+      it("should move the requested number of degrees", async function() {
+
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM
+        });
+
+        servo.to(90);
+        assert.equal(servo.position, 90);
+
+        servo.step(20);
+        assert.equal(servo.position, 110);
+
+        servo.step(-60);
+        assert.equal(servo.position, 50);
+
+      });
+
+      it("should move the requested number of degrees over time", async function() {
+
+        const clock = sinon.useFakeTimers();
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM
+        });
+
+        servo.to(90);
+        assert.equal(servo.position, 90);
+
+        servo.step(20, 1000);
+        clock.tick(500);
+        assert.equal(servo.position, 100);
+        clock.tick(500);
+        assert.equal(servo.position, 110);
+
+        servo.step(-60, 1000);
+        clock.tick(500);
+        assert.equal(servo.position, 80);
+        clock.tick(500);
+        assert.equal(servo.position, 50);
+
+      });
+
+    });
 
   });
 
