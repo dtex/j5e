@@ -626,7 +626,7 @@ class Servo extends Emitter {
    */
   ccw(speed = 1) {
     speed = constrain(speed, 0, 1);
-    speed = map(speed, 0, 1, this.#state.deadband[0] - 1, this.#state.pwmRange[0]);
+    speed = map(speed, 0, 1, this.#state.deadband[0] - 1, this.#state.deviceRange[0]);
     return this.to(speed);
   }
 
