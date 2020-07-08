@@ -253,16 +253,6 @@ describe("Servo - Standard", function() {
 
   describe("Methods", function() {
 
-    // min
-    // max
-    // center
-    // home
-    // sweep
-    // stop
-    // cw
-    // ccw
-    // normalize
-    // rangeToKeyFrames
     describe("to", function() {
 
       it("should go to the position passed in a single parameter", async function() {
@@ -381,6 +371,189 @@ describe("Servo - Standard", function() {
       });
 
     });
+
+    describe("min", function() {
+
+      it("should move the min position", async function() {
+
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM
+        });
+
+        servo.min();
+        assert.equal(servo.position, 0);
+
+      });
+
+      it("should move the min position passed in options", async function() {
+
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM,
+          range: [20, 160]
+        });
+
+        servo.min();
+        assert.equal(servo.position, 20);
+
+      });
+
+    });
+
+    describe("max", function() {
+
+      it("should move the max position", async function() {
+
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM
+        });
+
+        servo.max();
+        assert.equal(servo.position, 180);
+
+      });
+
+      it("should move the max position passed in options", async function() {
+
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM,
+          range: [20, 160]
+        });
+
+        servo.max();
+        assert.equal(servo.position, 160);
+
+      });
+
+    });
+
+    describe("center", function() {
+
+      it("should center the servo", async function() {
+
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM
+        });
+
+        servo.to(0);
+        servo.center();
+        assert.equal(servo.position, 90);
+
+      });
+
+      it("should center the servo based on deviceRange option", async function() {
+
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM,
+          deviceRange: [30, 100]
+        });
+
+        servo.to(0);
+        servo.center();
+        assert.equal(servo.position, 65);
+
+      });
+
+    });
+
+    describe("home", function() {
+
+      it("should move to the default startAt position", async function() {
+
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM
+        });
+
+        servo.home();
+        assert.equal(servo.position, 90);
+
+      });
+
+      it("should move to the startAt passed in options", async function() {
+
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM,
+          startAt: 20
+        });
+
+        servo.home();
+        assert.equal(servo.position, 20);
+
+      });
+
+    });
+
+    describe("cw", function() {
+
+      it("should move a CR servo forward", async function() {
+
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM,
+          type: "continuous"
+        });
+
+        servo.cw();
+        assert.equal(servo.position, 180);
+
+      });
+
+      it("should move a CR servo forward at half speed", async function() {
+
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM,
+          type: "continuous"
+        });
+
+        servo.cw(0.5);
+        assert.equal(servo.position, 135);
+
+      });
+
+    });
+
+    describe("ccw", function() {
+
+      it("should move a CR servo backward", async function() {
+
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM,
+          type: "continuous"
+        });
+
+        servo.ccw();
+        assert.equal(servo.position, 0);
+
+      });
+
+      it("should move a CR servo backward at half speed", async function() {
+
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM,
+          type: "continuous"
+        });
+
+        servo.ccw(0.5);
+        assert.equal(servo.position, 44);
+
+      });
+
+    });
+
+    // sweep
+    // stop
+    // normalize
+    // rangeToKeyFrames
 
   });
 
