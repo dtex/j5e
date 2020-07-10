@@ -550,7 +550,75 @@ describe("Servo - Standard", function() {
 
     });
 
-    // sweep
+    describe("sweep", function() {
+
+      it("should sweep at the default speed", async function() {
+
+        let clock = sinon.useFakeTimers();
+
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM
+        });
+
+        servo.to(0);
+
+        servo.sweep();
+        assert.equal(servo.position, 0);
+
+        clock.tick(250);
+        assert.equal(Math.abs(servo.position - 24.4) < 0.1, true);
+
+        clock.tick(250);
+        assert.equal(Math.abs(servo.position - 90) < 0.1, true);
+
+        clock.tick(250);
+        assert.equal(Math.abs(servo.position - 151.6) < 0.1, true);
+
+        clock.tick(250);
+        assert.equal(Math.abs(servo.position - 180) < 0.1, true);
+
+        clock.tick(250);
+        assert.equal(Math.abs(servo.position - 155.6) < 0.1, true);
+
+        clock.tick(250);
+        assert.equal(Math.abs(servo.position - 90) < 0.1, true);
+
+        clock.restore();
+
+      });
+
+      it("should animate when passed an animation object", async function() {
+        let clock = sinon.useFakeTimers();
+
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM
+        });
+
+        servo.to({
+          duration: 1000,
+          cuePoints: [0, 0.5, 0.75, 1.0],
+          keyFrames: [{ degrees: 0 }, { degrees: 180 }, -180, 90]
+        });
+
+        clock.tick(260);
+        assert.equal(Math.abs(servo.position - 93.6) < 0.1, true);
+
+        clock.tick(240);
+        assert.equal(servo.position, 180);
+
+        clock.tick(240);
+        assert.equal(Math.abs(servo.position - 7.2) < 0.1, true);
+
+        clock.tick(260);
+        assert.equal(servo.position, 90);
+
+        clock.restore();
+      });
+
+    });
+
     // stop
     // normalize
     // rangeToKeyFrames
