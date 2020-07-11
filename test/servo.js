@@ -19,24 +19,6 @@ describe("Servo - Standard", function() {
 
     describe("Options", function() {
 
-      describe("type", async function() {
-
-        it("should behave as contiuous rotation servo when type is \"continuous\"", async function() {
-          const servo = await new Servo({
-            pin: 12,
-            io: PWM,
-            type: "continuous"
-          });
-
-          servo.cw();
-          assert.equal(servo.position, 180);
-
-          servo.stop();
-          assert.equal(servo.position, 90);
-        });
-
-      });
-
       describe("pwmRange", async function() {
 
         it("should scale the PWM write range", async function() {
@@ -53,28 +35,6 @@ describe("Servo - Standard", function() {
 
           servo.to(0);
           assert.equal(servo.io.write.getCall(-1).args[0], 51);
-
-          spy.restore();
-        });
-
-      });
-
-      describe("deadband", async function() {
-
-        it("should move to the middle of deadband on stop", async function() {
-
-          const servo = await new Servo({
-            pin: 12,
-            io: PWM,
-            deadband: [80, 85],
-            type: "continuous"
-          });
-          let spy = sinon.spy(servo.io, "write");
-
-          servo.cw(1);
-          assert.equal(servo.io.write.getCall(-1).args[0], 122);
-          servo.stop();
-          assert.equal(servo.io.write.getCall(-1).args[0], 72);
 
           spy.restore();
         });
@@ -143,7 +103,7 @@ describe("Servo - Standard", function() {
             io: PWM,
             offset: -10
           });
-          servo.to(90);
+
           assert.equal(servo.last.target, 90);
           assert.equal(servo.position, 80);
         });
@@ -175,7 +135,7 @@ describe("Servo - Standard", function() {
             io: PWM,
             center: false
           });
-          assert.equal(servo.position, -1);
+          assert.equal(servo.position, 90);
         });
 
       });
@@ -276,9 +236,6 @@ describe("Servo - Standard", function() {
           io: PWM
         });
 
-        assert.equal(servo.position, -1);
-
-        servo.to(90);
         assert.equal(servo.position, 90);
 
         servo.to(50, 500);
@@ -334,7 +291,6 @@ describe("Servo - Standard", function() {
           io: PWM
         });
 
-        servo.to(90);
         assert.equal(servo.position, 90);
 
         servo.step(20);
@@ -353,7 +309,6 @@ describe("Servo - Standard", function() {
           io: PWM
         });
 
-        servo.to(90);
         assert.equal(servo.position, 90);
 
         servo.step(20, 1000);
@@ -490,66 +445,6 @@ describe("Servo - Standard", function() {
 
     });
 
-    describe("cw", function() {
-
-      it("should move a CR servo forward", async function() {
-
-        const servo = await new Servo({
-          pin: 12,
-          io: PWM,
-          type: "continuous"
-        });
-
-        servo.cw();
-        assert.equal(servo.position, 180);
-
-      });
-
-      it("should move a CR servo forward at half speed", async function() {
-
-        const servo = await new Servo({
-          pin: 12,
-          io: PWM,
-          type: "continuous"
-        });
-
-        servo.cw(0.5);
-        assert.equal(servo.position, 135);
-
-      });
-
-    });
-
-    describe("ccw", function() {
-
-      it("should move a CR servo backward", async function() {
-
-        const servo = await new Servo({
-          pin: 12,
-          io: PWM,
-          type: "continuous"
-        });
-
-        servo.ccw();
-        assert.equal(servo.position, 0);
-
-      });
-
-      it("should move a CR servo backward at half speed", async function() {
-
-        const servo = await new Servo({
-          pin: 12,
-          io: PWM,
-          type: "continuous"
-        });
-
-        servo.ccw(0.5);
-        assert.equal(servo.position, 44);
-
-      });
-
-    });
-
     describe("sweep", function() {
 
       it("should sweep at the default speed", async function() {
@@ -619,26 +514,274 @@ describe("Servo - Standard", function() {
 
     });
 
-    // stop
-    // normalize
-    // rangeToKeyFrames
+    describe("stop", function() {
+
+      it("should stop an ongoing animation", async function() {
+
+        let clock = sinon.useFakeTimers();
+
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM
+        });
+
+        servo.to(0);
+
+        servo.sweep();
+        assert.equal(servo.position, 0);
+
+        clock.tick(250);
+        assert.equal(Math.abs(servo.position - 24.4) < 0.1, true);
+
+        clock.tick(250);
+        assert.equal(Math.abs(servo.position - 90) < 0.1, true);
+
+        clock.tick(250);
+        assert.equal(Math.abs(servo.position - 151.6) < 0.1, true);
+
+        servo.stop();
+
+        clock.tick(250);
+        assert.equal(Math.abs(servo.position - 151.6) < 0.1, true);
+
+        clock.restore();
+
+      });
+
+    });
+
+    describe("normalize", function() {
+
+      it("should replace null in the first element with the current position", async function() {
+
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM
+        });
+
+        const result = servo.normalize([null, 20]);
+        assert.equal(result[0].value, 90);
+
+      });
+
+      it("should replace step in the first element with the current position + step", async function() {
+
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM
+        });
+
+        const result = servo.normalize([50, 20]);
+        assert.equal(result[0].value, 140);
+
+      });
+
+      it("should handle step values as numbers when in positions > 0", async function() {
+
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM
+        });
+
+        const result = servo.normalize([50, 20, -60]);
+        assert.equal(result[0].value, 140);
+        assert.equal(result[1].step, 20);
+        assert.equal(result[2].step, -60);
+
+      });
+
+      it("should convert \"degrees\" to \"value\"", async function() {
+
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM
+        });
+
+        const result = servo.normalize([{ degrees: 50 }, { degrees: 20 }, { degrees: -60 }]);
+        assert.equal(result[0].value, 50);
+        assert.equal(result[1].value, 20);
+        assert.equal(result[2].value, -60);
+
+      });
+
+      it("should coconvert \"copyDegrees\" to \"copyValue\"", async function() {
+
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM
+        });
+
+        const result = servo.normalize([{ degrees: 50 }, { step: 20 }, { copyDegrees: 0 }]);
+        assert.equal(result[0].value, 50);
+        assert.equal(result[1].step, 20);
+        assert.equal(result[2].copyValue, 0);
+
+      });
+
+    });
 
   });
 
   describe("Events", function() {
 
-    //moveComplete
-    describe("someEvent", function() {
+    describe("move:complete", function() {
 
       it("should emit the event at the appropriate time", async function() {
-        // ...
-      });
+        const completeSpy = sinon.spy();
+        const clock = sinon.useFakeTimers();
 
-      // [ all other tests related to someEvent ]
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM
+        });
+
+        servo.to(90);
+        servo.on("move:complete", completeSpy);
+
+        servo.to(180, 1000);
+        clock.tick(500);
+        assert.equal(completeSpy.callCount, 0);
+        clock.tick(520);
+        assert.equal(completeSpy.callCount, 1);
+      });
 
     });
 
-    // [ All other events, each with it's own describe ]
+  });
+
+});
+
+describe("Servo - Continuous", function() {
+
+  describe("Instantiation", function() {
+
+    describe("Options", function() {
+
+      describe("type", async function() {
+
+        it("should behave as contiuous rotation servo when type is \"continuous\"", async function() {
+          const servo = await new Servo({
+            pin: 12,
+            io: PWM,
+            type: "continuous"
+          });
+
+          servo.cw();
+          assert.equal(servo.position, 180);
+
+          servo.stop();
+          assert.equal(servo.position, 90);
+        });
+
+      });
+
+      describe("deadband", async function() {
+
+        it("should move to the middle of deadband on stop", async function() {
+
+          const servo = await new Servo({
+            pin: 12,
+            io: PWM,
+            deadband: [80, 85],
+            type: "continuous"
+          });
+          let spy = sinon.spy(servo.io, "write");
+
+          servo.cw(1);
+          assert.equal(servo.io.write.getCall(-1).args[0], 122);
+          servo.stop();
+          assert.equal(servo.io.write.getCall(-1).args[0], 72);
+
+          spy.restore();
+        });
+
+      });
+
+    });
+
+  });
+
+  describe("Methods", function() {
+
+    describe("cw", function() {
+
+      it("should move a CR servo forward", async function() {
+
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM,
+          type: "continuous"
+        });
+
+        servo.cw();
+        assert.equal(servo.position, 180);
+
+      });
+
+      it("should move a CR servo forward at half speed", async function() {
+
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM,
+          type: "continuous"
+        });
+
+        servo.cw(0.5);
+        assert.equal(servo.position, 135);
+
+      });
+
+    });
+
+    describe("ccw", function() {
+
+      it("should move a CR servo backward", async function() {
+
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM,
+          type: "continuous"
+        });
+
+        servo.ccw();
+        assert.equal(servo.position, 0);
+
+      });
+
+      it("should move a CR servo backward at half speed", async function() {
+
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM,
+          type: "continuous"
+        });
+
+        servo.ccw(0.5);
+        assert.equal(servo.position, 44);
+
+      });
+
+    });
+
+    describe("stop", function() {
+
+      it("should stop a continuous rotation servo", async function() {
+
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM,
+          type: "continuous"
+        });
+
+        servo.cw();
+        assert.equal(servo.position, 180);
+
+        servo.stop();
+        assert.equal(servo.position, 90);
+
+      });
+
+    });
 
   });
 

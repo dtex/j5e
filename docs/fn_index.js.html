@@ -361,8 +361,8 @@ export const timer = Object.freeze({
    * @param {function} callback
    */
   setImmediate(callback) {
-    if (typeof process !== "undefined" &amp;&amp; process.setImmediate) {
-      setImmediate(callback);
+    if (typeof process !== "undefined" &amp;&amp; global.setImmediate) {
+      global.setImmediate(callback);
     }
     if (typeof System !== "undefined" &amp;&amp; System.setTimeout) {
       System.setTimeout(callback);
