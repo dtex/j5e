@@ -23,13 +23,74 @@ describe("LED - Digital", function() {
   });
 
   describe("Properties", function() {
-    // describe('someProperty', function() {
-    // it('should do a thing base on the property value', async function() {
-    // ...
-    // });
-    // [ all other tests related to someProperty ]
-    // });
-    // [ All other properties, each with it's own describe ]
+
+    describe("value", function() {
+
+      it("should return the current value", async function() {
+        const led = await new LED({
+          pin: 12,
+          io: Digital
+        });
+
+        led.on(1);
+        assert.equal(led.value, 1);
+
+      });
+    });
+
+    describe("isOn", function() {
+
+      it("should return true if the LED is on", async function() {
+        const led = await new LED({
+          pin: 12,
+          io: Digital
+        });
+
+        led.on();
+        assert.equal(led.isOn, true);
+
+        led.off();
+        assert.equal(led.isOn, false);
+
+      });
+    });
+
+    describe("isRunning", function() {
+
+      it("should return true if the LED is blinking", async function() {
+        const led = await new LED({
+          pin: 12,
+          io: Digital
+        });
+
+        assert.equal(led.isRunning, false);
+
+        led.blink();
+        assert.equal(led.isRunning, true);
+
+        led.stop();
+        assert.equal(led.isRunning, false);
+
+      });
+
+      it("should return true if the LED is pulsing", async function() {
+        const led = await new LED({
+          pin: 12,
+          io: Digital
+        });
+
+        assert.equal(led.isRunning, false);
+
+        led.pulse();
+        assert.equal(led.isRunning, true);
+
+        led.stop();
+        assert.equal(led.isRunning, false);
+
+      });
+
+    });
+
   });
 
   describe("Methods", function() {
@@ -166,6 +227,82 @@ describe("LED - PWM", function() {
       assert.equal(led.HIGH, 1023);
 
     });
+
+  });
+
+  describe("Properties", function() {
+
+    describe("value", function() {
+
+      it("should return the current value", async function() {
+        const led = await new LED({
+          pin: 12,
+          io: PWM
+        });
+
+        led.on();
+        assert.equal(led.value, 1023);
+
+        led.brightness(512);
+        assert.equal(led.value, 512);
+
+
+      });
+    });
+
+    describe("isOn", function() {
+
+      it("should return true if the LED is on", async function() {
+        const led = await new LED({
+          pin: 12,
+          io: Digital
+        });
+
+        led.on();
+        assert.equal(led.isOn, true);
+
+        led.off();
+        assert.equal(led.isOn, false);
+
+      });
+    });
+
+    describe("isRunning", function() {
+
+      it("should return true if the LED is blinking", async function() {
+        const led = await new LED({
+          pin: 12,
+          io: Digital
+        });
+
+        assert.equal(led.isRunning, false);
+
+        led.blink();
+        assert.equal(led.isRunning, true);
+
+        led.stop();
+        assert.equal(led.isRunning, false);
+
+      });
+
+      it("should return true if the LED is pulsing", async function() {
+        const led = await new LED({
+          pin: 12,
+          io: Digital
+        });
+
+        assert.equal(led.isRunning, false);
+
+        led.pulse();
+        assert.equal(led.isRunning, true);
+
+        led.stop();
+        assert.equal(led.isRunning, false);
+
+      });
+
+    });
+
   });
 
   describe("Methods", function() {
