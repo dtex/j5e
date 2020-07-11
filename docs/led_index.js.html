@@ -118,7 +118,6 @@ class LED {
     isRunning: false,
     value: 0,
     direction: 1,
-    mode: null,
     interval: null
   };
 
@@ -168,11 +167,6 @@ class LED {
         value: {
           get: function() {
             return this.#state.value;
-          }
-        },
-        mode: {
-          get: function() {
-            return this.#state.mode;
           }
         },
         isOn: {
