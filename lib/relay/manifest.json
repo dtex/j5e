@@ -1,0 +1,18 @@
+{
+  "include": [],
+  "modules": {
+    "*": [],
+    "j5e/fn": "$(j5e)/lib/fn/*",
+    "j5e/relay": "$(j5e)/lib/relay/*"
+  },
+  "preload": [
+    "j5e/fn",
+    "j5e/relay"
+  ],
+  "platforms": {
+    "esp": {},
+    "...": {
+      "error": "Experimental TC53 IO modules unsupported"
+    }
+  }
+}
