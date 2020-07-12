@@ -1,9 +1,10 @@
+<!-- start:source.tmpl.hbs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>Modules</title>
+		<title>relay/index.js</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -43,7 +44,7 @@
 			</style>
 		<script type="text/javascript">
 			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"MMMM D, YYYY","systemName":"J5e","systemSummary":"Johnny Five for Embedded Systems","systemLogo":"img/j5e.png","systemColor":"#000","navMembers":[{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Copyright © 2019—2020 The contributors to the j5e and Johnny-Five projects.","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":true,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":{"ua":"UA-36026876-4","domain":"dtex.github.io"},"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":["./static/custom.css"],"scripts":[],"monospaceLinks":false,"cleverLinks":false,"forkMe":"./build/docs/fork/forkme_right_white_ffffff.webp"};
-			window.DOCLET_TOC_ENABLED = true;
+			window.DOCLET_TOC_ENABLED = false;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
 </head>
@@ -84,108 +85,170 @@
 	</header>
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
-				<span class="kind">list</span>
-				<h1><span class="name">Modules</span></h1>
-				<div class="summary"><p>All documented modules.</p></div>			</div>
+				<span class="kind">source</span>
+				<h1><span class="name">relay/index.js</span></h1>
+			</div>
 		</div>
 	<div class="container content">
 		<div class="row">
-			<div class="col-md-9 main-content">
-						<ol class="breadcrumb">
-							<li><a href="index.html">Home</a></li>
-							<li class="active">Modules</li>
-						</ol>
-					<section>
-		<h2><span class="name">Modules</span></h2>
-		<article class="secondary">
-				<dl class="symbol">
-						
-						<dt class="symbol-title module public">
-			<h4 id="j5e/animation" class="module public"><a href="module-j5e_animation.html"><span class="name">j5e/animation</span></a></h4>
-</dt>
-<dd class="symbol-details module public">
-	<div class="symbol-details-inner">
-	</div>
-</dd>
-						<hr/>
-						<dt class="symbol-title module public">
-			<h4 id="j5e/button" class="module public"><a href="module-j5e_button.html"><span class="name">j5e/button</span></a></h4>
-</dt>
-<dd class="symbol-details module public">
-	<div class="symbol-details-inner">
-	</div>
-</dd>
-						<hr/>
-						<dt class="symbol-title module public">
-			<h4 id="j5e/easing" class="module public"><a href="module-j5e_easing.html"><span class="name">j5e/easing</span></a></h4>
-</dt>
-<dd class="symbol-details module public">
-	<div class="symbol-details-inner">
-	</div>
-</dd>
-						<hr/>
-						<dt class="symbol-title module public">
-			<h4 id="j5e/fn" class="module public"><a href="module-j5e_fn.html"><span class="name">j5e/fn</span></a></h4>
-</dt>
-<dd class="symbol-details module public">
-	<div class="symbol-details-inner">
-	</div>
-</dd>
-						<hr/>
-						<dt class="symbol-title module public">
-			<h4 id="j5e/led" class="module public"><a href="module-j5e_led.html"><span class="name">j5e/led</span></a></h4>
-</dt>
-<dd class="symbol-details module public">
-	<div class="symbol-details-inner">
-	</div>
-</dd>
-						<hr/>
-						<dt class="symbol-title module public">
-			<h4 id="j5e/relay" class="module public"><a href="module-j5e_relay.html"><span class="name">j5e/relay</span></a></h4>
-</dt>
-<dd class="symbol-details module public">
-	<div class="symbol-details-inner">
-	</div>
-</dd>
-						<hr/>
-						<dt class="symbol-title module public">
-			<h4 id="j5e/rgb" class="module public"><a href="module-j5e_rgb.html"><span class="name">j5e/rgb</span></a></h4>
-</dt>
-<dd class="symbol-details module public">
-	<div class="symbol-details-inner">
-	</div>
-</dd>
-						<hr/>
-						<dt class="symbol-title module public">
-			<h4 id="j5e/sensor" class="module public"><a href="module-j5e_sensor.html"><span class="name">j5e/sensor</span></a></h4>
-</dt>
-<dd class="symbol-details module public">
-	<div class="symbol-details-inner">
-	</div>
-</dd>
-						<hr/>
-						<dt class="symbol-title module public">
-			<h4 id="j5e/servo" class="module public"><a href="module-j5e_servo.html"><span class="name">j5e/servo</span></a></h4>
-</dt>
-<dd class="symbol-details module public">
-	<div class="symbol-details-inner">
-	</div>
-</dd>
-						<hr/>
-						<dt class="symbol-title module public">
-			<h4 id="j5e/switch" class="module public"><a href="module-j5e_switch.html"><span class="name">j5e/switch</span></a></h4>
-</dt>
-<dd class="symbol-details module public">
-	<div class="symbol-details-inner">
-	</div>
-</dd>
-				</dl>
-		</article>
-					</section>
+			<div class="col-md-12 main-content">
+		<section class="source-section">
+			<article></article>
+			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">/**
+ * Relay
+ * @module j5e/relay
+ * @requires module:j5e/fn
+ */
+
+import { normalizeParams, getProvider } from "j5e/fn";
+
+/**
+ * Class representing a relay
+ * @classdesc The Relay class allows for control of a relay
+ * @async
+ */
+class Relay {
+
+  #state = {
+    isInverted: false,
+    isClosed: false,
+    value: null
+  }
+
+  /**
+   * Instantiate Relay
+   * @param {object} options - A pin number, pin identifier or a complete options object (See {@tutorial C-INSTANTIATING}
+   * @param {string} options.type - "NO" (Normally Open) or "NC" (Normally Closed)
+   * @property {boolean} isOn - True if switch is on
+   * @property {boolean} type - True if switch is on
+   * @example
+   * &lt;caption>Use a Relay&lt;/caption>
+   * import Relay from "j5e/relay";
+   *
+   * const relay = await new Relay(12);
+   *
+   */
+  constructor(options) {
+    return (async() => {
+      options = normalizeParams(options);
+
+      const Provider = await getProvider(options, "builtin/digital");
+      this.io = new Provider({
+        pin: options.pin,
+        mode: Provider.Output
+      });
+
+      Object.defineProperties(this, {
+        value: {
+          get: () => {
+            return Number(this.isClosed);
+          }
+        },
+        isClosed: {
+          get: () => {
+            return this.#state.isClosed;
+          }
+        },
+        type: {
+          get: () => {
+            return this.#state.isInverted ? "NC" : "NO";
+          }
+        }
+      });
+
+      if (options.type === "NC") {
+        this.#state.isInverted = true;
+      }
+
+      return this;
+    })();
+
+  }
+
+  /**
+   * Close the relay circuit
+   * @return {Relay}
+   * @example
+   * import Relay from "j5e/relay"
+   *
+   * const relay = await new Relay(12);
+   *
+   * // Turn it on
+   * relay.close();
+   *
+   * // Wait 5 seeconds and turn it off
+   * system.setTimeout(function() {
+   *   relay.open();
+   * }, 5000);
+   */
+  close() {
+    this.io.write(
+      this.#state.isInverted ? 0 : 2 ** this.io.resolution - 1
+    );
+    this.#state.isClosed = true;
+
+    return this;
+  }
+
+  /**
+   * Open the relay circuit
+   * @return {Relay}
+   * @example
+   * import Relay from "j5e/relay"
+   *
+   * const relay = await new Relay(12);
+   *
+   * // Turn it on
+   * relay.close();
+   *
+   * // Wait 5 seeconds and turn it off
+   * system.setTimeout(function() {
+   *   relay.open();
+   * }, 5000);
+   */
+  open() {
+
+    this.io.write(
+      this.#state.isInverted ? 2 ** this.io.resolution - 1 : 0
+    );
+    this.#state.isClosed = false;
+
+    return this;
+  }
+
+  /**
+   * Toggle the relay circuit
+   * @return {Relay}
+   * @example
+   * import Relay from "j5e/relay"
+   *
+   * const relay = await new Relay(12);
+   *
+   * // Turn it on
+   * relay.toggle();
+   *
+   * // Wait 5 seeconds and turn it off
+   * system.setTimeout(function() {
+   *   relay.toggle();
+   * }, 5000);
+   */
+  toggle() {
+
+    if (this.#state.isClosed) {
+      this.open();
+    } else {
+      this.close();
+    }
+
+    return this;
+  }
+
+}
+
+export default Relay;
+</code></pre>
+		</section>
 			</div>
-				<div class="col-md-3 side-content">
-					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
-				</div>
 		</div>
 	</div>
 	<footer>
@@ -223,3 +286,4 @@ gtag('js', new Date());gtag('config', 'UA-36026876-4');
 </script>
 <a href="https://github.com/dtex/j5e"><img width="149" height="149" style="z-index:1000;position:absolute;top: 50px;right: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_white_ffffff.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a></body>
 </html>
+<!-- end:source.tmpl.hbs -->

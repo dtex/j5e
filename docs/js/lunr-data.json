@@ -133,6 +133,36 @@
           "onc",
           "time"
         ],
+        "module-j5e_relay-Relay.html": [
+          "allow",
+          "class",
+          "control",
+          "j5e/relay~relay",
+          "lt;async&gt",
+          "module:j5e/relay~relay",
+          "relay"
+        ],
+        "module-j5e_relay-Relay.html#close": [
+          "circuit",
+          "close",
+          "function",
+          "module:j5e/relay~relay#clos",
+          "relay"
+        ],
+        "module-j5e_relay-Relay.html#open": [
+          "circuit",
+          "function",
+          "module:j5e/relay~relay#open",
+          "open",
+          "relay"
+        ],
+        "module-j5e_relay-Relay.html#toggle": [
+          "circuit",
+          "function",
+          "module:j5e/relay~relay#toggl",
+          "relay",
+          "toggl"
+        ],
         "module-j5e_switch-Switch.html": [
           "allow",
           "class",
@@ -753,6 +783,12 @@
           "pwm",
           "vari"
         ],
+        "module-j5e_relay.html": [
+          "j5e/relay",
+          "modul",
+          "module:j5e/relay",
+          "relay"
+        ],
         "module-j5e_rgb.html": [
           "control",
           "j5e/rgb",
@@ -805,7 +841,7 @@
           "xs"
         ]
       },
-      "length": 71
+      "length": 76
     },
     "tokenStore": {
       "root": {
@@ -1237,6 +1273,18 @@
                           },
                           "module-j5e_event.Emitter.html#once": {
                             "ref": "module-j5e_event.Emitter.html#once",
+                            "tf": 110
+                          },
+                          "module-j5e_relay-Relay.html#close": {
+                            "ref": "module-j5e_relay-Relay.html#close",
+                            "tf": 110
+                          },
+                          "module-j5e_relay-Relay.html#open": {
+                            "ref": "module-j5e_relay-Relay.html#open",
+                            "tf": 110
+                          },
+                          "module-j5e_relay-Relay.html#toggle": {
+                            "ref": "module-j5e_relay-Relay.html#toggle",
                             "tf": 110
                           },
                           "module-j5e_animation-Animation.html#enqueue": {
@@ -1754,6 +1802,77 @@
               },
               "/": {
                 "docs": {},
+                "r": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "l": {
+                      "docs": {},
+                      "a": {
+                        "docs": {},
+                        "y": {
+                          "docs": {
+                            "module-j5e_relay.html": {
+                              "ref": "module-j5e_relay.html",
+                              "tf": 600
+                            }
+                          },
+                          "~": {
+                            "docs": {},
+                            "r": {
+                              "docs": {},
+                              "e": {
+                                "docs": {},
+                                "l": {
+                                  "docs": {},
+                                  "a": {
+                                    "docs": {},
+                                    "y": {
+                                      "docs": {
+                                        "module-j5e_relay-Relay.html": {
+                                          "ref": "module-j5e_relay-Relay.html",
+                                          "tf": 50
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "g": {
+                    "docs": {},
+                    "b": {
+                      "docs": {
+                        "module-j5e_rgb.html": {
+                          "ref": "module-j5e_rgb.html",
+                          "tf": 600
+                        }
+                      },
+                      "~": {
+                        "docs": {},
+                        "r": {
+                          "docs": {},
+                          "g": {
+                            "docs": {},
+                            "b": {
+                              "docs": {
+                                "module-j5e_rgb-RGB.html": {
+                                  "ref": "module-j5e_rgb-RGB.html",
+                                  "tf": 50
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
                 "s": {
                   "docs": {},
                   "w": {
@@ -2012,37 +2131,6 @@
                     }
                   }
                 },
-                "r": {
-                  "docs": {},
-                  "g": {
-                    "docs": {},
-                    "b": {
-                      "docs": {
-                        "module-j5e_rgb.html": {
-                          "ref": "module-j5e_rgb.html",
-                          "tf": 600
-                        }
-                      },
-                      "~": {
-                        "docs": {},
-                        "r": {
-                          "docs": {},
-                          "g": {
-                            "docs": {},
-                            "b": {
-                              "docs": {
-                                "module-j5e_rgb-RGB.html": {
-                                  "ref": "module-j5e_rgb-RGB.html",
-                                  "tf": 50
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                },
                 "e": {
                   "docs": {},
                   "a": {
@@ -2168,6 +2256,36 @@
                           }
                         }
                       }
+                    }
+                  }
+                }
+              }
+            },
+            "l": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "y": {
+                  "docs": {
+                    "module-j5e_relay-Relay.html": {
+                      "ref": "module-j5e_relay-Relay.html",
+                      "tf": 520
+                    },
+                    "module-j5e_relay-Relay.html#close": {
+                      "ref": "module-j5e_relay-Relay.html#close",
+                      "tf": 66.66666666666666
+                    },
+                    "module-j5e_relay-Relay.html#open": {
+                      "ref": "module-j5e_relay-Relay.html#open",
+                      "tf": 66.66666666666666
+                    },
+                    "module-j5e_relay-Relay.html#toggle": {
+                      "ref": "module-j5e_relay-Relay.html#toggle",
+                      "tf": 66.66666666666666
+                    },
+                    "module-j5e_relay.html": {
+                      "ref": "module-j5e_relay.html",
+                      "tf": 50
                     }
                   }
                 }
@@ -3543,6 +3661,10 @@
                 "docs": {},
                 "l": {
                   "docs": {
+                    "module-j5e_relay-Relay.html#toggle": {
+                      "ref": "module-j5e_relay-Relay.html#toggle",
+                      "tf": 716.6666666666666
+                    },
                     "module-j5e_led-LED.html#toggle": {
                       "ref": "module-j5e_led-LED.html#toggle",
                       "tf": 712.5
@@ -3663,6 +3785,10 @@
                     "docs": {},
                     "l": {
                       "docs": {
+                        "module-j5e_relay-Relay.html": {
+                          "ref": "module-j5e_relay-Relay.html",
+                          "tf": 10
+                        },
                         "module-j5e_switch-Switch.html": {
                           "ref": "module-j5e_switch-Switch.html",
                           "tf": 8.333333333333332
@@ -3829,6 +3955,10 @@
                       "ref": "module-j5e_event.Emitter.html",
                       "tf": 116.25
                     },
+                    "module-j5e_relay-Relay.html": {
+                      "ref": "module-j5e_relay-Relay.html",
+                      "tf": 120
+                    },
                     "module-j5e_switch-Switch.html": {
                       "ref": "module-j5e_switch-Switch.html",
                       "tf": 118.33333333333333
@@ -3871,6 +4001,17 @@
             },
             "o": {
               "docs": {},
+              "s": {
+                "docs": {},
+                "e": {
+                  "docs": {
+                    "module-j5e_relay-Relay.html#close": {
+                      "ref": "module-j5e_relay-Relay.html#close",
+                      "tf": 716.6666666666666
+                    }
+                  }
+                }
+              },
               "c": {
                 "docs": {},
                 "k": {
@@ -3944,6 +4085,37 @@
                     "module-j5e_event.Emitter.html#once": {
                       "ref": "module-j5e_event.Emitter.html#once",
                       "tf": 8.333333333333332
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "i": {
+            "docs": {},
+            "r": {
+              "docs": {},
+              "c": {
+                "docs": {},
+                "u": {
+                  "docs": {},
+                  "i": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "module-j5e_relay-Relay.html#close": {
+                          "ref": "module-j5e_relay-Relay.html#close",
+                          "tf": 16.666666666666664
+                        },
+                        "module-j5e_relay-Relay.html#open": {
+                          "ref": "module-j5e_relay-Relay.html#open",
+                          "tf": 16.666666666666664
+                        },
+                        "module-j5e_relay-Relay.html#toggle": {
+                          "ref": "module-j5e_relay-Relay.html#toggle",
+                          "tf": 16.666666666666664
+                        }
+                      }
                     }
                   }
                 }
@@ -4297,6 +4469,10 @@
                             "docs": {},
                             "t": {
                               "docs": {
+                                "module-j5e_relay-Relay.html": {
+                                  "ref": "module-j5e_relay-Relay.html",
+                                  "tf": 50
+                                },
                                 "module-j5e_switch-Switch.html": {
                                   "ref": "module-j5e_switch-Switch.html",
                                   "tf": 50
@@ -4741,6 +4917,10 @@
                     "undefined": {
                       "tf": 10
                     },
+                    "module-j5e_relay-Relay.html": {
+                      "ref": "module-j5e_relay-Relay.html",
+                      "tf": 10
+                    },
                     "module-j5e_switch-Switch.html": {
                       "ref": "module-j5e_switch-Switch.html",
                       "tf": 8.333333333333332
@@ -5014,6 +5194,17 @@
           },
           "p": {
             "docs": {},
+            "e": {
+              "docs": {},
+              "n": {
+                "docs": {
+                  "module-j5e_relay-Relay.html#open": {
+                    "ref": "module-j5e_relay-Relay.html#open",
+                    "tf": 716.6666666666666
+                  }
+                }
+              }
+            },
             "t": {
               "docs": {
                 "module-j5e_servo-Servo.html#sweep": {
@@ -5137,6 +5328,10 @@
                     },
                     "module-j5e_led.html": {
                       "ref": "module-j5e_led.html",
+                      "tf": 110
+                    },
+                    "module-j5e_relay.html": {
+                      "ref": "module-j5e_relay.html",
                       "tf": 110
                     },
                     "module-j5e_rgb.html": {
@@ -5297,6 +5492,298 @@
                                       "module-j5e_easing.html": {
                                         "ref": "module-j5e_easing.html",
                                         "tf": 1300
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "r": {
+                                "docs": {},
+                                "e": {
+                                  "docs": {},
+                                  "l": {
+                                    "docs": {},
+                                    "a": {
+                                      "docs": {},
+                                      "y": {
+                                        "docs": {
+                                          "module-j5e_relay.html": {
+                                            "ref": "module-j5e_relay.html",
+                                            "tf": 1300
+                                          }
+                                        },
+                                        "~": {
+                                          "docs": {},
+                                          "r": {
+                                            "docs": {},
+                                            "e": {
+                                              "docs": {},
+                                              "l": {
+                                                "docs": {},
+                                                "a": {
+                                                  "docs": {},
+                                                  "y": {
+                                                    "docs": {
+                                                      "module-j5e_relay-Relay.html": {
+                                                        "ref": "module-j5e_relay-Relay.html",
+                                                        "tf": 1300
+                                                      }
+                                                    },
+                                                    "#": {
+                                                      "docs": {},
+                                                      "c": {
+                                                        "docs": {},
+                                                        "l": {
+                                                          "docs": {},
+                                                          "o": {
+                                                            "docs": {},
+                                                            "s": {
+                                                              "docs": {
+                                                                "module-j5e_relay-Relay.html#close": {
+                                                                  "ref": "module-j5e_relay-Relay.html#close",
+                                                                  "tf": 1150
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      },
+                                                      "o": {
+                                                        "docs": {},
+                                                        "p": {
+                                                          "docs": {},
+                                                          "e": {
+                                                            "docs": {},
+                                                            "n": {
+                                                              "docs": {
+                                                                "module-j5e_relay-Relay.html#open": {
+                                                                  "ref": "module-j5e_relay-Relay.html#open",
+                                                                  "tf": 1150
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      },
+                                                      "t": {
+                                                        "docs": {},
+                                                        "o": {
+                                                          "docs": {},
+                                                          "g": {
+                                                            "docs": {},
+                                                            "g": {
+                                                              "docs": {},
+                                                              "l": {
+                                                                "docs": {
+                                                                  "module-j5e_relay-Relay.html#toggle": {
+                                                                    "ref": "module-j5e_relay-Relay.html#toggle",
+                                                                    "tf": 1150
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "g": {
+                                  "docs": {},
+                                  "b": {
+                                    "docs": {
+                                      "module-j5e_rgb.html": {
+                                        "ref": "module-j5e_rgb.html",
+                                        "tf": 1300
+                                      }
+                                    },
+                                    "~": {
+                                      "docs": {},
+                                      "r": {
+                                        "docs": {},
+                                        "g": {
+                                          "docs": {},
+                                          "b": {
+                                            "docs": {
+                                              "module-j5e_rgb-RGB.html": {
+                                                "ref": "module-j5e_rgb-RGB.html",
+                                                "tf": 1300
+                                              }
+                                            },
+                                            "#": {
+                                              "docs": {},
+                                              "c": {
+                                                "docs": {},
+                                                "o": {
+                                                  "docs": {},
+                                                  "l": {
+                                                    "docs": {},
+                                                    "o": {
+                                                      "docs": {},
+                                                      "r": {
+                                                        "docs": {
+                                                          "module-j5e_rgb-RGB.html#color": {
+                                                            "ref": "module-j5e_rgb-RGB.html#color",
+                                                            "tf": 1150
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "o": {
+                                                "docs": {},
+                                                "n": {
+                                                  "docs": {
+                                                    "module-j5e_rgb-RGB.html#on": {
+                                                      "ref": "module-j5e_rgb-RGB.html#on",
+                                                      "tf": 1300
+                                                    }
+                                                  }
+                                                },
+                                                "f": {
+                                                  "docs": {},
+                                                  "f": {
+                                                    "docs": {
+                                                      "module-j5e_rgb-RGB.html#off": {
+                                                        "ref": "module-j5e_rgb-RGB.html#off",
+                                                        "tf": 1300
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "t": {
+                                                "docs": {},
+                                                "o": {
+                                                  "docs": {},
+                                                  "g": {
+                                                    "docs": {},
+                                                    "g": {
+                                                      "docs": {},
+                                                      "l": {
+                                                        "docs": {
+                                                          "module-j5e_rgb-RGB.html#toggle": {
+                                                            "ref": "module-j5e_rgb-RGB.html#toggle",
+                                                            "tf": 1150
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "b": {
+                                                "docs": {},
+                                                "l": {
+                                                  "docs": {},
+                                                  "i": {
+                                                    "docs": {},
+                                                    "n": {
+                                                      "docs": {},
+                                                      "k": {
+                                                        "docs": {
+                                                          "module-j5e_rgb-RGB.html#blink": {
+                                                            "ref": "module-j5e_rgb-RGB.html#blink",
+                                                            "tf": 1150
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "f": {
+                                                "docs": {},
+                                                "a": {
+                                                  "docs": {},
+                                                  "d": {
+                                                    "docs": {
+                                                      "module-j5e_rgb-RGB.html#fade": {
+                                                        "ref": "module-j5e_rgb-RGB.html#fade",
+                                                        "tf": 1150
+                                                      }
+                                                    },
+                                                    "e": {
+                                                      "docs": {},
+                                                      "i": {
+                                                        "docs": {},
+                                                        "n": {
+                                                          "docs": {
+                                                            "module-j5e_rgb-RGB.html#fadeIn": {
+                                                              "ref": "module-j5e_rgb-RGB.html#fadeIn",
+                                                              "tf": 1150
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "p": {
+                                                "docs": {},
+                                                "u": {
+                                                  "docs": {},
+                                                  "l": {
+                                                    "docs": {},
+                                                    "s": {
+                                                      "docs": {
+                                                        "module-j5e_rgb-RGB.html#pulse": {
+                                                          "ref": "module-j5e_rgb-RGB.html#pulse",
+                                                          "tf": 1150
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "a": {
+                                                "docs": {},
+                                                "n": {
+                                                  "docs": {},
+                                                  "i": {
+                                                    "docs": {},
+                                                    "m": {
+                                                      "docs": {
+                                                        "module-j5e_rgb-RGB.html#animate": {
+                                                          "ref": "module-j5e_rgb-RGB.html#animate",
+                                                          "tf": 1150
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "s": {
+                                                "docs": {},
+                                                "t": {
+                                                  "docs": {},
+                                                  "o": {
+                                                    "docs": {},
+                                                    "p": {
+                                                      "docs": {
+                                                        "module-j5e_rgb-RGB.html#stop": {
+                                                          "ref": "module-j5e_rgb-RGB.html#stop",
+                                                          "tf": 1150
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
                                       }
                                     }
                                   }
@@ -6092,201 +6579,6 @@
                                                             "ref": "module-j5e_button-Button.html",
                                                             "tf": 1300
                                                           }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              },
-                              "r": {
-                                "docs": {},
-                                "g": {
-                                  "docs": {},
-                                  "b": {
-                                    "docs": {
-                                      "module-j5e_rgb.html": {
-                                        "ref": "module-j5e_rgb.html",
-                                        "tf": 1300
-                                      }
-                                    },
-                                    "~": {
-                                      "docs": {},
-                                      "r": {
-                                        "docs": {},
-                                        "g": {
-                                          "docs": {},
-                                          "b": {
-                                            "docs": {
-                                              "module-j5e_rgb-RGB.html": {
-                                                "ref": "module-j5e_rgb-RGB.html",
-                                                "tf": 1300
-                                              }
-                                            },
-                                            "#": {
-                                              "docs": {},
-                                              "c": {
-                                                "docs": {},
-                                                "o": {
-                                                  "docs": {},
-                                                  "l": {
-                                                    "docs": {},
-                                                    "o": {
-                                                      "docs": {},
-                                                      "r": {
-                                                        "docs": {
-                                                          "module-j5e_rgb-RGB.html#color": {
-                                                            "ref": "module-j5e_rgb-RGB.html#color",
-                                                            "tf": 1150
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "o": {
-                                                "docs": {},
-                                                "n": {
-                                                  "docs": {
-                                                    "module-j5e_rgb-RGB.html#on": {
-                                                      "ref": "module-j5e_rgb-RGB.html#on",
-                                                      "tf": 1300
-                                                    }
-                                                  }
-                                                },
-                                                "f": {
-                                                  "docs": {},
-                                                  "f": {
-                                                    "docs": {
-                                                      "module-j5e_rgb-RGB.html#off": {
-                                                        "ref": "module-j5e_rgb-RGB.html#off",
-                                                        "tf": 1300
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "t": {
-                                                "docs": {},
-                                                "o": {
-                                                  "docs": {},
-                                                  "g": {
-                                                    "docs": {},
-                                                    "g": {
-                                                      "docs": {},
-                                                      "l": {
-                                                        "docs": {
-                                                          "module-j5e_rgb-RGB.html#toggle": {
-                                                            "ref": "module-j5e_rgb-RGB.html#toggle",
-                                                            "tf": 1150
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "b": {
-                                                "docs": {},
-                                                "l": {
-                                                  "docs": {},
-                                                  "i": {
-                                                    "docs": {},
-                                                    "n": {
-                                                      "docs": {},
-                                                      "k": {
-                                                        "docs": {
-                                                          "module-j5e_rgb-RGB.html#blink": {
-                                                            "ref": "module-j5e_rgb-RGB.html#blink",
-                                                            "tf": 1150
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "f": {
-                                                "docs": {},
-                                                "a": {
-                                                  "docs": {},
-                                                  "d": {
-                                                    "docs": {
-                                                      "module-j5e_rgb-RGB.html#fade": {
-                                                        "ref": "module-j5e_rgb-RGB.html#fade",
-                                                        "tf": 1150
-                                                      }
-                                                    },
-                                                    "e": {
-                                                      "docs": {},
-                                                      "i": {
-                                                        "docs": {},
-                                                        "n": {
-                                                          "docs": {
-                                                            "module-j5e_rgb-RGB.html#fadeIn": {
-                                                              "ref": "module-j5e_rgb-RGB.html#fadeIn",
-                                                              "tf": 1150
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "p": {
-                                                "docs": {},
-                                                "u": {
-                                                  "docs": {},
-                                                  "l": {
-                                                    "docs": {},
-                                                    "s": {
-                                                      "docs": {
-                                                        "module-j5e_rgb-RGB.html#pulse": {
-                                                          "ref": "module-j5e_rgb-RGB.html#pulse",
-                                                          "tf": 1150
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "a": {
-                                                "docs": {},
-                                                "n": {
-                                                  "docs": {},
-                                                  "i": {
-                                                    "docs": {},
-                                                    "m": {
-                                                      "docs": {
-                                                        "module-j5e_rgb-RGB.html#animate": {
-                                                          "ref": "module-j5e_rgb-RGB.html#animate",
-                                                          "tf": 1150
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "s": {
-                                                "docs": {},
-                                                "t": {
-                                                  "docs": {},
-                                                  "o": {
-                                                    "docs": {},
-                                                    "p": {
-                                                      "docs": {
-                                                        "module-j5e_rgb-RGB.html#stop": {
-                                                          "ref": "module-j5e_rgb-RGB.html#stop",
-                                                          "tf": 1150
                                                         }
                                                       }
                                                     }
@@ -7156,7 +7448,7 @@
           }
         }
       },
-      "length": 649
+      "length": 675
     },
     "corpusTokens": [
       "0",
@@ -7185,9 +7477,11 @@
       "ccw",
       "center",
       "centerpoint",
+      "circuit",
       "class",
       "clearinterv",
       "clockwis",
+      "close",
       "code",
       "color",
       "complex",
@@ -7267,6 +7561,8 @@
       "j5e/fn~tim",
       "j5e/l",
       "j5e/led~l",
+      "j5e/relay",
+      "j5e/relay~relay",
       "j5e/rgb",
       "j5e/rgb~rgb",
       "j5e/sensor",
@@ -7330,6 +7626,11 @@
       "module:j5e/led~led#puls",
       "module:j5e/led~led#stop",
       "module:j5e/led~led#toggl",
+      "module:j5e/relay",
+      "module:j5e/relay~relay",
+      "module:j5e/relay~relay#clos",
+      "module:j5e/relay~relay#open",
+      "module:j5e/relay~relay#toggl",
       "module:j5e/rgb",
       "module:j5e/rgb~rgb",
       "module:j5e/rgb~rgb#anim",
@@ -7375,6 +7676,7 @@
       "on",
       "on/off",
       "onc",
+      "open",
       "opt",
       "option",
       "out",
@@ -7397,6 +7699,7 @@
       "read",
       "readm",
       "red",
+      "relay",
       "remov",
       "removelisten",
       "represent",
@@ -7579,6 +7882,47 @@
       "tags": "module:j5e/event.Emitter#once Emitter#once once",
       "summary": "",
       "description": "Create an event listener that will only fire one time."
+    },
+    "module-j5e_relay-Relay.html": {
+      "id": "module-j5e_relay-Relay.html",
+      "kind": "class",
+      "title": "&lt;async&gt; j5e/relay~Relay",
+      "longname": "module:j5e/relay~Relay",
+      "name": "Relay",
+      "tags": "module:j5e/relay~Relay",
+      "summary": "",
+      "description": "The Relay class allows for control of a relay",
+      "body": ""
+    },
+    "module-j5e_relay-Relay.html#close": {
+      "id": "module-j5e_relay-Relay.html#close",
+      "kind": "function",
+      "title": "close() → {Relay}",
+      "longname": "module:j5e/relay~Relay#close",
+      "name": "close",
+      "tags": "module:j5e/relay~Relay#close close",
+      "summary": "",
+      "description": "Close the relay circuit"
+    },
+    "module-j5e_relay-Relay.html#open": {
+      "id": "module-j5e_relay-Relay.html#open",
+      "kind": "function",
+      "title": "open() → {Relay}",
+      "longname": "module:j5e/relay~Relay#open",
+      "name": "open",
+      "tags": "module:j5e/relay~Relay#open open",
+      "summary": "",
+      "description": "Open the relay circuit"
+    },
+    "module-j5e_relay-Relay.html#toggle": {
+      "id": "module-j5e_relay-Relay.html#toggle",
+      "kind": "function",
+      "title": "toggle() → {Relay}",
+      "longname": "module:j5e/relay~Relay#toggle",
+      "name": "toggle",
+      "tags": "module:j5e/relay~Relay#toggle toggle",
+      "summary": "",
+      "description": "Toggle the relay circuit"
     },
     "module-j5e_switch-Switch.html": {
       "id": "module-j5e_switch-Switch.html",
@@ -8140,6 +8484,17 @@
       "tags": "module:j5e/led",
       "summary": "",
       "description": "Class library for managing LED's (Light Emitting Diodes). They can be connected to a digital IO (On/Off), or to a PWM IO (varying brightness).",
+      "body": ""
+    },
+    "module-j5e_relay.html": {
+      "id": "module-j5e_relay.html",
+      "kind": "module",
+      "title": "j5e/relay",
+      "longname": "module:j5e/relay",
+      "name": "j5e/relay",
+      "tags": "module:j5e/relay",
+      "summary": "",
+      "description": "Relay",
       "body": ""
     },
     "module-j5e_rgb.html": {
