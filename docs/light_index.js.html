@@ -1,9 +1,10 @@
+<!-- start:source.tmpl.hbs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>Globals</title>
+		<title>light/index.js</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -43,7 +44,7 @@
 			</style>
 		<script type="text/javascript">
 			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"MMMM D, YYYY","systemName":"J5e","systemSummary":"Johnny Five for Embedded Systems","systemLogo":"img/j5e.png","systemColor":"#000","navMembers":[{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Copyright © 2019—2020 The contributors to the j5e and Johnny-Five projects.","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":true,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":{"ua":"UA-36026876-4","domain":"dtex.github.io"},"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":["./static/custom.css"],"scripts":[],"monospaceLinks":false,"cleverLinks":false,"forkMe":"./build/docs/fork/forkme_right_white_ffffff.webp"};
-			window.DOCLET_TOC_ENABLED = true;
+			window.DOCLET_TOC_ENABLED = false;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
 </head>
@@ -84,25 +85,89 @@
 	</header>
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
-				<span class="kind">global</span>
-				<h1><span class="name">Globals</span></h1>
-				<div class="summary"><p>All documented globals.</p></div>			</div>
+				<span class="kind">source</span>
+				<h1><span class="name">light/index.js</span></h1>
+			</div>
 		</div>
 	<div class="container content">
 		<div class="row">
-			<div class="col-md-9 main-content">
-						<ol class="breadcrumb">
-							<li><a href="index.html">Home</a></li>
-							<li class="active">Globals</li>
-						</ol>
-					<section>
-							<article class="secondary">
-							</article>
-					</section>
+			<div class="col-md-12 main-content">
+		<section class="source-section">
+			<article></article>
+			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">/**
+ * Class Light
+ * @module j5e/light
+ * @requires module:j5e/sensor
+ * @requires module:j5e/fn
+ */
+
+import Sensor from "j5e/sensor";
+import { toFixed, normalizeParams } from "j5e/fn";
+
+/**
+ * Class representing a light sensor
+ * @classdesc The Light class allows for control of photoresistors
+ * @async
+ * @inheritdoc
+ * @extends module:j5e/sensor~Sensor
+ * @fires data
+ * @fires change
+ */
+class Light extends Sensor {
+
+  /**
+   * Instantiate a light sensor
+   * @param {object} options - A pin number, pin identifier or a complete IO options object (See {@tutorial C-INSTANTIATING}
+   * @param {number} [options.interval=100] - Interval between readings in millseconds
+   * @param {number[]} [options.range=[0, N]] - The input range of the sensor
+   * @param {number[]} [options.scale=[0, N]] - The output range for the sensor's value
+   * @param {number[]} [options.limit=null] - Limit the output range
+   * @param {number} [options.threshold=1] - The minimum amount fo change required to emit a "change" event
+   * @param {boolean} [options.enabled=true] - Wether the device is currently performing reads based on the interval value
+   * @property {number} value - Get the most recent scaled median value
+   * @property {number} scaled - Get the most recent scaled raw value
+   * @property {number} raw - Get the most recent raw ADC reading
+   * @property {number} resolution - The maximum possible ADC reading
+   * @property {number} smoothing - The number of samples to take before finding the median value
+   * @example
+   * &lt;caption>Use a photoresistor&lt;/caption>
+   * import Light from "j5e/light";
+   *
+   * const light = await new Light(12);
+   *
+   * light.on("change", data => {
+   *   trace(data);
+   * })
+   *
+   */
+  constructor(options) {
+    return (async() => {
+      options = normalizeParams(options);
+      const sensor = await super(options);
+
+      Object.defineProperties(sensor, {
+        level: {
+          get() {
+            return toFixed(sensor.scaleTo(0, 100) / 100, 2);
+          }
+        }
+      });
+
+      if (options.toLux) {
+        this.toLux = options.toLux;
+      }
+
+      return sensor;
+    })();
+
+  }
+
+}
+
+export default Light;
+</code></pre>
+		</section>
 			</div>
-				<div class="col-md-3 side-content">
-					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
-				</div>
 		</div>
 	</div>
 	<footer>
@@ -140,3 +205,4 @@ gtag('js', new Date());gtag('config', 'UA-36026876-4');
 </script>
 <a href="https://github.com/dtex/j5e"><img width="149" height="149" style="z-index:1000;position:absolute;top: 50px;right: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_white_ffffff.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a></body>
 </html>
+<!-- end:source.tmpl.hbs -->

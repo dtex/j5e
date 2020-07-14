@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>&lt;async&gt; j5e/sensor~Sensor</title>
+		<title>&lt;async&gt; j5e/light~Light</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -85,7 +85,7 @@
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
 				<span class="kind">class</span>
-				<h1><span class="signature-attribs">&lt;async> </span><span class="ancestors"><a href="module-j5e_sensor.html">j5e/sensor</a>~</span><span class="name">Sensor</span></h1>
+				<h1><span class="signature-attribs">&lt;async> </span><span class="ancestors"><a href="module-j5e_light.html">j5e/light</a>~</span><span class="name">Light</span></h1>
 			</div>
 		</div>
 	<div class="container content">
@@ -94,7 +94,7 @@
 						<ol class="breadcrumb">
 							<li><a href="index.html">Home</a></li>
 							<li><a href="list_class.html">Classes</a></li>
-							<li class="active"><a href="module-j5e_sensor.html">j5e/sensor</a>~Sensor</li>
+							<li class="active"><a href="module-j5e_light.html">j5e/light</a>~Light</li>
 						</ol>
 						<div class="access-filter">
 								<label class="checkbox-inline">
@@ -109,11 +109,11 @@
 					<section>
 							<dl class="symbol primary">
 								<dt class="symbol-title class collapsible-symbol expanded">
-			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="signature-attribs">&lt;async> </span><span class="name">Sensor</span><span class="signature-params">( <span class="signature-param">options</span>&nbsp;)</span><span class="signature-type"></span></h2>
+			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="signature-attribs">&lt;async> </span><span class="name">Light</span><span class="signature-params">( <span class="signature-param">options</span>&nbsp;)</span><span class="signature-type"></span></h2>
 </dt>
 <dd class="symbol-details class  collapsible-symbol expanded" style="max-height: 9999px;">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description classdesc">The Sensor class allows for input from sensor devices that connect to an ADC</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description classdesc">The Light class allows for control of photoresistors</div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -228,13 +228,6 @@
 							</td>
 						</tr>
 						<tr>
-								<td><code>level</code></td>
-							<td><span class="param-type">number</span></td>
-							<td class="last">
-									Get the most recent raw value scaled to [0,1]
-							</td>
-						</tr>
-						<tr>
 								<td><code>raw</code></td>
 							<td><span class="param-type">number</span></td>
 							<td class="last">
@@ -258,36 +251,30 @@
 					</tbody>
 				</table>
 			</div>
-			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Using a pin number</p></div>
+			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Use a photoresistor</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Sensor from &quot;j5e/sensor&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Light from &quot;j5e/light&quot;;
 			
-			const sensor &#x3D; await new Sensor(12);
-			sensor.on(&quot;change&quot;, data &#x3D;&gt; {
-			 trace(data);
-			});</code></pre>
-					</div>
-					<div class="example-caption"><p>Using a pin identifier</p></div>
-					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Sensor from &quot;j5e/sensor&quot;;
+			const light &#x3D; await new Light(12);
 			
-			const sensor &#x3D; await new Sensor(&quot;A1&quot;);
-			sensor.on(&quot;change&quot;, data &#x3D;&gt; {
-			 trace(data);
-			});</code></pre>
+			light.on(&quot;change&quot;, data &#x3D;&gt; {
+			  trace(data);
+			})</code></pre>
 					</div>
-					<div class="example-caption"><p>Using an options object</p></div>
-					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Sensor from &quot;j5e/sensor&quot;;
-			
-			const sensor &#x3D; await new Sensor({
-			 pin: 12,
-			 interval: 500
-			});
-			sensor.on(&quot;change&quot;, data &#x3D;&gt; {
-			 trace(data);
-			});</code></pre>
-					</div>
+			</div>			<div class="callout callout-warning"><h5>Fires</h5>		<form class="form-horizontal fires">
+							<div class="form-group">
+								<label class="col-sm-3 control-label fires-event">event:data</label>
+								<div class="col-sm-9">
+									<div class="form-control-static fires-summary"></div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label fires-event">event:change</label>
+								<div class="col-sm-9">
+									<div class="form-control-static fires-summary"></div>
+								</div>
+							</div>
+					</form>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -296,7 +283,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Augments</label>
 								<div class="col-sm-9">
-										<p class="form-control-static"><a href="module-j5e_withinable-Withinable.html">module:j5e/withinable~Withinable</a></p>
+										<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html">j5e/sensor~Sensor</a></p>
 								</div>
 							</div>
 			
@@ -315,7 +302,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-82">line 82</a></p>
+									<p class="form-control-static"><a href="light_index.js.html">light/index.js</a>, <a href="light_index.js.html#line-47">line 47</a></p>
 								</div>
 							</div>
 			
@@ -329,6 +316,144 @@
 							<article class="secondary">
 									<h3>Methods</h3>
 									<dl class="symbol">
+											<hr/>
+											<dt class="symbol-title function public inherited collapsible-symbol">
+			<h4 id="enable" class="function public inherited"><span class="name">enable</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{Object}</span></h4>
+		</dt>
+<dd class="symbol-details function public inherited  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Enable a disabled sensor.</div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Object</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description">instance</div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Sensor from &quot;j5e/sensor&quot;;
+			const sensor &#x3D; await new Sensor(12);
+			
+			sensor.disable();
+			
+			// Wait 5 seconds and then take readings
+			timer.setTimeout(function() {
+			 sensor.enable();
+			});</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#enable">module:j5e/sensor~Sensor#enable</a></p>
+								</div>
+							</div>
+			
+							<!-- overrides -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Overrides</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#enable">module:j5e/sensor~Sensor#enable</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-201">line 201</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public inherited collapsible-symbol">
+			<h4 id="disable" class="function public inherited"><span class="name">disable</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{Object}</span></h4>
+		</dt>
+<dd class="symbol-details function public inherited  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Disable an enabled sensor.</div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Object</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description">instance</div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Sensor from &quot;j5e/sensor&quot;;
+			const sensor &#x3D; await new Sensor(12);
+			
+			// Take reading for 5 seconds and then stop
+			timer.setTimeout(function() {
+			 sensor.disable();
+			});</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#disable">module:j5e/sensor~Sensor#disable</a></p>
+								</div>
+							</div>
+			
+							<!-- overrides -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Overrides</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#disable">module:j5e/sensor~Sensor#disable</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-223">line 223</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
 											<hr/>
 											<dt class="symbol-title function public inherited collapsible-symbol">
 			<h4 id="on" class="function public inherited"><span class="name">on</span><span class="signature-params">( <span class="signature-param">event</span>, <span class="signature-param">listener</span>&nbsp;)</span><span class="signature-type"></span></h4>
@@ -383,7 +508,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Overrides</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_withinable-Withinable.html#on">module:j5e/withinable~Withinable#on</a></p>
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#on">module:j5e/sensor~Sensor#on</a></p>
 								</div>
 							</div>
 			
@@ -469,7 +594,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Overrides</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_withinable-Withinable.html#within">module:j5e/withinable~Withinable#within</a></p>
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#within">module:j5e/sensor~Sensor#within</a></p>
 								</div>
 							</div>
 			
@@ -548,7 +673,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Overrides</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_withinable-Withinable.html#removeListener">module:j5e/withinable~Withinable#removeListener</a></p>
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#removeListener">module:j5e/sensor~Sensor#removeListener</a></p>
 								</div>
 							</div>
 			
@@ -620,7 +745,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Overrides</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_withinable-Withinable.html#emit">module:j5e/withinable~Withinable#emit</a></p>
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#emit">module:j5e/sensor~Sensor#emit</a></p>
 								</div>
 							</div>
 			
@@ -699,7 +824,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Overrides</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_withinable-Withinable.html#once">module:j5e/withinable~Withinable#once</a></p>
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#once">module:j5e/sensor~Sensor#once</a></p>
 								</div>
 							</div>
 			
@@ -725,120 +850,10 @@
 			</div>	</div>
 </dd>
 											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="enable" class="function public"><span class="name">enable</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{Object}</span></h4>
+											<dt class="symbol-title function public inherited collapsible-symbol">
+			<h4 id="read" class="function public inherited"><span class="name">read</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
 		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Enable a disabled sensor.</div>
-			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">Object</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description">instance</div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Sensor from &quot;j5e/sensor&quot;;
-			const sensor &#x3D; await new Sensor(12);
-			
-			sensor.disable();
-			
-			// Wait 5 seconds and then take readings
-			timer.setTimeout(function() {
-			 sensor.enable();
-			});</code></pre>
-					</div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-201">line 201</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="disable" class="function public"><span class="name">disable</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{Object}</span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Disable an enabled sensor.</div>
-			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">Object</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description">instance</div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Sensor from &quot;j5e/sensor&quot;;
-			const sensor &#x3D; await new Sensor(12);
-			
-			// Take reading for 5 seconds and then stop
-			timer.setTimeout(function() {
-			 sensor.disable();
-			});</code></pre>
-					</div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-223">line 223</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="read" class="function public"><span class="name">read</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
+<dd class="symbol-details function public inherited  collapsible-symbol">
 	<div class="symbol-details-inner">
 			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Synchronous read of a sensor.</div>
 			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
@@ -862,7 +877,21 @@
 			
 			
 			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#read">module:j5e/sensor~Sensor#read</a></p>
+								</div>
+							</div>
 			
+							<!-- overrides -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Overrides</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#read">module:j5e/sensor~Sensor#read</a></p>
+								</div>
+							</div>
 			
 			
 			
@@ -886,10 +915,10 @@
 			</div>	</div>
 </dd>
 											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="scale" class="function public"><span class="name">scale</span><span class="signature-params">( <span class="signature-param">low</span>, <span class="signature-param">high</span> [,&nbsp;<span class="signature-param">low, high</span>&nbsp;]&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Object}</span></h4>
+											<dt class="symbol-title function public inherited collapsible-symbol">
+			<h4 id="scale" class="function public inherited"><span class="name">scale</span><span class="signature-params">( <span class="signature-param">low</span>, <span class="signature-param">high</span> [,&nbsp;<span class="signature-param">low, high</span>&nbsp;]&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Object}</span></h4>
 		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
+<dd class="symbol-details function public inherited  collapsible-symbol">
 	<div class="symbol-details-inner">
 			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">scale/scaleTo Set a value scaling range</div>
 			</div>			<div class="callout callout-info">
@@ -959,7 +988,21 @@
 			
 			
 			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#scale">module:j5e/sensor~Sensor#scale</a></p>
+								</div>
+							</div>
 			
+							<!-- overrides -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Overrides</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#scale">module:j5e/sensor~Sensor#scale</a></p>
+								</div>
+							</div>
 			
 			
 			
@@ -983,10 +1026,10 @@
 			</div>	</div>
 </dd>
 											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="scaleTo" class="function public"><span class="name">scaleTo</span><span class="signature-params">( <span class="signature-param">low</span>, <span class="signature-param">low</span>, <span class="signature-param">high</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
+											<dt class="symbol-title function public inherited collapsible-symbol">
+			<h4 id="scaleTo" class="function public inherited"><span class="name">scaleTo</span><span class="signature-params">( <span class="signature-param">low</span>, <span class="signature-param">low</span>, <span class="signature-param">high</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
 		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
+<dd class="symbol-details function public inherited  collapsible-symbol">
 	<div class="symbol-details-inner">
 			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">scaleTo Scales value to integer representation</div>
 			</div>			<div class="callout callout-info">
@@ -1046,7 +1089,21 @@
 			
 			
 			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#scaleTo">module:j5e/sensor~Sensor#scaleTo</a></p>
+								</div>
+							</div>
 			
+							<!-- overrides -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Overrides</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#scaleTo">module:j5e/sensor~Sensor#scaleTo</a></p>
+								</div>
+							</div>
 			
 			
 			
@@ -1070,10 +1127,10 @@
 			</div>	</div>
 </dd>
 											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="fscaleTo" class="function public"><span class="name">fscaleTo</span><span class="signature-params">( <span class="signature-param">low</span>, <span class="signature-param">low</span>, <span class="signature-param">high</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
+											<dt class="symbol-title function public inherited collapsible-symbol">
+			<h4 id="fscaleTo" class="function public inherited"><span class="name">fscaleTo</span><span class="signature-params">( <span class="signature-param">low</span>, <span class="signature-param">low</span>, <span class="signature-param">high</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Number}</span></h4>
 		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
+<dd class="symbol-details function public inherited  collapsible-symbol">
 	<div class="symbol-details-inner">
 			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">fscaleTo Scales value to single precision float representation</div>
 			</div>			<div class="callout callout-info">
@@ -1133,7 +1190,21 @@
 			
 			
 			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#fscaleTo">module:j5e/sensor~Sensor#fscaleTo</a></p>
+								</div>
+							</div>
 			
+							<!-- overrides -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Overrides</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#fscaleTo">module:j5e/sensor~Sensor#fscaleTo</a></p>
+								</div>
+							</div>
 			
 			
 			

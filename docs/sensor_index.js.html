@@ -43,7 +43,7 @@
 				}
 			</style>
 		<script type="text/javascript">
-			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"MMMM D, YYYY","systemName":"J5e","systemSummary":"Johnny Five for Embedded Systems","systemLogo":"img/j5e.png","systemColor":"#000","navMembers":[{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Copyright © 2019—2020 The contributors to the j5e and Johnny-Five projects.","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":true,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":{"ua":"UA-36026876-4","domain":"dtex.github.io"},"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":["./static/custom.css"],"scripts":[],"monospaceLinks":false,"cleverLinks":false,"forkMe":"./build/docs/fork/forkme_right_white_ffffff.webp"};
+			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"MMMM D, YYYY","systemName":"J5e","systemSummary":"Johnny Five for Embedded Systems","systemLogo":"img/j5e.png","systemColor":"#000","navMembers":[{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Copyright © 2019—2020 The contributors to the j5e and Johnny-Five projects.","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":true,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":{"ua":"UA-36026876-4","domain":"dtex.github.io"},"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":["./static/custom.css"],"scripts":[],"monospaceLinks":false,"cleverLinks":false,"forkMe":"./build/docs/fork/forkme_right_white_ffffff.webp"};
 			window.DOCLET_TOC_ENABLED = false;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
@@ -65,8 +65,8 @@
 			</div>
 			<div class="navbar-collapse collapse" id="topNavigation">
 				<ul class="nav navbar-nav">
+							<li><a href="list_class.html">Classes</a></li>
 							<li><a href="list_module.html">Modules</a></li>
-							<li><a href="list_namespace.html">Namespaces</a></li>
 							<li><a href="list_tutorial.html">Tutorials</a></li>
 				</ul>
 					<!-- start:lunr-search-navbar.hbs -->
@@ -97,20 +97,20 @@
 			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">/**
  * For working with generic sensor devices
  * @module j5e/sensor
- * @requires j5e/event
+ * @requires module:j5e/withinable
  * @requires module:j5e/fn
  */
 
-import { Emitter } from "j5e/event";
+import Withinable from "j5e/withinable";
 import { normalizeParams, getProvider, timer, map, fmap, constrain } from "j5e/fn";
 
 /**
  * Class representing a generic sensor
  * @classdesc The Sensor class allows for input from sensor devices that connect to an ADC
  * @async
- * @extends Emitter
+ * @extends module:j5e/withinable~Withinable
  */
-class Sensor extends Emitter {
+class Sensor extends Withinable {
 
   #state = {
     intervalId: null,
@@ -133,7 +133,7 @@ class Sensor extends Emitter {
   /**
    * Instantiate a sensor
    * @param {object} options - A pin number, pin identifier or a complete IO options object (See {@tutorial C-INSTANTIATING}
-   * @param {number} [options.interval=100] - Inteval between readings in millseconds
+   * @param {number} [options.interval=100] - Interval between readings in millseconds
    * @param {number[]} [options.range=[0, N]] - The input range of the sensor
    * @param {number[]} [options.scale=[0, N]] - The output range for the sensor's value
    * @param {number[]} [options.limit=null] - Limit the output range
@@ -141,6 +141,7 @@ class Sensor extends Emitter {
    * @param {boolean} [options.enabled=true] - Wether the device is currently performing reads based on the interval value
    * @property {number} value - Get the most recent scaled median value
    * @property {number} scaled - Get the most recent scaled raw value
+   * @property {number} level - Get the most recent raw value scaled to [0,1]
    * @property {number} raw - Get the most recent raw ADC reading
    * @property {number} resolution - The maximum possible ADC reading
    * @property {number} smoothing - The number of samples to take before finding the median value
