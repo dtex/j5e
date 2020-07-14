@@ -3,6 +3,7 @@ import sinon from "sinon";
 import { Analog } from "@dtex/mock-io";
 import Sensor from "j5e/sensor";
 import { Emitter } from "j5e/event";
+import Withinable from "j5e/withinable";
 
 describe("Sensor", function() {
 
@@ -15,6 +16,7 @@ describe("Sensor", function() {
       });
       assert.equal(sensor instanceof Sensor, true);
       assert.equal(sensor instanceof Emitter, true);
+      assert.equal(sensor instanceof Withinable, true);
       assert.equal(sensor.io instanceof Analog, true);
       sensor.disable();
     });
@@ -1093,6 +1095,35 @@ describe("Sensor", function() {
 
     describe("fscaleto", function() {
 
+    });
+
+    describe("within", function() {
+      it("should fire the within callback when with the range", async function() {
+
+        const clock = sinon.useFakeTimers();
+        const withinSpy = sinon.spy();
+
+        let sensor = await new Sensor({
+          pin: 17,
+          io: Analog
+        });
+
+        sensor.within([150, 160], withinSpy);
+
+        sensor.io.value = 100;
+        clock.tick(5000);
+        assert.equal(withinSpy.callCount, 0);
+
+        sensor.io.value = 155;
+        clock.tick(5000);
+        assert.equal(withinSpy.callCount, 5);
+
+        sensor.io.value = 100;
+        clock.tick(5000);
+        assert.equal(withinSpy.callCount, 5);
+
+        clock.restore();
+      });
     });
 
   });

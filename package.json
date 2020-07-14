@@ -15,7 +15,8 @@
     "./rgb": "./lib/rgb/index.js",
     "./sensor": "./lib/sensor/index.js",
     "./servo": "./lib/servo/index.js",
-    "./switch": "./lib/switch/index.js"
+    "./switch": "./lib/switch/index.js",
+    "./withinable": "./lib/withinable/index.js"
   },
   "type": "module",
   "directories": {
