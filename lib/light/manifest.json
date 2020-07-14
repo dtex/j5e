@@ -1,0 +1,18 @@
+{
+  "include": [],
+  "modules": {
+    "*": [],
+    "j5e/light": "$(j5e)/lib/light/*",
+    "j5e/sensor": "$(j5e)/lib/sensor/*"
+  },
+  "preload": [
+    "j5e/light",
+    "j5e/sensor"
+  ],
+  "platforms": {
+    "esp": {},
+    "...": {
+      "error": "Experimental TC53 IO modules unsupported"
+    }
+  }
+}
