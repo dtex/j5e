@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>&lt;async&gt; j5e/button~Button</title>
+		<title>j5e/withinable~Withinable</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -42,7 +42,7 @@
 				}
 			</style>
 		<script type="text/javascript">
-			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"MMMM D, YYYY","systemName":"J5e","systemSummary":"Johnny Five for Embedded Systems","systemLogo":"img/j5e.png","systemColor":"#000","navMembers":[{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Copyright © 2019—2020 The contributors to the j5e and Johnny-Five projects.","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":true,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":{"ua":"UA-36026876-4","domain":"dtex.github.io"},"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":["./static/custom.css"],"scripts":[],"monospaceLinks":false,"cleverLinks":false,"forkMe":"./build/docs/fork/forkme_right_white_ffffff.webp"};
+			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"MMMM D, YYYY","systemName":"J5e","systemSummary":"Johnny Five for Embedded Systems","systemLogo":"img/j5e.png","systemColor":"#000","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Copyright © 2019—2020 The contributors to the j5e and Johnny-Five projects.","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":true,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":{"ua":"UA-36026876-4","domain":"dtex.github.io"},"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":["./static/custom.css"],"scripts":[],"monospaceLinks":false,"cleverLinks":false,"forkMe":"./build/docs/fork/forkme_right_white_ffffff.webp"};
 			window.DOCLET_TOC_ENABLED = true;
 			window.DOCLET_AFILTER_ENABLED = true;
 		</script>
@@ -65,7 +65,6 @@
 			<div class="navbar-collapse collapse" id="topNavigation">
 				<ul class="nav navbar-nav">
 							<li><a href="list_class.html">Classes</a></li>
-							<li><a href="list_module.html">Modules</a></li>
 							<li><a href="list_tutorial.html">Tutorials</a></li>
 				</ul>
 					<!-- start:lunr-search-navbar.hbs -->
@@ -85,7 +84,7 @@
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
 				<span class="kind">class</span>
-				<h1><span class="signature-attribs">&lt;async> </span><span class="ancestors"><a href="module-j5e_button.html">j5e/button</a>~</span><span class="name">Button</span></h1>
+				<h1><span class="ancestors"><a href="module-j5e_withinable.html">j5e/withinable</a>~</span><span class="name">Withinable</span></h1>
 			</div>
 		</div>
 	<div class="container content">
@@ -94,7 +93,7 @@
 						<ol class="breadcrumb">
 							<li><a href="index.html">Home</a></li>
 							<li><a href="list_class.html">Classes</a></li>
-							<li class="active"><a href="module-j5e_button.html">j5e/button</a>~Button</li>
+							<li class="active"><a href="module-j5e_withinable.html">j5e/withinable</a>~Withinable</li>
 						</ol>
 						<div class="access-filter">
 								<label class="checkbox-inline">
@@ -109,161 +108,11 @@
 					<section>
 							<dl class="symbol primary">
 								<dt class="symbol-title class collapsible-symbol expanded">
-			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="signature-attribs">&lt;async> </span><span class="name">Button</span><span class="signature-params">( <span class="signature-param">options</span>&nbsp;)</span><span class="signature-type"></span></h2>
+			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="name">Withinable</span><span class="signature-params">()</span><span class="signature-type"></span></h2>
 </dt>
 <dd class="symbol-details class  collapsible-symbol expanded" style="max-height: 9999px;">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description classdesc">The Button class allows for control of digital buttons</div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>options</code></td>
-							<td><span class="param-type">object</span></td>
-							<td class="last">
-									A pin number, pin identifier or a complete IO options object (See <a href="tutorial-C-INSTANTIATING.html">Instantiating a Device</a>
-										<table class="params table table-striped">
-											<thead>
-											<tr>
-													<th>Name</th>
-												<th>Type</th>
-													<th>Attributes</th>
-													<th>Default</th>
-												<th class="last">Description</th>
-											</tr>
-											</thead>
-											<tbody>
-												<tr>
-														<td><code>invert</code></td>
-													<td><span class="param-type">boolean</span></td>
-														<td class="attributes">&lt;optional&gt;<br/></td>
-														<td>false</td>
-													<td class="last">
-															Inverts the up and down values
-													</td>
-												</tr>
-												<tr>
-														<td><code>isPullup</code></td>
-													<td><span class="param-type">boolean</span></td>
-														<td class="attributes">&lt;optional&gt;<br/></td>
-														<td>false</td>
-													<td class="last">
-															Initialize as a pullup button
-													</td>
-												</tr>
-												<tr>
-														<td><code>isPulldown</code></td>
-													<td><span class="param-type">boolean</span></td>
-														<td class="attributes">&lt;optional&gt;<br/></td>
-														<td>false</td>
-													<td class="last">
-															Initialize as a pulldown button
-													</td>
-												</tr>
-												<tr>
-														<td><code>holdtime</code></td>
-													<td><span class="param-type">number</span></td>
-														<td class="attributes">&lt;optional&gt;<br/></td>
-														<td>500</td>
-													<td class="last">
-															The amount of time a button must be held down before emitting an hold event
-													</td>
-												</tr>
-											</tbody>
-										</table>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-info">
-				<h5>Properties</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>isClosed</code></td>
-							<td><span class="param-type">boolean</span></td>
-							<td class="last">
-									True if the button is being pressed
-							</td>
-						</tr>
-						<tr>
-								<td><code>isOpen</code></td>
-							<td><span class="param-type">boolean</span></td>
-							<td class="last">
-									True if the button is not being pressed
-							</td>
-						</tr>
-						<tr>
-								<td><code>downValue</code></td>
-							<td><span class="param-type">number</span></td>
-							<td class="last">
-									Get the raw downValue (depends on invert, isPullup and isPulldown)
-							</td>
-						</tr>
-						<tr>
-								<td><code>upValue</code></td>
-							<td><span class="param-type">number</span></td>
-							<td class="last">
-									Get the raw upValue (depends on invert, isPullup and, isPulldown)
-							</td>
-						</tr>
-						<tr>
-								<td><code>holdtime</code></td>
-							<td><span class="param-type">number</span></td>
-							<td class="last">
-									Get/Set the holdtime
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Use a button to control an LED</p></div>
-					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Button from &quot;j5e/button&quot;;
-			import LED from &quot;j5e/led&quot;;
-			
-			const button &#x3D; await new Button(12);
-			const led &#x3D; await new LED(13);
-			
-			button.on(&quot;open&quot;, function() {
-			  led.off();
-			});
-			
-			button.on(&quot;close&quot;, function() {
-			  led.on();
-			});</code></pre>
-					</div>
-			</div>			<div class="callout callout-warning"><h5>Fires</h5>		<form class="form-horizontal fires">
-							<div class="form-group">
-								<label class="col-sm-3 control-label fires-event">Button#event:open</label>
-								<div class="col-sm-9">
-									<div class="form-control-static fires-summary"></div>
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="col-sm-3 control-label fires-event">Button#event:close</label>
-								<div class="col-sm-9">
-									<div class="form-control-static fires-summary"></div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
 			
@@ -290,7 +139,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="button_index.js.html">button/index.js</a>, <a href="button_index.js.html#line-61">line 61</a></p>
+									<p class="form-control-static"><a href="withinable_index.js.html">withinable/index.js</a>, <a href="withinable_index.js.html#line-14">line 14</a></p>
 								</div>
 							</div>
 			
@@ -304,6 +153,78 @@
 							<article class="secondary">
 									<h3>Methods</h3>
 									<dl class="symbol">
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id="within" class="function public"><span class="name">within</span><span class="signature-params">( <span class="signature-param">range</span>, <span class="signature-param">unit</span>, <span class="signature-param">callback</span>&nbsp;)</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Fire a callback when the value is within a certain range</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>range</code></td>
+							<td><span class="param-type">Array.&lt;number></span></td>
+							<td class="last">
+									The upper and lower ends of the range to watch
+							</td>
+						</tr>
+						<tr>
+								<td><code>unit</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									The property to test
+							</td>
+						</tr>
+						<tr>
+								<td><code>callback</code></td>
+							<td><span class="param-type">function</span></td>
+							<td class="last">
+									A callback to run when the event is fired.
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="withinable_index.js.html">withinable/index.js</a>, <a href="withinable_index.js.html#line-24">line 24</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
 											<hr/>
 											<dt class="symbol-title function public inherited collapsible-symbol">
 			<h4 id="on" class="function public inherited"><span class="name">on</span><span class="signature-params">( <span class="signature-param">event</span>, <span class="signature-param">listener</span>&nbsp;)</span><span class="signature-type"></span></h4>

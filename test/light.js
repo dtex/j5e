@@ -1,54 +1,56 @@
 import assert from "assert";
 import sinon from "sinon";
 import { Analog } from "@dtex/mock-io";
+import Light from "j5e/light";
 import Sensor from "j5e/sensor";
 import { Emitter } from "j5e/event";
 import Withinable from "j5e/withinable";
 
-describe("Sensor", function() {
+describe("Light", function() {
 
   describe("Instantiation", async function() {
 
-    it("should return a valid Sensor instance when passed an options object", async function() {
-      let sensor = await new Sensor({
+    it("should return a valid Light instance when passed an options object", async function() {
+      let light = await new Light({
         pin: 17,
         io: Analog
       });
-      assert.equal(sensor instanceof Sensor, true);
-      assert.equal(sensor instanceof Emitter, true);
-      assert.equal(sensor instanceof Withinable, true);
-      assert.equal(sensor.io instanceof Analog, true);
-      sensor.disable();
+      assert.equal(light instanceof Light, true);
+      assert.equal(light instanceof Sensor, true);
+      assert.equal(light instanceof Emitter, true);
+      assert.equal(light instanceof Withinable, true);
+      assert.equal(light.io instanceof Analog, true);
+      light.disable();
     });
 
     it("should return the correct default property values", async function() {
-      let sensor = await new Sensor({
+      let light = await new Light({
         pin: 17,
         io: Analog
       });
-      assert.equal(sensor.interval, 100);
-      assert.equal(sensor.smoothing, 10);
-      assert.equal(sensor.raw, null);
-      assert.equal(sensor.value, null);
-      assert.equal(sensor.median, null);
-      assert.equal(sensor.last, null);
-      assert.equal(sensor.threshold, 1);
-      assert.equal(sensor.limit, null);
-      assert.equal(sensor.resolution, 1023);
-      sensor.disable();
+      assert.equal(light.interval, 100);
+      assert.equal(light.smoothing, 10);
+      assert.equal(light.raw, null);
+      assert.equal(light.value, null);
+      assert.equal(light.median, null);
+      assert.equal(light.last, null);
+      assert.equal(light.threshold, 1);
+      assert.equal(light.limit, null);
+      assert.equal(light.resolution, 1023);
+      light.disable();
     });
 
     it("should make 10 readings per second", async function() {
       const clock = sinon.useFakeTimers();
-      let sensor = await new Sensor({
+      let light = await new Light({
         pin: 17,
         io: Analog
       });
-      const readSpy = sinon.spy(sensor.io, "read");
+      const readSpy = sinon.spy(light.io, "read");
       clock.tick(1050);
       assert.equal(readSpy.callCount, 10);
       clock.restore();
-      sensor.disable();
+      light.disable();
     });
 
     describe("Options", function() {
@@ -56,41 +58,41 @@ describe("Sensor", function() {
 
         it("should return the correct default property values", async function() {
 
-          let sensor = await new Sensor({
+          let light = await new Light({
             pin: 17,
             io: Analog,
             enabled: false
           });
-          assert.equal(sensor.interval, null);
-          assert.equal(sensor.smoothing, 10);
-          assert.equal(sensor.raw, null);
-          assert.equal(sensor.value, null);
-          assert.equal(sensor.median, null);
-          assert.equal(sensor.last, null);
-          assert.equal(sensor.threshold, 1);
-          assert.equal(sensor.limit, null);
-          assert.equal(sensor.resolution, 1023);
+          assert.equal(light.interval, null);
+          assert.equal(light.smoothing, 10);
+          assert.equal(light.raw, null);
+          assert.equal(light.value, null);
+          assert.equal(light.median, null);
+          assert.equal(light.last, null);
+          assert.equal(light.threshold, 1);
+          assert.equal(light.limit, null);
+          assert.equal(light.resolution, 1023);
 
-          sensor.disable();
+          light.disable();
 
         });
 
         it("should not start making readings", async function() {
 
           const clock = sinon.useFakeTimers();
-          let sensor = await new Sensor({
+          let light = await new Light({
             pin: 17,
             io: Analog,
             enabled: false
           });
 
-          const writeSpy = sinon.spy(sensor.io, "read");
+          const writeSpy = sinon.spy(light.io, "read");
 
           clock.tick(1050);
           assert.equal(writeSpy.callCount, 0);
           clock.restore();
 
-          sensor.disable();
+          light.disable();
 
         });
 
@@ -100,41 +102,41 @@ describe("Sensor", function() {
 
         it("should return the correct default property values", async function() {
 
-          let sensor = await new Sensor({
+          let light = await new Light({
             pin: 17,
             io: Analog,
             interval: 50
           });
-          assert.equal(sensor.interval, 50);
-          assert.equal(sensor.smoothing, 10);
-          assert.equal(sensor.raw, null);
-          assert.equal(sensor.value, null);
-          assert.equal(sensor.median, null);
-          assert.equal(sensor.last, null);
-          assert.equal(sensor.threshold, 1);
-          assert.equal(sensor.limit, null);
-          assert.equal(sensor.resolution, 1023);
+          assert.equal(light.interval, 50);
+          assert.equal(light.smoothing, 10);
+          assert.equal(light.raw, null);
+          assert.equal(light.value, null);
+          assert.equal(light.median, null);
+          assert.equal(light.last, null);
+          assert.equal(light.threshold, 1);
+          assert.equal(light.limit, null);
+          assert.equal(light.resolution, 1023);
 
-          sensor.disable();
+          light.disable();
 
         });
 
         it("should make 20 readings per second", async function() {
 
           const clock = sinon.useFakeTimers();
-          let sensor = await new Sensor({
+          let light = await new Light({
             pin: 17,
             io: Analog,
             interval: 50
           });
 
-          const writeSpy = sinon.spy(sensor.io, "read");
+          const writeSpy = sinon.spy(light.io, "read");
 
           clock.tick(1005);
           assert.equal(writeSpy.callCount, 20);
           clock.restore();
 
-          sensor.disable();
+          light.disable();
 
         });
 
@@ -144,61 +146,61 @@ describe("Sensor", function() {
 
         it("should return the correct default property values", async function() {
 
-          let sensor = await new Sensor({
+          let light = await new Light({
             pin: 17,
             io: Analog,
             range: [256, 758]
           });
-          assert.equal(sensor.interval, 100);
-          assert.equal(sensor.smoothing, 10);
-          assert.equal(sensor.raw, null);
-          assert.equal(sensor.value, null);
-          assert.equal(sensor.median, null);
-          assert.equal(sensor.last, null);
-          assert.equal(sensor.threshold, 1);
-          assert.equal(sensor.limit, null);
-          assert.equal(sensor.resolution, 1023);
+          assert.equal(light.interval, 100);
+          assert.equal(light.smoothing, 10);
+          assert.equal(light.raw, null);
+          assert.equal(light.value, null);
+          assert.equal(light.median, null);
+          assert.equal(light.last, null);
+          assert.equal(light.threshold, 1);
+          assert.equal(light.limit, null);
+          assert.equal(light.resolution, 1023);
 
-          sensor.disable();
+          light.disable();
 
         });
 
         it("should map value properly", async function() {
 
-          let sensor = await new Sensor({
+          let light = await new Light({
             pin: 17,
             io: Analog,
             range: [256, 768]
           });
 
-          sensor.io.value = 0;
-          assert.equal(sensor.raw, null);
-          assert.equal(sensor.value, null);
-          sensor.read();
-          assert.equal(sensor.raw, 0);
-          assert.equal(sensor.value, 0);
-          sensor.io.value = 127;
-          sensor.read();
-          assert.equal(sensor.raw, 127);
-          assert.equal(sensor.value, 0);
-          sensor.io.value = 256;
-          sensor.read();
-          assert.equal(sensor.raw, 256);
-          assert.equal(sensor.value, 0);
-          sensor.io.value = 512;
-          sensor.read();
-          assert.equal(sensor.raw, 512);
-          assert.equal(sensor.value, 511.5);
-          sensor.io.value = 768;
-          sensor.read();
-          assert.equal(sensor.raw, 768);
-          assert.equal(sensor.value, 1023);
-          sensor.io.value = 1023;
-          sensor.read();
-          assert.equal(sensor.raw, 1023);
-          assert.equal(sensor.value, 1023);
+          light.io.value = 0;
+          assert.equal(light.raw, null);
+          assert.equal(light.value, null);
+          light.read();
+          assert.equal(light.raw, 0);
+          assert.equal(light.value, 0);
+          light.io.value = 127;
+          light.read();
+          assert.equal(light.raw, 127);
+          assert.equal(light.value, 0);
+          light.io.value = 256;
+          light.read();
+          assert.equal(light.raw, 256);
+          assert.equal(light.value, 0);
+          light.io.value = 512;
+          light.read();
+          assert.equal(light.raw, 512);
+          assert.equal(light.value, 511.5);
+          light.io.value = 768;
+          light.read();
+          assert.equal(light.raw, 768);
+          assert.equal(light.value, 1023);
+          light.io.value = 1023;
+          light.read();
+          assert.equal(light.raw, 1023);
+          assert.equal(light.value, 1023);
 
-          sensor.disable();
+          light.disable();
 
         });
 
@@ -208,31 +210,31 @@ describe("Sensor", function() {
 
         it("should return the correct default property values", async function() {
 
-          let sensor = await new Sensor({
+          let light = await new Light({
             pin: 17,
             io: Analog,
             limit: [256, 758]
           });
 
-          assert.equal(sensor.interval, 100);
-          assert.equal(sensor.smoothing, 10);
-          assert.equal(sensor.raw, null);
-          assert.equal(sensor.value, null);
-          assert.equal(sensor.median, null);
-          assert.equal(sensor.last, null);
-          assert.equal(sensor.threshold, 1);
-          assert.equal(sensor.limit[0], 256);
-          assert.equal(sensor.limit[1], 758);
-          assert.equal(sensor.resolution, 1023);
+          assert.equal(light.interval, 100);
+          assert.equal(light.smoothing, 10);
+          assert.equal(light.raw, null);
+          assert.equal(light.value, null);
+          assert.equal(light.median, null);
+          assert.equal(light.last, null);
+          assert.equal(light.threshold, 1);
+          assert.equal(light.limit[0], 256);
+          assert.equal(light.limit[1], 758);
+          assert.equal(light.resolution, 1023);
 
-          sensor.disable();
+          light.disable();
 
         });
 
         it("should emit upper and lower limit events", async function() {
 
           const clock = sinon.useFakeTimers();
-          let sensor = await new Sensor({
+          let light = await new Light({
             pin: 17,
             io: Analog,
             limit: [256, 768]
@@ -244,38 +246,38 @@ describe("Sensor", function() {
             "limit:lower": 0,
             "limit:upper": 0
           };
-          sensor.on("limit", function(data) {
+          light.on("limit", function(data) {
             if (data.boundary === "lower") {
-              assert.equal(sensor.raw <= 256, true);
+              assert.equal(light.raw <= 256, true);
               calls.lower++;
             } else {
-              assert.equal(sensor.raw >= 768, true);
+              assert.equal(light.raw >= 768, true);
               calls.upper++;
             }
           });
 
-          sensor.on("limit:lower", function(data) {
-            assert.equal(sensor.raw <= 256, true);
+          light.on("limit:lower", function(data) {
+            assert.equal(light.raw <= 256, true);
             calls["limit:lower"]++;
           });
 
-          sensor.on("limit:upper", function(data) {
-            assert.equal(sensor.raw >= 768, true);
+          light.on("limit:upper", function(data) {
+            assert.equal(light.raw >= 768, true);
             calls["limit:upper"]++;
           });
 
           clock.tick(1005);
-          sensor.io.value = 127;
+          light.io.value = 127;
           clock.tick(1005);
-          sensor.io.value = 256;
+          light.io.value = 256;
           clock.tick(1005);
-          sensor.io.value = 512;
+          light.io.value = 512;
           clock.tick(1005);
-          sensor.io.value = 768;
+          light.io.value = 768;
           clock.tick(1005);
-          sensor.io.value = 895;
+          light.io.value = 895;
           clock.tick(1005);
-          sensor.io.value = 1023;
+          light.io.value = 1023;
           clock.tick(1005);
 
           assert.equal(calls.lower, 3);
@@ -284,7 +286,7 @@ describe("Sensor", function() {
           assert.equal(calls["limit:upper"], 3);
 
           clock.restore();
-          sensor.disable();
+          light.disable();
 
         });
 
@@ -294,23 +296,23 @@ describe("Sensor", function() {
 
         it("should return the correct default property values", async function() {
 
-          let sensor = await new Sensor({
+          let light = await new Light({
             pin: 17,
             io: Analog,
             threshold: 20
           });
 
-          assert.equal(sensor.interval, 100);
-          assert.equal(sensor.smoothing, 10);
-          assert.equal(sensor.raw, null);
-          assert.equal(sensor.value, null);
-          assert.equal(sensor.median, null);
-          assert.equal(sensor.last, null);
-          assert.equal(sensor.threshold, 20);
-          assert.equal(sensor.limit, null);
-          assert.equal(sensor.resolution, 1023);
+          assert.equal(light.interval, 100);
+          assert.equal(light.smoothing, 10);
+          assert.equal(light.raw, null);
+          assert.equal(light.value, null);
+          assert.equal(light.median, null);
+          assert.equal(light.last, null);
+          assert.equal(light.threshold, 20);
+          assert.equal(light.limit, null);
+          assert.equal(light.resolution, 1023);
 
-          sensor.disable();
+          light.disable();
 
         });
 
@@ -318,7 +320,7 @@ describe("Sensor", function() {
 
 
           const clock = sinon.useFakeTimers();
-          let sensor = await new Sensor({
+          let light = await new Light({
             pin: 17,
             io: Analog,
             threshold: 20
@@ -326,31 +328,31 @@ describe("Sensor", function() {
 
           let last = 0;
           let count = 0;
-          sensor.on("change", function(data) {
+          light.on("change", function(data) {
             assert(Math.abs(data - last) >= 20, true);
             last = data;
             count++;
           });
 
           clock.tick(1005);
-          sensor.io.value = 10;
+          light.io.value = 10;
           clock.tick(1005);
           clock.tick(1005);
-          sensor.io.value = 100;
-          sensor.io.value = 20;
+          light.io.value = 100;
+          light.io.value = 20;
           clock.tick(1005);
-          sensor.io.value = 110;
+          light.io.value = 110;
           clock.tick(1005);
-          sensor.io.value = 900;
+          light.io.value = 900;
           clock.tick(1005);
-          sensor.io.value = 919;
+          light.io.value = 919;
           clock.tick(1005);
-          sensor.io.value = 920;
+          light.io.value = 920;
           clock.tick(1005);
 
           assert.equal(count, 4);
 
-          sensor.disable();
+          light.disable();
 
         });
 
@@ -363,75 +365,75 @@ describe("Sensor", function() {
     describe("interval", function() {
 
       it("should return the correct default value", async function() {
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog
         });
-        assert.equal(sensor.interval, 100);
-        sensor.disable();
+        assert.equal(light.interval, 100);
+        light.disable();
       });
 
       it("should run at the correct default frequency", async function() {
         const clock = sinon.useFakeTimers();
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog
         });
-        const readSpy = sinon.spy(sensor.io, "read");
+        const readSpy = sinon.spy(light.io, "read");
         clock.tick(1050);
         assert.equal(readSpy.callCount, 10);
         clock.restore();
-        sensor.disable();
+        light.disable();
       });
 
       it("should return the correct value when passed the interval param", async function() {
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog,
           interval: 10
         });
-        assert.equal(sensor.interval, 10);
-        sensor.disable();
+        assert.equal(light.interval, 10);
+        light.disable();
       });
 
       it("should run at the correct frequency when passed the interval param", async function() {
         const clock = sinon.useFakeTimers();
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog,
           interval: 10
         });
-        const readSpy = sinon.spy(sensor.io, "read");
+        const readSpy = sinon.spy(light.io, "read");
         clock.tick(1005);
         assert.equal(readSpy.callCount, 100);
         clock.restore();
-        sensor.disable();
+        light.disable();
       });
 
       it("should return the correct value when set", async function() {
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog,
           interval: 10
         });
-        sensor.interval = 20;
-        assert.equal(sensor.interval, 20);
-        sensor.disable();
+        light.interval = 20;
+        assert.equal(light.interval, 20);
+        light.disable();
       });
 
       it("should run at the correct frequency when set", async function() {
         const clock = sinon.useFakeTimers();
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog,
           interval: 10
         });
-        sensor.interval = 20;
-        const readSpy = sinon.spy(sensor.io, "read");
+        light.interval = 20;
+        const readSpy = sinon.spy(light.io, "read");
         clock.tick(1005);
         assert.equal(readSpy.callCount, 50);
         clock.restore();
-        sensor.disable();
+        light.disable();
       });
 
     });
@@ -439,50 +441,50 @@ describe("Sensor", function() {
     describe("raw", function() {
 
       it("should return the correct value", async function() {
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog
         });
-        sensor.io.value = 123;
-        sensor.read();
-        assert.equal(sensor.raw, 123);
-        sensor.disable();
+        light.io.value = 123;
+        light.read();
+        assert.equal(light.raw, 123);
+        light.disable();
       });
 
       it("should return the correct value regardless of range", async function() {
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog,
           range: [400, 800]
         });
-        sensor.io.value = 123;
-        sensor.read();
-        assert.equal(sensor.raw, 123);
-        sensor.disable();
+        light.io.value = 123;
+        light.read();
+        assert.equal(light.raw, 123);
+        light.disable();
       });
 
       it("should return the correct value regardless of limit", async function() {
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog,
           limit: [400, 800]
         });
-        sensor.io.value = 123;
-        sensor.read();
-        assert.equal(sensor.raw, 123);
-        sensor.disable();
+        light.io.value = 123;
+        light.read();
+        assert.equal(light.raw, 123);
+        light.disable();
       });
 
       it("should return the correct value regardless of scale", async function() {
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog,
           scale: [400, 800]
         });
-        sensor.io.value = 123;
-        sensor.read();
-        assert.equal(sensor.raw, 123);
-        sensor.disable();
+        light.io.value = 123;
+        light.read();
+        assert.equal(light.raw, 123);
+        light.disable();
       });
 
     });
@@ -490,189 +492,256 @@ describe("Sensor", function() {
     describe("value", function() {
 
       it("should return the correct value", async function() {
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog
         });
-        sensor.io.value = 123;
-        sensor.read();
-        assert.equal(sensor.value, 123);
-        sensor.disable();
+        light.io.value = 123;
+        light.read();
+        assert.equal(light.value, 123);
+        light.disable();
       });
 
       it("should return the correct value based on range", async function() {
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog,
           range: [400, 800]
         });
         [[123, 0], [400, 0], [600, 511.5], [800, 1023], [1000, 1023]].forEach(inAndOut => {
-          sensor.io.value = inAndOut[0];
-          sensor.read();
-          assert.equal(sensor.value, inAndOut[1]);
+          light.io.value = inAndOut[0];
+          light.read();
+          assert.equal(light.value, inAndOut[1]);
         });
 
-        sensor.disable();
+        light.disable();
       });
 
       it("should return the correct value based on scale", async function() {
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog,
           scale: [400, 800]
         });
         [[0, 400], [400, 556], [600, 634], [800, 712], [1000, 791]].forEach(inAndOut => {
-          sensor.io.value = inAndOut[0];
-          sensor.read();
-          assert.equal(Math.abs(sensor.value - inAndOut[1]) < 1, true);
+          light.io.value = inAndOut[0];
+          light.read();
+          assert.equal(Math.abs(light.value - inAndOut[1]) < 1, true);
         });
 
-        sensor.disable();
+        light.disable();
       });
 
       it("should return the correct value based on scale and range", async function() {
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog,
           range: [400, 800],
           scale: [0, 255]
         });
         [[0, 0], [400, 0], [600, 127.5], [800, 255], [1000, 255]].forEach(inAndOut => {
-          sensor.io.value = inAndOut[0];
-          sensor.read();
-          assert.equal(Math.abs(sensor.value - inAndOut[1]) < 1, true);
+          light.io.value = inAndOut[0];
+          light.read();
+          assert.equal(Math.abs(light.value - inAndOut[1]) < 1, true);
         });
 
-        sensor.disable();
+        light.disable();
+      });
+    });
+
+    describe("level", function() {
+
+      it("should return the correct value", async function() {
+        const clock = sinon.useFakeTimers();
+
+        let light = await new Light({
+          pin: 17,
+          io: Analog
+        });
+
+        light.io.value = 123;
+        light.read();
+        clock.tick(1000);
+        assert.equal(light.level, 0.12);
+        light.disable();
+      });
+
+      it("should return the correct value based on range", async function() {
+
+        const light = await new Light({
+          pin: 17,
+          io: Analog,
+          range: [400, 800]
+        });
+
+        [[123, 0.12], [400, 0.39], [600, 0.59], [800, 0.78], [1000, 0.98]].forEach(inAndOut => {
+          light.io.value = inAndOut[0];
+          light.read();
+          assert.equal(light.level, inAndOut[1]);
+        });
+
+        light.disable();
+
+      });
+
+      it("should return the correct value based on scale", async function() {
+        let light = await new Light({
+          pin: 17,
+          io: Analog,
+          scale: [400, 800]
+        });
+        [[0, 0], [400, 0], [600, 0.5], [800, 1], [1000, 1]].forEach(inAndOut => {
+          light.io.value = inAndOut[0];
+          light.read();
+          assert.equal(light.level, inAndOut[1]);
+        });
+
+        light.disable();
+      });
+
+      it("should return the correct value based on scale and range", async function() {
+        let light = await new Light({
+          pin: 17,
+          io: Analog,
+          range: [400, 800],
+          scale: [0, 255]
+        });
+        [[0, 0], [400, 1], [600, 1], [800, 1], [1000, 1]].forEach(inAndOut => {
+          light.io.value = inAndOut[0];
+          light.read();
+          assert.equal(light.level, inAndOut[1]);
+        });
+
+        light.disable();
       });
     });
 
     describe("scaled", function() {
 
       it("should return the correct value", async function() {
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog
         });
-        sensor.io.value = 123;
-        sensor.read();
-        assert.equal(sensor.scaled, 123);
-        sensor.disable();
+        light.io.value = 123;
+        light.read();
+        assert.equal(light.scaled, 123);
+        light.disable();
       });
 
       it("should return the correct value based on range", async function() {
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog,
           range: [400, 800]
         });
         [[123, 0], [400, 0], [600, 511.5], [800, 1023], [1000, 1023]].forEach(inAndOut => {
-          sensor.io.value = inAndOut[0];
-          sensor.read();
-          assert.equal(sensor.scaled, inAndOut[1]);
+          light.io.value = inAndOut[0];
+          light.read();
+          assert.equal(light.scaled, inAndOut[1]);
         });
 
-        sensor.disable();
+        light.disable();
       });
 
       it("should return the correct value based on scale", async function() {
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog,
           scale: [400, 800]
         });
         [[0, 400], [400, 556], [600, 634], [800, 712], [1000, 791]].forEach(inAndOut => {
-          sensor.io.value = inAndOut[0];
-          sensor.read();
-          assert.equal(Math.abs(sensor.scaled - inAndOut[1]) < 1, true);
+          light.io.value = inAndOut[0];
+          light.read();
+          assert.equal(Math.abs(light.scaled - inAndOut[1]) < 1, true);
         });
 
-        sensor.disable();
+        light.disable();
       });
 
       it("should return the correct value based on scale and range", async function() {
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog,
           range: [400, 800],
           scale: [0, 255]
         });
         [[0, 0], [400, 0], [600, 127.5], [800, 255], [1000, 255]].forEach(inAndOut => {
-          sensor.io.value = inAndOut[0];
-          sensor.read();
-          assert.equal(Math.abs(sensor.scaled - inAndOut[1]) < 1, true);
+          light.io.value = inAndOut[0];
+          light.read();
+          assert.equal(Math.abs(light.scaled - inAndOut[1]) < 1, true);
         });
 
-        sensor.disable();
+        light.disable();
       });
     });
 
     describe("resolution", function() {
 
       it("should return 2^10-1", async function() {
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog
         });
-        assert.equal(sensor.resolution, 1023);
-        sensor.disable();
+        assert.equal(light.resolution, 1023);
+        light.disable();
       });
     });
 
     describe("limit", function() {
 
       it("should return null when limit is not set", async function() {
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog
         });
-        assert.equal(sensor.limit, null);
-        sensor.disable();
+        assert.equal(light.limit, null);
+        light.disable();
       });
 
       it("should return limit set in options", async function() {
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog,
           limit: [200, 823]
         });
-        assert.equal(sensor.limit[0], 200);
-        assert.equal(sensor.limit[1], 823);
-        sensor.disable();
+        assert.equal(light.limit[0], 200);
+        assert.equal(light.limit[1], 823);
+        light.disable();
       });
 
       it("should be settable", async function() {
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog,
           limit: [200, 823]
         });
-        assert.equal(sensor.limit[0], 200);
-        assert.equal(sensor.limit[1], 823);
-        sensor.limit = [300, 900];
-        assert.equal(sensor.limit[0], 300);
-        assert.equal(sensor.limit[1], 900);
-        sensor.disable();
+        assert.equal(light.limit[0], 200);
+        assert.equal(light.limit[1], 823);
+        light.limit = [300, 900];
+        assert.equal(light.limit[0], 300);
+        assert.equal(light.limit[1], 900);
+        light.disable();
       });
 
       it("should be settable", async function() {
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog,
           limit: [200, 800]
         });
-        assert.equal(sensor.limit[0], 200);
-        assert.equal(sensor.limit[1], 800);
-        sensor.limit = [300, 900];
-        assert.equal(sensor.limit[0], 300);
-        assert.equal(sensor.limit[1], 900);
-        sensor.disable();
+        assert.equal(light.limit[0], 200);
+        assert.equal(light.limit[1], 800);
+        light.limit = [300, 900];
+        assert.equal(light.limit[0], 300);
+        assert.equal(light.limit[1], 900);
+        light.disable();
       });
 
       it("should adjust when the limit changes", async function() {
 
         const clock = sinon.useFakeTimers();
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog,
           limit: [256, 768]
@@ -685,38 +754,38 @@ describe("Sensor", function() {
           "limit:upper": 0
         };
 
-        sensor.on("limit", function(data) {
+        light.on("limit", function(data) {
           if (data.boundary === "lower") {
-            assert.equal(sensor.raw <= 256, true);
+            assert.equal(light.raw <= 256, true);
             calls.lower++;
           } else {
-            assert.equal(sensor.raw >= 768, true);
+            assert.equal(light.raw >= 768, true);
             calls.upper++;
           }
         });
 
-        sensor.on("limit:lower", function(data) {
-          assert.equal(sensor.raw <= 256, true);
+        light.on("limit:lower", function(data) {
+          assert.equal(light.raw <= 256, true);
           calls["limit:lower"]++;
         });
 
-        sensor.on("limit:upper", function(data) {
-          assert.equal(sensor.raw >= 768, true);
+        light.on("limit:upper", function(data) {
+          assert.equal(light.raw >= 768, true);
           calls["limit:upper"]++;
         });
 
         clock.tick(1005);
-        sensor.io.value = 127;
+        light.io.value = 127;
         clock.tick(1005);
-        sensor.io.value = 256;
+        light.io.value = 256;
         clock.tick(1005);
-        sensor.io.value = 512;
+        light.io.value = 512;
         clock.tick(1005);
-        sensor.io.value = 768;
+        light.io.value = 768;
         clock.tick(1005);
-        sensor.io.value = 895;
+        light.io.value = 895;
         clock.tick(1005);
-        sensor.io.value = 1023;
+        light.io.value = 1023;
         clock.tick(1005);
 
         assert.equal(calls.lower, 3);
@@ -724,19 +793,19 @@ describe("Sensor", function() {
         assert.equal(calls["limit:lower"], 3);
         assert.equal(calls["limit:upper"], 3);
 
-        sensor.limit = [200, 800];
+        light.limit = [200, 800];
 
-        sensor.io.value = 127;
+        light.io.value = 127;
         clock.tick(1005);
-        sensor.io.value = 256;
+        light.io.value = 256;
         clock.tick(1005);
-        sensor.io.value = 512;
+        light.io.value = 512;
         clock.tick(1005);
-        sensor.io.value = 768;
+        light.io.value = 768;
         clock.tick(1005);
-        sensor.io.value = 895;
+        light.io.value = 895;
         clock.tick(1005);
-        sensor.io.value = 1023;
+        light.io.value = 1023;
         clock.tick(1005);
 
         assert.equal(calls.lower, 4);
@@ -745,7 +814,7 @@ describe("Sensor", function() {
         assert.equal(calls["limit:upper"], 5);
 
         clock.restore();
-        sensor.disable();
+        light.disable();
 
       });
 
@@ -754,80 +823,80 @@ describe("Sensor", function() {
     describe("threshold", function() {
 
       it("should return null when threshold is not set", async function() {
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog
         });
-        assert.equal(sensor.threshold, 1);
-        sensor.disable();
+        assert.equal(light.threshold, 1);
+        light.disable();
       });
 
       it("should return the threshold set in options", async function() {
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog,
           threshold: 5
         });
-        assert.equal(sensor.threshold, 5);
-        sensor.disable();
+        assert.equal(light.threshold, 5);
+        light.disable();
       });
 
       it("should be settable", async function() {
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog
         });
-        assert.equal(sensor.threshold, 1);
-        sensor.threshold = 5;
-        assert.equal(sensor.threshold, 5);
-        sensor.disable();
+        assert.equal(light.threshold, 1);
+        light.threshold = 5;
+        assert.equal(light.threshold, 5);
+        light.disable();
       });
 
       it("should adjust when the threshold changes", async function() {
 
         const clock = sinon.useFakeTimers();
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog
         });
 
         const changeSpy = sinon.spy();
 
-        sensor.on("change", changeSpy);
+        light.on("change", changeSpy);
 
         clock.tick(1005);
-        sensor.io.value = 1;
+        light.io.value = 1;
         clock.tick(1005);
-        sensor.io.value = 2;
+        light.io.value = 2;
         clock.tick(1005);
-        sensor.io.value = 5;
+        light.io.value = 5;
         clock.tick(1005);
-        sensor.io.value = 7;
+        light.io.value = 7;
         clock.tick(1005);
-        sensor.io.value = 10;
+        light.io.value = 10;
         clock.tick(1005);
 
         assert.equal(changeSpy.callCount, 5);
 
-        sensor.threshold = 5;
+        light.threshold = 5;
 
-        sensor.io.value = 11;
+        light.io.value = 11;
         clock.tick(1005);
-        sensor.io.value = 14;
+        light.io.value = 14;
         clock.tick(1005);
-        sensor.io.value = 20;
+        light.io.value = 20;
         clock.tick(1005);
-        sensor.io.value = 25;
+        light.io.value = 25;
         clock.tick(1005);
-        sensor.io.value = 27;
+        light.io.value = 27;
         clock.tick(1005);
-        sensor.io.value = 1023;
+        light.io.value = 1023;
         clock.tick(1005);
 
         assert.equal(changeSpy.callCount, 8);
 
         clock.restore();
-        sensor.disable();
+        light.disable();
 
       });
 
@@ -836,55 +905,55 @@ describe("Sensor", function() {
     describe("smoothing", function() {
 
       it("should return 10 when smoothing options is not passed", async function() {
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog
         });
-        assert.equal(sensor.smoothing, 10);
-        sensor.disable();
+        assert.equal(light.smoothing, 10);
+        light.disable();
       });
 
       it("should return the smoothing set in options", async function() {
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog,
           smoothing: 5
         });
-        assert.equal(sensor.smoothing, 5);
-        sensor.disable();
+        assert.equal(light.smoothing, 5);
+        light.disable();
       });
 
       it("should be settable", async function() {
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog
         });
-        assert.equal(sensor.smoothing, 10);
-        sensor.smoothing = 5;
-        assert.equal(sensor.smoothing, 5);
-        sensor.disable();
+        assert.equal(light.smoothing, 10);
+        light.smoothing = 5;
+        assert.equal(light.smoothing, 5);
+        light.disable();
       });
 
       it("should emit the correct events and values when smoothing is ", async function() {
         const clock = sinon.useFakeTimers();
         const dataSpy = sinon.spy();
 
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog
         });
 
-        sensor.on("data", dataSpy);
+        light.on("data", dataSpy);
 
         [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].forEach(value => {
-          sensor.io.value = value;
+          light.io.value = value;
           clock.tick(101);
         });
         assert.equal(dataSpy.callCount, 1);
         assert.equal(dataSpy.lastCall.args, 6);
 
         [11, 12, 13, 14, 15, 16, 17, 18, 19, 20].forEach(value => {
-          sensor.io.value = value;
+          light.io.value = value;
           clock.tick(101);
         });
         assert.equal(dataSpy.callCount, 2);
@@ -895,24 +964,24 @@ describe("Sensor", function() {
         const clock = sinon.useFakeTimers();
         const dataSpy = sinon.spy();
 
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog
         });
 
-        sensor.on("data", dataSpy);
+        light.on("data", dataSpy);
 
-        sensor.smoothing = 5;
+        light.smoothing = 5;
 
         [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].forEach(value => {
-          sensor.io.value = value;
+          light.io.value = value;
           clock.tick(101);
         });
         assert.equal(dataSpy.callCount, 2);
         assert.equal(dataSpy.lastCall.args, 8);
 
         [11, 12, 13, 14, 15, 16, 17, 18, 19, 20].forEach(value => {
-          sensor.io.value = value;
+          light.io.value = value;
           clock.tick(101);
         });
         assert.equal(dataSpy.callCount, 4);
@@ -923,26 +992,26 @@ describe("Sensor", function() {
         const clock = sinon.useFakeTimers();
         const dataSpy = sinon.spy();
 
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog
         });
 
-        sensor.on("data", dataSpy);
+        light.on("data", dataSpy);
 
-        sensor.smoothing = 5;
+        light.smoothing = 5;
 
         [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].forEach(value => {
-          sensor.io.value = value;
+          light.io.value = value;
           clock.tick(101);
         });
         assert.equal(dataSpy.callCount, 2);
         assert.equal(dataSpy.lastCall.args, 8);
 
-        sensor.smoothing = 10;
+        light.smoothing = 10;
 
         [11, 12, 13, 14, 15, 16, 17, 18, 19, 20].forEach(value => {
-          sensor.io.value = value;
+          light.io.value = value;
           clock.tick(101);
         });
         assert.equal(dataSpy.callCount, 3);
@@ -960,17 +1029,17 @@ describe("Sensor", function() {
         const dataSpy = sinon.spy();
         const clock = sinon.useFakeTimers();
 
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog
         });
 
-        sensor.on("data", dataSpy);
+        light.on("data", dataSpy);
 
         clock.tick(10000);
         assert.equal(dataSpy.callCount, 10);
 
-        sensor.disable();
+        light.disable();
 
         clock.tick(10000);
         assert.equal(dataSpy.callCount, 10);
@@ -984,23 +1053,23 @@ describe("Sensor", function() {
         const dataSpy = sinon.spy();
         const clock = sinon.useFakeTimers();
 
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog,
           enabled: false
         });
 
-        sensor.on("data", dataSpy);
+        light.on("data", dataSpy);
 
         clock.tick(10000);
         assert.equal(dataSpy.callCount, 0);
 
-        sensor.enable();
+        light.enable();
 
         clock.tick(10000);
         assert.equal(dataSpy.callCount, 10);
 
-        sensor.disable();
+        light.disable();
         clock.restore();
       });
     });
@@ -1009,18 +1078,18 @@ describe("Sensor", function() {
       it("should return the current value when called", async function() {
         const dataSpy = sinon.spy();
 
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog
         });
 
-        sensor.io.value = 123;
-        assert.equal(sensor.read(), 123);
+        light.io.value = 123;
+        assert.equal(light.read(), 123);
 
-        sensor.io.value = 456;
-        assert.equal(sensor.read(), 456);
+        light.io.value = 456;
+        assert.equal(light.read(), 456);
 
-        sensor.disable();
+        light.disable();
       });
     });
 
@@ -1028,68 +1097,68 @@ describe("Sensor", function() {
 
       it("should accept two params or an array", async function() {
 
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog
         });
 
-        sensor.scale(0, 255);
-        sensor.io.value = 123;
-        assert.equal(Math.abs(sensor.read() - 31) < 1, true);
+        light.scale(0, 255);
+        light.io.value = 123;
+        assert.equal(Math.abs(light.read() - 31) < 1, true);
 
-        sensor.scale([0, 512]);
-        sensor.io.value = 123;
-        assert.equal(Math.abs(sensor.read() - 62) < 1, true);
+        light.scale([0, 512]);
+        light.io.value = 123;
+        assert.equal(Math.abs(light.read() - 62) < 1, true);
 
-        sensor.disable();
+        light.disable();
       });
 
       it("should scale the current value when read", async function() {
 
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog
         });
 
-        sensor.io.value = 123;
-        assert.equal(sensor.read(), 123);
+        light.io.value = 123;
+        assert.equal(light.read(), 123);
 
-        sensor.io.value = 456;
-        assert.equal(sensor.read(), 456);
+        light.io.value = 456;
+        assert.equal(light.read(), 456);
 
-        sensor.scale(0, 255);
-        sensor.io.value = 123;
-        assert.equal(Math.abs(sensor.read() - 31) < 1, true);
+        light.scale(0, 255);
+        light.io.value = 123;
+        assert.equal(Math.abs(light.read() - 31) < 1, true);
 
-        sensor.io.value = 456;
-        assert.equal(Math.abs(sensor.read() - 114) < 1, true);
+        light.io.value = 456;
+        assert.equal(Math.abs(light.read() - 114) < 1, true);
 
-        sensor.disable();
+        light.disable();
       });
     });
 
     describe("scaleto", function() {
       it("should scale the returned value only", async function() {
 
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog
         });
 
-        sensor.io.value = 123;
-        assert.equal(sensor.read(), 123);
-        assert.equal(sensor.value, 123);
-        assert.equal(sensor.scaleTo(0, 2047), 246);
-        assert.equal(sensor.scaleTo(0, 255), 30);
-        assert.equal(sensor.value, 123);
+        light.io.value = 123;
+        assert.equal(light.read(), 123);
+        assert.equal(light.value, 123);
+        assert.equal(light.scaleTo(0, 2047), 246);
+        assert.equal(light.scaleTo(0, 255), 30);
+        assert.equal(light.value, 123);
 
-        sensor.scale(0, 255);
-        sensor.io.value = 123;
-        assert.equal(Math.abs(sensor.read() - 30) < 1, true);
-        assert.equal(Math.abs(sensor.read() - 30) !== 0, true);
-        assert.equal(sensor.scaleTo(0, 2047), 246);
+        light.scale(0, 255);
+        light.io.value = 123;
+        assert.equal(Math.abs(light.read() - 30) < 1, true);
+        assert.equal(Math.abs(light.read() - 30) !== 0, true);
+        assert.equal(light.scaleTo(0, 2047), 246);
 
-        sensor.disable();
+        light.disable();
       });
     });
 
@@ -1103,22 +1172,22 @@ describe("Sensor", function() {
         const clock = sinon.useFakeTimers();
         const withinSpy = sinon.spy();
 
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog
         });
 
-        sensor.within([150, 160], withinSpy);
+        light.within([150, 160], withinSpy);
 
-        sensor.io.value = 100;
+        light.io.value = 100;
         clock.tick(5000);
         assert.equal(withinSpy.callCount, 0);
 
-        sensor.io.value = 155;
+        light.io.value = 155;
         clock.tick(5000);
         assert.equal(withinSpy.callCount, 5);
 
-        sensor.io.value = 100;
+        light.io.value = 100;
         clock.tick(5000);
         assert.equal(withinSpy.callCount, 5);
 
@@ -1137,27 +1206,27 @@ describe("Sensor", function() {
         const clock = sinon.useFakeTimers();
         const dataSpy = sinon.spy();
 
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog
         });
 
-        sensor.on("data", dataSpy);
+        light.on("data", dataSpy);
 
         clock.tick(10001);
         assert.equal(dataSpy.callCount, 10);
 
-        sensor.disable();
+        light.disable();
 
         clock.tick(10001);
         assert.equal(dataSpy.callCount, 10);
 
-        sensor.enable();
+        light.enable();
 
         clock.tick(10001);
         assert.equal(dataSpy.callCount, 20);
 
-        sensor.disable();
+        light.disable();
         clock.restore();
       });
 
@@ -1166,20 +1235,20 @@ describe("Sensor", function() {
         const clock = sinon.useFakeTimers();
         const dataSpy = sinon.spy();
 
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog
         });
 
-        sensor.on("data", dataSpy);
+        light.on("data", dataSpy);
 
-        sensor.io.value = 432;
+        light.io.value = 432;
 
         clock.tick(1001);
         assert.equal(dataSpy.callCount, 1);
         assert.equal(dataSpy.getCall(0).args[0], 432);
 
-        sensor.disable();
+        light.disable();
         clock.restore();
       });
 
@@ -1188,22 +1257,22 @@ describe("Sensor", function() {
         const clock = sinon.useFakeTimers();
         const dataSpy = sinon.spy();
 
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog,
           scale: [0, 255]
         });
 
-        sensor.on("data", dataSpy);
+        light.on("data", dataSpy);
 
-        sensor.io.value = 432;
+        light.io.value = 432;
 
         clock.tick(1001);
         assert.equal(dataSpy.callCount, 1);
-        assert.equal(sensor.raw, 432);
+        assert.equal(light.raw, 432);
         assert.equal(dataSpy.getCall(0).args[0], 108);
 
-        sensor.disable();
+        light.disable();
         clock.restore();
       });
 
@@ -1215,31 +1284,31 @@ describe("Sensor", function() {
         const clock = sinon.useFakeTimers();
         const changeSpy = sinon.spy();
 
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog
         });
 
-        sensor.on("change", changeSpy);
+        light.on("change", changeSpy);
 
         clock.tick(1001);
         assert.equal(changeSpy.callCount, 0);
 
-        sensor.io.value = 123;
+        light.io.value = 123;
         clock.tick(1001);
         assert.equal(changeSpy.callCount, 1);
 
-        sensor.disable();
-        sensor.io.value = 234;
+        light.disable();
+        light.io.value = 234;
         clock.tick(1001);
         assert.equal(changeSpy.callCount, 1);
 
-        sensor.enable();
-        sensor.io.value = 456;
+        light.enable();
+        light.io.value = 456;
         clock.tick(1001);
         assert.equal(changeSpy.callCount, 2);
 
-        sensor.disable();
+        light.disable();
         clock.restore();
       });
 
@@ -1248,42 +1317,42 @@ describe("Sensor", function() {
         const clock = sinon.useFakeTimers();
         const changeSpy = sinon.spy();
 
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog
         });
 
-        sensor.on("change", changeSpy);
+        light.on("change", changeSpy);
 
         clock.tick(1001);
         assert.equal(changeSpy.callCount, 0);
 
-        sensor.io.value = 123;
+        light.io.value = 123;
         clock.tick(1001);
         assert.equal(changeSpy.callCount, 1);
         assert.equal(changeSpy.getCall(0).args[0], 123);
-        assert.equal(sensor.value, 123);
+        assert.equal(light.value, 123);
 
-        sensor.disable();
-        sensor.io.value = 234;
+        light.disable();
+        light.io.value = 234;
         clock.tick(1001);
         assert.equal(changeSpy.callCount, 1);
-        assert.equal(sensor.value, 123);
+        assert.equal(light.value, 123);
 
-        sensor.enable();
-        sensor.io.value = 456;
+        light.enable();
+        light.io.value = 456;
         clock.tick(1001);
         assert.equal(changeSpy.callCount, 2);
         assert.equal(changeSpy.getCall(1).args[0], 456);
-        assert.equal(sensor.value, 456);
+        assert.equal(light.value, 456);
 
-        sensor.io.value = 432;
+        light.io.value = 432;
 
         clock.tick(1001);
         assert.equal(changeSpy.callCount, 3);
         assert.equal(changeSpy.getCall(2).args[0], 432);
 
-        sensor.disable();
+        light.disable();
         clock.restore();
       });
 
@@ -1292,43 +1361,43 @@ describe("Sensor", function() {
         const clock = sinon.useFakeTimers();
         const changeSpy = sinon.spy();
 
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog,
           scale: [0, 255]
         });
 
-        sensor.on("change", changeSpy);
+        light.on("change", changeSpy);
 
         clock.tick(1001);
         assert.equal(changeSpy.callCount, 0);
 
-        sensor.io.value = 123;
+        light.io.value = 123;
         clock.tick(1001);
         assert.equal(changeSpy.callCount, 1);
         assert.equal(changeSpy.getCall(0).args[0], 31);
-        assert.equal(Math.abs(sensor.value - 30) !== 0, true);
+        assert.equal(Math.abs(light.value - 30) !== 0, true);
 
-        sensor.disable();
-        sensor.io.value = 234;
+        light.disable();
+        light.io.value = 234;
         clock.tick(1001);
         assert.equal(changeSpy.callCount, 1);
-        assert.equal(Math.abs(sensor.value - 30) !== 0, true);
+        assert.equal(Math.abs(light.value - 30) !== 0, true);
 
-        sensor.enable();
-        sensor.io.value = 456;
+        light.enable();
+        light.io.value = 456;
         clock.tick(1001);
         assert.equal(changeSpy.callCount, 2);
         assert.equal(changeSpy.getCall(1).args[0], 114);
-        assert.equal(Math.abs(sensor.value - 114) !== 0, true);
+        assert.equal(Math.abs(light.value - 114) !== 0, true);
 
-        sensor.io.value = 432;
+        light.io.value = 432;
 
         clock.tick(1001);
         assert.equal(changeSpy.callCount, 3);
         assert.equal(changeSpy.getCall(2).args[0], 108);
 
-        sensor.disable();
+        light.disable();
         clock.restore();
       });
     });
@@ -1338,7 +1407,7 @@ describe("Sensor", function() {
       it("should emit limit events when enabled", async function() {
 
         const clock = sinon.useFakeTimers();
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog,
           limit: [256, 768]
@@ -1349,73 +1418,73 @@ describe("Sensor", function() {
           "upper": 0
         };
 
-        sensor.on("limit", function(data) {
+        light.on("limit", function(data) {
           if (data.boundary === "lower") {
-            assert.equal(sensor.raw <= 256, true);
+            assert.equal(light.raw <= 256, true);
             calls.lower++;
           } else {
-            assert.equal(sensor.raw >= 768, true);
+            assert.equal(light.raw >= 768, true);
             calls.upper++;
           }
         });
 
         clock.tick(1005);
-        sensor.io.value = 127;
+        light.io.value = 127;
         clock.tick(1005);
-        sensor.io.value = 256;
+        light.io.value = 256;
         clock.tick(1005);
-        sensor.io.value = 512;
+        light.io.value = 512;
         clock.tick(1005);
-        sensor.io.value = 768;
+        light.io.value = 768;
         clock.tick(1005);
-        sensor.io.value = 895;
+        light.io.value = 895;
         clock.tick(1005);
-        sensor.io.value = 1023;
-        clock.tick(1005);
-
-        assert.equal(calls.lower, 3);
-        assert.equal(calls.upper, 3);
-
-        sensor.disable();
-
-        clock.tick(1005);
-        sensor.io.value = 127;
-        clock.tick(1005);
-        sensor.io.value = 256;
-        clock.tick(1005);
-        sensor.io.value = 512;
-        clock.tick(1005);
-        sensor.io.value = 768;
-        clock.tick(1005);
-        sensor.io.value = 895;
-        clock.tick(1005);
-        sensor.io.value = 1023;
+        light.io.value = 1023;
         clock.tick(1005);
 
         assert.equal(calls.lower, 3);
         assert.equal(calls.upper, 3);
 
-        sensor.enable();
+        light.disable();
 
         clock.tick(1005);
-        sensor.io.value = 127;
+        light.io.value = 127;
         clock.tick(1005);
-        sensor.io.value = 256;
+        light.io.value = 256;
         clock.tick(1005);
-        sensor.io.value = 512;
+        light.io.value = 512;
         clock.tick(1005);
-        sensor.io.value = 768;
+        light.io.value = 768;
         clock.tick(1005);
-        sensor.io.value = 895;
+        light.io.value = 895;
         clock.tick(1005);
-        sensor.io.value = 1023;
+        light.io.value = 1023;
+        clock.tick(1005);
+
+        assert.equal(calls.lower, 3);
+        assert.equal(calls.upper, 3);
+
+        light.enable();
+
+        clock.tick(1005);
+        light.io.value = 127;
+        clock.tick(1005);
+        light.io.value = 256;
+        clock.tick(1005);
+        light.io.value = 512;
+        clock.tick(1005);
+        light.io.value = 768;
+        clock.tick(1005);
+        light.io.value = 895;
+        clock.tick(1005);
+        light.io.value = 1023;
         clock.tick(1005);
 
         assert.equal(calls.lower, 5);
         assert.equal(calls.upper, 7);
 
         clock.restore();
-        sensor.disable();
+        light.disable();
 
       });
 
@@ -1425,7 +1494,7 @@ describe("Sensor", function() {
       it("should emit limit:lower events when enabled", async function() {
 
         const clock = sinon.useFakeTimers();
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog,
           limit: [256, 768]
@@ -1435,65 +1504,65 @@ describe("Sensor", function() {
           "limit:lower": 0
         };
 
-        sensor.on("limit:lower", function(data) {
-          assert.equal(sensor.raw <= 256, true);
+        light.on("limit:lower", function(data) {
+          assert.equal(light.raw <= 256, true);
           calls["limit:lower"]++;
         });
 
         clock.tick(1005);
-        sensor.io.value = 127;
+        light.io.value = 127;
         clock.tick(1005);
-        sensor.io.value = 256;
+        light.io.value = 256;
         clock.tick(1005);
-        sensor.io.value = 512;
+        light.io.value = 512;
         clock.tick(1005);
-        sensor.io.value = 768;
+        light.io.value = 768;
         clock.tick(1005);
-        sensor.io.value = 895;
+        light.io.value = 895;
         clock.tick(1005);
-        sensor.io.value = 1023;
-        clock.tick(1005);
-
-        assert.equal(calls["limit:lower"], 3);
-
-        sensor.disable();
-
-        clock.tick(1005);
-        sensor.io.value = 127;
-        clock.tick(1005);
-        sensor.io.value = 256;
-        clock.tick(1005);
-        sensor.io.value = 512;
-        clock.tick(1005);
-        sensor.io.value = 768;
-        clock.tick(1005);
-        sensor.io.value = 895;
-        clock.tick(1005);
-        sensor.io.value = 1023;
+        light.io.value = 1023;
         clock.tick(1005);
 
         assert.equal(calls["limit:lower"], 3);
 
-        sensor.enable();
+        light.disable();
 
         clock.tick(1005);
-        sensor.io.value = 127;
+        light.io.value = 127;
         clock.tick(1005);
-        sensor.io.value = 256;
+        light.io.value = 256;
         clock.tick(1005);
-        sensor.io.value = 512;
+        light.io.value = 512;
         clock.tick(1005);
-        sensor.io.value = 768;
+        light.io.value = 768;
         clock.tick(1005);
-        sensor.io.value = 895;
+        light.io.value = 895;
         clock.tick(1005);
-        sensor.io.value = 1023;
+        light.io.value = 1023;
+        clock.tick(1005);
+
+        assert.equal(calls["limit:lower"], 3);
+
+        light.enable();
+
+        clock.tick(1005);
+        light.io.value = 127;
+        clock.tick(1005);
+        light.io.value = 256;
+        clock.tick(1005);
+        light.io.value = 512;
+        clock.tick(1005);
+        light.io.value = 768;
+        clock.tick(1005);
+        light.io.value = 895;
+        clock.tick(1005);
+        light.io.value = 1023;
         clock.tick(1005);
 
         assert.equal(calls["limit:lower"], 5);
 
         clock.restore();
-        sensor.disable();
+        light.disable();
 
       });
     });
@@ -1502,7 +1571,7 @@ describe("Sensor", function() {
       it("should emit limit:upper events when enabled", async function() {
 
         const clock = sinon.useFakeTimers();
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog,
           limit: [256, 768]
@@ -1512,65 +1581,65 @@ describe("Sensor", function() {
           "limit:upper": 0
         };
 
-        sensor.on("limit:upper", function(data) {
-          assert.equal(sensor.raw >= 768, true);
+        light.on("limit:upper", function(data) {
+          assert.equal(light.raw >= 768, true);
           calls["limit:upper"]++;
         });
 
         clock.tick(1005);
-        sensor.io.value = 127;
+        light.io.value = 127;
         clock.tick(1005);
-        sensor.io.value = 256;
+        light.io.value = 256;
         clock.tick(1005);
-        sensor.io.value = 512;
+        light.io.value = 512;
         clock.tick(1005);
-        sensor.io.value = 768;
+        light.io.value = 768;
         clock.tick(1005);
-        sensor.io.value = 895;
+        light.io.value = 895;
         clock.tick(1005);
-        sensor.io.value = 1023;
-        clock.tick(1005);
-
-        assert.equal(calls["limit:upper"], 3);
-
-        sensor.disable();
-
-        clock.tick(1005);
-        sensor.io.value = 127;
-        clock.tick(1005);
-        sensor.io.value = 256;
-        clock.tick(1005);
-        sensor.io.value = 512;
-        clock.tick(1005);
-        sensor.io.value = 768;
-        clock.tick(1005);
-        sensor.io.value = 895;
-        clock.tick(1005);
-        sensor.io.value = 1023;
+        light.io.value = 1023;
         clock.tick(1005);
 
         assert.equal(calls["limit:upper"], 3);
 
-        sensor.enable();
+        light.disable();
 
         clock.tick(1005);
-        sensor.io.value = 127;
+        light.io.value = 127;
         clock.tick(1005);
-        sensor.io.value = 256;
+        light.io.value = 256;
         clock.tick(1005);
-        sensor.io.value = 512;
+        light.io.value = 512;
         clock.tick(1005);
-        sensor.io.value = 768;
+        light.io.value = 768;
         clock.tick(1005);
-        sensor.io.value = 895;
+        light.io.value = 895;
         clock.tick(1005);
-        sensor.io.value = 1023;
+        light.io.value = 1023;
+        clock.tick(1005);
+
+        assert.equal(calls["limit:upper"], 3);
+
+        light.enable();
+
+        clock.tick(1005);
+        light.io.value = 127;
+        clock.tick(1005);
+        light.io.value = 256;
+        clock.tick(1005);
+        light.io.value = 512;
+        clock.tick(1005);
+        light.io.value = 768;
+        clock.tick(1005);
+        light.io.value = 895;
+        clock.tick(1005);
+        light.io.value = 1023;
         clock.tick(1005);
 
         assert.equal(calls["limit:upper"], 7);
 
         clock.restore();
-        sensor.disable();
+        light.disable();
 
       });
     });
@@ -1581,27 +1650,27 @@ describe("Sensor", function() {
         const clock = sinon.useFakeTimers();
         const rawSpy = sinon.spy();
 
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog
         });
 
-        sensor.on("raw", rawSpy);
+        light.on("raw", rawSpy);
 
         clock.tick(10001);
         assert.equal(rawSpy.callCount, 100);
 
-        sensor.disable();
+        light.disable();
 
         clock.tick(10001);
         assert.equal(rawSpy.callCount, 100);
 
-        sensor.enable();
+        light.enable();
 
         clock.tick(10001);
         assert.equal(rawSpy.callCount, 200);
 
-        sensor.disable();
+        light.disable();
         clock.restore();
       });
 
@@ -1610,20 +1679,20 @@ describe("Sensor", function() {
         const clock = sinon.useFakeTimers();
         const rawSpy = sinon.spy();
 
-        let sensor = await new Sensor({
+        let light = await new Light({
           pin: 17,
           io: Analog
         });
 
-        sensor.on("raw", rawSpy);
+        light.on("raw", rawSpy);
 
-        sensor.io.value = 432;
+        light.io.value = 432;
 
         clock.tick(1001);
         assert.equal(rawSpy.callCount, 10);
         assert.equal(rawSpy.getCall(0).args[0], 432);
 
-        sensor.disable();
+        light.disable();
         clock.restore();
       });
     });

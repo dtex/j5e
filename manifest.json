@@ -8,11 +8,13 @@
     "j5e/event": "$(j5e)/lib/event/*",
     "j5e/fn": "$(j5e)/lib/fn/*",
     "j5e/led": "$(j5e)/lib/led/*",
+    "j5e/light": "$(j5e)/lib/light/*",
     "j5e/relay": "$(j5e)/lib/relay/*",
     "j5e/rgb": "$(j5e)/lib/rgb/*",
     "j5e/sensor": "$(j5e)/lib/sensor/*",
     "j5e/servo": "$(j5e)/lib/servo/*",
-    "j5e/switch": "$(j5e)/lib/switch/*"
+    "j5e/switch": "$(j5e)/lib/switch/*",
+    "j5e/withinable": "$(j5e)/lib/withinable/*"
   },
   "preload": [],
   "platforms": {

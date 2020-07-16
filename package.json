@@ -1,6 +1,6 @@
 {
   "name": "j5e",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "j5e is a device framework built for ECMA TC-53's IO pattern",
   "main": "index.js",
   "exports": {
@@ -11,15 +11,17 @@
     "./event": "./lib/event/index.js",
     "./fn": "./lib/fn/index.js",
     "./led": "./lib/led/index.js",
+    "./light": "./lib/light/index.js",
     "./relay": "./lib/relay/index.js",
     "./rgb": "./lib/rgb/index.js",
     "./sensor": "./lib/sensor/index.js",
     "./servo": "./lib/servo/index.js",
-    "./switch": "./lib/switch/index.js"
+    "./switch": "./lib/switch/index.js",
+    "./withinable": "./lib/withinable/index.js"
   },
   "type": "module",
   "directories": {
-    "test": "tests"
+    "test": "test"
   },
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha",

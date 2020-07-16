@@ -1,9 +1,10 @@
+<!-- start:source.tmpl.hbs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>Globals</title>
+		<title>withinable/index.js</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -43,7 +44,7 @@
 			</style>
 		<script type="text/javascript">
 			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"MMMM D, YYYY","systemName":"J5e","systemSummary":"Johnny Five for Embedded Systems","systemLogo":"img/j5e.png","systemColor":"#000","navMembers":[{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Copyright © 2019—2020 The contributors to the j5e and Johnny-Five projects.","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":true,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":{"ua":"UA-36026876-4","domain":"dtex.github.io"},"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":["./static/custom.css"],"scripts":[],"monospaceLinks":false,"cleverLinks":false,"forkMe":"./build/docs/fork/forkme_right_white_ffffff.webp"};
-			window.DOCLET_TOC_ENABLED = true;
+			window.DOCLET_TOC_ENABLED = false;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
 </head>
@@ -84,25 +85,73 @@
 	</header>
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
-				<span class="kind">global</span>
-				<h1><span class="name">Globals</span></h1>
-				<div class="summary"><p>All documented globals.</p></div>			</div>
+				<span class="kind">source</span>
+				<h1><span class="name">withinable/index.js</span></h1>
+			</div>
 		</div>
 	<div class="container content">
 		<div class="row">
-			<div class="col-md-9 main-content">
-						<ol class="breadcrumb">
-							<li><a href="index.html">Home</a></li>
-							<li class="active">Globals</li>
-						</ol>
-					<section>
-							<article class="secondary">
-							</article>
-					</section>
+			<div class="col-md-12 main-content">
+		<section class="source-section">
+			<article></article>
+			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">/**
+ * For emitting events when value is within a certain range
+ * @module j5e/withinable
+ * @requires module:j5e/event
+ * @ignore
+ */
+
+import { Emitter } from "j5e/event";
+
+/**
+ * @extends module:j5e/event.Emitter
+ * @ignore
+ */
+class Withinable extends Emitter {
+
+  constructor() {
+    super();
+  }
+
+  /**
+   * Fire a callback when the value is within a certain range
+   * @param {number[]} range - The upper and lower ends of the range to watch
+   * @param {string} unit - The property to test
+   * @param {function} callback - A callback to run when the event is fired.
+   */
+  within(range, unit, callback) {
+    if (typeof range === "number") {
+      range = [0, range];
+    }
+
+    if (!Array.isArray(range)) {
+      throw new Error("within expected a range array");
+    }
+
+    if (typeof unit === "function") {
+      callback = unit;
+      unit = "value";
+    }
+
+    if (typeof this[unit] === "undefined") {
+      return this;
+    }
+
+    this.on("data", () => {
+      const value = this[unit];
+      if (value >= range[0] &amp;&amp; value &lt;= range[1]) {
+        callback.call(this, null, value);
+      }
+    });
+
+    return this;
+  }
+}
+
+export default Withinable;
+</code></pre>
+		</section>
 			</div>
-				<div class="col-md-3 side-content">
-					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
-				</div>
 		</div>
 	</div>
 	<footer>
@@ -140,3 +189,4 @@ gtag('js', new Date());gtag('config', 'UA-36026876-4');
 </script>
 <a href="https://github.com/dtex/j5e"><img width="149" height="149" style="z-index:1000;position:absolute;top: 50px;right: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_white_ffffff.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a></body>
 </html>
+<!-- end:source.tmpl.hbs -->
