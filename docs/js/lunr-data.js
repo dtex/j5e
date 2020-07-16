@@ -430,104 +430,6 @@ window.lunrData = {
           "relay",
           "toggl"
         ],
-        "module-j5e_animation-Animation.html": [
-          "allow",
-          "anim",
-          "class",
-          "control",
-          "j5e/animation~anim",
-          "led",
-          "module:j5e/animation~anim",
-          "rgb",
-          "script",
-          "servo"
-        ],
-        "module-j5e_animation-Animation.html#on": [
-          "creat",
-          "event",
-          "function",
-          "listen",
-          "module:j5e/animation~animation#on"
-        ],
-        "module-j5e_animation-Animation.html#removeListener": [
-          "event",
-          "function",
-          "listen",
-          "module:j5e/animation~animation#removelisten",
-          "remov",
-          "removelisten"
-        ],
-        "module-j5e_animation-Animation.html#emit": [
-          "emit",
-          "event",
-          "function",
-          "module:j5e/animation~animation#emit"
-        ],
-        "module-j5e_animation-Animation.html#once": [
-          "creat",
-          "event",
-          "fire",
-          "function",
-          "listen",
-          "module:j5e/animation~animation#onc",
-          "on",
-          "onc",
-          "time"
-        ],
-        "module-j5e_animation-Animation.html#enqueue": [
-          "add",
-          "anim",
-          "enqueu",
-          "function",
-          "inform",
-          "j5e'",
-          "module:j5e/animation~animation#enqueu",
-          "more",
-          "option",
-          "queue",
-          "see",
-          "segment",
-          "timelin",
-          "tool",
-          "tween"
-        ],
-        "module-j5e_animation-Animation.html#play": [
-          "anim",
-          "function",
-          "module:j5e/animation~animation#play",
-          "paus",
-          "play",
-          "resum",
-          "stop"
-        ],
-        "module-j5e_animation-Animation.html#pause": [
-          "anim",
-          "function",
-          "maintain",
-          "module:j5e/animation~animation#paus",
-          "paus",
-          "progress",
-          "queue",
-          "segment",
-          "speed"
-        ],
-        "module-j5e_animation-Animation.html#stop": [
-          "anim",
-          "flush",
-          "function",
-          "module:j5e/animation~animation#stop",
-          "queue",
-          "segment",
-          "stop"
-        ],
-        "module-j5e_animation-Animation.html#speed": [
-          "current",
-          "function",
-          "module:j5e/animation~animation#spe",
-          "playback",
-          "set",
-          "speed"
-        ],
         "module-j5e_light-Light.html": [
           "allow",
           "class",
@@ -642,6 +544,104 @@ window.lunrData = {
           "scale",
           "singl",
           "valu"
+        ],
+        "module-j5e_animation-Animation.html": [
+          "allow",
+          "anim",
+          "class",
+          "control",
+          "j5e/animation~anim",
+          "led",
+          "module:j5e/animation~anim",
+          "rgb",
+          "script",
+          "servo"
+        ],
+        "module-j5e_animation-Animation.html#on": [
+          "creat",
+          "event",
+          "function",
+          "listen",
+          "module:j5e/animation~animation#on"
+        ],
+        "module-j5e_animation-Animation.html#removeListener": [
+          "event",
+          "function",
+          "listen",
+          "module:j5e/animation~animation#removelisten",
+          "remov",
+          "removelisten"
+        ],
+        "module-j5e_animation-Animation.html#emit": [
+          "emit",
+          "event",
+          "function",
+          "module:j5e/animation~animation#emit"
+        ],
+        "module-j5e_animation-Animation.html#once": [
+          "creat",
+          "event",
+          "fire",
+          "function",
+          "listen",
+          "module:j5e/animation~animation#onc",
+          "on",
+          "onc",
+          "time"
+        ],
+        "module-j5e_animation-Animation.html#enqueue": [
+          "add",
+          "anim",
+          "enqueu",
+          "function",
+          "inform",
+          "j5e'",
+          "module:j5e/animation~animation#enqueu",
+          "more",
+          "option",
+          "queue",
+          "see",
+          "segment",
+          "timelin",
+          "tool",
+          "tween"
+        ],
+        "module-j5e_animation-Animation.html#play": [
+          "anim",
+          "function",
+          "module:j5e/animation~animation#play",
+          "paus",
+          "play",
+          "resum",
+          "stop"
+        ],
+        "module-j5e_animation-Animation.html#pause": [
+          "anim",
+          "function",
+          "maintain",
+          "module:j5e/animation~animation#paus",
+          "paus",
+          "progress",
+          "queue",
+          "segment",
+          "speed"
+        ],
+        "module-j5e_animation-Animation.html#stop": [
+          "anim",
+          "flush",
+          "function",
+          "module:j5e/animation~animation#stop",
+          "queue",
+          "segment",
+          "stop"
+        ],
+        "module-j5e_animation-Animation.html#speed": [
+          "current",
+          "function",
+          "module:j5e/animation~animation#spe",
+          "playback",
+          "set",
+          "speed"
         ],
         "module-j5e_led-LED.html": [
           "allow",
@@ -1201,12 +1201,12 @@ window.lunrData = {
                     "ref": "module-j5e_sensor-Sensor.html#emit",
                     "tf": 725
                   },
-                  "module-j5e_animation-Animation.html#emit": {
-                    "ref": "module-j5e_animation-Animation.html#emit",
-                    "tf": 725
-                  },
                   "module-j5e_light-Light.html#emit": {
                     "ref": "module-j5e_light-Light.html#emit",
+                    "tf": 725
+                  },
+                  "module-j5e_animation-Animation.html#emit": {
+                    "ref": "module-j5e_animation-Animation.html#emit",
                     "tf": 725
                   },
                   "module-j5e_led-LED.html": {
@@ -1281,22 +1281,6 @@ window.lunrData = {
                       "ref": "module-j5e_sensor-Sensor.html#once",
                       "tf": 41.66666666666666
                     },
-                    "module-j5e_animation-Animation.html#on": {
-                      "ref": "module-j5e_animation-Animation.html#on",
-                      "tf": 66.66666666666666
-                    },
-                    "module-j5e_animation-Animation.html#removeListener": {
-                      "ref": "module-j5e_animation-Animation.html#removeListener",
-                      "tf": 49.99999999999999
-                    },
-                    "module-j5e_animation-Animation.html#emit": {
-                      "ref": "module-j5e_animation-Animation.html#emit",
-                      "tf": 75
-                    },
-                    "module-j5e_animation-Animation.html#once": {
-                      "ref": "module-j5e_animation-Animation.html#once",
-                      "tf": 41.66666666666666
-                    },
                     "module-j5e_light-Light.html#on": {
                       "ref": "module-j5e_light-Light.html#on",
                       "tf": 66.66666666666666
@@ -1311,6 +1295,22 @@ window.lunrData = {
                     },
                     "module-j5e_light-Light.html#once": {
                       "ref": "module-j5e_light-Light.html#once",
+                      "tf": 41.66666666666666
+                    },
+                    "module-j5e_animation-Animation.html#on": {
+                      "ref": "module-j5e_animation-Animation.html#on",
+                      "tf": 66.66666666666666
+                    },
+                    "module-j5e_animation-Animation.html#removeListener": {
+                      "ref": "module-j5e_animation-Animation.html#removeListener",
+                      "tf": 49.99999999999999
+                    },
+                    "module-j5e_animation-Animation.html#emit": {
+                      "ref": "module-j5e_animation-Animation.html#emit",
+                      "tf": 75
+                    },
+                    "module-j5e_animation-Animation.html#once": {
+                      "ref": "module-j5e_animation-Animation.html#once",
                       "tf": 41.66666666666666
                     },
                     "module-j5e_button-Button.html#on": {
@@ -1442,16 +1442,16 @@ window.lunrData = {
                     "ref": "module-j5e_sensor-Sensor.html#once",
                     "tf": 8.333333333333332
                   },
-                  "module-j5e_animation-Animation.html#once": {
-                    "ref": "module-j5e_animation-Animation.html#once",
-                    "tf": 8.333333333333332
-                  },
                   "module-j5e_light-Light.html#within": {
                     "ref": "module-j5e_light-Light.html#within",
                     "tf": 8.333333333333332
                   },
                   "module-j5e_light-Light.html#once": {
                     "ref": "module-j5e_light-Light.html#once",
+                    "tf": 8.333333333333332
+                  },
+                  "module-j5e_animation-Animation.html#once": {
+                    "ref": "module-j5e_animation-Animation.html#once",
                     "tf": 8.333333333333332
                   },
                   "module-j5e_button-Button.html#once": {
@@ -1674,42 +1674,6 @@ window.lunrData = {
                             "ref": "module-j5e_relay-Relay.html#toggle",
                             "tf": 110
                           },
-                          "module-j5e_animation-Animation.html#on": {
-                            "ref": "module-j5e_animation-Animation.html#on",
-                            "tf": 110
-                          },
-                          "module-j5e_animation-Animation.html#removeListener": {
-                            "ref": "module-j5e_animation-Animation.html#removeListener",
-                            "tf": 110
-                          },
-                          "module-j5e_animation-Animation.html#emit": {
-                            "ref": "module-j5e_animation-Animation.html#emit",
-                            "tf": 110
-                          },
-                          "module-j5e_animation-Animation.html#once": {
-                            "ref": "module-j5e_animation-Animation.html#once",
-                            "tf": 110
-                          },
-                          "module-j5e_animation-Animation.html#enqueue": {
-                            "ref": "module-j5e_animation-Animation.html#enqueue",
-                            "tf": 110
-                          },
-                          "module-j5e_animation-Animation.html#play": {
-                            "ref": "module-j5e_animation-Animation.html#play",
-                            "tf": 110
-                          },
-                          "module-j5e_animation-Animation.html#pause": {
-                            "ref": "module-j5e_animation-Animation.html#pause",
-                            "tf": 110
-                          },
-                          "module-j5e_animation-Animation.html#stop": {
-                            "ref": "module-j5e_animation-Animation.html#stop",
-                            "tf": 110
-                          },
-                          "module-j5e_animation-Animation.html#speed": {
-                            "ref": "module-j5e_animation-Animation.html#speed",
-                            "tf": 110
-                          },
                           "module-j5e_light-Light.html#enable": {
                             "ref": "module-j5e_light-Light.html#enable",
                             "tf": 110
@@ -1752,6 +1716,42 @@ window.lunrData = {
                           },
                           "module-j5e_light-Light.html#fscaleTo": {
                             "ref": "module-j5e_light-Light.html#fscaleTo",
+                            "tf": 110
+                          },
+                          "module-j5e_animation-Animation.html#on": {
+                            "ref": "module-j5e_animation-Animation.html#on",
+                            "tf": 110
+                          },
+                          "module-j5e_animation-Animation.html#removeListener": {
+                            "ref": "module-j5e_animation-Animation.html#removeListener",
+                            "tf": 110
+                          },
+                          "module-j5e_animation-Animation.html#emit": {
+                            "ref": "module-j5e_animation-Animation.html#emit",
+                            "tf": 110
+                          },
+                          "module-j5e_animation-Animation.html#once": {
+                            "ref": "module-j5e_animation-Animation.html#once",
+                            "tf": 110
+                          },
+                          "module-j5e_animation-Animation.html#enqueue": {
+                            "ref": "module-j5e_animation-Animation.html#enqueue",
+                            "tf": 110
+                          },
+                          "module-j5e_animation-Animation.html#play": {
+                            "ref": "module-j5e_animation-Animation.html#play",
+                            "tf": 110
+                          },
+                          "module-j5e_animation-Animation.html#pause": {
+                            "ref": "module-j5e_animation-Animation.html#pause",
+                            "tf": 110
+                          },
+                          "module-j5e_animation-Animation.html#stop": {
+                            "ref": "module-j5e_animation-Animation.html#stop",
+                            "tf": 110
+                          },
+                          "module-j5e_animation-Animation.html#speed": {
+                            "ref": "module-j5e_animation-Animation.html#speed",
                             "tf": 110
                           },
                           "module-j5e_led-LED.html#on": {
@@ -2412,58 +2412,6 @@ window.lunrData = {
                     }
                   }
                 },
-                "a": {
-                  "docs": {},
-                  "n": {
-                    "docs": {},
-                    "i": {
-                      "docs": {},
-                      "m": {
-                        "docs": {
-                          "module-j5e_animation.html": {
-                            "ref": "module-j5e_animation.html",
-                            "tf": 600
-                          }
-                        },
-                        "a": {
-                          "docs": {},
-                          "t": {
-                            "docs": {},
-                            "i": {
-                              "docs": {},
-                              "o": {
-                                "docs": {},
-                                "n": {
-                                  "docs": {},
-                                  "~": {
-                                    "docs": {},
-                                    "a": {
-                                      "docs": {},
-                                      "n": {
-                                        "docs": {},
-                                        "i": {
-                                          "docs": {},
-                                          "m": {
-                                            "docs": {
-                                              "module-j5e_animation-Animation.html": {
-                                                "ref": "module-j5e_animation-Animation.html",
-                                                "tf": 100
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                },
                 "l": {
                   "docs": {
                     "module-j5e_led.html": {
@@ -2522,6 +2470,58 @@ window.lunrData = {
                             "module-j5e_led-LED.html": {
                               "ref": "module-j5e_led-LED.html",
                               "tf": 50
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "a": {
+                  "docs": {},
+                  "n": {
+                    "docs": {},
+                    "i": {
+                      "docs": {},
+                      "m": {
+                        "docs": {
+                          "module-j5e_animation.html": {
+                            "ref": "module-j5e_animation.html",
+                            "tf": 600
+                          }
+                        },
+                        "a": {
+                          "docs": {},
+                          "t": {
+                            "docs": {},
+                            "i": {
+                              "docs": {},
+                              "o": {
+                                "docs": {},
+                                "n": {
+                                  "docs": {},
+                                  "~": {
+                                    "docs": {},
+                                    "a": {
+                                      "docs": {},
+                                      "n": {
+                                        "docs": {},
+                                        "i": {
+                                          "docs": {},
+                                          "m": {
+                                            "docs": {
+                                              "module-j5e_animation-Animation.html": {
+                                                "ref": "module-j5e_animation-Animation.html",
+                                                "tf": 100
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
                             }
                           }
                         }
@@ -2690,12 +2690,12 @@ window.lunrData = {
                       "ref": "module-j5e_sensor-Sensor.html#removeListener",
                       "tf": 16.666666666666664
                     },
-                    "module-j5e_animation-Animation.html#removeListener": {
-                      "ref": "module-j5e_animation-Animation.html#removeListener",
-                      "tf": 16.666666666666664
-                    },
                     "module-j5e_light-Light.html#removeListener": {
                       "ref": "module-j5e_light-Light.html#removeListener",
+                      "tf": 16.666666666666664
+                    },
+                    "module-j5e_animation-Animation.html#removeListener": {
+                      "ref": "module-j5e_animation-Animation.html#removeListener",
                       "tf": 16.666666666666664
                     },
                     "module-j5e_button-Button.html#removeListener": {
@@ -2729,12 +2729,12 @@ window.lunrData = {
                                     "ref": "module-j5e_sensor-Sensor.html#removeListener",
                                     "tf": 683.3333333333334
                                   },
-                                  "module-j5e_animation-Animation.html#removeListener": {
-                                    "ref": "module-j5e_animation-Animation.html#removeListener",
-                                    "tf": 683.3333333333334
-                                  },
                                   "module-j5e_light-Light.html#removeListener": {
                                     "ref": "module-j5e_light-Light.html#removeListener",
+                                    "tf": 683.3333333333334
+                                  },
+                                  "module-j5e_animation-Animation.html#removeListener": {
+                                    "ref": "module-j5e_animation-Animation.html#removeListener",
                                     "tf": 683.3333333333334
                                   },
                                   "module-j5e_button-Button.html#removeListener": {
@@ -3331,13 +3331,13 @@ window.lunrData = {
                   "ref": "module-j5e_sensor-Sensor.html#scale",
                   "tf": 10
                 },
-                "module-j5e_animation-Animation.html#speed": {
-                  "ref": "module-j5e_animation-Animation.html#speed",
-                  "tf": 12.5
-                },
                 "module-j5e_light-Light.html#scale": {
                   "ref": "module-j5e_light-Light.html#scale",
                   "tf": 10
+                },
+                "module-j5e_animation-Animation.html#speed": {
+                  "ref": "module-j5e_animation-Animation.html#speed",
+                  "tf": 12.5
                 },
                 "module-j5e_led-LED.html#brightness": {
                   "ref": "module-j5e_led-LED.html#brightness",
@@ -4130,12 +4130,12 @@ window.lunrData = {
                     "ref": "module-j5e_sensor-Sensor.html#once",
                     "tf": 8.333333333333332
                   },
-                  "module-j5e_animation-Animation.html#once": {
-                    "ref": "module-j5e_animation-Animation.html#once",
-                    "tf": 8.333333333333332
-                  },
                   "module-j5e_light-Light.html#once": {
                     "ref": "module-j5e_light-Light.html#once",
+                    "tf": 8.333333333333332
+                  },
+                  "module-j5e_animation-Animation.html#once": {
+                    "ref": "module-j5e_animation-Animation.html#once",
                     "tf": 8.333333333333332
                   },
                   "module-j5e_led-LED.html#fade": {
@@ -4353,13 +4353,13 @@ window.lunrData = {
                           "ref": "module-j5e_relay-Relay.html",
                           "tf": 10
                         },
-                        "module-j5e_animation-Animation.html": {
-                          "ref": "module-j5e_animation-Animation.html",
-                          "tf": 8.333333333333332
-                        },
                         "module-j5e_light-Light.html": {
                           "ref": "module-j5e_light-Light.html",
                           "tf": 10
+                        },
+                        "module-j5e_animation-Animation.html": {
+                          "ref": "module-j5e_animation-Animation.html",
+                          "tf": 8.333333333333332
                         },
                         "module-j5e_led-LED.html": {
                           "ref": "module-j5e_led-LED.html",
@@ -4531,13 +4531,13 @@ window.lunrData = {
                       "ref": "module-j5e_relay-Relay.html",
                       "tf": 120
                     },
-                    "module-j5e_animation-Animation.html": {
-                      "ref": "module-j5e_animation-Animation.html",
-                      "tf": 110
-                    },
                     "module-j5e_light-Light.html": {
                       "ref": "module-j5e_light-Light.html",
                       "tf": 120
+                    },
+                    "module-j5e_animation-Animation.html": {
+                      "ref": "module-j5e_animation-Animation.html",
+                      "tf": 110
                     },
                     "module-j5e_led-LED.html": {
                       "ref": "module-j5e_led-LED.html",
@@ -4670,20 +4670,20 @@ window.lunrData = {
                       "ref": "module-j5e_sensor-Sensor.html#once",
                       "tf": 8.333333333333332
                     },
-                    "module-j5e_animation-Animation.html#on": {
-                      "ref": "module-j5e_animation-Animation.html#on",
-                      "tf": 16.666666666666664
-                    },
-                    "module-j5e_animation-Animation.html#once": {
-                      "ref": "module-j5e_animation-Animation.html#once",
-                      "tf": 8.333333333333332
-                    },
                     "module-j5e_light-Light.html#on": {
                       "ref": "module-j5e_light-Light.html#on",
                       "tf": 16.666666666666664
                     },
                     "module-j5e_light-Light.html#once": {
                       "ref": "module-j5e_light-Light.html#once",
+                      "tf": 8.333333333333332
+                    },
+                    "module-j5e_animation-Animation.html#on": {
+                      "ref": "module-j5e_animation-Animation.html#on",
+                      "tf": 16.666666666666664
+                    },
+                    "module-j5e_animation-Animation.html#once": {
+                      "ref": "module-j5e_animation-Animation.html#once",
                       "tf": 8.333333333333332
                     },
                     "module-j5e_button-Button.html#on": {
@@ -5060,18 +5060,6 @@ window.lunrData = {
                         "ref": "module-j5e_sensor-Sensor.html#once",
                         "tf": 41.66666666666666
                       },
-                      "module-j5e_animation-Animation.html#on": {
-                        "ref": "module-j5e_animation-Animation.html#on",
-                        "tf": 66.66666666666666
-                      },
-                      "module-j5e_animation-Animation.html#removeListener": {
-                        "ref": "module-j5e_animation-Animation.html#removeListener",
-                        "tf": 49.99999999999999
-                      },
-                      "module-j5e_animation-Animation.html#once": {
-                        "ref": "module-j5e_animation-Animation.html#once",
-                        "tf": 41.66666666666666
-                      },
                       "module-j5e_light-Light.html#on": {
                         "ref": "module-j5e_light-Light.html#on",
                         "tf": 66.66666666666666
@@ -5082,6 +5070,18 @@ window.lunrData = {
                       },
                       "module-j5e_light-Light.html#once": {
                         "ref": "module-j5e_light-Light.html#once",
+                        "tf": 41.66666666666666
+                      },
+                      "module-j5e_animation-Animation.html#on": {
+                        "ref": "module-j5e_animation-Animation.html#on",
+                        "tf": 66.66666666666666
+                      },
+                      "module-j5e_animation-Animation.html#removeListener": {
+                        "ref": "module-j5e_animation-Animation.html#removeListener",
+                        "tf": 49.99999999999999
+                      },
+                      "module-j5e_animation-Animation.html#once": {
+                        "ref": "module-j5e_animation-Animation.html#once",
                         "tf": 41.66666666666666
                       },
                       "module-j5e_button-Button.html#on": {
@@ -5526,37 +5526,6 @@ window.lunrData = {
               }
             }
           },
-          "l": {
-            "docs": {},
-            "a": {
-              "docs": {},
-              "y": {
-                "docs": {
-                  "module-j5e_animation-Animation.html#play": {
-                    "ref": "module-j5e_animation-Animation.html#play",
-                    "tf": 760
-                  }
-                },
-                "b": {
-                  "docs": {},
-                  "a": {
-                    "docs": {},
-                    "c": {
-                      "docs": {},
-                      "k": {
-                        "docs": {
-                          "module-j5e_animation-Animation.html#speed": {
-                            "ref": "module-j5e_animation-Animation.html#speed",
-                            "tf": 12.5
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
           "h": {
             "docs": {},
             "o": {
@@ -5589,6 +5558,37 @@ window.lunrData = {
                                 }
                               }
                             }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "l": {
+            "docs": {},
+            "a": {
+              "docs": {},
+              "y": {
+                "docs": {
+                  "module-j5e_animation-Animation.html#play": {
+                    "ref": "module-j5e_animation-Animation.html#play",
+                    "tf": 760
+                  }
+                },
+                "b": {
+                  "docs": {},
+                  "a": {
+                    "docs": {},
+                    "c": {
+                      "docs": {},
+                      "k": {
+                        "docs": {
+                          "module-j5e_animation-Animation.html#speed": {
+                            "ref": "module-j5e_animation-Animation.html#speed",
+                            "tf": 12.5
                           }
                         }
                       }
@@ -5689,13 +5689,13 @@ window.lunrData = {
                       "ref": "module-j5e_relay-Relay.html",
                       "tf": 10
                     },
-                    "module-j5e_animation-Animation.html": {
-                      "ref": "module-j5e_animation-Animation.html",
-                      "tf": 8.333333333333332
-                    },
                     "module-j5e_light-Light.html": {
                       "ref": "module-j5e_light-Light.html",
                       "tf": 10
+                    },
+                    "module-j5e_animation-Animation.html": {
+                      "ref": "module-j5e_animation-Animation.html",
+                      "tf": 8.333333333333332
                     },
                     "module-j5e_led-LED.html": {
                       "ref": "module-j5e_led-LED.html",
@@ -5925,12 +5925,12 @@ window.lunrData = {
                 "ref": "module-j5e_sensor-Sensor.html#once",
                 "tf": 8.333333333333332
               },
-              "module-j5e_animation-Animation.html#once": {
-                "ref": "module-j5e_animation-Animation.html#once",
-                "tf": 8.333333333333332
-              },
               "module-j5e_light-Light.html#once": {
                 "ref": "module-j5e_light-Light.html#once",
+                "tf": 8.333333333333332
+              },
+              "module-j5e_animation-Animation.html#once": {
+                "ref": "module-j5e_animation-Animation.html#once",
                 "tf": 8.333333333333332
               },
               "module-j5e_button-Button.html#once": {
@@ -5952,12 +5952,12 @@ window.lunrData = {
                   "ref": "module-j5e_sensor-Sensor.html#once",
                   "tf": 683.3333333333334
                 },
-                "module-j5e_animation-Animation.html#once": {
-                  "ref": "module-j5e_animation-Animation.html#once",
-                  "tf": 683.3333333333334
-                },
                 "module-j5e_light-Light.html#once": {
                   "ref": "module-j5e_light-Light.html#once",
+                  "tf": 683.3333333333334
+                },
+                "module-j5e_animation-Animation.html#once": {
+                  "ref": "module-j5e_animation-Animation.html#once",
                   "tf": 683.3333333333334
                 },
                 "module-j5e_button-Button.html#once": {
@@ -7089,232 +7089,6 @@ window.lunrData = {
                                   }
                                 }
                               },
-                              "a": {
-                                "docs": {},
-                                "n": {
-                                  "docs": {},
-                                  "i": {
-                                    "docs": {},
-                                    "m": {
-                                      "docs": {
-                                        "module-j5e_animation.html": {
-                                          "ref": "module-j5e_animation.html",
-                                          "tf": 1300
-                                        }
-                                      },
-                                      "a": {
-                                        "docs": {},
-                                        "t": {
-                                          "docs": {},
-                                          "i": {
-                                            "docs": {},
-                                            "o": {
-                                              "docs": {},
-                                              "n": {
-                                                "docs": {},
-                                                "~": {
-                                                  "docs": {},
-                                                  "a": {
-                                                    "docs": {},
-                                                    "n": {
-                                                      "docs": {},
-                                                      "i": {
-                                                        "docs": {},
-                                                        "m": {
-                                                          "docs": {
-                                                            "module-j5e_animation-Animation.html": {
-                                                              "ref": "module-j5e_animation-Animation.html",
-                                                              "tf": 1300
-                                                            }
-                                                          },
-                                                          "a": {
-                                                            "docs": {},
-                                                            "t": {
-                                                              "docs": {},
-                                                              "i": {
-                                                                "docs": {},
-                                                                "o": {
-                                                                  "docs": {},
-                                                                  "n": {
-                                                                    "docs": {},
-                                                                    "#": {
-                                                                      "docs": {},
-                                                                      "o": {
-                                                                        "docs": {},
-                                                                        "n": {
-                                                                          "docs": {
-                                                                            "module-j5e_animation-Animation.html#on": {
-                                                                              "ref": "module-j5e_animation-Animation.html#on",
-                                                                              "tf": 1300
-                                                                            }
-                                                                          },
-                                                                          "c": {
-                                                                            "docs": {
-                                                                              "module-j5e_animation-Animation.html#once": {
-                                                                                "ref": "module-j5e_animation-Animation.html#once",
-                                                                                "tf": 1150
-                                                                              }
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      },
-                                                                      "r": {
-                                                                        "docs": {},
-                                                                        "e": {
-                                                                          "docs": {},
-                                                                          "m": {
-                                                                            "docs": {},
-                                                                            "o": {
-                                                                              "docs": {},
-                                                                              "v": {
-                                                                                "docs": {},
-                                                                                "e": {
-                                                                                  "docs": {},
-                                                                                  "l": {
-                                                                                    "docs": {},
-                                                                                    "i": {
-                                                                                      "docs": {},
-                                                                                      "s": {
-                                                                                        "docs": {},
-                                                                                        "t": {
-                                                                                          "docs": {},
-                                                                                          "e": {
-                                                                                            "docs": {},
-                                                                                            "n": {
-                                                                                              "docs": {
-                                                                                                "module-j5e_animation-Animation.html#removeListener": {
-                                                                                                  "ref": "module-j5e_animation-Animation.html#removeListener",
-                                                                                                  "tf": 1150
-                                                                                                }
-                                                                                              }
-                                                                                            }
-                                                                                          }
-                                                                                        }
-                                                                                      }
-                                                                                    }
-                                                                                  }
-                                                                                }
-                                                                              }
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      },
-                                                                      "e": {
-                                                                        "docs": {},
-                                                                        "m": {
-                                                                          "docs": {},
-                                                                          "i": {
-                                                                            "docs": {},
-                                                                            "t": {
-                                                                              "docs": {
-                                                                                "module-j5e_animation-Animation.html#emit": {
-                                                                                  "ref": "module-j5e_animation-Animation.html#emit",
-                                                                                  "tf": 1150
-                                                                                }
-                                                                              }
-                                                                            }
-                                                                          }
-                                                                        },
-                                                                        "n": {
-                                                                          "docs": {},
-                                                                          "q": {
-                                                                            "docs": {},
-                                                                            "u": {
-                                                                              "docs": {},
-                                                                              "e": {
-                                                                                "docs": {},
-                                                                                "u": {
-                                                                                  "docs": {
-                                                                                    "module-j5e_animation-Animation.html#enqueue": {
-                                                                                      "ref": "module-j5e_animation-Animation.html#enqueue",
-                                                                                      "tf": 1150
-                                                                                    }
-                                                                                  }
-                                                                                }
-                                                                              }
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      },
-                                                                      "p": {
-                                                                        "docs": {},
-                                                                        "l": {
-                                                                          "docs": {},
-                                                                          "a": {
-                                                                            "docs": {},
-                                                                            "y": {
-                                                                              "docs": {
-                                                                                "module-j5e_animation-Animation.html#play": {
-                                                                                  "ref": "module-j5e_animation-Animation.html#play",
-                                                                                  "tf": 1150
-                                                                                }
-                                                                              }
-                                                                            }
-                                                                          }
-                                                                        },
-                                                                        "a": {
-                                                                          "docs": {},
-                                                                          "u": {
-                                                                            "docs": {},
-                                                                            "s": {
-                                                                              "docs": {
-                                                                                "module-j5e_animation-Animation.html#pause": {
-                                                                                  "ref": "module-j5e_animation-Animation.html#pause",
-                                                                                  "tf": 1150
-                                                                                }
-                                                                              }
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      },
-                                                                      "s": {
-                                                                        "docs": {},
-                                                                        "t": {
-                                                                          "docs": {},
-                                                                          "o": {
-                                                                            "docs": {},
-                                                                            "p": {
-                                                                              "docs": {
-                                                                                "module-j5e_animation-Animation.html#stop": {
-                                                                                  "ref": "module-j5e_animation-Animation.html#stop",
-                                                                                  "tf": 1150
-                                                                                }
-                                                                              }
-                                                                            }
-                                                                          }
-                                                                        },
-                                                                        "p": {
-                                                                          "docs": {},
-                                                                          "e": {
-                                                                            "docs": {
-                                                                              "module-j5e_animation-Animation.html#speed": {
-                                                                                "ref": "module-j5e_animation-Animation.html#speed",
-                                                                                "tf": 1150
-                                                                              }
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              },
                               "l": {
                                 "docs": {
                                   "module-j5e_led.html": {
@@ -7769,6 +7543,232 @@ window.lunrData = {
                                                         "module-j5e_led-LED.html#stop": {
                                                           "ref": "module-j5e_led-LED.html#stop",
                                                           "tf": 1150
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "a": {
+                                "docs": {},
+                                "n": {
+                                  "docs": {},
+                                  "i": {
+                                    "docs": {},
+                                    "m": {
+                                      "docs": {
+                                        "module-j5e_animation.html": {
+                                          "ref": "module-j5e_animation.html",
+                                          "tf": 1300
+                                        }
+                                      },
+                                      "a": {
+                                        "docs": {},
+                                        "t": {
+                                          "docs": {},
+                                          "i": {
+                                            "docs": {},
+                                            "o": {
+                                              "docs": {},
+                                              "n": {
+                                                "docs": {},
+                                                "~": {
+                                                  "docs": {},
+                                                  "a": {
+                                                    "docs": {},
+                                                    "n": {
+                                                      "docs": {},
+                                                      "i": {
+                                                        "docs": {},
+                                                        "m": {
+                                                          "docs": {
+                                                            "module-j5e_animation-Animation.html": {
+                                                              "ref": "module-j5e_animation-Animation.html",
+                                                              "tf": 1300
+                                                            }
+                                                          },
+                                                          "a": {
+                                                            "docs": {},
+                                                            "t": {
+                                                              "docs": {},
+                                                              "i": {
+                                                                "docs": {},
+                                                                "o": {
+                                                                  "docs": {},
+                                                                  "n": {
+                                                                    "docs": {},
+                                                                    "#": {
+                                                                      "docs": {},
+                                                                      "o": {
+                                                                        "docs": {},
+                                                                        "n": {
+                                                                          "docs": {
+                                                                            "module-j5e_animation-Animation.html#on": {
+                                                                              "ref": "module-j5e_animation-Animation.html#on",
+                                                                              "tf": 1300
+                                                                            }
+                                                                          },
+                                                                          "c": {
+                                                                            "docs": {
+                                                                              "module-j5e_animation-Animation.html#once": {
+                                                                                "ref": "module-j5e_animation-Animation.html#once",
+                                                                                "tf": 1150
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      },
+                                                                      "r": {
+                                                                        "docs": {},
+                                                                        "e": {
+                                                                          "docs": {},
+                                                                          "m": {
+                                                                            "docs": {},
+                                                                            "o": {
+                                                                              "docs": {},
+                                                                              "v": {
+                                                                                "docs": {},
+                                                                                "e": {
+                                                                                  "docs": {},
+                                                                                  "l": {
+                                                                                    "docs": {},
+                                                                                    "i": {
+                                                                                      "docs": {},
+                                                                                      "s": {
+                                                                                        "docs": {},
+                                                                                        "t": {
+                                                                                          "docs": {},
+                                                                                          "e": {
+                                                                                            "docs": {},
+                                                                                            "n": {
+                                                                                              "docs": {
+                                                                                                "module-j5e_animation-Animation.html#removeListener": {
+                                                                                                  "ref": "module-j5e_animation-Animation.html#removeListener",
+                                                                                                  "tf": 1150
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      },
+                                                                      "e": {
+                                                                        "docs": {},
+                                                                        "m": {
+                                                                          "docs": {},
+                                                                          "i": {
+                                                                            "docs": {},
+                                                                            "t": {
+                                                                              "docs": {
+                                                                                "module-j5e_animation-Animation.html#emit": {
+                                                                                  "ref": "module-j5e_animation-Animation.html#emit",
+                                                                                  "tf": 1150
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        },
+                                                                        "n": {
+                                                                          "docs": {},
+                                                                          "q": {
+                                                                            "docs": {},
+                                                                            "u": {
+                                                                              "docs": {},
+                                                                              "e": {
+                                                                                "docs": {},
+                                                                                "u": {
+                                                                                  "docs": {
+                                                                                    "module-j5e_animation-Animation.html#enqueue": {
+                                                                                      "ref": "module-j5e_animation-Animation.html#enqueue",
+                                                                                      "tf": 1150
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      },
+                                                                      "p": {
+                                                                        "docs": {},
+                                                                        "l": {
+                                                                          "docs": {},
+                                                                          "a": {
+                                                                            "docs": {},
+                                                                            "y": {
+                                                                              "docs": {
+                                                                                "module-j5e_animation-Animation.html#play": {
+                                                                                  "ref": "module-j5e_animation-Animation.html#play",
+                                                                                  "tf": 1150
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        },
+                                                                        "a": {
+                                                                          "docs": {},
+                                                                          "u": {
+                                                                            "docs": {},
+                                                                            "s": {
+                                                                              "docs": {
+                                                                                "module-j5e_animation-Animation.html#pause": {
+                                                                                  "ref": "module-j5e_animation-Animation.html#pause",
+                                                                                  "tf": 1150
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      },
+                                                                      "s": {
+                                                                        "docs": {},
+                                                                        "t": {
+                                                                          "docs": {},
+                                                                          "o": {
+                                                                            "docs": {},
+                                                                            "p": {
+                                                                              "docs": {
+                                                                                "module-j5e_animation-Animation.html#stop": {
+                                                                                  "ref": "module-j5e_animation-Animation.html#stop",
+                                                                                  "tf": 1150
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        },
+                                                                        "p": {
+                                                                          "docs": {},
+                                                                          "e": {
+                                                                            "docs": {
+                                                                              "module-j5e_animation-Animation.html#speed": {
+                                                                                "ref": "module-j5e_animation-Animation.html#speed",
+                                                                                "tf": 1150
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
                                                         }
                                                       }
                                                     }
@@ -9603,107 +9603,6 @@ window.lunrData = {
       "summary": "",
       "description": "Toggle the relay circuit"
     },
-    "module-j5e_animation-Animation.html": {
-      "id": "module-j5e_animation-Animation.html",
-      "kind": "class",
-      "title": "j5e/animation~Animation",
-      "longname": "module:j5e/animation~Animation",
-      "name": "Animation",
-      "tags": "module:j5e/animation~Animation",
-      "summary": "",
-      "description": "Allows for scripted control of LEDs, RGBs, and Servos",
-      "body": ""
-    },
-    "module-j5e_animation-Animation.html#on": {
-      "id": "module-j5e_animation-Animation.html#on",
-      "kind": "function",
-      "title": "on( event, listener )",
-      "longname": "module:j5e/animation~Animation#on",
-      "name": "on",
-      "tags": "module:j5e/animation~Animation#on on",
-      "summary": "",
-      "description": "Create an event listener"
-    },
-    "module-j5e_animation-Animation.html#removeListener": {
-      "id": "module-j5e_animation-Animation.html#removeListener",
-      "kind": "function",
-      "title": "removeListener( event, listener )",
-      "longname": "module:j5e/animation~Animation#removeListener",
-      "name": "removeListener",
-      "tags": "module:j5e/animation~Animation#removeListener removeListener",
-      "summary": "",
-      "description": "Remove an event listener"
-    },
-    "module-j5e_animation-Animation.html#emit": {
-      "id": "module-j5e_animation-Animation.html#emit",
-      "kind": "function",
-      "title": "emit( event )",
-      "longname": "module:j5e/animation~Animation#emit",
-      "name": "emit",
-      "tags": "module:j5e/animation~Animation#emit emit",
-      "summary": "",
-      "description": "Emit an event"
-    },
-    "module-j5e_animation-Animation.html#once": {
-      "id": "module-j5e_animation-Animation.html#once",
-      "kind": "function",
-      "title": "once( event, listener )",
-      "longname": "module:j5e/animation~Animation#once",
-      "name": "once",
-      "tags": "module:j5e/animation~Animation#once once",
-      "summary": "",
-      "description": "Create an event listener that will only fire one time."
-    },
-    "module-j5e_animation-Animation.html#enqueue": {
-      "id": "module-j5e_animation-Animation.html#enqueue",
-      "kind": "function",
-      "title": "enqueue( options )",
-      "longname": "module:j5e/animation~Animation#enqueue",
-      "name": "enqueue",
-      "tags": "module:j5e/animation~Animation#enqueue enqueue",
-      "summary": "",
-      "description": "Add an animation segment to the animation queue (See j5e's Timeline and Tweening Tools for more information)"
-    },
-    "module-j5e_animation-Animation.html#play": {
-      "id": "module-j5e_animation-Animation.html#play",
-      "kind": "function",
-      "title": "play()",
-      "longname": "module:j5e/animation~Animation#play",
-      "name": "play",
-      "tags": "module:j5e/animation~Animation#play play",
-      "summary": "",
-      "description": "Resume play on an animation after it has been paused or stopped."
-    },
-    "module-j5e_animation-Animation.html#pause": {
-      "id": "module-j5e_animation-Animation.html#pause",
-      "kind": "function",
-      "title": "pause()",
-      "longname": "module:j5e/animation~Animation#pause",
-      "name": "pause",
-      "tags": "module:j5e/animation~Animation#pause pause",
-      "summary": "",
-      "description": "Pause animation while maintaining progress, speed and segment queue"
-    },
-    "module-j5e_animation-Animation.html#stop": {
-      "id": "module-j5e_animation-Animation.html#stop",
-      "kind": "function",
-      "title": "stop()",
-      "longname": "module:j5e/animation~Animation#stop",
-      "name": "stop",
-      "tags": "module:j5e/animation~Animation#stop stop",
-      "summary": "",
-      "description": "Stop the animation, flushing the segment queue"
-    },
-    "module-j5e_animation-Animation.html#speed": {
-      "id": "module-j5e_animation-Animation.html#speed",
-      "kind": "function",
-      "title": "speed( [ speed ] )",
-      "longname": "module:j5e/animation~Animation#speed",
-      "name": "speed",
-      "tags": "module:j5e/animation~Animation#speed speed",
-      "summary": "",
-      "description": "Get or set the current playback speed"
-    },
     "module-j5e_light-Light.html": {
       "id": "module-j5e_light-Light.html",
       "kind": "class",
@@ -9824,6 +9723,107 @@ window.lunrData = {
       "tags": "module:j5e/light~Light#fscaleTo fscaleTo",
       "summary": "",
       "description": "fscaleTo Scales value to single precision float representation"
+    },
+    "module-j5e_animation-Animation.html": {
+      "id": "module-j5e_animation-Animation.html",
+      "kind": "class",
+      "title": "j5e/animation~Animation",
+      "longname": "module:j5e/animation~Animation",
+      "name": "Animation",
+      "tags": "module:j5e/animation~Animation",
+      "summary": "",
+      "description": "Allows for scripted control of LEDs, RGBs, and Servos",
+      "body": ""
+    },
+    "module-j5e_animation-Animation.html#on": {
+      "id": "module-j5e_animation-Animation.html#on",
+      "kind": "function",
+      "title": "on( event, listener )",
+      "longname": "module:j5e/animation~Animation#on",
+      "name": "on",
+      "tags": "module:j5e/animation~Animation#on on",
+      "summary": "",
+      "description": "Create an event listener"
+    },
+    "module-j5e_animation-Animation.html#removeListener": {
+      "id": "module-j5e_animation-Animation.html#removeListener",
+      "kind": "function",
+      "title": "removeListener( event, listener )",
+      "longname": "module:j5e/animation~Animation#removeListener",
+      "name": "removeListener",
+      "tags": "module:j5e/animation~Animation#removeListener removeListener",
+      "summary": "",
+      "description": "Remove an event listener"
+    },
+    "module-j5e_animation-Animation.html#emit": {
+      "id": "module-j5e_animation-Animation.html#emit",
+      "kind": "function",
+      "title": "emit( event )",
+      "longname": "module:j5e/animation~Animation#emit",
+      "name": "emit",
+      "tags": "module:j5e/animation~Animation#emit emit",
+      "summary": "",
+      "description": "Emit an event"
+    },
+    "module-j5e_animation-Animation.html#once": {
+      "id": "module-j5e_animation-Animation.html#once",
+      "kind": "function",
+      "title": "once( event, listener )",
+      "longname": "module:j5e/animation~Animation#once",
+      "name": "once",
+      "tags": "module:j5e/animation~Animation#once once",
+      "summary": "",
+      "description": "Create an event listener that will only fire one time."
+    },
+    "module-j5e_animation-Animation.html#enqueue": {
+      "id": "module-j5e_animation-Animation.html#enqueue",
+      "kind": "function",
+      "title": "enqueue( options )",
+      "longname": "module:j5e/animation~Animation#enqueue",
+      "name": "enqueue",
+      "tags": "module:j5e/animation~Animation#enqueue enqueue",
+      "summary": "",
+      "description": "Add an animation segment to the animation queue (See j5e's Timeline and Tweening Tools for more information)"
+    },
+    "module-j5e_animation-Animation.html#play": {
+      "id": "module-j5e_animation-Animation.html#play",
+      "kind": "function",
+      "title": "play()",
+      "longname": "module:j5e/animation~Animation#play",
+      "name": "play",
+      "tags": "module:j5e/animation~Animation#play play",
+      "summary": "",
+      "description": "Resume play on an animation after it has been paused or stopped."
+    },
+    "module-j5e_animation-Animation.html#pause": {
+      "id": "module-j5e_animation-Animation.html#pause",
+      "kind": "function",
+      "title": "pause()",
+      "longname": "module:j5e/animation~Animation#pause",
+      "name": "pause",
+      "tags": "module:j5e/animation~Animation#pause pause",
+      "summary": "",
+      "description": "Pause animation while maintaining progress, speed and segment queue"
+    },
+    "module-j5e_animation-Animation.html#stop": {
+      "id": "module-j5e_animation-Animation.html#stop",
+      "kind": "function",
+      "title": "stop()",
+      "longname": "module:j5e/animation~Animation#stop",
+      "name": "stop",
+      "tags": "module:j5e/animation~Animation#stop stop",
+      "summary": "",
+      "description": "Stop the animation, flushing the segment queue"
+    },
+    "module-j5e_animation-Animation.html#speed": {
+      "id": "module-j5e_animation-Animation.html#speed",
+      "kind": "function",
+      "title": "speed( [ speed ] )",
+      "longname": "module:j5e/animation~Animation#speed",
+      "name": "speed",
+      "tags": "module:j5e/animation~Animation#speed speed",
+      "summary": "",
+      "description": "Get or set the current playback speed"
     },
     "module-j5e_led-LED.html": {
       "id": "module-j5e_led-LED.html",

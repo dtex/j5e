@@ -137,14 +137,14 @@ class Sensor extends Withinable {
    * @param {number[]} [options.range=[0, N]] - The input range of the sensor
    * @param {number[]} [options.scale=[0, N]] - The output range for the sensor's value
    * @param {number[]} [options.limit=null] - Limit the output range
-   * @param {number} [options.threshold=1] - The minimum amount fo change required to emit a "change" event
-   * @param {boolean} [options.enabled=true] - Wether the device is currently performing reads based on the interval value
+   * @param {number} [options.threshold=1] - The minimum amount of change required to emit a "change" event
+   * @param {boolean} [options.enabled=true] - Wether the device is currently performing reads every &lt;interval>ms
    * @property {number} value - Get the most recent scaled median value
-   * @property {number} scaled - Get the most recent scaled raw value
-   * @property {number} level - Get the most recent raw value scaled to [0,1]
+   * @property {number} scaled - Get the most recent scaled raw reading
+   * @property {number} level - Get the most recent value scaled to [0,1]
    * @property {number} raw - Get the most recent raw ADC reading
    * @property {number} resolution - The maximum possible ADC reading
-   * @property {number} smoothing - The number of samples to take before finding the median value
+   * @property {number} smoothing - The number of samples to take before finding the median
    * @example
    * &lt;caption>Using a pin number&lt;/caption>
    * import Sensor from "j5e/sensor";
@@ -241,10 +241,14 @@ class Sensor extends Withinable {
             return 2 ** this.io.resolution - 1;
           }
         },
+        range: {
+          get() {
+            return this.#state.range;
+          }
+        },
         scaled: {
           get() {
             let mapped, constrained;
-
             if (this.#state.scale &amp;&amp; this.#state.raw !== null) {
               mapped = fmap(this.#state.raw, this.#state.range[0], this.#state.range[1], this.#state.scale[0], this.#state.scale[1]);
               constrained = constrain(mapped, this.#state.scale[0], this.#state.scale[1]);
@@ -410,12 +414,16 @@ class Sensor extends Withinable {
    * sensor.scale([0, 255]);
    */
   scale(low, high) {
-    this.isScaled = true;
+    if (typeof low === "undefined") {
+      return this.#state.scale;
+    } else {
+      this.isScaled = true;
 
-    this.#state.scale = Array.isArray(low) ?
-      low : [low, high];
+      this.#state.scale = Array.isArray(low) ?
+        low : [low, high];
 
-    return this;
+      return this;
+    }
   }
 
   /**
