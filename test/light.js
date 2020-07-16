@@ -567,18 +567,21 @@ describe("Light", function() {
       });
 
       it("should return the correct value based on range", async function() {
-        let light = await new Light({
+
+        const light = await new Light({
           pin: 17,
           io: Analog,
           range: [400, 800]
         });
-        [[123, 0.12], [400, 0.39], [600, 0.58], [800, 0.78], [1000, 0.97]].forEach(inAndOut => {
+
+        [[123, 0.12], [400, 0.39], [600, 0.59], [800, 0.78], [1000, 0.98]].forEach(inAndOut => {
           light.io.value = inAndOut[0];
           light.read();
           assert.equal(light.level, inAndOut[1]);
         });
 
         light.disable();
+
       });
 
       it("should return the correct value based on scale", async function() {
@@ -587,7 +590,7 @@ describe("Light", function() {
           io: Analog,
           scale: [400, 800]
         });
-        [[0, 0], [400, 0.39], [600, 0.58], [800, 0.78], [1000, 0.97]].forEach(inAndOut => {
+        [[0, 0], [400, 0], [600, 0.5], [800, 1], [1000, 1]].forEach(inAndOut => {
           light.io.value = inAndOut[0];
           light.read();
           assert.equal(light.level, inAndOut[1]);
@@ -603,7 +606,7 @@ describe("Light", function() {
           range: [400, 800],
           scale: [0, 255]
         });
-        [[0, 0], [400, 0.39], [600, 0.58], [800, 0.78], [1000, 0.97]].forEach(inAndOut => {
+        [[0, 0], [400, 1], [600, 1], [800, 1], [1000, 1]].forEach(inAndOut => {
           light.io.value = inAndOut[0];
           light.read();
           assert.equal(light.level, inAndOut[1]);
