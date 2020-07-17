@@ -57,7 +57,7 @@
     "@dtex/mock-io": "0.0.5",
     "babel-eslint": "^10.1.0",
     "chai": "^4.2.0",
-    "eslint": "^7.3.1",
+    "eslint": "^7.4.0",
     "eslint-config-idiomatic": "^4.0.0",
     "foodoc": "github:dtex/foodoc#master",
     "fs-extra": "^8.1.0",
