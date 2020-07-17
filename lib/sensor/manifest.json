@@ -2,14 +2,14 @@
   "include": [],
   "modules": {
     "*": [],
-    "j5e/within": "$(j5e)/lib/withinable/*",
     "j5e/fn": "$(j5e)/lib/fn/*",
-    "j5e/sensor": "$(j5e)/lib/sensor/*"
+    "j5e/sensor": "$(j5e)/lib/sensor/*",
+    "j5e/withinable": "$(j5e)/lib/withinable/*"
   },
   "preload": [
-    "j5e/withinable",
     "j5e/fn",
-    "j5e/sensor"
+    "j5e/sensor",
+    "j5e/withinable"
   ],
   "platforms": {
     "esp": {},
