@@ -196,7 +196,7 @@ export function map(value, fromLow, fromHigh, toLow, toHigh) {
  * @param {Number} fromHigh - high end of originating range
  * @param {Number} toLow    - low end of target range
  * @param {Number} toHigh   - high end of target range
- * @return {Float32}
+ * @return {Number}
  */
 export function fmap(value, fromLow, fromHigh, toLow, toHigh) {
   return (value - fromLow) * (toHigh - toLow) / (fromHigh - fromLow) + toLow;
