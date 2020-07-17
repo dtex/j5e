@@ -3,11 +3,13 @@
   "modules": {
     "*": [],
     "j5e/light": "$(j5e)/lib/light/*",
-    "j5e/sensor": "$(j5e)/lib/sensor/*"
+    "j5e/sensor": "$(j5e)/lib/sensor/*",
+    "j5e/withinable": "$(j5e)/lib/withinable/*"
   },
   "preload": [
     "j5e/light",
-    "j5e/sensor"
+    "j5e/sensor",
+    "j5e/withinable"
   ],
   "platforms": {
     "esp": {},
