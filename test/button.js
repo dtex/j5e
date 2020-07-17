@@ -113,6 +113,45 @@ describe("Button", function() {
         });
       });
 
+      describe("debounce", function() {
+
+        const clock = sinon.useFakeTimers();
+        const closeListener = sinon.spy();
+
+        it("should delay event emissions by debounced value that is passed", async function() {
+          const button = await new Button({
+            pin: 13,
+            io: Digital,
+            debounce: 20
+          });
+
+          button.on("close", closeListener);
+
+          button.io.write(0);
+          clock.tick(1);
+
+          // This should not emit (debounced)
+          button.io.write(1);
+          clock.tick(1);
+          assert.equal(closeListener.callCount, 0);
+
+          // This should not emit (debounced)
+          button.io.write(0);
+          button.io.write(1);
+          clock.tick(15);
+          assert.equal(closeListener.callCount, 0);
+
+          // This should emit (21 ms have elapsed since last event)
+          button.io.write(0);
+          button.io.write(1);
+          clock.tick(25);
+          assert.equal(closeListener.callCount, 1);
+
+          clock.restore();
+
+        });
+      });
+
     });
   });
 
