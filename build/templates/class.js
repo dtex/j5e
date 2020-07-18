@@ -47,17 +47,49 @@ class XXX extends Emitter {
         }
       });
 
-      Object.defineProperties(this, {
-        XXX: {
-          get: () => {
-            return Boolean(this.io.XXX);
-          }
-        }
-      });
-
       return this;
     })();
 
+  }
+
+  /**
+   * Get some read only value
+   * @type {boolean}
+   * @readonly
+   * @example
+   * <caption>Getter in action</caption>
+   * import XXX from "j5e/XXX";
+   *
+   * const myxxx = await new XXX(12);
+   * console.log(myxxx.someReadOnlyProperty)
+   */
+  get someReadOnlyProperty() {
+    return Boolean(this.io.xxx);
+  }
+
+  /**
+   * Get some readable/writable value
+   * @type {number}
+   * @example
+   * <caption>Getter in action</caption>
+   * import XXX from "j5e/XXX";
+   *
+   * const myxxx = await new XXX(12);
+   * console.log(myxxx.someReadOnlyProperty)
+   *
+   * @example
+   * <caption>Setter in action</caption>
+   * import XXX from "j5e/XXX";
+   *
+   * const myxxx = await new XXX(12);
+   * myxxx.someReadWriteProperty = 11;
+   */
+  get someReadWriteProperty() {
+    return this.#state.xxx;
+  }
+
+  set someReadWriteProperty(newValue) {
+    this.#state.xxx = Number(newValue);
   }
 
   /**
