@@ -236,7 +236,7 @@ class RGB {
       return this.#state[color] > 0;
     });
   }
-  
+
   /**
    * If the RGB is pulsing, blinking or running an animation
    * @type {boolean}
@@ -245,7 +245,7 @@ class RGB {
   get isRunning() {
     return !!this.#state.interval;
   }
-  
+
   /**
    * If the RGB is wired for common anode
    * @type {boolean}
@@ -254,7 +254,7 @@ class RGB {
   get isAnode() {
     return this.#state.isAnode;
   }
-  
+
   /**
    * The current RGB values
    * @type {number[]}
