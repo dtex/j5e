@@ -163,24 +163,6 @@ class LED {
 
       this.LOW = 0;
 
-      Object.defineProperties(this, {
-        value: {
-          get: function() {
-            return this.#state.value;
-          }
-        },
-        isOn: {
-          get: function() {
-            return !!this.#state.value;
-          }
-        },
-        isRunning: {
-          get: function() {
-            return this.#state.isRunning;
-          }
-        }
-      });
-
       if (options.sink) {
         this.#state.sink = true;
       }
@@ -194,6 +176,33 @@ class LED {
       return this;
     })();
   }
+
+  /**
+   * The current value of the LED
+   * @type {number}
+   * @readonly
+   */
+  get value() {
+    return this.#state.value;
+  }
+
+  /**
+   * Wether the LED is on
+   * @type {boolean}
+   * @readonly
+   */
+  get isOn() {
+    return !!this.#state.value;
+  }
+
+  /**
+   * True if the LED is blinking, pulsing or animating
+   * @type {boolean}
+   * @readonly
+   */
+  get isRunning() {
+    return this.#state.isRunning;
+  };
 
   /**
    * Internal method that writes the current LED value to the IO

@@ -134,11 +134,6 @@ class Button extends Emitter {
    * @param {boolean} [options.isPulldown=false] - Initialize as a pulldown button
    * @param {number} [options.holdtime=500] - The amount of time a button must be held down before emitting an hold event
    * @param {number} [options.debounce=7] - The amount of time in milliseconds to delay button events firing. Cleans up "noisy" state changes
-   * @property {boolean} isClosed - True if the button is being pressed
-   * @property {boolean} isOpen - True if the button is not being pressed
-   * @property {number} downValue - Get the raw downValue (depends on invert, isPullup and isPulldown)
-   * @property {number} upValue - Get the raw upValue (depends on invert, isPullup and, isPulldown)
-   * @property {number} holdtime - Get/Set the holdtime
    * @example
    * &lt;caption>Use a button to control an LED&lt;/caption>
    * import Button from "j5e/button";
@@ -183,37 +178,6 @@ class Button extends Emitter {
         }
       });
 
-      Object.defineProperties(this, {
-        isClosed: {
-          get: () => {
-            return this.io.read() === this.downValue;
-          }
-        },
-        isOpen: {
-          get: () => {
-            return this.io.read() === this.upValue;
-          }
-        },
-        downValue: {
-          get: () => {
-            return 1 ^ this.#state.isPullup ^ this.invert;
-          }
-        },
-        upValue: {
-          get: () => {
-            return 0 ^ this.#state.isPullup ^ this.invert;
-          }
-        },
-        holdtime: {
-          get: () => {
-            return this.#state.holdtime;
-          },
-          set: (newHoldtime) => {
-            this.#state.holdtime = newHoldtime;
-          }
-        }
-      });
-
       if (typeof options.invert !== "undefined") {
         this.invert = options.invert;
       }
@@ -239,6 +203,54 @@ class Button extends Emitter {
       return this;
     })();
 
+  }
+
+  /**
+   * True if the button is being pressed
+   * @type {boolean}
+   * @readonly
+   */
+  get isClosed() {
+    return this.io.read() === this.downValue;
+  }
+
+  /**
+   * True if the button is not being pressed
+   * @type {boolean}
+   * @readonly
+   */
+  get isOpen() {
+    return this.io.read() === this.upValue;
+  }
+
+  /**
+   * Get the raw downValue (depends on invert, isPullup and isPulldown)
+   * @type {number}
+   * @readonly
+   */
+  get downValue() {
+    return 1 ^ this.#state.isPullup ^ this.invert;
+  }
+
+  /**
+   * Get the raw upValue (depends on invert, isPullup and, isPulldown)
+   * @type {number}
+   * @readonly
+   */
+  get upValue() {
+    return 0 ^ this.#state.isPullup ^ this.invert;
+  }
+
+  /**
+   * The length of time a button must be held before firing a hold event (in ms)
+   * @type {number}
+   */
+  get holdtime() {
+    return this.#state.holdtime;
+  }
+
+  set holdtime(newHoldtime) {
+    this.#state.holdtime = newHoldtime;
   }
 
   intialize(options, callback) { }

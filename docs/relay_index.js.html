@@ -119,8 +119,6 @@ class Relay {
    * Instantiate Relay
    * @param {object} options - A pin number, pin identifier or a complete options object (See {@tutorial C-INSTANTIATING}
    * @param {string} options.type - "NO" (Normally Open) or "NC" (Normally Closed)
-   * @property {boolean} isOn - True if switch is on
-   * @property {boolean} type - True if switch is on
    * @example
    * &lt;caption>Use a Relay&lt;/caption>
    * import Relay from "j5e/relay";
@@ -138,24 +136,6 @@ class Relay {
         mode: Provider.Output
       });
 
-      Object.defineProperties(this, {
-        value: {
-          get: () => {
-            return Number(this.isClosed);
-          }
-        },
-        isClosed: {
-          get: () => {
-            return this.#state.isClosed;
-          }
-        },
-        type: {
-          get: () => {
-            return this.#state.isInverted ? "NC" : "NO";
-          }
-        }
-      });
-
       if (options.type === "NC") {
         this.#state.isInverted = true;
       }
@@ -163,6 +143,33 @@ class Relay {
       return this;
     })();
 
+  }
+
+  /**
+   * A numerical value representing the relay state
+   * @type {number}
+   * @readonly
+   */
+  get value() {
+    return Number(this.isClosed);
+  }
+
+  /**
+   * True if the relay is closed
+   * @type {boolean}
+   * @readonly
+   */
+  get isClosed() {
+    return this.#state.isClosed;
+  }
+
+  /**
+   * "NC" if the relay is normally closed, "NO" if the relay is normally open
+   * @type {string}
+   * @readonly
+   */
+  get type() {
+    return this.#state.isInverted ? "NC" : "NO";
   }
 
   /**

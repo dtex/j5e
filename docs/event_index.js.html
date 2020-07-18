@@ -140,6 +140,7 @@ export class Emitter {
 
   /** Emit an event
    * @param {string} event - The name of the event to emit
+   * @ignore
    */
   emit(event, ...rest) {
     if (typeof this.events[event] === "object") {
