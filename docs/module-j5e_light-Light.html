@@ -198,56 +198,30 @@
 </dd>
 							</dl>
 							<article class="secondary">
-									<h3>Methods</h3>
+									<h3>Members</h3>
 									<dl class="symbol">
 											<hr/>
-											<dt class="symbol-title function public inherited collapsible-symbol">
-			<h4 id="enable" class="function public inherited"><span class="name">enable</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{Object}</span></h4>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="level" class="member public"><span class="signature-attribs">&lt;readonly> </span><span class="name">level</span><span class="signature-type"> :number</span></h4>
 		</dt>
-<dd class="symbol-details function public inherited  collapsible-symbol">
+<dd class="symbol-details member public  collapsible-symbol">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Enable a disabled sensor.</div>
-			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">Object</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description">instance</div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Sensor from &quot;j5e/sensor&quot;;
-			const sensor &#x3D; await new Sensor(12);
-			
-			sensor.disable();
-			
-			// Wait 5 seconds and then take readings
-			timer.setTimeout(function() {
-			 sensor.enable();
-			});</code></pre>
-					</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Return the current value, scaled [0,1]</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
-			
-			
-			
-			
-			
-							<!-- inherits -->
+							<!-- type -->
 							<div class="form-group">
-								<label class="col-sm-3 control-label">Inherited From</label>
+								<label class="col-sm-3 control-label">Type</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#enable">module:j5e/sensor~Sensor#enable</a></p>
+									<div class="form-control-static type-names"><span class="param-type">number</span></div>
 								</div>
 							</div>
 			
-							<!-- overrides -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Overrides</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#enable">module:j5e/sensor~Sensor#enable</a></p>
-								</div>
-							</div>
+			
+			
+			
+			
+			
 			
 			
 			
@@ -260,7 +234,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-205">line 205</a></p>
+									<p class="form-control-static"><a href="light_index.js.html">light/index.js</a>, <a href="light_index.js.html#line-59">line 59</a></p>
 								</div>
 							</div>
 			
@@ -271,31 +245,21 @@
 			</div>	</div>
 </dd>
 											<hr/>
-											<dt class="symbol-title function public inherited collapsible-symbol">
-			<h4 id="disable" class="function public inherited"><span class="name">disable</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{Object}</span></h4>
+											<dt class="symbol-title member public inherited collapsible-symbol">
+			<h4 id="limit" class="member public inherited"><span class="name">limit</span><span class="signature-type"> :Array.&lt;number></span></h4>
 		</dt>
-<dd class="symbol-details function public inherited  collapsible-symbol">
+<dd class="symbol-details member public inherited  collapsible-symbol">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Disable an enabled sensor.</div>
-			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">Object</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description">instance</div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Sensor from &quot;j5e/sensor&quot;;
-			const sensor &#x3D; await new Sensor(12);
-			
-			// Take reading for 5 seconds and then stop
-			timer.setTimeout(function() {
-			 sensor.disable();
-			});</code></pre>
-					</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Limits the output range</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">Array.&lt;number></span></div>
+								</div>
+							</div>
 			
 			
 			
@@ -305,7 +269,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Inherited From</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#disable">module:j5e/sensor~Sensor#disable</a></p>
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#limit">module:j5e/sensor~Sensor#limit</a></p>
 								</div>
 							</div>
 			
@@ -313,7 +277,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Overrides</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#disable">module:j5e/sensor~Sensor#disable</a></p>
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#limit">module:j5e/sensor~Sensor#limit</a></p>
 								</div>
 							</div>
 			
@@ -328,7 +292,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-227">line 227</a></p>
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-115">line 115</a></p>
 								</div>
 							</div>
 			
@@ -338,6 +302,493 @@
 					</form>
 			</div>	</div>
 </dd>
+											<hr/>
+											<dt class="symbol-title member public inherited collapsible-symbol">
+			<h4 id="threshold" class="member public inherited"><span class="name">threshold</span><span class="signature-type"> :number</span></h4>
+		</dt>
+<dd class="symbol-details member public inherited  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">The minimum amount of change required to emit a "change" event</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">number</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#threshold">module:j5e/sensor~Sensor#threshold</a></p>
+								</div>
+							</div>
+			
+							<!-- overrides -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Overrides</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#threshold">module:j5e/sensor~Sensor#threshold</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-127">line 127</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public inherited collapsible-symbol">
+			<h4 id="interval" class="member public inherited"><span class="name">interval</span><span class="signature-type"> :number</span></h4>
+		</dt>
+<dd class="symbol-details member public inherited  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">The interval between readings (in ms)</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">number</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#interval">module:j5e/sensor~Sensor#interval</a></p>
+								</div>
+							</div>
+			
+							<!-- overrides -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Overrides</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#interval">module:j5e/sensor~Sensor#interval</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-139">line 139</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public inherited collapsible-symbol">
+			<h4 id="smoothing" class="member public inherited"><span class="name">smoothing</span><span class="signature-type"> :number</span></h4>
+		</dt>
+<dd class="symbol-details member public inherited  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">The number of samples to take before finding the median</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">number</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#smoothing">module:j5e/sensor~Sensor#smoothing</a></p>
+								</div>
+							</div>
+			
+							<!-- overrides -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Overrides</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#smoothing">module:j5e/sensor~Sensor#smoothing</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-159">line 159</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public inherited collapsible-symbol">
+			<h4 id="range" class="member public inherited"><span class="signature-attribs">&lt;readonly> </span><span class="name">range</span><span class="signature-type"> :Array.&lt;number></span></h4>
+		</dt>
+<dd class="symbol-details member public inherited  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">The input range of the sensor</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">Array.&lt;number></span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#range">module:j5e/sensor~Sensor#range</a></p>
+								</div>
+							</div>
+			
+							<!-- overrides -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Overrides</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#range">module:j5e/sensor~Sensor#range</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-172">line 172</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public inherited collapsible-symbol">
+			<h4 id="raw" class="member public inherited"><span class="signature-attribs">&lt;readonly> </span><span class="name">raw</span><span class="signature-type"> :number</span></h4>
+		</dt>
+<dd class="symbol-details member public inherited  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Get the most recent raw ADC reading</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">number</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#raw">module:j5e/sensor~Sensor#raw</a></p>
+								</div>
+							</div>
+			
+							<!-- overrides -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Overrides</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#raw">module:j5e/sensor~Sensor#raw</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-181">line 181</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public inherited collapsible-symbol">
+			<h4 id="resolution" class="member public inherited"><span class="signature-attribs">&lt;readonly> </span><span class="name">resolution</span><span class="signature-type"> :number</span></h4>
+		</dt>
+<dd class="symbol-details member public inherited  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">The maximum possible ADC reading</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">number</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#resolution">module:j5e/sensor~Sensor#resolution</a></p>
+								</div>
+							</div>
+			
+							<!-- overrides -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Overrides</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#resolution">module:j5e/sensor~Sensor#resolution</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-190">line 190</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public inherited collapsible-symbol">
+			<h4 id="scaled" class="member public inherited"><span class="signature-attribs">&lt;readonly> </span><span class="name">scaled</span><span class="signature-type"> :number</span></h4>
+		</dt>
+<dd class="symbol-details member public inherited  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Get the most recent scaled raw reading</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">number</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#scaled">module:j5e/sensor~Sensor#scaled</a></p>
+								</div>
+							</div>
+			
+							<!-- overrides -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Overrides</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#scaled">module:j5e/sensor~Sensor#scaled</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-199">line 199</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public inherited collapsible-symbol">
+			<h4 id="value" class="member public inherited"><span class="signature-attribs">&lt;readonly> </span><span class="name">value</span><span class="signature-type"> :number</span></h4>
+		</dt>
+<dd class="symbol-details member public inherited  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>Get</code></td>
+							<td></td>
+							<td class="last">
+									the most recent scaled median value
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">number</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#value">module:j5e/sensor~Sensor#value</a></p>
+								</div>
+							</div>
+			
+							<!-- overrides -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Overrides</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#value">module:j5e/sensor~Sensor#value</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-214">line 214</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+									</dl>
+									<h3>Methods</h3>
+									<dl class="symbol">
 											<hr/>
 											<dt class="symbol-title function public inherited collapsible-symbol">
 			<h4 id="on" class="function public inherited"><span class="name">on</span><span class="signature-params">( <span class="signature-param">event</span>, <span class="signature-param">listener</span>&nbsp;)</span><span class="signature-type"></span></h4>
@@ -584,78 +1035,6 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public inherited collapsible-symbol">
-			<h4 id="emit" class="function public inherited"><span class="name">emit</span><span class="signature-params">( <span class="signature-param">event</span>&nbsp;)</span><span class="signature-type"></span></h4>
-		</dt>
-<dd class="symbol-details function public inherited  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Emit an event</div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>event</code></td>
-							<td><span class="param-type">string</span></td>
-							<td class="last">
-									The name of the event to emit
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-							<!-- inherits -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Inherited From</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_event.Emitter.html#emit">module:j5e/event.Emitter#emit</a></p>
-								</div>
-							</div>
-			
-							<!-- overrides -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Overrides</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#emit">module:j5e/sensor~Sensor#emit</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="event_index.js.html">event/index.js</a>, <a href="event_index.js.html#line-48">line 48</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public inherited collapsible-symbol">
 			<h4 id="once" class="function public inherited"><span class="name">once</span><span class="signature-params">( <span class="signature-param">event</span>, <span class="signature-param">listener</span>&nbsp;)</span><span class="signature-type"></span></h4>
 		</dt>
 <dd class="symbol-details function public inherited  collapsible-symbol">
@@ -723,7 +1102,145 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="event_index.js.html">event/index.js</a>, <a href="event_index.js.html#line-63">line 63</a></p>
+									<p class="form-control-static"><a href="event_index.js.html">event/index.js</a>, <a href="event_index.js.html#line-64">line 64</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public inherited collapsible-symbol">
+			<h4 id="enable" class="function public inherited"><span class="name">enable</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{Object}</span></h4>
+		</dt>
+<dd class="symbol-details function public inherited  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Enable a disabled sensor.</div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Object</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description">instance</div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Sensor from &quot;j5e/sensor&quot;;
+			const sensor &#x3D; await new Sensor(12);
+			
+			sensor.disable();
+			
+			// Wait 5 seconds and then take readings
+			timer.setTimeout(function() {
+			 sensor.enable();
+			});</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#enable">module:j5e/sensor~Sensor#enable</a></p>
+								</div>
+							</div>
+			
+							<!-- overrides -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Overrides</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#enable">module:j5e/sensor~Sensor#enable</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-232">line 232</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public inherited collapsible-symbol">
+			<h4 id="disable" class="function public inherited"><span class="name">disable</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{Object}</span></h4>
+		</dt>
+<dd class="symbol-details function public inherited  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Disable an enabled sensor.</div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Object</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description">instance</div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Sensor from &quot;j5e/sensor&quot;;
+			const sensor &#x3D; await new Sensor(12);
+			
+			// Take reading for 5 seconds and then stop
+			timer.setTimeout(function() {
+			 sensor.disable();
+			});</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#disable">module:j5e/sensor~Sensor#disable</a></p>
+								</div>
+							</div>
+			
+							<!-- overrides -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Overrides</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#disable">module:j5e/sensor~Sensor#disable</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-254">line 254</a></p>
 								</div>
 							</div>
 			
@@ -788,7 +1305,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-246">line 246</a></p>
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-273">line 273</a></p>
 								</div>
 							</div>
 			
@@ -899,7 +1416,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-320">line 320</a></p>
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-347">line 347</a></p>
 								</div>
 							</div>
 			
@@ -1000,7 +1517,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-347">line 347</a></p>
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-374">line 374</a></p>
 								</div>
 							</div>
 			
@@ -1101,7 +1618,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-366">line 366</a></p>
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-393">line 393</a></p>
 								</div>
 							</div>
 			

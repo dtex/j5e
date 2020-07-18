@@ -138,16 +138,6 @@ class Servo extends Emitter {
    * @param {number} [options.offset=0] - Adjust the position of the servo for trimming
    * @param {boolean} [options.invert=false] - Reverses the direction of rotation
    * @param {boolean} [options.center=false] - Center the servo on instantiation
-   * @property {object[]} history - The last five position updates
-   * @property {object[]} history.timestamp - Timestamp of position update
-   * @property {object[]} history.target - The user requested position
-   * @property {object[]} history.degrees - The actual position (factors in offset and invert)
-   * @property {object} last - The most recent position update
-   * @property {object[]} last.timestamp - Timestamp of position update
-   * @property {object[]} last.target - The user requested position
-   * @property {object[]} last.degrees - The corrected position (factors in offset and invert)
-   * @property {object[]} last.pulseWidth - The corrected pulseWidth (factors in offset and invert)
-   * @property {number} position - The most recent request and corrected position (factors in offset and invert)
    * @example
    * &lt;caption>Sweep a servo back and forth&lt;/caption>
    * import Servo from "j5e/servo";
@@ -185,32 +175,6 @@ class Servo extends Emitter {
       this.#state.invert = options.invert || false;
       this.#state.isRunning = false;
 
-      Object.defineProperties(this, {
-        history: {
-          get: function() {
-            return this.#state.history.slice(-5);
-          }
-        },
-        last: {
-          get: function() {
-            if (this.#state.history.length) {
-              return this.#state.history[this.#state.history.length - 1];
-            } else {
-              return {
-                timestamp: Date.now(),
-                degrees: null,
-                target: null
-              };
-            }
-          }
-        },
-        position: {
-          get: function() {
-            return this.#state.history.length ? this.#state.history[this.#state.history.length - 1].degrees : -1;
-          }
-        }
-      });
-
       this.initialize(options);
 
       if (typeof options.startAt !== "undefined") {
@@ -227,6 +191,49 @@ class Servo extends Emitter {
 
       return this;
     })();
+  }
+
+  /**
+   * The last five position updates
+   * @returns {object[]}
+   * @property {date} timestamp - Timestamp of position update
+   * @property {number} target - The user requested position
+   * @property {number} degrees - The actual position (factors in offset and invert)
+   * @property {number} pulseWidth - The corrected pulseWidth (factors in offset and invert)
+   * @readonly
+   */
+  get history() {
+    return this.#state.history.slice(-5);
+  }
+
+  /**
+   * The most recent position update
+   * @returns {object}
+   * @property {date} timestamp - Timestamp of position update
+   * @property {number} target - The user requested position
+   * @property {number} degrees - The actual position (factors in offset and invert)
+   * @property {number} pulseWidth - The corrected pulseWidth (factors in offset and invert)
+   * @readonly
+   */
+  get last() {
+    if (this.#state.history.length) {
+      return this.#state.history[this.#state.history.length - 1];
+    } else {
+      return {
+        timestamp: Date.now(),
+        degrees: null,
+        target: null
+      };
+    }
+  }
+
+  /**
+   * The most recent request and corrected position (factors in offset and invert)
+   * @returns {number}
+   * @readonly
+   */
+  get position() {
+    return this.#state.history.length ? this.#state.history[this.#state.history.length - 1].degrees : -1;
   }
 
   /**

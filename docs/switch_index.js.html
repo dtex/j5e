@@ -117,8 +117,6 @@ class Switch extends Emitter {
   /**
    * Instantiate a switch
    * @param {object} options - A pin number, pin identifier or a complete IO options object (See {@tutorial C-INSTANTIATING}
-   * @property {boolean} isClosed - True if the switch is closed (current is flowing)
-   * @property {boolean} isOpen - True if the switch is open (current is not flowing)
    * @example
    * &lt;caption>Use a switch to control an LED&lt;/caption>
    * import Switch from "j5e/switch";
@@ -150,22 +148,27 @@ class Switch extends Emitter {
         }
       });
 
-      Object.defineProperties(this, {
-        isClosed: {
-          get: () => {
-            return Boolean(this.io.read());
-          }
-        },
-        isOpen: {
-          get: () => {
-            return !Boolean(this.io.read());
-          }
-        }
-      });
-
       return this;
     })();
 
+  }
+
+  /**
+   * True if the switch is closed (current is flowing)
+   * @returns {boolean}
+   * @readonly
+   */
+  get isClosed() {
+    return Boolean(this.io.read());
+  }
+
+  /**
+   * True if the switch is open (current is not flowing)
+   * @returns {boolean}
+   * @readonly
+   */
+  get isOpen() {
+    return !Boolean(this.io.read());
   }
 
 }

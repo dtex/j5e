@@ -247,112 +247,6 @@
 					</tbody>
 				</table>
 			</div>
-			<div class="callout callout-info">
-				<h5>Properties</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>history</code></td>
-							<td><span class="param-type">Array.&lt;object></span></td>
-							<td class="last">
-									The last five position updates
-										<table class="params table table-striped">
-											<thead>
-											<tr>
-													<th>Name</th>
-												<th>Type</th>
-												<th class="last">Description</th>
-											</tr>
-											</thead>
-											<tbody>
-												<tr>
-														<td><code>timestamp</code></td>
-													<td><span class="param-type">Array.&lt;object></span></td>
-													<td class="last">
-															Timestamp of position update
-													</td>
-												</tr>
-												<tr>
-														<td><code>target</code></td>
-													<td><span class="param-type">Array.&lt;object></span></td>
-													<td class="last">
-															The user requested position
-													</td>
-												</tr>
-												<tr>
-														<td><code>degrees</code></td>
-													<td><span class="param-type">Array.&lt;object></span></td>
-													<td class="last">
-															The actual position (factors in offset and invert)
-													</td>
-												</tr>
-											</tbody>
-										</table>
-							</td>
-						</tr>
-						<tr>
-								<td><code>last</code></td>
-							<td><span class="param-type">object</span></td>
-							<td class="last">
-									The most recent position update
-										<table class="params table table-striped">
-											<thead>
-											<tr>
-													<th>Name</th>
-												<th>Type</th>
-												<th class="last">Description</th>
-											</tr>
-											</thead>
-											<tbody>
-												<tr>
-														<td><code>timestamp</code></td>
-													<td><span class="param-type">Array.&lt;object></span></td>
-													<td class="last">
-															Timestamp of position update
-													</td>
-												</tr>
-												<tr>
-														<td><code>target</code></td>
-													<td><span class="param-type">Array.&lt;object></span></td>
-													<td class="last">
-															The user requested position
-													</td>
-												</tr>
-												<tr>
-														<td><code>degrees</code></td>
-													<td><span class="param-type">Array.&lt;object></span></td>
-													<td class="last">
-															The corrected position (factors in offset and invert)
-													</td>
-												</tr>
-												<tr>
-														<td><code>pulseWidth</code></td>
-													<td><span class="param-type">Array.&lt;object></span></td>
-													<td class="last">
-															The corrected pulseWidth (factors in offset and invert)
-													</td>
-												</tr>
-											</tbody>
-										</table>
-							</td>
-						</tr>
-						<tr>
-								<td><code>position</code></td>
-							<td><span class="param-type">number</span></td>
-							<td class="last">
-									The most recent request and corrected position (factors in offset and invert)
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
 			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Sweep a servo back and forth</p></div>
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Servo from &quot;j5e/servo&quot;;
@@ -402,7 +296,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-69">line 69</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-59">line 59</a></p>
 								</div>
 							</div>
 			
@@ -414,6 +308,228 @@
 </dd>
 							</dl>
 							<article class="secondary">
+									<h3>Members</h3>
+									<dl class="symbol">
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="history" class="member public"><span class="signature-attribs">&lt;readonly> </span><span class="name">history</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">The last five position updates</div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>timestamp</code></td>
+							<td><span class="param-type">date</span></td>
+							<td class="last">
+									Timestamp of position update
+							</td>
+						</tr>
+						<tr>
+								<td><code>target</code></td>
+							<td><span class="param-type">number</span></td>
+							<td class="last">
+									The user requested position
+							</td>
+						</tr>
+						<tr>
+								<td><code>degrees</code></td>
+							<td><span class="param-type">number</span></td>
+							<td class="last">
+									The actual position (factors in offset and invert)
+							</td>
+						</tr>
+						<tr>
+								<td><code>pulseWidth</code></td>
+							<td><span class="param-type">number</span></td>
+							<td class="last">
+									The corrected pulseWidth (factors in offset and invert)
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Array.&lt;object></span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-109">line 109</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="last" class="member public"><span class="signature-attribs">&lt;readonly> </span><span class="name">last</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">The most recent position update</div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>timestamp</code></td>
+							<td><span class="param-type">date</span></td>
+							<td class="last">
+									Timestamp of position update
+							</td>
+						</tr>
+						<tr>
+								<td><code>target</code></td>
+							<td><span class="param-type">number</span></td>
+							<td class="last">
+									The user requested position
+							</td>
+						</tr>
+						<tr>
+								<td><code>degrees</code></td>
+							<td><span class="param-type">number</span></td>
+							<td class="last">
+									The actual position (factors in offset and invert)
+							</td>
+						</tr>
+						<tr>
+								<td><code>pulseWidth</code></td>
+							<td><span class="param-type">number</span></td>
+							<td class="last">
+									The corrected pulseWidth (factors in offset and invert)
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">object</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-122">line 122</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="position" class="member public"><span class="signature-attribs">&lt;readonly> </span><span class="name">position</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">The most recent request and corrected position (factors in offset and invert)</div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">number</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-139">line 139</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+									</dl>
 									<h3>Methods</h3>
 									<dl class="symbol">
 											<hr/>
@@ -521,7 +637,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-203">line 203</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-210">line 210</a></p>
 								</div>
 							</div>
 			
@@ -613,7 +729,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-305">line 305</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-312">line 312</a></p>
 								</div>
 							</div>
 			
@@ -695,7 +811,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-327">line 327</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-334">line 334</a></p>
 								</div>
 							</div>
 			
@@ -777,7 +893,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-349">line 349</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-356">line 356</a></p>
 								</div>
 							</div>
 			
@@ -869,7 +985,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-381">line 381</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-388">line 388</a></p>
 								</div>
 							</div>
 			
@@ -926,7 +1042,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-400">line 400</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-407">line 407</a></p>
 								</div>
 							</div>
 			
@@ -1011,7 +1127,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-427">line 427</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-434">line 434</a></p>
 								</div>
 							</div>
 			
@@ -1060,7 +1176,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-470">line 470</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-477">line 477</a></p>
 								</div>
 							</div>
 			
@@ -1142,7 +1258,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-505">line 505</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-512">line 512</a></p>
 								</div>
 							</div>
 			
@@ -1224,7 +1340,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-529">line 529</a></p>
+									<p class="form-control-static"><a href="servo_index.js.html">servo/index.js</a>, <a href="servo_index.js.html#line-536">line 536</a></p>
 								</div>
 							</div>
 			
@@ -1394,78 +1510,6 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public inherited collapsible-symbol">
-			<h4 id="emit" class="function public inherited"><span class="name">emit</span><span class="signature-params">( <span class="signature-param">event</span>&nbsp;)</span><span class="signature-type"></span></h4>
-		</dt>
-<dd class="symbol-details function public inherited  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Emit an event</div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>event</code></td>
-							<td><span class="param-type">string</span></td>
-							<td class="last">
-									The name of the event to emit
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-							<!-- inherits -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Inherited From</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_event.Emitter.html#emit">module:j5e/event.Emitter#emit</a></p>
-								</div>
-							</div>
-			
-							<!-- overrides -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Overrides</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_event.Emitter.html#emit">module:j5e/event.Emitter#emit</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="event_index.js.html">event/index.js</a>, <a href="event_index.js.html#line-48">line 48</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public inherited collapsible-symbol">
 			<h4 id="once" class="function public inherited"><span class="name">once</span><span class="signature-params">( <span class="signature-param">event</span>, <span class="signature-param">listener</span>&nbsp;)</span><span class="signature-type"></span></h4>
 		</dt>
 <dd class="symbol-details function public inherited  collapsible-symbol">
@@ -1533,7 +1577,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="event_index.js.html">event/index.js</a>, <a href="event_index.js.html#line-63">line 63</a></p>
+									<p class="form-control-static"><a href="event_index.js.html">event/index.js</a>, <a href="event_index.js.html#line-64">line 64</a></p>
 								</div>
 							</div>
 			
