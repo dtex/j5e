@@ -14,6 +14,7 @@
     "j5e/sensor": "$(j5e)/lib/sensor/*",
     "j5e/servo": "$(j5e)/lib/servo/*",
     "j5e/switch": "$(j5e)/lib/switch/*",
+    "j5e/thermometer": "$(j5e)/lib/thermometer/*",
     "j5e/withinable": "$(j5e)/lib/withinable/*"
   },
   "preload": [],

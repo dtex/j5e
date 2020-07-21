@@ -1,0 +1,20 @@
+{
+  "include": [],
+  "modules": {
+    "*": [],
+    "j5e/thermometer": "$(j5e)/lib/thermometer/*",
+    "j5e/sensor": "$(j5e)/lib/sensor/*",
+    "j5e/withinable": "$(j5e)/lib/withinable/*"
+  },
+  "preload": [
+    "j5e/thermometer",
+    "j5e/sensor",
+    "j5e/withinable"
+  ],
+  "platforms": {
+    "esp": {},
+    "...": {
+      "error": "Experimental TC53 IO modules unsupported"
+    }
+  }
+}

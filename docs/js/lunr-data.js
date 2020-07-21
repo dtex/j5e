@@ -143,6 +143,274 @@ window.lunrData = {
           "onc",
           "time"
         ],
+        "module-j5e_thermometer-Thermometer.html": [
+          "allow",
+          "analog",
+          "class",
+          "control",
+          "j5e/thermometer~thermomet",
+          "lt;async&gt",
+          "module:j5e/thermometer~thermomet",
+          "thermistor",
+          "thermomet"
+        ],
+        "module-j5e_thermometer-Thermometer.html#celsius": [
+          "celsiu",
+          "degre",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/thermometer~thermometer#celsiu",
+          "number"
+        ],
+        "module-j5e_thermometer-Thermometer.html#C": [
+          "alia",
+          "c",
+          "celsiu",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/thermometer~thermometer#c",
+          "number"
+        ],
+        "module-j5e_thermometer-Thermometer.html#fahrenheit": [
+          "degre",
+          "fahrenheit",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/thermometer~thermometer#fahrenheit",
+          "number"
+        ],
+        "module-j5e_thermometer-Thermometer.html#F": [
+          "alia",
+          "f",
+          "fahrenheit",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/thermometer~thermometer#f",
+          "number"
+        ],
+        "module-j5e_thermometer-Thermometer.html#kelvin": [
+          "degre",
+          "kelvin",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/thermometer~thermometer#kelvin",
+          "number"
+        ],
+        "module-j5e_thermometer-Thermometer.html#K": [
+          "alia",
+          "k",
+          "kelvin",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/thermometer~thermometer#k",
+          "number"
+        ],
+        "module-j5e_thermometer-Thermometer.html#limit": [
+          "array.&lt;number&gt",
+          "limit",
+          "member",
+          "module:j5e/thermometer~thermometer#limit",
+          "output",
+          "rang"
+        ],
+        "module-j5e_thermometer-Thermometer.html#threshold": [
+          "amount",
+          "chang",
+          "emit",
+          "event",
+          "member",
+          "minimum",
+          "module:j5e/thermometer~thermometer#threshold",
+          "number",
+          "requir",
+          "threshold"
+        ],
+        "module-j5e_thermometer-Thermometer.html#interval": [
+          "between",
+          "interv",
+          "member",
+          "module:j5e/thermometer~thermometer#interv",
+          "ms",
+          "number",
+          "read"
+        ],
+        "module-j5e_thermometer-Thermometer.html#smoothing": [
+          "befor",
+          "find",
+          "median",
+          "member",
+          "module:j5e/thermometer~thermometer#smooth",
+          "number",
+          "sampl",
+          "smooth",
+          "take"
+        ],
+        "module-j5e_thermometer-Thermometer.html#samples": [
+          "befor",
+          "find",
+          "median",
+          "member",
+          "module:j5e/thermometer~thermometer#sampl",
+          "number",
+          "sampl",
+          "take"
+        ],
+        "module-j5e_thermometer-Thermometer.html#range": [
+          "array.&lt;number&gt",
+          "input",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/thermometer~thermometer#rang",
+          "rang",
+          "sensor"
+        ],
+        "module-j5e_thermometer-Thermometer.html#raw": [
+          "adc",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/thermometer~thermometer#raw",
+          "number",
+          "raw",
+          "read",
+          "recent"
+        ],
+        "module-j5e_thermometer-Thermometer.html#median": [
+          "adc",
+          "lt;readonly&gt",
+          "median",
+          "member",
+          "module:j5e/thermometer~thermometer#median",
+          "number",
+          "read",
+          "recent"
+        ],
+        "module-j5e_thermometer-Thermometer.html#resolution": [
+          "adc",
+          "lt;readonly&gt",
+          "maximum",
+          "member",
+          "module:j5e/thermometer~thermometer#resolut",
+          "number",
+          "possibl",
+          "read",
+          "resolut"
+        ],
+        "module-j5e_thermometer-Thermometer.html#scaled": [
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/thermometer~thermometer#sc",
+          "number",
+          "raw",
+          "read",
+          "recent",
+          "scale"
+        ],
+        "module-j5e_thermometer-Thermometer.html#value": [
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/thermometer~thermometer#valu",
+          "number",
+          "valu"
+        ],
+        "module-j5e_thermometer-Thermometer.html#on": [
+          "creat",
+          "event",
+          "function",
+          "listen",
+          "module:j5e/thermometer~thermometer#on"
+        ],
+        "module-j5e_thermometer-Thermometer.html#within": [
+          "callback",
+          "certain",
+          "fire",
+          "function",
+          "module:j5e/thermometer~thermometer#within",
+          "rang",
+          "unit",
+          "valu",
+          "within"
+        ],
+        "module-j5e_thermometer-Thermometer.html#removeListener": [
+          "event",
+          "function",
+          "listen",
+          "module:j5e/thermometer~thermometer#removelisten",
+          "remov",
+          "removelisten"
+        ],
+        "module-j5e_thermometer-Thermometer.html#once": [
+          "creat",
+          "event",
+          "fire",
+          "function",
+          "listen",
+          "module:j5e/thermometer~thermometer#onc",
+          "on",
+          "onc",
+          "time"
+        ],
+        "module-j5e_thermometer-Thermometer.html#enable": [
+          "disabl",
+          "enabl",
+          "function",
+          "module:j5e/thermometer~thermometer#en",
+          "object",
+          "sensor"
+        ],
+        "module-j5e_thermometer-Thermometer.html#disable": [
+          "disabl",
+          "enabl",
+          "function",
+          "module:j5e/thermometer~thermometer#dis",
+          "object",
+          "sensor"
+        ],
+        "module-j5e_thermometer-Thermometer.html#read": [
+          "function",
+          "module:j5e/thermometer~thermometer#read",
+          "number",
+          "read",
+          "sensor",
+          "synchron"
+        ],
+        "module-j5e_thermometer-Thermometer.html#scale": [
+          "function",
+          "high",
+          "low",
+          "module:j5e/thermometer~thermometer#scal",
+          "object",
+          "rang",
+          "scale",
+          "scale/scaleto",
+          "set",
+          "valu"
+        ],
+        "module-j5e_thermometer-Thermometer.html#scaleTo": [
+          "function",
+          "high",
+          "integ",
+          "low",
+          "module:j5e/thermometer~thermometer#scaleto",
+          "number",
+          "represent",
+          "scale",
+          "scaleto",
+          "valu"
+        ],
+        "module-j5e_thermometer-Thermometer.html#fscaleTo": [
+          "float",
+          "fscaleto",
+          "function",
+          "high",
+          "low",
+          "module:j5e/thermometer~thermometer#fscaleto",
+          "number",
+          "precis",
+          "represent",
+          "scale",
+          "singl",
+          "valu"
+        ],
         "module-j5e_servo-Servo.html": [
           "allow",
           "class",
@@ -324,204 +592,6 @@ window.lunrData = {
           "onc",
           "time"
         ],
-        "module-j5e_sensor-Sensor.html": [
-          "adc",
-          "allow",
-          "class",
-          "connect",
-          "devic",
-          "input",
-          "j5e/sensor~sensor",
-          "lt;async&gt",
-          "module:j5e/sensor~sensor",
-          "sensor"
-        ],
-        "module-j5e_sensor-Sensor.html#limit": [
-          "array.&lt;number&gt",
-          "limit",
-          "member",
-          "module:j5e/sensor~sensor#limit",
-          "output",
-          "rang"
-        ],
-        "module-j5e_sensor-Sensor.html#threshold": [
-          "amount",
-          "chang",
-          "emit",
-          "event",
-          "member",
-          "minimum",
-          "module:j5e/sensor~sensor#threshold",
-          "number",
-          "requir",
-          "threshold"
-        ],
-        "module-j5e_sensor-Sensor.html#interval": [
-          "between",
-          "interv",
-          "member",
-          "module:j5e/sensor~sensor#interv",
-          "ms",
-          "number",
-          "read"
-        ],
-        "module-j5e_sensor-Sensor.html#smoothing": [
-          "befor",
-          "find",
-          "median",
-          "member",
-          "module:j5e/sensor~sensor#smooth",
-          "number",
-          "sampl",
-          "smooth",
-          "take"
-        ],
-        "module-j5e_sensor-Sensor.html#range": [
-          "array.&lt;number&gt",
-          "input",
-          "lt;readonly&gt",
-          "member",
-          "module:j5e/sensor~sensor#rang",
-          "rang",
-          "sensor"
-        ],
-        "module-j5e_sensor-Sensor.html#raw": [
-          "adc",
-          "lt;readonly&gt",
-          "member",
-          "module:j5e/sensor~sensor#raw",
-          "number",
-          "raw",
-          "read",
-          "recent"
-        ],
-        "module-j5e_sensor-Sensor.html#resolution": [
-          "adc",
-          "lt;readonly&gt",
-          "maximum",
-          "member",
-          "module:j5e/sensor~sensor#resolut",
-          "number",
-          "possibl",
-          "read",
-          "resolut"
-        ],
-        "module-j5e_sensor-Sensor.html#scaled": [
-          "lt;readonly&gt",
-          "member",
-          "module:j5e/sensor~sensor#sc",
-          "number",
-          "raw",
-          "read",
-          "recent",
-          "scale"
-        ],
-        "module-j5e_sensor-Sensor.html#value": [
-          "lt;readonly&gt",
-          "member",
-          "module:j5e/sensor~sensor#valu",
-          "number",
-          "valu"
-        ],
-        "module-j5e_sensor-Sensor.html#on": [
-          "creat",
-          "event",
-          "function",
-          "listen",
-          "module:j5e/sensor~sensor#on"
-        ],
-        "module-j5e_sensor-Sensor.html#within": [
-          "callback",
-          "certain",
-          "fire",
-          "function",
-          "module:j5e/sensor~sensor#within",
-          "rang",
-          "unit",
-          "valu",
-          "within"
-        ],
-        "module-j5e_sensor-Sensor.html#enable": [
-          "disabl",
-          "enabl",
-          "function",
-          "module:j5e/sensor~sensor#en",
-          "object",
-          "sensor"
-        ],
-        "module-j5e_sensor-Sensor.html#disable": [
-          "disabl",
-          "enabl",
-          "function",
-          "module:j5e/sensor~sensor#dis",
-          "object",
-          "sensor"
-        ],
-        "module-j5e_sensor-Sensor.html#read": [
-          "function",
-          "module:j5e/sensor~sensor#read",
-          "number",
-          "read",
-          "sensor",
-          "synchron"
-        ],
-        "module-j5e_sensor-Sensor.html#scale": [
-          "function",
-          "high",
-          "low",
-          "module:j5e/sensor~sensor#scal",
-          "object",
-          "rang",
-          "scale",
-          "scale/scaleto",
-          "set",
-          "valu"
-        ],
-        "module-j5e_sensor-Sensor.html#scaleTo": [
-          "function",
-          "high",
-          "integ",
-          "low",
-          "module:j5e/sensor~sensor#scaleto",
-          "number",
-          "represent",
-          "scale",
-          "scaleto",
-          "valu"
-        ],
-        "module-j5e_sensor-Sensor.html#fscaleTo": [
-          "float",
-          "fscaleto",
-          "function",
-          "high",
-          "low",
-          "module:j5e/sensor~sensor#fscaleto",
-          "number",
-          "precis",
-          "represent",
-          "scale",
-          "singl",
-          "valu"
-        ],
-        "module-j5e_sensor-Sensor.html#removeListener": [
-          "event",
-          "function",
-          "listen",
-          "module:j5e/sensor~sensor#removelisten",
-          "remov",
-          "removelisten"
-        ],
-        "module-j5e_sensor-Sensor.html#once": [
-          "creat",
-          "event",
-          "fire",
-          "function",
-          "listen",
-          "module:j5e/sensor~sensor#onc",
-          "on",
-          "onc",
-          "time"
-        ],
         "module-j5e_relay-Relay.html": [
           "allow",
           "class",
@@ -595,18 +665,6 @@ window.lunrData = {
           "module:j5e/light~light",
           "photoresistor"
         ],
-        "module-j5e_light-Light.html#level": [
-          "0,1",
-          "current",
-          "level",
-          "lt;readonly&gt",
-          "member",
-          "module:j5e/light~light#level",
-          "number",
-          "return",
-          "scale",
-          "valu"
-        ],
         "module-j5e_light-Light.html#limit": [
           "array.&lt;number&gt",
           "limit",
@@ -647,6 +705,16 @@ window.lunrData = {
           "smooth",
           "take"
         ],
+        "module-j5e_light-Light.html#samples": [
+          "befor",
+          "find",
+          "median",
+          "member",
+          "module:j5e/light~light#sampl",
+          "number",
+          "sampl",
+          "take"
+        ],
         "module-j5e_light-Light.html#range": [
           "array.&lt;number&gt",
           "input",
@@ -663,6 +731,16 @@ window.lunrData = {
           "module:j5e/light~light#raw",
           "number",
           "raw",
+          "read",
+          "recent"
+        ],
+        "module-j5e_light-Light.html#median": [
+          "adc",
+          "lt;readonly&gt",
+          "median",
+          "member",
+          "module:j5e/light~light#median",
+          "number",
           "read",
           "recent"
         ],
@@ -692,6 +770,54 @@ window.lunrData = {
           "member",
           "module:j5e/light~light#valu",
           "number",
+          "valu"
+        ],
+        "module-j5e_light-Light.html#level": [
+          "0,1",
+          "current",
+          "level",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/light~light#level",
+          "number",
+          "return",
+          "scale",
+          "valu"
+        ],
+        "module-j5e_light-Light.html#enable": [
+          "disabl",
+          "enabl",
+          "function",
+          "module:j5e/light~light#en",
+          "object",
+          "sensor"
+        ],
+        "module-j5e_light-Light.html#disable": [
+          "disabl",
+          "enabl",
+          "function",
+          "module:j5e/light~light#dis",
+          "object",
+          "sensor"
+        ],
+        "module-j5e_light-Light.html#read": [
+          "function",
+          "module:j5e/light~light#read",
+          "number",
+          "read",
+          "sensor",
+          "synchron"
+        ],
+        "module-j5e_light-Light.html#scale": [
+          "function",
+          "high",
+          "low",
+          "module:j5e/light~light#scal",
+          "object",
+          "rang",
+          "scale",
+          "scale/scaleto",
+          "set",
           "valu"
         ],
         "module-j5e_light-Light.html#on": [
@@ -730,42 +856,6 @@ window.lunrData = {
           "on",
           "onc",
           "time"
-        ],
-        "module-j5e_light-Light.html#enable": [
-          "disabl",
-          "enabl",
-          "function",
-          "module:j5e/light~light#en",
-          "object",
-          "sensor"
-        ],
-        "module-j5e_light-Light.html#disable": [
-          "disabl",
-          "enabl",
-          "function",
-          "module:j5e/light~light#dis",
-          "object",
-          "sensor"
-        ],
-        "module-j5e_light-Light.html#read": [
-          "function",
-          "module:j5e/light~light#read",
-          "number",
-          "read",
-          "sensor",
-          "synchron"
-        ],
-        "module-j5e_light-Light.html#scale": [
-          "function",
-          "high",
-          "low",
-          "module:j5e/light~light#scal",
-          "object",
-          "rang",
-          "scale",
-          "scale/scaleto",
-          "set",
-          "valu"
         ],
         "module-j5e_light-Light.html#scaleTo": [
           "function",
@@ -1160,6 +1250,224 @@ window.lunrData = {
           "puls",
           "stop"
         ],
+        "module-j5e_sensor-Sensor.html": [
+          "adc",
+          "allow",
+          "class",
+          "connect",
+          "devic",
+          "input",
+          "j5e/sensor~sensor",
+          "lt;async&gt",
+          "module:j5e/sensor~sensor",
+          "sensor"
+        ],
+        "module-j5e_sensor-Sensor.html#limit": [
+          "array.&lt;number&gt",
+          "limit",
+          "member",
+          "module:j5e/sensor~sensor#limit",
+          "output",
+          "rang"
+        ],
+        "module-j5e_sensor-Sensor.html#threshold": [
+          "amount",
+          "chang",
+          "emit",
+          "event",
+          "member",
+          "minimum",
+          "module:j5e/sensor~sensor#threshold",
+          "number",
+          "requir",
+          "threshold"
+        ],
+        "module-j5e_sensor-Sensor.html#interval": [
+          "between",
+          "interv",
+          "member",
+          "module:j5e/sensor~sensor#interv",
+          "ms",
+          "number",
+          "read"
+        ],
+        "module-j5e_sensor-Sensor.html#smoothing": [
+          "befor",
+          "find",
+          "median",
+          "member",
+          "module:j5e/sensor~sensor#smooth",
+          "number",
+          "sampl",
+          "smooth",
+          "take"
+        ],
+        "module-j5e_sensor-Sensor.html#samples": [
+          "befor",
+          "find",
+          "median",
+          "member",
+          "module:j5e/sensor~sensor#sampl",
+          "number",
+          "sampl",
+          "take"
+        ],
+        "module-j5e_sensor-Sensor.html#range": [
+          "array.&lt;number&gt",
+          "input",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/sensor~sensor#rang",
+          "rang",
+          "sensor"
+        ],
+        "module-j5e_sensor-Sensor.html#raw": [
+          "adc",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/sensor~sensor#raw",
+          "number",
+          "raw",
+          "read",
+          "recent"
+        ],
+        "module-j5e_sensor-Sensor.html#median": [
+          "adc",
+          "lt;readonly&gt",
+          "median",
+          "member",
+          "module:j5e/sensor~sensor#median",
+          "number",
+          "read",
+          "recent"
+        ],
+        "module-j5e_sensor-Sensor.html#resolution": [
+          "adc",
+          "lt;readonly&gt",
+          "maximum",
+          "member",
+          "module:j5e/sensor~sensor#resolut",
+          "number",
+          "possibl",
+          "read",
+          "resolut"
+        ],
+        "module-j5e_sensor-Sensor.html#scaled": [
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/sensor~sensor#sc",
+          "number",
+          "raw",
+          "read",
+          "recent",
+          "scale"
+        ],
+        "module-j5e_sensor-Sensor.html#value": [
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/sensor~sensor#valu",
+          "number",
+          "valu"
+        ],
+        "module-j5e_sensor-Sensor.html#on": [
+          "creat",
+          "event",
+          "function",
+          "listen",
+          "module:j5e/sensor~sensor#on"
+        ],
+        "module-j5e_sensor-Sensor.html#within": [
+          "callback",
+          "certain",
+          "fire",
+          "function",
+          "module:j5e/sensor~sensor#within",
+          "rang",
+          "unit",
+          "valu",
+          "within"
+        ],
+        "module-j5e_sensor-Sensor.html#removeListener": [
+          "event",
+          "function",
+          "listen",
+          "module:j5e/sensor~sensor#removelisten",
+          "remov",
+          "removelisten"
+        ],
+        "module-j5e_sensor-Sensor.html#once": [
+          "creat",
+          "event",
+          "fire",
+          "function",
+          "listen",
+          "module:j5e/sensor~sensor#onc",
+          "on",
+          "onc",
+          "time"
+        ],
+        "module-j5e_sensor-Sensor.html#scale": [
+          "function",
+          "high",
+          "low",
+          "module:j5e/sensor~sensor#scal",
+          "object",
+          "rang",
+          "scale",
+          "scale/scaleto",
+          "set",
+          "valu"
+        ],
+        "module-j5e_sensor-Sensor.html#scaleTo": [
+          "function",
+          "high",
+          "integ",
+          "low",
+          "module:j5e/sensor~sensor#scaleto",
+          "number",
+          "represent",
+          "scale",
+          "scaleto",
+          "valu"
+        ],
+        "module-j5e_sensor-Sensor.html#fscaleTo": [
+          "float",
+          "fscaleto",
+          "function",
+          "high",
+          "low",
+          "module:j5e/sensor~sensor#fscaleto",
+          "number",
+          "precis",
+          "represent",
+          "scale",
+          "singl",
+          "valu"
+        ],
+        "module-j5e_sensor-Sensor.html#enable": [
+          "disabl",
+          "enabl",
+          "function",
+          "module:j5e/sensor~sensor#en",
+          "object",
+          "sensor"
+        ],
+        "module-j5e_sensor-Sensor.html#disable": [
+          "disabl",
+          "enabl",
+          "function",
+          "module:j5e/sensor~sensor#dis",
+          "object",
+          "sensor"
+        ],
+        "module-j5e_sensor-Sensor.html#read": [
+          "function",
+          "module:j5e/sensor~sensor#read",
+          "number",
+          "read",
+          "sensor",
+          "synchron"
+        ],
         "module-j5e_rgb-RGB.html": [
           "allow",
           "class",
@@ -1209,25 +1517,6 @@ window.lunrData = {
           "module:j5e/rgb~rgb#valu",
           "rgb",
           "valu"
-        ],
-        "module-j5e_rgb-RGB.html#animate": [
-          "anim",
-          "function",
-          "led",
-          "module:j5e/rgb~rgb#anim",
-          "option",
-          "rgb"
-        ],
-        "module-j5e_rgb-RGB.html#stop": [
-          "anim",
-          "blink",
-          "fade",
-          "function",
-          "led",
-          "module:j5e/rgb~rgb#stop",
-          "puls",
-          "rgb",
-          "stop"
         ],
         "module-j5e_rgb-RGB.html#color": [
           "accept",
@@ -1320,6 +1609,25 @@ window.lunrData = {
           "module:j5e/rgb~rgb#puls",
           "puls",
           "rgb"
+        ],
+        "module-j5e_rgb-RGB.html#animate": [
+          "anim",
+          "function",
+          "led",
+          "module:j5e/rgb~rgb#anim",
+          "option",
+          "rgb"
+        ],
+        "module-j5e_rgb-RGB.html#stop": [
+          "anim",
+          "blink",
+          "fade",
+          "function",
+          "led",
+          "module:j5e/rgb~rgb#stop",
+          "puls",
+          "rgb",
+          "stop"
         ],
         "module-j5e_animation.html": [
           "anim",
@@ -1435,6 +1743,13 @@ window.lunrData = {
           "switch",
           "work"
         ],
+        "module-j5e_thermometer.html": [
+          "class",
+          "j5e/thermomet",
+          "modul",
+          "module:j5e/thermomet",
+          "templat"
+        ],
         "module-j5e_fn-timer.html": [
           "clearinterv",
           "global",
@@ -1453,7 +1768,7 @@ window.lunrData = {
           "xs"
         ]
       },
-      "length": 138
+      "length": 171
     },
     "tokenStore": {
       "root": {
@@ -1567,8 +1882,8 @@ window.lunrData = {
               "docs": {},
               "t": {
                 "docs": {
-                  "module-j5e_sensor-Sensor.html#threshold": {
-                    "ref": "module-j5e_sensor-Sensor.html#threshold",
+                  "module-j5e_thermometer-Thermometer.html#threshold": {
+                    "ref": "module-j5e_thermometer-Thermometer.html#threshold",
                     "tf": 7.142857142857142
                   },
                   "module-j5e_light-Light.html#threshold": {
@@ -1577,6 +1892,10 @@ window.lunrData = {
                   },
                   "module-j5e_led-LED.html": {
                     "ref": "module-j5e_led-LED.html",
+                    "tf": 7.142857142857142
+                  },
+                  "module-j5e_sensor-Sensor.html#threshold": {
+                    "ref": "module-j5e_sensor-Sensor.html#threshold",
                     "tf": 7.142857142857142
                   },
                   "module-j5e_led.html": {
@@ -1607,6 +1926,22 @@ window.lunrData = {
                       "ref": "module-j5e_switch-Switch.html#once",
                       "tf": 41.66666666666666
                     },
+                    "module-j5e_thermometer-Thermometer.html#threshold": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#threshold",
+                      "tf": 7.142857142857142
+                    },
+                    "module-j5e_thermometer-Thermometer.html#on": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#on",
+                      "tf": 66.66666666666666
+                    },
+                    "module-j5e_thermometer-Thermometer.html#removeListener": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#removeListener",
+                      "tf": 49.99999999999999
+                    },
+                    "module-j5e_thermometer-Thermometer.html#once": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#once",
+                      "tf": 41.66666666666666
+                    },
                     "module-j5e_servo-Servo.html#on": {
                       "ref": "module-j5e_servo-Servo.html#on",
                       "tf": 66.66666666666666
@@ -1617,22 +1952,6 @@ window.lunrData = {
                     },
                     "module-j5e_servo-Servo.html#once": {
                       "ref": "module-j5e_servo-Servo.html#once",
-                      "tf": 41.66666666666666
-                    },
-                    "module-j5e_sensor-Sensor.html#threshold": {
-                      "ref": "module-j5e_sensor-Sensor.html#threshold",
-                      "tf": 7.142857142857142
-                    },
-                    "module-j5e_sensor-Sensor.html#on": {
-                      "ref": "module-j5e_sensor-Sensor.html#on",
-                      "tf": 66.66666666666666
-                    },
-                    "module-j5e_sensor-Sensor.html#removeListener": {
-                      "ref": "module-j5e_sensor-Sensor.html#removeListener",
-                      "tf": 49.99999999999999
-                    },
-                    "module-j5e_sensor-Sensor.html#once": {
-                      "ref": "module-j5e_sensor-Sensor.html#once",
                       "tf": 41.66666666666666
                     },
                     "module-j5e_light-Light.html#threshold": {
@@ -1678,6 +1997,22 @@ window.lunrData = {
                     "module-j5e_button-Button.html#once": {
                       "ref": "module-j5e_button-Button.html#once",
                       "tf": 41.66666666666666
+                    },
+                    "module-j5e_sensor-Sensor.html#threshold": {
+                      "ref": "module-j5e_sensor-Sensor.html#threshold",
+                      "tf": 7.142857142857142
+                    },
+                    "module-j5e_sensor-Sensor.html#on": {
+                      "ref": "module-j5e_sensor-Sensor.html#on",
+                      "tf": 66.66666666666666
+                    },
+                    "module-j5e_sensor-Sensor.html#removeListener": {
+                      "ref": "module-j5e_sensor-Sensor.html#removeListener",
+                      "tf": 49.99999999999999
+                    },
+                    "module-j5e_sensor-Sensor.html#once": {
+                      "ref": "module-j5e_sensor-Sensor.html#once",
+                      "tf": 41.66666666666666
                     }
                   }
                 }
@@ -1692,12 +2027,12 @@ window.lunrData = {
                 "docs": {},
                 "l": {
                   "docs": {
-                    "module-j5e_sensor-Sensor.html#enable": {
-                      "ref": "module-j5e_sensor-Sensor.html#enable",
+                    "module-j5e_thermometer-Thermometer.html#enable": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#enable",
                       "tf": 716.6666666666666
                     },
-                    "module-j5e_sensor-Sensor.html#disable": {
-                      "ref": "module-j5e_sensor-Sensor.html#disable",
+                    "module-j5e_thermometer-Thermometer.html#disable": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#disable",
                       "tf": 16.666666666666664
                     },
                     "module-j5e_light-Light.html#enable": {
@@ -1706,6 +2041,14 @@ window.lunrData = {
                     },
                     "module-j5e_light-Light.html#disable": {
                       "ref": "module-j5e_light-Light.html#disable",
+                      "tf": 16.666666666666664
+                    },
+                    "module-j5e_sensor-Sensor.html#enable": {
+                      "ref": "module-j5e_sensor-Sensor.html#enable",
+                      "tf": 716.6666666666666
+                    },
+                    "module-j5e_sensor-Sensor.html#disable": {
+                      "ref": "module-j5e_sensor-Sensor.html#disable",
                       "tf": 16.666666666666664
                     }
                   }
@@ -1758,7 +2101,12 @@ window.lunrData = {
           }
         },
         "f": {
-          "docs": {},
+          "docs": {
+            "module-j5e_thermometer-Thermometer.html#F": {
+              "ref": "module-j5e_thermometer-Thermometer.html#F",
+              "tf": 683.3333333333334
+            }
+          },
           "i": {
             "docs": {},
             "v": {
@@ -1784,16 +2132,16 @@ window.lunrData = {
                     "ref": "module-j5e_switch-Switch.html#once",
                     "tf": 8.333333333333332
                   },
+                  "module-j5e_thermometer-Thermometer.html#within": {
+                    "ref": "module-j5e_thermometer-Thermometer.html#within",
+                    "tf": 8.333333333333332
+                  },
+                  "module-j5e_thermometer-Thermometer.html#once": {
+                    "ref": "module-j5e_thermometer-Thermometer.html#once",
+                    "tf": 8.333333333333332
+                  },
                   "module-j5e_servo-Servo.html#once": {
                     "ref": "module-j5e_servo-Servo.html#once",
-                    "tf": 8.333333333333332
-                  },
-                  "module-j5e_sensor-Sensor.html#within": {
-                    "ref": "module-j5e_sensor-Sensor.html#within",
-                    "tf": 8.333333333333332
-                  },
-                  "module-j5e_sensor-Sensor.html#once": {
-                    "ref": "module-j5e_sensor-Sensor.html#once",
                     "tf": 8.333333333333332
                   },
                   "module-j5e_light-Light.html#within": {
@@ -1815,6 +2163,14 @@ window.lunrData = {
                   "module-j5e_button-Button.html#once": {
                     "ref": "module-j5e_button-Button.html#once",
                     "tf": 8.333333333333332
+                  },
+                  "module-j5e_sensor-Sensor.html#within": {
+                    "ref": "module-j5e_sensor-Sensor.html#within",
+                    "tf": 8.333333333333332
+                  },
+                  "module-j5e_sensor-Sensor.html#once": {
+                    "ref": "module-j5e_sensor-Sensor.html#once",
+                    "tf": 8.333333333333332
                   }
                 }
               }
@@ -1823,12 +2179,28 @@ window.lunrData = {
               "docs": {},
               "d": {
                 "docs": {
-                  "module-j5e_sensor-Sensor.html#smoothing": {
-                    "ref": "module-j5e_sensor-Sensor.html#smoothing",
+                  "module-j5e_thermometer-Thermometer.html#smoothing": {
+                    "ref": "module-j5e_thermometer-Thermometer.html#smoothing",
+                    "tf": 8.333333333333332
+                  },
+                  "module-j5e_thermometer-Thermometer.html#samples": {
+                    "ref": "module-j5e_thermometer-Thermometer.html#samples",
                     "tf": 8.333333333333332
                   },
                   "module-j5e_light-Light.html#smoothing": {
                     "ref": "module-j5e_light-Light.html#smoothing",
+                    "tf": 8.333333333333332
+                  },
+                  "module-j5e_light-Light.html#samples": {
+                    "ref": "module-j5e_light-Light.html#samples",
+                    "tf": 8.333333333333332
+                  },
+                  "module-j5e_sensor-Sensor.html#smoothing": {
+                    "ref": "module-j5e_sensor-Sensor.html#smoothing",
+                    "tf": 8.333333333333332
+                  },
+                  "module-j5e_sensor-Sensor.html#samples": {
+                    "ref": "module-j5e_sensor-Sensor.html#samples",
                     "tf": 8.333333333333332
                   }
                 }
@@ -1890,12 +2262,16 @@ window.lunrData = {
                 "docs": {},
                 "t": {
                   "docs": {
-                    "module-j5e_sensor-Sensor.html#fscaleTo": {
-                      "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
+                    "module-j5e_thermometer-Thermometer.html#fscaleTo": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#fscaleTo",
                       "tf": 7.142857142857142
                     },
                     "module-j5e_light-Light.html#fscaleTo": {
                       "ref": "module-j5e_light-Light.html#fscaleTo",
+                      "tf": 7.142857142857142
+                    },
+                    "module-j5e_sensor-Sensor.html#fscaleTo": {
+                      "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
                       "tf": 7.142857142857142
                     }
                   }
@@ -1941,6 +2317,46 @@ window.lunrData = {
                           },
                           "module-j5e_switch-Switch.html#once": {
                             "ref": "module-j5e_switch-Switch.html#once",
+                            "tf": 110
+                          },
+                          "module-j5e_thermometer-Thermometer.html#on": {
+                            "ref": "module-j5e_thermometer-Thermometer.html#on",
+                            "tf": 110
+                          },
+                          "module-j5e_thermometer-Thermometer.html#within": {
+                            "ref": "module-j5e_thermometer-Thermometer.html#within",
+                            "tf": 110
+                          },
+                          "module-j5e_thermometer-Thermometer.html#removeListener": {
+                            "ref": "module-j5e_thermometer-Thermometer.html#removeListener",
+                            "tf": 110
+                          },
+                          "module-j5e_thermometer-Thermometer.html#once": {
+                            "ref": "module-j5e_thermometer-Thermometer.html#once",
+                            "tf": 110
+                          },
+                          "module-j5e_thermometer-Thermometer.html#enable": {
+                            "ref": "module-j5e_thermometer-Thermometer.html#enable",
+                            "tf": 110
+                          },
+                          "module-j5e_thermometer-Thermometer.html#disable": {
+                            "ref": "module-j5e_thermometer-Thermometer.html#disable",
+                            "tf": 110
+                          },
+                          "module-j5e_thermometer-Thermometer.html#read": {
+                            "ref": "module-j5e_thermometer-Thermometer.html#read",
+                            "tf": 110
+                          },
+                          "module-j5e_thermometer-Thermometer.html#scale": {
+                            "ref": "module-j5e_thermometer-Thermometer.html#scale",
+                            "tf": 110
+                          },
+                          "module-j5e_thermometer-Thermometer.html#scaleTo": {
+                            "ref": "module-j5e_thermometer-Thermometer.html#scaleTo",
+                            "tf": 110
+                          },
+                          "module-j5e_thermometer-Thermometer.html#fscaleTo": {
+                            "ref": "module-j5e_thermometer-Thermometer.html#fscaleTo",
                             "tf": 110
                           },
                           "module-j5e_servo-Servo.html#to": {
@@ -1995,46 +2411,6 @@ window.lunrData = {
                             "ref": "module-j5e_servo-Servo.html#once",
                             "tf": 110
                           },
-                          "module-j5e_sensor-Sensor.html#on": {
-                            "ref": "module-j5e_sensor-Sensor.html#on",
-                            "tf": 110
-                          },
-                          "module-j5e_sensor-Sensor.html#within": {
-                            "ref": "module-j5e_sensor-Sensor.html#within",
-                            "tf": 110
-                          },
-                          "module-j5e_sensor-Sensor.html#enable": {
-                            "ref": "module-j5e_sensor-Sensor.html#enable",
-                            "tf": 110
-                          },
-                          "module-j5e_sensor-Sensor.html#disable": {
-                            "ref": "module-j5e_sensor-Sensor.html#disable",
-                            "tf": 110
-                          },
-                          "module-j5e_sensor-Sensor.html#read": {
-                            "ref": "module-j5e_sensor-Sensor.html#read",
-                            "tf": 110
-                          },
-                          "module-j5e_sensor-Sensor.html#scale": {
-                            "ref": "module-j5e_sensor-Sensor.html#scale",
-                            "tf": 110
-                          },
-                          "module-j5e_sensor-Sensor.html#scaleTo": {
-                            "ref": "module-j5e_sensor-Sensor.html#scaleTo",
-                            "tf": 110
-                          },
-                          "module-j5e_sensor-Sensor.html#fscaleTo": {
-                            "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
-                            "tf": 110
-                          },
-                          "module-j5e_sensor-Sensor.html#removeListener": {
-                            "ref": "module-j5e_sensor-Sensor.html#removeListener",
-                            "tf": 110
-                          },
-                          "module-j5e_sensor-Sensor.html#once": {
-                            "ref": "module-j5e_sensor-Sensor.html#once",
-                            "tf": 110
-                          },
                           "module-j5e_relay-Relay.html#close": {
                             "ref": "module-j5e_relay-Relay.html#close",
                             "tf": 110
@@ -2045,22 +2421,6 @@ window.lunrData = {
                           },
                           "module-j5e_relay-Relay.html#toggle": {
                             "ref": "module-j5e_relay-Relay.html#toggle",
-                            "tf": 110
-                          },
-                          "module-j5e_light-Light.html#on": {
-                            "ref": "module-j5e_light-Light.html#on",
-                            "tf": 110
-                          },
-                          "module-j5e_light-Light.html#within": {
-                            "ref": "module-j5e_light-Light.html#within",
-                            "tf": 110
-                          },
-                          "module-j5e_light-Light.html#removeListener": {
-                            "ref": "module-j5e_light-Light.html#removeListener",
-                            "tf": 110
-                          },
-                          "module-j5e_light-Light.html#once": {
-                            "ref": "module-j5e_light-Light.html#once",
                             "tf": 110
                           },
                           "module-j5e_light-Light.html#enable": {
@@ -2077,6 +2437,22 @@ window.lunrData = {
                           },
                           "module-j5e_light-Light.html#scale": {
                             "ref": "module-j5e_light-Light.html#scale",
+                            "tf": 110
+                          },
+                          "module-j5e_light-Light.html#on": {
+                            "ref": "module-j5e_light-Light.html#on",
+                            "tf": 110
+                          },
+                          "module-j5e_light-Light.html#within": {
+                            "ref": "module-j5e_light-Light.html#within",
+                            "tf": 110
+                          },
+                          "module-j5e_light-Light.html#removeListener": {
+                            "ref": "module-j5e_light-Light.html#removeListener",
+                            "tf": 110
+                          },
+                          "module-j5e_light-Light.html#once": {
+                            "ref": "module-j5e_light-Light.html#once",
                             "tf": 110
                           },
                           "module-j5e_light-Light.html#scaleTo": {
@@ -2179,12 +2555,44 @@ window.lunrData = {
                             "ref": "module-j5e_led-LED.html#stop",
                             "tf": 110
                           },
-                          "module-j5e_rgb-RGB.html#animate": {
-                            "ref": "module-j5e_rgb-RGB.html#animate",
+                          "module-j5e_sensor-Sensor.html#on": {
+                            "ref": "module-j5e_sensor-Sensor.html#on",
                             "tf": 110
                           },
-                          "module-j5e_rgb-RGB.html#stop": {
-                            "ref": "module-j5e_rgb-RGB.html#stop",
+                          "module-j5e_sensor-Sensor.html#within": {
+                            "ref": "module-j5e_sensor-Sensor.html#within",
+                            "tf": 110
+                          },
+                          "module-j5e_sensor-Sensor.html#removeListener": {
+                            "ref": "module-j5e_sensor-Sensor.html#removeListener",
+                            "tf": 110
+                          },
+                          "module-j5e_sensor-Sensor.html#once": {
+                            "ref": "module-j5e_sensor-Sensor.html#once",
+                            "tf": 110
+                          },
+                          "module-j5e_sensor-Sensor.html#scale": {
+                            "ref": "module-j5e_sensor-Sensor.html#scale",
+                            "tf": 110
+                          },
+                          "module-j5e_sensor-Sensor.html#scaleTo": {
+                            "ref": "module-j5e_sensor-Sensor.html#scaleTo",
+                            "tf": 110
+                          },
+                          "module-j5e_sensor-Sensor.html#fscaleTo": {
+                            "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
+                            "tf": 110
+                          },
+                          "module-j5e_sensor-Sensor.html#enable": {
+                            "ref": "module-j5e_sensor-Sensor.html#enable",
+                            "tf": 110
+                          },
+                          "module-j5e_sensor-Sensor.html#disable": {
+                            "ref": "module-j5e_sensor-Sensor.html#disable",
+                            "tf": 110
+                          },
+                          "module-j5e_sensor-Sensor.html#read": {
+                            "ref": "module-j5e_sensor-Sensor.html#read",
                             "tf": 110
                           },
                           "module-j5e_rgb-RGB.html#color": {
@@ -2219,6 +2627,14 @@ window.lunrData = {
                             "ref": "module-j5e_rgb-RGB.html#pulse",
                             "tf": 110
                           },
+                          "module-j5e_rgb-RGB.html#animate": {
+                            "ref": "module-j5e_rgb-RGB.html#animate",
+                            "tf": 110
+                          },
+                          "module-j5e_rgb-RGB.html#stop": {
+                            "ref": "module-j5e_rgb-RGB.html#stop",
+                            "tf": 110
+                          },
                           "module-j5e_easing.html": {
                             "ref": "module-j5e_easing.html",
                             "tf": 12.5
@@ -2248,6 +2664,39 @@ window.lunrData = {
           },
           "a": {
             "docs": {},
+            "h": {
+              "docs": {},
+              "r": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "n": {
+                    "docs": {},
+                    "h": {
+                      "docs": {},
+                      "e": {
+                        "docs": {},
+                        "i": {
+                          "docs": {},
+                          "t": {
+                            "docs": {
+                              "module-j5e_thermometer-Thermometer.html#fahrenheit": {
+                                "ref": "module-j5e_thermometer-Thermometer.html#fahrenheit",
+                                "tf": 708.3333333333334
+                              },
+                              "module-j5e_thermometer-Thermometer.html#F": {
+                                "ref": "module-j5e_thermometer-Thermometer.html#F",
+                                "tf": 25
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
             "c": {
               "docs": {},
               "t": {
@@ -2285,10 +2734,6 @@ window.lunrData = {
                     "ref": "module-j5e_led-LED.html#stop",
                     "tf": 7.142857142857142
                   },
-                  "module-j5e_rgb-RGB.html#stop": {
-                    "ref": "module-j5e_rgb-RGB.html#stop",
-                    "tf": 7.142857142857142
-                  },
                   "module-j5e_rgb-RGB.html#fade": {
                     "ref": "module-j5e_rgb-RGB.html#fade",
                     "tf": 682.5
@@ -2296,6 +2741,10 @@ window.lunrData = {
                   "module-j5e_rgb-RGB.html#fadeIn": {
                     "ref": "module-j5e_rgb-RGB.html#fadeIn",
                     "tf": 16.666666666666664
+                  },
+                  "module-j5e_rgb-RGB.html#stop": {
+                    "ref": "module-j5e_rgb-RGB.html#stop",
+                    "tf": 7.142857142857142
                   }
                 },
                 "i": {
@@ -2344,12 +2793,16 @@ window.lunrData = {
                       "docs": {},
                       "o": {
                         "docs": {
-                          "module-j5e_sensor-Sensor.html#fscaleTo": {
-                            "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
+                          "module-j5e_thermometer-Thermometer.html#fscaleTo": {
+                            "ref": "module-j5e_thermometer-Thermometer.html#fscaleTo",
                             "tf": 677.1428571428571
                           },
                           "module-j5e_light-Light.html#fscaleTo": {
                             "ref": "module-j5e_light-Light.html#fscaleTo",
+                            "tf": 677.1428571428571
+                          },
+                          "module-j5e_sensor-Sensor.html#fscaleTo": {
+                            "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
                             "tf": 677.1428571428571
                           }
                         }
@@ -2418,6 +2871,96 @@ window.lunrData = {
                 }
               }
             },
+            "t": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "v": {
+                    "docs": {
+                      "module-j5e_thermometer-Thermometer.html#interval": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#interval",
+                        "tf": 712.5
+                      },
+                      "module-j5e_light-Light.html#interval": {
+                        "ref": "module-j5e_light-Light.html#interval",
+                        "tf": 712.5
+                      },
+                      "module-j5e_led-LED.html#blink": {
+                        "ref": "module-j5e_led-LED.html#blink",
+                        "tf": 12.5
+                      },
+                      "module-j5e_sensor-Sensor.html#interval": {
+                        "ref": "module-j5e_sensor-Sensor.html#interval",
+                        "tf": 712.5
+                      },
+                      "module-j5e_rgb-RGB.html#blink": {
+                        "ref": "module-j5e_rgb-RGB.html#blink",
+                        "tf": 10
+                      },
+                      "module-j5e_rgb-RGB.html#pulse": {
+                        "ref": "module-j5e_rgb-RGB.html#pulse",
+                        "tf": 10
+                      }
+                    }
+                  }
+                },
+                "g": {
+                  "docs": {
+                    "module-j5e_thermometer-Thermometer.html#scaleTo": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#scaleTo",
+                      "tf": 10
+                    },
+                    "module-j5e_light-Light.html#scaleTo": {
+                      "ref": "module-j5e_light-Light.html#scaleTo",
+                      "tf": 10
+                    },
+                    "module-j5e_sensor-Sensor.html#scaleTo": {
+                      "ref": "module-j5e_sensor-Sensor.html#scaleTo",
+                      "tf": 10
+                    }
+                  }
+                },
+                "n": {
+                  "docs": {},
+                  "s": {
+                    "docs": {
+                      "module-j5e_led-LED.html#intensity": {
+                        "ref": "module-j5e_led-LED.html#intensity",
+                        "tf": 683.3333333333334
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "p": {
+              "docs": {},
+              "u": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "module-j5e_thermometer-Thermometer.html#range": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#range",
+                      "tf": 16.666666666666664
+                    },
+                    "module-j5e_light-Light.html#range": {
+                      "ref": "module-j5e_light-Light.html#range",
+                      "tf": 16.666666666666664
+                    },
+                    "module-j5e_sensor-Sensor.html": {
+                      "ref": "module-j5e_sensor-Sensor.html",
+                      "tf": 6.25
+                    },
+                    "module-j5e_sensor-Sensor.html#range": {
+                      "ref": "module-j5e_sensor-Sensor.html#range",
+                      "tf": 16.666666666666664
+                    }
+                  }
+                }
+              }
+            },
             "v": {
               "docs": {},
               "e": {
@@ -2437,84 +2980,6 @@ window.lunrData = {
                       "module-j5e_button-Button.html#upValue": {
                         "ref": "module-j5e_button-Button.html#upValue",
                         "tf": 8.333333333333332
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "p": {
-              "docs": {},
-              "u": {
-                "docs": {},
-                "t": {
-                  "docs": {
-                    "module-j5e_sensor-Sensor.html": {
-                      "ref": "module-j5e_sensor-Sensor.html",
-                      "tf": 6.25
-                    },
-                    "module-j5e_sensor-Sensor.html#range": {
-                      "ref": "module-j5e_sensor-Sensor.html#range",
-                      "tf": 16.666666666666664
-                    },
-                    "module-j5e_light-Light.html#range": {
-                      "ref": "module-j5e_light-Light.html#range",
-                      "tf": 16.666666666666664
-                    }
-                  }
-                }
-              }
-            },
-            "t": {
-              "docs": {},
-              "e": {
-                "docs": {},
-                "r": {
-                  "docs": {},
-                  "v": {
-                    "docs": {
-                      "module-j5e_sensor-Sensor.html#interval": {
-                        "ref": "module-j5e_sensor-Sensor.html#interval",
-                        "tf": 712.5
-                      },
-                      "module-j5e_light-Light.html#interval": {
-                        "ref": "module-j5e_light-Light.html#interval",
-                        "tf": 712.5
-                      },
-                      "module-j5e_led-LED.html#blink": {
-                        "ref": "module-j5e_led-LED.html#blink",
-                        "tf": 12.5
-                      },
-                      "module-j5e_rgb-RGB.html#blink": {
-                        "ref": "module-j5e_rgb-RGB.html#blink",
-                        "tf": 10
-                      },
-                      "module-j5e_rgb-RGB.html#pulse": {
-                        "ref": "module-j5e_rgb-RGB.html#pulse",
-                        "tf": 10
-                      }
-                    }
-                  }
-                },
-                "g": {
-                  "docs": {
-                    "module-j5e_sensor-Sensor.html#scaleTo": {
-                      "ref": "module-j5e_sensor-Sensor.html#scaleTo",
-                      "tf": 10
-                    },
-                    "module-j5e_light-Light.html#scaleTo": {
-                      "ref": "module-j5e_light-Light.html#scaleTo",
-                      "tf": 10
-                    }
-                  }
-                },
-                "n": {
-                  "docs": {},
-                  "s": {
-                    "docs": {
-                      "module-j5e_led-LED.html#intensity": {
-                        "ref": "module-j5e_led-LED.html#intensity",
-                        "tf": 683.3333333333334
                       }
                     }
                   }
@@ -2904,6 +3369,79 @@ window.lunrData = {
                     }
                   }
                 },
+                "t": {
+                  "docs": {},
+                  "h": {
+                    "docs": {},
+                    "e": {
+                      "docs": {},
+                      "r": {
+                        "docs": {},
+                        "m": {
+                          "docs": {},
+                          "o": {
+                            "docs": {},
+                            "m": {
+                              "docs": {},
+                              "e": {
+                                "docs": {},
+                                "t": {
+                                  "docs": {
+                                    "module-j5e_thermometer.html": {
+                                      "ref": "module-j5e_thermometer.html",
+                                      "tf": 600
+                                    }
+                                  },
+                                  "e": {
+                                    "docs": {},
+                                    "r": {
+                                      "docs": {},
+                                      "~": {
+                                        "docs": {},
+                                        "t": {
+                                          "docs": {},
+                                          "h": {
+                                            "docs": {},
+                                            "e": {
+                                              "docs": {},
+                                              "r": {
+                                                "docs": {},
+                                                "m": {
+                                                  "docs": {},
+                                                  "o": {
+                                                    "docs": {},
+                                                    "m": {
+                                                      "docs": {},
+                                                      "e": {
+                                                        "docs": {},
+                                                        "t": {
+                                                          "docs": {
+                                                            "module-j5e_thermometer-Thermometer.html": {
+                                                              "ref": "module-j5e_thermometer-Thermometer.html",
+                                                              "tf": 50
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
                 "r": {
                   "docs": {},
                   "e": {
@@ -3216,24 +3754,28 @@ window.lunrData = {
               "docs": {},
               "d": {
                 "docs": {
-                  "module-j5e_sensor-Sensor.html#interval": {
-                    "ref": "module-j5e_sensor-Sensor.html#interval",
+                  "module-j5e_thermometer-Thermometer.html#interval": {
+                    "ref": "module-j5e_thermometer-Thermometer.html#interval",
                     "tf": 12.5
                   },
-                  "module-j5e_sensor-Sensor.html#raw": {
-                    "ref": "module-j5e_sensor-Sensor.html#raw",
+                  "module-j5e_thermometer-Thermometer.html#raw": {
+                    "ref": "module-j5e_thermometer-Thermometer.html#raw",
                     "tf": 12.5
                   },
-                  "module-j5e_sensor-Sensor.html#resolution": {
-                    "ref": "module-j5e_sensor-Sensor.html#resolution",
+                  "module-j5e_thermometer-Thermometer.html#median": {
+                    "ref": "module-j5e_thermometer-Thermometer.html#median",
                     "tf": 12.5
                   },
-                  "module-j5e_sensor-Sensor.html#scaled": {
-                    "ref": "module-j5e_sensor-Sensor.html#scaled",
+                  "module-j5e_thermometer-Thermometer.html#resolution": {
+                    "ref": "module-j5e_thermometer-Thermometer.html#resolution",
                     "tf": 12.5
                   },
-                  "module-j5e_sensor-Sensor.html#read": {
-                    "ref": "module-j5e_sensor-Sensor.html#read",
+                  "module-j5e_thermometer-Thermometer.html#scaled": {
+                    "ref": "module-j5e_thermometer-Thermometer.html#scaled",
+                    "tf": 12.5
+                  },
+                  "module-j5e_thermometer-Thermometer.html#read": {
+                    "ref": "module-j5e_thermometer-Thermometer.html#read",
                     "tf": 716.6666666666666
                   },
                   "module-j5e_light-Light.html#interval": {
@@ -3242,6 +3784,10 @@ window.lunrData = {
                   },
                   "module-j5e_light-Light.html#raw": {
                     "ref": "module-j5e_light-Light.html#raw",
+                    "tf": 12.5
+                  },
+                  "module-j5e_light-Light.html#median": {
+                    "ref": "module-j5e_light-Light.html#median",
                     "tf": 12.5
                   },
                   "module-j5e_light-Light.html#resolution": {
@@ -3254,6 +3800,30 @@ window.lunrData = {
                   },
                   "module-j5e_light-Light.html#read": {
                     "ref": "module-j5e_light-Light.html#read",
+                    "tf": 716.6666666666666
+                  },
+                  "module-j5e_sensor-Sensor.html#interval": {
+                    "ref": "module-j5e_sensor-Sensor.html#interval",
+                    "tf": 12.5
+                  },
+                  "module-j5e_sensor-Sensor.html#raw": {
+                    "ref": "module-j5e_sensor-Sensor.html#raw",
+                    "tf": 12.5
+                  },
+                  "module-j5e_sensor-Sensor.html#median": {
+                    "ref": "module-j5e_sensor-Sensor.html#median",
+                    "tf": 12.5
+                  },
+                  "module-j5e_sensor-Sensor.html#resolution": {
+                    "ref": "module-j5e_sensor-Sensor.html#resolution",
+                    "tf": 12.5
+                  },
+                  "module-j5e_sensor-Sensor.html#scaled": {
+                    "ref": "module-j5e_sensor-Sensor.html#scaled",
+                    "tf": 12.5
+                  },
+                  "module-j5e_sensor-Sensor.html#read": {
+                    "ref": "module-j5e_sensor-Sensor.html#read",
                     "tf": 716.6666666666666
                   }
                 },
@@ -3277,12 +3847,12 @@ window.lunrData = {
                       "ref": "module-j5e_switch-Switch.html#removeListener",
                       "tf": 16.666666666666664
                     },
-                    "module-j5e_servo-Servo.html#removeListener": {
-                      "ref": "module-j5e_servo-Servo.html#removeListener",
+                    "module-j5e_thermometer-Thermometer.html#removeListener": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#removeListener",
                       "tf": 16.666666666666664
                     },
-                    "module-j5e_sensor-Sensor.html#removeListener": {
-                      "ref": "module-j5e_sensor-Sensor.html#removeListener",
+                    "module-j5e_servo-Servo.html#removeListener": {
+                      "ref": "module-j5e_servo-Servo.html#removeListener",
                       "tf": 16.666666666666664
                     },
                     "module-j5e_light-Light.html#removeListener": {
@@ -3295,6 +3865,10 @@ window.lunrData = {
                     },
                     "module-j5e_button-Button.html#removeListener": {
                       "ref": "module-j5e_button-Button.html#removeListener",
+                      "tf": 16.666666666666664
+                    },
+                    "module-j5e_sensor-Sensor.html#removeListener": {
+                      "ref": "module-j5e_sensor-Sensor.html#removeListener",
                       "tf": 16.666666666666664
                     }
                   },
@@ -3316,12 +3890,12 @@ window.lunrData = {
                                     "ref": "module-j5e_switch-Switch.html#removeListener",
                                     "tf": 683.3333333333334
                                   },
-                                  "module-j5e_servo-Servo.html#removeListener": {
-                                    "ref": "module-j5e_servo-Servo.html#removeListener",
+                                  "module-j5e_thermometer-Thermometer.html#removeListener": {
+                                    "ref": "module-j5e_thermometer-Thermometer.html#removeListener",
                                     "tf": 683.3333333333334
                                   },
-                                  "module-j5e_sensor-Sensor.html#removeListener": {
-                                    "ref": "module-j5e_sensor-Sensor.html#removeListener",
+                                  "module-j5e_servo-Servo.html#removeListener": {
+                                    "ref": "module-j5e_servo-Servo.html#removeListener",
                                     "tf": 683.3333333333334
                                   },
                                   "module-j5e_light-Light.html#removeListener": {
@@ -3335,6 +3909,10 @@ window.lunrData = {
                                   "module-j5e_button-Button.html#removeListener": {
                                     "ref": "module-j5e_button-Button.html#removeListener",
                                     "tf": 683.3333333333334
+                                  },
+                                  "module-j5e_sensor-Sensor.html#removeListener": {
+                                    "ref": "module-j5e_sensor-Sensor.html#removeListener",
+                                    "tf": 683.3333333333334
                                   }
                                 }
                               }
@@ -3347,67 +3925,16 @@ window.lunrData = {
                 }
               }
             },
-            "c": {
-              "docs": {},
-              "e": {
-                "docs": {},
-                "n": {
-                  "docs": {},
-                  "t": {
-                    "docs": {
-                      "module-j5e_servo-Servo.html#last": {
-                        "ref": "module-j5e_servo-Servo.html#last",
-                        "tf": 16.666666666666664
-                      },
-                      "module-j5e_servo-Servo.html#position": {
-                        "ref": "module-j5e_servo-Servo.html#position",
-                        "tf": 7.142857142857142
-                      },
-                      "module-j5e_sensor-Sensor.html#raw": {
-                        "ref": "module-j5e_sensor-Sensor.html#raw",
-                        "tf": 12.5
-                      },
-                      "module-j5e_sensor-Sensor.html#scaled": {
-                        "ref": "module-j5e_sensor-Sensor.html#scaled",
-                        "tf": 12.5
-                      },
-                      "module-j5e_light-Light.html#raw": {
-                        "ref": "module-j5e_light-Light.html#raw",
-                        "tf": 12.5
-                      },
-                      "module-j5e_light-Light.html#scaled": {
-                        "ref": "module-j5e_light-Light.html#scaled",
-                        "tf": 12.5
-                      }
-                    }
-                  }
-                }
-              }
-            },
             "q": {
               "docs": {},
               "u": {
                 "docs": {},
-                "e": {
-                  "docs": {},
-                  "s": {
-                    "docs": {},
-                    "t": {
-                      "docs": {
-                        "module-j5e_servo-Servo.html#position": {
-                          "ref": "module-j5e_servo-Servo.html#position",
-                          "tf": 7.142857142857142
-                        }
-                      }
-                    }
-                  }
-                },
                 "i": {
                   "docs": {},
                   "r": {
                     "docs": {
-                      "module-j5e_sensor-Sensor.html#threshold": {
-                        "ref": "module-j5e_sensor-Sensor.html#threshold",
+                      "module-j5e_thermometer-Thermometer.html#threshold": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#threshold",
                         "tf": 7.142857142857142
                       },
                       "module-j5e_light-Light.html#threshold": {
@@ -3437,31 +3964,81 @@ window.lunrData = {
                       "module-j5e_led-LED.html#pulse": {
                         "ref": "module-j5e_led-LED.html#pulse",
                         "tf": 4.166666666666666
+                      },
+                      "module-j5e_sensor-Sensor.html#threshold": {
+                        "ref": "module-j5e_sensor-Sensor.html#threshold",
+                        "tf": 7.142857142857142
+                      }
+                    }
+                  }
+                },
+                "e": {
+                  "docs": {},
+                  "s": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "module-j5e_servo-Servo.html#position": {
+                          "ref": "module-j5e_servo-Servo.html#position",
+                          "tf": 7.142857142857142
+                        }
                       }
                     }
                   }
                 }
               }
             },
-            "t": {
+            "c": {
               "docs": {},
-              "u": {
+              "e": {
                 "docs": {},
-                "r": {
+                "n": {
                   "docs": {},
-                  "n": {
+                  "t": {
                     "docs": {
-                      "module-j5e_servo-Servo.html#home": {
-                        "ref": "module-j5e_servo-Servo.html#home",
+                      "module-j5e_thermometer-Thermometer.html#raw": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#raw",
                         "tf": 12.5
                       },
-                      "module-j5e_servo-Servo.html#stop": {
-                        "ref": "module-j5e_servo-Servo.html#stop",
-                        "tf": 10
+                      "module-j5e_thermometer-Thermometer.html#median": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#median",
+                        "tf": 12.5
                       },
-                      "module-j5e_light-Light.html#level": {
-                        "ref": "module-j5e_light-Light.html#level",
-                        "tf": 10
+                      "module-j5e_thermometer-Thermometer.html#scaled": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#scaled",
+                        "tf": 12.5
+                      },
+                      "module-j5e_servo-Servo.html#last": {
+                        "ref": "module-j5e_servo-Servo.html#last",
+                        "tf": 16.666666666666664
+                      },
+                      "module-j5e_servo-Servo.html#position": {
+                        "ref": "module-j5e_servo-Servo.html#position",
+                        "tf": 7.142857142857142
+                      },
+                      "module-j5e_light-Light.html#raw": {
+                        "ref": "module-j5e_light-Light.html#raw",
+                        "tf": 12.5
+                      },
+                      "module-j5e_light-Light.html#median": {
+                        "ref": "module-j5e_light-Light.html#median",
+                        "tf": 12.5
+                      },
+                      "module-j5e_light-Light.html#scaled": {
+                        "ref": "module-j5e_light-Light.html#scaled",
+                        "tf": 12.5
+                      },
+                      "module-j5e_sensor-Sensor.html#raw": {
+                        "ref": "module-j5e_sensor-Sensor.html#raw",
+                        "tf": 12.5
+                      },
+                      "module-j5e_sensor-Sensor.html#median": {
+                        "ref": "module-j5e_sensor-Sensor.html#median",
+                        "tf": 12.5
+                      },
+                      "module-j5e_sensor-Sensor.html#scaled": {
+                        "ref": "module-j5e_sensor-Sensor.html#scaled",
+                        "tf": 12.5
                       }
                     }
                   }
@@ -3478,12 +4055,16 @@ window.lunrData = {
                     "docs": {},
                     "t": {
                       "docs": {
-                        "module-j5e_sensor-Sensor.html#resolution": {
-                          "ref": "module-j5e_sensor-Sensor.html#resolution",
+                        "module-j5e_thermometer-Thermometer.html#resolution": {
+                          "ref": "module-j5e_thermometer-Thermometer.html#resolution",
                           "tf": 683.3333333333334
                         },
                         "module-j5e_light-Light.html#resolution": {
                           "ref": "module-j5e_light-Light.html#resolution",
+                          "tf": 683.3333333333334
+                        },
+                        "module-j5e_sensor-Sensor.html#resolution": {
+                          "ref": "module-j5e_sensor-Sensor.html#resolution",
                           "tf": 683.3333333333334
                         }
                       }
@@ -3522,12 +4103,12 @@ window.lunrData = {
                         "docs": {},
                         "t": {
                           "docs": {
-                            "module-j5e_sensor-Sensor.html#scaleTo": {
-                              "ref": "module-j5e_sensor-Sensor.html#scaleTo",
+                            "module-j5e_thermometer-Thermometer.html#scaleTo": {
+                              "ref": "module-j5e_thermometer-Thermometer.html#scaleTo",
                               "tf": 10
                             },
-                            "module-j5e_sensor-Sensor.html#fscaleTo": {
-                              "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
+                            "module-j5e_thermometer-Thermometer.html#fscaleTo": {
+                              "ref": "module-j5e_thermometer-Thermometer.html#fscaleTo",
                               "tf": 7.142857142857142
                             },
                             "module-j5e_light-Light.html#scaleTo": {
@@ -3537,9 +4118,42 @@ window.lunrData = {
                             "module-j5e_light-Light.html#fscaleTo": {
                               "ref": "module-j5e_light-Light.html#fscaleTo",
                               "tf": 7.142857142857142
+                            },
+                            "module-j5e_sensor-Sensor.html#scaleTo": {
+                              "ref": "module-j5e_sensor-Sensor.html#scaleTo",
+                              "tf": 10
+                            },
+                            "module-j5e_sensor-Sensor.html#fscaleTo": {
+                              "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
+                              "tf": 7.142857142857142
                             }
                           }
                         }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "t": {
+              "docs": {},
+              "u": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "n": {
+                    "docs": {
+                      "module-j5e_servo-Servo.html#home": {
+                        "ref": "module-j5e_servo-Servo.html#home",
+                        "tf": 12.5
+                      },
+                      "module-j5e_servo-Servo.html#stop": {
+                        "ref": "module-j5e_servo-Servo.html#stop",
+                        "tf": 10
+                      },
+                      "module-j5e_light-Light.html#level": {
+                        "ref": "module-j5e_light-Light.html#level",
+                        "tf": 10
                       }
                     }
                   }
@@ -3599,24 +4213,45 @@ window.lunrData = {
           },
           "a": {
             "docs": {},
-            "t": {
-              "docs": {},
-              "e": {
-                "docs": {
-                  "module-j5e_servo-Servo.html#to": {
-                    "ref": "module-j5e_servo-Servo.html#to",
-                    "tf": 25
-                  }
-                }
-              }
-            },
             "n": {
               "docs": {},
               "g": {
                 "docs": {
+                  "module-j5e_thermometer-Thermometer.html#limit": {
+                    "ref": "module-j5e_thermometer-Thermometer.html#limit",
+                    "tf": 16.666666666666664
+                  },
+                  "module-j5e_thermometer-Thermometer.html#range": {
+                    "ref": "module-j5e_thermometer-Thermometer.html#range",
+                    "tf": 700
+                  },
+                  "module-j5e_thermometer-Thermometer.html#within": {
+                    "ref": "module-j5e_thermometer-Thermometer.html#within",
+                    "tf": 33.33333333333333
+                  },
+                  "module-j5e_thermometer-Thermometer.html#scale": {
+                    "ref": "module-j5e_thermometer-Thermometer.html#scale",
+                    "tf": 10
+                  },
                   "module-j5e_servo-Servo.html#sweep": {
                     "ref": "module-j5e_servo-Servo.html#sweep",
                     "tf": 7.142857142857142
+                  },
+                  "module-j5e_light-Light.html#limit": {
+                    "ref": "module-j5e_light-Light.html#limit",
+                    "tf": 16.666666666666664
+                  },
+                  "module-j5e_light-Light.html#range": {
+                    "ref": "module-j5e_light-Light.html#range",
+                    "tf": 700
+                  },
+                  "module-j5e_light-Light.html#scale": {
+                    "ref": "module-j5e_light-Light.html#scale",
+                    "tf": 10
+                  },
+                  "module-j5e_light-Light.html#within": {
+                    "ref": "module-j5e_light-Light.html#within",
+                    "tf": 33.33333333333333
                   },
                   "module-j5e_sensor-Sensor.html#limit": {
                     "ref": "module-j5e_sensor-Sensor.html#limit",
@@ -3633,34 +4268,18 @@ window.lunrData = {
                   "module-j5e_sensor-Sensor.html#scale": {
                     "ref": "module-j5e_sensor-Sensor.html#scale",
                     "tf": 10
-                  },
-                  "module-j5e_light-Light.html#limit": {
-                    "ref": "module-j5e_light-Light.html#limit",
-                    "tf": 16.666666666666664
-                  },
-                  "module-j5e_light-Light.html#range": {
-                    "ref": "module-j5e_light-Light.html#range",
-                    "tf": 700
-                  },
-                  "module-j5e_light-Light.html#within": {
-                    "ref": "module-j5e_light-Light.html#within",
-                    "tf": 33.33333333333333
-                  },
-                  "module-j5e_light-Light.html#scale": {
-                    "ref": "module-j5e_light-Light.html#scale",
-                    "tf": 10
                   }
                 }
               }
             },
             "w": {
               "docs": {
-                "module-j5e_sensor-Sensor.html#raw": {
-                  "ref": "module-j5e_sensor-Sensor.html#raw",
+                "module-j5e_thermometer-Thermometer.html#raw": {
+                  "ref": "module-j5e_thermometer-Thermometer.html#raw",
                   "tf": 695.8333333333334
                 },
-                "module-j5e_sensor-Sensor.html#scaled": {
-                  "ref": "module-j5e_sensor-Sensor.html#scaled",
+                "module-j5e_thermometer-Thermometer.html#scaled": {
+                  "ref": "module-j5e_thermometer-Thermometer.html#scaled",
                   "tf": 12.5
                 },
                 "module-j5e_light-Light.html#raw": {
@@ -3678,6 +4297,25 @@ window.lunrData = {
                 "module-j5e_button-Button.html#upValue": {
                   "ref": "module-j5e_button-Button.html#upValue",
                   "tf": 8.333333333333332
+                },
+                "module-j5e_sensor-Sensor.html#raw": {
+                  "ref": "module-j5e_sensor-Sensor.html#raw",
+                  "tf": 695.8333333333334
+                },
+                "module-j5e_sensor-Sensor.html#scaled": {
+                  "ref": "module-j5e_sensor-Sensor.html#scaled",
+                  "tf": 12.5
+                }
+              }
+            },
+            "t": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "module-j5e_servo-Servo.html#to": {
+                    "ref": "module-j5e_servo-Servo.html#to",
+                    "tf": 25
+                  }
                 }
               }
             }
@@ -3735,14 +4373,6 @@ window.lunrData = {
                   "ref": "module-j5e_rgb-RGB.html#values",
                   "tf": 16.666666666666664
                 },
-                "module-j5e_rgb-RGB.html#animate": {
-                  "ref": "module-j5e_rgb-RGB.html#animate",
-                  "tf": 49.99999999999999
-                },
-                "module-j5e_rgb-RGB.html#stop": {
-                  "ref": "module-j5e_rgb-RGB.html#stop",
-                  "tf": 57.14285714285714
-                },
                 "module-j5e_rgb-RGB.html#color": {
                   "ref": "module-j5e_rgb-RGB.html#color",
                   "tf": 25.88235294117647
@@ -3774,6 +4404,14 @@ window.lunrData = {
                 "module-j5e_rgb-RGB.html#pulse": {
                   "ref": "module-j5e_rgb-RGB.html#pulse",
                   "tf": 35
+                },
+                "module-j5e_rgb-RGB.html#animate": {
+                  "ref": "module-j5e_rgb-RGB.html#animate",
+                  "tf": 49.99999999999999
+                },
+                "module-j5e_rgb-RGB.html#stop": {
+                  "ref": "module-j5e_rgb-RGB.html#stop",
+                  "tf": 57.14285714285714
                 },
                 "module-j5e_animation.html": {
                   "ref": "module-j5e_animation.html",
@@ -3835,12 +4473,16 @@ window.lunrData = {
                       "docs": {},
                       "n": {
                         "docs": {
-                          "module-j5e_sensor-Sensor.html#read": {
-                            "ref": "module-j5e_sensor-Sensor.html#read",
+                          "module-j5e_thermometer-Thermometer.html#read": {
+                            "ref": "module-j5e_thermometer-Thermometer.html#read",
                             "tf": 16.666666666666664
                           },
                           "module-j5e_light-Light.html#read": {
                             "ref": "module-j5e_light-Light.html#read",
+                            "tf": 16.666666666666664
+                          },
+                          "module-j5e_sensor-Sensor.html#read": {
+                            "ref": "module-j5e_sensor-Sensor.html#read",
                             "tf": 16.666666666666664
                           }
                         }
@@ -4002,6 +4644,162 @@ window.lunrData = {
                 }
               }
             },
+            "n": {
+              "docs": {},
+              "s": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "r": {
+                    "docs": {
+                      "module-j5e_thermometer-Thermometer.html#range": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#range",
+                        "tf": 16.666666666666664
+                      },
+                      "module-j5e_thermometer-Thermometer.html#enable": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#enable",
+                        "tf": 16.666666666666664
+                      },
+                      "module-j5e_thermometer-Thermometer.html#disable": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#disable",
+                        "tf": 16.666666666666664
+                      },
+                      "module-j5e_thermometer-Thermometer.html#read": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#read",
+                        "tf": 16.666666666666664
+                      },
+                      "module-j5e_light-Light.html#range": {
+                        "ref": "module-j5e_light-Light.html#range",
+                        "tf": 16.666666666666664
+                      },
+                      "module-j5e_light-Light.html#enable": {
+                        "ref": "module-j5e_light-Light.html#enable",
+                        "tf": 16.666666666666664
+                      },
+                      "module-j5e_light-Light.html#disable": {
+                        "ref": "module-j5e_light-Light.html#disable",
+                        "tf": 16.666666666666664
+                      },
+                      "module-j5e_light-Light.html#read": {
+                        "ref": "module-j5e_light-Light.html#read",
+                        "tf": 16.666666666666664
+                      },
+                      "module-j5e_sensor-Sensor.html": {
+                        "ref": "module-j5e_sensor-Sensor.html",
+                        "tf": 512.5
+                      },
+                      "module-j5e_sensor-Sensor.html#range": {
+                        "ref": "module-j5e_sensor-Sensor.html#range",
+                        "tf": 16.666666666666664
+                      },
+                      "module-j5e_sensor-Sensor.html#enable": {
+                        "ref": "module-j5e_sensor-Sensor.html#enable",
+                        "tf": 16.666666666666664
+                      },
+                      "module-j5e_sensor-Sensor.html#disable": {
+                        "ref": "module-j5e_sensor-Sensor.html#disable",
+                        "tf": 16.666666666666664
+                      },
+                      "module-j5e_sensor-Sensor.html#read": {
+                        "ref": "module-j5e_sensor-Sensor.html#read",
+                        "tf": 16.666666666666664
+                      },
+                      "module-j5e_sensor.html": {
+                        "ref": "module-j5e_sensor.html",
+                        "tf": 12.5
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "t": {
+              "docs": {
+                "module-j5e_thermometer-Thermometer.html#scale": {
+                  "ref": "module-j5e_thermometer-Thermometer.html#scale",
+                  "tf": 10
+                },
+                "module-j5e_servo-Servo.html#to": {
+                  "ref": "module-j5e_servo-Servo.html#to",
+                  "tf": 7.142857142857142
+                },
+                "module-j5e_servo-Servo.html#min": {
+                  "ref": "module-j5e_servo-Servo.html#min",
+                  "tf": 7.142857142857142
+                },
+                "module-j5e_servo-Servo.html#max": {
+                  "ref": "module-j5e_servo-Servo.html#max",
+                  "tf": 8.333333333333332
+                },
+                "module-j5e_servo-Servo.html#center": {
+                  "ref": "module-j5e_servo-Servo.html#center",
+                  "tf": 10
+                },
+                "module-j5e_light-Light.html#scale": {
+                  "ref": "module-j5e_light-Light.html#scale",
+                  "tf": 10
+                },
+                "module-j5e_animation-Animation.html#speed": {
+                  "ref": "module-j5e_animation-Animation.html#speed",
+                  "tf": 12.5
+                },
+                "module-j5e_led-LED.html#brightness": {
+                  "ref": "module-j5e_led-LED.html#brightness",
+                  "tf": 6.25
+                },
+                "module-j5e_led-LED.html#intensity": {
+                  "ref": "module-j5e_led-LED.html#intensity",
+                  "tf": 6.25
+                },
+                "module-j5e_sensor-Sensor.html#scale": {
+                  "ref": "module-j5e_sensor-Sensor.html#scale",
+                  "tf": 10
+                }
+              },
+              "i": {
+                "docs": {},
+                "m": {
+                  "docs": {},
+                  "m": {
+                    "docs": {},
+                    "e": {
+                      "docs": {},
+                      "d": {
+                        "docs": {},
+                        "i": {
+                          "docs": {
+                            "module-j5e_fn-timer.html": {
+                              "ref": "module-j5e_fn-timer.html",
+                              "tf": 4.166666666666666
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "n": {
+                  "docs": {},
+                  "t": {
+                    "docs": {},
+                    "e": {
+                      "docs": {},
+                      "r": {
+                        "docs": {},
+                        "v": {
+                          "docs": {
+                            "module-j5e_fn-timer.html": {
+                              "ref": "module-j5e_fn-timer.html",
+                              "tf": 4.166666666666666
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
             "r": {
               "docs": {},
               "v": {
@@ -4080,142 +4878,6 @@ window.lunrData = {
                   "module-j5e_animation.html": {
                     "ref": "module-j5e_animation.html",
                     "tf": 3.571428571428571
-                  }
-                }
-              }
-            },
-            "t": {
-              "docs": {
-                "module-j5e_servo-Servo.html#to": {
-                  "ref": "module-j5e_servo-Servo.html#to",
-                  "tf": 7.142857142857142
-                },
-                "module-j5e_servo-Servo.html#min": {
-                  "ref": "module-j5e_servo-Servo.html#min",
-                  "tf": 7.142857142857142
-                },
-                "module-j5e_servo-Servo.html#max": {
-                  "ref": "module-j5e_servo-Servo.html#max",
-                  "tf": 8.333333333333332
-                },
-                "module-j5e_servo-Servo.html#center": {
-                  "ref": "module-j5e_servo-Servo.html#center",
-                  "tf": 10
-                },
-                "module-j5e_sensor-Sensor.html#scale": {
-                  "ref": "module-j5e_sensor-Sensor.html#scale",
-                  "tf": 10
-                },
-                "module-j5e_light-Light.html#scale": {
-                  "ref": "module-j5e_light-Light.html#scale",
-                  "tf": 10
-                },
-                "module-j5e_animation-Animation.html#speed": {
-                  "ref": "module-j5e_animation-Animation.html#speed",
-                  "tf": 12.5
-                },
-                "module-j5e_led-LED.html#brightness": {
-                  "ref": "module-j5e_led-LED.html#brightness",
-                  "tf": 6.25
-                },
-                "module-j5e_led-LED.html#intensity": {
-                  "ref": "module-j5e_led-LED.html#intensity",
-                  "tf": 6.25
-                }
-              },
-              "i": {
-                "docs": {},
-                "m": {
-                  "docs": {},
-                  "m": {
-                    "docs": {},
-                    "e": {
-                      "docs": {},
-                      "d": {
-                        "docs": {},
-                        "i": {
-                          "docs": {
-                            "module-j5e_fn-timer.html": {
-                              "ref": "module-j5e_fn-timer.html",
-                              "tf": 4.166666666666666
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                },
-                "n": {
-                  "docs": {},
-                  "t": {
-                    "docs": {},
-                    "e": {
-                      "docs": {},
-                      "r": {
-                        "docs": {},
-                        "v": {
-                          "docs": {
-                            "module-j5e_fn-timer.html": {
-                              "ref": "module-j5e_fn-timer.html",
-                              "tf": 4.166666666666666
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "n": {
-              "docs": {},
-              "s": {
-                "docs": {},
-                "o": {
-                  "docs": {},
-                  "r": {
-                    "docs": {
-                      "module-j5e_sensor-Sensor.html": {
-                        "ref": "module-j5e_sensor-Sensor.html",
-                        "tf": 512.5
-                      },
-                      "module-j5e_sensor-Sensor.html#range": {
-                        "ref": "module-j5e_sensor-Sensor.html#range",
-                        "tf": 16.666666666666664
-                      },
-                      "module-j5e_sensor-Sensor.html#enable": {
-                        "ref": "module-j5e_sensor-Sensor.html#enable",
-                        "tf": 16.666666666666664
-                      },
-                      "module-j5e_sensor-Sensor.html#disable": {
-                        "ref": "module-j5e_sensor-Sensor.html#disable",
-                        "tf": 16.666666666666664
-                      },
-                      "module-j5e_sensor-Sensor.html#read": {
-                        "ref": "module-j5e_sensor-Sensor.html#read",
-                        "tf": 16.666666666666664
-                      },
-                      "module-j5e_light-Light.html#range": {
-                        "ref": "module-j5e_light-Light.html#range",
-                        "tf": 16.666666666666664
-                      },
-                      "module-j5e_light-Light.html#enable": {
-                        "ref": "module-j5e_light-Light.html#enable",
-                        "tf": 16.666666666666664
-                      },
-                      "module-j5e_light-Light.html#disable": {
-                        "ref": "module-j5e_light-Light.html#disable",
-                        "tf": 16.666666666666664
-                      },
-                      "module-j5e_light-Light.html#read": {
-                        "ref": "module-j5e_light-Light.html#read",
-                        "tf": 16.666666666666664
-                      },
-                      "module-j5e_sensor.html": {
-                        "ref": "module-j5e_sensor.html",
-                        "tf": 12.5
-                      }
-                    }
                   }
                 }
               }
@@ -4325,6 +4987,234 @@ window.lunrData = {
               }
             }
           },
+          "a": {
+            "docs": {},
+            "m": {
+              "docs": {},
+              "p": {
+                "docs": {},
+                "l": {
+                  "docs": {
+                    "module-j5e_thermometer-Thermometer.html#smoothing": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#smoothing",
+                      "tf": 8.333333333333332
+                    },
+                    "module-j5e_thermometer-Thermometer.html#samples": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#samples",
+                      "tf": 708.3333333333334
+                    },
+                    "module-j5e_light-Light.html#smoothing": {
+                      "ref": "module-j5e_light-Light.html#smoothing",
+                      "tf": 8.333333333333332
+                    },
+                    "module-j5e_light-Light.html#samples": {
+                      "ref": "module-j5e_light-Light.html#samples",
+                      "tf": 708.3333333333334
+                    },
+                    "module-j5e_sensor-Sensor.html#smoothing": {
+                      "ref": "module-j5e_sensor-Sensor.html#smoothing",
+                      "tf": 8.333333333333332
+                    },
+                    "module-j5e_sensor-Sensor.html#samples": {
+                      "ref": "module-j5e_sensor-Sensor.html#samples",
+                      "tf": 708.3333333333334
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "m": {
+            "docs": {},
+            "o": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "t": {
+                  "docs": {},
+                  "h": {
+                    "docs": {
+                      "module-j5e_thermometer-Thermometer.html#smoothing": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#smoothing",
+                        "tf": 700
+                      },
+                      "module-j5e_light-Light.html#smoothing": {
+                        "ref": "module-j5e_light-Light.html#smoothing",
+                        "tf": 700
+                      },
+                      "module-j5e_sensor-Sensor.html#smoothing": {
+                        "ref": "module-j5e_sensor-Sensor.html#smoothing",
+                        "tf": 700
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "c": {
+            "docs": {},
+            "a": {
+              "docs": {},
+              "l": {
+                "docs": {},
+                "e": {
+                  "docs": {
+                    "module-j5e_thermometer-Thermometer.html#scaled": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#scaled",
+                      "tf": 695.8333333333334
+                    },
+                    "module-j5e_thermometer-Thermometer.html#scale": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#scale",
+                      "tf": 676.6666666666666
+                    },
+                    "module-j5e_thermometer-Thermometer.html#scaleTo": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#scaleTo",
+                      "tf": 10
+                    },
+                    "module-j5e_thermometer-Thermometer.html#fscaleTo": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#fscaleTo",
+                      "tf": 7.142857142857142
+                    },
+                    "module-j5e_light-Light.html#scaled": {
+                      "ref": "module-j5e_light-Light.html#scaled",
+                      "tf": 695.8333333333334
+                    },
+                    "module-j5e_light-Light.html#level": {
+                      "ref": "module-j5e_light-Light.html#level",
+                      "tf": 10
+                    },
+                    "module-j5e_light-Light.html#scale": {
+                      "ref": "module-j5e_light-Light.html#scale",
+                      "tf": 676.6666666666666
+                    },
+                    "module-j5e_light-Light.html#scaleTo": {
+                      "ref": "module-j5e_light-Light.html#scaleTo",
+                      "tf": 10
+                    },
+                    "module-j5e_light-Light.html#fscaleTo": {
+                      "ref": "module-j5e_light-Light.html#fscaleTo",
+                      "tf": 7.142857142857142
+                    },
+                    "module-j5e_sensor-Sensor.html#scaled": {
+                      "ref": "module-j5e_sensor-Sensor.html#scaled",
+                      "tf": 695.8333333333334
+                    },
+                    "module-j5e_sensor-Sensor.html#scale": {
+                      "ref": "module-j5e_sensor-Sensor.html#scale",
+                      "tf": 676.6666666666666
+                    },
+                    "module-j5e_sensor-Sensor.html#scaleTo": {
+                      "ref": "module-j5e_sensor-Sensor.html#scaleTo",
+                      "tf": 10
+                    },
+                    "module-j5e_sensor-Sensor.html#fscaleTo": {
+                      "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
+                      "tf": 7.142857142857142
+                    }
+                  },
+                  "/": {
+                    "docs": {},
+                    "s": {
+                      "docs": {},
+                      "c": {
+                        "docs": {},
+                        "a": {
+                          "docs": {},
+                          "l": {
+                            "docs": {},
+                            "e": {
+                              "docs": {},
+                              "t": {
+                                "docs": {},
+                                "o": {
+                                  "docs": {
+                                    "module-j5e_thermometer-Thermometer.html#scale": {
+                                      "ref": "module-j5e_thermometer-Thermometer.html#scale",
+                                      "tf": 10
+                                    },
+                                    "module-j5e_light-Light.html#scale": {
+                                      "ref": "module-j5e_light-Light.html#scale",
+                                      "tf": 10
+                                    },
+                                    "module-j5e_sensor-Sensor.html#scale": {
+                                      "ref": "module-j5e_sensor-Sensor.html#scale",
+                                      "tf": 10
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "t": {
+                    "docs": {},
+                    "o": {
+                      "docs": {
+                        "module-j5e_thermometer-Thermometer.html#scaleTo": {
+                          "ref": "module-j5e_thermometer-Thermometer.html#scaleTo",
+                          "tf": 680
+                        },
+                        "module-j5e_light-Light.html#scaleTo": {
+                          "ref": "module-j5e_light-Light.html#scaleTo",
+                          "tf": 680
+                        },
+                        "module-j5e_sensor-Sensor.html#scaleTo": {
+                          "ref": "module-j5e_sensor-Sensor.html#scaleTo",
+                          "tf": 680
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "r": {
+              "docs": {},
+              "i": {
+                "docs": {},
+                "p": {
+                  "docs": {},
+                  "t": {
+                    "docs": {
+                      "module-j5e_animation-Animation.html": {
+                        "ref": "module-j5e_animation-Animation.html",
+                        "tf": 8.333333333333332
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "i": {
+            "docs": {},
+            "n": {
+              "docs": {},
+              "g": {
+                "docs": {},
+                "l": {
+                  "docs": {
+                    "module-j5e_thermometer-Thermometer.html#fscaleTo": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#fscaleTo",
+                      "tf": 7.142857142857142
+                    },
+                    "module-j5e_light-Light.html#fscaleTo": {
+                      "ref": "module-j5e_light-Light.html#fscaleTo",
+                      "tf": 7.142857142857142
+                    },
+                    "module-j5e_sensor-Sensor.html#fscaleTo": {
+                      "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
+                      "tf": 7.142857142857142
+                    }
+                  }
+                }
+              }
+            }
+          },
           "p": {
             "docs": {},
             "e": {
@@ -4369,186 +5259,6 @@ window.lunrData = {
                     "module-j5e_animation-Animation.html#speed": {
                       "ref": "module-j5e_animation-Animation.html#speed",
                       "tf": 762.5
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "a": {
-            "docs": {},
-            "m": {
-              "docs": {},
-              "p": {
-                "docs": {},
-                "l": {
-                  "docs": {
-                    "module-j5e_sensor-Sensor.html#smoothing": {
-                      "ref": "module-j5e_sensor-Sensor.html#smoothing",
-                      "tf": 8.333333333333332
-                    },
-                    "module-j5e_light-Light.html#smoothing": {
-                      "ref": "module-j5e_light-Light.html#smoothing",
-                      "tf": 8.333333333333332
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "m": {
-            "docs": {},
-            "o": {
-              "docs": {},
-              "o": {
-                "docs": {},
-                "t": {
-                  "docs": {},
-                  "h": {
-                    "docs": {
-                      "module-j5e_sensor-Sensor.html#smoothing": {
-                        "ref": "module-j5e_sensor-Sensor.html#smoothing",
-                        "tf": 700
-                      },
-                      "module-j5e_light-Light.html#smoothing": {
-                        "ref": "module-j5e_light-Light.html#smoothing",
-                        "tf": 700
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "c": {
-            "docs": {},
-            "a": {
-              "docs": {},
-              "l": {
-                "docs": {},
-                "e": {
-                  "docs": {
-                    "module-j5e_sensor-Sensor.html#scaled": {
-                      "ref": "module-j5e_sensor-Sensor.html#scaled",
-                      "tf": 695.8333333333334
-                    },
-                    "module-j5e_sensor-Sensor.html#scale": {
-                      "ref": "module-j5e_sensor-Sensor.html#scale",
-                      "tf": 676.6666666666666
-                    },
-                    "module-j5e_sensor-Sensor.html#scaleTo": {
-                      "ref": "module-j5e_sensor-Sensor.html#scaleTo",
-                      "tf": 10
-                    },
-                    "module-j5e_sensor-Sensor.html#fscaleTo": {
-                      "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
-                      "tf": 7.142857142857142
-                    },
-                    "module-j5e_light-Light.html#level": {
-                      "ref": "module-j5e_light-Light.html#level",
-                      "tf": 10
-                    },
-                    "module-j5e_light-Light.html#scaled": {
-                      "ref": "module-j5e_light-Light.html#scaled",
-                      "tf": 695.8333333333334
-                    },
-                    "module-j5e_light-Light.html#scale": {
-                      "ref": "module-j5e_light-Light.html#scale",
-                      "tf": 676.6666666666666
-                    },
-                    "module-j5e_light-Light.html#scaleTo": {
-                      "ref": "module-j5e_light-Light.html#scaleTo",
-                      "tf": 10
-                    },
-                    "module-j5e_light-Light.html#fscaleTo": {
-                      "ref": "module-j5e_light-Light.html#fscaleTo",
-                      "tf": 7.142857142857142
-                    }
-                  },
-                  "/": {
-                    "docs": {},
-                    "s": {
-                      "docs": {},
-                      "c": {
-                        "docs": {},
-                        "a": {
-                          "docs": {},
-                          "l": {
-                            "docs": {},
-                            "e": {
-                              "docs": {},
-                              "t": {
-                                "docs": {},
-                                "o": {
-                                  "docs": {
-                                    "module-j5e_sensor-Sensor.html#scale": {
-                                      "ref": "module-j5e_sensor-Sensor.html#scale",
-                                      "tf": 10
-                                    },
-                                    "module-j5e_light-Light.html#scale": {
-                                      "ref": "module-j5e_light-Light.html#scale",
-                                      "tf": 10
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  },
-                  "t": {
-                    "docs": {},
-                    "o": {
-                      "docs": {
-                        "module-j5e_sensor-Sensor.html#scaleTo": {
-                          "ref": "module-j5e_sensor-Sensor.html#scaleTo",
-                          "tf": 680
-                        },
-                        "module-j5e_light-Light.html#scaleTo": {
-                          "ref": "module-j5e_light-Light.html#scaleTo",
-                          "tf": 680
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "r": {
-              "docs": {},
-              "i": {
-                "docs": {},
-                "p": {
-                  "docs": {},
-                  "t": {
-                    "docs": {
-                      "module-j5e_animation-Animation.html": {
-                        "ref": "module-j5e_animation-Animation.html",
-                        "tf": 8.333333333333332
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "i": {
-            "docs": {},
-            "n": {
-              "docs": {},
-              "g": {
-                "docs": {},
-                "l": {
-                  "docs": {
-                    "module-j5e_sensor-Sensor.html#fscaleTo": {
-                      "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
-                      "tf": 7.142857142857142
-                    },
-                    "module-j5e_light-Light.html#fscaleTo": {
-                      "ref": "module-j5e_light-Light.html#fscaleTo",
-                      "tf": 7.142857142857142
                     }
                   }
                 }
@@ -4648,6 +5358,18 @@ window.lunrData = {
                 "docs": {},
                 "e": {
                   "docs": {
+                    "module-j5e_thermometer-Thermometer.html#celsius": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#celsius",
+                      "tf": 25
+                    },
+                    "module-j5e_thermometer-Thermometer.html#fahrenheit": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#fahrenheit",
+                      "tf": 25
+                    },
+                    "module-j5e_thermometer-Thermometer.html#kelvin": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#kelvin",
+                      "tf": 25
+                    },
                     "module-j5e_servo-Servo.html#to": {
                       "ref": "module-j5e_servo-Servo.html#to",
                       "tf": 32.14285714285714
@@ -4750,12 +5472,12 @@ window.lunrData = {
                   "docs": {},
                   "l": {
                     "docs": {
-                      "module-j5e_sensor-Sensor.html#enable": {
-                        "ref": "module-j5e_sensor-Sensor.html#enable",
+                      "module-j5e_thermometer-Thermometer.html#enable": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#enable",
                         "tf": 16.666666666666664
                       },
-                      "module-j5e_sensor-Sensor.html#disable": {
-                        "ref": "module-j5e_sensor-Sensor.html#disable",
+                      "module-j5e_thermometer-Thermometer.html#disable": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#disable",
                         "tf": 716.6666666666666
                       },
                       "module-j5e_light-Light.html#enable": {
@@ -4764,6 +5486,14 @@ window.lunrData = {
                       },
                       "module-j5e_light-Light.html#disable": {
                         "ref": "module-j5e_light-Light.html#disable",
+                        "tf": 716.6666666666666
+                      },
+                      "module-j5e_sensor-Sensor.html#enable": {
+                        "ref": "module-j5e_sensor-Sensor.html#enable",
+                        "tf": 16.666666666666664
+                      },
+                      "module-j5e_sensor-Sensor.html#disable": {
+                        "ref": "module-j5e_sensor-Sensor.html#disable",
                         "tf": 716.6666666666666
                       }
                     }
@@ -4994,6 +5724,10 @@ window.lunrData = {
                     "ref": "module-j5e_switch-Switch.html#once",
                     "tf": 8.333333333333332
                   },
+                  "module-j5e_thermometer-Thermometer.html#once": {
+                    "ref": "module-j5e_thermometer-Thermometer.html#once",
+                    "tf": 8.333333333333332
+                  },
                   "module-j5e_servo-Servo.html#to": {
                     "ref": "module-j5e_servo-Servo.html#to",
                     "tf": 32.14285714285714
@@ -5016,10 +5750,6 @@ window.lunrData = {
                   },
                   "module-j5e_servo-Servo.html#once": {
                     "ref": "module-j5e_servo-Servo.html#once",
-                    "tf": 8.333333333333332
-                  },
-                  "module-j5e_sensor-Sensor.html#once": {
-                    "ref": "module-j5e_sensor-Sensor.html#once",
                     "tf": 8.333333333333332
                   },
                   "module-j5e_light-Light.html#once": {
@@ -5053,6 +5783,10 @@ window.lunrData = {
                   "module-j5e_led-LED.html#pulse": {
                     "ref": "module-j5e_led-LED.html#pulse",
                     "tf": 29.166666666666664
+                  },
+                  "module-j5e_sensor-Sensor.html#once": {
+                    "ref": "module-j5e_sensor-Sensor.html#once",
+                    "tf": 8.333333333333332
                   },
                   "module-j5e_rgb-RGB.html#fade": {
                     "ref": "module-j5e_rgb-RGB.html#fade",
@@ -5214,6 +5948,52 @@ window.lunrData = {
           },
           "h": {
             "docs": {},
+            "e": {
+              "docs": {},
+              "r": {
+                "docs": {},
+                "m": {
+                  "docs": {},
+                  "i": {
+                    "docs": {},
+                    "s": {
+                      "docs": {},
+                      "t": {
+                        "docs": {},
+                        "o": {
+                          "docs": {},
+                          "r": {
+                            "docs": {
+                              "module-j5e_thermometer-Thermometer.html": {
+                                "ref": "module-j5e_thermometer-Thermometer.html",
+                                "tf": 8.333333333333332
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "o": {
+                    "docs": {},
+                    "m": {
+                      "docs": {},
+                      "e": {
+                        "docs": {},
+                        "t": {
+                          "docs": {
+                            "module-j5e_thermometer-Thermometer.html": {
+                              "ref": "module-j5e_thermometer-Thermometer.html",
+                              "tf": 508.3333333333333
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
             "r": {
               "docs": {},
               "e": {
@@ -5228,12 +6008,16 @@ window.lunrData = {
                         "docs": {},
                         "d": {
                           "docs": {
-                            "module-j5e_sensor-Sensor.html#threshold": {
-                              "ref": "module-j5e_sensor-Sensor.html#threshold",
+                            "module-j5e_thermometer-Thermometer.html#threshold": {
+                              "ref": "module-j5e_thermometer-Thermometer.html#threshold",
                               "tf": 700
                             },
                             "module-j5e_light-Light.html#threshold": {
                               "ref": "module-j5e_light-Light.html#threshold",
+                              "tf": 700
+                            },
+                            "module-j5e_sensor-Sensor.html#threshold": {
+                              "ref": "module-j5e_sensor-Sensor.html#threshold",
                               "tf": 700
                             }
                           }
@@ -5251,12 +6035,28 @@ window.lunrData = {
               "docs": {},
               "e": {
                 "docs": {
-                  "module-j5e_sensor-Sensor.html#smoothing": {
-                    "ref": "module-j5e_sensor-Sensor.html#smoothing",
+                  "module-j5e_thermometer-Thermometer.html#smoothing": {
+                    "ref": "module-j5e_thermometer-Thermometer.html#smoothing",
+                    "tf": 8.333333333333332
+                  },
+                  "module-j5e_thermometer-Thermometer.html#samples": {
+                    "ref": "module-j5e_thermometer-Thermometer.html#samples",
                     "tf": 8.333333333333332
                   },
                   "module-j5e_light-Light.html#smoothing": {
                     "ref": "module-j5e_light-Light.html#smoothing",
+                    "tf": 8.333333333333332
+                  },
+                  "module-j5e_light-Light.html#samples": {
+                    "ref": "module-j5e_light-Light.html#samples",
+                    "tf": 8.333333333333332
+                  },
+                  "module-j5e_sensor-Sensor.html#smoothing": {
+                    "ref": "module-j5e_sensor-Sensor.html#smoothing",
+                    "tf": 8.333333333333332
+                  },
+                  "module-j5e_sensor-Sensor.html#samples": {
+                    "ref": "module-j5e_sensor-Sensor.html#samples",
                     "tf": 8.333333333333332
                   }
                 }
@@ -5287,12 +6087,39 @@ window.lunrData = {
                 }
               }
             }
+          },
+          "e": {
+            "docs": {},
+            "m": {
+              "docs": {},
+              "p": {
+                "docs": {},
+                "l": {
+                  "docs": {},
+                  "a": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "module-j5e_thermometer.html": {
+                          "ref": "module-j5e_thermometer.html",
+                          "tf": 25
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "c": {
           "docs": {
             "undefined": {
               "tf": 900
+            },
+            "module-j5e_thermometer-Thermometer.html#C": {
+              "ref": "module-j5e_thermometer-Thermometer.html#C",
+              "tf": 683.3333333333334
             }
           },
           "o": {
@@ -5322,6 +6149,10 @@ window.lunrData = {
                       "docs": {
                         "module-j5e_switch-Switch.html": {
                           "ref": "module-j5e_switch-Switch.html",
+                          "tf": 8.333333333333332
+                        },
+                        "module-j5e_thermometer-Thermometer.html": {
+                          "ref": "module-j5e_thermometer-Thermometer.html",
                           "tf": 8.333333333333332
                         },
                         "module-j5e_servo-Servo.html": {
@@ -5532,13 +6363,13 @@ window.lunrData = {
                       "ref": "module-j5e_switch-Switch.html",
                       "tf": 118.33333333333333
                     },
+                    "module-j5e_thermometer-Thermometer.html": {
+                      "ref": "module-j5e_thermometer-Thermometer.html",
+                      "tf": 118.33333333333333
+                    },
                     "module-j5e_servo-Servo.html": {
                       "ref": "module-j5e_servo-Servo.html",
                       "tf": 118.33333333333333
-                    },
-                    "module-j5e_sensor-Sensor.html": {
-                      "ref": "module-j5e_sensor-Sensor.html",
-                      "tf": 116.25
                     },
                     "module-j5e_relay-Relay.html": {
                       "ref": "module-j5e_relay-Relay.html",
@@ -5560,6 +6391,10 @@ window.lunrData = {
                       "ref": "module-j5e_led-LED.html",
                       "tf": 117.14285714285714
                     },
+                    "module-j5e_sensor-Sensor.html": {
+                      "ref": "module-j5e_sensor-Sensor.html",
+                      "tf": 116.25
+                    },
                     "module-j5e_rgb-RGB.html": {
                       "ref": "module-j5e_rgb-RGB.html",
                       "tf": 118.33333333333333
@@ -5574,6 +6409,10 @@ window.lunrData = {
                     },
                     "module-j5e_light.html": {
                       "ref": "module-j5e_light.html",
+                      "tf": 25
+                    },
+                    "module-j5e_thermometer.html": {
+                      "ref": "module-j5e_thermometer.html",
                       "tf": 25
                     }
                   }
@@ -5734,20 +6573,20 @@ window.lunrData = {
                       "ref": "module-j5e_switch-Switch.html#once",
                       "tf": 8.333333333333332
                     },
+                    "module-j5e_thermometer-Thermometer.html#on": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#on",
+                      "tf": 16.666666666666664
+                    },
+                    "module-j5e_thermometer-Thermometer.html#once": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#once",
+                      "tf": 8.333333333333332
+                    },
                     "module-j5e_servo-Servo.html#on": {
                       "ref": "module-j5e_servo-Servo.html#on",
                       "tf": 16.666666666666664
                     },
                     "module-j5e_servo-Servo.html#once": {
                       "ref": "module-j5e_servo-Servo.html#once",
-                      "tf": 8.333333333333332
-                    },
-                    "module-j5e_sensor-Sensor.html#on": {
-                      "ref": "module-j5e_sensor-Sensor.html#on",
-                      "tf": 16.666666666666664
-                    },
-                    "module-j5e_sensor-Sensor.html#once": {
-                      "ref": "module-j5e_sensor-Sensor.html#once",
                       "tf": 8.333333333333332
                     },
                     "module-j5e_light-Light.html#on": {
@@ -5773,6 +6612,14 @@ window.lunrData = {
                     "module-j5e_button-Button.html#once": {
                       "ref": "module-j5e_button-Button.html#once",
                       "tf": 8.333333333333332
+                    },
+                    "module-j5e_sensor-Sensor.html#on": {
+                      "ref": "module-j5e_sensor-Sensor.html#on",
+                      "tf": 16.666666666666664
+                    },
+                    "module-j5e_sensor-Sensor.html#once": {
+                      "ref": "module-j5e_sensor-Sensor.html#once",
+                      "tf": 8.333333333333332
                     }
                   }
                 }
@@ -5781,6 +6628,55 @@ window.lunrData = {
           },
           "e": {
             "docs": {},
+            "l": {
+              "docs": {},
+              "s": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "u": {
+                    "docs": {
+                      "module-j5e_thermometer-Thermometer.html#celsius": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#celsius",
+                        "tf": 708.3333333333334
+                      },
+                      "module-j5e_thermometer-Thermometer.html#C": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#C",
+                        "tf": 25
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "r": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "i": {
+                    "docs": {},
+                    "n": {
+                      "docs": {
+                        "module-j5e_thermometer-Thermometer.html#within": {
+                          "ref": "module-j5e_thermometer-Thermometer.html#within",
+                          "tf": 8.333333333333332
+                        },
+                        "module-j5e_light-Light.html#within": {
+                          "ref": "module-j5e_light-Light.html#within",
+                          "tf": 8.333333333333332
+                        },
+                        "module-j5e_sensor-Sensor.html#within": {
+                          "ref": "module-j5e_sensor-Sensor.html#within",
+                          "tf": 8.333333333333332
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
             "n": {
               "docs": {},
               "t": {
@@ -5817,49 +6713,6 @@ window.lunrData = {
                   }
                 }
               }
-            },
-            "r": {
-              "docs": {},
-              "t": {
-                "docs": {},
-                "a": {
-                  "docs": {},
-                  "i": {
-                    "docs": {},
-                    "n": {
-                      "docs": {
-                        "module-j5e_sensor-Sensor.html#within": {
-                          "ref": "module-j5e_sensor-Sensor.html#within",
-                          "tf": 8.333333333333332
-                        },
-                        "module-j5e_light-Light.html#within": {
-                          "ref": "module-j5e_light-Light.html#within",
-                          "tf": 8.333333333333332
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "w": {
-            "docs": {
-              "module-j5e_servo-Servo.html#cw": {
-                "ref": "module-j5e_servo-Servo.html#cw",
-                "tf": 683.3333333333334
-              }
-            }
-          },
-          "c": {
-            "docs": {},
-            "w": {
-              "docs": {
-                "module-j5e_servo-Servo.html#ccw": {
-                  "ref": "module-j5e_servo-Servo.html#ccw",
-                  "tf": 683.3333333333334
-                }
-              }
             }
           },
           "h": {
@@ -5870,12 +6723,16 @@ window.lunrData = {
                 "docs": {},
                 "g": {
                   "docs": {
-                    "module-j5e_sensor-Sensor.html#threshold": {
-                      "ref": "module-j5e_sensor-Sensor.html#threshold",
+                    "module-j5e_thermometer-Thermometer.html#threshold": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#threshold",
                       "tf": 14.285714285714285
                     },
                     "module-j5e_light-Light.html#threshold": {
                       "ref": "module-j5e_light-Light.html#threshold",
+                      "tf": 14.285714285714285
+                    },
+                    "module-j5e_sensor-Sensor.html#threshold": {
+                      "ref": "module-j5e_sensor-Sensor.html#threshold",
                       "tf": 14.285714285714285
                     }
                   }
@@ -5902,8 +6759,8 @@ window.lunrData = {
                       "docs": {},
                       "k": {
                         "docs": {
-                          "module-j5e_sensor-Sensor.html#within": {
-                            "ref": "module-j5e_sensor-Sensor.html#within",
+                          "module-j5e_thermometer-Thermometer.html#within": {
+                            "ref": "module-j5e_thermometer-Thermometer.html#within",
                             "tf": 33.33333333333333
                           },
                           "module-j5e_light-Light.html#within": {
@@ -5930,6 +6787,10 @@ window.lunrData = {
                             "ref": "module-j5e_led-LED.html#pulse",
                             "tf": 25
                           },
+                          "module-j5e_sensor-Sensor.html#within": {
+                            "ref": "module-j5e_sensor-Sensor.html#within",
+                            "tf": 33.33333333333333
+                          },
                           "module-j5e_rgb-RGB.html#blink": {
                             "ref": "module-j5e_rgb-RGB.html#blink",
                             "tf": 25
@@ -5950,6 +6811,25 @@ window.lunrData = {
                       }
                     }
                   }
+                }
+              }
+            }
+          },
+          "w": {
+            "docs": {
+              "module-j5e_servo-Servo.html#cw": {
+                "ref": "module-j5e_servo-Servo.html#cw",
+                "tf": 683.3333333333334
+              }
+            }
+          },
+          "c": {
+            "docs": {},
+            "w": {
+              "docs": {
+                "module-j5e_servo-Servo.html#ccw": {
+                  "ref": "module-j5e_servo-Servo.html#ccw",
+                  "tf": 683.3333333333334
                 }
               }
             }
@@ -6102,6 +6982,18 @@ window.lunrData = {
                         "ref": "module-j5e_switch-Switch.html#once",
                         "tf": 41.66666666666666
                       },
+                      "module-j5e_thermometer-Thermometer.html#on": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#on",
+                        "tf": 66.66666666666666
+                      },
+                      "module-j5e_thermometer-Thermometer.html#removeListener": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#removeListener",
+                        "tf": 49.99999999999999
+                      },
+                      "module-j5e_thermometer-Thermometer.html#once": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#once",
+                        "tf": 41.66666666666666
+                      },
                       "module-j5e_servo-Servo.html#on": {
                         "ref": "module-j5e_servo-Servo.html#on",
                         "tf": 66.66666666666666
@@ -6112,18 +7004,6 @@ window.lunrData = {
                       },
                       "module-j5e_servo-Servo.html#once": {
                         "ref": "module-j5e_servo-Servo.html#once",
-                        "tf": 41.66666666666666
-                      },
-                      "module-j5e_sensor-Sensor.html#on": {
-                        "ref": "module-j5e_sensor-Sensor.html#on",
-                        "tf": 66.66666666666666
-                      },
-                      "module-j5e_sensor-Sensor.html#removeListener": {
-                        "ref": "module-j5e_sensor-Sensor.html#removeListener",
-                        "tf": 49.99999999999999
-                      },
-                      "module-j5e_sensor-Sensor.html#once": {
-                        "ref": "module-j5e_sensor-Sensor.html#once",
                         "tf": 41.66666666666666
                       },
                       "module-j5e_light-Light.html#on": {
@@ -6161,6 +7041,18 @@ window.lunrData = {
                       "module-j5e_button-Button.html#once": {
                         "ref": "module-j5e_button-Button.html#once",
                         "tf": 41.66666666666666
+                      },
+                      "module-j5e_sensor-Sensor.html#on": {
+                        "ref": "module-j5e_sensor-Sensor.html#on",
+                        "tf": 66.66666666666666
+                      },
+                      "module-j5e_sensor-Sensor.html#removeListener": {
+                        "ref": "module-j5e_sensor-Sensor.html#removeListener",
+                        "tf": 49.99999999999999
+                      },
+                      "module-j5e_sensor-Sensor.html#once": {
+                        "ref": "module-j5e_sensor-Sensor.html#once",
+                        "tf": 41.66666666666666
                       }
                     }
                   }
@@ -6173,12 +7065,16 @@ window.lunrData = {
                 "docs": {},
                 "t": {
                   "docs": {
-                    "module-j5e_sensor-Sensor.html#limit": {
-                      "ref": "module-j5e_sensor-Sensor.html#limit",
+                    "module-j5e_thermometer-Thermometer.html#limit": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#limit",
                       "tf": 716.6666666666666
                     },
                     "module-j5e_light-Light.html#limit": {
                       "ref": "module-j5e_light-Light.html#limit",
+                      "tf": 716.6666666666666
+                    },
+                    "module-j5e_sensor-Sensor.html#limit": {
+                      "ref": "module-j5e_sensor-Sensor.html#limit",
                       "tf": 716.6666666666666
                     }
                   }
@@ -6256,12 +7152,12 @@ window.lunrData = {
                                   "ref": "module-j5e_switch-Switch.html",
                                   "tf": 50
                                 },
-                                "module-j5e_servo-Servo.html": {
-                                  "ref": "module-j5e_servo-Servo.html",
+                                "module-j5e_thermometer-Thermometer.html": {
+                                  "ref": "module-j5e_thermometer-Thermometer.html",
                                   "tf": 50
                                 },
-                                "module-j5e_sensor-Sensor.html": {
-                                  "ref": "module-j5e_sensor-Sensor.html",
+                                "module-j5e_servo-Servo.html": {
+                                  "ref": "module-j5e_servo-Servo.html",
                                   "tf": 50
                                 },
                                 "module-j5e_relay-Relay.html": {
@@ -6278,6 +7174,10 @@ window.lunrData = {
                                 },
                                 "module-j5e_led-LED.html": {
                                   "ref": "module-j5e_led-LED.html",
+                                  "tf": 50
+                                },
+                                "module-j5e_sensor-Sensor.html": {
+                                  "ref": "module-j5e_sensor-Sensor.html",
                                   "tf": 50
                                 },
                                 "module-j5e_rgb-RGB.html": {
@@ -6323,6 +7223,54 @@ window.lunrData = {
                                         "ref": "module-j5e_switch-Switch.html#isOpen",
                                         "tf": 50
                                       },
+                                      "module-j5e_thermometer-Thermometer.html#celsius": {
+                                        "ref": "module-j5e_thermometer-Thermometer.html#celsius",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_thermometer-Thermometer.html#C": {
+                                        "ref": "module-j5e_thermometer-Thermometer.html#C",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_thermometer-Thermometer.html#fahrenheit": {
+                                        "ref": "module-j5e_thermometer-Thermometer.html#fahrenheit",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_thermometer-Thermometer.html#F": {
+                                        "ref": "module-j5e_thermometer-Thermometer.html#F",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_thermometer-Thermometer.html#kelvin": {
+                                        "ref": "module-j5e_thermometer-Thermometer.html#kelvin",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_thermometer-Thermometer.html#K": {
+                                        "ref": "module-j5e_thermometer-Thermometer.html#K",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_thermometer-Thermometer.html#range": {
+                                        "ref": "module-j5e_thermometer-Thermometer.html#range",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_thermometer-Thermometer.html#raw": {
+                                        "ref": "module-j5e_thermometer-Thermometer.html#raw",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_thermometer-Thermometer.html#median": {
+                                        "ref": "module-j5e_thermometer-Thermometer.html#median",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_thermometer-Thermometer.html#resolution": {
+                                        "ref": "module-j5e_thermometer-Thermometer.html#resolution",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_thermometer-Thermometer.html#scaled": {
+                                        "ref": "module-j5e_thermometer-Thermometer.html#scaled",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_thermometer-Thermometer.html#value": {
+                                        "ref": "module-j5e_thermometer-Thermometer.html#value",
+                                        "tf": 33.33333333333333
+                                      },
                                       "module-j5e_servo-Servo.html#history": {
                                         "ref": "module-j5e_servo-Servo.html#history",
                                         "tf": 50
@@ -6334,26 +7282,6 @@ window.lunrData = {
                                       "module-j5e_servo-Servo.html#position": {
                                         "ref": "module-j5e_servo-Servo.html#position",
                                         "tf": 50
-                                      },
-                                      "module-j5e_sensor-Sensor.html#range": {
-                                        "ref": "module-j5e_sensor-Sensor.html#range",
-                                        "tf": 33.33333333333333
-                                      },
-                                      "module-j5e_sensor-Sensor.html#raw": {
-                                        "ref": "module-j5e_sensor-Sensor.html#raw",
-                                        "tf": 33.33333333333333
-                                      },
-                                      "module-j5e_sensor-Sensor.html#resolution": {
-                                        "ref": "module-j5e_sensor-Sensor.html#resolution",
-                                        "tf": 33.33333333333333
-                                      },
-                                      "module-j5e_sensor-Sensor.html#scaled": {
-                                        "ref": "module-j5e_sensor-Sensor.html#scaled",
-                                        "tf": 33.33333333333333
-                                      },
-                                      "module-j5e_sensor-Sensor.html#value": {
-                                        "ref": "module-j5e_sensor-Sensor.html#value",
-                                        "tf": 33.33333333333333
                                       },
                                       "module-j5e_relay-Relay.html#value": {
                                         "ref": "module-j5e_relay-Relay.html#value",
@@ -6367,16 +7295,16 @@ window.lunrData = {
                                         "ref": "module-j5e_relay-Relay.html#type",
                                         "tf": 33.33333333333333
                                       },
-                                      "module-j5e_light-Light.html#level": {
-                                        "ref": "module-j5e_light-Light.html#level",
-                                        "tf": 33.33333333333333
-                                      },
                                       "module-j5e_light-Light.html#range": {
                                         "ref": "module-j5e_light-Light.html#range",
                                         "tf": 33.33333333333333
                                       },
                                       "module-j5e_light-Light.html#raw": {
                                         "ref": "module-j5e_light-Light.html#raw",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_light-Light.html#median": {
+                                        "ref": "module-j5e_light-Light.html#median",
                                         "tf": 33.33333333333333
                                       },
                                       "module-j5e_light-Light.html#resolution": {
@@ -6389,6 +7317,10 @@ window.lunrData = {
                                       },
                                       "module-j5e_light-Light.html#value": {
                                         "ref": "module-j5e_light-Light.html#value",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_light-Light.html#level": {
+                                        "ref": "module-j5e_light-Light.html#level",
                                         "tf": 33.33333333333333
                                       },
                                       "module-j5e_button-Button.html#isClosed": {
@@ -6417,6 +7349,30 @@ window.lunrData = {
                                       },
                                       "module-j5e_led-LED.html#isRunning": {
                                         "ref": "module-j5e_led-LED.html#isRunning",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_sensor-Sensor.html#range": {
+                                        "ref": "module-j5e_sensor-Sensor.html#range",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_sensor-Sensor.html#raw": {
+                                        "ref": "module-j5e_sensor-Sensor.html#raw",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_sensor-Sensor.html#median": {
+                                        "ref": "module-j5e_sensor-Sensor.html#median",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_sensor-Sensor.html#resolution": {
+                                        "ref": "module-j5e_sensor-Sensor.html#resolution",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_sensor-Sensor.html#scaled": {
+                                        "ref": "module-j5e_sensor-Sensor.html#scaled",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_sensor-Sensor.html#value": {
+                                        "ref": "module-j5e_sensor-Sensor.html#value",
                                         "tf": 33.33333333333333
                                       },
                                       "module-j5e_rgb-RGB.html#isOn": {
@@ -6449,38 +7405,20 @@ window.lunrData = {
               }
             }
           },
-          "a": {
-            "docs": {},
-            "s": {
-              "docs": {},
-              "t": {
-                "docs": {
-                  "module-j5e_servo-Servo.html#history": {
-                    "ref": "module-j5e_servo-Servo.html#history",
-                    "tf": 12.5
-                  },
-                  "module-j5e_servo-Servo.html#last": {
-                    "ref": "module-j5e_servo-Servo.html#last",
-                    "tf": 700
-                  }
-                }
-              }
-            }
-          },
           "o": {
             "docs": {},
             "w": {
               "docs": {
-                "module-j5e_sensor-Sensor.html#scale": {
-                  "ref": "module-j5e_sensor-Sensor.html#scale",
+                "module-j5e_thermometer-Thermometer.html#scale": {
+                  "ref": "module-j5e_thermometer-Thermometer.html#scale",
                   "tf": 33.33333333333333
                 },
-                "module-j5e_sensor-Sensor.html#scaleTo": {
-                  "ref": "module-j5e_sensor-Sensor.html#scaleTo",
+                "module-j5e_thermometer-Thermometer.html#scaleTo": {
+                  "ref": "module-j5e_thermometer-Thermometer.html#scaleTo",
                   "tf": 40
                 },
-                "module-j5e_sensor-Sensor.html#fscaleTo": {
-                  "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
+                "module-j5e_thermometer-Thermometer.html#fscaleTo": {
+                  "ref": "module-j5e_thermometer-Thermometer.html#fscaleTo",
                   "tf": 40
                 },
                 "module-j5e_light-Light.html#scale": {
@@ -6494,6 +7432,18 @@ window.lunrData = {
                 "module-j5e_light-Light.html#fscaleTo": {
                   "ref": "module-j5e_light-Light.html#fscaleTo",
                   "tf": 40
+                },
+                "module-j5e_sensor-Sensor.html#scale": {
+                  "ref": "module-j5e_sensor-Sensor.html#scale",
+                  "tf": 33.33333333333333
+                },
+                "module-j5e_sensor-Sensor.html#scaleTo": {
+                  "ref": "module-j5e_sensor-Sensor.html#scaleTo",
+                  "tf": 40
+                },
+                "module-j5e_sensor-Sensor.html#fscaleTo": {
+                  "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
+                  "tf": 40
                 }
               }
             },
@@ -6504,6 +7454,24 @@ window.lunrData = {
                   "module-j5e_led-LED.html#pulse": {
                     "ref": "module-j5e_led-LED.html#pulse",
                     "tf": 4.166666666666666
+                  }
+                }
+              }
+            }
+          },
+          "a": {
+            "docs": {},
+            "s": {
+              "docs": {},
+              "t": {
+                "docs": {
+                  "module-j5e_servo-Servo.html#history": {
+                    "ref": "module-j5e_servo-Servo.html#history",
+                    "tf": 12.5
+                  },
+                  "module-j5e_servo-Servo.html#last": {
+                    "ref": "module-j5e_servo-Servo.html#last",
+                    "tf": 700
                   }
                 }
               }
@@ -6595,14 +7563,6 @@ window.lunrData = {
                   "ref": "module-j5e_led-LED.html#stop",
                   "tf": 57.14285714285714
                 },
-                "module-j5e_rgb-RGB.html#animate": {
-                  "ref": "module-j5e_rgb-RGB.html#animate",
-                  "tf": 16.666666666666664
-                },
-                "module-j5e_rgb-RGB.html#stop": {
-                  "ref": "module-j5e_rgb-RGB.html#stop",
-                  "tf": 7.142857142857142
-                },
                 "module-j5e_rgb-RGB.html#on": {
                   "ref": "module-j5e_rgb-RGB.html#on",
                   "tf": 7.142857142857142
@@ -6630,6 +7590,14 @@ window.lunrData = {
                 "module-j5e_rgb-RGB.html#pulse": {
                   "ref": "module-j5e_rgb-RGB.html#pulse",
                   "tf": 10
+                },
+                "module-j5e_rgb-RGB.html#animate": {
+                  "ref": "module-j5e_rgb-RGB.html#animate",
+                  "tf": 16.666666666666664
+                },
+                "module-j5e_rgb-RGB.html#stop": {
+                  "ref": "module-j5e_rgb-RGB.html#stop",
+                  "tf": 7.142857142857142
                 },
                 "module-j5e_animation.html": {
                   "ref": "module-j5e_animation.html",
@@ -6743,6 +7711,31 @@ window.lunrData = {
             },
             "s": {
               "docs": {},
+              "s": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "b": {
+                    "docs": {},
+                    "l": {
+                      "docs": {
+                        "module-j5e_thermometer-Thermometer.html#resolution": {
+                          "ref": "module-j5e_thermometer-Thermometer.html#resolution",
+                          "tf": 12.5
+                        },
+                        "module-j5e_light-Light.html#resolution": {
+                          "ref": "module-j5e_light-Light.html#resolution",
+                          "tf": 12.5
+                        },
+                        "module-j5e_sensor-Sensor.html#resolution": {
+                          "ref": "module-j5e_sensor-Sensor.html#resolution",
+                          "tf": 12.5
+                        }
+                      }
+                    }
+                  }
+                }
+              },
               "i": {
                 "docs": {},
                 "t": {
@@ -6773,32 +7766,51 @@ window.lunrData = {
                     }
                   }
                 }
-              },
-              "s": {
-                "docs": {},
-                "i": {
-                  "docs": {},
-                  "b": {
-                    "docs": {},
-                    "l": {
-                      "docs": {
-                        "module-j5e_sensor-Sensor.html#resolution": {
-                          "ref": "module-j5e_sensor-Sensor.html#resolution",
-                          "tf": 12.5
-                        },
-                        "module-j5e_light-Light.html#resolution": {
-                          "ref": "module-j5e_light-Light.html#resolution",
-                          "tf": 12.5
-                        }
-                      }
-                    }
-                  }
-                }
               }
             }
           },
           "r": {
             "docs": {},
+            "e": {
+              "docs": {},
+              "c": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "s": {
+                    "docs": {
+                      "module-j5e_thermometer-Thermometer.html#fscaleTo": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#fscaleTo",
+                        "tf": 7.142857142857142
+                      },
+                      "module-j5e_light-Light.html#fscaleTo": {
+                        "ref": "module-j5e_light-Light.html#fscaleTo",
+                        "tf": 7.142857142857142
+                      },
+                      "module-j5e_sensor-Sensor.html#fscaleTo": {
+                        "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
+                        "tf": 7.142857142857142
+                      }
+                    }
+                  }
+                }
+              },
+              "s": {
+                "docs": {},
+                "s": {
+                  "docs": {
+                    "module-j5e_button-Button.html#isClosed": {
+                      "ref": "module-j5e_button-Button.html#isClosed",
+                      "tf": 12.5
+                    },
+                    "module-j5e_button-Button.html#isOpen": {
+                      "ref": "module-j5e_button-Button.html#isOpen",
+                      "tf": 12.5
+                    }
+                  }
+                }
+              }
+            },
             "o": {
               "docs": {},
               "v": {
@@ -6831,42 +7843,6 @@ window.lunrData = {
                           }
                         }
                       }
-                    }
-                  }
-                }
-              }
-            },
-            "e": {
-              "docs": {},
-              "c": {
-                "docs": {},
-                "i": {
-                  "docs": {},
-                  "s": {
-                    "docs": {
-                      "module-j5e_sensor-Sensor.html#fscaleTo": {
-                        "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
-                        "tf": 7.142857142857142
-                      },
-                      "module-j5e_light-Light.html#fscaleTo": {
-                        "ref": "module-j5e_light-Light.html#fscaleTo",
-                        "tf": 7.142857142857142
-                      }
-                    }
-                  }
-                }
-              },
-              "s": {
-                "docs": {},
-                "s": {
-                  "docs": {
-                    "module-j5e_button-Button.html#isClosed": {
-                      "ref": "module-j5e_button-Button.html#isClosed",
-                      "tf": 12.5
-                    },
-                    "module-j5e_button-Button.html#isOpen": {
-                      "ref": "module-j5e_button-Button.html#isOpen",
-                      "tf": 12.5
                     }
                   }
                 }
@@ -6967,13 +7943,13 @@ window.lunrData = {
                     "ref": "module-j5e_rgb-RGB.html#isRunning",
                     "tf": 10
                   },
-                  "module-j5e_rgb-RGB.html#stop": {
-                    "ref": "module-j5e_rgb-RGB.html#stop",
-                    "tf": 7.142857142857142
-                  },
                   "module-j5e_rgb-RGB.html#pulse": {
                     "ref": "module-j5e_rgb-RGB.html#pulse",
                     "tf": 685
+                  },
+                  "module-j5e_rgb-RGB.html#stop": {
+                    "ref": "module-j5e_rgb-RGB.html#stop",
+                    "tf": 7.142857142857142
                   }
                 }
               }
@@ -7032,13 +8008,13 @@ window.lunrData = {
                       "ref": "module-j5e_switch-Switch.html",
                       "tf": 8.333333333333332
                     },
+                    "module-j5e_thermometer-Thermometer.html": {
+                      "ref": "module-j5e_thermometer-Thermometer.html",
+                      "tf": 8.333333333333332
+                    },
                     "module-j5e_servo-Servo.html": {
                       "ref": "module-j5e_servo-Servo.html",
                       "tf": 8.333333333333332
-                    },
-                    "module-j5e_sensor-Sensor.html": {
-                      "ref": "module-j5e_sensor-Sensor.html",
-                      "tf": 6.25
                     },
                     "module-j5e_relay-Relay.html": {
                       "ref": "module-j5e_relay-Relay.html",
@@ -7060,10 +8036,33 @@ window.lunrData = {
                       "ref": "module-j5e_led-LED.html",
                       "tf": 7.142857142857142
                     },
+                    "module-j5e_sensor-Sensor.html": {
+                      "ref": "module-j5e_sensor-Sensor.html",
+                      "tf": 6.25
+                    },
                     "module-j5e_rgb-RGB.html": {
                       "ref": "module-j5e_rgb-RGB.html",
                       "tf": 8.333333333333332
                     }
+                  }
+                }
+              }
+            },
+            "i": {
+              "docs": {},
+              "a": {
+                "docs": {
+                  "module-j5e_thermometer-Thermometer.html#C": {
+                    "ref": "module-j5e_thermometer-Thermometer.html#C",
+                    "tf": 25
+                  },
+                  "module-j5e_thermometer-Thermometer.html#F": {
+                    "ref": "module-j5e_thermometer-Thermometer.html#F",
+                    "tf": 25
+                  },
+                  "module-j5e_thermometer-Thermometer.html#K": {
+                    "ref": "module-j5e_thermometer-Thermometer.html#K",
+                    "tf": 25
                   }
                 }
               }
@@ -7133,6 +8132,23 @@ window.lunrData = {
                 }
               }
             },
+            "a": {
+              "docs": {},
+              "l": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "g": {
+                    "docs": {
+                      "module-j5e_thermometer-Thermometer.html": {
+                        "ref": "module-j5e_thermometer-Thermometer.html",
+                        "tf": 8.333333333333332
+                      }
+                    }
+                  }
+                }
+              }
+            },
             "o": {
               "docs": {},
               "d": {
@@ -7158,41 +8174,6 @@ window.lunrData = {
                       "tf": 35
                     }
                   }
-                }
-              }
-            }
-          },
-          "d": {
-            "docs": {},
-            "c": {
-              "docs": {
-                "module-j5e_sensor-Sensor.html": {
-                  "ref": "module-j5e_sensor-Sensor.html",
-                  "tf": 6.25
-                },
-                "module-j5e_sensor-Sensor.html#raw": {
-                  "ref": "module-j5e_sensor-Sensor.html#raw",
-                  "tf": 12.5
-                },
-                "module-j5e_sensor-Sensor.html#resolution": {
-                  "ref": "module-j5e_sensor-Sensor.html#resolution",
-                  "tf": 12.5
-                },
-                "module-j5e_light-Light.html#raw": {
-                  "ref": "module-j5e_light-Light.html#raw",
-                  "tf": 12.5
-                },
-                "module-j5e_light-Light.html#resolution": {
-                  "ref": "module-j5e_light-Light.html#resolution",
-                  "tf": 12.5
-                }
-              }
-            },
-            "d": {
-              "docs": {
-                "module-j5e_animation-Animation.html#enqueue": {
-                  "ref": "module-j5e_animation-Animation.html#enqueue",
-                  "tf": 4.166666666666666
                 }
               }
             }
@@ -7238,12 +8219,12 @@ window.lunrData = {
                                             "docs": {},
                                             "t": {
                                               "docs": {
-                                                "module-j5e_sensor-Sensor.html#limit": {
-                                                  "ref": "module-j5e_sensor-Sensor.html#limit",
+                                                "module-j5e_thermometer-Thermometer.html#limit": {
+                                                  "ref": "module-j5e_thermometer-Thermometer.html#limit",
                                                   "tf": 50
                                                 },
-                                                "module-j5e_sensor-Sensor.html#range": {
-                                                  "ref": "module-j5e_sensor-Sensor.html#range",
+                                                "module-j5e_thermometer-Thermometer.html#range": {
+                                                  "ref": "module-j5e_thermometer-Thermometer.html#range",
                                                   "tf": 33.33333333333333
                                                 },
                                                 "module-j5e_light-Light.html#limit": {
@@ -7252,6 +8233,14 @@ window.lunrData = {
                                                 },
                                                 "module-j5e_light-Light.html#range": {
                                                   "ref": "module-j5e_light-Light.html#range",
+                                                  "tf": 33.33333333333333
+                                                },
+                                                "module-j5e_sensor-Sensor.html#limit": {
+                                                  "ref": "module-j5e_sensor-Sensor.html#limit",
+                                                  "tf": 50
+                                                },
+                                                "module-j5e_sensor-Sensor.html#range": {
+                                                  "ref": "module-j5e_sensor-Sensor.html#range",
                                                   "tf": 33.33333333333333
                                                 },
                                                 "module-j5e_rgb-RGB.html#values": {
@@ -7310,16 +8299,75 @@ window.lunrData = {
                   "docs": {},
                   "t": {
                     "docs": {
-                      "module-j5e_sensor-Sensor.html#threshold": {
-                        "ref": "module-j5e_sensor-Sensor.html#threshold",
+                      "module-j5e_thermometer-Thermometer.html#threshold": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#threshold",
                         "tf": 7.142857142857142
                       },
                       "module-j5e_light-Light.html#threshold": {
                         "ref": "module-j5e_light-Light.html#threshold",
                         "tf": 7.142857142857142
+                      },
+                      "module-j5e_sensor-Sensor.html#threshold": {
+                        "ref": "module-j5e_sensor-Sensor.html#threshold",
+                        "tf": 7.142857142857142
                       }
                     }
                   }
+                }
+              }
+            }
+          },
+          "d": {
+            "docs": {},
+            "c": {
+              "docs": {
+                "module-j5e_thermometer-Thermometer.html#raw": {
+                  "ref": "module-j5e_thermometer-Thermometer.html#raw",
+                  "tf": 12.5
+                },
+                "module-j5e_thermometer-Thermometer.html#median": {
+                  "ref": "module-j5e_thermometer-Thermometer.html#median",
+                  "tf": 12.5
+                },
+                "module-j5e_thermometer-Thermometer.html#resolution": {
+                  "ref": "module-j5e_thermometer-Thermometer.html#resolution",
+                  "tf": 12.5
+                },
+                "module-j5e_light-Light.html#raw": {
+                  "ref": "module-j5e_light-Light.html#raw",
+                  "tf": 12.5
+                },
+                "module-j5e_light-Light.html#median": {
+                  "ref": "module-j5e_light-Light.html#median",
+                  "tf": 12.5
+                },
+                "module-j5e_light-Light.html#resolution": {
+                  "ref": "module-j5e_light-Light.html#resolution",
+                  "tf": 12.5
+                },
+                "module-j5e_sensor-Sensor.html": {
+                  "ref": "module-j5e_sensor-Sensor.html",
+                  "tf": 6.25
+                },
+                "module-j5e_sensor-Sensor.html#raw": {
+                  "ref": "module-j5e_sensor-Sensor.html#raw",
+                  "tf": 12.5
+                },
+                "module-j5e_sensor-Sensor.html#median": {
+                  "ref": "module-j5e_sensor-Sensor.html#median",
+                  "tf": 12.5
+                },
+                "module-j5e_sensor-Sensor.html#resolution": {
+                  "ref": "module-j5e_sensor-Sensor.html#resolution",
+                  "tf": 12.5
+                }
+              }
+            },
+            "d": {
+              "docs": {
+                "module-j5e_animation-Animation.html#enqueue": {
+                  "ref": "module-j5e_animation-Animation.html#enqueue",
+                  "tf": 4.166666666666666
                 }
               }
             }
@@ -7446,12 +8494,12 @@ window.lunrData = {
                 "ref": "module-j5e_switch-Switch.html#once",
                 "tf": 8.333333333333332
               },
-              "module-j5e_servo-Servo.html#once": {
-                "ref": "module-j5e_servo-Servo.html#once",
+              "module-j5e_thermometer-Thermometer.html#once": {
+                "ref": "module-j5e_thermometer-Thermometer.html#once",
                 "tf": 8.333333333333332
               },
-              "module-j5e_sensor-Sensor.html#once": {
-                "ref": "module-j5e_sensor-Sensor.html#once",
+              "module-j5e_servo-Servo.html#once": {
+                "ref": "module-j5e_servo-Servo.html#once",
                 "tf": 8.333333333333332
               },
               "module-j5e_light-Light.html#once": {
@@ -7465,6 +8513,10 @@ window.lunrData = {
               "module-j5e_button-Button.html#once": {
                 "ref": "module-j5e_button-Button.html#once",
                 "tf": 8.333333333333332
+              },
+              "module-j5e_sensor-Sensor.html#once": {
+                "ref": "module-j5e_sensor-Sensor.html#once",
+                "tf": 8.333333333333332
               }
             },
             "c": {
@@ -7473,12 +8525,12 @@ window.lunrData = {
                   "ref": "module-j5e_switch-Switch.html#once",
                   "tf": 683.3333333333334
                 },
-                "module-j5e_servo-Servo.html#once": {
-                  "ref": "module-j5e_servo-Servo.html#once",
+                "module-j5e_thermometer-Thermometer.html#once": {
+                  "ref": "module-j5e_thermometer-Thermometer.html#once",
                   "tf": 683.3333333333334
                 },
-                "module-j5e_sensor-Sensor.html#once": {
-                  "ref": "module-j5e_sensor-Sensor.html#once",
+                "module-j5e_servo-Servo.html#once": {
+                  "ref": "module-j5e_servo-Servo.html#once",
                   "tf": 683.3333333333334
                 },
                 "module-j5e_light-Light.html#once": {
@@ -7491,6 +8543,10 @@ window.lunrData = {
                 },
                 "module-j5e_button-Button.html#once": {
                   "ref": "module-j5e_button-Button.html#once",
+                  "tf": 683.3333333333334
+                },
+                "module-j5e_sensor-Sensor.html#once": {
+                  "ref": "module-j5e_sensor-Sensor.html#once",
                   "tf": 683.3333333333334
                 }
               }
@@ -7521,82 +8577,6 @@ window.lunrData = {
               }
             }
           },
-          "f": {
-            "docs": {},
-            "f": {
-              "docs": {},
-              "s": {
-                "docs": {},
-                "e": {
-                  "docs": {},
-                  "t": {
-                    "docs": {
-                      "module-j5e_servo-Servo.html#position": {
-                        "ref": "module-j5e_servo-Servo.html#position",
-                        "tf": 7.142857142857142
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "b": {
-            "docs": {},
-            "j": {
-              "docs": {},
-              "e": {
-                "docs": {},
-                "c": {
-                  "docs": {},
-                  "t": {
-                    "docs": {
-                      "module-j5e_servo-Servo.html#max": {
-                        "ref": "module-j5e_servo-Servo.html#max",
-                        "tf": 33.33333333333333
-                      },
-                      "module-j5e_servo-Servo.html#center": {
-                        "ref": "module-j5e_servo-Servo.html#center",
-                        "tf": 33.33333333333333
-                      },
-                      "module-j5e_sensor-Sensor.html#enable": {
-                        "ref": "module-j5e_sensor-Sensor.html#enable",
-                        "tf": 50
-                      },
-                      "module-j5e_sensor-Sensor.html#disable": {
-                        "ref": "module-j5e_sensor-Sensor.html#disable",
-                        "tf": 50
-                      },
-                      "module-j5e_sensor-Sensor.html#scale": {
-                        "ref": "module-j5e_sensor-Sensor.html#scale",
-                        "tf": 16.666666666666664
-                      },
-                      "module-j5e_light-Light.html#enable": {
-                        "ref": "module-j5e_light-Light.html#enable",
-                        "tf": 50
-                      },
-                      "module-j5e_light-Light.html#disable": {
-                        "ref": "module-j5e_light-Light.html#disable",
-                        "tf": 50
-                      },
-                      "module-j5e_light-Light.html#scale": {
-                        "ref": "module-j5e_light-Light.html#scale",
-                        "tf": 16.666666666666664
-                      },
-                      "module-j5e_led-LED.html#animate": {
-                        "ref": "module-j5e_led-LED.html#animate",
-                        "tf": 8.333333333333332
-                      },
-                      "module-j5e_rgb-RGB.html#color": {
-                        "ref": "module-j5e_rgb-RGB.html#color",
-                        "tf": 2.941176470588235
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
           "u": {
             "docs": {},
             "t": {
@@ -7616,13 +8596,105 @@ window.lunrData = {
                   "docs": {},
                   "t": {
                     "docs": {
-                      "module-j5e_sensor-Sensor.html#limit": {
-                        "ref": "module-j5e_sensor-Sensor.html#limit",
+                      "module-j5e_thermometer-Thermometer.html#limit": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#limit",
                         "tf": 16.666666666666664
                       },
                       "module-j5e_light-Light.html#limit": {
                         "ref": "module-j5e_light-Light.html#limit",
                         "tf": 16.666666666666664
+                      },
+                      "module-j5e_sensor-Sensor.html#limit": {
+                        "ref": "module-j5e_sensor-Sensor.html#limit",
+                        "tf": 16.666666666666664
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "b": {
+            "docs": {},
+            "j": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "c": {
+                  "docs": {},
+                  "t": {
+                    "docs": {
+                      "module-j5e_thermometer-Thermometer.html#enable": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#enable",
+                        "tf": 50
+                      },
+                      "module-j5e_thermometer-Thermometer.html#disable": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#disable",
+                        "tf": 50
+                      },
+                      "module-j5e_thermometer-Thermometer.html#scale": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#scale",
+                        "tf": 16.666666666666664
+                      },
+                      "module-j5e_servo-Servo.html#max": {
+                        "ref": "module-j5e_servo-Servo.html#max",
+                        "tf": 33.33333333333333
+                      },
+                      "module-j5e_servo-Servo.html#center": {
+                        "ref": "module-j5e_servo-Servo.html#center",
+                        "tf": 33.33333333333333
+                      },
+                      "module-j5e_light-Light.html#enable": {
+                        "ref": "module-j5e_light-Light.html#enable",
+                        "tf": 50
+                      },
+                      "module-j5e_light-Light.html#disable": {
+                        "ref": "module-j5e_light-Light.html#disable",
+                        "tf": 50
+                      },
+                      "module-j5e_light-Light.html#scale": {
+                        "ref": "module-j5e_light-Light.html#scale",
+                        "tf": 16.666666666666664
+                      },
+                      "module-j5e_led-LED.html#animate": {
+                        "ref": "module-j5e_led-LED.html#animate",
+                        "tf": 8.333333333333332
+                      },
+                      "module-j5e_sensor-Sensor.html#scale": {
+                        "ref": "module-j5e_sensor-Sensor.html#scale",
+                        "tf": 16.666666666666664
+                      },
+                      "module-j5e_sensor-Sensor.html#enable": {
+                        "ref": "module-j5e_sensor-Sensor.html#enable",
+                        "tf": 50
+                      },
+                      "module-j5e_sensor-Sensor.html#disable": {
+                        "ref": "module-j5e_sensor-Sensor.html#disable",
+                        "tf": 50
+                      },
+                      "module-j5e_rgb-RGB.html#color": {
+                        "ref": "module-j5e_rgb-RGB.html#color",
+                        "tf": 2.941176470588235
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "f": {
+            "docs": {},
+            "f": {
+              "docs": {},
+              "s": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "t": {
+                    "docs": {
+                      "module-j5e_servo-Servo.html#position": {
+                        "ref": "module-j5e_servo-Servo.html#position",
+                        "tf": 7.142857142857142
                       }
                     }
                   }
@@ -7687,6 +8759,10 @@ window.lunrData = {
                     },
                     "module-j5e_switch.html": {
                       "ref": "module-j5e_switch.html",
+                      "tf": 110
+                    },
+                    "module-j5e_thermometer.html": {
+                      "ref": "module-j5e_thermometer.html",
                       "tf": 110
                     }
                   },
@@ -8276,6 +9352,23 @@ window.lunrData = {
                                                                 }
                                                               }
                                                             },
+                                                            "a": {
+                                                              "docs": {},
+                                                              "m": {
+                                                                "docs": {},
+                                                                "p": {
+                                                                  "docs": {},
+                                                                  "l": {
+                                                                    "docs": {
+                                                                      "module-j5e_sensor-Sensor.html#samples": {
+                                                                        "ref": "module-j5e_sensor-Sensor.html#samples",
+                                                                        "tf": 1150
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            },
                                                             "c": {
                                                               "docs": {
                                                                 "module-j5e_sensor-Sensor.html#scaled": {
@@ -8356,17 +9449,6 @@ window.lunrData = {
                                                                   }
                                                                 }
                                                               },
-                                                              "a": {
-                                                                "docs": {},
-                                                                "d": {
-                                                                  "docs": {
-                                                                    "module-j5e_sensor-Sensor.html#read": {
-                                                                      "ref": "module-j5e_sensor-Sensor.html#read",
-                                                                      "tf": 1150
-                                                                    }
-                                                                  }
-                                                                }
-                                                              },
                                                               "m": {
                                                                 "docs": {},
                                                                 "o": {
@@ -8396,6 +9478,40 @@ window.lunrData = {
                                                                               }
                                                                             }
                                                                           }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              },
+                                                              "a": {
+                                                                "docs": {},
+                                                                "d": {
+                                                                  "docs": {
+                                                                    "module-j5e_sensor-Sensor.html#read": {
+                                                                      "ref": "module-j5e_sensor-Sensor.html#read",
+                                                                      "tf": 1150
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          },
+                                                          "m": {
+                                                            "docs": {},
+                                                            "e": {
+                                                              "docs": {},
+                                                              "d": {
+                                                                "docs": {},
+                                                                "i": {
+                                                                  "docs": {},
+                                                                  "a": {
+                                                                    "docs": {},
+                                                                    "n": {
+                                                                      "docs": {
+                                                                        "module-j5e_sensor-Sensor.html#median": {
+                                                                          "ref": "module-j5e_sensor-Sensor.html#median",
+                                                                          "tf": 1150
                                                                         }
                                                                       }
                                                                     }
@@ -8463,6 +9579,35 @@ window.lunrData = {
                                                               }
                                                             }
                                                           },
+                                                          "f": {
+                                                            "docs": {},
+                                                            "s": {
+                                                              "docs": {},
+                                                              "c": {
+                                                                "docs": {},
+                                                                "a": {
+                                                                  "docs": {},
+                                                                  "l": {
+                                                                    "docs": {},
+                                                                    "e": {
+                                                                      "docs": {},
+                                                                      "t": {
+                                                                        "docs": {},
+                                                                        "o": {
+                                                                          "docs": {
+                                                                            "module-j5e_sensor-Sensor.html#fscaleTo": {
+                                                                              "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
+                                                                              "tf": 1150
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          },
                                                           "e": {
                                                             "docs": {},
                                                             "n": {
@@ -8487,26 +9632,550 @@ window.lunrData = {
                                                                 }
                                                               }
                                                             }
-                                                          },
-                                                          "f": {
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "t": {
+                                "docs": {},
+                                "h": {
+                                  "docs": {},
+                                  "e": {
+                                    "docs": {},
+                                    "r": {
+                                      "docs": {},
+                                      "m": {
+                                        "docs": {},
+                                        "o": {
+                                          "docs": {},
+                                          "m": {
+                                            "docs": {},
+                                            "e": {
+                                              "docs": {},
+                                              "t": {
+                                                "docs": {
+                                                  "module-j5e_thermometer.html": {
+                                                    "ref": "module-j5e_thermometer.html",
+                                                    "tf": 1300
+                                                  }
+                                                },
+                                                "e": {
+                                                  "docs": {},
+                                                  "r": {
+                                                    "docs": {},
+                                                    "~": {
+                                                      "docs": {},
+                                                      "t": {
+                                                        "docs": {},
+                                                        "h": {
+                                                          "docs": {},
+                                                          "e": {
                                                             "docs": {},
-                                                            "s": {
+                                                            "r": {
                                                               "docs": {},
-                                                              "c": {
+                                                              "m": {
                                                                 "docs": {},
-                                                                "a": {
+                                                                "o": {
                                                                   "docs": {},
-                                                                  "l": {
+                                                                  "m": {
                                                                     "docs": {},
                                                                     "e": {
                                                                       "docs": {},
                                                                       "t": {
-                                                                        "docs": {},
-                                                                        "o": {
-                                                                          "docs": {
-                                                                            "module-j5e_sensor-Sensor.html#fscaleTo": {
-                                                                              "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
-                                                                              "tf": 1150
+                                                                        "docs": {
+                                                                          "module-j5e_thermometer-Thermometer.html": {
+                                                                            "ref": "module-j5e_thermometer-Thermometer.html",
+                                                                            "tf": 1300
+                                                                          }
+                                                                        },
+                                                                        "e": {
+                                                                          "docs": {},
+                                                                          "r": {
+                                                                            "docs": {},
+                                                                            "#": {
+                                                                              "docs": {},
+                                                                              "c": {
+                                                                                "docs": {
+                                                                                  "module-j5e_thermometer-Thermometer.html#C": {
+                                                                                    "ref": "module-j5e_thermometer-Thermometer.html#C",
+                                                                                    "tf": 1150
+                                                                                  }
+                                                                                },
+                                                                                "e": {
+                                                                                  "docs": {},
+                                                                                  "l": {
+                                                                                    "docs": {},
+                                                                                    "s": {
+                                                                                      "docs": {},
+                                                                                      "i": {
+                                                                                        "docs": {},
+                                                                                        "u": {
+                                                                                          "docs": {
+                                                                                            "module-j5e_thermometer-Thermometer.html#celsius": {
+                                                                                              "ref": "module-j5e_thermometer-Thermometer.html#celsius",
+                                                                                              "tf": 1150
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              },
+                                                                              "f": {
+                                                                                "docs": {
+                                                                                  "module-j5e_thermometer-Thermometer.html#F": {
+                                                                                    "ref": "module-j5e_thermometer-Thermometer.html#F",
+                                                                                    "tf": 1150
+                                                                                  }
+                                                                                },
+                                                                                "a": {
+                                                                                  "docs": {},
+                                                                                  "h": {
+                                                                                    "docs": {},
+                                                                                    "r": {
+                                                                                      "docs": {},
+                                                                                      "e": {
+                                                                                        "docs": {},
+                                                                                        "n": {
+                                                                                          "docs": {},
+                                                                                          "h": {
+                                                                                            "docs": {},
+                                                                                            "e": {
+                                                                                              "docs": {},
+                                                                                              "i": {
+                                                                                                "docs": {},
+                                                                                                "t": {
+                                                                                                  "docs": {
+                                                                                                    "module-j5e_thermometer-Thermometer.html#fahrenheit": {
+                                                                                                      "ref": "module-j5e_thermometer-Thermometer.html#fahrenheit",
+                                                                                                      "tf": 1150
+                                                                                                    }
+                                                                                                  }
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                },
+                                                                                "s": {
+                                                                                  "docs": {},
+                                                                                  "c": {
+                                                                                    "docs": {},
+                                                                                    "a": {
+                                                                                      "docs": {},
+                                                                                      "l": {
+                                                                                        "docs": {},
+                                                                                        "e": {
+                                                                                          "docs": {},
+                                                                                          "t": {
+                                                                                            "docs": {},
+                                                                                            "o": {
+                                                                                              "docs": {
+                                                                                                "module-j5e_thermometer-Thermometer.html#fscaleTo": {
+                                                                                                  "ref": "module-j5e_thermometer-Thermometer.html#fscaleTo",
+                                                                                                  "tf": 1150
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              },
+                                                                              "k": {
+                                                                                "docs": {
+                                                                                  "module-j5e_thermometer-Thermometer.html#K": {
+                                                                                    "ref": "module-j5e_thermometer-Thermometer.html#K",
+                                                                                    "tf": 1150
+                                                                                  }
+                                                                                },
+                                                                                "e": {
+                                                                                  "docs": {},
+                                                                                  "l": {
+                                                                                    "docs": {},
+                                                                                    "v": {
+                                                                                      "docs": {},
+                                                                                      "i": {
+                                                                                        "docs": {},
+                                                                                        "n": {
+                                                                                          "docs": {
+                                                                                            "module-j5e_thermometer-Thermometer.html#kelvin": {
+                                                                                              "ref": "module-j5e_thermometer-Thermometer.html#kelvin",
+                                                                                              "tf": 1150
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              },
+                                                                              "l": {
+                                                                                "docs": {},
+                                                                                "i": {
+                                                                                  "docs": {},
+                                                                                  "m": {
+                                                                                    "docs": {},
+                                                                                    "i": {
+                                                                                      "docs": {},
+                                                                                      "t": {
+                                                                                        "docs": {
+                                                                                          "module-j5e_thermometer-Thermometer.html#limit": {
+                                                                                            "ref": "module-j5e_thermometer-Thermometer.html#limit",
+                                                                                            "tf": 1150
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              },
+                                                                              "t": {
+                                                                                "docs": {},
+                                                                                "h": {
+                                                                                  "docs": {},
+                                                                                  "r": {
+                                                                                    "docs": {},
+                                                                                    "e": {
+                                                                                      "docs": {},
+                                                                                      "s": {
+                                                                                        "docs": {},
+                                                                                        "h": {
+                                                                                          "docs": {},
+                                                                                          "o": {
+                                                                                            "docs": {},
+                                                                                            "l": {
+                                                                                              "docs": {},
+                                                                                              "d": {
+                                                                                                "docs": {
+                                                                                                  "module-j5e_thermometer-Thermometer.html#threshold": {
+                                                                                                    "ref": "module-j5e_thermometer-Thermometer.html#threshold",
+                                                                                                    "tf": 1150
+                                                                                                  }
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              },
+                                                                              "i": {
+                                                                                "docs": {},
+                                                                                "n": {
+                                                                                  "docs": {},
+                                                                                  "t": {
+                                                                                    "docs": {},
+                                                                                    "e": {
+                                                                                      "docs": {},
+                                                                                      "r": {
+                                                                                        "docs": {},
+                                                                                        "v": {
+                                                                                          "docs": {
+                                                                                            "module-j5e_thermometer-Thermometer.html#interval": {
+                                                                                              "ref": "module-j5e_thermometer-Thermometer.html#interval",
+                                                                                              "tf": 1150
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              },
+                                                                              "s": {
+                                                                                "docs": {},
+                                                                                "m": {
+                                                                                  "docs": {},
+                                                                                  "o": {
+                                                                                    "docs": {},
+                                                                                    "o": {
+                                                                                      "docs": {},
+                                                                                      "t": {
+                                                                                        "docs": {},
+                                                                                        "h": {
+                                                                                          "docs": {
+                                                                                            "module-j5e_thermometer-Thermometer.html#smoothing": {
+                                                                                              "ref": "module-j5e_thermometer-Thermometer.html#smoothing",
+                                                                                              "tf": 1150
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                },
+                                                                                "a": {
+                                                                                  "docs": {},
+                                                                                  "m": {
+                                                                                    "docs": {},
+                                                                                    "p": {
+                                                                                      "docs": {},
+                                                                                      "l": {
+                                                                                        "docs": {
+                                                                                          "module-j5e_thermometer-Thermometer.html#samples": {
+                                                                                            "ref": "module-j5e_thermometer-Thermometer.html#samples",
+                                                                                            "tf": 1150
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                },
+                                                                                "c": {
+                                                                                  "docs": {
+                                                                                    "module-j5e_thermometer-Thermometer.html#scaled": {
+                                                                                      "ref": "module-j5e_thermometer-Thermometer.html#scaled",
+                                                                                      "tf": 1150
+                                                                                    }
+                                                                                  },
+                                                                                  "a": {
+                                                                                    "docs": {},
+                                                                                    "l": {
+                                                                                      "docs": {
+                                                                                        "module-j5e_thermometer-Thermometer.html#scale": {
+                                                                                          "ref": "module-j5e_thermometer-Thermometer.html#scale",
+                                                                                          "tf": 1150
+                                                                                        }
+                                                                                      },
+                                                                                      "e": {
+                                                                                        "docs": {},
+                                                                                        "t": {
+                                                                                          "docs": {},
+                                                                                          "o": {
+                                                                                            "docs": {
+                                                                                              "module-j5e_thermometer-Thermometer.html#scaleTo": {
+                                                                                                "ref": "module-j5e_thermometer-Thermometer.html#scaleTo",
+                                                                                                "tf": 1150
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              },
+                                                                              "r": {
+                                                                                "docs": {},
+                                                                                "a": {
+                                                                                  "docs": {},
+                                                                                  "n": {
+                                                                                    "docs": {},
+                                                                                    "g": {
+                                                                                      "docs": {
+                                                                                        "module-j5e_thermometer-Thermometer.html#range": {
+                                                                                          "ref": "module-j5e_thermometer-Thermometer.html#range",
+                                                                                          "tf": 1150
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  },
+                                                                                  "w": {
+                                                                                    "docs": {
+                                                                                      "module-j5e_thermometer-Thermometer.html#raw": {
+                                                                                        "ref": "module-j5e_thermometer-Thermometer.html#raw",
+                                                                                        "tf": 1150
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                },
+                                                                                "e": {
+                                                                                  "docs": {},
+                                                                                  "s": {
+                                                                                    "docs": {},
+                                                                                    "o": {
+                                                                                      "docs": {},
+                                                                                      "l": {
+                                                                                        "docs": {},
+                                                                                        "u": {
+                                                                                          "docs": {},
+                                                                                          "t": {
+                                                                                            "docs": {
+                                                                                              "module-j5e_thermometer-Thermometer.html#resolution": {
+                                                                                                "ref": "module-j5e_thermometer-Thermometer.html#resolution",
+                                                                                                "tf": 1150
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  },
+                                                                                  "m": {
+                                                                                    "docs": {},
+                                                                                    "o": {
+                                                                                      "docs": {},
+                                                                                      "v": {
+                                                                                        "docs": {},
+                                                                                        "e": {
+                                                                                          "docs": {},
+                                                                                          "l": {
+                                                                                            "docs": {},
+                                                                                            "i": {
+                                                                                              "docs": {},
+                                                                                              "s": {
+                                                                                                "docs": {},
+                                                                                                "t": {
+                                                                                                  "docs": {},
+                                                                                                  "e": {
+                                                                                                    "docs": {},
+                                                                                                    "n": {
+                                                                                                      "docs": {
+                                                                                                        "module-j5e_thermometer-Thermometer.html#removeListener": {
+                                                                                                          "ref": "module-j5e_thermometer-Thermometer.html#removeListener",
+                                                                                                          "tf": 1150
+                                                                                                        }
+                                                                                                      }
+                                                                                                    }
+                                                                                                  }
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  },
+                                                                                  "a": {
+                                                                                    "docs": {},
+                                                                                    "d": {
+                                                                                      "docs": {
+                                                                                        "module-j5e_thermometer-Thermometer.html#read": {
+                                                                                          "ref": "module-j5e_thermometer-Thermometer.html#read",
+                                                                                          "tf": 1150
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              },
+                                                                              "m": {
+                                                                                "docs": {},
+                                                                                "e": {
+                                                                                  "docs": {},
+                                                                                  "d": {
+                                                                                    "docs": {},
+                                                                                    "i": {
+                                                                                      "docs": {},
+                                                                                      "a": {
+                                                                                        "docs": {},
+                                                                                        "n": {
+                                                                                          "docs": {
+                                                                                            "module-j5e_thermometer-Thermometer.html#median": {
+                                                                                              "ref": "module-j5e_thermometer-Thermometer.html#median",
+                                                                                              "tf": 1150
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              },
+                                                                              "v": {
+                                                                                "docs": {},
+                                                                                "a": {
+                                                                                  "docs": {},
+                                                                                  "l": {
+                                                                                    "docs": {},
+                                                                                    "u": {
+                                                                                      "docs": {
+                                                                                        "module-j5e_thermometer-Thermometer.html#value": {
+                                                                                          "ref": "module-j5e_thermometer-Thermometer.html#value",
+                                                                                          "tf": 1150
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              },
+                                                                              "o": {
+                                                                                "docs": {},
+                                                                                "n": {
+                                                                                  "docs": {
+                                                                                    "module-j5e_thermometer-Thermometer.html#on": {
+                                                                                      "ref": "module-j5e_thermometer-Thermometer.html#on",
+                                                                                      "tf": 1300
+                                                                                    }
+                                                                                  },
+                                                                                  "c": {
+                                                                                    "docs": {
+                                                                                      "module-j5e_thermometer-Thermometer.html#once": {
+                                                                                        "ref": "module-j5e_thermometer-Thermometer.html#once",
+                                                                                        "tf": 1150
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              },
+                                                                              "w": {
+                                                                                "docs": {},
+                                                                                "i": {
+                                                                                  "docs": {},
+                                                                                  "t": {
+                                                                                    "docs": {},
+                                                                                    "h": {
+                                                                                      "docs": {},
+                                                                                      "i": {
+                                                                                        "docs": {},
+                                                                                        "n": {
+                                                                                          "docs": {
+                                                                                            "module-j5e_thermometer-Thermometer.html#within": {
+                                                                                              "ref": "module-j5e_thermometer-Thermometer.html#within",
+                                                                                              "tf": 1150
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              },
+                                                                              "e": {
+                                                                                "docs": {},
+                                                                                "n": {
+                                                                                  "docs": {
+                                                                                    "module-j5e_thermometer-Thermometer.html#enable": {
+                                                                                      "ref": "module-j5e_thermometer-Thermometer.html#enable",
+                                                                                      "tf": 1150
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              },
+                                                                              "d": {
+                                                                                "docs": {},
+                                                                                "i": {
+                                                                                  "docs": {},
+                                                                                  "s": {
+                                                                                    "docs": {
+                                                                                      "module-j5e_thermometer-Thermometer.html#disable": {
+                                                                                        "ref": "module-j5e_thermometer-Thermometer.html#disable",
+                                                                                        "tf": 1150
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
                                                                             }
                                                                           }
                                                                         }
@@ -8770,40 +10439,6 @@ window.lunrData = {
                                                   }
                                                 }
                                               },
-                                              "a": {
-                                                "docs": {},
-                                                "n": {
-                                                  "docs": {},
-                                                  "i": {
-                                                    "docs": {},
-                                                    "m": {
-                                                      "docs": {
-                                                        "module-j5e_rgb-RGB.html#animate": {
-                                                          "ref": "module-j5e_rgb-RGB.html#animate",
-                                                          "tf": 1150
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "s": {
-                                                "docs": {},
-                                                "t": {
-                                                  "docs": {},
-                                                  "o": {
-                                                    "docs": {},
-                                                    "p": {
-                                                      "docs": {
-                                                        "module-j5e_rgb-RGB.html#stop": {
-                                                          "ref": "module-j5e_rgb-RGB.html#stop",
-                                                          "tf": 1150
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
                                               "c": {
                                                 "docs": {},
                                                 "o": {
@@ -8930,6 +10565,40 @@ window.lunrData = {
                                                     }
                                                   }
                                                 }
+                                              },
+                                              "a": {
+                                                "docs": {},
+                                                "n": {
+                                                  "docs": {},
+                                                  "i": {
+                                                    "docs": {},
+                                                    "m": {
+                                                      "docs": {
+                                                        "module-j5e_rgb-RGB.html#animate": {
+                                                          "ref": "module-j5e_rgb-RGB.html#animate",
+                                                          "tf": 1150
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "s": {
+                                                "docs": {},
+                                                "t": {
+                                                  "docs": {},
+                                                  "o": {
+                                                    "docs": {},
+                                                    "p": {
+                                                      "docs": {
+                                                        "module-j5e_rgb-RGB.html#stop": {
+                                                          "ref": "module-j5e_rgb-RGB.html#stop",
+                                                          "tf": 1150
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
                                               }
                                             }
                                           }
@@ -8980,23 +10649,6 @@ window.lunrData = {
                                                       "docs": {},
                                                       "l": {
                                                         "docs": {},
-                                                        "e": {
-                                                          "docs": {},
-                                                          "v": {
-                                                            "docs": {},
-                                                            "e": {
-                                                              "docs": {},
-                                                              "l": {
-                                                                "docs": {
-                                                                  "module-j5e_light-Light.html#level": {
-                                                                    "ref": "module-j5e_light-Light.html#level",
-                                                                    "tf": 1150
-                                                                  }
-                                                                }
-                                                              }
-                                                            }
-                                                          }
-                                                        },
                                                         "i": {
                                                           "docs": {},
                                                           "m": {
@@ -9007,6 +10659,23 @@ window.lunrData = {
                                                                 "docs": {
                                                                   "module-j5e_light-Light.html#limit": {
                                                                     "ref": "module-j5e_light-Light.html#limit",
+                                                                    "tf": 1150
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        },
+                                                        "e": {
+                                                          "docs": {},
+                                                          "v": {
+                                                            "docs": {},
+                                                            "e": {
+                                                              "docs": {},
+                                                              "l": {
+                                                                "docs": {
+                                                                  "module-j5e_light-Light.html#level": {
+                                                                    "ref": "module-j5e_light-Light.html#level",
                                                                     "tf": 1150
                                                                   }
                                                                 }
@@ -9086,6 +10755,23 @@ window.lunrData = {
                                                                       "ref": "module-j5e_light-Light.html#smoothing",
                                                                       "tf": 1150
                                                                     }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        },
+                                                        "a": {
+                                                          "docs": {},
+                                                          "m": {
+                                                            "docs": {},
+                                                            "p": {
+                                                              "docs": {},
+                                                              "l": {
+                                                                "docs": {
+                                                                  "module-j5e_light-Light.html#samples": {
+                                                                    "ref": "module-j5e_light-Light.html#samples",
+                                                                    "tf": 1150
                                                                   }
                                                                 }
                                                               }
@@ -9172,6 +10858,17 @@ window.lunrData = {
                                                               }
                                                             }
                                                           },
+                                                          "a": {
+                                                            "docs": {},
+                                                            "d": {
+                                                              "docs": {
+                                                                "module-j5e_light-Light.html#read": {
+                                                                  "ref": "module-j5e_light-Light.html#read",
+                                                                  "tf": 1150
+                                                                }
+                                                              }
+                                                            }
+                                                          },
                                                           "m": {
                                                             "docs": {},
                                                             "o": {
@@ -9206,14 +10903,26 @@ window.lunrData = {
                                                                 }
                                                               }
                                                             }
-                                                          },
-                                                          "a": {
+                                                          }
+                                                        }
+                                                      },
+                                                      "m": {
+                                                        "docs": {},
+                                                        "e": {
+                                                          "docs": {},
+                                                          "d": {
                                                             "docs": {},
-                                                            "d": {
-                                                              "docs": {
-                                                                "module-j5e_light-Light.html#read": {
-                                                                  "ref": "module-j5e_light-Light.html#read",
-                                                                  "tf": 1150
+                                                            "i": {
+                                                              "docs": {},
+                                                              "a": {
+                                                                "docs": {},
+                                                                "n": {
+                                                                  "docs": {
+                                                                    "module-j5e_light-Light.html#median": {
+                                                                      "ref": "module-j5e_light-Light.html#median",
+                                                                      "tf": 1150
+                                                                    }
+                                                                  }
                                                                 }
                                                               }
                                                             }
@@ -9232,6 +10941,31 @@ window.lunrData = {
                                                                   "ref": "module-j5e_light-Light.html#value",
                                                                   "tf": 1150
                                                                 }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      },
+                                                      "e": {
+                                                        "docs": {},
+                                                        "n": {
+                                                          "docs": {
+                                                            "module-j5e_light-Light.html#enable": {
+                                                              "ref": "module-j5e_light-Light.html#enable",
+                                                              "tf": 1150
+                                                            }
+                                                          }
+                                                        }
+                                                      },
+                                                      "d": {
+                                                        "docs": {},
+                                                        "i": {
+                                                          "docs": {},
+                                                          "s": {
+                                                            "docs": {
+                                                              "module-j5e_light-Light.html#disable": {
+                                                                "ref": "module-j5e_light-Light.html#disable",
+                                                                "tf": 1150
                                                               }
                                                             }
                                                           }
@@ -9274,31 +11008,6 @@ window.lunrData = {
                                                                     }
                                                                   }
                                                                 }
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                      },
-                                                      "e": {
-                                                        "docs": {},
-                                                        "n": {
-                                                          "docs": {
-                                                            "module-j5e_light-Light.html#enable": {
-                                                              "ref": "module-j5e_light-Light.html#enable",
-                                                              "tf": 1150
-                                                            }
-                                                          }
-                                                        }
-                                                      },
-                                                      "d": {
-                                                        "docs": {},
-                                                        "i": {
-                                                          "docs": {},
-                                                          "s": {
-                                                            "docs": {
-                                                              "module-j5e_light-Light.html#disable": {
-                                                                "ref": "module-j5e_light-Light.html#disable",
-                                                                "tf": 1150
                                                               }
                                                             }
                                                           }
@@ -10157,6 +11866,74 @@ window.lunrData = {
                         "ref": "module-j5e_switch-Switch.html#isOpen",
                         "tf": 110
                       },
+                      "module-j5e_thermometer-Thermometer.html#celsius": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#celsius",
+                        "tf": 110
+                      },
+                      "module-j5e_thermometer-Thermometer.html#C": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#C",
+                        "tf": 110
+                      },
+                      "module-j5e_thermometer-Thermometer.html#fahrenheit": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#fahrenheit",
+                        "tf": 110
+                      },
+                      "module-j5e_thermometer-Thermometer.html#F": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#F",
+                        "tf": 110
+                      },
+                      "module-j5e_thermometer-Thermometer.html#kelvin": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#kelvin",
+                        "tf": 110
+                      },
+                      "module-j5e_thermometer-Thermometer.html#K": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#K",
+                        "tf": 110
+                      },
+                      "module-j5e_thermometer-Thermometer.html#limit": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#limit",
+                        "tf": 110
+                      },
+                      "module-j5e_thermometer-Thermometer.html#threshold": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#threshold",
+                        "tf": 110
+                      },
+                      "module-j5e_thermometer-Thermometer.html#interval": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#interval",
+                        "tf": 110
+                      },
+                      "module-j5e_thermometer-Thermometer.html#smoothing": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#smoothing",
+                        "tf": 110
+                      },
+                      "module-j5e_thermometer-Thermometer.html#samples": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#samples",
+                        "tf": 110
+                      },
+                      "module-j5e_thermometer-Thermometer.html#range": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#range",
+                        "tf": 110
+                      },
+                      "module-j5e_thermometer-Thermometer.html#raw": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#raw",
+                        "tf": 110
+                      },
+                      "module-j5e_thermometer-Thermometer.html#median": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#median",
+                        "tf": 110
+                      },
+                      "module-j5e_thermometer-Thermometer.html#resolution": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#resolution",
+                        "tf": 110
+                      },
+                      "module-j5e_thermometer-Thermometer.html#scaled": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#scaled",
+                        "tf": 110
+                      },
+                      "module-j5e_thermometer-Thermometer.html#value": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#value",
+                        "tf": 110
+                      },
                       "module-j5e_servo-Servo.html#history": {
                         "ref": "module-j5e_servo-Servo.html#history",
                         "tf": 110
@@ -10169,42 +11946,6 @@ window.lunrData = {
                         "ref": "module-j5e_servo-Servo.html#position",
                         "tf": 110
                       },
-                      "module-j5e_sensor-Sensor.html#limit": {
-                        "ref": "module-j5e_sensor-Sensor.html#limit",
-                        "tf": 110
-                      },
-                      "module-j5e_sensor-Sensor.html#threshold": {
-                        "ref": "module-j5e_sensor-Sensor.html#threshold",
-                        "tf": 110
-                      },
-                      "module-j5e_sensor-Sensor.html#interval": {
-                        "ref": "module-j5e_sensor-Sensor.html#interval",
-                        "tf": 110
-                      },
-                      "module-j5e_sensor-Sensor.html#smoothing": {
-                        "ref": "module-j5e_sensor-Sensor.html#smoothing",
-                        "tf": 110
-                      },
-                      "module-j5e_sensor-Sensor.html#range": {
-                        "ref": "module-j5e_sensor-Sensor.html#range",
-                        "tf": 110
-                      },
-                      "module-j5e_sensor-Sensor.html#raw": {
-                        "ref": "module-j5e_sensor-Sensor.html#raw",
-                        "tf": 110
-                      },
-                      "module-j5e_sensor-Sensor.html#resolution": {
-                        "ref": "module-j5e_sensor-Sensor.html#resolution",
-                        "tf": 110
-                      },
-                      "module-j5e_sensor-Sensor.html#scaled": {
-                        "ref": "module-j5e_sensor-Sensor.html#scaled",
-                        "tf": 110
-                      },
-                      "module-j5e_sensor-Sensor.html#value": {
-                        "ref": "module-j5e_sensor-Sensor.html#value",
-                        "tf": 110
-                      },
                       "module-j5e_relay-Relay.html#value": {
                         "ref": "module-j5e_relay-Relay.html#value",
                         "tf": 110
@@ -10215,10 +11956,6 @@ window.lunrData = {
                       },
                       "module-j5e_relay-Relay.html#type": {
                         "ref": "module-j5e_relay-Relay.html#type",
-                        "tf": 110
-                      },
-                      "module-j5e_light-Light.html#level": {
-                        "ref": "module-j5e_light-Light.html#level",
                         "tf": 110
                       },
                       "module-j5e_light-Light.html#limit": {
@@ -10237,12 +11974,20 @@ window.lunrData = {
                         "ref": "module-j5e_light-Light.html#smoothing",
                         "tf": 110
                       },
+                      "module-j5e_light-Light.html#samples": {
+                        "ref": "module-j5e_light-Light.html#samples",
+                        "tf": 110
+                      },
                       "module-j5e_light-Light.html#range": {
                         "ref": "module-j5e_light-Light.html#range",
                         "tf": 110
                       },
                       "module-j5e_light-Light.html#raw": {
                         "ref": "module-j5e_light-Light.html#raw",
+                        "tf": 110
+                      },
+                      "module-j5e_light-Light.html#median": {
+                        "ref": "module-j5e_light-Light.html#median",
                         "tf": 110
                       },
                       "module-j5e_light-Light.html#resolution": {
@@ -10255,6 +12000,10 @@ window.lunrData = {
                       },
                       "module-j5e_light-Light.html#value": {
                         "ref": "module-j5e_light-Light.html#value",
+                        "tf": 110
+                      },
+                      "module-j5e_light-Light.html#level": {
+                        "ref": "module-j5e_light-Light.html#level",
                         "tf": 110
                       },
                       "module-j5e_button-Button.html#isClosed": {
@@ -10289,6 +12038,50 @@ window.lunrData = {
                         "ref": "module-j5e_led-LED.html#isRunning",
                         "tf": 110
                       },
+                      "module-j5e_sensor-Sensor.html#limit": {
+                        "ref": "module-j5e_sensor-Sensor.html#limit",
+                        "tf": 110
+                      },
+                      "module-j5e_sensor-Sensor.html#threshold": {
+                        "ref": "module-j5e_sensor-Sensor.html#threshold",
+                        "tf": 110
+                      },
+                      "module-j5e_sensor-Sensor.html#interval": {
+                        "ref": "module-j5e_sensor-Sensor.html#interval",
+                        "tf": 110
+                      },
+                      "module-j5e_sensor-Sensor.html#smoothing": {
+                        "ref": "module-j5e_sensor-Sensor.html#smoothing",
+                        "tf": 110
+                      },
+                      "module-j5e_sensor-Sensor.html#samples": {
+                        "ref": "module-j5e_sensor-Sensor.html#samples",
+                        "tf": 110
+                      },
+                      "module-j5e_sensor-Sensor.html#range": {
+                        "ref": "module-j5e_sensor-Sensor.html#range",
+                        "tf": 110
+                      },
+                      "module-j5e_sensor-Sensor.html#raw": {
+                        "ref": "module-j5e_sensor-Sensor.html#raw",
+                        "tf": 110
+                      },
+                      "module-j5e_sensor-Sensor.html#median": {
+                        "ref": "module-j5e_sensor-Sensor.html#median",
+                        "tf": 110
+                      },
+                      "module-j5e_sensor-Sensor.html#resolution": {
+                        "ref": "module-j5e_sensor-Sensor.html#resolution",
+                        "tf": 110
+                      },
+                      "module-j5e_sensor-Sensor.html#scaled": {
+                        "ref": "module-j5e_sensor-Sensor.html#scaled",
+                        "tf": 110
+                      },
+                      "module-j5e_sensor-Sensor.html#value": {
+                        "ref": "module-j5e_sensor-Sensor.html#value",
+                        "tf": 110
+                      },
                       "module-j5e_rgb-RGB.html#isOn": {
                         "ref": "module-j5e_rgb-RGB.html#isOn",
                         "tf": 110
@@ -10318,13 +12111,41 @@ window.lunrData = {
                   "docs": {},
                   "n": {
                     "docs": {
-                      "module-j5e_sensor-Sensor.html#smoothing": {
-                        "ref": "module-j5e_sensor-Sensor.html#smoothing",
+                      "module-j5e_thermometer-Thermometer.html#smoothing": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#smoothing",
                         "tf": 8.333333333333332
+                      },
+                      "module-j5e_thermometer-Thermometer.html#samples": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#samples",
+                        "tf": 8.333333333333332
+                      },
+                      "module-j5e_thermometer-Thermometer.html#median": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#median",
+                        "tf": 695.8333333333334
                       },
                       "module-j5e_light-Light.html#smoothing": {
                         "ref": "module-j5e_light-Light.html#smoothing",
                         "tf": 8.333333333333332
+                      },
+                      "module-j5e_light-Light.html#samples": {
+                        "ref": "module-j5e_light-Light.html#samples",
+                        "tf": 8.333333333333332
+                      },
+                      "module-j5e_light-Light.html#median": {
+                        "ref": "module-j5e_light-Light.html#median",
+                        "tf": 695.8333333333334
+                      },
+                      "module-j5e_sensor-Sensor.html#smoothing": {
+                        "ref": "module-j5e_sensor-Sensor.html#smoothing",
+                        "tf": 8.333333333333332
+                      },
+                      "module-j5e_sensor-Sensor.html#samples": {
+                        "ref": "module-j5e_sensor-Sensor.html#samples",
+                        "tf": 8.333333333333332
+                      },
+                      "module-j5e_sensor-Sensor.html#median": {
+                        "ref": "module-j5e_sensor-Sensor.html#median",
+                        "tf": 695.8333333333334
                       }
                     }
                   }
@@ -10374,22 +12195,46 @@ window.lunrData = {
                     "docs": {},
                     "m": {
                       "docs": {
+                        "module-j5e_thermometer-Thermometer.html#threshold": {
+                          "ref": "module-j5e_thermometer-Thermometer.html#threshold",
+                          "tf": 7.142857142857142
+                        },
                         "module-j5e_servo-Servo.html#min": {
                           "ref": "module-j5e_servo-Servo.html#min",
                           "tf": 7.142857142857142
                         },
-                        "module-j5e_sensor-Sensor.html#threshold": {
-                          "ref": "module-j5e_sensor-Sensor.html#threshold",
-                          "tf": 7.142857142857142
-                        },
                         "module-j5e_light-Light.html#threshold": {
                           "ref": "module-j5e_light-Light.html#threshold",
+                          "tf": 7.142857142857142
+                        },
+                        "module-j5e_sensor-Sensor.html#threshold": {
+                          "ref": "module-j5e_sensor-Sensor.html#threshold",
                           "tf": 7.142857142857142
                         }
                       }
                     }
                   }
                 }
+              }
+            }
+          },
+          "s": {
+            "docs": {
+              "module-j5e_thermometer-Thermometer.html#interval": {
+                "ref": "module-j5e_thermometer-Thermometer.html#interval",
+                "tf": 12.5
+              },
+              "module-j5e_light-Light.html#interval": {
+                "ref": "module-j5e_light-Light.html#interval",
+                "tf": 12.5
+              },
+              "module-j5e_button-Button.html#holdtime": {
+                "ref": "module-j5e_button-Button.html#holdtime",
+                "tf": 5.555555555555555
+              },
+              "module-j5e_sensor-Sensor.html#interval": {
+                "ref": "module-j5e_sensor-Sensor.html#interval",
+                "tf": 12.5
               }
             }
           },
@@ -10414,16 +12259,20 @@ window.lunrData = {
                     "docs": {},
                     "m": {
                       "docs": {
+                        "module-j5e_thermometer-Thermometer.html#resolution": {
+                          "ref": "module-j5e_thermometer-Thermometer.html#resolution",
+                          "tf": 12.5
+                        },
                         "module-j5e_servo-Servo.html#max": {
                           "ref": "module-j5e_servo-Servo.html#max",
                           "tf": 8.333333333333332
                         },
-                        "module-j5e_sensor-Sensor.html#resolution": {
-                          "ref": "module-j5e_sensor-Sensor.html#resolution",
-                          "tf": 12.5
-                        },
                         "module-j5e_light-Light.html#resolution": {
                           "ref": "module-j5e_light-Light.html#resolution",
+                          "tf": 12.5
+                        },
+                        "module-j5e_sensor-Sensor.html#resolution": {
+                          "ref": "module-j5e_sensor-Sensor.html#resolution",
                           "tf": 12.5
                         }
                       }
@@ -10469,551 +12318,6 @@ window.lunrData = {
                 }
               }
             }
-          },
-          "s": {
-            "docs": {
-              "module-j5e_sensor-Sensor.html#interval": {
-                "ref": "module-j5e_sensor-Sensor.html#interval",
-                "tf": 12.5
-              },
-              "module-j5e_light-Light.html#interval": {
-                "ref": "module-j5e_light-Light.html#interval",
-                "tf": 12.5
-              },
-              "module-j5e_button-Button.html#holdtime": {
-                "ref": "module-j5e_button-Button.html#holdtime",
-                "tf": 5.555555555555555
-              }
-            }
-          }
-        },
-        "h": {
-          "docs": {},
-          "o": {
-            "docs": {},
-            "b": {
-              "docs": {},
-              "b": {
-                "docs": {},
-                "i": {
-                  "docs": {
-                    "module-j5e_servo-Servo.html": {
-                      "ref": "module-j5e_servo-Servo.html",
-                      "tf": 8.333333333333332
-                    },
-                    "module-j5e_servo.html": {
-                      "ref": "module-j5e_servo.html",
-                      "tf": 8.333333333333332
-                    }
-                  }
-                }
-              }
-            },
-            "m": {
-              "docs": {},
-              "e": {
-                "docs": {
-                  "module-j5e_servo-Servo.html#home": {
-                    "ref": "module-j5e_servo-Servo.html#home",
-                    "tf": 700
-                  }
-                }
-              }
-            },
-            "l": {
-              "docs": {},
-              "d": {
-                "docs": {
-                  "module-j5e_button-Button.html#holdtime": {
-                    "ref": "module-j5e_button-Button.html#holdtime",
-                    "tf": 5.555555555555555
-                  }
-                },
-                "t": {
-                  "docs": {},
-                  "i": {
-                    "docs": {},
-                    "m": {
-                      "docs": {
-                        "module-j5e_button-Button.html#holdtime": {
-                          "ref": "module-j5e_button-Button.html#holdtime",
-                          "tf": 700
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "i": {
-            "docs": {},
-            "s": {
-              "docs": {},
-              "t": {
-                "docs": {},
-                "o": {
-                  "docs": {},
-                  "r": {
-                    "docs": {},
-                    "i": {
-                      "docs": {
-                        "module-j5e_servo-Servo.html#history": {
-                          "ref": "module-j5e_servo-Servo.html#history",
-                          "tf": 700
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "g": {
-              "docs": {},
-              "h": {
-                "docs": {
-                  "module-j5e_sensor-Sensor.html#scale": {
-                    "ref": "module-j5e_sensor-Sensor.html#scale",
-                    "tf": 33.33333333333333
-                  },
-                  "module-j5e_sensor-Sensor.html#scaleTo": {
-                    "ref": "module-j5e_sensor-Sensor.html#scaleTo",
-                    "tf": 20
-                  },
-                  "module-j5e_sensor-Sensor.html#fscaleTo": {
-                    "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
-                    "tf": 20
-                  },
-                  "module-j5e_light-Light.html#scale": {
-                    "ref": "module-j5e_light-Light.html#scale",
-                    "tf": 33.33333333333333
-                  },
-                  "module-j5e_light-Light.html#scaleTo": {
-                    "ref": "module-j5e_light-Light.html#scaleTo",
-                    "tf": 20
-                  },
-                  "module-j5e_light-Light.html#fscaleTo": {
-                    "ref": "module-j5e_light-Light.html#fscaleTo",
-                    "tf": 20
-                  }
-                }
-              }
-            }
-          },
-          "e": {
-            "docs": {},
-            "l": {
-              "docs": {},
-              "d": {
-                "docs": {
-                  "module-j5e_button-Button.html#holdtime": {
-                    "ref": "module-j5e_button-Button.html#holdtime",
-                    "tf": 5.555555555555555
-                  }
-                }
-              }
-            },
-            "x": {
-              "docs": {},
-              "a": {
-                "docs": {},
-                "d": {
-                  "docs": {},
-                  "e": {
-                    "docs": {},
-                    "c": {
-                      "docs": {},
-                      "i": {
-                        "docs": {},
-                        "m": {
-                          "docs": {
-                            "module-j5e_rgb-RGB.html#color": {
-                              "ref": "module-j5e_rgb-RGB.html#color",
-                              "tf": 2.941176470588235
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "a": {
-            "docs": {},
-            "n": {
-              "docs": {},
-              "d": {
-                "docs": {},
-                "l": {
-                  "docs": {
-                    "module-j5e_animation.html": {
-                      "ref": "module-j5e_animation.html",
-                      "tf": 3.571428571428571
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "u": {
-          "docs": {},
-          "p": {
-            "docs": {},
-            "d": {
-              "docs": {},
-              "a": {
-                "docs": {},
-                "t": {
-                  "docs": {
-                    "module-j5e_servo-Servo.html#history": {
-                      "ref": "module-j5e_servo-Servo.html#history",
-                      "tf": 12.5
-                    },
-                    "module-j5e_servo-Servo.html#last": {
-                      "ref": "module-j5e_servo-Servo.html#last",
-                      "tf": 16.666666666666664
-                    },
-                    "module-j5e_servo-Servo.html#step": {
-                      "ref": "module-j5e_servo-Servo.html#step",
-                      "tf": 7.142857142857142
-                    }
-                  }
-                }
-              }
-            },
-            "v": {
-              "docs": {},
-              "a": {
-                "docs": {},
-                "l": {
-                  "docs": {},
-                  "u": {
-                    "docs": {
-                      "module-j5e_button-Button.html#upValue": {
-                        "ref": "module-j5e_button-Button.html#upValue",
-                        "tf": 691.6666666666667
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "n": {
-            "docs": {},
-            "i": {
-              "docs": {},
-              "t": {
-                "docs": {
-                  "module-j5e_sensor-Sensor.html#within": {
-                    "ref": "module-j5e_sensor-Sensor.html#within",
-                    "tf": 25
-                  },
-                  "module-j5e_light-Light.html#within": {
-                    "ref": "module-j5e_light-Light.html#within",
-                    "tf": 25
-                  }
-                }
-              }
-            },
-            "t": {
-              "docs": {},
-              "i": {
-                "docs": {},
-                "l": {
-                  "docs": {
-                    "module-j5e_led-LED.html#fadeOut": {
-                      "ref": "module-j5e_led-LED.html#fadeOut",
-                      "tf": 6.25
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "s": {
-            "docs": {
-              "module-j5e_led-LED.html#pulse": {
-                "ref": "module-j5e_led-LED.html#pulse",
-                "tf": 4.166666666666666
-              },
-              "module-j5e_fn.html": {
-                "ref": "module-j5e_fn.html",
-                "tf": 5
-              },
-              "module-j5e_fn-timer.html": {
-                "ref": "module-j5e_fn-timer.html",
-                "tf": 4.166666666666666
-              }
-            },
-            "e": {
-              "docs": {},
-              "r": {
-                "docs": {
-                  "module-j5e_fn.html": {
-                    "ref": "module-j5e_fn.html",
-                    "tf": 5
-                  }
-                }
-              }
-            }
-          },
-          "t": {
-            "docs": {},
-            "i": {
-              "docs": {},
-              "l": {
-                "docs": {
-                  "module-j5e_fn.html": {
-                    "ref": "module-j5e_fn.html",
-                    "tf": 5
-                  }
-                }
-              }
-            }
-          }
-        },
-        "b": {
-          "docs": {},
-          "e": {
-            "docs": {
-              "module-j5e_button-Button.html#isClosed": {
-                "ref": "module-j5e_button-Button.html#isClosed",
-                "tf": 12.5
-              },
-              "module-j5e_button-Button.html#isOpen": {
-                "ref": "module-j5e_button-Button.html#isOpen",
-                "tf": 12.5
-              }
-            },
-            "t": {
-              "docs": {},
-              "w": {
-                "docs": {},
-                "e": {
-                  "docs": {},
-                  "e": {
-                    "docs": {},
-                    "n": {
-                      "docs": {
-                        "module-j5e_servo-Servo.html#sweep": {
-                          "ref": "module-j5e_servo-Servo.html#sweep",
-                          "tf": 7.142857142857142
-                        },
-                        "module-j5e_sensor-Sensor.html#interval": {
-                          "ref": "module-j5e_sensor-Sensor.html#interval",
-                          "tf": 12.5
-                        },
-                        "module-j5e_light-Light.html#interval": {
-                          "ref": "module-j5e_light-Light.html#interval",
-                          "tf": 12.5
-                        },
-                        "module-j5e_animation.html": {
-                          "ref": "module-j5e_animation.html",
-                          "tf": 3.571428571428571
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "f": {
-              "docs": {},
-              "o": {
-                "docs": {},
-                "r": {
-                  "docs": {
-                    "module-j5e_sensor-Sensor.html#smoothing": {
-                      "ref": "module-j5e_sensor-Sensor.html#smoothing",
-                      "tf": 8.333333333333332
-                    },
-                    "module-j5e_light-Light.html#smoothing": {
-                      "ref": "module-j5e_light-Light.html#smoothing",
-                      "tf": 8.333333333333332
-                    },
-                    "module-j5e_button-Button.html#holdtime": {
-                      "ref": "module-j5e_button-Button.html#holdtime",
-                      "tf": 5.555555555555555
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "o": {
-            "docs": {},
-            "o": {
-              "docs": {},
-              "l": {
-                "docs": {},
-                "e": {
-                  "docs": {},
-                  "a": {
-                    "docs": {},
-                    "n": {
-                      "docs": {
-                        "module-j5e_relay-Relay.html#isClosed": {
-                          "ref": "module-j5e_relay-Relay.html#isClosed",
-                          "tf": 33.33333333333333
-                        },
-                        "module-j5e_button-Button.html#isClosed": {
-                          "ref": "module-j5e_button-Button.html#isClosed",
-                          "tf": 33.33333333333333
-                        },
-                        "module-j5e_button-Button.html#isOpen": {
-                          "ref": "module-j5e_button-Button.html#isOpen",
-                          "tf": 33.33333333333333
-                        },
-                        "module-j5e_led-LED.html#isOn": {
-                          "ref": "module-j5e_led-LED.html#isOn",
-                          "tf": 33.33333333333333
-                        },
-                        "module-j5e_led-LED.html#isRunning": {
-                          "ref": "module-j5e_led-LED.html#isRunning",
-                          "tf": 33.33333333333333
-                        },
-                        "module-j5e_rgb-RGB.html#isOn": {
-                          "ref": "module-j5e_rgb-RGB.html#isOn",
-                          "tf": 33.33333333333333
-                        },
-                        "module-j5e_rgb-RGB.html#isRunning": {
-                          "ref": "module-j5e_rgb-RGB.html#isRunning",
-                          "tf": 33.33333333333333
-                        },
-                        "module-j5e_rgb-RGB.html#isAnode": {
-                          "ref": "module-j5e_rgb-RGB.html#isAnode",
-                          "tf": 33.33333333333333
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "u": {
-            "docs": {},
-            "t": {
-              "docs": {},
-              "t": {
-                "docs": {},
-                "o": {
-                  "docs": {},
-                  "n": {
-                    "docs": {
-                      "module-j5e_button-Button.html": {
-                        "ref": "module-j5e_button-Button.html",
-                        "tf": 516.6666666666666
-                      },
-                      "module-j5e_button-Button.html#isClosed": {
-                        "ref": "module-j5e_button-Button.html#isClosed",
-                        "tf": 12.5
-                      },
-                      "module-j5e_button-Button.html#isOpen": {
-                        "ref": "module-j5e_button-Button.html#isOpen",
-                        "tf": 12.5
-                      },
-                      "module-j5e_button-Button.html#holdtime": {
-                        "ref": "module-j5e_button-Button.html#holdtime",
-                        "tf": 5.555555555555555
-                      },
-                      "module-j5e_button.html": {
-                        "ref": "module-j5e_button.html",
-                        "tf": 25
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "l": {
-            "docs": {},
-            "i": {
-              "docs": {},
-              "n": {
-                "docs": {},
-                "k": {
-                  "docs": {
-                    "module-j5e_led-LED.html#isRunning": {
-                      "ref": "module-j5e_led-LED.html#isRunning",
-                      "tf": 10
-                    },
-                    "module-j5e_led-LED.html#blink": {
-                      "ref": "module-j5e_led-LED.html#blink",
-                      "tf": 687.5
-                    },
-                    "module-j5e_led-LED.html#stop": {
-                      "ref": "module-j5e_led-LED.html#stop",
-                      "tf": 7.142857142857142
-                    },
-                    "module-j5e_rgb-RGB.html#isRunning": {
-                      "ref": "module-j5e_rgb-RGB.html#isRunning",
-                      "tf": 10
-                    },
-                    "module-j5e_rgb-RGB.html#stop": {
-                      "ref": "module-j5e_rgb-RGB.html#stop",
-                      "tf": 7.142857142857142
-                    },
-                    "module-j5e_rgb-RGB.html#blink": {
-                      "ref": "module-j5e_rgb-RGB.html#blink",
-                      "tf": 685
-                    }
-                  }
-                }
-              }
-            },
-            "u": {
-              "docs": {},
-              "e": {
-                "docs": {
-                  "module-j5e_rgb-RGB.html#color": {
-                    "ref": "module-j5e_rgb-RGB.html#color",
-                    "tf": 20
-                  }
-                }
-              }
-            }
-          },
-          "r": {
-            "docs": {},
-            "i": {
-              "docs": {},
-              "g": {
-                "docs": {},
-                "h": {
-                  "docs": {},
-                  "t": {
-                    "docs": {
-                      "module-j5e_led-LED.html#brightness": {
-                        "ref": "module-j5e_led-LED.html#brightness",
-                        "tf": 689.5833333333334
-                      },
-                      "module-j5e_led-LED.html#intensity": {
-                        "ref": "module-j5e_led-LED.html#intensity",
-                        "tf": 6.25
-                      },
-                      "module-j5e_led-LED.html#fadeIn": {
-                        "ref": "module-j5e_led-LED.html#fadeIn",
-                        "tf": 6.25
-                      },
-                      "module-j5e_rgb-RGB.html#fadeIn": {
-                        "ref": "module-j5e_rgb-RGB.html#fadeIn",
-                        "tf": 10
-                      },
-                      "module-j5e_led.html": {
-                        "ref": "module-j5e_led.html",
-                        "tf": 3.3333333333333335
-                      }
-                    }
-                  }
-                }
-              }
-            }
           }
         },
         "n": {
@@ -11028,52 +12332,80 @@ window.lunrData = {
                   "docs": {},
                   "r": {
                     "docs": {
-                      "module-j5e_sensor-Sensor.html#threshold": {
-                        "ref": "module-j5e_sensor-Sensor.html#threshold",
+                      "module-j5e_thermometer-Thermometer.html#celsius": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#celsius",
+                        "tf": 33.33333333333333
+                      },
+                      "module-j5e_thermometer-Thermometer.html#C": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#C",
+                        "tf": 33.33333333333333
+                      },
+                      "module-j5e_thermometer-Thermometer.html#fahrenheit": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#fahrenheit",
+                        "tf": 33.33333333333333
+                      },
+                      "module-j5e_thermometer-Thermometer.html#F": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#F",
+                        "tf": 33.33333333333333
+                      },
+                      "module-j5e_thermometer-Thermometer.html#kelvin": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#kelvin",
+                        "tf": 33.33333333333333
+                      },
+                      "module-j5e_thermometer-Thermometer.html#K": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#K",
+                        "tf": 33.33333333333333
+                      },
+                      "module-j5e_thermometer-Thermometer.html#threshold": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#threshold",
                         "tf": 50
                       },
-                      "module-j5e_sensor-Sensor.html#interval": {
-                        "ref": "module-j5e_sensor-Sensor.html#interval",
+                      "module-j5e_thermometer-Thermometer.html#interval": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#interval",
                         "tf": 50
                       },
-                      "module-j5e_sensor-Sensor.html#smoothing": {
-                        "ref": "module-j5e_sensor-Sensor.html#smoothing",
+                      "module-j5e_thermometer-Thermometer.html#smoothing": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#smoothing",
                         "tf": 58.33333333333333
                       },
-                      "module-j5e_sensor-Sensor.html#raw": {
-                        "ref": "module-j5e_sensor-Sensor.html#raw",
+                      "module-j5e_thermometer-Thermometer.html#samples": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#samples",
+                        "tf": 58.33333333333333
+                      },
+                      "module-j5e_thermometer-Thermometer.html#raw": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#raw",
                         "tf": 33.33333333333333
                       },
-                      "module-j5e_sensor-Sensor.html#resolution": {
-                        "ref": "module-j5e_sensor-Sensor.html#resolution",
+                      "module-j5e_thermometer-Thermometer.html#median": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#median",
                         "tf": 33.33333333333333
                       },
-                      "module-j5e_sensor-Sensor.html#scaled": {
-                        "ref": "module-j5e_sensor-Sensor.html#scaled",
+                      "module-j5e_thermometer-Thermometer.html#resolution": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#resolution",
                         "tf": 33.33333333333333
                       },
-                      "module-j5e_sensor-Sensor.html#value": {
-                        "ref": "module-j5e_sensor-Sensor.html#value",
+                      "module-j5e_thermometer-Thermometer.html#scaled": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#scaled",
                         "tf": 33.33333333333333
                       },
-                      "module-j5e_sensor-Sensor.html#read": {
-                        "ref": "module-j5e_sensor-Sensor.html#read",
+                      "module-j5e_thermometer-Thermometer.html#value": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#value",
+                        "tf": 33.33333333333333
+                      },
+                      "module-j5e_thermometer-Thermometer.html#read": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#read",
                         "tf": 50
                       },
-                      "module-j5e_sensor-Sensor.html#scaleTo": {
-                        "ref": "module-j5e_sensor-Sensor.html#scaleTo",
+                      "module-j5e_thermometer-Thermometer.html#scaleTo": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#scaleTo",
                         "tf": 20
                       },
-                      "module-j5e_sensor-Sensor.html#fscaleTo": {
-                        "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
+                      "module-j5e_thermometer-Thermometer.html#fscaleTo": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#fscaleTo",
                         "tf": 20
                       },
                       "module-j5e_relay-Relay.html#value": {
                         "ref": "module-j5e_relay-Relay.html#value",
-                        "tf": 33.33333333333333
-                      },
-                      "module-j5e_light-Light.html#level": {
-                        "ref": "module-j5e_light-Light.html#level",
                         "tf": 33.33333333333333
                       },
                       "module-j5e_light-Light.html#threshold": {
@@ -11088,8 +12420,16 @@ window.lunrData = {
                         "ref": "module-j5e_light-Light.html#smoothing",
                         "tf": 58.33333333333333
                       },
+                      "module-j5e_light-Light.html#samples": {
+                        "ref": "module-j5e_light-Light.html#samples",
+                        "tf": 58.33333333333333
+                      },
                       "module-j5e_light-Light.html#raw": {
                         "ref": "module-j5e_light-Light.html#raw",
+                        "tf": 33.33333333333333
+                      },
+                      "module-j5e_light-Light.html#median": {
+                        "ref": "module-j5e_light-Light.html#median",
                         "tf": 33.33333333333333
                       },
                       "module-j5e_light-Light.html#resolution": {
@@ -11102,6 +12442,10 @@ window.lunrData = {
                       },
                       "module-j5e_light-Light.html#value": {
                         "ref": "module-j5e_light-Light.html#value",
+                        "tf": 33.33333333333333
+                      },
+                      "module-j5e_light-Light.html#level": {
+                        "ref": "module-j5e_light-Light.html#level",
                         "tf": 33.33333333333333
                       },
                       "module-j5e_light-Light.html#read": {
@@ -11131,6 +12475,54 @@ window.lunrData = {
                       "module-j5e_led-LED.html#value": {
                         "ref": "module-j5e_led-LED.html#value",
                         "tf": 33.33333333333333
+                      },
+                      "module-j5e_sensor-Sensor.html#threshold": {
+                        "ref": "module-j5e_sensor-Sensor.html#threshold",
+                        "tf": 50
+                      },
+                      "module-j5e_sensor-Sensor.html#interval": {
+                        "ref": "module-j5e_sensor-Sensor.html#interval",
+                        "tf": 50
+                      },
+                      "module-j5e_sensor-Sensor.html#smoothing": {
+                        "ref": "module-j5e_sensor-Sensor.html#smoothing",
+                        "tf": 58.33333333333333
+                      },
+                      "module-j5e_sensor-Sensor.html#samples": {
+                        "ref": "module-j5e_sensor-Sensor.html#samples",
+                        "tf": 58.33333333333333
+                      },
+                      "module-j5e_sensor-Sensor.html#raw": {
+                        "ref": "module-j5e_sensor-Sensor.html#raw",
+                        "tf": 33.33333333333333
+                      },
+                      "module-j5e_sensor-Sensor.html#median": {
+                        "ref": "module-j5e_sensor-Sensor.html#median",
+                        "tf": 33.33333333333333
+                      },
+                      "module-j5e_sensor-Sensor.html#resolution": {
+                        "ref": "module-j5e_sensor-Sensor.html#resolution",
+                        "tf": 33.33333333333333
+                      },
+                      "module-j5e_sensor-Sensor.html#scaled": {
+                        "ref": "module-j5e_sensor-Sensor.html#scaled",
+                        "tf": 33.33333333333333
+                      },
+                      "module-j5e_sensor-Sensor.html#value": {
+                        "ref": "module-j5e_sensor-Sensor.html#value",
+                        "tf": 33.33333333333333
+                      },
+                      "module-j5e_sensor-Sensor.html#scaleTo": {
+                        "ref": "module-j5e_sensor-Sensor.html#scaleTo",
+                        "tf": 20
+                      },
+                      "module-j5e_sensor-Sensor.html#fscaleTo": {
+                        "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
+                        "tf": 20
+                      },
+                      "module-j5e_sensor-Sensor.html#read": {
+                        "ref": "module-j5e_sensor-Sensor.html#read",
+                        "tf": 50
                       }
                     }
                   }
@@ -11262,6 +12654,306 @@ window.lunrData = {
             }
           }
         },
+        "k": {
+          "docs": {
+            "module-j5e_thermometer-Thermometer.html#K": {
+              "ref": "module-j5e_thermometer-Thermometer.html#K",
+              "tf": 683.3333333333334
+            }
+          },
+          "e": {
+            "docs": {},
+            "l": {
+              "docs": {},
+              "v": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "n": {
+                    "docs": {
+                      "module-j5e_thermometer-Thermometer.html#kelvin": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#kelvin",
+                        "tf": 708.3333333333334
+                      },
+                      "module-j5e_thermometer-Thermometer.html#K": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#K",
+                        "tf": 25
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "y": {
+              "docs": {
+                "module-j5e_animation.html": {
+                  "ref": "module-j5e_animation.html",
+                  "tf": 3.571428571428571
+                }
+              }
+            }
+          }
+        },
+        "b": {
+          "docs": {},
+          "e": {
+            "docs": {
+              "module-j5e_button-Button.html#isClosed": {
+                "ref": "module-j5e_button-Button.html#isClosed",
+                "tf": 12.5
+              },
+              "module-j5e_button-Button.html#isOpen": {
+                "ref": "module-j5e_button-Button.html#isOpen",
+                "tf": 12.5
+              }
+            },
+            "t": {
+              "docs": {},
+              "w": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "n": {
+                      "docs": {
+                        "module-j5e_thermometer-Thermometer.html#interval": {
+                          "ref": "module-j5e_thermometer-Thermometer.html#interval",
+                          "tf": 12.5
+                        },
+                        "module-j5e_servo-Servo.html#sweep": {
+                          "ref": "module-j5e_servo-Servo.html#sweep",
+                          "tf": 7.142857142857142
+                        },
+                        "module-j5e_light-Light.html#interval": {
+                          "ref": "module-j5e_light-Light.html#interval",
+                          "tf": 12.5
+                        },
+                        "module-j5e_sensor-Sensor.html#interval": {
+                          "ref": "module-j5e_sensor-Sensor.html#interval",
+                          "tf": 12.5
+                        },
+                        "module-j5e_animation.html": {
+                          "ref": "module-j5e_animation.html",
+                          "tf": 3.571428571428571
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "f": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "r": {
+                  "docs": {
+                    "module-j5e_thermometer-Thermometer.html#smoothing": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#smoothing",
+                      "tf": 8.333333333333332
+                    },
+                    "module-j5e_thermometer-Thermometer.html#samples": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#samples",
+                      "tf": 8.333333333333332
+                    },
+                    "module-j5e_light-Light.html#smoothing": {
+                      "ref": "module-j5e_light-Light.html#smoothing",
+                      "tf": 8.333333333333332
+                    },
+                    "module-j5e_light-Light.html#samples": {
+                      "ref": "module-j5e_light-Light.html#samples",
+                      "tf": 8.333333333333332
+                    },
+                    "module-j5e_button-Button.html#holdtime": {
+                      "ref": "module-j5e_button-Button.html#holdtime",
+                      "tf": 5.555555555555555
+                    },
+                    "module-j5e_sensor-Sensor.html#smoothing": {
+                      "ref": "module-j5e_sensor-Sensor.html#smoothing",
+                      "tf": 8.333333333333332
+                    },
+                    "module-j5e_sensor-Sensor.html#samples": {
+                      "ref": "module-j5e_sensor-Sensor.html#samples",
+                      "tf": 8.333333333333332
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "o": {
+            "docs": {},
+            "o": {
+              "docs": {},
+              "l": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "a": {
+                    "docs": {},
+                    "n": {
+                      "docs": {
+                        "module-j5e_relay-Relay.html#isClosed": {
+                          "ref": "module-j5e_relay-Relay.html#isClosed",
+                          "tf": 33.33333333333333
+                        },
+                        "module-j5e_button-Button.html#isClosed": {
+                          "ref": "module-j5e_button-Button.html#isClosed",
+                          "tf": 33.33333333333333
+                        },
+                        "module-j5e_button-Button.html#isOpen": {
+                          "ref": "module-j5e_button-Button.html#isOpen",
+                          "tf": 33.33333333333333
+                        },
+                        "module-j5e_led-LED.html#isOn": {
+                          "ref": "module-j5e_led-LED.html#isOn",
+                          "tf": 33.33333333333333
+                        },
+                        "module-j5e_led-LED.html#isRunning": {
+                          "ref": "module-j5e_led-LED.html#isRunning",
+                          "tf": 33.33333333333333
+                        },
+                        "module-j5e_rgb-RGB.html#isOn": {
+                          "ref": "module-j5e_rgb-RGB.html#isOn",
+                          "tf": 33.33333333333333
+                        },
+                        "module-j5e_rgb-RGB.html#isRunning": {
+                          "ref": "module-j5e_rgb-RGB.html#isRunning",
+                          "tf": 33.33333333333333
+                        },
+                        "module-j5e_rgb-RGB.html#isAnode": {
+                          "ref": "module-j5e_rgb-RGB.html#isAnode",
+                          "tf": 33.33333333333333
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "u": {
+            "docs": {},
+            "t": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "n": {
+                    "docs": {
+                      "module-j5e_button-Button.html": {
+                        "ref": "module-j5e_button-Button.html",
+                        "tf": 516.6666666666666
+                      },
+                      "module-j5e_button-Button.html#isClosed": {
+                        "ref": "module-j5e_button-Button.html#isClosed",
+                        "tf": 12.5
+                      },
+                      "module-j5e_button-Button.html#isOpen": {
+                        "ref": "module-j5e_button-Button.html#isOpen",
+                        "tf": 12.5
+                      },
+                      "module-j5e_button-Button.html#holdtime": {
+                        "ref": "module-j5e_button-Button.html#holdtime",
+                        "tf": 5.555555555555555
+                      },
+                      "module-j5e_button.html": {
+                        "ref": "module-j5e_button.html",
+                        "tf": 25
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "l": {
+            "docs": {},
+            "i": {
+              "docs": {},
+              "n": {
+                "docs": {},
+                "k": {
+                  "docs": {
+                    "module-j5e_led-LED.html#isRunning": {
+                      "ref": "module-j5e_led-LED.html#isRunning",
+                      "tf": 10
+                    },
+                    "module-j5e_led-LED.html#blink": {
+                      "ref": "module-j5e_led-LED.html#blink",
+                      "tf": 687.5
+                    },
+                    "module-j5e_led-LED.html#stop": {
+                      "ref": "module-j5e_led-LED.html#stop",
+                      "tf": 7.142857142857142
+                    },
+                    "module-j5e_rgb-RGB.html#isRunning": {
+                      "ref": "module-j5e_rgb-RGB.html#isRunning",
+                      "tf": 10
+                    },
+                    "module-j5e_rgb-RGB.html#blink": {
+                      "ref": "module-j5e_rgb-RGB.html#blink",
+                      "tf": 685
+                    },
+                    "module-j5e_rgb-RGB.html#stop": {
+                      "ref": "module-j5e_rgb-RGB.html#stop",
+                      "tf": 7.142857142857142
+                    }
+                  }
+                }
+              }
+            },
+            "u": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "module-j5e_rgb-RGB.html#color": {
+                    "ref": "module-j5e_rgb-RGB.html#color",
+                    "tf": 20
+                  }
+                }
+              }
+            }
+          },
+          "r": {
+            "docs": {},
+            "i": {
+              "docs": {},
+              "g": {
+                "docs": {},
+                "h": {
+                  "docs": {},
+                  "t": {
+                    "docs": {
+                      "module-j5e_led-LED.html#brightness": {
+                        "ref": "module-j5e_led-LED.html#brightness",
+                        "tf": 689.5833333333334
+                      },
+                      "module-j5e_led-LED.html#intensity": {
+                        "ref": "module-j5e_led-LED.html#intensity",
+                        "tf": 6.25
+                      },
+                      "module-j5e_led-LED.html#fadeIn": {
+                        "ref": "module-j5e_led-LED.html#fadeIn",
+                        "tf": 6.25
+                      },
+                      "module-j5e_rgb-RGB.html#fadeIn": {
+                        "ref": "module-j5e_rgb-RGB.html#fadeIn",
+                        "tf": 10
+                      },
+                      "module-j5e_led.html": {
+                        "ref": "module-j5e_led.html",
+                        "tf": 3.3333333333333335
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
         "v": {
           "docs": {},
           "a": {
@@ -11279,45 +12971,45 @@ window.lunrData = {
               },
               "u": {
                 "docs": {
-                  "module-j5e_sensor-Sensor.html#value": {
-                    "ref": "module-j5e_sensor-Sensor.html#value",
+                  "module-j5e_thermometer-Thermometer.html#value": {
+                    "ref": "module-j5e_thermometer-Thermometer.html#value",
                     "tf": 683.3333333333334
                   },
-                  "module-j5e_sensor-Sensor.html#within": {
-                    "ref": "module-j5e_sensor-Sensor.html#within",
+                  "module-j5e_thermometer-Thermometer.html#within": {
+                    "ref": "module-j5e_thermometer-Thermometer.html#within",
                     "tf": 8.333333333333332
                   },
-                  "module-j5e_sensor-Sensor.html#scale": {
-                    "ref": "module-j5e_sensor-Sensor.html#scale",
+                  "module-j5e_thermometer-Thermometer.html#scale": {
+                    "ref": "module-j5e_thermometer-Thermometer.html#scale",
                     "tf": 10
                   },
-                  "module-j5e_sensor-Sensor.html#scaleTo": {
-                    "ref": "module-j5e_sensor-Sensor.html#scaleTo",
+                  "module-j5e_thermometer-Thermometer.html#scaleTo": {
+                    "ref": "module-j5e_thermometer-Thermometer.html#scaleTo",
                     "tf": 10
                   },
-                  "module-j5e_sensor-Sensor.html#fscaleTo": {
-                    "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
+                  "module-j5e_thermometer-Thermometer.html#fscaleTo": {
+                    "ref": "module-j5e_thermometer-Thermometer.html#fscaleTo",
                     "tf": 7.142857142857142
                   },
                   "module-j5e_relay-Relay.html#value": {
                     "ref": "module-j5e_relay-Relay.html#value",
                     "tf": 693.3333333333334
                   },
-                  "module-j5e_light-Light.html#level": {
-                    "ref": "module-j5e_light-Light.html#level",
-                    "tf": 10
-                  },
                   "module-j5e_light-Light.html#value": {
                     "ref": "module-j5e_light-Light.html#value",
                     "tf": 683.3333333333334
                   },
-                  "module-j5e_light-Light.html#within": {
-                    "ref": "module-j5e_light-Light.html#within",
-                    "tf": 8.333333333333332
+                  "module-j5e_light-Light.html#level": {
+                    "ref": "module-j5e_light-Light.html#level",
+                    "tf": 10
                   },
                   "module-j5e_light-Light.html#scale": {
                     "ref": "module-j5e_light-Light.html#scale",
                     "tf": 10
+                  },
+                  "module-j5e_light-Light.html#within": {
+                    "ref": "module-j5e_light-Light.html#within",
+                    "tf": 8.333333333333332
                   },
                   "module-j5e_light-Light.html#scaleTo": {
                     "ref": "module-j5e_light-Light.html#scaleTo",
@@ -11342,6 +13034,26 @@ window.lunrData = {
                   "module-j5e_led-LED.html#fade": {
                     "ref": "module-j5e_led-LED.html#fade",
                     "tf": 11.11111111111111
+                  },
+                  "module-j5e_sensor-Sensor.html#value": {
+                    "ref": "module-j5e_sensor-Sensor.html#value",
+                    "tf": 683.3333333333334
+                  },
+                  "module-j5e_sensor-Sensor.html#within": {
+                    "ref": "module-j5e_sensor-Sensor.html#within",
+                    "tf": 8.333333333333332
+                  },
+                  "module-j5e_sensor-Sensor.html#scale": {
+                    "ref": "module-j5e_sensor-Sensor.html#scale",
+                    "tf": 10
+                  },
+                  "module-j5e_sensor-Sensor.html#scaleTo": {
+                    "ref": "module-j5e_sensor-Sensor.html#scaleTo",
+                    "tf": 10
+                  },
+                  "module-j5e_sensor-Sensor.html#fscaleTo": {
+                    "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
+                    "tf": 7.142857142857142
                   },
                   "module-j5e_rgb-RGB.html#values": {
                     "ref": "module-j5e_rgb-RGB.html#values",
@@ -11375,6 +13087,128 @@ window.lunrData = {
             }
           }
         },
+        "u": {
+          "docs": {},
+          "n": {
+            "docs": {},
+            "i": {
+              "docs": {},
+              "t": {
+                "docs": {
+                  "module-j5e_thermometer-Thermometer.html#within": {
+                    "ref": "module-j5e_thermometer-Thermometer.html#within",
+                    "tf": 25
+                  },
+                  "module-j5e_light-Light.html#within": {
+                    "ref": "module-j5e_light-Light.html#within",
+                    "tf": 25
+                  },
+                  "module-j5e_sensor-Sensor.html#within": {
+                    "ref": "module-j5e_sensor-Sensor.html#within",
+                    "tf": 25
+                  }
+                }
+              }
+            },
+            "t": {
+              "docs": {},
+              "i": {
+                "docs": {},
+                "l": {
+                  "docs": {
+                    "module-j5e_led-LED.html#fadeOut": {
+                      "ref": "module-j5e_led-LED.html#fadeOut",
+                      "tf": 6.25
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "p": {
+            "docs": {},
+            "d": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "module-j5e_servo-Servo.html#history": {
+                      "ref": "module-j5e_servo-Servo.html#history",
+                      "tf": 12.5
+                    },
+                    "module-j5e_servo-Servo.html#last": {
+                      "ref": "module-j5e_servo-Servo.html#last",
+                      "tf": 16.666666666666664
+                    },
+                    "module-j5e_servo-Servo.html#step": {
+                      "ref": "module-j5e_servo-Servo.html#step",
+                      "tf": 7.142857142857142
+                    }
+                  }
+                }
+              }
+            },
+            "v": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "l": {
+                  "docs": {},
+                  "u": {
+                    "docs": {
+                      "module-j5e_button-Button.html#upValue": {
+                        "ref": "module-j5e_button-Button.html#upValue",
+                        "tf": 691.6666666666667
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "s": {
+            "docs": {
+              "module-j5e_led-LED.html#pulse": {
+                "ref": "module-j5e_led-LED.html#pulse",
+                "tf": 4.166666666666666
+              },
+              "module-j5e_fn.html": {
+                "ref": "module-j5e_fn.html",
+                "tf": 5
+              },
+              "module-j5e_fn-timer.html": {
+                "ref": "module-j5e_fn-timer.html",
+                "tf": 4.166666666666666
+              }
+            },
+            "e": {
+              "docs": {},
+              "r": {
+                "docs": {
+                  "module-j5e_fn.html": {
+                    "ref": "module-j5e_fn.html",
+                    "tf": 5
+                  }
+                }
+              }
+            }
+          },
+          "t": {
+            "docs": {},
+            "i": {
+              "docs": {},
+              "l": {
+                "docs": {
+                  "module-j5e_fn.html": {
+                    "ref": "module-j5e_fn.html",
+                    "tf": 5
+                  }
+                }
+              }
+            }
+          }
+        },
         "w": {
           "docs": {},
           "i": {
@@ -11387,12 +13221,16 @@ window.lunrData = {
                   "docs": {},
                   "n": {
                     "docs": {
-                      "module-j5e_sensor-Sensor.html#within": {
-                        "ref": "module-j5e_sensor-Sensor.html#within",
+                      "module-j5e_thermometer-Thermometer.html#within": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#within",
                         "tf": 683.3333333333334
                       },
                       "module-j5e_light-Light.html#within": {
                         "ref": "module-j5e_light-Light.html#within",
+                        "tf": 683.3333333333334
+                      },
+                      "module-j5e_sensor-Sensor.html#within": {
+                        "ref": "module-j5e_sensor-Sensor.html#within",
                         "tf": 683.3333333333334
                       }
                     }
@@ -11502,6 +13340,189 @@ window.lunrData = {
             }
           }
         },
+        "h": {
+          "docs": {},
+          "i": {
+            "docs": {},
+            "g": {
+              "docs": {},
+              "h": {
+                "docs": {
+                  "module-j5e_thermometer-Thermometer.html#scale": {
+                    "ref": "module-j5e_thermometer-Thermometer.html#scale",
+                    "tf": 33.33333333333333
+                  },
+                  "module-j5e_thermometer-Thermometer.html#scaleTo": {
+                    "ref": "module-j5e_thermometer-Thermometer.html#scaleTo",
+                    "tf": 20
+                  },
+                  "module-j5e_thermometer-Thermometer.html#fscaleTo": {
+                    "ref": "module-j5e_thermometer-Thermometer.html#fscaleTo",
+                    "tf": 20
+                  },
+                  "module-j5e_light-Light.html#scale": {
+                    "ref": "module-j5e_light-Light.html#scale",
+                    "tf": 33.33333333333333
+                  },
+                  "module-j5e_light-Light.html#scaleTo": {
+                    "ref": "module-j5e_light-Light.html#scaleTo",
+                    "tf": 20
+                  },
+                  "module-j5e_light-Light.html#fscaleTo": {
+                    "ref": "module-j5e_light-Light.html#fscaleTo",
+                    "tf": 20
+                  },
+                  "module-j5e_sensor-Sensor.html#scale": {
+                    "ref": "module-j5e_sensor-Sensor.html#scale",
+                    "tf": 33.33333333333333
+                  },
+                  "module-j5e_sensor-Sensor.html#scaleTo": {
+                    "ref": "module-j5e_sensor-Sensor.html#scaleTo",
+                    "tf": 20
+                  },
+                  "module-j5e_sensor-Sensor.html#fscaleTo": {
+                    "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
+                    "tf": 20
+                  }
+                }
+              }
+            },
+            "s": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "r": {
+                    "docs": {},
+                    "i": {
+                      "docs": {
+                        "module-j5e_servo-Servo.html#history": {
+                          "ref": "module-j5e_servo-Servo.html#history",
+                          "tf": 700
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "o": {
+            "docs": {},
+            "b": {
+              "docs": {},
+              "b": {
+                "docs": {},
+                "i": {
+                  "docs": {
+                    "module-j5e_servo-Servo.html": {
+                      "ref": "module-j5e_servo-Servo.html",
+                      "tf": 8.333333333333332
+                    },
+                    "module-j5e_servo.html": {
+                      "ref": "module-j5e_servo.html",
+                      "tf": 8.333333333333332
+                    }
+                  }
+                }
+              }
+            },
+            "m": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "module-j5e_servo-Servo.html#home": {
+                    "ref": "module-j5e_servo-Servo.html#home",
+                    "tf": 700
+                  }
+                }
+              }
+            },
+            "l": {
+              "docs": {},
+              "d": {
+                "docs": {
+                  "module-j5e_button-Button.html#holdtime": {
+                    "ref": "module-j5e_button-Button.html#holdtime",
+                    "tf": 5.555555555555555
+                  }
+                },
+                "t": {
+                  "docs": {},
+                  "i": {
+                    "docs": {},
+                    "m": {
+                      "docs": {
+                        "module-j5e_button-Button.html#holdtime": {
+                          "ref": "module-j5e_button-Button.html#holdtime",
+                          "tf": 700
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "e": {
+            "docs": {},
+            "l": {
+              "docs": {},
+              "d": {
+                "docs": {
+                  "module-j5e_button-Button.html#holdtime": {
+                    "ref": "module-j5e_button-Button.html#holdtime",
+                    "tf": 5.555555555555555
+                  }
+                }
+              }
+            },
+            "x": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "d": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "c": {
+                      "docs": {},
+                      "i": {
+                        "docs": {},
+                        "m": {
+                          "docs": {
+                            "module-j5e_rgb-RGB.html#color": {
+                              "ref": "module-j5e_rgb-RGB.html#color",
+                              "tf": 2.941176470588235
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "a": {
+            "docs": {},
+            "n": {
+              "docs": {},
+              "d": {
+                "docs": {},
+                "l": {
+                  "docs": {
+                    "module-j5e_animation.html": {
+                      "ref": "module-j5e_animation.html",
+                      "tf": 3.571428571428571
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
         "q": {
           "docs": {},
           "u": {
@@ -11530,20 +13551,6 @@ window.lunrData = {
             }
           }
         },
-        "k": {
-          "docs": {},
-          "e": {
-            "docs": {},
-            "y": {
-              "docs": {
-                "module-j5e_animation.html": {
-                  "ref": "module-j5e_animation.html",
-                  "tf": 3.571428571428571
-                }
-              }
-            }
-          }
-        },
         "x": {
           "docs": {},
           "s": {
@@ -11556,7 +13563,7 @@ window.lunrData = {
           }
         }
       },
-      "length": 1163
+      "length": 1412
     },
     "corpusTokens": [
       "0",
@@ -11568,8 +13575,10 @@ window.lunrData = {
       "accept",
       "adc",
       "add",
+      "alia",
       "allow",
       "amount",
+      "analog",
       "anim",
       "anod",
       "argument",
@@ -11589,6 +13598,7 @@ window.lunrData = {
       "call",
       "callback",
       "ccw",
+      "celsiu",
       "center",
       "centerpoint",
       "certain",
@@ -11629,10 +13639,12 @@ window.lunrData = {
       "enabl",
       "enqueu",
       "event",
+      "f",
       "factor",
       "fade",
       "fadein",
       "fadeout",
+      "fahrenheit",
       "find",
       "fire",
       "five",
@@ -11702,7 +13714,11 @@ window.lunrData = {
       "j5e/servo~servo",
       "j5e/switch",
       "j5e/switch~switch",
+      "j5e/thermomet",
+      "j5e/thermometer~thermomet",
       "johnni",
+      "k",
+      "kelvin",
       "key",
       "last",
       "led",
@@ -11780,6 +13796,7 @@ window.lunrData = {
       "module:j5e/light~light#interv",
       "module:j5e/light~light#level",
       "module:j5e/light~light#limit",
+      "module:j5e/light~light#median",
       "module:j5e/light~light#on",
       "module:j5e/light~light#onc",
       "module:j5e/light~light#rang",
@@ -11787,6 +13804,7 @@ window.lunrData = {
       "module:j5e/light~light#read",
       "module:j5e/light~light#removelisten",
       "module:j5e/light~light#resolut",
+      "module:j5e/light~light#sampl",
       "module:j5e/light~light#sc",
       "module:j5e/light~light#scal",
       "module:j5e/light~light#scaleto",
@@ -11825,6 +13843,7 @@ window.lunrData = {
       "module:j5e/sensor~sensor#fscaleto",
       "module:j5e/sensor~sensor#interv",
       "module:j5e/sensor~sensor#limit",
+      "module:j5e/sensor~sensor#median",
       "module:j5e/sensor~sensor#on",
       "module:j5e/sensor~sensor#onc",
       "module:j5e/sensor~sensor#rang",
@@ -11832,6 +13851,7 @@ window.lunrData = {
       "module:j5e/sensor~sensor#read",
       "module:j5e/sensor~sensor#removelisten",
       "module:j5e/sensor~sensor#resolut",
+      "module:j5e/sensor~sensor#sampl",
       "module:j5e/sensor~sensor#sc",
       "module:j5e/sensor~sensor#scal",
       "module:j5e/sensor~sensor#scaleto",
@@ -11864,6 +13884,35 @@ window.lunrData = {
       "module:j5e/switch~switch#on",
       "module:j5e/switch~switch#onc",
       "module:j5e/switch~switch#removelisten",
+      "module:j5e/thermomet",
+      "module:j5e/thermometer~thermomet",
+      "module:j5e/thermometer~thermometer#c",
+      "module:j5e/thermometer~thermometer#celsiu",
+      "module:j5e/thermometer~thermometer#dis",
+      "module:j5e/thermometer~thermometer#en",
+      "module:j5e/thermometer~thermometer#f",
+      "module:j5e/thermometer~thermometer#fahrenheit",
+      "module:j5e/thermometer~thermometer#fscaleto",
+      "module:j5e/thermometer~thermometer#interv",
+      "module:j5e/thermometer~thermometer#k",
+      "module:j5e/thermometer~thermometer#kelvin",
+      "module:j5e/thermometer~thermometer#limit",
+      "module:j5e/thermometer~thermometer#median",
+      "module:j5e/thermometer~thermometer#on",
+      "module:j5e/thermometer~thermometer#onc",
+      "module:j5e/thermometer~thermometer#rang",
+      "module:j5e/thermometer~thermometer#raw",
+      "module:j5e/thermometer~thermometer#read",
+      "module:j5e/thermometer~thermometer#removelisten",
+      "module:j5e/thermometer~thermometer#resolut",
+      "module:j5e/thermometer~thermometer#sampl",
+      "module:j5e/thermometer~thermometer#sc",
+      "module:j5e/thermometer~thermometer#scal",
+      "module:j5e/thermometer~thermometer#scaleto",
+      "module:j5e/thermometer~thermometer#smooth",
+      "module:j5e/thermometer~thermometer#threshold",
+      "module:j5e/thermometer~thermometer#valu",
+      "module:j5e/thermometer~thermometer#within",
       "more",
       "move",
       "ms",
@@ -11954,6 +14003,9 @@ window.lunrData = {
       "synchron",
       "system",
       "take",
+      "templat",
+      "thermistor",
+      "thermomet",
       "threshold",
       "time",
       "timelin",
@@ -12116,6 +14168,287 @@ window.lunrData = {
       "tags": "module:j5e/switch~Switch#once once",
       "summary": "",
       "description": "Create an event listener that will only fire one time."
+    },
+    "module-j5e_thermometer-Thermometer.html": {
+      "id": "module-j5e_thermometer-Thermometer.html",
+      "kind": "class",
+      "title": "&lt;async&gt; j5e/thermometer~Thermometer",
+      "longname": "module:j5e/thermometer~Thermometer",
+      "name": "Thermometer",
+      "tags": "module:j5e/thermometer~Thermometer",
+      "summary": "",
+      "description": "The Thermometer class allows for control of analog thermistors",
+      "body": ""
+    },
+    "module-j5e_thermometer-Thermometer.html#celsius": {
+      "id": "module-j5e_thermometer-Thermometer.html#celsius",
+      "kind": "member",
+      "title": "&lt;readonly&gt; celsius :number",
+      "longname": "module:j5e/thermometer~Thermometer#celsius",
+      "name": "celsius",
+      "tags": "module:j5e/thermometer~Thermometer#celsius celsius",
+      "summary": "",
+      "description": "Get degrees in celsius"
+    },
+    "module-j5e_thermometer-Thermometer.html#C": {
+      "id": "module-j5e_thermometer-Thermometer.html#C",
+      "kind": "member",
+      "title": "&lt;readonly&gt; C :number",
+      "longname": "module:j5e/thermometer~Thermometer#C",
+      "name": "C",
+      "tags": "module:j5e/thermometer~Thermometer#C C",
+      "summary": "",
+      "description": "Alias for celsius"
+    },
+    "module-j5e_thermometer-Thermometer.html#fahrenheit": {
+      "id": "module-j5e_thermometer-Thermometer.html#fahrenheit",
+      "kind": "member",
+      "title": "&lt;readonly&gt; fahrenheit :number",
+      "longname": "module:j5e/thermometer~Thermometer#fahrenheit",
+      "name": "fahrenheit",
+      "tags": "module:j5e/thermometer~Thermometer#fahrenheit fahrenheit",
+      "summary": "",
+      "description": "Get degrees in fahrenheit"
+    },
+    "module-j5e_thermometer-Thermometer.html#F": {
+      "id": "module-j5e_thermometer-Thermometer.html#F",
+      "kind": "member",
+      "title": "&lt;readonly&gt; F :number",
+      "longname": "module:j5e/thermometer~Thermometer#F",
+      "name": "F",
+      "tags": "module:j5e/thermometer~Thermometer#F F",
+      "summary": "",
+      "description": "Alias for fahrenheit"
+    },
+    "module-j5e_thermometer-Thermometer.html#kelvin": {
+      "id": "module-j5e_thermometer-Thermometer.html#kelvin",
+      "kind": "member",
+      "title": "&lt;readonly&gt; kelvin :number",
+      "longname": "module:j5e/thermometer~Thermometer#kelvin",
+      "name": "kelvin",
+      "tags": "module:j5e/thermometer~Thermometer#kelvin kelvin",
+      "summary": "",
+      "description": "Get degrees in kelvin"
+    },
+    "module-j5e_thermometer-Thermometer.html#K": {
+      "id": "module-j5e_thermometer-Thermometer.html#K",
+      "kind": "member",
+      "title": "&lt;readonly&gt; K :number",
+      "longname": "module:j5e/thermometer~Thermometer#K",
+      "name": "K",
+      "tags": "module:j5e/thermometer~Thermometer#K K",
+      "summary": "",
+      "description": "Alias for kelvin"
+    },
+    "module-j5e_thermometer-Thermometer.html#limit": {
+      "id": "module-j5e_thermometer-Thermometer.html#limit",
+      "kind": "member",
+      "title": "limit :Array.&lt;number&gt;",
+      "longname": "module:j5e/thermometer~Thermometer#limit",
+      "name": "limit",
+      "tags": "module:j5e/thermometer~Thermometer#limit limit",
+      "summary": "",
+      "description": "Limits the output range"
+    },
+    "module-j5e_thermometer-Thermometer.html#threshold": {
+      "id": "module-j5e_thermometer-Thermometer.html#threshold",
+      "kind": "member",
+      "title": "threshold :number",
+      "longname": "module:j5e/thermometer~Thermometer#threshold",
+      "name": "threshold",
+      "tags": "module:j5e/thermometer~Thermometer#threshold threshold",
+      "summary": "",
+      "description": "The minimum amount of change required to emit a \"change\" event"
+    },
+    "module-j5e_thermometer-Thermometer.html#interval": {
+      "id": "module-j5e_thermometer-Thermometer.html#interval",
+      "kind": "member",
+      "title": "interval :number",
+      "longname": "module:j5e/thermometer~Thermometer#interval",
+      "name": "interval",
+      "tags": "module:j5e/thermometer~Thermometer#interval interval",
+      "summary": "",
+      "description": "The interval between readings (in ms)"
+    },
+    "module-j5e_thermometer-Thermometer.html#smoothing": {
+      "id": "module-j5e_thermometer-Thermometer.html#smoothing",
+      "kind": "member",
+      "title": "smoothing :number",
+      "longname": "module:j5e/thermometer~Thermometer#smoothing",
+      "name": "smoothing",
+      "tags": "module:j5e/thermometer~Thermometer#smoothing smoothing",
+      "summary": "",
+      "description": "The number of samples to take before finding the median"
+    },
+    "module-j5e_thermometer-Thermometer.html#samples": {
+      "id": "module-j5e_thermometer-Thermometer.html#samples",
+      "kind": "member",
+      "title": "samples :number",
+      "longname": "module:j5e/thermometer~Thermometer#samples",
+      "name": "samples",
+      "tags": "module:j5e/thermometer~Thermometer#samples samples",
+      "summary": "",
+      "description": "The number of samples to take before finding the median"
+    },
+    "module-j5e_thermometer-Thermometer.html#range": {
+      "id": "module-j5e_thermometer-Thermometer.html#range",
+      "kind": "member",
+      "title": "&lt;readonly&gt; range :Array.&lt;number&gt;",
+      "longname": "module:j5e/thermometer~Thermometer#range",
+      "name": "range",
+      "tags": "module:j5e/thermometer~Thermometer#range range",
+      "summary": "",
+      "description": "The input range of the sensor"
+    },
+    "module-j5e_thermometer-Thermometer.html#raw": {
+      "id": "module-j5e_thermometer-Thermometer.html#raw",
+      "kind": "member",
+      "title": "&lt;readonly&gt; raw :number",
+      "longname": "module:j5e/thermometer~Thermometer#raw",
+      "name": "raw",
+      "tags": "module:j5e/thermometer~Thermometer#raw raw",
+      "summary": "",
+      "description": "Get the most recent raw ADC reading"
+    },
+    "module-j5e_thermometer-Thermometer.html#median": {
+      "id": "module-j5e_thermometer-Thermometer.html#median",
+      "kind": "member",
+      "title": "&lt;readonly&gt; median :number",
+      "longname": "module:j5e/thermometer~Thermometer#median",
+      "name": "median",
+      "tags": "module:j5e/thermometer~Thermometer#median median",
+      "summary": "",
+      "description": "Get the most recent median ADC reading"
+    },
+    "module-j5e_thermometer-Thermometer.html#resolution": {
+      "id": "module-j5e_thermometer-Thermometer.html#resolution",
+      "kind": "member",
+      "title": "&lt;readonly&gt; resolution :number",
+      "longname": "module:j5e/thermometer~Thermometer#resolution",
+      "name": "resolution",
+      "tags": "module:j5e/thermometer~Thermometer#resolution resolution",
+      "summary": "",
+      "description": "The maximum possible ADC reading"
+    },
+    "module-j5e_thermometer-Thermometer.html#scaled": {
+      "id": "module-j5e_thermometer-Thermometer.html#scaled",
+      "kind": "member",
+      "title": "&lt;readonly&gt; scaled :number",
+      "longname": "module:j5e/thermometer~Thermometer#scaled",
+      "name": "scaled",
+      "tags": "module:j5e/thermometer~Thermometer#scaled scaled",
+      "summary": "",
+      "description": "Get the most recent scaled raw reading"
+    },
+    "module-j5e_thermometer-Thermometer.html#value": {
+      "id": "module-j5e_thermometer-Thermometer.html#value",
+      "kind": "member",
+      "title": "&lt;readonly&gt; value :number",
+      "longname": "module:j5e/thermometer~Thermometer#value",
+      "name": "value",
+      "tags": "module:j5e/thermometer~Thermometer#value value",
+      "summary": "",
+      "description": ""
+    },
+    "module-j5e_thermometer-Thermometer.html#on": {
+      "id": "module-j5e_thermometer-Thermometer.html#on",
+      "kind": "function",
+      "title": "on( event, listener )",
+      "longname": "module:j5e/thermometer~Thermometer#on",
+      "name": "on",
+      "tags": "module:j5e/thermometer~Thermometer#on on",
+      "summary": "",
+      "description": "Create an event listener"
+    },
+    "module-j5e_thermometer-Thermometer.html#within": {
+      "id": "module-j5e_thermometer-Thermometer.html#within",
+      "kind": "function",
+      "title": "within( range, unit, callback )",
+      "longname": "module:j5e/thermometer~Thermometer#within",
+      "name": "within",
+      "tags": "module:j5e/thermometer~Thermometer#within within",
+      "summary": "",
+      "description": "Fire a callback when the value is within a certain range"
+    },
+    "module-j5e_thermometer-Thermometer.html#removeListener": {
+      "id": "module-j5e_thermometer-Thermometer.html#removeListener",
+      "kind": "function",
+      "title": "removeListener( event, listener )",
+      "longname": "module:j5e/thermometer~Thermometer#removeListener",
+      "name": "removeListener",
+      "tags": "module:j5e/thermometer~Thermometer#removeListener removeListener",
+      "summary": "",
+      "description": "Remove an event listener"
+    },
+    "module-j5e_thermometer-Thermometer.html#once": {
+      "id": "module-j5e_thermometer-Thermometer.html#once",
+      "kind": "function",
+      "title": "once( event, listener )",
+      "longname": "module:j5e/thermometer~Thermometer#once",
+      "name": "once",
+      "tags": "module:j5e/thermometer~Thermometer#once once",
+      "summary": "",
+      "description": "Create an event listener that will only fire one time."
+    },
+    "module-j5e_thermometer-Thermometer.html#enable": {
+      "id": "module-j5e_thermometer-Thermometer.html#enable",
+      "kind": "function",
+      "title": "enable() → {Object}",
+      "longname": "module:j5e/thermometer~Thermometer#enable",
+      "name": "enable",
+      "tags": "module:j5e/thermometer~Thermometer#enable enable",
+      "summary": "",
+      "description": "Enable a disabled sensor."
+    },
+    "module-j5e_thermometer-Thermometer.html#disable": {
+      "id": "module-j5e_thermometer-Thermometer.html#disable",
+      "kind": "function",
+      "title": "disable() → {Object}",
+      "longname": "module:j5e/thermometer~Thermometer#disable",
+      "name": "disable",
+      "tags": "module:j5e/thermometer~Thermometer#disable disable",
+      "summary": "",
+      "description": "Disable an enabled sensor."
+    },
+    "module-j5e_thermometer-Thermometer.html#read": {
+      "id": "module-j5e_thermometer-Thermometer.html#read",
+      "kind": "function",
+      "title": "read() → {Number}",
+      "longname": "module:j5e/thermometer~Thermometer#read",
+      "name": "read",
+      "tags": "module:j5e/thermometer~Thermometer#read read",
+      "summary": "",
+      "description": "Synchronous read of a sensor."
+    },
+    "module-j5e_thermometer-Thermometer.html#scale": {
+      "id": "module-j5e_thermometer-Thermometer.html#scale",
+      "kind": "function",
+      "title": "scale( low, high [, low, high ] ) → {Object}",
+      "longname": "module:j5e/thermometer~Thermometer#scale",
+      "name": "scale",
+      "tags": "module:j5e/thermometer~Thermometer#scale scale",
+      "summary": "",
+      "description": "scale/scaleTo Set a value scaling range"
+    },
+    "module-j5e_thermometer-Thermometer.html#scaleTo": {
+      "id": "module-j5e_thermometer-Thermometer.html#scaleTo",
+      "kind": "function",
+      "title": "scaleTo( low, low, high ) → {Number}",
+      "longname": "module:j5e/thermometer~Thermometer#scaleTo",
+      "name": "scaleTo",
+      "tags": "module:j5e/thermometer~Thermometer#scaleTo scaleTo",
+      "summary": "",
+      "description": "scaleTo Scales value to integer representation"
+    },
+    "module-j5e_thermometer-Thermometer.html#fscaleTo": {
+      "id": "module-j5e_thermometer-Thermometer.html#fscaleTo",
+      "kind": "function",
+      "title": "fscaleTo( low, low, high ) → {Number}",
+      "longname": "module:j5e/thermometer~Thermometer#fscaleTo",
+      "name": "fscaleTo",
+      "tags": "module:j5e/thermometer~Thermometer#fscaleTo fscaleTo",
+      "summary": "",
+      "description": "fscaleTo Scales value to single precision float representation"
     },
     "module-j5e_servo-Servo.html": {
       "id": "module-j5e_servo-Servo.html",
@@ -12288,207 +14621,6 @@ window.lunrData = {
       "summary": "",
       "description": "Create an event listener that will only fire one time."
     },
-    "module-j5e_sensor-Sensor.html": {
-      "id": "module-j5e_sensor-Sensor.html",
-      "kind": "class",
-      "title": "&lt;async&gt; j5e/sensor~Sensor",
-      "longname": "module:j5e/sensor~Sensor",
-      "name": "Sensor",
-      "tags": "module:j5e/sensor~Sensor",
-      "summary": "",
-      "description": "The Sensor class allows for input from sensor devices that connect to an ADC",
-      "body": ""
-    },
-    "module-j5e_sensor-Sensor.html#limit": {
-      "id": "module-j5e_sensor-Sensor.html#limit",
-      "kind": "member",
-      "title": "limit :Array.&lt;number&gt;",
-      "longname": "module:j5e/sensor~Sensor#limit",
-      "name": "limit",
-      "tags": "module:j5e/sensor~Sensor#limit limit",
-      "summary": "",
-      "description": "Limits the output range"
-    },
-    "module-j5e_sensor-Sensor.html#threshold": {
-      "id": "module-j5e_sensor-Sensor.html#threshold",
-      "kind": "member",
-      "title": "threshold :number",
-      "longname": "module:j5e/sensor~Sensor#threshold",
-      "name": "threshold",
-      "tags": "module:j5e/sensor~Sensor#threshold threshold",
-      "summary": "",
-      "description": "The minimum amount of change required to emit a \"change\" event"
-    },
-    "module-j5e_sensor-Sensor.html#interval": {
-      "id": "module-j5e_sensor-Sensor.html#interval",
-      "kind": "member",
-      "title": "interval :number",
-      "longname": "module:j5e/sensor~Sensor#interval",
-      "name": "interval",
-      "tags": "module:j5e/sensor~Sensor#interval interval",
-      "summary": "",
-      "description": "The interval between readings (in ms)"
-    },
-    "module-j5e_sensor-Sensor.html#smoothing": {
-      "id": "module-j5e_sensor-Sensor.html#smoothing",
-      "kind": "member",
-      "title": "smoothing :number",
-      "longname": "module:j5e/sensor~Sensor#smoothing",
-      "name": "smoothing",
-      "tags": "module:j5e/sensor~Sensor#smoothing smoothing",
-      "summary": "",
-      "description": "The number of samples to take before finding the median"
-    },
-    "module-j5e_sensor-Sensor.html#range": {
-      "id": "module-j5e_sensor-Sensor.html#range",
-      "kind": "member",
-      "title": "&lt;readonly&gt; range :Array.&lt;number&gt;",
-      "longname": "module:j5e/sensor~Sensor#range",
-      "name": "range",
-      "tags": "module:j5e/sensor~Sensor#range range",
-      "summary": "",
-      "description": "The input range of the sensor"
-    },
-    "module-j5e_sensor-Sensor.html#raw": {
-      "id": "module-j5e_sensor-Sensor.html#raw",
-      "kind": "member",
-      "title": "&lt;readonly&gt; raw :number",
-      "longname": "module:j5e/sensor~Sensor#raw",
-      "name": "raw",
-      "tags": "module:j5e/sensor~Sensor#raw raw",
-      "summary": "",
-      "description": "Get the most recent raw ADC reading"
-    },
-    "module-j5e_sensor-Sensor.html#resolution": {
-      "id": "module-j5e_sensor-Sensor.html#resolution",
-      "kind": "member",
-      "title": "&lt;readonly&gt; resolution :number",
-      "longname": "module:j5e/sensor~Sensor#resolution",
-      "name": "resolution",
-      "tags": "module:j5e/sensor~Sensor#resolution resolution",
-      "summary": "",
-      "description": "The maximum possible ADC reading"
-    },
-    "module-j5e_sensor-Sensor.html#scaled": {
-      "id": "module-j5e_sensor-Sensor.html#scaled",
-      "kind": "member",
-      "title": "&lt;readonly&gt; scaled :number",
-      "longname": "module:j5e/sensor~Sensor#scaled",
-      "name": "scaled",
-      "tags": "module:j5e/sensor~Sensor#scaled scaled",
-      "summary": "",
-      "description": "Get the most recent scaled raw reading"
-    },
-    "module-j5e_sensor-Sensor.html#value": {
-      "id": "module-j5e_sensor-Sensor.html#value",
-      "kind": "member",
-      "title": "&lt;readonly&gt; value :number",
-      "longname": "module:j5e/sensor~Sensor#value",
-      "name": "value",
-      "tags": "module:j5e/sensor~Sensor#value value",
-      "summary": "",
-      "description": ""
-    },
-    "module-j5e_sensor-Sensor.html#on": {
-      "id": "module-j5e_sensor-Sensor.html#on",
-      "kind": "function",
-      "title": "on( event, listener )",
-      "longname": "module:j5e/sensor~Sensor#on",
-      "name": "on",
-      "tags": "module:j5e/sensor~Sensor#on on",
-      "summary": "",
-      "description": "Create an event listener"
-    },
-    "module-j5e_sensor-Sensor.html#within": {
-      "id": "module-j5e_sensor-Sensor.html#within",
-      "kind": "function",
-      "title": "within( range, unit, callback )",
-      "longname": "module:j5e/sensor~Sensor#within",
-      "name": "within",
-      "tags": "module:j5e/sensor~Sensor#within within",
-      "summary": "",
-      "description": "Fire a callback when the value is within a certain range"
-    },
-    "module-j5e_sensor-Sensor.html#enable": {
-      "id": "module-j5e_sensor-Sensor.html#enable",
-      "kind": "function",
-      "title": "enable() → {Object}",
-      "longname": "module:j5e/sensor~Sensor#enable",
-      "name": "enable",
-      "tags": "module:j5e/sensor~Sensor#enable enable",
-      "summary": "",
-      "description": "Enable a disabled sensor."
-    },
-    "module-j5e_sensor-Sensor.html#disable": {
-      "id": "module-j5e_sensor-Sensor.html#disable",
-      "kind": "function",
-      "title": "disable() → {Object}",
-      "longname": "module:j5e/sensor~Sensor#disable",
-      "name": "disable",
-      "tags": "module:j5e/sensor~Sensor#disable disable",
-      "summary": "",
-      "description": "Disable an enabled sensor."
-    },
-    "module-j5e_sensor-Sensor.html#read": {
-      "id": "module-j5e_sensor-Sensor.html#read",
-      "kind": "function",
-      "title": "read() → {Number}",
-      "longname": "module:j5e/sensor~Sensor#read",
-      "name": "read",
-      "tags": "module:j5e/sensor~Sensor#read read",
-      "summary": "",
-      "description": "Synchronous read of a sensor."
-    },
-    "module-j5e_sensor-Sensor.html#scale": {
-      "id": "module-j5e_sensor-Sensor.html#scale",
-      "kind": "function",
-      "title": "scale( low, high [, low, high ] ) → {Object}",
-      "longname": "module:j5e/sensor~Sensor#scale",
-      "name": "scale",
-      "tags": "module:j5e/sensor~Sensor#scale scale",
-      "summary": "",
-      "description": "scale/scaleTo Set a value scaling range"
-    },
-    "module-j5e_sensor-Sensor.html#scaleTo": {
-      "id": "module-j5e_sensor-Sensor.html#scaleTo",
-      "kind": "function",
-      "title": "scaleTo( low, low, high ) → {Number}",
-      "longname": "module:j5e/sensor~Sensor#scaleTo",
-      "name": "scaleTo",
-      "tags": "module:j5e/sensor~Sensor#scaleTo scaleTo",
-      "summary": "",
-      "description": "scaleTo Scales value to integer representation"
-    },
-    "module-j5e_sensor-Sensor.html#fscaleTo": {
-      "id": "module-j5e_sensor-Sensor.html#fscaleTo",
-      "kind": "function",
-      "title": "fscaleTo( low, low, high ) → {Number}",
-      "longname": "module:j5e/sensor~Sensor#fscaleTo",
-      "name": "fscaleTo",
-      "tags": "module:j5e/sensor~Sensor#fscaleTo fscaleTo",
-      "summary": "",
-      "description": "fscaleTo Scales value to single precision float representation"
-    },
-    "module-j5e_sensor-Sensor.html#removeListener": {
-      "id": "module-j5e_sensor-Sensor.html#removeListener",
-      "kind": "function",
-      "title": "removeListener( event, listener )",
-      "longname": "module:j5e/sensor~Sensor#removeListener",
-      "name": "removeListener",
-      "tags": "module:j5e/sensor~Sensor#removeListener removeListener",
-      "summary": "",
-      "description": "Remove an event listener"
-    },
-    "module-j5e_sensor-Sensor.html#once": {
-      "id": "module-j5e_sensor-Sensor.html#once",
-      "kind": "function",
-      "title": "once( event, listener )",
-      "longname": "module:j5e/sensor~Sensor#once",
-      "name": "once",
-      "tags": "module:j5e/sensor~Sensor#once once",
-      "summary": "",
-      "description": "Create an event listener that will only fire one time."
-    },
     "module-j5e_relay-Relay.html": {
       "id": "module-j5e_relay-Relay.html",
       "kind": "class",
@@ -12571,16 +14703,6 @@ window.lunrData = {
       "description": "The Light class allows for control of photoresistors",
       "body": ""
     },
-    "module-j5e_light-Light.html#level": {
-      "id": "module-j5e_light-Light.html#level",
-      "kind": "member",
-      "title": "&lt;readonly&gt; level :number",
-      "longname": "module:j5e/light~Light#level",
-      "name": "level",
-      "tags": "module:j5e/light~Light#level level",
-      "summary": "",
-      "description": "Return the current value, scaled [0,1]"
-    },
     "module-j5e_light-Light.html#limit": {
       "id": "module-j5e_light-Light.html#limit",
       "kind": "member",
@@ -12621,6 +14743,16 @@ window.lunrData = {
       "summary": "",
       "description": "The number of samples to take before finding the median"
     },
+    "module-j5e_light-Light.html#samples": {
+      "id": "module-j5e_light-Light.html#samples",
+      "kind": "member",
+      "title": "samples :number",
+      "longname": "module:j5e/light~Light#samples",
+      "name": "samples",
+      "tags": "module:j5e/light~Light#samples samples",
+      "summary": "",
+      "description": "The number of samples to take before finding the median"
+    },
     "module-j5e_light-Light.html#range": {
       "id": "module-j5e_light-Light.html#range",
       "kind": "member",
@@ -12640,6 +14772,16 @@ window.lunrData = {
       "tags": "module:j5e/light~Light#raw raw",
       "summary": "",
       "description": "Get the most recent raw ADC reading"
+    },
+    "module-j5e_light-Light.html#median": {
+      "id": "module-j5e_light-Light.html#median",
+      "kind": "member",
+      "title": "&lt;readonly&gt; median :number",
+      "longname": "module:j5e/light~Light#median",
+      "name": "median",
+      "tags": "module:j5e/light~Light#median median",
+      "summary": "",
+      "description": "Get the most recent median ADC reading"
     },
     "module-j5e_light-Light.html#resolution": {
       "id": "module-j5e_light-Light.html#resolution",
@@ -12671,45 +14813,15 @@ window.lunrData = {
       "summary": "",
       "description": ""
     },
-    "module-j5e_light-Light.html#on": {
-      "id": "module-j5e_light-Light.html#on",
-      "kind": "function",
-      "title": "on( event, listener )",
-      "longname": "module:j5e/light~Light#on",
-      "name": "on",
-      "tags": "module:j5e/light~Light#on on",
+    "module-j5e_light-Light.html#level": {
+      "id": "module-j5e_light-Light.html#level",
+      "kind": "member",
+      "title": "&lt;readonly&gt; level :number",
+      "longname": "module:j5e/light~Light#level",
+      "name": "level",
+      "tags": "module:j5e/light~Light#level level",
       "summary": "",
-      "description": "Create an event listener"
-    },
-    "module-j5e_light-Light.html#within": {
-      "id": "module-j5e_light-Light.html#within",
-      "kind": "function",
-      "title": "within( range, unit, callback )",
-      "longname": "module:j5e/light~Light#within",
-      "name": "within",
-      "tags": "module:j5e/light~Light#within within",
-      "summary": "",
-      "description": "Fire a callback when the value is within a certain range"
-    },
-    "module-j5e_light-Light.html#removeListener": {
-      "id": "module-j5e_light-Light.html#removeListener",
-      "kind": "function",
-      "title": "removeListener( event, listener )",
-      "longname": "module:j5e/light~Light#removeListener",
-      "name": "removeListener",
-      "tags": "module:j5e/light~Light#removeListener removeListener",
-      "summary": "",
-      "description": "Remove an event listener"
-    },
-    "module-j5e_light-Light.html#once": {
-      "id": "module-j5e_light-Light.html#once",
-      "kind": "function",
-      "title": "once( event, listener )",
-      "longname": "module:j5e/light~Light#once",
-      "name": "once",
-      "tags": "module:j5e/light~Light#once once",
-      "summary": "",
-      "description": "Create an event listener that will only fire one time."
+      "description": "Return the current value, scaled [0,1]"
     },
     "module-j5e_light-Light.html#enable": {
       "id": "module-j5e_light-Light.html#enable",
@@ -12750,6 +14862,46 @@ window.lunrData = {
       "tags": "module:j5e/light~Light#scale scale",
       "summary": "",
       "description": "scale/scaleTo Set a value scaling range"
+    },
+    "module-j5e_light-Light.html#on": {
+      "id": "module-j5e_light-Light.html#on",
+      "kind": "function",
+      "title": "on( event, listener )",
+      "longname": "module:j5e/light~Light#on",
+      "name": "on",
+      "tags": "module:j5e/light~Light#on on",
+      "summary": "",
+      "description": "Create an event listener"
+    },
+    "module-j5e_light-Light.html#within": {
+      "id": "module-j5e_light-Light.html#within",
+      "kind": "function",
+      "title": "within( range, unit, callback )",
+      "longname": "module:j5e/light~Light#within",
+      "name": "within",
+      "tags": "module:j5e/light~Light#within within",
+      "summary": "",
+      "description": "Fire a callback when the value is within a certain range"
+    },
+    "module-j5e_light-Light.html#removeListener": {
+      "id": "module-j5e_light-Light.html#removeListener",
+      "kind": "function",
+      "title": "removeListener( event, listener )",
+      "longname": "module:j5e/light~Light#removeListener",
+      "name": "removeListener",
+      "tags": "module:j5e/light~Light#removeListener removeListener",
+      "summary": "",
+      "description": "Remove an event listener"
+    },
+    "module-j5e_light-Light.html#once": {
+      "id": "module-j5e_light-Light.html#once",
+      "kind": "function",
+      "title": "once( event, listener )",
+      "longname": "module:j5e/light~Light#once",
+      "name": "once",
+      "tags": "module:j5e/light~Light#once once",
+      "summary": "",
+      "description": "Create an event listener that will only fire one time."
     },
     "module-j5e_light-Light.html#scaleTo": {
       "id": "module-j5e_light-Light.html#scaleTo",
@@ -13114,6 +15266,227 @@ window.lunrData = {
       "summary": "",
       "description": "stop Stop the led from blinking, pulsing, fading, or animating"
     },
+    "module-j5e_sensor-Sensor.html": {
+      "id": "module-j5e_sensor-Sensor.html",
+      "kind": "class",
+      "title": "&lt;async&gt; j5e/sensor~Sensor",
+      "longname": "module:j5e/sensor~Sensor",
+      "name": "Sensor",
+      "tags": "module:j5e/sensor~Sensor",
+      "summary": "",
+      "description": "The Sensor class allows for input from sensor devices that connect to an ADC",
+      "body": ""
+    },
+    "module-j5e_sensor-Sensor.html#limit": {
+      "id": "module-j5e_sensor-Sensor.html#limit",
+      "kind": "member",
+      "title": "limit :Array.&lt;number&gt;",
+      "longname": "module:j5e/sensor~Sensor#limit",
+      "name": "limit",
+      "tags": "module:j5e/sensor~Sensor#limit limit",
+      "summary": "",
+      "description": "Limits the output range"
+    },
+    "module-j5e_sensor-Sensor.html#threshold": {
+      "id": "module-j5e_sensor-Sensor.html#threshold",
+      "kind": "member",
+      "title": "threshold :number",
+      "longname": "module:j5e/sensor~Sensor#threshold",
+      "name": "threshold",
+      "tags": "module:j5e/sensor~Sensor#threshold threshold",
+      "summary": "",
+      "description": "The minimum amount of change required to emit a \"change\" event"
+    },
+    "module-j5e_sensor-Sensor.html#interval": {
+      "id": "module-j5e_sensor-Sensor.html#interval",
+      "kind": "member",
+      "title": "interval :number",
+      "longname": "module:j5e/sensor~Sensor#interval",
+      "name": "interval",
+      "tags": "module:j5e/sensor~Sensor#interval interval",
+      "summary": "",
+      "description": "The interval between readings (in ms)"
+    },
+    "module-j5e_sensor-Sensor.html#smoothing": {
+      "id": "module-j5e_sensor-Sensor.html#smoothing",
+      "kind": "member",
+      "title": "smoothing :number",
+      "longname": "module:j5e/sensor~Sensor#smoothing",
+      "name": "smoothing",
+      "tags": "module:j5e/sensor~Sensor#smoothing smoothing",
+      "summary": "",
+      "description": "The number of samples to take before finding the median"
+    },
+    "module-j5e_sensor-Sensor.html#samples": {
+      "id": "module-j5e_sensor-Sensor.html#samples",
+      "kind": "member",
+      "title": "samples :number",
+      "longname": "module:j5e/sensor~Sensor#samples",
+      "name": "samples",
+      "tags": "module:j5e/sensor~Sensor#samples samples",
+      "summary": "",
+      "description": "The number of samples to take before finding the median"
+    },
+    "module-j5e_sensor-Sensor.html#range": {
+      "id": "module-j5e_sensor-Sensor.html#range",
+      "kind": "member",
+      "title": "&lt;readonly&gt; range :Array.&lt;number&gt;",
+      "longname": "module:j5e/sensor~Sensor#range",
+      "name": "range",
+      "tags": "module:j5e/sensor~Sensor#range range",
+      "summary": "",
+      "description": "The input range of the sensor"
+    },
+    "module-j5e_sensor-Sensor.html#raw": {
+      "id": "module-j5e_sensor-Sensor.html#raw",
+      "kind": "member",
+      "title": "&lt;readonly&gt; raw :number",
+      "longname": "module:j5e/sensor~Sensor#raw",
+      "name": "raw",
+      "tags": "module:j5e/sensor~Sensor#raw raw",
+      "summary": "",
+      "description": "Get the most recent raw ADC reading"
+    },
+    "module-j5e_sensor-Sensor.html#median": {
+      "id": "module-j5e_sensor-Sensor.html#median",
+      "kind": "member",
+      "title": "&lt;readonly&gt; median :number",
+      "longname": "module:j5e/sensor~Sensor#median",
+      "name": "median",
+      "tags": "module:j5e/sensor~Sensor#median median",
+      "summary": "",
+      "description": "Get the most recent median ADC reading"
+    },
+    "module-j5e_sensor-Sensor.html#resolution": {
+      "id": "module-j5e_sensor-Sensor.html#resolution",
+      "kind": "member",
+      "title": "&lt;readonly&gt; resolution :number",
+      "longname": "module:j5e/sensor~Sensor#resolution",
+      "name": "resolution",
+      "tags": "module:j5e/sensor~Sensor#resolution resolution",
+      "summary": "",
+      "description": "The maximum possible ADC reading"
+    },
+    "module-j5e_sensor-Sensor.html#scaled": {
+      "id": "module-j5e_sensor-Sensor.html#scaled",
+      "kind": "member",
+      "title": "&lt;readonly&gt; scaled :number",
+      "longname": "module:j5e/sensor~Sensor#scaled",
+      "name": "scaled",
+      "tags": "module:j5e/sensor~Sensor#scaled scaled",
+      "summary": "",
+      "description": "Get the most recent scaled raw reading"
+    },
+    "module-j5e_sensor-Sensor.html#value": {
+      "id": "module-j5e_sensor-Sensor.html#value",
+      "kind": "member",
+      "title": "&lt;readonly&gt; value :number",
+      "longname": "module:j5e/sensor~Sensor#value",
+      "name": "value",
+      "tags": "module:j5e/sensor~Sensor#value value",
+      "summary": "",
+      "description": ""
+    },
+    "module-j5e_sensor-Sensor.html#on": {
+      "id": "module-j5e_sensor-Sensor.html#on",
+      "kind": "function",
+      "title": "on( event, listener )",
+      "longname": "module:j5e/sensor~Sensor#on",
+      "name": "on",
+      "tags": "module:j5e/sensor~Sensor#on on",
+      "summary": "",
+      "description": "Create an event listener"
+    },
+    "module-j5e_sensor-Sensor.html#within": {
+      "id": "module-j5e_sensor-Sensor.html#within",
+      "kind": "function",
+      "title": "within( range, unit, callback )",
+      "longname": "module:j5e/sensor~Sensor#within",
+      "name": "within",
+      "tags": "module:j5e/sensor~Sensor#within within",
+      "summary": "",
+      "description": "Fire a callback when the value is within a certain range"
+    },
+    "module-j5e_sensor-Sensor.html#removeListener": {
+      "id": "module-j5e_sensor-Sensor.html#removeListener",
+      "kind": "function",
+      "title": "removeListener( event, listener )",
+      "longname": "module:j5e/sensor~Sensor#removeListener",
+      "name": "removeListener",
+      "tags": "module:j5e/sensor~Sensor#removeListener removeListener",
+      "summary": "",
+      "description": "Remove an event listener"
+    },
+    "module-j5e_sensor-Sensor.html#once": {
+      "id": "module-j5e_sensor-Sensor.html#once",
+      "kind": "function",
+      "title": "once( event, listener )",
+      "longname": "module:j5e/sensor~Sensor#once",
+      "name": "once",
+      "tags": "module:j5e/sensor~Sensor#once once",
+      "summary": "",
+      "description": "Create an event listener that will only fire one time."
+    },
+    "module-j5e_sensor-Sensor.html#scale": {
+      "id": "module-j5e_sensor-Sensor.html#scale",
+      "kind": "function",
+      "title": "scale( low, high [, low, high ] ) → {Object}",
+      "longname": "module:j5e/sensor~Sensor#scale",
+      "name": "scale",
+      "tags": "module:j5e/sensor~Sensor#scale scale",
+      "summary": "",
+      "description": "scale/scaleTo Set a value scaling range"
+    },
+    "module-j5e_sensor-Sensor.html#scaleTo": {
+      "id": "module-j5e_sensor-Sensor.html#scaleTo",
+      "kind": "function",
+      "title": "scaleTo( low, low, high ) → {Number}",
+      "longname": "module:j5e/sensor~Sensor#scaleTo",
+      "name": "scaleTo",
+      "tags": "module:j5e/sensor~Sensor#scaleTo scaleTo",
+      "summary": "",
+      "description": "scaleTo Scales value to integer representation"
+    },
+    "module-j5e_sensor-Sensor.html#fscaleTo": {
+      "id": "module-j5e_sensor-Sensor.html#fscaleTo",
+      "kind": "function",
+      "title": "fscaleTo( low, low, high ) → {Number}",
+      "longname": "module:j5e/sensor~Sensor#fscaleTo",
+      "name": "fscaleTo",
+      "tags": "module:j5e/sensor~Sensor#fscaleTo fscaleTo",
+      "summary": "",
+      "description": "fscaleTo Scales value to single precision float representation"
+    },
+    "module-j5e_sensor-Sensor.html#enable": {
+      "id": "module-j5e_sensor-Sensor.html#enable",
+      "kind": "function",
+      "title": "enable() → {Object}",
+      "longname": "module:j5e/sensor~Sensor#enable",
+      "name": "enable",
+      "tags": "module:j5e/sensor~Sensor#enable enable",
+      "summary": "",
+      "description": "Enable a disabled sensor."
+    },
+    "module-j5e_sensor-Sensor.html#disable": {
+      "id": "module-j5e_sensor-Sensor.html#disable",
+      "kind": "function",
+      "title": "disable() → {Object}",
+      "longname": "module:j5e/sensor~Sensor#disable",
+      "name": "disable",
+      "tags": "module:j5e/sensor~Sensor#disable disable",
+      "summary": "",
+      "description": "Disable an enabled sensor."
+    },
+    "module-j5e_sensor-Sensor.html#read": {
+      "id": "module-j5e_sensor-Sensor.html#read",
+      "kind": "function",
+      "title": "read() → {Number}",
+      "longname": "module:j5e/sensor~Sensor#read",
+      "name": "read",
+      "tags": "module:j5e/sensor~Sensor#read read",
+      "summary": "",
+      "description": "Synchronous read of a sensor."
+    },
     "module-j5e_rgb-RGB.html": {
       "id": "module-j5e_rgb-RGB.html",
       "kind": "class",
@@ -13164,26 +15537,6 @@ window.lunrData = {
       "tags": "module:j5e/rgb~RGB#values values",
       "summary": "",
       "description": "The current RGB values"
-    },
-    "module-j5e_rgb-RGB.html#animate": {
-      "id": "module-j5e_rgb-RGB.html#animate",
-      "kind": "function",
-      "title": "animate( options ) → {RGB}",
-      "longname": "module:j5e/rgb~RGB#animate",
-      "name": "animate",
-      "tags": "module:j5e/rgb~RGB#animate animate",
-      "summary": "",
-      "description": "Animate an RGB LED"
-    },
-    "module-j5e_rgb-RGB.html#stop": {
-      "id": "module-j5e_rgb-RGB.html#stop",
-      "kind": "function",
-      "title": "stop() → {RGB}",
-      "longname": "module:j5e/rgb~RGB#stop",
-      "name": "stop",
-      "tags": "module:j5e/rgb~RGB#stop stop",
-      "summary": "",
-      "description": "Stop the RGB LED from pulsing, blinking, fading, or animating"
     },
     "module-j5e_rgb-RGB.html#color": {
       "id": "module-j5e_rgb-RGB.html#color",
@@ -13264,6 +15617,26 @@ window.lunrData = {
       "tags": "module:j5e/rgb~RGB#pulse pulse",
       "summary": "",
       "description": "Pulse an RGB LED on a fixed interval"
+    },
+    "module-j5e_rgb-RGB.html#animate": {
+      "id": "module-j5e_rgb-RGB.html#animate",
+      "kind": "function",
+      "title": "animate( options ) → {RGB}",
+      "longname": "module:j5e/rgb~RGB#animate",
+      "name": "animate",
+      "tags": "module:j5e/rgb~RGB#animate animate",
+      "summary": "",
+      "description": "Animate an RGB LED"
+    },
+    "module-j5e_rgb-RGB.html#stop": {
+      "id": "module-j5e_rgb-RGB.html#stop",
+      "kind": "function",
+      "title": "stop() → {RGB}",
+      "longname": "module:j5e/rgb~RGB#stop",
+      "name": "stop",
+      "tags": "module:j5e/rgb~RGB#stop stop",
+      "summary": "",
+      "description": "Stop the RGB LED from pulsing, blinking, fading, or animating"
     },
     "module-j5e_animation.html": {
       "id": "module-j5e_animation.html",
@@ -13384,6 +15757,17 @@ window.lunrData = {
       "tags": "module:j5e/switch",
       "summary": "",
       "description": "For working with switches",
+      "body": ""
+    },
+    "module-j5e_thermometer.html": {
+      "id": "module-j5e_thermometer.html",
+      "kind": "module",
+      "title": "j5e/thermometer",
+      "longname": "module:j5e/thermometer",
+      "name": "j5e/thermometer",
+      "tags": "module:j5e/thermometer",
+      "summary": "",
+      "description": "Class template",
       "body": ""
     },
     "module-j5e_fn-timer.html": {
