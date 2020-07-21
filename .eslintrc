@@ -1,6 +1,8 @@
 {
   "extends": "idiomatic",
   "rules": {
+    "no-console": ["error"],
+    "lines-between-class-members": ["error", "always"],
     "quotes": ["warn","double"],
     "space-in-parens": ["warn","never"],
     "array-bracket-spacing": ["warn","never"],
