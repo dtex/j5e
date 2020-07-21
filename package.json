@@ -1,6 +1,6 @@
 {
   "name": "j5e",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "description": "j5e is a device framework built for ECMA TC-53's IO pattern",
   "main": "index.js",
   "exports": {
@@ -17,6 +17,7 @@
     "./sensor": "./lib/sensor/index.js",
     "./servo": "./lib/servo/index.js",
     "./switch": "./lib/switch/index.js",
+    "./thermometer": "./lib/thermometer/index.js",
     "./withinable": "./lib/withinable/index.js"
   },
   "type": "module",

@@ -1035,11 +1035,13 @@ describe("Sensor", function() {
 
         sensor.scale(0, 255);
         sensor.io.value = 123;
-        assert.equal(Math.abs(sensor.read() - 31) < 1, true);
+        sensor.read();
+        assert.equal(Math.abs(sensor.value - 31) < 1, true);
 
         sensor.scale([0, 512]);
         sensor.io.value = 123;
-        assert.equal(Math.abs(sensor.read() - 62) < 1, true);
+        sensor.read();
+        assert.equal(Math.abs(sensor.value - 62) < 1, true);
 
         sensor.disable();
       });
@@ -1059,10 +1061,12 @@ describe("Sensor", function() {
 
         sensor.scale(0, 255);
         sensor.io.value = 123;
-        assert.equal(Math.abs(sensor.read() - 31) < 1, true);
+        sensor.read();
+        assert.equal(Math.abs(sensor.value - 31) < 1, true);
 
         sensor.io.value = 456;
-        assert.equal(Math.abs(sensor.read() - 114) < 1, true);
+        sensor.read();
+        assert.equal(Math.abs(sensor.value - 114) < 1, true);
 
         sensor.disable();
       });
@@ -1085,8 +1089,9 @@ describe("Sensor", function() {
 
         sensor.scale(0, 255);
         sensor.io.value = 123;
-        assert.equal(Math.abs(sensor.read() - 30) < 1, true);
-        assert.equal(Math.abs(sensor.read() - 30) !== 0, true);
+        sensor.read();
+        assert.equal(Math.abs(sensor.value - 30) < 1, true);
+        assert.equal(Math.abs(sensor.value - 30) !== 0, true);
         assert.equal(sensor.scaleTo(0, 2047), 246);
 
         sensor.disable();

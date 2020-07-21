@@ -1,0 +1,511 @@
+<!-- start:source.tmpl.hbs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+		<title>thermometer/index.js</title>
+		<link rel="icon" type="image/png" href="favicon.png"/>
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="css/prism.min.css">
+		<link type="text/css" rel="stylesheet" href="css/template.min.css">
+			<link type="text/css" rel="stylesheet" href="./static/custom.css">
+			<style>
+				.page-header,
+				pre.code-toolbar > .toolbar:hover {
+					background-color: #000;
+				}
+				.callout-primary,
+				.toc .nav > li > a:hover,
+				.toc .nav > li > a:focus,
+				.toc .nav > li.active > a,
+				.toc .nav > li.active > a:hover,
+				.toc .nav > li.active > a:focus,
+				pre.code-toolbar > .toolbar:hover {
+					border-left-color: #000;
+				}
+				pre.code-toolbar > .toolbar:hover {
+					border-bottom-color: #000;
+				}
+				.callout-primary h5,
+				.symbol-title.collapsible-symbol .toggle-icon,
+				.breadcrumb li a,
+				.toc .nav > li > a:hover,
+				.toc .nav > li > a:focus,
+				.toc .nav > li.active > a,
+				.toc .nav > li.active > a:hover,
+				.toc .nav > li.active > a:focus {
+					color: #000;
+				}
+			</style>
+		<script type="text/javascript">
+			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"MMMM D, YYYY","systemName":"J5e","systemSummary":"Johnny Five for Embedded Systems","systemLogo":"img/j5e.png","systemColor":"#000","navMembers":[{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Copyright © 2019—2020 The contributors to the j5e and Johnny-Five projects.","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":true,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":{"ua":"UA-36026876-4","domain":"dtex.github.io"},"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":["./static/custom.css"],"scripts":[],"monospaceLinks":false,"cleverLinks":false,"forkMe":"./build/docs/fork/forkme_right_white_ffffff.webp"};
+			window.DOCLET_TOC_ENABLED = false;
+			window.DOCLET_AFILTER_ENABLED = false;
+		</script>
+</head>
+<body>
+	<!-- start:navbar.hbs -->
+	<header class="navbar navbar-default navbar-fixed-top navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand branding-logo" href="index.html" style="background-image: url(img/j5e.png);">
+					J5e
+				</a>
+				<!-- displayed on small devices -->
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="navbar-collapse collapse" id="topNavigation">
+				<ul class="nav navbar-nav">
+							<li><a href="list_class.html">Classes</a></li>
+							<li><a href="list_module.html">Modules</a></li>
+							<li><a href="list_tutorial.html">Tutorials</a></li>
+				</ul>
+					<!-- start:lunr-search-navbar.hbs -->
+					<form class="navbar-form navbar-right" role="search">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Search" id="lunr-search-input">
+							<div class="input-group-btn">
+								<button class="btn btn-default" id="lunr-search-submit">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+					<!-- start:lunr-search-navbar.hbs -->		</div>
+		</div>
+	</header>
+	<!-- end:navbar.hbs -->		<div class="page-header">
+			<div class="container">
+				<span class="kind">source</span>
+				<h1><span class="name">thermometer/index.js</span></h1>
+			</div>
+		</div>
+	<div class="container content">
+		<div class="row">
+			<div class="col-md-12 main-content">
+		<section class="source-section">
+			<article></article>
+			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">/**
+ * Class template
+ * @module j5e/thermometer
+ * @requires module:j5e/withinable
+ * @requires module:j5e/fn
+ */
+
+import Sensor from "j5e/sensor";
+import { normalizeParams, toFixed } from "j5e/fn";
+
+/**
+ * Class representing a thermistor
+ * @classdesc The Thermometer class allows for control of analog thermistors
+ * @async
+ * @inheritdoc
+ * @extends module:j5e/sensor~Sensor
+ * @fires data
+ * @fires change
+ */
+class Thermometer extends Sensor {
+
+  static CELSIUS_TO_KELVIN = 273.15;
+
+  /**
+   * Instantiate a Thermometer
+   * @param {function} options.toCelsius - A function that will be used to calculate the degrees in celisus from this.raw (expects one param). Will not be used if toCelsius is already defined on a subclass. All other getters are based on degrees Celsius so they do not need to be provided.
+   * @example
+   * &lt;caption>Use a thermometer&lt;/caption>
+   * import Thermometer from "j5e/thermometer";
+   *
+   * const myThermometer = await new Thermometer(12);
+   *
+   * @example
+   * &lt;caption>Pass in a custom toCelsius function&lt;/caption>
+   * import Thermometer from "j5e/thermometer";
+   *
+   * const myThermometer = await new Thermometer({
+   *   pin: 12,
+   *   toCelsius: function(raw) {
+   *     return raw / 16;
+   *   }
+   * }) ;
+   */
+  constructor(options) {
+    return (async() => {
+      options = normalizeParams(options);
+
+      const sensor = await super(options);
+
+      if (options.toCelsius) {
+        sensor.customToCelsius = options.toCelsius;
+      }
+
+      return sensor;
+    })();
+
+  }
+
+  /**
+   * Get degrees in celsius
+   * @type {number}
+   * @readonly
+   * @example
+   * &lt;caption>Get degrees in celsius in action&lt;/caption>
+   * import Thermometer from "j5e/thermometer";
+   *
+   * const myThermometer = await new Thermometer(12);
+   * myThermometer.on("change", function() {
+   *   console.log(myThermometer.celsius);
+   */
+  get celsius() {
+    if (this.customToCelsius) {
+      return this.customToCelsius(this.median || this.value);
+    } else {
+      return this.toCelsius(this.median || this.value);
+    }
+  }
+
+  /**
+   * Alias for celsius
+   * @type {number}
+   * @readonly
+   * @example
+   * &lt;caption>Get degrees in celsius in action&lt;/caption>
+   * import Thermometer from "j5e/thermometer";
+   *
+   * const myThermometer = await new Thermometer(12);
+   * myThermometer.on("change", function() {
+   *   console.log(myThermometer.C);
+   */
+  get C() {
+    return this.celsius;
+  }
+
+  /**
+   * Get degrees in fahrenheit
+   * @type {number}
+   * @readonly
+   * @example
+   * &lt;caption>Get degrees in fahrenheit in action&lt;/caption>
+   * import Thermometer from "j5e/thermometer";
+   *
+   * const myThermometer = await new Thermometer(12);
+   * myThermometer.on("change", function() {
+   *   console.log(myThermometer.fahrenheit);
+   */
+  get fahrenheit() {
+    return toFixed((this.celsius * 9 / 5) + 32, 2);
+  }
+
+  /**
+   * Alias for fahrenheit
+   * @type {number}
+   * @readonly
+   * @example
+   * &lt;caption>Get degrees in fahrenheit in action&lt;/caption>
+   * import Thermometer from "j5e/thermometer";
+   *
+   * const myThermometer = await new Thermometer(12);
+   * myThermometer.on("change", function() {
+   *   console.log(myThermometer.F);
+   */
+  get F() {
+    return this.fahrenheit;
+  }
+
+  /**
+   * Get degrees in kelvin
+   * @type {number}
+   * @readonly
+   * @example
+   * &lt;caption>Get degrees in kelvin in action&lt;/caption>
+   * import Thermometer from "j5e/thermometer";
+   *
+   * const myThermometer = await new Thermometer(12);
+   * myThermometer.on("change", function() {
+   *   console.log(myThermometer.kelvin);
+   */
+  get kelvin() {
+    return toFixed(this.celsius + Thermometer.CELSIUS_TO_KELVIN, 2);
+  }
+
+  /**
+   * Alias for kelvin
+   * @type {number}
+   * @readonly
+   * @example
+   * &lt;caption>Get degrees in kelvin in action&lt;/caption>
+   * import Thermometer from "j5e/thermometer";
+   *
+   * const myThermometer = await new Thermometer(12);
+   * myThermometer.on("change", function() {
+   *   console.log(myThermometer.K);
+   */
+  get K() {
+    return this.kelvin;
+  }
+
+  /**
+   * Convert a raw reading to Celsius
+   * param {number} value
+   * @private
+   */
+  toCelsius(value) {
+    return value;
+  }
+
+  /**
+   * Internal method for processing reads
+   * @access private
+   */
+  emitEvents() {
+    let boundary;
+    const data = {};
+    data.C = data.celsius = this.celsius;
+    data.F = data.fahrenheit = this.fahrenheit;
+    data.K = data.kelvin = this.kelvin;
+    data.raw = this.raw;
+
+    this.emit("data", data);
+
+    if (typeof this.last === "undefined") {
+      this.last = this.median;
+    }
+
+    // If the filtered (#state.median) value for this interval is at least ± the
+    // configured threshold from last, fire change events
+    if (this.median &lt;= (this.last - this.threshold) || this.median >= (this.last + this.threshold)) {
+      this.emit("change", data);
+      // Update the instance-local `last` value (only) when a new change event
+      // has been emitted.  For comparison in the next interval
+      this.last = this.median;
+    }
+
+    if (this.limit) {
+      if (this.median &lt;= this.limit[0]) {
+        boundary = "lower";
+      }
+      if (this.median >= this.limit[1]) {
+        boundary = "upper";
+      }
+
+      if (boundary) {
+        this.emit("limit", {
+          boundary,
+          value: this.median
+        });
+        this.emit(`limit:${boundary}`, this.median);
+      }
+    }
+  }
+
+}
+
+export default Thermometer;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//   LM35: {
+//     toCelsius: {
+//       value(raw) {
+//         // VOUT = 1500 mV at 150°C
+//         // VOUT = 250 mV at 25°C
+//         // VOUT = –550 mV at –55°C
+
+//         const mV = this.aref * 1000 * raw / 1023;
+
+//         // 10mV = 1°C
+//         //
+//         // Page 1
+//         return round(mV / 10);
+//       }
+//     }
+//   },
+
+//   LM335: {
+//     toCelsius: {
+//       value(raw) {
+//         // OUTPUT 10mV/°K
+
+//         const mV = this.aref * 1000 * raw / 1023;
+
+//         // Page 1
+//         return round((mV / 10) - CELSIUS_TO_KELVIN);
+//       }
+//     }
+//   },
+
+//   TMP36: {
+//     toCelsius: {
+//       value(raw) {
+//         // Analog Reference Voltage
+//         const mV = this.aref * 1000 * raw / 1023;
+
+//         // tempC = (mV / 10) - 50
+//         //
+//         // Page 3
+//         // Table 1
+//         // Accuracy 1°C
+//         return round((mV / 10) - 50);
+//       }
+//     }
+//   },
+
+//   TMP102: {
+//     initialize: {
+//       value(options, callback) {
+//         const { Drivers } = require("./sip");
+//         const address = Drivers.addressResolver(this, options);
+
+//         this.io.i2cConfig(options);
+
+//         // Addressing is unclear.
+
+//         this.io.i2cRead(address, 0x00, 2, data => {
+//           // Based on the example code from https://www.sparkfun.com/products/11931
+//           let raw = ((data[0] &lt;&lt; 8) | data[1]) >> 4;
+
+//           // The tmp102 does twos compliment but has the negative bit in the wrong spot, so test for it and correct if needed
+//           if (raw &amp; (1 &lt;&lt; 11)) {
+//             raw |= 0xF800; // Set bits 11 to 15 to 1s to get this reading into real twos compliment
+//           }
+
+//           // twos compliment
+//           raw = raw >> 15 ? ((raw ^ 0xFFFF) + 1) * -1 : raw;
+
+//           callback(raw);
+//         });
+//       }
+//     },
+//     toCelsius: {
+//       value(raw) {
+//         // 6.5 Electrical Characteristics
+//         // –25°C to 85°C ±0.5
+//         return toFixed(raw / 16, 1);
+//       }
+//     },
+//   },
+
+//   GROVE: {
+//     toCelsius: {
+//       value(raw) {
+//         // http://www.seeedstudio.com/wiki/Grove_-_Temperature_Sensor
+//         const adcres = 1023;
+//         // Beta parameter
+//         const beta = 3975;
+//         // 10 kOhm (sensor resistance)
+//         const rb = 10000;
+//         // Ginf = 1/Rinf
+//         // var ginf = 120.6685;
+//         // Reference Temperature 25°C
+//         const tempr = 298.15;
+
+//         const rthermistor = (adcres - raw) * rb / raw;
+//         const tempc = 1 / (log(rthermistor / rb) / beta + 1 / tempr) - CELSIUS_TO_KELVIN;
+
+//         return round(tempc);
+//       }
+//     }
+//   },
+
+//   // MF52A103J3470
+//     toCelsius: {
+//       value(value) {
+//         const adcres = 1023;
+//         const beta = 3950;
+//         const rb = 10000; // 10 kOhm
+//         const ginf = 120.6685; // Ginf = 1/Rinf
+
+//         const rthermistor = rb * (adcres / value - 1);
+//         const tempc = beta / (log(rthermistor * ginf));
+
+//         return round(tempc - CELSIUS_TO_KELVIN);
+//       }
+//     }
+//   },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</code></pre>
+		</section>
+			</div>
+		</div>
+	</div>
+	<footer>
+				<div class="copyright">Copyright © 2019—2020 The contributors to the j5e and Johnny-Five projects.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a> using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+	</footer>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/clipboard.min.js"></script>
+	<script src="js/prism.min.js"></script>
+	<script src="js/template.min.js"></script>
+		<!-- start:lunr-search-modal.hbs -->
+		<div class="modal fade" id="lunr-search-modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Search results</h4>
+					</div>
+					<div class="modal-body" id="lunr-search-body">
+					</div>
+					<div class="modal-footer" id="lunr-search-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+		<!-- end:lunr-search-modal.hbs -->		<script src="js/lunr.min.js"></script>
+	
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-36026876-4"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());gtag('config', 'UA-36026876-4');
+</script>
+<a href="https://github.com/dtex/j5e"><img width="149" height="149" style="z-index:1000;position:absolute;top: 50px;right: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_white_ffffff.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a></body>
+</html>
+<!-- end:source.tmpl.hbs -->

@@ -115,17 +115,11 @@ class Sensor extends Withinable {
   #state = {
     intervalId: null,
     enabled: null,
-    scale: null,
-    range: null,
     isScaled: false,
     raw: null,
     value: null,
     median: null,
-    smoothing: 10,
-    interval: null,
     previousInterval: 100,
-    limit: null,
-    threshold: 1,
     last: null,
     samples: []
   };
@@ -133,6 +127,7 @@ class Sensor extends Withinable {
   /**
    * Instantiate a sensor
    * @param {object} options - A pin number, pin identifier or a complete IO options object (See {@tutorial C-INSTANTIATING}
+   * @param {number} [options.aref=3.3] - Analog reference voltage
    * @param {number} [options.interval=100] - Interval between readings in millseconds
    * @param {number[]} [options.range=[0, N]] - The input range of the sensor
    * @param {number[]} [options.scale=[0, N]] - The output range for the sensor's value
@@ -179,18 +174,13 @@ class Sensor extends Withinable {
         pin: options.pin,
       });
 
-      if (typeof options.interval !== "undefined") {
-        this.#state.interval = options.interval;
-      }
-
-      if (typeof options.smoothing !== "undefined") {
-        this.#state.smoothing = options.smoothing;
-      }
-
+      this.#state.aref = options.aref || 3.3;
       this.#state.range = options.range || [0, 2 ** this.io.resolution - 1];
       this.#state.scale = options.scale || [0, 2 ** this.io.resolution - 1];
       this.#state.limit = options.limit || null;
-      this.#state.threshold = typeof options.threshold === "undefined" ? 1 : options.threshold;
+      this.#state.interval = options.interval || null;
+      this.#state.smoothing = options.smoothing || 10;
+      this.#state.threshold = options.threshold || 1;
 
       if (options.enabled === false) {
         this.disable();
@@ -261,6 +251,14 @@ class Sensor extends Withinable {
   }
 
   /**
+   * The number of samples to take before finding the median
+   * @type {number}
+   */
+  get samples() {
+    return this.#state.samples;
+  }
+
+  /**
    * The input range of the sensor
    * @type {number[]}
    * @readonly
@@ -276,6 +274,15 @@ class Sensor extends Withinable {
    */
   get raw() {
     return this.#state.raw;
+  }
+
+  /**
+   * Get the most recent median ADC reading
+   * @type {number}
+   * @readonly
+   */
+  get median() {
+    return this.#state.median;
   }
 
   /**
@@ -368,7 +375,66 @@ class Sensor extends Withinable {
    */
   read() {
     this.#state.raw = this.io.read();
-    return this.value;
+    return this.#state.raw;
+  }
+
+  /**
+   * Sample a sensor
+   * @access private
+   */
+  sample() {
+    this.read();
+    this.#state.samples.push(this.value);
+
+    if (this.#state.samples.length >= this.smoothing) {
+      // Filter the accumulated sample values to reduce analog reading noise
+      this.#state.median = median(this.samples);
+
+      this.emitEvents();
+
+      //Reset samples
+      this.#state.samples = [];
+    }
+
+  }
+
+  /**
+   * Internal method for emitting events
+   * @access private
+   */
+  emitEvents() {
+    let err = null;
+    let boundary;
+    // Filter the accumulated sample values to reduce analog reading noise
+
+    const roundMedian = Math.round(this.#state.median);
+    this.emit("data", roundMedian);
+
+    // If the filtered (#state.median) value for this interval is at least ± the
+    // configured threshold from last, fire change events
+    if (this.#state.median &lt;= (this.#state.last - this.threshold) || this.#state.median >= (this.#state.last + this.threshold)) {
+      this.emit("change", roundMedian);
+      // Update the instance-local `last` value (only) when a new change event
+      // has been emitted.  For comparison in the next interval
+      this.#state.last = this.#state.median;
+    }
+
+    if (this.limit) {
+      if (this.#state.median &lt;= this.limit[0]) {
+        boundary = "lower";
+      }
+      if (this.#state.median >= this.limit[1]) {
+        boundary = "upper";
+      }
+
+      if (boundary) {
+        this.emit("limit", {
+          boundary,
+          value: roundMedian
+        });
+        this.emit(`limit:${boundary}`, roundMedian);
+      }
+    }
   }
 
   /**
@@ -376,50 +442,8 @@ class Sensor extends Withinable {
    * @access private
    */
   eventProcessing() {
-    let err = null;
-    this.#state.raw = this.io.read();
-    let boundary;
 
-    this.#state.samples.push(this.value);
-
-    // // Keep the previous calculated value if there were no new readings
-    if (this.#state.samples.length >= this.smoothing) {
-      // Filter the accumulated sample values to reduce analog reading noise
-      this.#state.median = median(this.#state.samples);
-      const roundMedian = Math.round(this.#state.median);
-      this.emit("data", roundMedian);
-
-      // If the filtered (#state.median) value for this interval is at least ± the
-      // configured threshold from last, fire change events
-      if (this.#state.median &lt;= (this.#state.last - this.threshold) || this.#state.median >= (this.#state.last + this.threshold)) {
-        this.emit("change", roundMedian);
-        // Update the instance-local `last` value (only) when a new change event
-        // has been emitted.  For comparison in the next interval
-        this.#state.last = this.#state.median;
-      }
-
-      if (this.limit) {
-        if (this.#state.median &lt;= this.limit[0]) {
-          boundary = "lower";
-        }
-        if (this.#state.median >= this.limit[1]) {
-          boundary = "upper";
-        }
-
-        if (boundary) {
-          this.emit("limit", {
-            boundary,
-            value: roundMedian
-          });
-          this.emit(`limit:${boundary}`, roundMedian);
-        }
-      }
-
-      //Reset samples
-      this.#state.samples = [];
-
-    }
-
+    this.sample();
     this.emit("raw", this.#state.raw);
 
   }
