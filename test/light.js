@@ -1104,11 +1104,13 @@ describe("Light", function() {
 
         light.scale(0, 255);
         light.io.value = 123;
-        assert.equal(Math.abs(light.read() - 31) < 1, true);
+        light.read();
+        assert.equal(Math.abs(light.value - 31) < 1, true);
 
         light.scale([0, 512]);
         light.io.value = 123;
-        assert.equal(Math.abs(light.read() - 62) < 1, true);
+        light.read();
+        assert.equal(Math.abs(light.value - 62) < 1, true);
 
         light.disable();
       });
@@ -1128,10 +1130,12 @@ describe("Light", function() {
 
         light.scale(0, 255);
         light.io.value = 123;
-        assert.equal(Math.abs(light.read() - 31) < 1, true);
+        light.read();
+        assert.equal(Math.abs(light.value - 31) < 1, true);
 
         light.io.value = 456;
-        assert.equal(Math.abs(light.read() - 114) < 1, true);
+        light.read();
+        assert.equal(Math.abs(light.value - 114) < 1, true);
 
         light.disable();
       });
@@ -1154,8 +1158,9 @@ describe("Light", function() {
 
         light.scale(0, 255);
         light.io.value = 123;
-        assert.equal(Math.abs(light.read() - 30) < 1, true);
-        assert.equal(Math.abs(light.read() - 30) !== 0, true);
+        light.read();
+        assert.equal(Math.abs(light.value - 30) < 1, true);
+        assert.equal(Math.abs(light.value - 30) !== 0, true);
         assert.equal(light.scaleTo(0, 2047), 246);
 
         light.disable();
