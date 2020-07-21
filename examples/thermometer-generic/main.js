@@ -7,11 +7,7 @@ let myTimer;
 
 const thermometer = await new Thermometer({
   pin: 14,
-  threshold: 4,
-  toCelsius: function(raw) {
-    const mV = 3.3 * 1000 * raw / 1023;
-    return (mV / 10) - 50;
-  }
+  threshold: 4
 });
 
 const led = await new LED({

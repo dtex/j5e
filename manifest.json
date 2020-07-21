@@ -15,6 +15,10 @@
     "j5e/servo": "$(j5e)/lib/servo/*",
     "j5e/switch": "$(j5e)/lib/switch/*",
     "j5e/thermometer": "$(j5e)/lib/thermometer/*",
+    "j5e/tmp36": "$(j5e)/lib/thermometer/tmp36/*",
+    "j5e/mf52a103j3470": "$(j5e)/lib/thermometer/mf52a103j3470/*",
+    "j5e/lm335": "$(j5e)/lib/thermometer/lm335/*",
+    "j5e/lm35": "$(j5e)/lib/thermometer/lm35/*",
     "j5e/withinable": "$(j5e)/lib/withinable/*"
   },
   "preload": [],
