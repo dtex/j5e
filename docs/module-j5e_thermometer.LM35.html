@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>&lt;async&gt; j5e/thermometer~Thermometer</title>
+		<title>&lt;async&gt; j5e/thermometer~LM35</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -85,7 +85,7 @@
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
 				<span class="kind">class</span>
-				<h1><span class="signature-attribs">&lt;async> </span><span class="ancestors"><a href="module-j5e_thermometer.html">j5e/thermometer</a>~</span><span class="name">Thermometer</span></h1>
+				<h1><span class="signature-attribs">&lt;async> </span><span class="ancestors"><a href="module-j5e_thermometer.html">j5e/thermometer</a>~</span><span class="name">LM35</span></h1>
 			</div>
 		</div>
 	<div class="container content">
@@ -94,7 +94,7 @@
 						<ol class="breadcrumb">
 							<li><a href="index.html">Home</a></li>
 							<li><a href="list_class.html">Classes</a></li>
-							<li class="active"><a href="module-j5e_thermometer.html">j5e/thermometer</a>~Thermometer</li>
+							<li class="active"><a href="module-j5e_thermometer.html">j5e/thermometer</a>~LM35</li>
 						</ol>
 						<div class="access-filter">
 								<label class="checkbox-inline">
@@ -109,11 +109,11 @@
 					<section>
 							<dl class="symbol primary">
 								<dt class="symbol-title class collapsible-symbol expanded">
-			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="signature-attribs">&lt;async> </span><span class="name">Thermometer</span><span class="signature-params">( &nbsp;)</span><span class="signature-type"></span></h2>
+			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="signature-attribs">&lt;async> </span><span class="name">LM35</span><span class="signature-params">( &nbsp;)</span><span class="signature-type"></span></h2>
 </dt>
 <dd class="symbol-details class  collapsible-symbol expanded" style="max-height: 9999px;">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description classdesc">The Thermometer class allows for control of analog thermistors</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description classdesc">The LM35 class allows for reading of LM35 thermistors</div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -190,34 +190,18 @@
 									The minimum amount of change required to emit a "change" event
 							</td>
 						</tr>
-						<tr>
-								<td><code>options.toCelsius</code></td>
-							<td><span class="param-type">callback</span></td>
-								<td class="attributes">&lt;optional&gt;<br/></td>
-								<td></td>
-							<td class="last">
-									A function that will be used to calculate the degrees in celisus from this.raw (expects one param). Will not be used if toCelsius is already defined on a subclass. All other getters are based on degrees Celsius so they do not need to be provided.
-							</td>
-						</tr>
 					</tbody>
 				</table>
 			</div>
-			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Use a thermometer</p></div>
+			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Use a LM35</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Thermometer from &quot;j5e/thermometer&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LM35 from &quot;j5e/lm35&quot;;
 			
-			const myThermometer &#x3D; await new Thermometer(12);</code></pre>
-					</div>
-					<div class="example-caption"><p>Pass in a custom toCelsius function</p></div>
-					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Thermometer from &quot;j5e/thermometer&quot;;
+			const myLM35 &#x3D; await new LM35(12);
 			
-			const myThermometer &#x3D; await new Thermometer({
-			  pin: 12,
-			  toCelsius: function(raw) {
-			    return raw / 16;
-			  }
-			}) ;</code></pre>
+			myLM35.on(&quot;change&quot;, function(data) {
+			  trace(data.C);
+			});</code></pre>
 					</div>
 			</div>			<div class="callout callout-warning"><h5>Fires</h5>		<form class="form-horizontal fires">
 							<div class="form-group">
@@ -241,7 +225,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Augments</label>
 								<div class="col-sm-9">
-										<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html">j5e/sensor~Sensor</a></p>
+										<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html">j5e/thermometer~Thermometer</a></p>
 								</div>
 							</div>
 			
@@ -260,7 +244,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="thermometer_index.js.html">thermometer/index.js</a>, <a href="thermometer_index.js.html#line-51">line 51</a></p>
+									<p class="form-control-static"><a href="thermometer_lm35_index.js.html">thermometer/lm35/index.js</a>, <a href="thermometer_lm35_index.js.html#line-35">line 35</a></p>
 								</div>
 							</div>
 			
@@ -275,10 +259,10 @@
 									<h3>Members</h3>
 									<dl class="symbol">
 											<hr/>
-											<dt class="symbol-title member public collapsible-symbol">
-			<h4 id="celsius" class="member public"><span class="signature-attribs">&lt;readonly> </span><span class="name">celsius</span><span class="signature-type"> :number</span></h4>
+											<dt class="symbol-title member public inherited collapsible-symbol">
+			<h4 id="celsius" class="member public inherited"><span class="signature-attribs">&lt;readonly> </span><span class="name">celsius</span><span class="signature-type"> :number</span></h4>
 		</dt>
-<dd class="symbol-details member public  collapsible-symbol">
+<dd class="symbol-details member public inherited  collapsible-symbol">
 	<div class="symbol-details-inner">
 			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Get degrees in celsius</div>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Get degrees in celsius in action</p></div>
@@ -303,7 +287,21 @@
 			
 			
 			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html#celsius">module:j5e/thermometer~Thermometer#celsius</a></p>
+								</div>
+							</div>
 			
+							<!-- overrides -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Overrides</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html#celsius">module:j5e/thermometer~Thermometer#celsius</a></p>
+								</div>
+							</div>
 			
 			
 			
@@ -327,10 +325,10 @@
 			</div>	</div>
 </dd>
 											<hr/>
-											<dt class="symbol-title member public collapsible-symbol">
-			<h4 id="C" class="member public"><span class="signature-attribs">&lt;readonly> </span><span class="name">C</span><span class="signature-type"> :number</span></h4>
+											<dt class="symbol-title member public inherited collapsible-symbol">
+			<h4 id="C" class="member public inherited"><span class="signature-attribs">&lt;readonly> </span><span class="name">C</span><span class="signature-type"> :number</span></h4>
 		</dt>
-<dd class="symbol-details member public  collapsible-symbol">
+<dd class="symbol-details member public inherited  collapsible-symbol">
 	<div class="symbol-details-inner">
 			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Alias for celsius</div>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Get degrees in celsius in action</p></div>
@@ -355,7 +353,21 @@
 			
 			
 			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html#C">module:j5e/thermometer~Thermometer#C</a></p>
+								</div>
+							</div>
 			
+							<!-- overrides -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Overrides</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html#C">module:j5e/thermometer~Thermometer#C</a></p>
+								</div>
+							</div>
 			
 			
 			
@@ -369,214 +381,6 @@
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
 									<p class="form-control-static"><a href="thermometer_index.js.html">thermometer/index.js</a>, <a href="thermometer_index.js.html#line-98">line 98</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title member public collapsible-symbol">
-			<h4 id="fahrenheit" class="member public"><span class="signature-attribs">&lt;readonly> </span><span class="name">fahrenheit</span><span class="signature-type"> :number</span></h4>
-		</dt>
-<dd class="symbol-details member public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Get degrees in fahrenheit</div>
-			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Get degrees in fahrenheit in action</p></div>
-					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Thermometer from &quot;j5e/thermometer&quot;;
-			
-			const myThermometer &#x3D; await new Thermometer(12);
-			myThermometer.on(&quot;change&quot;, function() {
-			  console.log(myThermometer.fahrenheit);</code></pre>
-					</div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-							<!-- type -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Type</label>
-								<div class="col-sm-9">
-									<div class="form-control-static type-names"><span class="param-type">number</span></div>
-								</div>
-							</div>
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="thermometer_index.js.html">thermometer/index.js</a>, <a href="thermometer_index.js.html#line-114">line 114</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title member public collapsible-symbol">
-			<h4 id="F" class="member public"><span class="signature-attribs">&lt;readonly> </span><span class="name">F</span><span class="signature-type"> :number</span></h4>
-		</dt>
-<dd class="symbol-details member public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Alias for fahrenheit</div>
-			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Get degrees in fahrenheit in action</p></div>
-					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Thermometer from &quot;j5e/thermometer&quot;;
-			
-			const myThermometer &#x3D; await new Thermometer(12);
-			myThermometer.on(&quot;change&quot;, function() {
-			  console.log(myThermometer.F);</code></pre>
-					</div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-							<!-- type -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Type</label>
-								<div class="col-sm-9">
-									<div class="form-control-static type-names"><span class="param-type">number</span></div>
-								</div>
-							</div>
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="thermometer_index.js.html">thermometer/index.js</a>, <a href="thermometer_index.js.html#line-130">line 130</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title member public collapsible-symbol">
-			<h4 id="kelvin" class="member public"><span class="signature-attribs">&lt;readonly> </span><span class="name">kelvin</span><span class="signature-type"> :number</span></h4>
-		</dt>
-<dd class="symbol-details member public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Get degrees in kelvin</div>
-			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Get degrees in kelvin in action</p></div>
-					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Thermometer from &quot;j5e/thermometer&quot;;
-			
-			const myThermometer &#x3D; await new Thermometer(12);
-			myThermometer.on(&quot;change&quot;, function() {
-			  console.log(myThermometer.kelvin);</code></pre>
-					</div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-							<!-- type -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Type</label>
-								<div class="col-sm-9">
-									<div class="form-control-static type-names"><span class="param-type">number</span></div>
-								</div>
-							</div>
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="thermometer_index.js.html">thermometer/index.js</a>, <a href="thermometer_index.js.html#line-146">line 146</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title member public collapsible-symbol">
-			<h4 id="K" class="member public"><span class="signature-attribs">&lt;readonly> </span><span class="name">K</span><span class="signature-type"> :number</span></h4>
-		</dt>
-<dd class="symbol-details member public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Alias for kelvin</div>
-			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Get degrees in kelvin in action</p></div>
-					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Thermometer from &quot;j5e/thermometer&quot;;
-			
-			const myThermometer &#x3D; await new Thermometer(12);
-			myThermometer.on(&quot;change&quot;, function() {
-			  console.log(myThermometer.K);</code></pre>
-					</div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-							<!-- type -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Type</label>
-								<div class="col-sm-9">
-									<div class="form-control-static type-names"><span class="param-type">number</span></div>
-								</div>
-							</div>
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="thermometer_index.js.html">thermometer/index.js</a>, <a href="thermometer_index.js.html#line-162">line 162</a></p>
 								</div>
 							</div>
 			
@@ -619,7 +423,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Overrides</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#limit">module:j5e/sensor~Sensor#limit</a></p>
+									<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html#limit">module:j5e/thermometer~Thermometer#limit</a></p>
 								</div>
 							</div>
 			
@@ -635,6 +439,72 @@
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
 									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-105">line 105</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public inherited collapsible-symbol">
+			<h4 id="fahrenheit" class="member public inherited"><span class="signature-attribs">&lt;readonly> </span><span class="name">fahrenheit</span><span class="signature-type"> :number</span></h4>
+		</dt>
+<dd class="symbol-details member public inherited  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Get degrees in fahrenheit</div>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Get degrees in fahrenheit in action</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Thermometer from &quot;j5e/thermometer&quot;;
+			
+			const myThermometer &#x3D; await new Thermometer(12);
+			myThermometer.on(&quot;change&quot;, function() {
+			  console.log(myThermometer.fahrenheit);</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">number</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html#fahrenheit">module:j5e/thermometer~Thermometer#fahrenheit</a></p>
+								</div>
+							</div>
+			
+							<!-- overrides -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Overrides</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html#fahrenheit">module:j5e/thermometer~Thermometer#fahrenheit</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="thermometer_index.js.html">thermometer/index.js</a>, <a href="thermometer_index.js.html#line-114">line 114</a></p>
 								</div>
 							</div>
 			
@@ -677,7 +547,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Overrides</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#threshold">module:j5e/sensor~Sensor#threshold</a></p>
+									<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html#threshold">module:j5e/thermometer~Thermometer#threshold</a></p>
 								</div>
 							</div>
 			
@@ -735,7 +605,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Overrides</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#interval">module:j5e/sensor~Sensor#interval</a></p>
+									<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html#interval">module:j5e/thermometer~Thermometer#interval</a></p>
 								</div>
 							</div>
 			
@@ -751,6 +621,138 @@
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
 									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-129">line 129</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public inherited collapsible-symbol">
+			<h4 id="F" class="member public inherited"><span class="signature-attribs">&lt;readonly> </span><span class="name">F</span><span class="signature-type"> :number</span></h4>
+		</dt>
+<dd class="symbol-details member public inherited  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Alias for fahrenheit</div>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Get degrees in fahrenheit in action</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Thermometer from &quot;j5e/thermometer&quot;;
+			
+			const myThermometer &#x3D; await new Thermometer(12);
+			myThermometer.on(&quot;change&quot;, function() {
+			  console.log(myThermometer.F);</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">number</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html#F">module:j5e/thermometer~Thermometer#F</a></p>
+								</div>
+							</div>
+			
+							<!-- overrides -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Overrides</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html#F">module:j5e/thermometer~Thermometer#F</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="thermometer_index.js.html">thermometer/index.js</a>, <a href="thermometer_index.js.html#line-130">line 130</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public inherited collapsible-symbol">
+			<h4 id="kelvin" class="member public inherited"><span class="signature-attribs">&lt;readonly> </span><span class="name">kelvin</span><span class="signature-type"> :number</span></h4>
+		</dt>
+<dd class="symbol-details member public inherited  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Get degrees in kelvin</div>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Get degrees in kelvin in action</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Thermometer from &quot;j5e/thermometer&quot;;
+			
+			const myThermometer &#x3D; await new Thermometer(12);
+			myThermometer.on(&quot;change&quot;, function() {
+			  console.log(myThermometer.kelvin);</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">number</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html#kelvin">module:j5e/thermometer~Thermometer#kelvin</a></p>
+								</div>
+							</div>
+			
+							<!-- overrides -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Overrides</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html#kelvin">module:j5e/thermometer~Thermometer#kelvin</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="thermometer_index.js.html">thermometer/index.js</a>, <a href="thermometer_index.js.html#line-146">line 146</a></p>
 								</div>
 							</div>
 			
@@ -793,7 +795,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Overrides</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#smoothing">module:j5e/sensor~Sensor#smoothing</a></p>
+									<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html#smoothing">module:j5e/thermometer~Thermometer#smoothing</a></p>
 								</div>
 							</div>
 			
@@ -851,7 +853,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Overrides</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#aref">module:j5e/sensor~Sensor#aref</a></p>
+									<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html#aref">module:j5e/thermometer~Thermometer#aref</a></p>
 								</div>
 							</div>
 			
@@ -867,6 +869,72 @@
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
 									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-161">line 161</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public inherited collapsible-symbol">
+			<h4 id="K" class="member public inherited"><span class="signature-attribs">&lt;readonly> </span><span class="name">K</span><span class="signature-type"> :number</span></h4>
+		</dt>
+<dd class="symbol-details member public inherited  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Alias for kelvin</div>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Get degrees in kelvin in action</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Thermometer from &quot;j5e/thermometer&quot;;
+			
+			const myThermometer &#x3D; await new Thermometer(12);
+			myThermometer.on(&quot;change&quot;, function() {
+			  console.log(myThermometer.K);</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">number</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html#K">module:j5e/thermometer~Thermometer#K</a></p>
+								</div>
+							</div>
+			
+							<!-- overrides -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Overrides</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html#K">module:j5e/thermometer~Thermometer#K</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="thermometer_index.js.html">thermometer/index.js</a>, <a href="thermometer_index.js.html#line-162">line 162</a></p>
 								</div>
 							</div>
 			
@@ -909,7 +977,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Overrides</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#samples">module:j5e/sensor~Sensor#samples</a></p>
+									<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html#samples">module:j5e/thermometer~Thermometer#samples</a></p>
 								</div>
 							</div>
 			
@@ -967,7 +1035,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Overrides</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#range">module:j5e/sensor~Sensor#range</a></p>
+									<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html#range">module:j5e/thermometer~Thermometer#range</a></p>
 								</div>
 							</div>
 			
@@ -1025,7 +1093,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Overrides</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#raw">module:j5e/sensor~Sensor#raw</a></p>
+									<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html#raw">module:j5e/thermometer~Thermometer#raw</a></p>
 								</div>
 							</div>
 			
@@ -1083,7 +1151,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Overrides</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#median">module:j5e/sensor~Sensor#median</a></p>
+									<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html#median">module:j5e/thermometer~Thermometer#median</a></p>
 								</div>
 							</div>
 			
@@ -1141,7 +1209,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Overrides</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#resolution">module:j5e/sensor~Sensor#resolution</a></p>
+									<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html#resolution">module:j5e/thermometer~Thermometer#resolution</a></p>
 								</div>
 							</div>
 			
@@ -1199,7 +1267,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Overrides</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#scaled">module:j5e/sensor~Sensor#scaled</a></p>
+									<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html#scaled">module:j5e/thermometer~Thermometer#scaled</a></p>
 								</div>
 							</div>
 			
@@ -1277,7 +1345,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Overrides</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#value">module:j5e/sensor~Sensor#value</a></p>
+									<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html#value">module:j5e/thermometer~Thermometer#value</a></p>
 								</div>
 							</div>
 			
@@ -1359,7 +1427,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Overrides</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#on">module:j5e/sensor~Sensor#on</a></p>
+									<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html#on">module:j5e/thermometer~Thermometer#on</a></p>
 								</div>
 							</div>
 			
@@ -1445,7 +1513,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Overrides</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#within">module:j5e/sensor~Sensor#within</a></p>
+									<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html#within">module:j5e/thermometer~Thermometer#within</a></p>
 								</div>
 							</div>
 			
@@ -1524,7 +1592,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Overrides</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#removeListener">module:j5e/sensor~Sensor#removeListener</a></p>
+									<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html#removeListener">module:j5e/thermometer~Thermometer#removeListener</a></p>
 								</div>
 							</div>
 			
@@ -1603,7 +1671,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Overrides</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#once">module:j5e/sensor~Sensor#once</a></p>
+									<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html#once">module:j5e/thermometer~Thermometer#once</a></p>
 								</div>
 							</div>
 			
@@ -1673,7 +1741,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Overrides</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#enable">module:j5e/sensor~Sensor#enable</a></p>
+									<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html#enable">module:j5e/thermometer~Thermometer#enable</a></p>
 								</div>
 							</div>
 			
@@ -1741,7 +1809,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Overrides</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#disable">module:j5e/sensor~Sensor#disable</a></p>
+									<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html#disable">module:j5e/thermometer~Thermometer#disable</a></p>
 								</div>
 							</div>
 			
@@ -1806,7 +1874,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Overrides</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#read">module:j5e/sensor~Sensor#read</a></p>
+									<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html#read">module:j5e/thermometer~Thermometer#read</a></p>
 								</div>
 							</div>
 			
@@ -1917,7 +1985,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Overrides</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#scale">module:j5e/sensor~Sensor#scale</a></p>
+									<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html#scale">module:j5e/thermometer~Thermometer#scale</a></p>
 								</div>
 							</div>
 			
@@ -2018,7 +2086,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Overrides</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#scaleTo">module:j5e/sensor~Sensor#scaleTo</a></p>
+									<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html#scaleTo">module:j5e/thermometer~Thermometer#scaleTo</a></p>
 								</div>
 							</div>
 			
@@ -2119,7 +2187,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Overrides</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="module-j5e_sensor-Sensor.html#fscaleTo">module:j5e/sensor~Sensor#fscaleTo</a></p>
+									<p class="form-control-static"><a href="module-j5e_thermometer-Thermometer.html#fscaleTo">module:j5e/thermometer~Thermometer#fscaleTo</a></p>
 								</div>
 							</div>
 			

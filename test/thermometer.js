@@ -2,6 +2,10 @@ import assert from "assert";
 import sinon from "sinon";
 import { Analog } from "@dtex/mock-io";
 import Thermometer from "j5e/thermometer";
+import TMP36 from "j5e/tmp36";
+import MF52A103J3470 from "j5e/mf52a103j3470";
+import LM335 from "j5e/lm335";
+import LM35 from "j5e/lm35";
 import Sensor from "j5e/sensor";
 import { Emitter } from "j5e/event";
 import Withinable from "j5e/withinable";
@@ -2077,6 +2081,74 @@ describe("Thermometer", function() {
 
         thermometer.disable();
         clock.restore();
+      });
+    });
+
+  });
+
+  describe("Devices", function() {
+
+    describe("TMP36", function() {
+
+      it("should use the correct formula for toCelsius", async function() {
+
+        let thermometer = await new TMP36({
+          pin: 17,
+          io: Analog
+        });
+        thermometer.io.value = 123;
+        thermometer.read();
+        assert.equal(thermometer.celsius, -10);
+        thermometer.disable();
+
+      });
+    });
+
+    describe("MF52A103J3470", function() {
+
+      it("should use the correct formula for toCelsius", async function() {
+
+        let thermometer = await new MF52A103J3470({
+          pin: 17,
+          io: Analog
+        });
+        thermometer.io.value = 123;
+        thermometer.read();
+        assert.equal(thermometer.celsius, -26);
+        thermometer.disable();
+
+      });
+    });
+
+    describe("LM335", function() {
+
+      it("should use the correct formula for toCelsius", async function() {
+
+        let thermometer = await new LM335({
+          pin: 17,
+          io: Analog
+        });
+        thermometer.io.value = 123;
+        thermometer.read();
+        assert.equal(thermometer.celsius, -233);
+        thermometer.disable();
+
+      });
+    });
+
+    describe("LM35", function() {
+
+      it("should use the correct formula for toCelsius", async function() {
+
+        let thermometer = await new LM35({
+          pin: 17,
+          io: Analog
+        });
+        thermometer.io.value = 123;
+        thermometer.read();
+        assert.equal(thermometer.celsius, 40);
+        thermometer.disable();
+
       });
     });
 
