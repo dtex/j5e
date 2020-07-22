@@ -22,8 +22,8 @@ New users should check out the [Getting Started](https://dtex.github.io/j5e/tuto
 
 Interested in contributing? Check out [CONTRIBUTING.md](https://github.com/dtex/J5e/blob/master/CONTRIBUTING.md) in the repo.
 
-### Modules
-<table width="100%">
+### J5e Modules
+<table style="border: none;" width="100%">
   <tr>
     <td width="50%">
       <ul>
