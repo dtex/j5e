@@ -251,6 +251,14 @@ class Sensor extends Withinable {
   }
 
   /**
+   * The reference voltage
+   * @type {number}
+   */
+  get aref() {
+    return this.#state.aref;
+  }
+
+  /**
    * The number of samples to take before finding the median
    * @type {number}
    */

@@ -1,17 +1,13 @@
-import Thermometer from "j5e/thermometer";
+import MF52A103J3470 from "j5e/mf52a103j3470";
 import LED from "j5e/led";
 import { timer } from "j5e/fn";
 
 let last = 0;
 let myTimer;
 
-const thermometer = await new Thermometer({
+const thermometer = await new MF52A103J3470({
   pin: 14,
-  threshold: 4,
-  toCelsius: function(raw) {
-    const mV = 3.3 * 1000 * raw / 1023;
-    return (mV / 10) - 50;
-  }
+  threshold: 4
 });
 
 const led = await new LED({
