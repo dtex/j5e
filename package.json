@@ -1,6 +1,6 @@
 {
   "name": "j5e",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "j5e is a device framework built for ECMA TC-53's IO pattern",
   "main": "index.js",
   "exports": {
@@ -18,10 +18,10 @@
     "./servo": "./lib/servo/index.js",
     "./switch": "./lib/switch/index.js",
     "./thermometer": "./lib/thermometer/index.js",
-      "./lm335": "./lib/thermometer/lm335/index.js",
-      "./lm35": "./lib/thermometer/lm35/index.js",
-      "./mf52a103j3470": "./lib/thermometer/mf52a103j3470/index.js",
-      "./tmp36": "./lib/thermometer/tmp36/index.js",
+    "./lm335": "./lib/thermometer/lm335/index.js",
+    "./lm35": "./lib/thermometer/lm35/index.js",
+    "./mf52a103j3470": "./lib/thermometer/mf52a103j3470/index.js",
+    "./tmp36": "./lib/thermometer/tmp36/index.js",
     "./withinable": "./lib/withinable/index.js"
   },
   "type": "module",
@@ -67,7 +67,6 @@
     "foodoc": "github:dtex/foodoc#master",
     "fs-extra": "^8.1.0",
     "jsdoc": "^3.6.4",
-    "lerna": "^3.22.1",
     "mocha": "^8.0.1",
     "sinon": "^9.0.2"
   },
