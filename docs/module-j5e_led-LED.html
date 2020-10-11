@@ -99,7 +99,7 @@
 					<section>
 							<dl class="symbol primary">
 								<dt class="symbol-title class collapsible-symbol expanded">
-			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="signature-attribs">&lt;async> </span><span class="name">LED</span><span class="signature-params">( <span class="signature-param">options</span>&nbsp;)</span><span class="signature-type"></span></h2>
+			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="signature-attribs">&lt;async> </span><span class="name">LED</span><span class="signature-params">( <span class="signature-param">io</span>, <span class="signature-param">options</span>&nbsp;)</span><span class="signature-type"></span></h2>
 </dt>
 <dd class="symbol-details class  collapsible-symbol expanded" style="max-height: 9999px;">
 	<div class="symbol-details-inner">
@@ -116,10 +116,17 @@
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>options</code></td>
+								<td><code>io</code></td>
 							<td><span class="param-type">object</span></td>
 							<td class="last">
 									Pin identifier or IO Options (See <a href="tutorial-C-INSTANTIATING.html">Instantiating a Device</a>)
+							</td>
+						</tr>
+						<tr>
+								<td><code>options</code></td>
+							<td><span class="param-type">object</span></td>
+							<td class="last">
+									Device configuration options
 										<table class="params table table-striped">
 											<thead>
 											<tr>
@@ -174,8 +181,7 @@
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LED from &quot;j5e/led&quot;;
 			
-			const led &#x3D; await new LED({
-			  pin: 12,
+			const led &#x3D; await new LED(12, {
 			  pwm: true
 			});
 			led.on();</code></pre>
@@ -248,7 +254,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-89">line 89</a></p>
+									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-90">line 90</a></p>
 								</div>
 							</div>
 			
@@ -292,7 +298,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-98">line 98</a></p>
+									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-99">line 99</a></p>
 								</div>
 							</div>
 			
@@ -336,7 +342,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-107">line 107</a></p>
+									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-108">line 108</a></p>
 								</div>
 							</div>
 			
@@ -390,7 +396,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-134">line 134</a></p>
+									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-135">line 135</a></p>
 								</div>
 							</div>
 			
@@ -447,7 +453,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-155">line 155</a></p>
+									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-156">line 156</a></p>
 								</div>
 							</div>
 			
@@ -504,7 +510,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-176">line 176</a></p>
+									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-177">line 177</a></p>
 								</div>
 							</div>
 			
@@ -586,7 +592,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-191">line 191</a></p>
+									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-192">line 192</a></p>
 								</div>
 							</div>
 			
@@ -661,7 +667,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-225">line 225</a></p>
+									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-226">line 226</a></p>
 								</div>
 							</div>
 			
@@ -736,7 +742,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-244">line 244</a></p>
+									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-245">line 245</a></p>
 								</div>
 							</div>
 			
@@ -833,7 +839,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-265">line 265</a></p>
+									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-266">line 266</a></p>
 								</div>
 							</div>
 			
@@ -922,7 +928,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-317">line 317</a></p>
+									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-318">line 318</a></p>
 								</div>
 							</div>
 			
@@ -1012,7 +1018,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-337">line 337</a></p>
+									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-338">line 338</a></p>
 								</div>
 							</div>
 			
@@ -1101,7 +1107,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-356">line 356</a></p>
+									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-357">line 357</a></p>
 								</div>
 							</div>
 			
@@ -1183,7 +1189,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-404">line 404</a></p>
+									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-405">line 405</a></p>
 								</div>
 							</div>
 			
@@ -1244,7 +1250,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-434">line 434</a></p>
+									<p class="form-control-static"><a href="led_index.js.html">led/index.js</a>, <a href="led_index.js.html#line-435">line 435</a></p>
 								</div>
 							</div>
 			

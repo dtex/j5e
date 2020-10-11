@@ -95,14 +95,14 @@
 		<section class="source-section">
 			<article></article>
 			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">/**
- * Class library for managing LED's (Light Emitting Diodes). They can be connected to a digital IO (On/Off), or to a PWM IO (varying brightness).
+ * Class library for controlling LED's (Light Emitting Diodes). Connect the LED to a digital IO for on/off functionality. Use a PWM IO for varying brightness.
  * @module j5e/led
  * @requires module:j5e/animation
  * @requires module:j5e/easing
  * @requires module:j5e/fn
  */
 
-import { normalizeParams, constrain, getProvider, timer } from "j5e/fn";
+import { normalizeIO, normalizeDevice, constrain, getProvider, timer } from "j5e/fn";
 import { inOutSine, outSine } from "j5e/easing";
 import Animation from "j5e/animation";
 
@@ -123,7 +123,8 @@ class LED {
 
   /**
    * Instantiate an LED
-   * @param {object} options - Pin identifier or IO Options (See {@tutorial C-INSTANTIATING})
+   * @param {object} io - Pin identifier or IO Options (See {@tutorial C-INSTANTIATING})
+   * @param {object} options - Device configuration options
    * @param {boolean} [options.pwm=false] - True if the device is wired to a PWM pin
    * @param {boolean} [options.sink=false] - True if the device is wired for sink drive
    * @example
@@ -144,20 +145,20 @@ class LED {
    * &lt;caption>Using an IO options object&lt;/caption>
    * import LED from "j5e/led";
    *
-   * const led = await new LED({
-   *   pin: 12,
+   * const led = await new LED(12, {
    *   pwm: true
    * });
    * led.on();
    */
-  constructor(options) {
+  constructor(io, options) {
     return (async() => {
-      options = normalizeParams(options);
+      io = normalizeIO(io);
+      options = normalizeDevice(options);
 
-      const Provider = await getProvider(options, options.pwm ? "builtin/pwm" : "builtin/digital");
+      const Provider = await getProvider(io, options.pwm ? "builtin/pwm" : "builtin/digital");
 
       this.io = new Provider({
-        pin: options.pin,
+        pin: io.pin,
         mode: Provider.Output
       });
 

@@ -10,8 +10,7 @@ const thermometer = await new MF52A103J3470({
   threshold: 4
 });
 
-const led = await new LED({
-  pin: 12,
+const led = await new LED(12, {
   pwm: true
 });
 

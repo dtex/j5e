@@ -2,8 +2,7 @@ import Light from "j5e/light";
 import LED from "j5e/led";
 
 const light = await new Light(14);
-const led = await new LED({
-  pin: 12,
+const led = await new LED(12, {
   pwm: true
 });
 

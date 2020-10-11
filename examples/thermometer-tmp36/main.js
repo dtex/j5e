@@ -10,8 +10,7 @@ const thermometer = await new TMP36({
   threshold: 4
 });
 
-const led = await new LED({
-  pin: 12,
+const led = await new LED(12, {
   pwm: true
 });
 
