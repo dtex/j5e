@@ -25,7 +25,9 @@ describe("Button", function() {
         it("should invert state when the invert option is true", async function() {
           const button = await new Button({
             pin: 13,
-            io: Digital,
+            io: Digital
+          },
+          {
             invert: true
           });
 
@@ -45,7 +47,9 @@ describe("Button", function() {
         it("should invert state when the isPullup option is true", async function() {
           const button = await new Button({
             pin: 13,
-            io: Digital,
+            io: Digital
+          },
+          {
             isPullup: true
           });
 
@@ -62,7 +66,9 @@ describe("Button", function() {
         it("should not invert state when the isPullup and invert options are true", async function() {
           const button = await new Button({
             pin: 13,
-            io: Digital,
+            io: Digital
+          },
+          {
             isPullup: true,
             invert: true
           });
@@ -84,7 +90,9 @@ describe("Button", function() {
         it("should not invert state when the isPulldown option is true", async function() {
           const button = await new Button({
             pin: 13,
-            io: Digital,
+            io: Digital
+          },
+          {
             isPulldown: true
           });
 
@@ -104,7 +112,9 @@ describe("Button", function() {
         it("should set the holdtime state when passed a value in options", async function() {
           const button = await new Button({
             pin: 13,
-            io: Digital,
+            io: Digital
+          },
+          {
             holdtime: 2000
           });
 
@@ -121,7 +131,9 @@ describe("Button", function() {
         it("should delay event emissions by debounced value that is passed", async function() {
           const button = await new Button({
             pin: 13,
-            io: Digital,
+            io: Digital
+          },
+          {
             debounce: 20
           });
 
@@ -251,7 +263,9 @@ describe("Button", function() {
         const holdSpy = sinon.spy();
         const button = await new Button({
           pin: 13,
-          io: Digital,
+          io: Digital
+        },
+        {
           holdtime: 2000
         });
 
@@ -290,7 +304,8 @@ describe("Button", function() {
 
         const button = await new Button({
           pin: 13,
-          io: Digital,
+          io: Digital
+        }, {
           invert: true
         });
 
@@ -302,7 +317,8 @@ describe("Button", function() {
 
         const button = await new Button({
           pin: 13,
-          io: Digital,
+          io: Digital
+        }, {
           isPullup: true
         });
 
@@ -314,7 +330,8 @@ describe("Button", function() {
 
         const button = await new Button({
           pin: 13,
-          io: Digital,
+          io: Digital
+        }, {
           isPullup: true,
           invert: true
         });
@@ -353,7 +370,8 @@ describe("Button", function() {
 
         const button = await new Button({
           pin: 13,
-          io: Digital,
+          io: Digital
+        }, {
           invert: true
         });
 
@@ -365,7 +383,8 @@ describe("Button", function() {
 
         const button = await new Button({
           pin: 13,
-          io: Digital,
+          io: Digital
+        }, {
           isPullup: true
         });
 
@@ -377,7 +396,8 @@ describe("Button", function() {
 
         const button = await new Button({
           pin: 13,
-          io: Digital,
+          io: Digital
+        }, {
           isPullup: true,
           invert: true
         });
