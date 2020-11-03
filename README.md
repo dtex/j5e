@@ -1,6 +1,6 @@
 ![Node.js CI](https://github.com/dtex/j5e/workflows/Node.js%20CI/badge.svg)
 ## J5e
-<img width="40%" align="right" alt="A robot poking its head out from inside washing machine" style="margin:0 0 35px 35px;" src="https://github.com/dtex/j5e/raw/master/build/docs/img/J5-embedded-666x666.png" />
+<img width="40%" align="right" alt="A robot poking its head out from inside washing machine" style="margin:0 0 35px 35px;" src="https://raw.githubusercontent.com/dtex/j5e/main/build/docs/img/J5-embedded-666x666.png" />
 
 Control LED's, Servos, Switches, and more with J5e. It runs onboard microcontrollers like the ESP8266. Your code is 100% JavaScript. It does not require node.js, a host server or an SBC to host the app.
 
@@ -29,15 +29,13 @@ Interested in contributing? Check out [CONTRIBUTING.md](https://github.com/dtex/
       <ul>
         <li><a href="https://dtex.github.io/j5e/module-j5e_animation.html">Animation</a></li>
         <li><a href="https://dtex.github.io/j5e/module-j5e_button.html">Button</a></li>
-        <li><a href="https://dtex.github.io/j5e/module-j5e_easing.html">Easing</a></li>
-        <li><a href="https://dtex.github.io/j5e/module-j5e_fn.html">FN (Utility Functions)</a></li>
         <li><a href="https://dtex.github.io/j5e/module-j5e_led.html">LED</a></li>
         <li><a href="https://dtex.github.io/j5e/module-j5e_light.html">Light (Photoresistors)</a></li>
+        <li><a href="https://dtex.github.io/j5e/module-j5e_relay.html">Relay</a></li>
       </ul>
     </td>
     <td width="50%">
       <ul>
-        <li><a href="https://dtex.github.io/j5e/module-j5e_relay.html">Relay</a></li>
         <li><a href="https://dtex.github.io/j5e/module-j5e_rgb.html">RGB LED</a></li>
         <li><a href="https://dtex.github.io/j5e/module-j5e_sensor.html">Sensor</a></li>
         <li><a href="https://dtex.github.io/j5e/module-j5e_servo.html">Servo</a></li>

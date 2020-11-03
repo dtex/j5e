@@ -100,7 +100,7 @@
  * @requires module:j5e/fn
  */
 
-import { normalizeParams, getProvider } from "j5e/fn";
+import { normalizeDevice, normalizeIO, getProvider } from "j5e/fn";
 
 /**
  * Class representing a relay
@@ -117,7 +117,8 @@ class Relay {
 
   /**
    * Instantiate Relay
-   * @param {object} options - A pin number, pin identifier or a complete options object (See {@tutorial C-INSTANTIATING}
+   * @param {number|string|object} io - Pin identifier or IO Options (See {@tutorial C-INSTANTIATING})
+   * @param {object} options - Device configuration options
    * @param {string} options.type - "NO" (Normally Open) or "NC" (Normally Closed)
    * @example
    * &lt;caption>Use a Relay&lt;/caption>
@@ -126,13 +127,14 @@ class Relay {
    * const relay = await new Relay(12);
    *
    */
-  constructor(options) {
+  constructor(io, options) {
     return (async() => {
-      options = normalizeParams(options);
+      options = normalizeDevice(options);
+      io = normalizeIO(io);
 
-      const Provider = await getProvider(options, "builtin/digital");
+      const Provider = await getProvider(io, "builtin/digital");
       this.io = new Provider({
-        pin: options.pin,
+        pin: io.pin,
         mode: Provider.Output
       });
 

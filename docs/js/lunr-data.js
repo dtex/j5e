@@ -1650,22 +1650,6 @@ window.lunrData = {
           "number",
           "valu"
         ],
-        "module-j5e_light-Light.html#enable": [
-          "disabl",
-          "enabl",
-          "function",
-          "module:j5e/light~light#en",
-          "object",
-          "sensor"
-        ],
-        "module-j5e_light-Light.html#disable": [
-          "disabl",
-          "enabl",
-          "function",
-          "module:j5e/light~light#dis",
-          "object",
-          "sensor"
-        ],
         "module-j5e_light-Light.html#on": [
           "creat",
           "event",
@@ -1702,6 +1686,22 @@ window.lunrData = {
           "on",
           "onc",
           "time"
+        ],
+        "module-j5e_light-Light.html#enable": [
+          "disabl",
+          "enabl",
+          "function",
+          "module:j5e/light~light#en",
+          "object",
+          "sensor"
+        ],
+        "module-j5e_light-Light.html#disable": [
+          "disabl",
+          "enabl",
+          "function",
+          "module:j5e/light~light#dis",
+          "object",
+          "sensor"
         ],
         "module-j5e_light-Light.html#read": [
           "function",
@@ -2025,103 +2025,6 @@ window.lunrData = {
           "singl",
           "valu"
         ],
-        "module-j5e_button-Button.html": [
-          "allow",
-          "button",
-          "class",
-          "control",
-          "digit",
-          "j5e/button~button",
-          "lt;async&gt",
-          "module:j5e/button~button"
-        ],
-        "module-j5e_button-Button.html#isClosed": [
-          "be",
-          "boolean",
-          "button",
-          "isclos",
-          "lt;readonly&gt",
-          "member",
-          "module:j5e/button~button#isclos",
-          "press",
-          "true"
-        ],
-        "module-j5e_button-Button.html#isOpen": [
-          "be",
-          "boolean",
-          "button",
-          "isopen",
-          "lt;readonly&gt",
-          "member",
-          "module:j5e/button~button#isopen",
-          "press",
-          "true"
-        ],
-        "module-j5e_button-Button.html#downValue": [
-          "depend",
-          "downvalu",
-          "invert",
-          "ispulldown",
-          "ispullup",
-          "lt;readonly&gt",
-          "member",
-          "module:j5e/button~button#downvalu",
-          "number",
-          "raw"
-        ],
-        "module-j5e_button-Button.html#upValue": [
-          "depend",
-          "invert",
-          "ispulldown",
-          "ispullup",
-          "lt;readonly&gt",
-          "member",
-          "module:j5e/button~button#upvalu",
-          "number",
-          "raw",
-          "upvalu"
-        ],
-        "module-j5e_button-Button.html#holdtime": [
-          "befor",
-          "button",
-          "event",
-          "fire",
-          "held",
-          "hold",
-          "holdtim",
-          "length",
-          "member",
-          "module:j5e/button~button#holdtim",
-          "ms",
-          "number",
-          "time"
-        ],
-        "module-j5e_button-Button.html#on": [
-          "creat",
-          "event",
-          "function",
-          "listen",
-          "module:j5e/button~button#on"
-        ],
-        "module-j5e_button-Button.html#removeListener": [
-          "event",
-          "function",
-          "listen",
-          "module:j5e/button~button#removelisten",
-          "remov",
-          "removelisten"
-        ],
-        "module-j5e_button-Button.html#once": [
-          "creat",
-          "event",
-          "fire",
-          "function",
-          "listen",
-          "module:j5e/button~button#onc",
-          "on",
-          "onc",
-          "time"
-        ],
         "module-j5e_led-LED.html": [
           "allow",
           "class",
@@ -2299,6 +2202,103 @@ window.lunrData = {
           "module:j5e/led~led#stop",
           "puls",
           "stop"
+        ],
+        "module-j5e_button-Button.html": [
+          "allow",
+          "button",
+          "class",
+          "control",
+          "digit",
+          "j5e/button~button",
+          "lt;async&gt",
+          "module:j5e/button~button"
+        ],
+        "module-j5e_button-Button.html#isClosed": [
+          "be",
+          "boolean",
+          "button",
+          "isclos",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/button~button#isclos",
+          "press",
+          "true"
+        ],
+        "module-j5e_button-Button.html#isOpen": [
+          "be",
+          "boolean",
+          "button",
+          "isopen",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/button~button#isopen",
+          "press",
+          "true"
+        ],
+        "module-j5e_button-Button.html#downValue": [
+          "depend",
+          "downvalu",
+          "invert",
+          "ispulldown",
+          "ispullup",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/button~button#downvalu",
+          "number",
+          "raw"
+        ],
+        "module-j5e_button-Button.html#upValue": [
+          "depend",
+          "invert",
+          "ispulldown",
+          "ispullup",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/button~button#upvalu",
+          "number",
+          "raw",
+          "upvalu"
+        ],
+        "module-j5e_button-Button.html#holdtime": [
+          "befor",
+          "button",
+          "event",
+          "fire",
+          "held",
+          "hold",
+          "holdtim",
+          "length",
+          "member",
+          "module:j5e/button~button#holdtim",
+          "ms",
+          "number",
+          "time"
+        ],
+        "module-j5e_button-Button.html#on": [
+          "creat",
+          "event",
+          "function",
+          "listen",
+          "module:j5e/button~button#on"
+        ],
+        "module-j5e_button-Button.html#removeListener": [
+          "event",
+          "function",
+          "listen",
+          "module:j5e/button~button#removelisten",
+          "remov",
+          "removelisten"
+        ],
+        "module-j5e_button-Button.html#once": [
+          "creat",
+          "event",
+          "fire",
+          "function",
+          "listen",
+          "module:j5e/button~button#onc",
+          "on",
+          "onc",
+          "time"
         ],
         "module-j5e_servo-Servo.html": [
           "allow",
@@ -2868,6 +2868,49 @@ window.lunrData = {
           "rgb",
           "stop"
         ],
+        "module-j5e_motor-Motor.html": [
+          "allow",
+          "class",
+          "control",
+          "dc",
+          "j5e/motor~motor",
+          "lt;async&gt",
+          "module:j5e/motor~motor",
+          "motor"
+        ],
+        "module-j5e_motor-Motor.html#isOn": [
+          "boolean",
+          "current",
+          "flow",
+          "ison",
+          "lt;readonly&gt",
+          "mean",
+          "member",
+          "module:j5e/motor~motor#ison",
+          "motor",
+          "necessarili",
+          "turn",
+          "wether"
+        ],
+        "module-j5e_motor-Motor.html#currentSpeed": [
+          "current",
+          "currentspe",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/motor~motor#currentspe",
+          "motor'",
+          "number",
+          "speed"
+        ],
+        "module-j5e_motor-Motor.html#enabled": [
+          "boolean",
+          "enabl",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/motor~motor#en",
+          "motor",
+          "wether"
+        ],
         "module-j5e_animation.html": [
           "anim",
           "between",
@@ -2920,19 +2963,22 @@ window.lunrData = {
           "bright",
           "class",
           "connect",
+          "control",
           "digit",
           "diod",
           "emit",
+          "function",
           "io",
           "j5e/l",
+          "led",
           "led'",
           "librari",
           "light",
-          "manag",
           "modul",
           "module:j5e/l",
           "on/off",
           "pwm",
+          "us",
           "vari"
         ],
         "module-j5e_light.html": [
@@ -2941,6 +2987,18 @@ window.lunrData = {
           "light",
           "modul",
           "module:j5e/light"
+        ],
+        "module-j5e_motor.html": [
+          "class",
+          "diod",
+          "emit",
+          "j5e/motor",
+          "librari",
+          "light",
+          "manag",
+          "modul",
+          "module:j5e/motor",
+          "motor"
         ],
         "module-j5e_relay.html": [
           "j5e/relay",
@@ -3007,7 +3065,7 @@ window.lunrData = {
           "xs"
         ]
       },
-      "length": 290
+      "length": 295
     },
     "tokenStore": {
       "root": {
@@ -3160,7 +3218,11 @@ window.lunrData = {
                   },
                   "module-j5e_led.html": {
                     "ref": "module-j5e_led.html",
-                    "tf": 3.3333333333333335
+                    "tf": 2.7777777777777777
+                  },
+                  "module-j5e_motor.html": {
+                    "ref": "module-j5e_motor.html",
+                    "tf": 7.142857142857142
                   }
                 }
               }
@@ -3406,6 +3468,10 @@ window.lunrData = {
                     "module-j5e_sensor-Sensor.html#disable": {
                       "ref": "module-j5e_sensor-Sensor.html#disable",
                       "tf": 16.666666666666664
+                    },
+                    "module-j5e_motor-Motor.html#enabled": {
+                      "ref": "module-j5e_motor-Motor.html#enabled",
+                      "tf": 700
                     }
                   }
                 }
@@ -3726,6 +3792,10 @@ window.lunrData = {
                   "module-j5e_switch-Switch.html#isOpen": {
                     "ref": "module-j5e_switch-Switch.html#isOpen",
                     "tf": 10
+                  },
+                  "module-j5e_motor-Motor.html#isOn": {
+                    "ref": "module-j5e_motor-Motor.html#isOn",
+                    "tf": 7.142857142857142
                   }
                 }
               }
@@ -3975,14 +4045,6 @@ window.lunrData = {
                             "ref": "module-j5e_animation-Animation.html#speed",
                             "tf": 110
                           },
-                          "module-j5e_light-Light.html#enable": {
-                            "ref": "module-j5e_light-Light.html#enable",
-                            "tf": 110
-                          },
-                          "module-j5e_light-Light.html#disable": {
-                            "ref": "module-j5e_light-Light.html#disable",
-                            "tf": 110
-                          },
                           "module-j5e_light-Light.html#on": {
                             "ref": "module-j5e_light-Light.html#on",
                             "tf": 110
@@ -3997,6 +4059,14 @@ window.lunrData = {
                           },
                           "module-j5e_light-Light.html#once": {
                             "ref": "module-j5e_light-Light.html#once",
+                            "tf": 110
+                          },
+                          "module-j5e_light-Light.html#enable": {
+                            "ref": "module-j5e_light-Light.html#enable",
+                            "tf": 110
+                          },
+                          "module-j5e_light-Light.html#disable": {
+                            "ref": "module-j5e_light-Light.html#disable",
                             "tf": 110
                           },
                           "module-j5e_light-Light.html#read": {
@@ -4055,18 +4125,6 @@ window.lunrData = {
                             "ref": "module-j5e_thermometer-Thermometer.html#fscaleTo",
                             "tf": 110
                           },
-                          "module-j5e_button-Button.html#on": {
-                            "ref": "module-j5e_button-Button.html#on",
-                            "tf": 110
-                          },
-                          "module-j5e_button-Button.html#removeListener": {
-                            "ref": "module-j5e_button-Button.html#removeListener",
-                            "tf": 110
-                          },
-                          "module-j5e_button-Button.html#once": {
-                            "ref": "module-j5e_button-Button.html#once",
-                            "tf": 110
-                          },
                           "module-j5e_led-LED.html#on": {
                             "ref": "module-j5e_led-LED.html#on",
                             "tf": 110
@@ -4113,6 +4171,18 @@ window.lunrData = {
                           },
                           "module-j5e_led-LED.html#stop": {
                             "ref": "module-j5e_led-LED.html#stop",
+                            "tf": 110
+                          },
+                          "module-j5e_button-Button.html#on": {
+                            "ref": "module-j5e_button-Button.html#on",
+                            "tf": 110
+                          },
+                          "module-j5e_button-Button.html#removeListener": {
+                            "ref": "module-j5e_button-Button.html#removeListener",
+                            "tf": 110
+                          },
+                          "module-j5e_button-Button.html#once": {
+                            "ref": "module-j5e_button-Button.html#once",
                             "tf": 110
                           },
                           "module-j5e_servo-Servo.html#to": {
@@ -4250,6 +4320,10 @@ window.lunrData = {
                           "module-j5e_easing.html": {
                             "ref": "module-j5e_easing.html",
                             "tf": 12.5
+                          },
+                          "module-j5e_led.html": {
+                            "ref": "module-j5e_led.html",
+                            "tf": 2.7777777777777777
                           }
                         }
                       }
@@ -4686,6 +4760,29 @@ window.lunrData = {
                 }
               }
             },
+            "o": {
+              "docs": {},
+              "u": {
+                "docs": {},
+                "t": {
+                  "docs": {},
+                  "s": {
+                    "docs": {},
+                    "i": {
+                      "docs": {},
+                      "n": {
+                        "docs": {
+                          "module-j5e_led-LED.html#pulse": {
+                            "ref": "module-j5e_led-LED.html#pulse",
+                            "tf": 4.166666666666666
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
             "v": {
               "docs": {},
               "e": {
@@ -4710,29 +4807,6 @@ window.lunrData = {
                   }
                 }
               }
-            },
-            "o": {
-              "docs": {},
-              "u": {
-                "docs": {},
-                "t": {
-                  "docs": {},
-                  "s": {
-                    "docs": {},
-                    "i": {
-                      "docs": {},
-                      "n": {
-                        "docs": {
-                          "module-j5e_led-LED.html#pulse": {
-                            "ref": "module-j5e_led-LED.html#pulse",
-                            "tf": 4.166666666666666
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
             }
           },
           "o": {
@@ -4743,7 +4817,7 @@ window.lunrData = {
               },
               "module-j5e_led.html": {
                 "ref": "module-j5e_led.html",
-                "tf": 6.666666666666667
+                "tf": 5.555555555555555
               }
             },
             "o": {
@@ -4825,6 +4899,28 @@ window.lunrData = {
                   "module-j5e_rgb-RGB.html#isOn": {
                     "ref": "module-j5e_rgb-RGB.html#isOn",
                     "tf": 683.3333333333334
+                  },
+                  "module-j5e_motor-Motor.html#isOn": {
+                    "ref": "module-j5e_motor-Motor.html#isOn",
+                    "tf": 683.3333333333334
+                  }
+                }
+              }
+            },
+            "r": {
+              "docs": {},
+              "u": {
+                "docs": {},
+                "n": {
+                  "docs": {
+                    "module-j5e_led-LED.html#isRunning": {
+                      "ref": "module-j5e_led-LED.html#isRunning",
+                      "tf": 683.3333333333334
+                    },
+                    "module-j5e_rgb-RGB.html#isRunning": {
+                      "ref": "module-j5e_rgb-RGB.html#isRunning",
+                      "tf": 683.3333333333334
+                    }
                   }
                 }
               }
@@ -4872,24 +4968,6 @@ window.lunrData = {
                           }
                         }
                       }
-                    }
-                  }
-                }
-              }
-            },
-            "r": {
-              "docs": {},
-              "u": {
-                "docs": {},
-                "n": {
-                  "docs": {
-                    "module-j5e_led-LED.html#isRunning": {
-                      "ref": "module-j5e_led-LED.html#isRunning",
-                      "tf": 683.3333333333334
-                    },
-                    "module-j5e_rgb-RGB.html#isRunning": {
-                      "ref": "module-j5e_rgb-RGB.html#isRunning",
-                      "tf": 683.3333333333334
                     }
                   }
                 }
@@ -5463,6 +5541,49 @@ window.lunrData = {
                                               "tf": 50
                                             }
                                           }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "m": {
+                  "docs": {},
+                  "o": {
+                    "docs": {},
+                    "t": {
+                      "docs": {},
+                      "o": {
+                        "docs": {},
+                        "r": {
+                          "docs": {
+                            "module-j5e_motor.html": {
+                              "ref": "module-j5e_motor.html",
+                              "tf": 600
+                            }
+                          },
+                          "~": {
+                            "docs": {},
+                            "m": {
+                              "docs": {},
+                              "o": {
+                                "docs": {},
+                                "t": {
+                                  "docs": {},
+                                  "o": {
+                                    "docs": {},
+                                    "r": {
+                                      "docs": {
+                                        "module-j5e_motor-Motor.html": {
+                                          "ref": "module-j5e_motor-Motor.html",
+                                          "tf": 50
                                         }
                                       }
                                     }
@@ -7681,6 +7802,10 @@ window.lunrData = {
                     "module-j5e_servo-Servo.html#ccw": {
                       "ref": "module-j5e_servo-Servo.html#ccw",
                       "tf": 33.33333333333333
+                    },
+                    "module-j5e_motor-Motor.html#currentSpeed": {
+                      "ref": "module-j5e_motor-Motor.html#currentSpeed",
+                      "tf": 16.666666666666664
                     }
                   }
                 }
@@ -8018,7 +8143,7 @@ window.lunrData = {
                     },
                     "module-j5e_led.html": {
                       "ref": "module-j5e_led.html",
-                      "tf": 3.3333333333333335
+                      "tf": 2.7777777777777777
                     }
                   }
                 }
@@ -8034,7 +8159,11 @@ window.lunrData = {
                   },
                   "module-j5e_led.html": {
                     "ref": "module-j5e_led.html",
-                    "tf": 3.3333333333333335
+                    "tf": 2.7777777777777777
+                  },
+                  "module-j5e_motor.html": {
+                    "ref": "module-j5e_motor.html",
+                    "tf": 7.142857142857142
                   }
                 }
               }
@@ -8062,6 +8191,14 @@ window.lunrData = {
                     }
                   }
                 }
+              }
+            }
+          },
+          "c": {
+            "docs": {
+              "module-j5e_motor-Motor.html": {
+                "ref": "module-j5e_motor-Motor.html",
+                "tf": 8.333333333333332
               }
             }
           }
@@ -8229,6 +8366,10 @@ window.lunrData = {
                   "module-j5e_rgb-RGB.html#off": {
                     "ref": "module-j5e_rgb-RGB.html#off",
                     "tf": 16.666666666666664
+                  },
+                  "module-j5e_motor-Motor.html#isOn": {
+                    "ref": "module-j5e_motor-Motor.html#isOn",
+                    "tf": 7.142857142857142
                   }
                 }
               }
@@ -8275,14 +8416,6 @@ window.lunrData = {
                     "ref": "module-j5e_thermometer-Thermometer.html#once",
                     "tf": 8.333333333333332
                   },
-                  "module-j5e_button-Button.html#holdtime": {
-                    "ref": "module-j5e_button-Button.html#holdtime",
-                    "tf": 5.555555555555555
-                  },
-                  "module-j5e_button-Button.html#once": {
-                    "ref": "module-j5e_button-Button.html#once",
-                    "tf": 8.333333333333332
-                  },
                   "module-j5e_led-LED.html#fade": {
                     "ref": "module-j5e_led-LED.html#fade",
                     "tf": 20
@@ -8298,6 +8431,14 @@ window.lunrData = {
                   "module-j5e_led-LED.html#pulse": {
                     "ref": "module-j5e_led-LED.html#pulse",
                     "tf": 29.166666666666664
+                  },
+                  "module-j5e_button-Button.html#holdtime": {
+                    "ref": "module-j5e_button-Button.html#holdtime",
+                    "tf": 5.555555555555555
+                  },
+                  "module-j5e_button-Button.html#once": {
+                    "ref": "module-j5e_button-Button.html#once",
+                    "tf": 8.333333333333332
                   },
                   "module-j5e_servo-Servo.html#to": {
                     "ref": "module-j5e_servo-Servo.html#to",
@@ -8445,14 +8586,6 @@ window.lunrData = {
                     "ref": "module-j5e_switch-Switch.html#isOpen",
                     "tf": 10
                   },
-                  "module-j5e_button-Button.html#isClosed": {
-                    "ref": "module-j5e_button-Button.html#isClosed",
-                    "tf": 12.5
-                  },
-                  "module-j5e_button-Button.html#isOpen": {
-                    "ref": "module-j5e_button-Button.html#isOpen",
-                    "tf": 12.5
-                  },
                   "module-j5e_led-LED.html#isRunning": {
                     "ref": "module-j5e_led-LED.html#isRunning",
                     "tf": 10
@@ -8480,6 +8613,14 @@ window.lunrData = {
                   "module-j5e_led-LED.html#pulse": {
                     "ref": "module-j5e_led-LED.html#pulse",
                     "tf": 4.166666666666666
+                  },
+                  "module-j5e_button-Button.html#isClosed": {
+                    "ref": "module-j5e_button-Button.html#isClosed",
+                    "tf": 12.5
+                  },
+                  "module-j5e_button-Button.html#isOpen": {
+                    "ref": "module-j5e_button-Button.html#isOpen",
+                    "tf": 12.5
                   }
                 }
               }
@@ -9311,13 +9452,13 @@ window.lunrData = {
                           "ref": "module-j5e_thermometer-Thermometer.html",
                           "tf": 8.333333333333332
                         },
-                        "module-j5e_button-Button.html": {
-                          "ref": "module-j5e_button-Button.html",
-                          "tf": 8.333333333333332
-                        },
                         "module-j5e_led-LED.html": {
                           "ref": "module-j5e_led-LED.html",
                           "tf": 7.142857142857142
+                        },
+                        "module-j5e_button-Button.html": {
+                          "ref": "module-j5e_button-Button.html",
+                          "tf": 8.333333333333332
                         },
                         "module-j5e_servo-Servo.html": {
                           "ref": "module-j5e_servo-Servo.html",
@@ -9330,6 +9471,14 @@ window.lunrData = {
                         "module-j5e_rgb-RGB.html#color": {
                           "ref": "module-j5e_rgb-RGB.html#color",
                           "tf": 2.941176470588235
+                        },
+                        "module-j5e_motor-Motor.html": {
+                          "ref": "module-j5e_motor-Motor.html",
+                          "tf": 8.333333333333332
+                        },
+                        "module-j5e_led.html": {
+                          "ref": "module-j5e_led.html",
+                          "tf": 2.7777777777777777
                         },
                         "module-j5e_rgb.html": {
                           "ref": "module-j5e_rgb.html",
@@ -9380,7 +9529,7 @@ window.lunrData = {
                         },
                         "module-j5e_led.html": {
                           "ref": "module-j5e_led.html",
-                          "tf": 3.3333333333333335
+                          "tf": 2.7777777777777777
                         }
                       }
                     }
@@ -9539,13 +9688,13 @@ window.lunrData = {
                       "ref": "module-j5e_thermometer-Thermometer.html",
                       "tf": 118.33333333333333
                     },
-                    "module-j5e_button-Button.html": {
-                      "ref": "module-j5e_button-Button.html",
-                      "tf": 118.33333333333333
-                    },
                     "module-j5e_led-LED.html": {
                       "ref": "module-j5e_led-LED.html",
                       "tf": 117.14285714285714
+                    },
+                    "module-j5e_button-Button.html": {
+                      "ref": "module-j5e_button-Button.html",
+                      "tf": 118.33333333333333
                     },
                     "module-j5e_servo-Servo.html": {
                       "ref": "module-j5e_servo-Servo.html",
@@ -9559,17 +9708,25 @@ window.lunrData = {
                       "ref": "module-j5e_rgb-RGB.html",
                       "tf": 118.33333333333333
                     },
+                    "module-j5e_motor-Motor.html": {
+                      "ref": "module-j5e_motor-Motor.html",
+                      "tf": 118.33333333333333
+                    },
                     "module-j5e_animation.html": {
                       "ref": "module-j5e_animation.html",
                       "tf": 3.571428571428571
                     },
                     "module-j5e_led.html": {
                       "ref": "module-j5e_led.html",
-                      "tf": 3.3333333333333335
+                      "tf": 2.7777777777777777
                     },
                     "module-j5e_light.html": {
                       "ref": "module-j5e_light.html",
                       "tf": 25
+                    },
+                    "module-j5e_motor.html": {
+                      "ref": "module-j5e_motor.html",
+                      "tf": 7.142857142857142
                     },
                     "module-j5e_thermometer.html": {
                       "ref": "module-j5e_thermometer.html",
@@ -10110,6 +10267,28 @@ window.lunrData = {
                         "module-j5e_rgb-RGB.html#fade": {
                           "ref": "module-j5e_rgb-RGB.html#fade",
                           "tf": 6.25
+                        },
+                        "module-j5e_motor-Motor.html#isOn": {
+                          "ref": "module-j5e_motor-Motor.html#isOn",
+                          "tf": 7.142857142857142
+                        },
+                        "module-j5e_motor-Motor.html#currentSpeed": {
+                          "ref": "module-j5e_motor-Motor.html#currentSpeed",
+                          "tf": 16.666666666666664
+                        }
+                      },
+                      "s": {
+                        "docs": {},
+                        "p": {
+                          "docs": {},
+                          "e": {
+                            "docs": {
+                              "module-j5e_motor-Motor.html#currentSpeed": {
+                                "ref": "module-j5e_motor-Motor.html#currentSpeed",
+                                "tf": 683.3333333333334
+                              }
+                            }
+                          }
                         }
                       }
                     }
@@ -10433,11 +10612,15 @@ window.lunrData = {
                     },
                     "module-j5e_led.html": {
                       "ref": "module-j5e_led.html",
-                      "tf": 3.3333333333333335
+                      "tf": 2.7777777777777777
                     },
                     "module-j5e_light.html": {
                       "ref": "module-j5e_light.html",
                       "tf": 25
+                    },
+                    "module-j5e_motor.html": {
+                      "ref": "module-j5e_motor.html",
+                      "tf": 7.142857142857142
                     }
                   }
                 }
@@ -10455,7 +10638,11 @@ window.lunrData = {
                       "docs": {
                         "module-j5e_led.html": {
                           "ref": "module-j5e_led.html",
-                          "tf": 3.3333333333333335
+                          "tf": 2.7777777777777777
+                        },
+                        "module-j5e_motor.html": {
+                          "ref": "module-j5e_motor.html",
+                          "tf": 7.142857142857142
                         }
                       }
                     }
@@ -10516,12 +10703,12 @@ window.lunrData = {
                                   "ref": "module-j5e_thermometer-Thermometer.html",
                                   "tf": 50
                                 },
-                                "module-j5e_button-Button.html": {
-                                  "ref": "module-j5e_button-Button.html",
-                                  "tf": 50
-                                },
                                 "module-j5e_led-LED.html": {
                                   "ref": "module-j5e_led-LED.html",
+                                  "tf": 50
+                                },
+                                "module-j5e_button-Button.html": {
+                                  "ref": "module-j5e_button-Button.html",
                                   "tf": 50
                                 },
                                 "module-j5e_servo-Servo.html": {
@@ -10534,6 +10721,10 @@ window.lunrData = {
                                 },
                                 "module-j5e_rgb-RGB.html": {
                                   "ref": "module-j5e_rgb-RGB.html",
+                                  "tf": 50
+                                },
+                                "module-j5e_motor-Motor.html": {
+                                  "ref": "module-j5e_motor-Motor.html",
                                   "tf": 50
                                 }
                               }
@@ -10855,6 +11046,18 @@ window.lunrData = {
                                         "ref": "module-j5e_thermometer-Thermometer.html#value",
                                         "tf": 33.33333333333333
                                       },
+                                      "module-j5e_led-LED.html#value": {
+                                        "ref": "module-j5e_led-LED.html#value",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_led-LED.html#isOn": {
+                                        "ref": "module-j5e_led-LED.html#isOn",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_led-LED.html#isRunning": {
+                                        "ref": "module-j5e_led-LED.html#isRunning",
+                                        "tf": 33.33333333333333
+                                      },
                                       "module-j5e_button-Button.html#isClosed": {
                                         "ref": "module-j5e_button-Button.html#isClosed",
                                         "tf": 33.33333333333333
@@ -10869,18 +11072,6 @@ window.lunrData = {
                                       },
                                       "module-j5e_button-Button.html#upValue": {
                                         "ref": "module-j5e_button-Button.html#upValue",
-                                        "tf": 33.33333333333333
-                                      },
-                                      "module-j5e_led-LED.html#value": {
-                                        "ref": "module-j5e_led-LED.html#value",
-                                        "tf": 33.33333333333333
-                                      },
-                                      "module-j5e_led-LED.html#isOn": {
-                                        "ref": "module-j5e_led-LED.html#isOn",
-                                        "tf": 33.33333333333333
-                                      },
-                                      "module-j5e_led-LED.html#isRunning": {
-                                        "ref": "module-j5e_led-LED.html#isRunning",
                                         "tf": 33.33333333333333
                                       },
                                       "module-j5e_servo-Servo.html#history": {
@@ -10933,6 +11124,18 @@ window.lunrData = {
                                       },
                                       "module-j5e_rgb-RGB.html#values": {
                                         "ref": "module-j5e_rgb-RGB.html#values",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_motor-Motor.html#isOn": {
+                                        "ref": "module-j5e_motor-Motor.html#isOn",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_motor-Motor.html#currentSpeed": {
+                                        "ref": "module-j5e_motor-Motor.html#currentSpeed",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_motor-Motor.html#enabled": {
+                                        "ref": "module-j5e_motor-Motor.html#enabled",
                                         "tf": 33.33333333333333
                                       }
                                     }
@@ -12203,6 +12406,10 @@ window.lunrData = {
                 "module-j5e_animation.html": {
                   "ref": "module-j5e_animation.html",
                   "tf": 3.571428571428571
+                },
+                "module-j5e_led.html": {
+                  "ref": "module-j5e_led.html",
+                  "tf": 2.7777777777777777
                 }
               },
               "'": {
@@ -12217,7 +12424,7 @@ window.lunrData = {
                   },
                   "module-j5e_led.html": {
                     "ref": "module-j5e_led.html",
-                    "tf": 3.3333333333333335
+                    "tf": 2.7777777777777777
                   },
                   "module-j5e_rgb.html": {
                     "ref": "module-j5e_rgb.html",
@@ -12650,7 +12857,7 @@ window.lunrData = {
                 },
                 "module-j5e_led.html": {
                   "ref": "module-j5e_led.html",
-                  "tf": 3.3333333333333335
+                  "tf": 2.7777777777777777
                 }
               }
             }
@@ -12705,13 +12912,13 @@ window.lunrData = {
                       "ref": "module-j5e_thermometer-Thermometer.html",
                       "tf": 8.333333333333332
                     },
-                    "module-j5e_button-Button.html": {
-                      "ref": "module-j5e_button-Button.html",
-                      "tf": 8.333333333333332
-                    },
                     "module-j5e_led-LED.html": {
                       "ref": "module-j5e_led-LED.html",
                       "tf": 7.142857142857142
+                    },
+                    "module-j5e_button-Button.html": {
+                      "ref": "module-j5e_button-Button.html",
+                      "tf": 8.333333333333332
                     },
                     "module-j5e_servo-Servo.html": {
                       "ref": "module-j5e_servo-Servo.html",
@@ -12723,6 +12930,10 @@ window.lunrData = {
                     },
                     "module-j5e_rgb-RGB.html": {
                       "ref": "module-j5e_rgb-RGB.html",
+                      "tf": 8.333333333333332
+                    },
+                    "module-j5e_motor-Motor.html": {
+                      "ref": "module-j5e_motor-Motor.html",
                       "tf": 8.333333333333332
                     }
                   }
@@ -13534,7 +13745,7 @@ window.lunrData = {
                       },
                       "module-j5e_led.html": {
                         "ref": "module-j5e_led.html",
-                        "tf": 3.3333333333333335
+                        "tf": 2.7777777777777777
                       }
                     }
                   }
@@ -13715,6 +13926,10 @@ window.lunrData = {
                     },
                     "module-j5e_light.html": {
                       "ref": "module-j5e_light.html",
+                      "tf": 110
+                    },
+                    "module-j5e_motor.html": {
+                      "ref": "module-j5e_motor.html",
                       "tf": 110
                     },
                     "module-j5e_relay.html": {
@@ -18244,31 +18459,6 @@ window.lunrData = {
                                                           }
                                                         }
                                                       },
-                                                      "e": {
-                                                        "docs": {},
-                                                        "n": {
-                                                          "docs": {
-                                                            "module-j5e_light-Light.html#enable": {
-                                                              "ref": "module-j5e_light-Light.html#enable",
-                                                              "tf": 1150
-                                                            }
-                                                          }
-                                                        }
-                                                      },
-                                                      "d": {
-                                                        "docs": {},
-                                                        "i": {
-                                                          "docs": {},
-                                                          "s": {
-                                                            "docs": {
-                                                              "module-j5e_light-Light.html#disable": {
-                                                                "ref": "module-j5e_light-Light.html#disable",
-                                                                "tf": 1150
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                      },
                                                       "o": {
                                                         "docs": {},
                                                         "n": {
@@ -18306,6 +18496,31 @@ window.lunrData = {
                                                                     }
                                                                   }
                                                                 }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      },
+                                                      "e": {
+                                                        "docs": {},
+                                                        "n": {
+                                                          "docs": {
+                                                            "module-j5e_light-Light.html#enable": {
+                                                              "ref": "module-j5e_light-Light.html#enable",
+                                                              "tf": 1150
+                                                            }
+                                                          }
+                                                        }
+                                                      },
+                                                      "d": {
+                                                        "docs": {},
+                                                        "i": {
+                                                          "docs": {},
+                                                          "s": {
+                                                            "docs": {
+                                                              "module-j5e_light-Light.html#disable": {
+                                                                "ref": "module-j5e_light-Light.html#disable",
+                                                                "tf": 1150
                                                               }
                                                             }
                                                           }
@@ -18851,6 +19066,115 @@ window.lunrData = {
                                   }
                                 }
                               },
+                              "m": {
+                                "docs": {},
+                                "o": {
+                                  "docs": {},
+                                  "t": {
+                                    "docs": {},
+                                    "o": {
+                                      "docs": {},
+                                      "r": {
+                                        "docs": {
+                                          "module-j5e_motor.html": {
+                                            "ref": "module-j5e_motor.html",
+                                            "tf": 1300
+                                          }
+                                        },
+                                        "~": {
+                                          "docs": {},
+                                          "m": {
+                                            "docs": {},
+                                            "o": {
+                                              "docs": {},
+                                              "t": {
+                                                "docs": {},
+                                                "o": {
+                                                  "docs": {},
+                                                  "r": {
+                                                    "docs": {
+                                                      "module-j5e_motor-Motor.html": {
+                                                        "ref": "module-j5e_motor-Motor.html",
+                                                        "tf": 1300
+                                                      }
+                                                    },
+                                                    "#": {
+                                                      "docs": {},
+                                                      "i": {
+                                                        "docs": {},
+                                                        "s": {
+                                                          "docs": {},
+                                                          "o": {
+                                                            "docs": {},
+                                                            "n": {
+                                                              "docs": {
+                                                                "module-j5e_motor-Motor.html#isOn": {
+                                                                  "ref": "module-j5e_motor-Motor.html#isOn",
+                                                                  "tf": 1150
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      },
+                                                      "c": {
+                                                        "docs": {},
+                                                        "u": {
+                                                          "docs": {},
+                                                          "r": {
+                                                            "docs": {},
+                                                            "r": {
+                                                              "docs": {},
+                                                              "e": {
+                                                                "docs": {},
+                                                                "n": {
+                                                                  "docs": {},
+                                                                  "t": {
+                                                                    "docs": {},
+                                                                    "s": {
+                                                                      "docs": {},
+                                                                      "p": {
+                                                                        "docs": {},
+                                                                        "e": {
+                                                                          "docs": {
+                                                                            "module-j5e_motor-Motor.html#currentSpeed": {
+                                                                              "ref": "module-j5e_motor-Motor.html#currentSpeed",
+                                                                              "tf": 1150
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      },
+                                                      "e": {
+                                                        "docs": {},
+                                                        "n": {
+                                                          "docs": {
+                                                            "module-j5e_motor-Motor.html#enabled": {
+                                                              "ref": "module-j5e_motor-Motor.html#enabled",
+                                                              "tf": 1150
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
                               "e": {
                                 "docs": {},
                                 "a": {
@@ -18929,6 +19253,40 @@ window.lunrData = {
                   "module-j5e_servo-Servo.html#ccw": {
                     "ref": "module-j5e_servo-Servo.html#ccw",
                     "tf": 8.333333333333332
+                  }
+                }
+              }
+            },
+            "t": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "r": {
+                  "docs": {
+                    "module-j5e_motor-Motor.html": {
+                      "ref": "module-j5e_motor-Motor.html",
+                      "tf": 516.6666666666666
+                    },
+                    "module-j5e_motor-Motor.html#isOn": {
+                      "ref": "module-j5e_motor-Motor.html#isOn",
+                      "tf": 7.142857142857142
+                    },
+                    "module-j5e_motor-Motor.html#enabled": {
+                      "ref": "module-j5e_motor-Motor.html#enabled",
+                      "tf": 16.666666666666664
+                    },
+                    "module-j5e_motor.html": {
+                      "ref": "module-j5e_motor.html",
+                      "tf": 7.142857142857142
+                    }
+                  },
+                  "'": {
+                    "docs": {
+                      "module-j5e_motor-Motor.html#currentSpeed": {
+                        "ref": "module-j5e_motor-Motor.html#currentSpeed",
+                        "tf": 16.666666666666664
+                      }
+                    }
                   }
                 }
               }
@@ -19376,6 +19734,18 @@ window.lunrData = {
                         "ref": "module-j5e_thermometer-Thermometer.html#value",
                         "tf": 110
                       },
+                      "module-j5e_led-LED.html#value": {
+                        "ref": "module-j5e_led-LED.html#value",
+                        "tf": 110
+                      },
+                      "module-j5e_led-LED.html#isOn": {
+                        "ref": "module-j5e_led-LED.html#isOn",
+                        "tf": 110
+                      },
+                      "module-j5e_led-LED.html#isRunning": {
+                        "ref": "module-j5e_led-LED.html#isRunning",
+                        "tf": 110
+                      },
                       "module-j5e_button-Button.html#isClosed": {
                         "ref": "module-j5e_button-Button.html#isClosed",
                         "tf": 110
@@ -19394,18 +19764,6 @@ window.lunrData = {
                       },
                       "module-j5e_button-Button.html#holdtime": {
                         "ref": "module-j5e_button-Button.html#holdtime",
-                        "tf": 110
-                      },
-                      "module-j5e_led-LED.html#value": {
-                        "ref": "module-j5e_led-LED.html#value",
-                        "tf": 110
-                      },
-                      "module-j5e_led-LED.html#isOn": {
-                        "ref": "module-j5e_led-LED.html#isOn",
-                        "tf": 110
-                      },
-                      "module-j5e_led-LED.html#isRunning": {
-                        "ref": "module-j5e_led-LED.html#isRunning",
                         "tf": 110
                       },
                       "module-j5e_servo-Servo.html#history": {
@@ -19482,6 +19840,18 @@ window.lunrData = {
                       },
                       "module-j5e_rgb-RGB.html#values": {
                         "ref": "module-j5e_rgb-RGB.html#values",
+                        "tf": 110
+                      },
+                      "module-j5e_motor-Motor.html#isOn": {
+                        "ref": "module-j5e_motor-Motor.html#isOn",
+                        "tf": 110
+                      },
+                      "module-j5e_motor-Motor.html#currentSpeed": {
+                        "ref": "module-j5e_motor-Motor.html#currentSpeed",
+                        "tf": 110
+                      },
+                      "module-j5e_motor-Motor.html#enabled": {
+                        "ref": "module-j5e_motor-Motor.html#enabled",
                         "tf": 110
                       }
                     }
@@ -19582,6 +19952,17 @@ window.lunrData = {
                         "tf": 695.8333333333334
                       }
                     }
+                  }
+                }
+              }
+            },
+            "a": {
+              "docs": {},
+              "n": {
+                "docs": {
+                  "module-j5e_motor-Motor.html#isOn": {
+                    "ref": "module-j5e_motor-Motor.html#isOn",
+                    "tf": 7.142857142857142
                   }
                 }
               }
@@ -19792,9 +20173,9 @@ window.lunrData = {
                 "docs": {},
                 "g": {
                   "docs": {
-                    "module-j5e_led.html": {
-                      "ref": "module-j5e_led.html",
-                      "tf": 3.3333333333333335
+                    "module-j5e_motor.html": {
+                      "ref": "module-j5e_motor.html",
+                      "tf": 7.142857142857142
                     }
                   }
                 }
@@ -20785,6 +21166,10 @@ window.lunrData = {
                         "ref": "module-j5e_thermometer-Thermometer.html#fscaleTo",
                         "tf": 20
                       },
+                      "module-j5e_led-LED.html#value": {
+                        "ref": "module-j5e_led-LED.html#value",
+                        "tf": 33.33333333333333
+                      },
                       "module-j5e_button-Button.html#downValue": {
                         "ref": "module-j5e_button-Button.html#downValue",
                         "tf": 33.33333333333333
@@ -20796,10 +21181,6 @@ window.lunrData = {
                       "module-j5e_button-Button.html#holdtime": {
                         "ref": "module-j5e_button-Button.html#holdtime",
                         "tf": 50
-                      },
-                      "module-j5e_led-LED.html#value": {
-                        "ref": "module-j5e_led-LED.html#value",
-                        "tf": 33.33333333333333
                       },
                       "module-j5e_sensor-Sensor.html#threshold": {
                         "ref": "module-j5e_sensor-Sensor.html#threshold",
@@ -20852,6 +21233,10 @@ window.lunrData = {
                       "module-j5e_sensor-Sensor.html#fscaleTo": {
                         "ref": "module-j5e_sensor-Sensor.html#fscaleTo",
                         "tf": 20
+                      },
+                      "module-j5e_motor-Motor.html#currentSpeed": {
+                        "ref": "module-j5e_motor-Motor.html#currentSpeed",
+                        "tf": 33.33333333333333
                       }
                     }
                   }
@@ -20946,6 +21331,17 @@ window.lunrData = {
                             "module-j5e_fn-timer.html": {
                               "ref": "module-j5e_fn-timer.html",
                               "tf": 4.166666666666666
+                            }
+                          },
+                          "l": {
+                            "docs": {},
+                            "i": {
+                              "docs": {
+                                "module-j5e_motor-Motor.html#isOn": {
+                                  "ref": "module-j5e_motor-Motor.html#isOn",
+                                  "tf": 7.142857142857142
+                                }
+                              }
                             }
                           }
                         }
@@ -21189,7 +21585,7 @@ window.lunrData = {
                 "docs": {
                   "module-j5e_led.html": {
                     "ref": "module-j5e_led.html",
-                    "tf": 3.3333333333333335
+                    "tf": 2.7777777777777777
                   }
                 }
               }
@@ -21258,20 +21654,20 @@ window.lunrData = {
                           "ref": "module-j5e_relay-Relay.html#isClosed",
                           "tf": 33.33333333333333
                         },
-                        "module-j5e_button-Button.html#isClosed": {
-                          "ref": "module-j5e_button-Button.html#isClosed",
-                          "tf": 33.33333333333333
-                        },
-                        "module-j5e_button-Button.html#isOpen": {
-                          "ref": "module-j5e_button-Button.html#isOpen",
-                          "tf": 33.33333333333333
-                        },
                         "module-j5e_led-LED.html#isOn": {
                           "ref": "module-j5e_led-LED.html#isOn",
                           "tf": 33.33333333333333
                         },
                         "module-j5e_led-LED.html#isRunning": {
                           "ref": "module-j5e_led-LED.html#isRunning",
+                          "tf": 33.33333333333333
+                        },
+                        "module-j5e_button-Button.html#isClosed": {
+                          "ref": "module-j5e_button-Button.html#isClosed",
+                          "tf": 33.33333333333333
+                        },
+                        "module-j5e_button-Button.html#isOpen": {
+                          "ref": "module-j5e_button-Button.html#isOpen",
                           "tf": 33.33333333333333
                         },
                         "module-j5e_rgb-RGB.html#isOn": {
@@ -21284,6 +21680,14 @@ window.lunrData = {
                         },
                         "module-j5e_rgb-RGB.html#isAnode": {
                           "ref": "module-j5e_rgb-RGB.html#isAnode",
+                          "tf": 33.33333333333333
+                        },
+                        "module-j5e_motor-Motor.html#isOn": {
+                          "ref": "module-j5e_motor-Motor.html#isOn",
+                          "tf": 33.33333333333333
+                        },
+                        "module-j5e_motor-Motor.html#enabled": {
+                          "ref": "module-j5e_motor-Motor.html#enabled",
                           "tf": 33.33333333333333
                         }
                       }
@@ -21427,42 +21831,6 @@ window.lunrData = {
               }
             }
           },
-          "u": {
-            "docs": {},
-            "t": {
-              "docs": {},
-              "t": {
-                "docs": {},
-                "o": {
-                  "docs": {},
-                  "n": {
-                    "docs": {
-                      "module-j5e_button-Button.html": {
-                        "ref": "module-j5e_button-Button.html",
-                        "tf": 516.6666666666666
-                      },
-                      "module-j5e_button-Button.html#isClosed": {
-                        "ref": "module-j5e_button-Button.html#isClosed",
-                        "tf": 12.5
-                      },
-                      "module-j5e_button-Button.html#isOpen": {
-                        "ref": "module-j5e_button-Button.html#isOpen",
-                        "tf": 12.5
-                      },
-                      "module-j5e_button-Button.html#holdtime": {
-                        "ref": "module-j5e_button-Button.html#holdtime",
-                        "tf": 5.555555555555555
-                      },
-                      "module-j5e_button.html": {
-                        "ref": "module-j5e_button.html",
-                        "tf": 25
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
           "l": {
             "docs": {},
             "i": {
@@ -21539,7 +21907,43 @@ window.lunrData = {
                       },
                       "module-j5e_led.html": {
                         "ref": "module-j5e_led.html",
-                        "tf": 3.3333333333333335
+                        "tf": 2.7777777777777777
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "u": {
+            "docs": {},
+            "t": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "n": {
+                    "docs": {
+                      "module-j5e_button-Button.html": {
+                        "ref": "module-j5e_button-Button.html",
+                        "tf": 516.6666666666666
+                      },
+                      "module-j5e_button-Button.html#isClosed": {
+                        "ref": "module-j5e_button-Button.html#isClosed",
+                        "tf": 12.5
+                      },
+                      "module-j5e_button-Button.html#isOpen": {
+                        "ref": "module-j5e_button-Button.html#isOpen",
+                        "tf": 12.5
+                      },
+                      "module-j5e_button-Button.html#holdtime": {
+                        "ref": "module-j5e_button-Button.html#holdtime",
+                        "tf": 5.555555555555555
+                      },
+                      "module-j5e_button.html": {
+                        "ref": "module-j5e_button.html",
+                        "tf": 25
                       }
                     }
                   }
@@ -21690,6 +22094,37 @@ window.lunrData = {
               }
             }
           },
+          "s": {
+            "docs": {
+              "module-j5e_led-LED.html#pulse": {
+                "ref": "module-j5e_led-LED.html#pulse",
+                "tf": 4.166666666666666
+              },
+              "module-j5e_fn.html": {
+                "ref": "module-j5e_fn.html",
+                "tf": 5
+              },
+              "module-j5e_led.html": {
+                "ref": "module-j5e_led.html",
+                "tf": 2.7777777777777777
+              },
+              "module-j5e_fn-timer.html": {
+                "ref": "module-j5e_fn-timer.html",
+                "tf": 4.166666666666666
+              }
+            },
+            "e": {
+              "docs": {},
+              "r": {
+                "docs": {
+                  "module-j5e_fn.html": {
+                    "ref": "module-j5e_fn.html",
+                    "tf": 5
+                  }
+                }
+              }
+            }
+          },
           "p": {
             "docs": {},
             "v": {
@@ -21727,33 +22162,6 @@ window.lunrData = {
                       "ref": "module-j5e_servo-Servo.html#step",
                       "tf": 7.142857142857142
                     }
-                  }
-                }
-              }
-            }
-          },
-          "s": {
-            "docs": {
-              "module-j5e_led-LED.html#pulse": {
-                "ref": "module-j5e_led-LED.html#pulse",
-                "tf": 4.166666666666666
-              },
-              "module-j5e_fn.html": {
-                "ref": "module-j5e_fn.html",
-                "tf": 5
-              },
-              "module-j5e_fn-timer.html": {
-                "ref": "module-j5e_fn-timer.html",
-                "tf": 4.166666666666666
-              }
-            },
-            "e": {
-              "docs": {},
-              "r": {
-                "docs": {
-                  "module-j5e_fn.html": {
-                    "ref": "module-j5e_fn.html",
-                    "tf": 5
                   }
                 }
               }
@@ -21848,6 +22256,14 @@ window.lunrData = {
                       "module-j5e_led-LED.html#isOn": {
                         "ref": "module-j5e_led-LED.html#isOn",
                         "tf": 25
+                      },
+                      "module-j5e_motor-Motor.html#isOn": {
+                        "ref": "module-j5e_motor-Motor.html#isOn",
+                        "tf": 7.142857142857142
+                      },
+                      "module-j5e_motor-Motor.html#enabled": {
+                        "ref": "module-j5e_motor-Motor.html#enabled",
+                        "tf": 16.666666666666664
                       }
                     }
                   }
@@ -22196,7 +22612,7 @@ window.lunrData = {
           }
         }
       },
-      "length": 2413
+      "length": 2461
     },
     "corpusTokens": [
       "0",
@@ -22256,8 +22672,10 @@ window.lunrData = {
       "counter",
       "creat",
       "current",
+      "currentspe",
       "cw",
       "d",
+      "dc",
       "default",
       "degre",
       "depend",
@@ -22340,6 +22758,8 @@ window.lunrData = {
       "j5e/led~l",
       "j5e/light",
       "j5e/light~light",
+      "j5e/motor",
+      "j5e/motor~motor",
       "j5e/relay",
       "j5e/relay~relay",
       "j5e/rgb",
@@ -22438,6 +22858,7 @@ window.lunrData = {
       "manag",
       "max",
       "maximum",
+      "mean",
       "median",
       "member",
       "method",
@@ -22537,6 +22958,11 @@ window.lunrData = {
       "module:j5e/light~light#threshold",
       "module:j5e/light~light#valu",
       "module:j5e/light~light#within",
+      "module:j5e/motor",
+      "module:j5e/motor~motor",
+      "module:j5e/motor~motor#currentspe",
+      "module:j5e/motor~motor#en",
+      "module:j5e/motor~motor#ison",
       "module:j5e/relay",
       "module:j5e/relay~relay",
       "module:j5e/relay~relay#clos",
@@ -22757,11 +23183,14 @@ window.lunrData = {
       "module:j5e/thermometer~thermometer#valu",
       "module:j5e/thermometer~thermometer#within",
       "more",
+      "motor",
+      "motor'",
       "move",
       "ms",
       "namespac",
       "nc",
       "necessari",
+      "necessarili",
       "new",
       "node.j",
       "normal",
@@ -24509,26 +24938,6 @@ window.lunrData = {
       "summary": "",
       "description": ""
     },
-    "module-j5e_light-Light.html#enable": {
-      "id": "module-j5e_light-Light.html#enable",
-      "kind": "function",
-      "title": "enable() → {Object}",
-      "longname": "module:j5e/light~Light#enable",
-      "name": "enable",
-      "tags": "module:j5e/light~Light#enable enable",
-      "summary": "",
-      "description": "Enable a disabled sensor."
-    },
-    "module-j5e_light-Light.html#disable": {
-      "id": "module-j5e_light-Light.html#disable",
-      "kind": "function",
-      "title": "disable() → {Object}",
-      "longname": "module:j5e/light~Light#disable",
-      "name": "disable",
-      "tags": "module:j5e/light~Light#disable disable",
-      "summary": "",
-      "description": "Disable an enabled sensor."
-    },
     "module-j5e_light-Light.html#on": {
       "id": "module-j5e_light-Light.html#on",
       "kind": "function",
@@ -24568,6 +24977,26 @@ window.lunrData = {
       "tags": "module:j5e/light~Light#once once",
       "summary": "",
       "description": "Create an event listener that will only fire one time."
+    },
+    "module-j5e_light-Light.html#enable": {
+      "id": "module-j5e_light-Light.html#enable",
+      "kind": "function",
+      "title": "enable() → {Object}",
+      "longname": "module:j5e/light~Light#enable",
+      "name": "enable",
+      "tags": "module:j5e/light~Light#enable enable",
+      "summary": "",
+      "description": "Enable a disabled sensor."
+    },
+    "module-j5e_light-Light.html#disable": {
+      "id": "module-j5e_light-Light.html#disable",
+      "kind": "function",
+      "title": "disable() → {Object}",
+      "longname": "module:j5e/light~Light#disable",
+      "name": "disable",
+      "tags": "module:j5e/light~Light#disable disable",
+      "summary": "",
+      "description": "Disable an enabled sensor."
     },
     "module-j5e_light-Light.html#read": {
       "id": "module-j5e_light-Light.html#read",
@@ -24900,97 +25329,6 @@ window.lunrData = {
       "summary": "",
       "description": "fscaleTo Scales value to single precision float representation"
     },
-    "module-j5e_button-Button.html": {
-      "id": "module-j5e_button-Button.html",
-      "kind": "class",
-      "title": "&lt;async&gt; j5e/button~Button",
-      "longname": "module:j5e/button~Button",
-      "name": "Button",
-      "tags": "module:j5e/button~Button",
-      "summary": "",
-      "description": "The Button class allows for control of digital buttons",
-      "body": ""
-    },
-    "module-j5e_button-Button.html#isClosed": {
-      "id": "module-j5e_button-Button.html#isClosed",
-      "kind": "member",
-      "title": "&lt;readonly&gt; isClosed :boolean",
-      "longname": "module:j5e/button~Button#isClosed",
-      "name": "isClosed",
-      "tags": "module:j5e/button~Button#isClosed isClosed",
-      "summary": "",
-      "description": "True if the button is being pressed"
-    },
-    "module-j5e_button-Button.html#isOpen": {
-      "id": "module-j5e_button-Button.html#isOpen",
-      "kind": "member",
-      "title": "&lt;readonly&gt; isOpen :boolean",
-      "longname": "module:j5e/button~Button#isOpen",
-      "name": "isOpen",
-      "tags": "module:j5e/button~Button#isOpen isOpen",
-      "summary": "",
-      "description": "True if the button is not being pressed"
-    },
-    "module-j5e_button-Button.html#downValue": {
-      "id": "module-j5e_button-Button.html#downValue",
-      "kind": "member",
-      "title": "&lt;readonly&gt; downValue :number",
-      "longname": "module:j5e/button~Button#downValue",
-      "name": "downValue",
-      "tags": "module:j5e/button~Button#downValue downValue",
-      "summary": "",
-      "description": "Get the raw downValue (depends on invert, isPullup and isPulldown)"
-    },
-    "module-j5e_button-Button.html#upValue": {
-      "id": "module-j5e_button-Button.html#upValue",
-      "kind": "member",
-      "title": "&lt;readonly&gt; upValue :number",
-      "longname": "module:j5e/button~Button#upValue",
-      "name": "upValue",
-      "tags": "module:j5e/button~Button#upValue upValue",
-      "summary": "",
-      "description": "Get the raw upValue (depends on invert, isPullup and, isPulldown)"
-    },
-    "module-j5e_button-Button.html#holdtime": {
-      "id": "module-j5e_button-Button.html#holdtime",
-      "kind": "member",
-      "title": "holdtime :number",
-      "longname": "module:j5e/button~Button#holdtime",
-      "name": "holdtime",
-      "tags": "module:j5e/button~Button#holdtime holdtime",
-      "summary": "",
-      "description": "The length of time a button must be held before firing a hold event (in ms)"
-    },
-    "module-j5e_button-Button.html#on": {
-      "id": "module-j5e_button-Button.html#on",
-      "kind": "function",
-      "title": "on( event, listener )",
-      "longname": "module:j5e/button~Button#on",
-      "name": "on",
-      "tags": "module:j5e/button~Button#on on",
-      "summary": "",
-      "description": "Create an event listener"
-    },
-    "module-j5e_button-Button.html#removeListener": {
-      "id": "module-j5e_button-Button.html#removeListener",
-      "kind": "function",
-      "title": "removeListener( event, listener )",
-      "longname": "module:j5e/button~Button#removeListener",
-      "name": "removeListener",
-      "tags": "module:j5e/button~Button#removeListener removeListener",
-      "summary": "",
-      "description": "Remove an event listener"
-    },
-    "module-j5e_button-Button.html#once": {
-      "id": "module-j5e_button-Button.html#once",
-      "kind": "function",
-      "title": "once( event, listener )",
-      "longname": "module:j5e/button~Button#once",
-      "name": "once",
-      "tags": "module:j5e/button~Button#once once",
-      "summary": "",
-      "description": "Create an event listener that will only fire one time."
-    },
     "module-j5e_led-LED.html": {
       "id": "module-j5e_led-LED.html",
       "kind": "class",
@@ -25151,6 +25489,97 @@ window.lunrData = {
       "tags": "module:j5e/led~LED#stop stop",
       "summary": "",
       "description": "stop Stop the led from blinking, pulsing, fading, or animating"
+    },
+    "module-j5e_button-Button.html": {
+      "id": "module-j5e_button-Button.html",
+      "kind": "class",
+      "title": "&lt;async&gt; j5e/button~Button",
+      "longname": "module:j5e/button~Button",
+      "name": "Button",
+      "tags": "module:j5e/button~Button",
+      "summary": "",
+      "description": "The Button class allows for control of digital buttons",
+      "body": ""
+    },
+    "module-j5e_button-Button.html#isClosed": {
+      "id": "module-j5e_button-Button.html#isClosed",
+      "kind": "member",
+      "title": "&lt;readonly&gt; isClosed :boolean",
+      "longname": "module:j5e/button~Button#isClosed",
+      "name": "isClosed",
+      "tags": "module:j5e/button~Button#isClosed isClosed",
+      "summary": "",
+      "description": "True if the button is being pressed"
+    },
+    "module-j5e_button-Button.html#isOpen": {
+      "id": "module-j5e_button-Button.html#isOpen",
+      "kind": "member",
+      "title": "&lt;readonly&gt; isOpen :boolean",
+      "longname": "module:j5e/button~Button#isOpen",
+      "name": "isOpen",
+      "tags": "module:j5e/button~Button#isOpen isOpen",
+      "summary": "",
+      "description": "True if the button is not being pressed"
+    },
+    "module-j5e_button-Button.html#downValue": {
+      "id": "module-j5e_button-Button.html#downValue",
+      "kind": "member",
+      "title": "&lt;readonly&gt; downValue :number",
+      "longname": "module:j5e/button~Button#downValue",
+      "name": "downValue",
+      "tags": "module:j5e/button~Button#downValue downValue",
+      "summary": "",
+      "description": "Get the raw downValue (depends on invert, isPullup and isPulldown)"
+    },
+    "module-j5e_button-Button.html#upValue": {
+      "id": "module-j5e_button-Button.html#upValue",
+      "kind": "member",
+      "title": "&lt;readonly&gt; upValue :number",
+      "longname": "module:j5e/button~Button#upValue",
+      "name": "upValue",
+      "tags": "module:j5e/button~Button#upValue upValue",
+      "summary": "",
+      "description": "Get the raw upValue (depends on invert, isPullup and, isPulldown)"
+    },
+    "module-j5e_button-Button.html#holdtime": {
+      "id": "module-j5e_button-Button.html#holdtime",
+      "kind": "member",
+      "title": "holdtime :number",
+      "longname": "module:j5e/button~Button#holdtime",
+      "name": "holdtime",
+      "tags": "module:j5e/button~Button#holdtime holdtime",
+      "summary": "",
+      "description": "The length of time a button must be held before firing a hold event (in ms)"
+    },
+    "module-j5e_button-Button.html#on": {
+      "id": "module-j5e_button-Button.html#on",
+      "kind": "function",
+      "title": "on( event, listener )",
+      "longname": "module:j5e/button~Button#on",
+      "name": "on",
+      "tags": "module:j5e/button~Button#on on",
+      "summary": "",
+      "description": "Create an event listener"
+    },
+    "module-j5e_button-Button.html#removeListener": {
+      "id": "module-j5e_button-Button.html#removeListener",
+      "kind": "function",
+      "title": "removeListener( event, listener )",
+      "longname": "module:j5e/button~Button#removeListener",
+      "name": "removeListener",
+      "tags": "module:j5e/button~Button#removeListener removeListener",
+      "summary": "",
+      "description": "Remove an event listener"
+    },
+    "module-j5e_button-Button.html#once": {
+      "id": "module-j5e_button-Button.html#once",
+      "kind": "function",
+      "title": "once( event, listener )",
+      "longname": "module:j5e/button~Button#once",
+      "name": "once",
+      "tags": "module:j5e/button~Button#once once",
+      "summary": "",
+      "description": "Create an event listener that will only fire one time."
     },
     "module-j5e_servo-Servo.html": {
       "id": "module-j5e_servo-Servo.html",
@@ -25705,6 +26134,47 @@ window.lunrData = {
       "summary": "",
       "description": "Stop the RGB LED from pulsing, blinking, fading, or animating"
     },
+    "module-j5e_motor-Motor.html": {
+      "id": "module-j5e_motor-Motor.html",
+      "kind": "class",
+      "title": "&lt;async&gt; j5e/motor~Motor",
+      "longname": "module:j5e/motor~Motor",
+      "name": "Motor",
+      "tags": "module:j5e/motor~Motor",
+      "summary": "",
+      "description": "The Motor class allows for control of DC Motors",
+      "body": ""
+    },
+    "module-j5e_motor-Motor.html#isOn": {
+      "id": "module-j5e_motor-Motor.html#isOn",
+      "kind": "member",
+      "title": "&lt;readonly&gt; isOn :boolean",
+      "longname": "module:j5e/motor~Motor#isOn",
+      "name": "isOn",
+      "tags": "module:j5e/motor~Motor#isOn isOn",
+      "summary": "",
+      "description": "Wether current is flowing. This does not necessarily mean the motor is turning."
+    },
+    "module-j5e_motor-Motor.html#currentSpeed": {
+      "id": "module-j5e_motor-Motor.html#currentSpeed",
+      "kind": "member",
+      "title": "&lt;readonly&gt; currentSpeed :number",
+      "longname": "module:j5e/motor~Motor#currentSpeed",
+      "name": "currentSpeed",
+      "tags": "module:j5e/motor~Motor#currentSpeed currentSpeed",
+      "summary": "",
+      "description": "The Motor's current speed"
+    },
+    "module-j5e_motor-Motor.html#enabled": {
+      "id": "module-j5e_motor-Motor.html#enabled",
+      "kind": "member",
+      "title": "&lt;readonly&gt; enabled :boolean",
+      "longname": "module:j5e/motor~Motor#enabled",
+      "name": "enabled",
+      "tags": "module:j5e/motor~Motor#enabled enabled",
+      "summary": "",
+      "description": "Wether the motor is enabled"
+    },
     "module-j5e_animation.html": {
       "id": "module-j5e_animation.html",
       "kind": "module",
@@ -25757,7 +26227,7 @@ window.lunrData = {
       "name": "j5e/led",
       "tags": "module:j5e/led",
       "summary": "",
-      "description": "Class library for managing LED's (Light Emitting Diodes). They can be connected to a digital IO (On/Off), or to a PWM IO (varying brightness).",
+      "description": "Class library for controlling LED's (Light Emitting Diodes). Connect the LED to a digital IO for on/off functionality. Use a PWM IO for varying brightness.",
       "body": ""
     },
     "module-j5e_light.html": {
@@ -25769,6 +26239,17 @@ window.lunrData = {
       "tags": "module:j5e/light",
       "summary": "",
       "description": "Class Light",
+      "body": ""
+    },
+    "module-j5e_motor.html": {
+      "id": "module-j5e_motor.html",
+      "kind": "module",
+      "title": "j5e/motor",
+      "longname": "module:j5e/motor",
+      "name": "j5e/motor",
+      "tags": "module:j5e/motor",
+      "summary": "",
+      "description": "Class library for managing Motors (Light Emitting Diodes).",
       "body": ""
     },
     "module-j5e_relay.html": {

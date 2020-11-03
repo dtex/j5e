@@ -109,7 +109,7 @@
 					<section>
 							<dl class="symbol primary">
 								<dt class="symbol-title class collapsible-symbol expanded">
-			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="signature-attribs">&lt;async> </span><span class="name">Thermometer</span><span class="signature-params">( &nbsp;)</span><span class="signature-type"></span></h2>
+			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="signature-attribs">&lt;async> </span><span class="name">Thermometer</span><span class="signature-params">( <span class="signature-param">io</span>, <span class="signature-param">options</span>&nbsp;)</span><span class="signature-type"></span></h2>
 </dt>
 <dd class="symbol-details class  collapsible-symbol expanded" style="max-height: 9999px;">
 	<div class="symbol-details-inner">
@@ -121,82 +121,107 @@
 					<tr>
 							<th>Name</th>
 						<th>Type</th>
-							<th>Attributes</th>
-							<th>Default</th>
 						<th class="last">Description</th>
 					</tr>
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>options.aref</code></td>
-							<td><span class="param-type">number</span></td>
-								<td class="attributes">&lt;optional&gt;<br/></td>
-								<td>3.3</td>
+								<td><code>io</code></td>
+							<td><span class="param-type">number</span> | <span class="param-type">string</span> | <span class="param-type">object</span></td>
 							<td class="last">
-									Analog reference voltage
+									Pin identifier or IO Options (See <a href="tutorial-C-INSTANTIATING.html">Instantiating a Device</a>)
 							</td>
 						</tr>
 						<tr>
-								<td><code>options.enabled</code></td>
-							<td><span class="param-type">boolean</span></td>
-								<td class="attributes">&lt;optional&gt;<br/></td>
-								<td>true</td>
+								<td><code>options</code></td>
+							<td><span class="param-type">object</span></td>
 							<td class="last">
-									Wether the device is currently performing reads every <interval>ms
-							</td>
-						</tr>
-						<tr>
-								<td><code>options.interval</code></td>
-							<td><span class="param-type">number</span></td>
-								<td class="attributes">&lt;optional&gt;<br/></td>
-								<td>100</td>
-							<td class="last">
-									Interval between readings in millseconds
-							</td>
-						</tr>
-						<tr>
-								<td><code>options.limit</code></td>
-							<td><span class="param-type">Array.&lt;number></span></td>
-								<td class="attributes">&lt;optional&gt;<br/></td>
-								<td></td>
-							<td class="last">
-									Limit the output range
-							</td>
-						</tr>
-						<tr>
-								<td><code>options.range</code></td>
-							<td><span class="param-type">Array.&lt;number></span></td>
-								<td class="attributes">&lt;optional&gt;<br/></td>
-								<td>[0, N]</td>
-							<td class="last">
-									The input range of the sensor
-							</td>
-						</tr>
-						<tr>
-								<td><code>options.scale</code></td>
-							<td><span class="param-type">Array.&lt;number></span></td>
-								<td class="attributes">&lt;optional&gt;<br/></td>
-								<td>[0, N]</td>
-							<td class="last">
-									The output range for the sensor's value
-							</td>
-						</tr>
-						<tr>
-								<td><code>options.threshold</code></td>
-							<td><span class="param-type">number</span></td>
-								<td class="attributes">&lt;optional&gt;<br/></td>
-								<td>1</td>
-							<td class="last">
-									The minimum amount of change required to emit a "change" event
-							</td>
-						</tr>
-						<tr>
-								<td><code>options.toCelsius</code></td>
-							<td><span class="param-type">callback</span></td>
-								<td class="attributes">&lt;optional&gt;<br/></td>
-								<td></td>
-							<td class="last">
-									A function that will be used to calculate the degrees in celisus from this.raw (expects one param). Will not be used if toCelsius is already defined on a subclass. All other getters are based on degrees Celsius so they do not need to be provided.
+									Device configuration options
+										<table class="params table table-striped">
+											<thead>
+											<tr>
+													<th>Name</th>
+												<th>Type</th>
+													<th>Attributes</th>
+													<th>Default</th>
+												<th class="last">Description</th>
+											</tr>
+											</thead>
+											<tbody>
+												<tr>
+														<td><code>aref</code></td>
+													<td><span class="param-type">number</span></td>
+														<td class="attributes">&lt;optional&gt;<br/></td>
+														<td>3.3</td>
+													<td class="last">
+															Analog reference voltage
+													</td>
+												</tr>
+												<tr>
+														<td><code>enabled</code></td>
+													<td><span class="param-type">boolean</span></td>
+														<td class="attributes">&lt;optional&gt;<br/></td>
+														<td>true</td>
+													<td class="last">
+															Wether the device is currently performing reads every <interval>ms
+													</td>
+												</tr>
+												<tr>
+														<td><code>interval</code></td>
+													<td><span class="param-type">number</span></td>
+														<td class="attributes">&lt;optional&gt;<br/></td>
+														<td>100</td>
+													<td class="last">
+															Interval between readings in millseconds
+													</td>
+												</tr>
+												<tr>
+														<td><code>limit</code></td>
+													<td><span class="param-type">Array.&lt;number></span></td>
+														<td class="attributes">&lt;optional&gt;<br/></td>
+														<td></td>
+													<td class="last">
+															Limit the output range
+													</td>
+												</tr>
+												<tr>
+														<td><code>range</code></td>
+													<td><span class="param-type">Array.&lt;number></span></td>
+														<td class="attributes">&lt;optional&gt;<br/></td>
+														<td>[0, N]</td>
+													<td class="last">
+															The input range of the sensor
+													</td>
+												</tr>
+												<tr>
+														<td><code>scale</code></td>
+													<td><span class="param-type">Array.&lt;number></span></td>
+														<td class="attributes">&lt;optional&gt;<br/></td>
+														<td>[0, N]</td>
+													<td class="last">
+															The output range for the sensor's value
+													</td>
+												</tr>
+												<tr>
+														<td><code>threshold</code></td>
+													<td><span class="param-type">number</span></td>
+														<td class="attributes">&lt;optional&gt;<br/></td>
+														<td>1</td>
+													<td class="last">
+															The minimum amount of change required to emit a "change" event
+													</td>
+												</tr>
+												<tr>
+														<td><code>toCelsius</code></td>
+													<td><span class="param-type">callback</span></td>
+														<td class="attributes">&lt;optional&gt;<br/></td>
+														<td></td>
+													<td class="last">
+															A function that will be used to calculate the degrees in celisus from this.raw (expects one param). Will not be used if toCelsius is already defined on a subclass. All other getters are based on degrees Celsius so they do not need to be provided.
+													</td>
+												</tr>
+											</tbody>
+										</table>
 							</td>
 						</tr>
 					</tbody>
@@ -260,7 +285,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="thermometer_index.js.html">thermometer/index.js</a>, <a href="thermometer_index.js.html#line-51">line 51</a></p>
+									<p class="form-control-static"><a href="thermometer_index.js.html">thermometer/index.js</a>, <a href="thermometer_index.js.html#line-53">line 53</a></p>
 								</div>
 							</div>
 			
@@ -316,7 +341,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="thermometer_index.js.html">thermometer/index.js</a>, <a href="thermometer_index.js.html#line-78">line 78</a></p>
+									<p class="form-control-static"><a href="thermometer_index.js.html">thermometer/index.js</a>, <a href="thermometer_index.js.html#line-81">line 81</a></p>
 								</div>
 							</div>
 			
@@ -368,7 +393,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="thermometer_index.js.html">thermometer/index.js</a>, <a href="thermometer_index.js.html#line-98">line 98</a></p>
+									<p class="form-control-static"><a href="thermometer_index.js.html">thermometer/index.js</a>, <a href="thermometer_index.js.html#line-101">line 101</a></p>
 								</div>
 							</div>
 			
@@ -420,7 +445,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="thermometer_index.js.html">thermometer/index.js</a>, <a href="thermometer_index.js.html#line-114">line 114</a></p>
+									<p class="form-control-static"><a href="thermometer_index.js.html">thermometer/index.js</a>, <a href="thermometer_index.js.html#line-117">line 117</a></p>
 								</div>
 							</div>
 			
@@ -472,7 +497,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="thermometer_index.js.html">thermometer/index.js</a>, <a href="thermometer_index.js.html#line-130">line 130</a></p>
+									<p class="form-control-static"><a href="thermometer_index.js.html">thermometer/index.js</a>, <a href="thermometer_index.js.html#line-133">line 133</a></p>
 								</div>
 							</div>
 			
@@ -524,7 +549,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="thermometer_index.js.html">thermometer/index.js</a>, <a href="thermometer_index.js.html#line-146">line 146</a></p>
+									<p class="form-control-static"><a href="thermometer_index.js.html">thermometer/index.js</a>, <a href="thermometer_index.js.html#line-149">line 149</a></p>
 								</div>
 							</div>
 			
@@ -576,7 +601,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="thermometer_index.js.html">thermometer/index.js</a>, <a href="thermometer_index.js.html#line-162">line 162</a></p>
+									<p class="form-control-static"><a href="thermometer_index.js.html">thermometer/index.js</a>, <a href="thermometer_index.js.html#line-165">line 165</a></p>
 								</div>
 							</div>
 			
@@ -634,7 +659,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-105">line 105</a></p>
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-108">line 108</a></p>
 								</div>
 							</div>
 			
@@ -692,7 +717,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-117">line 117</a></p>
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-120">line 120</a></p>
 								</div>
 							</div>
 			
@@ -750,7 +775,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-129">line 129</a></p>
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-132">line 132</a></p>
 								</div>
 							</div>
 			
@@ -808,7 +833,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-149">line 149</a></p>
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-152">line 152</a></p>
 								</div>
 							</div>
 			
@@ -866,7 +891,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-161">line 161</a></p>
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-164">line 164</a></p>
 								</div>
 							</div>
 			
@@ -924,7 +949,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-169">line 169</a></p>
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-172">line 172</a></p>
 								</div>
 							</div>
 			
@@ -982,7 +1007,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-178">line 178</a></p>
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-181">line 181</a></p>
 								</div>
 							</div>
 			
@@ -1040,7 +1065,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-187">line 187</a></p>
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-190">line 190</a></p>
 								</div>
 							</div>
 			
@@ -1098,7 +1123,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-196">line 196</a></p>
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-199">line 199</a></p>
 								</div>
 							</div>
 			
@@ -1156,7 +1181,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-205">line 205</a></p>
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-208">line 208</a></p>
 								</div>
 							</div>
 			
@@ -1214,7 +1239,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-214">line 214</a></p>
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-217">line 217</a></p>
 								</div>
 							</div>
 			
@@ -1292,7 +1317,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-229">line 229</a></p>
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-232">line 232</a></p>
 								</div>
 							</div>
 			
@@ -1688,7 +1713,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-247">line 247</a></p>
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-250">line 250</a></p>
 								</div>
 							</div>
 			
@@ -1756,7 +1781,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-269">line 269</a></p>
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-272">line 272</a></p>
 								</div>
 							</div>
 			
@@ -1821,7 +1846,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-288">line 288</a></p>
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-291">line 291</a></p>
 								</div>
 							</div>
 			
@@ -1932,7 +1957,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-379">line 379</a></p>
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-382">line 382</a></p>
 								</div>
 							</div>
 			
@@ -2033,7 +2058,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-406">line 406</a></p>
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-409">line 409</a></p>
 								</div>
 							</div>
 			
@@ -2134,7 +2159,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-425">line 425</a></p>
+									<p class="form-control-static"><a href="sensor_index.js.html">sensor/index.js</a>, <a href="sensor_index.js.html#line-428">line 428</a></p>
 								</div>
 							</div>
 			

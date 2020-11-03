@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>&lt;async&gt; j5e/relay~Relay</title>
+		<title>&lt;async&gt; j5e/motor~Motor</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -85,7 +85,7 @@
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
 				<span class="kind">class</span>
-				<h1><span class="signature-attribs">&lt;async> </span><span class="ancestors"><a href="module-j5e_relay.html">j5e/relay</a>~</span><span class="name">Relay</span></h1>
+				<h1><span class="signature-attribs">&lt;async> </span><span class="ancestors"><a href="module-j5e_motor.html">j5e/motor</a>~</span><span class="name">Motor</span></h1>
 			</div>
 		</div>
 	<div class="container content">
@@ -94,16 +94,16 @@
 						<ol class="breadcrumb">
 							<li><a href="index.html">Home</a></li>
 							<li><a href="list_class.html">Classes</a></li>
-							<li class="active"><a href="module-j5e_relay.html">j5e/relay</a>~Relay</li>
+							<li class="active"><a href="module-j5e_motor.html">j5e/motor</a>~Motor</li>
 						</ol>
 					<section>
 							<dl class="symbol primary">
 								<dt class="symbol-title class collapsible-symbol expanded">
-			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="signature-attribs">&lt;async> </span><span class="name">Relay</span><span class="signature-params">( <span class="signature-param">io</span>, <span class="signature-param">options</span>&nbsp;)</span><span class="signature-type"></span></h2>
+			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="signature-attribs">&lt;async> </span><span class="name">Motor</span><span class="signature-params">( <span class="signature-param">options</span>, <span class="signature-param">pin</span>, <span class="signature-param">pins</span>&nbsp;)</span><span class="signature-type"></span></h2>
 </dt>
 <dd class="symbol-details class  collapsible-symbol expanded" style="max-height: 9999px;">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description classdesc">The Relay class allows for control of a relay</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description classdesc">The Motor class allows for control of DC Motors</div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -116,45 +116,111 @@
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>io</code></td>
-							<td><span class="param-type">number</span> | <span class="param-type">string</span> | <span class="param-type">object</span></td>
+								<td><code>options</code></td>
+							<td><span class="param-type">object</span></td>
 							<td class="last">
 									Pin identifier or IO Options (See <a href="tutorial-C-INSTANTIATING.html">Instantiating a Device</a>)
 							</td>
 						</tr>
 						<tr>
-								<td><code>options</code></td>
-							<td><span class="param-type">object</span></td>
+								<td><code>pin</code></td>
+							<td><span class="param-type">Number</span></td>
 							<td class="last">
-									Device configuration options
-										<table class="params table table-striped">
-											<thead>
-											<tr>
-													<th>Name</th>
-												<th>Type</th>
-												<th class="last">Description</th>
-											</tr>
-											</thead>
-											<tbody>
-												<tr>
-														<td><code>type</code></td>
-													<td><span class="param-type">string</span></td>
-													<td class="last">
-															"NO" (Normally Open) or "NC" (Normally Closed)
-													</td>
-												</tr>
-											</tbody>
-										</table>
+									A single pin for basic
+							</td>
+						</tr>
+						<tr>
+								<td><code>pins</code></td>
+							<td><span class="param-type">Number</span> | <span class="param-type">Array.&lt;Number></span></td>
+							<td class="last">
+									A pin number or a two or three digit array of pins [pwm, dir]|[pwm, dir, cdir]
 							</td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
-			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Use a Relay</p></div>
+			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Using a pin number</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Relay from &quot;j5e/relay&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Motor from &quot;j5e/motor&quot;;
 			
-			const relay &#x3D; await new Relay(12);</code></pre>
+			const motor &#x3D; await new Motor(12);
+			motor.fwd();</code></pre>
+					</div>
+					<div class="example-caption"><p>Using an options object</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Motor from &quot;j5e/motor&quot;;
+			
+			const motor &#x3D; await new Motor({
+			  pin: 12
+			});
+			motor.fwd();</code></pre>
+					</div>
+					<div class="example-caption"><p>Initializing 2 pin, Bi-Directional DC Motors</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Motor from &quot;j5e/motor&quot;;
+			
+			const motor &#x3D; await new Motor([ 3, 12 ]);
+			motor.fwd();</code></pre>
+					</div>
+					<div class="example-caption"><p>Initializing 2 pin, Bi-Directional DC Motors with an object</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Motor from &quot;j5e/motor&quot;;
+			
+			const motor &#x3D; await new Motor({
+			  pins: [ 3, 12 ]
+			});
+			motor.fwd();</code></pre>
+					</div>
+					<div class="example-caption"><p>Initializing 2 pin, Bi-Directional DC Motors with explicit pins</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Motor from &quot;j5e/motor&quot;;
+			
+			const motor &#x3D; await new Motor({
+			  pins: {
+			    pwm: 3, 
+			    dir: 12 
+			  }
+			});
+			motor.fwd();</code></pre>
+					</div>
+					<div class="example-caption"><p>Initializing 3 pin, Bi-Directional DC Motors</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Motor from &quot;j5e/motor&quot;;
+			
+			const motor &#x3D; await new Motor([ 3, 12, 11 ]);
+			motor.fwd();</code></pre>
+					</div>
+					<div class="example-caption"><p>Initializing 3 pin, Bi-Directional DC Motors with an object</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Motor from &quot;j5e/motor&quot;;
+			
+			const motor &#x3D; await new Motor({
+			  pins: [ 3, 12, 11 ]
+			});
+			motor.fwd();</code></pre>
+					</div>
+					<div class="example-caption"><p>Initializing 3 pin, Bi-Directional DC Motors with explicit pins</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Motor from &quot;j5e/motor&quot;;
+			
+			const motor &#x3D; await new Motor({
+			  pins: {
+			    pwm: 3,
+			    dir: 12,
+			    cdir: 11
+			  }
+			});
+			motor.fwd();</code></pre>
+					</div>
+					<div class="example-caption"><p>Initializing Bi-Directional DC Motors with inverted speed for reverse. Most likely used for non-commercial H-Bridge controllers</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Motor from &quot;j5e/motor&quot;;
+			
+			const motor &#x3D; await new Motor({
+			  pins: [3, 23],
+			  invertPWM: true
+			});
+			motor.fwd();</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -176,7 +242,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="relay_index.js.html">relay/index.js</a>, <a href="relay_index.js.html#line-34">line 34</a></p>
+									<p class="form-control-static"><a href="motor_index.js.html">motor/index.js</a>, <a href="motor_index.js.html#line-117">line 117</a></p>
 								</div>
 							</div>
 			
@@ -192,55 +258,11 @@
 									<dl class="symbol">
 											<hr/>
 											<dt class="symbol-title member public collapsible-symbol">
-			<h4 id="value" class="member public"><span class="signature-attribs">&lt;readonly> </span><span class="name">value</span><span class="signature-type"> :number</span></h4>
+			<h4 id="isOn" class="member public"><span class="signature-attribs">&lt;readonly> </span><span class="name">isOn</span><span class="signature-type"> :boolean</span></h4>
 		</dt>
 <dd class="symbol-details member public  collapsible-symbol">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">A numerical value representing the relay state</div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-							<!-- type -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Type</label>
-								<div class="col-sm-9">
-									<div class="form-control-static type-names"><span class="param-type">number</span></div>
-								</div>
-							</div>
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="relay_index.js.html">relay/index.js</a>, <a href="relay_index.js.html#line-59">line 59</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title member public collapsible-symbol">
-			<h4 id="isClosed" class="member public"><span class="signature-attribs">&lt;readonly> </span><span class="name">isClosed</span><span class="signature-type"> :boolean</span></h4>
-		</dt>
-<dd class="symbol-details member public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">True if the relay is closed</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Wether current is flowing. This does not necessarily mean the motor is turning.</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 							<!-- type -->
@@ -268,7 +290,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="relay_index.js.html">relay/index.js</a>, <a href="relay_index.js.html#line-68">line 68</a></p>
+									<p class="form-control-static"><a href="motor_index.js.html">motor/index.js</a>, <a href="motor_index.js.html#line-164">line 164</a></p>
 								</div>
 							</div>
 			
@@ -280,18 +302,18 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title member public collapsible-symbol">
-			<h4 id="type" class="member public"><span class="signature-attribs">&lt;readonly> </span><span class="name">type</span><span class="signature-type"> :string</span></h4>
+			<h4 id="currentSpeed" class="member public"><span class="signature-attribs">&lt;readonly> </span><span class="name">currentSpeed</span><span class="signature-type"> :number</span></h4>
 		</dt>
 <dd class="symbol-details member public  collapsible-symbol">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">"NC" if the relay is normally closed, "NO" if the relay is normally open</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">The Motor's current speed</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 							<!-- type -->
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Type</label>
 								<div class="col-sm-9">
-									<div class="form-control-static type-names"><span class="param-type">string</span></div>
+									<div class="form-control-static type-names"><span class="param-type">number</span></div>
 								</div>
 							</div>
 			
@@ -312,68 +334,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="relay_index.js.html">relay/index.js</a>, <a href="relay_index.js.html#line-77">line 77</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-									</dl>
-									<h3>Methods</h3>
-									<dl class="symbol">
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="close" class="function public"><span class="name">close</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{Relay}</span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Close the relay circuit</div>
-			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">Relay</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description"></div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Relay from &quot;j5e/relay&quot;
-			
-			const relay &#x3D; await new Relay(12);
-			
-			// Turn it on
-			relay.close();
-			
-			// Wait 5 seeconds and turn it off
-			system.setTimeout(function() {
-			  relay.open();
-			}, 5000);</code></pre>
-					</div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="relay_index.js.html">relay/index.js</a>, <a href="relay_index.js.html#line-97">line 97</a></p>
+									<p class="form-control-static"><a href="motor_index.js.html">motor/index.js</a>, <a href="motor_index.js.html#line-173">line 173</a></p>
 								</div>
 							</div>
 			
@@ -384,35 +345,21 @@
 			</div>	</div>
 </dd>
 											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="open" class="function public"><span class="name">open</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{Relay}</span></h4>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="enabled" class="member public"><span class="signature-attribs">&lt;readonly> </span><span class="name">enabled</span><span class="signature-type"> :boolean</span></h4>
 		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
+<dd class="symbol-details member public  collapsible-symbol">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Open the relay circuit</div>
-			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">Relay</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description"></div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Relay from &quot;j5e/relay&quot;
-			
-			const relay &#x3D; await new Relay(12);
-			
-			// Turn it on
-			relay.close();
-			
-			// Wait 5 seeconds and turn it off
-			system.setTimeout(function() {
-			  relay.open();
-			}, 5000);</code></pre>
-					</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Wether the motor is enabled</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">boolean</span></div>
+								</div>
+							</div>
 			
 			
 			
@@ -431,65 +378,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="relay_index.js.html">relay/index.js</a>, <a href="relay_index.js.html#line-122">line 122</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="toggle" class="function public"><span class="name">toggle</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{Relay}</span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Toggle the relay circuit</div>
-			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">Relay</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description"></div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Relay from &quot;j5e/relay&quot;
-			
-			const relay &#x3D; await new Relay(12);
-			
-			// Turn it on
-			relay.toggle();
-			
-			// Wait 5 seeconds and turn it off
-			system.setTimeout(function() {
-			  relay.toggle();
-			}, 5000);</code></pre>
-					</div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="relay_index.js.html">relay/index.js</a>, <a href="relay_index.js.html#line-148">line 148</a></p>
+									<p class="form-control-static"><a href="motor_index.js.html">motor/index.js</a>, <a href="motor_index.js.html#line-182">line 182</a></p>
 								</div>
 							</div>
 			
