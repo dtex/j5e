@@ -6,7 +6,8 @@ let last = 0;
 let myTimer;
 
 const thermometer = await new LM335({
-  pin: 14,
+  pin: 14
+}, {
   threshold: 4
 });
 
