@@ -18,9 +18,11 @@ describe("RGB", function() {
     });
 
     it("should return a valid RGB instance when passed an object with three pins in an array", async function() {
-      const rgb = await new RGB({
-        pins: [12, 13, 14],
-        io: PWM,
+      const rgb = await new RGB([
+        { pin: 12, io: PWM },
+        { pin: 13, io: PWM },
+        { pin: 14, io: PWM }
+      ], {
         sink: true
       });
       assert.equal(rgb instanceof RGB, true);
