@@ -12,6 +12,7 @@
     "./fn": "./lib/fn/index.js",
     "./led": "./lib/led/index.js",
     "./light": "./lib/light/index.js",
+    "./motor": "./lib/motor/index.js",
     "./relay": "./lib/relay/index.js",
     "./rgb": "./lib/rgb/index.js",
     "./sensor": "./lib/sensor/index.js",
