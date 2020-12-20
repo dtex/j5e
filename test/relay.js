@@ -29,7 +29,9 @@ describe("Relay", function() {
           const relay = await new Relay({
             pin: 12,
             io: Digital
-          }, {
+          });
+
+          relay.configure({
             type: "NC"
           });
 
@@ -74,7 +76,10 @@ describe("Relay", function() {
 
         const relay = await new Relay({
           pin: 12,
-          io: Digital,
+          io: Digital
+        });
+
+        relay.configure({
           type: "NC"
         });
 
@@ -86,7 +91,10 @@ describe("Relay", function() {
 
         const relay = await new Relay({
           pin: 12,
-          io: Digital,
+          io: Digital
+        });
+
+        relay.configure({
           type: "NC"
         });
 
@@ -126,7 +134,10 @@ describe("Relay", function() {
 
         const relay = await new Relay({
           pin: 12,
-          io: Digital,
+          io: Digital
+        });
+
+        relay.configure({
           type: "NC"
         });
 
@@ -138,7 +149,10 @@ describe("Relay", function() {
 
         const relay = await new Relay({
           pin: 12,
-          io: Digital,
+          io: Digital
+        });
+
+        relay.configure({
           type: "NC"
         });
 
@@ -167,7 +181,9 @@ describe("Relay", function() {
         const relay = await new Relay({
           pin: 12,
           io: Digital
-        }, {
+        });
+
+        relay.configure({
           type: "NC"
         });
 
@@ -203,7 +219,9 @@ describe("Relay", function() {
         const relay = await new Relay({
           pin: 12,
           io: Digital
-          }, {
+        });
+
+        relay.configure({
           type: "NC"
         });
 
@@ -241,7 +259,9 @@ describe("Relay", function() {
         const relay = await new Relay({
           pin: 12,
           io: Digital
-        }, {
+        });
+
+        relay.configure({
           type: "NC"
         });
 
@@ -287,7 +307,9 @@ describe("Relay", function() {
         const relay = await new Relay({
           pin: 12,
           io: Digital
-        }, {
+        });
+
+        relay.configure({
           type: "NC"
         });
 
