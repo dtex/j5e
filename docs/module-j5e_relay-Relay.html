@@ -224,7 +224,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="relay_index.js.html">relay/index.js</a>, <a href="relay_index.js.html#line-59">line 59</a></p>
+									<p class="form-control-static"><a href="relay_index.js.html">relay/index.js</a>, <a href="relay_index.js.html#line-81">line 81</a></p>
 								</div>
 							</div>
 			
@@ -268,7 +268,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="relay_index.js.html">relay/index.js</a>, <a href="relay_index.js.html#line-68">line 68</a></p>
+									<p class="form-control-static"><a href="relay_index.js.html">relay/index.js</a>, <a href="relay_index.js.html#line-90">line 90</a></p>
 								</div>
 							</div>
 			
@@ -312,7 +312,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="relay_index.js.html">relay/index.js</a>, <a href="relay_index.js.html#line-77">line 77</a></p>
+									<p class="form-control-static"><a href="relay_index.js.html">relay/index.js</a>, <a href="relay_index.js.html#line-99">line 99</a></p>
 								</div>
 							</div>
 			
@@ -325,6 +325,105 @@
 									</dl>
 									<h3>Methods</h3>
 									<dl class="symbol">
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id="configure" class="function public"><span class="name">configure</span><span class="signature-params">( <span class="signature-param">options</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Relay}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Configure a Relay</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>options</code></td>
+							<td><span class="param-type">object</span></td>
+							<td class="last">
+									Device configuration options
+										<table class="params table table-striped">
+											<thead>
+											<tr>
+													<th>Name</th>
+												<th>Type</th>
+													<th>Attributes</th>
+													<th>Default</th>
+												<th class="last">Description</th>
+											</tr>
+											</thead>
+											<tbody>
+												<tr>
+														<td><code>type</code></td>
+													<td><span class="param-type">number</span></td>
+														<td class="attributes">&lt;optional&gt;<br/></td>
+														<td>&quot;NO&quot;</td>
+													<td class="last">
+															"NC" if a relay is normally closed, "NO" if it is normally open
+													</td>
+												</tr>
+											</tbody>
+										</table>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Relay</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description">The instance on which the method was called</div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Relay from &quot;j5e/relay&quot;;
+			
+			const relay &#x3D; await new Relay(14);
+			relay.configure({
+			  type: &quot;NC&quot;
+			});
+			
+			// With type: &quot;NC&quot;, relay.open() sets pin 14 high
+			relay.open();</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="relay_index.js.html">relay/index.js</a>, <a href="relay_index.js.html#line-66">line 66</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
 			<h4 id="close" class="function public"><span class="name">close</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{Relay}</span></h4>
@@ -373,7 +472,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="relay_index.js.html">relay/index.js</a>, <a href="relay_index.js.html#line-97">line 97</a></p>
+									<p class="form-control-static"><a href="relay_index.js.html">relay/index.js</a>, <a href="relay_index.js.html#line-119">line 119</a></p>
 								</div>
 							</div>
 			
@@ -431,7 +530,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="relay_index.js.html">relay/index.js</a>, <a href="relay_index.js.html#line-122">line 122</a></p>
+									<p class="form-control-static"><a href="relay_index.js.html">relay/index.js</a>, <a href="relay_index.js.html#line-144">line 144</a></p>
 								</div>
 							</div>
 			
@@ -489,7 +588,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="relay_index.js.html">relay/index.js</a>, <a href="relay_index.js.html#line-148">line 148</a></p>
+									<p class="form-control-static"><a href="relay_index.js.html">relay/index.js</a>, <a href="relay_index.js.html#line-170">line 170</a></p>
 								</div>
 							</div>
 			

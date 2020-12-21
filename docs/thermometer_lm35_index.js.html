@@ -112,14 +112,6 @@ class LM35 extends Thermometer {
   /**
    * Instantiate an lm35 Thermometer
    * @param {number|string|object} io - Pin identifier or IO Options (See {@tutorial C-INSTANTIATING})
-   * @param {object} options - Device configuration options
-   * @param {number} [options.aref=3.3] - Analog reference voltage
-   * @param {boolean} [options.enabled=true] - Wether the device is currently performing reads every &lt;interval>ms
-   * @param {number} [options.interval=100] - Interval between readings in millseconds
-   * @param {number[]} [options.limit=null] - Limit the output range
-   * @param {number[]} [options.range=[0, N]] - The input range of the sensor
-   * @param {number[]} [options.scale=[0, N]] - The output range for the sensor's value
-   * @param {number} [options.threshold=1] - The minimum amount of change required to emit a "change" event
    * @example
    * &lt;caption>Use a LM35&lt;/caption>
    * import LM35 from "j5e/lm35";
@@ -130,29 +122,66 @@ class LM35 extends Thermometer {
    *   trace(data.C);
    * });
    */
-  constructor(io, options) {
+  constructor(io) {
     return (async() => {
       io = normalizeIO(io);
-      options = normalizeDevice(options);
 
-      options.toCelsius = function(raw) {
-        // VOUT = 1500 mV at 150°C
-        // VOUT = 250 mV at 25°C
-        // VOUT = –550 mV at –55°C
+      const sensor = await super(io);
 
-        const mV = this.aref * 1000 * raw / this.resolution;
+      sensor.configure({
+        toCelsius: function(raw) {
+          // VOUT = 1500 mV at 150°C
+          // VOUT = 250 mV at 25°C
+          // VOUT = –550 mV at –55°C
 
-        // 10mV = 1°C
-        //
-        // Page 1
-        return Math.round(mV / 10);
-      };
+          const mV = this.aref * 1000 * raw / this.resolution;
 
-      const sensor = await super(io, options);
+          // 10mV = 1°C
+          //
+          // Page 1
+          return Math.round(mV / 10);
+        }
+      });
 
       return sensor;
     })();
 
+  }
+
+  /**
+   * Configure an LM35
+   * @returns {LM35} The instance on which the method was called
+   * @param {object} options - Device configuration options
+   * @param {number} [options.aref=3.3] - Analog reference voltage
+   * @param {boolean} [options.enabled=true] - Wether the device is currently performing reads every &lt;interval>ms
+   * @param {number} [options.interval=100] - Interval between readings in millseconds
+   * @param {number[]} [options.limit=null] - Limit the output range
+   * @param {number[]} [options.range=[0, N]] - The input range of the sensor
+   * @param {number[]} [options.scale=[0, N]] - The output range for the sensor's value
+   * @param {number} [options.threshold=1] - The minimum amount of change required to emit a "change" event
+   * @param {function} [options.toCelsius] - Function that converts raw value to Celsius
+   * @example
+   * &lt;caption>Passing in Cofiguration Options&lt;/caption>
+   import LM35 from "j5e/lm35";
+   *
+   * const thermometer = await new LM35({
+   *  pin: 14
+   * });
+   *
+   * thermometer.on("change", data => {
+   *  trace(thermometer.celsius);
+   * });
+   */
+  configure(options = {}) {
+    options = normalizeDevice(options);
+
+    super.configure(options);
+
+    if (options.toCelsius) {
+      this.customToCelsius = options.toCelsius;
+    }
+
+    return this;
   }
 
 }

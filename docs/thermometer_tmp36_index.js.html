@@ -130,29 +130,72 @@ class TMP36 extends Thermometer {
    *   trace(data.C);
    * });
    */
-  constructor(io, options) {
+  constructor(io) {
     return (async() => {
       io = normalizeIO(io);
-      options = normalizeDevice(options);
 
-      options.toCelsius = function(raw) {
-        // Analog Reference Voltage
+      const sensor = await super(io);
 
-        const mV = this.aref * 1000 * raw / this.resolution;
+      sensor.configure({
+        toCelsius: function(raw) {
+          // Analog Reference Voltage
 
-        // tempC = (mV / 10) - 50
-        //
-        // Page 3
-        // Table 1
-        // Accuracy 1°C
-        return Math.round((mV / 10) - 50);
-      };
+          const mV = this.aref * 1000 * raw / this.resolution;
 
-      const sensor = await super(io, options);
+          // tempC = (mV / 10) - 50
+          //
+          // Page 3
+          // Table 1
+          // Accuracy 1°C
+          return Math.round((mV / 10) - 50);
+        }
+      });
 
       return sensor;
     })();
 
+  }
+
+  /**
+   * Configure a TMP36
+   * @returns {TMP36} The instance on which the method was called
+   * @param {object} options - Device configuration options
+   * @param {number} [options.aref=3.3] - Analog reference voltage
+   * @param {boolean} [options.enabled=true] - Wether the device is currently performing reads every &lt;interval>ms
+   * @param {number} [options.interval=100] - Interval between readings in millseconds
+   * @param {number[]} [options.limit=null] - Limit the output range
+   * @param {number[]} [options.range=[0, N]] - The input range of the sensor
+   * @param {number[]} [options.scale=[0, N]] - The output range for the sensor's value
+   * @param {number} [options.threshold=1] - The minimum amount of change required to emit a "change" event
+   * @param {function} [options.toCelsius] - Function that converts raw value to Celsius
+   * @example
+   * &lt;caption>Passing in Cofiguration Options&lt;/caption>
+   import Thermometer from "j5e/thermometer";
+   *
+   * const thermometer = await new Thermometer({
+   *  pin: 14
+   * });
+   *
+   * myThermometer.configure({
+   *   toCelsius: function(raw) {
+   *     return raw / 16;
+   *   }
+   * }) ;
+   *
+   * thermometer.on("change", data => {
+   *  trace(thermometer.celsius);
+   * });
+   */
+  configure(options = {}) {
+    options = normalizeDevice(options);
+
+    super.configure(options);
+
+    if (options.toCelsius) {
+      this.customToCelsius = options.toCelsius;
+    }
+
+    return this;
   }
 
 }

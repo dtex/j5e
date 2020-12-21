@@ -109,7 +109,7 @@
 					<section>
 							<dl class="symbol primary">
 								<dt class="symbol-title class collapsible-symbol expanded">
-			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="signature-attribs">&lt;async> </span><span class="name">Button</span><span class="signature-params">( <span class="signature-param">io</span>, <span class="signature-param">options</span>&nbsp;)</span><span class="signature-type"></span></h2>
+			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="signature-attribs">&lt;async> </span><span class="name">Button</span><span class="signature-params">( <span class="signature-param">io</span>&nbsp;)</span><span class="signature-type"></span></h2>
 </dt>
 <dd class="symbol-details class  collapsible-symbol expanded" style="max-height: 9999px;">
 	<div class="symbol-details-inner">
@@ -130,13 +130,6 @@
 							<td><span class="param-type">number</span> | <span class="param-type">string</span> | <span class="param-type">object</span></td>
 							<td class="last">
 									Pin identifier or IO Options (See <a href="tutorial-C-INSTANTIATING.html">Instantiating a Device</a>)
-							</td>
-						</tr>
-						<tr>
-								<td><code>options</code></td>
-							<td><span class="param-type">object</span></td>
-							<td class="last">
-									Device configuration options
 										<table class="params table table-striped">
 											<thead>
 											<tr>
@@ -149,48 +142,12 @@
 											</thead>
 											<tbody>
 												<tr>
-														<td><code>invert</code></td>
-													<td><span class="param-type">boolean</span></td>
+														<td><code>mode</code></td>
+													<td><span class="param-type">number</span> | <span class="param-type">string</span></td>
 														<td class="attributes">&lt;optional&gt;<br/></td>
-														<td>false</td>
+														<td>Input</td>
 													<td class="last">
-															Inverts the up and down values
-													</td>
-												</tr>
-												<tr>
-														<td><code>isPullup</code></td>
-													<td><span class="param-type">boolean</span></td>
-														<td class="attributes">&lt;optional&gt;<br/></td>
-														<td>false</td>
-													<td class="last">
-															Initialize as a pullup button
-													</td>
-												</tr>
-												<tr>
-														<td><code>isPulldown</code></td>
-													<td><span class="param-type">boolean</span></td>
-														<td class="attributes">&lt;optional&gt;<br/></td>
-														<td>false</td>
-													<td class="last">
-															Initialize as a pulldown button
-													</td>
-												</tr>
-												<tr>
-														<td><code>holdtime</code></td>
-													<td><span class="param-type">number</span></td>
-														<td class="attributes">&lt;optional&gt;<br/></td>
-														<td>500</td>
-													<td class="last">
-															The amount of time a button must be held down before emitting an hold event
-													</td>
-												</tr>
-												<tr>
-														<td><code>debounce</code></td>
-													<td><span class="param-type">number</span></td>
-														<td class="attributes">&lt;optional&gt;<br/></td>
-														<td>7</td>
-													<td class="last">
-															The amount of time in milliseconds to delay button events firing. Cleans up "noisy" state changes
+															Device configuration options. If a number, a valid value based on the Provider's constants. If a string, one of "Input", "InputPullUp", or "InputPullDown"
 													</td>
 												</tr>
 											</tbody>
@@ -257,7 +214,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="button_index.js.html">button/index.js</a>, <a href="button_index.js.html#line-58">line 58</a></p>
+									<p class="form-control-static"><a href="button_index.js.html">button/index.js</a>, <a href="button_index.js.html#line-49">line 49</a></p>
 								</div>
 							</div>
 			
@@ -305,7 +262,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="button_index.js.html">button/index.js</a>, <a href="button_index.js.html#line-119">line 119</a></p>
+									<p class="form-control-static"><a href="button_index.js.html">button/index.js</a>, <a href="button_index.js.html#line-131">line 131</a></p>
 								</div>
 							</div>
 			
@@ -349,7 +306,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="button_index.js.html">button/index.js</a>, <a href="button_index.js.html#line-128">line 128</a></p>
+									<p class="form-control-static"><a href="button_index.js.html">button/index.js</a>, <a href="button_index.js.html#line-140">line 140</a></p>
 								</div>
 							</div>
 			
@@ -365,7 +322,7 @@
 		</dt>
 <dd class="symbol-details member public  collapsible-symbol">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Get the raw downValue (depends on invert, isPullup and isPulldown)</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Get the raw downValue (depends on type and io input mode)</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 							<!-- type -->
@@ -393,7 +350,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="button_index.js.html">button/index.js</a>, <a href="button_index.js.html#line-137">line 137</a></p>
+									<p class="form-control-static"><a href="button_index.js.html">button/index.js</a>, <a href="button_index.js.html#line-149">line 149</a></p>
 								</div>
 							</div>
 			
@@ -409,7 +366,7 @@
 		</dt>
 <dd class="symbol-details member public  collapsible-symbol">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Get the raw upValue (depends on invert, isPullup and, isPulldown)</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Get the raw upValue (depends on type and io input mode)</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 							<!-- type -->
@@ -437,7 +394,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="button_index.js.html">button/index.js</a>, <a href="button_index.js.html#line-146">line 146</a></p>
+									<p class="form-control-static"><a href="button_index.js.html">button/index.js</a>, <a href="button_index.js.html#line-158">line 158</a></p>
 								</div>
 							</div>
 			
@@ -481,7 +438,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="button_index.js.html">button/index.js</a>, <a href="button_index.js.html#line-154">line 154</a></p>
+									<p class="form-control-static"><a href="button_index.js.html">button/index.js</a>, <a href="button_index.js.html#line-166">line 166</a></p>
 								</div>
 							</div>
 			
@@ -722,6 +679,129 @@
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
 									<p class="form-control-static"><a href="event_index.js.html">event/index.js</a>, <a href="event_index.js.html#line-64">line 64</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id="configure" class="function public"><span class="name">configure</span><span class="signature-params">( <span class="signature-param">options</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Button}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Configure a button</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>options</code></td>
+							<td><span class="param-type">object</span></td>
+							<td class="last">
+									Device configuration options
+										<table class="params table table-striped">
+											<thead>
+											<tr>
+													<th>Name</th>
+												<th>Type</th>
+													<th>Attributes</th>
+													<th>Default</th>
+												<th class="last">Description</th>
+											</tr>
+											</thead>
+											<tbody>
+												<tr>
+														<td><code>holdtime</code></td>
+													<td><span class="param-type">number</span></td>
+														<td class="attributes">&lt;optional&gt;<br/></td>
+														<td>500</td>
+													<td class="last">
+															The amount of time a button must be held down before emitting an hold event
+													</td>
+												</tr>
+												<tr>
+														<td><code>debounce</code></td>
+													<td><span class="param-type">number</span></td>
+														<td class="attributes">&lt;optional&gt;<br/></td>
+														<td>7</td>
+													<td class="last">
+															The amount of time in milliseconds to delay button events firing. Cleans up "noisy" state changes
+													</td>
+												</tr>
+												<tr>
+														<td><code>type</code></td>
+													<td><span class="param-type">string</span></td>
+														<td class="attributes">&lt;optional&gt;<br/></td>
+														<td>&quot;NO&quot;</td>
+													<td class="last">
+															The type of button, "NO" for normally open, "NC" for normally closed
+													</td>
+												</tr>
+											</tbody>
+										</table>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Button</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description">The instance on which the method was called</div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Button from &quot;j5e/button&quot;;
+			import LED from &quot;j5e/led&quot;;
+			
+			const button &#x3D; await new Button(14);
+			button.configure({
+			  debounce: 20
+			});
+			
+			button.on(&quot;open&quot;, function() {
+			 led.off();
+			});
+			
+			button.on(&quot;close&quot;, function() {
+			 led.on();
+			});</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="button_index.js.html">button/index.js</a>, <a href="button_index.js.html#line-114">line 114</a></p>
 								</div>
 							</div>
 			

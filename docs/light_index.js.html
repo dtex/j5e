@@ -122,14 +122,6 @@ class Light extends Sensor {
   /**
    * Instantiate a light sensor
    * @param {number|string|object} io - Pin identifier or IO Options (See {@tutorial C-INSTANTIATING})
-   * @param {object} [options] - Device configuration options
-   * @param {number} [options.aref=3.3] - Analog reference voltage
-   * @param {boolean} [options.enabled=true] - Wether the device is currently performing reads every &lt;interval>ms
-   * @param {number} [options.interval=100] - Interval between readings in millseconds
-   * @param {number[]} [options.limit=null] - Limit the output range
-   * @param {number[]} [options.range=[0, N]] - The input range of the sensor
-   * @param {number[]} [options.scale=[0, N]] - The output range for the sensor's value
-   * @param {number} [options.threshold=1] - The minimum amount of change required to emit a "change" event
    * @property {number} level - Get the light level scaled to [0, 1] to two decimal places
    * @example
    * &lt;caption>Use a photoresistor&lt;/caption>
@@ -142,20 +134,46 @@ class Light extends Sensor {
    * })
    *
    */
-  constructor(io, options) {
+  constructor(io) {
     return (async() => {
       io = normalizeIO(io);
-      options = normalizeDevice(options);
 
-      const sensor = await super(io, options);
-
-      if (options.toLux) {
-        this.toLux = options.toLux;
-      }
+      const sensor = await super(io);
 
       return sensor;
     })();
 
+  }
+
+  /**
+   * Configure a Light sensor
+   * @returns {Light} The instance on which the method was called
+   * @param {object} options - Device configuration options
+   * @param {number} [options.aref=3.3] - Analog reference voltage
+   * @param {boolean} [options.enabled=true] - Wether the device is currently performing reads every &lt;interval>ms
+   * @param {number} [options.interval=100] - Interval between readings in millseconds
+   * @param {number[]} [options.limit=null] - Limit the output range
+   * @param {number[]} [options.range=[0, N]] - The input range of the sensor
+   * @param {number[]} [options.scale=[0, N]] - The output range for the sensor's value
+   * @param {number} [options.threshold=1] - The minimum amount of change required to emit a "change" event
+   * @example
+   * import Light from "j5e/light";
+   *
+   * const light = await new LED(14);
+   * light.configure({
+   *   interval: 50
+   * });
+   */
+  configure(options = {}) {
+    options = normalizeDevice(options);
+
+    super.configure(options);
+
+    if (options.toLux) {
+      this.toLux = options.toLux;
+    }
+
+    return this;
   }
 
   /**

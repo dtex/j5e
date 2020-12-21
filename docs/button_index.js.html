@@ -104,11 +104,6 @@
 import { Emitter } from "j5e/event";
 import { debounce, normalizeDevice, normalizeIO, getProvider, timer } from "j5e/fn";
 
-const aliases = {
-  down: ["down", "press"],
-  up: ["up", "release"]
-};
-
 /**
  * Class representing a button
  * @classdesc The Button class allows for control of digital buttons
@@ -123,18 +118,14 @@ class Button extends Emitter {
     holdtime: null,
     last: null,
     isPullup: null,
+    normallyClosed: null,
     interval: null
   };
 
   /**
    * Instantiate a button
    * @param {number|string|object} io - Pin identifier or IO Options (See {@tutorial C-INSTANTIATING})
-   * @param {object} options - Device configuration options
-   * @param {boolean} [options.invert=false] - Inverts the up and down values
-   * @param {boolean} [options.isPullup=false] - Initialize as a pullup button
-   * @param {boolean} [options.isPulldown=false] - Initialize as a pulldown button
-   * @param {number} [options.holdtime=500] - The amount of time a button must be held down before emitting an hold event
-   * @param {number} [options.debounce=7] - The amount of time in milliseconds to delay button events firing. Cleans up "noisy" state changes
+   * @param {number|string} [io.mode=Input] - Device configuration options. If a number, a valid value based on the Provider's constants. If a string, one of "Input", "InputPullUp", or "InputPullDown"
    * @example
    * &lt;caption>Use a button to control an LED&lt;/caption>
    * import Button from "j5e/button";
@@ -151,28 +142,27 @@ class Button extends Emitter {
    *   led.on();
    * });
    */
-  constructor(io, options) {
+  constructor(io) {
     return (async() => {
 
-      let raw;
-      let invert = false;
-
       io = normalizeIO(io);
-      options = normalizeDevice(options);
       super();
 
       const Provider = await getProvider(io, "builtin/digital");
 
       let mode = Provider.Input;
-      if (typeof options.isPullup !== "undefined") {
-        mode = Provider.InputPullUp;
-      }
-      if (typeof options.isPulldown !== "undefined") {
-        mode = Provider.InputPullDown;
+      if (typeof io.mode !== "undefined") {
+        if (typeof io.mode === "string") {
+          mode = Provider[io.mode];
+        } else {
+          mode = io.mode;
+        }
       }
 
+      this.#state.isPullup = mode === Provider.InputPullUp;
+
       this.io = new Provider({
-        pin: options.pin,
+        pin: io.pin,
         mode,
         edge: Provider.Rising | Provider.Falling,
         onReadable: () => {
@@ -180,31 +170,53 @@ class Button extends Emitter {
         }
       });
 
-      if (typeof options.invert !== "undefined") {
-        this.invert = options.invert;
-      }
-
-      if (typeof options.isPullup !== "undefined") {
-        this.#state.isPullup = options.isPullup;
-      }
-      if (typeof options.isPulldown !== "undefined") {
-        this.#state.isPulldown = options.isPulldown;
-      }
-
-      this.#state.holdtime = options.holdtime || 500;
+      this.configure({
+        debounce: 7,
+        holdtime: 500,
+        normallyClosed: false
+      });
 
       this.#state.last = this.upValue;
 
-      this.#state.debounce = options.debounce || 7;
-
-      // Create a debounce boundary on event triggers
-      // this avoids button events firing on
-      // press noise and false positives
-      // this.trigger = debounce(send, 7);
-      this.trigger = debounce(this.processRead.bind(this), this.#state.debounce);
       return this;
     })();
 
+  }
+
+  /**
+   * Configure a button
+   * @returns {Button} The instance on which the method was called
+   * @param {object} options - Device configuration options
+   * @param {number} [options.holdtime=500] - The amount of time a button must be held down before emitting an hold event
+   * @param {number} [options.debounce=7] - The amount of time in milliseconds to delay button events firing. Cleans up "noisy" state changes
+   * @param {string} [options.type="NO"] - The type of button, "NO" for normally open, "NC" for normally closed
+   * @example
+   * import Button from "j5e/button";
+   * import LED from "j5e/led";
+   *
+   * const button = await new Button(14);
+   * button.configure({
+   *   debounce: 20
+   * });
+   *
+   * button.on("open", function() {
+   *  led.off();
+   * });
+   *
+   * button.on("close", function() {
+   *  led.on();
+   * });
+   */
+  configure(options) {
+    options = normalizeDevice(options);
+
+    this.#state.normallyClosed = options.normallyClosed || this.#state.normallyClosed;
+    this.#state.holdtime = options.holdtime || this.#state.holdtime;
+    this.#state.debounce = options.debounce || this.#state.debounce;
+
+    this.trigger = debounce(this.processRead.bind(this), this.#state.debounce);
+
+    return this;
   }
 
   /**
@@ -226,21 +238,21 @@ class Button extends Emitter {
   }
 
   /**
-   * Get the raw downValue (depends on invert, isPullup and isPulldown)
+   * Get the raw downValue (depends on type and io input mode)
    * @type {number}
    * @readonly
    */
   get downValue() {
-    return 1 ^ this.#state.isPullup ^ this.invert;
+    return 1 ^ this.#state.isPullup ^ this.#state.normallyClosed;
   }
 
   /**
-   * Get the raw upValue (depends on invert, isPullup and, isPulldown)
+   * Get the raw upValue (depends on type and io input mode)
    * @type {number}
    * @readonly
    */
   get upValue() {
-    return 0 ^ this.#state.isPullup ^ this.invert;
+    return 0 ^ this.#state.isPullup ^ this.#state.normallyClosed;
   }
 
   /**
@@ -255,7 +267,7 @@ class Button extends Emitter {
     this.#state.holdtime = newHoldtime;
   }
 
-  intialize(options, callback) { }
+  intialize() { }
 
   processRead() {
     if (this.isOpen) {
