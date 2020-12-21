@@ -113,6 +113,16 @@ window.lunrData = {
           "output",
           "rang"
         ],
+        "module-j5e_thermometer.LM335.html#C": [
+          "alia",
+          "c",
+          "celsiu",
+          "lm335#c",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/thermometer.lm335#c",
+          "number"
+        ],
         "module-j5e_thermometer.LM335.html#threshold": [
           "amount",
           "chang",
@@ -126,14 +136,13 @@ window.lunrData = {
           "requir",
           "threshold"
         ],
-        "module-j5e_thermometer.LM335.html#C": [
-          "alia",
-          "c",
-          "celsiu",
-          "lm335#c",
+        "module-j5e_thermometer.LM335.html#fahrenheit": [
+          "degre",
+          "fahrenheit",
+          "lm335#fahrenheit",
           "lt;readonly&gt",
           "member",
-          "module:j5e/thermometer.lm335#c",
+          "module:j5e/thermometer.lm335#fahrenheit",
           "number"
         ],
         "module-j5e_thermometer.LM335.html#interval": [
@@ -145,15 +154,6 @@ window.lunrData = {
           "ms",
           "number",
           "read"
-        ],
-        "module-j5e_thermometer.LM335.html#fahrenheit": [
-          "degre",
-          "fahrenheit",
-          "lm335#fahrenheit",
-          "lt;readonly&gt",
-          "member",
-          "module:j5e/thermometer.lm335#fahrenheit",
-          "number"
         ],
         "module-j5e_thermometer.LM335.html#F": [
           "alia",
@@ -177,15 +177,6 @@ window.lunrData = {
           "smooth",
           "take"
         ],
-        "module-j5e_thermometer.LM335.html#aref": [
-          "aref",
-          "lm335#aref",
-          "member",
-          "module:j5e/thermometer.lm335#aref",
-          "number",
-          "refer",
-          "voltag"
-        ],
         "module-j5e_thermometer.LM335.html#kelvin": [
           "degre",
           "kelvin",
@@ -194,6 +185,15 @@ window.lunrData = {
           "member",
           "module:j5e/thermometer.lm335#kelvin",
           "number"
+        ],
+        "module-j5e_thermometer.LM335.html#aref": [
+          "aref",
+          "lm335#aref",
+          "member",
+          "module:j5e/thermometer.lm335#aref",
+          "number",
+          "refer",
+          "voltag"
         ],
         "module-j5e_thermometer.LM335.html#samples": [
           "befor",
@@ -206,16 +206,6 @@ window.lunrData = {
           "sampl",
           "take"
         ],
-        "module-j5e_thermometer.LM335.html#range": [
-          "array.&lt;number&gt",
-          "input",
-          "lm335#rang",
-          "lt;readonly&gt",
-          "member",
-          "module:j5e/thermometer.lm335#rang",
-          "rang",
-          "sensor"
-        ],
         "module-j5e_thermometer.LM335.html#K": [
           "alia",
           "k",
@@ -225,6 +215,16 @@ window.lunrData = {
           "member",
           "module:j5e/thermometer.lm335#k",
           "number"
+        ],
+        "module-j5e_thermometer.LM335.html#range": [
+          "array.&lt;number&gt",
+          "input",
+          "lm335#rang",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/thermometer.lm335#rang",
+          "rang",
+          "sensor"
         ],
         "module-j5e_thermometer.LM335.html#raw": [
           "adc",
@@ -424,6 +424,16 @@ window.lunrData = {
           "output",
           "rang"
         ],
+        "module-j5e_thermometer.LM35.html#C": [
+          "alia",
+          "c",
+          "celsiu",
+          "lm35#c",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/thermometer.lm35#c",
+          "number"
+        ],
         "module-j5e_thermometer.LM35.html#threshold": [
           "amount",
           "chang",
@@ -437,14 +447,13 @@ window.lunrData = {
           "requir",
           "threshold"
         ],
-        "module-j5e_thermometer.LM35.html#C": [
-          "alia",
-          "c",
-          "celsiu",
-          "lm35#c",
+        "module-j5e_thermometer.LM35.html#fahrenheit": [
+          "degre",
+          "fahrenheit",
+          "lm35#fahrenheit",
           "lt;readonly&gt",
           "member",
-          "module:j5e/thermometer.lm35#c",
+          "module:j5e/thermometer.lm35#fahrenheit",
           "number"
         ],
         "module-j5e_thermometer.LM35.html#interval": [
@@ -456,15 +465,6 @@ window.lunrData = {
           "ms",
           "number",
           "read"
-        ],
-        "module-j5e_thermometer.LM35.html#fahrenheit": [
-          "degre",
-          "fahrenheit",
-          "lm35#fahrenheit",
-          "lt;readonly&gt",
-          "member",
-          "module:j5e/thermometer.lm35#fahrenheit",
-          "number"
         ],
         "module-j5e_thermometer.LM35.html#F": [
           "alia",
@@ -488,15 +488,6 @@ window.lunrData = {
           "smooth",
           "take"
         ],
-        "module-j5e_thermometer.LM35.html#aref": [
-          "aref",
-          "lm35#aref",
-          "member",
-          "module:j5e/thermometer.lm35#aref",
-          "number",
-          "refer",
-          "voltag"
-        ],
         "module-j5e_thermometer.LM35.html#kelvin": [
           "degre",
           "kelvin",
@@ -505,6 +496,15 @@ window.lunrData = {
           "member",
           "module:j5e/thermometer.lm35#kelvin",
           "number"
+        ],
+        "module-j5e_thermometer.LM35.html#aref": [
+          "aref",
+          "lm35#aref",
+          "member",
+          "module:j5e/thermometer.lm35#aref",
+          "number",
+          "refer",
+          "voltag"
         ],
         "module-j5e_thermometer.LM35.html#samples": [
           "befor",
@@ -517,16 +517,6 @@ window.lunrData = {
           "sampl",
           "take"
         ],
-        "module-j5e_thermometer.LM35.html#range": [
-          "array.&lt;number&gt",
-          "input",
-          "lm35#rang",
-          "lt;readonly&gt",
-          "member",
-          "module:j5e/thermometer.lm35#rang",
-          "rang",
-          "sensor"
-        ],
         "module-j5e_thermometer.LM35.html#K": [
           "alia",
           "k",
@@ -536,6 +526,16 @@ window.lunrData = {
           "member",
           "module:j5e/thermometer.lm35#k",
           "number"
+        ],
+        "module-j5e_thermometer.LM35.html#range": [
+          "array.&lt;number&gt",
+          "input",
+          "lm35#rang",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/thermometer.lm35#rang",
+          "rang",
+          "sensor"
         ],
         "module-j5e_thermometer.LM35.html#raw": [
           "adc",
@@ -735,6 +735,16 @@ window.lunrData = {
           "output",
           "rang"
         ],
+        "module-j5e_thermometer.MF52A103J3470.html#C": [
+          "alia",
+          "c",
+          "celsiu",
+          "lt;readonly&gt",
+          "member",
+          "mf52a103j3470#c",
+          "module:j5e/thermometer.mf52a103j3470#c",
+          "number"
+        ],
         "module-j5e_thermometer.MF52A103J3470.html#threshold": [
           "amount",
           "chang",
@@ -748,14 +758,13 @@ window.lunrData = {
           "requir",
           "threshold"
         ],
-        "module-j5e_thermometer.MF52A103J3470.html#C": [
-          "alia",
-          "c",
-          "celsiu",
+        "module-j5e_thermometer.MF52A103J3470.html#fahrenheit": [
+          "degre",
+          "fahrenheit",
           "lt;readonly&gt",
           "member",
-          "mf52a103j3470#c",
-          "module:j5e/thermometer.mf52a103j3470#c",
+          "mf52a103j3470#fahrenheit",
+          "module:j5e/thermometer.mf52a103j3470#fahrenheit",
           "number"
         ],
         "module-j5e_thermometer.MF52A103J3470.html#interval": [
@@ -767,15 +776,6 @@ window.lunrData = {
           "ms",
           "number",
           "read"
-        ],
-        "module-j5e_thermometer.MF52A103J3470.html#fahrenheit": [
-          "degre",
-          "fahrenheit",
-          "lt;readonly&gt",
-          "member",
-          "mf52a103j3470#fahrenheit",
-          "module:j5e/thermometer.mf52a103j3470#fahrenheit",
-          "number"
         ],
         "module-j5e_thermometer.MF52A103J3470.html#F": [
           "alia",
@@ -799,15 +799,6 @@ window.lunrData = {
           "smooth",
           "take"
         ],
-        "module-j5e_thermometer.MF52A103J3470.html#aref": [
-          "aref",
-          "member",
-          "mf52a103j3470#aref",
-          "module:j5e/thermometer.mf52a103j3470#aref",
-          "number",
-          "refer",
-          "voltag"
-        ],
         "module-j5e_thermometer.MF52A103J3470.html#kelvin": [
           "degre",
           "kelvin",
@@ -816,6 +807,15 @@ window.lunrData = {
           "mf52a103j3470#kelvin",
           "module:j5e/thermometer.mf52a103j3470#kelvin",
           "number"
+        ],
+        "module-j5e_thermometer.MF52A103J3470.html#aref": [
+          "aref",
+          "member",
+          "mf52a103j3470#aref",
+          "module:j5e/thermometer.mf52a103j3470#aref",
+          "number",
+          "refer",
+          "voltag"
         ],
         "module-j5e_thermometer.MF52A103J3470.html#samples": [
           "befor",
@@ -828,16 +828,6 @@ window.lunrData = {
           "sampl",
           "take"
         ],
-        "module-j5e_thermometer.MF52A103J3470.html#range": [
-          "array.&lt;number&gt",
-          "input",
-          "lt;readonly&gt",
-          "member",
-          "mf52a103j3470#rang",
-          "module:j5e/thermometer.mf52a103j3470#rang",
-          "rang",
-          "sensor"
-        ],
         "module-j5e_thermometer.MF52A103J3470.html#K": [
           "alia",
           "k",
@@ -847,6 +837,16 @@ window.lunrData = {
           "mf52a103j3470#k",
           "module:j5e/thermometer.mf52a103j3470#k",
           "number"
+        ],
+        "module-j5e_thermometer.MF52A103J3470.html#range": [
+          "array.&lt;number&gt",
+          "input",
+          "lt;readonly&gt",
+          "member",
+          "mf52a103j3470#rang",
+          "module:j5e/thermometer.mf52a103j3470#rang",
+          "rang",
+          "sensor"
         ],
         "module-j5e_thermometer.MF52A103J3470.html#raw": [
           "adc",
@@ -1018,76 +1018,6 @@ window.lunrData = {
           "singl",
           "valu"
         ],
-        "module-j5e_relay-Relay.html": [
-          "allow",
-          "class",
-          "control",
-          "j5e/relay~relay",
-          "lt;async&gt",
-          "module:j5e/relay~relay",
-          "relay"
-        ],
-        "module-j5e_relay-Relay.html#value": [
-          "lt;readonly&gt",
-          "member",
-          "module:j5e/relay~relay#valu",
-          "number",
-          "numer",
-          "relay",
-          "repres",
-          "state",
-          "valu"
-        ],
-        "module-j5e_relay-Relay.html#isClosed": [
-          "boolean",
-          "close",
-          "isclos",
-          "lt;readonly&gt",
-          "member",
-          "module:j5e/relay~relay#isclos",
-          "relay",
-          "true"
-        ],
-        "module-j5e_relay-Relay.html#type": [
-          "close",
-          "lt;readonly&gt",
-          "member",
-          "module:j5e/relay~relay#typ",
-          "nc",
-          "normal",
-          "open",
-          "relay",
-          "string",
-          "type"
-        ],
-        "module-j5e_relay-Relay.html#configure": [
-          "configur",
-          "function",
-          "module:j5e/relay~relay#configur",
-          "option",
-          "relay"
-        ],
-        "module-j5e_relay-Relay.html#close": [
-          "circuit",
-          "close",
-          "function",
-          "module:j5e/relay~relay#clos",
-          "relay"
-        ],
-        "module-j5e_relay-Relay.html#open": [
-          "circuit",
-          "function",
-          "module:j5e/relay~relay#open",
-          "open",
-          "relay"
-        ],
-        "module-j5e_relay-Relay.html#toggle": [
-          "circuit",
-          "function",
-          "module:j5e/relay~relay#toggl",
-          "relay",
-          "toggl"
-        ],
         "module-j5e_thermometer.TMP36.html": [
           "1",
           "accuraci",
@@ -1119,6 +1049,16 @@ window.lunrData = {
           "rang",
           "tmp36#limit"
         ],
+        "module-j5e_thermometer.TMP36.html#C": [
+          "alia",
+          "c",
+          "celsiu",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/thermometer.tmp36#c",
+          "number",
+          "tmp36#c"
+        ],
         "module-j5e_thermometer.TMP36.html#threshold": [
           "amount",
           "chang",
@@ -1132,15 +1072,14 @@ window.lunrData = {
           "threshold",
           "tmp36#threshold"
         ],
-        "module-j5e_thermometer.TMP36.html#C": [
-          "alia",
-          "c",
-          "celsiu",
+        "module-j5e_thermometer.TMP36.html#fahrenheit": [
+          "degre",
+          "fahrenheit",
           "lt;readonly&gt",
           "member",
-          "module:j5e/thermometer.tmp36#c",
+          "module:j5e/thermometer.tmp36#fahrenheit",
           "number",
-          "tmp36#c"
+          "tmp36#fahrenheit"
         ],
         "module-j5e_thermometer.TMP36.html#interval": [
           "between",
@@ -1151,15 +1090,6 @@ window.lunrData = {
           "number",
           "read",
           "tmp36#interv"
-        ],
-        "module-j5e_thermometer.TMP36.html#fahrenheit": [
-          "degre",
-          "fahrenheit",
-          "lt;readonly&gt",
-          "member",
-          "module:j5e/thermometer.tmp36#fahrenheit",
-          "number",
-          "tmp36#fahrenheit"
         ],
         "module-j5e_thermometer.TMP36.html#F": [
           "alia",
@@ -1183,15 +1113,6 @@ window.lunrData = {
           "take",
           "tmp36#smooth"
         ],
-        "module-j5e_thermometer.TMP36.html#aref": [
-          "aref",
-          "member",
-          "module:j5e/thermometer.tmp36#aref",
-          "number",
-          "refer",
-          "tmp36#aref",
-          "voltag"
-        ],
         "module-j5e_thermometer.TMP36.html#kelvin": [
           "degre",
           "kelvin",
@@ -1200,6 +1121,15 @@ window.lunrData = {
           "module:j5e/thermometer.tmp36#kelvin",
           "number",
           "tmp36#kelvin"
+        ],
+        "module-j5e_thermometer.TMP36.html#aref": [
+          "aref",
+          "member",
+          "module:j5e/thermometer.tmp36#aref",
+          "number",
+          "refer",
+          "tmp36#aref",
+          "voltag"
         ],
         "module-j5e_thermometer.TMP36.html#samples": [
           "befor",
@@ -1212,16 +1142,6 @@ window.lunrData = {
           "take",
           "tmp36#sampl"
         ],
-        "module-j5e_thermometer.TMP36.html#range": [
-          "array.&lt;number&gt",
-          "input",
-          "lt;readonly&gt",
-          "member",
-          "module:j5e/thermometer.tmp36#rang",
-          "rang",
-          "sensor",
-          "tmp36#rang"
-        ],
         "module-j5e_thermometer.TMP36.html#K": [
           "alia",
           "k",
@@ -1231,6 +1151,16 @@ window.lunrData = {
           "module:j5e/thermometer.tmp36#k",
           "number",
           "tmp36#k"
+        ],
+        "module-j5e_thermometer.TMP36.html#range": [
+          "array.&lt;number&gt",
+          "input",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/thermometer.tmp36#rang",
+          "rang",
+          "sensor",
+          "tmp36#rang"
         ],
         "module-j5e_thermometer.TMP36.html#raw": [
           "adc",
@@ -1401,6 +1331,76 @@ window.lunrData = {
           "singl",
           "tmp36#fscaleto",
           "valu"
+        ],
+        "module-j5e_relay-Relay.html": [
+          "allow",
+          "class",
+          "control",
+          "j5e/relay~relay",
+          "lt;async&gt",
+          "module:j5e/relay~relay",
+          "relay"
+        ],
+        "module-j5e_relay-Relay.html#value": [
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/relay~relay#valu",
+          "number",
+          "numer",
+          "relay",
+          "repres",
+          "state",
+          "valu"
+        ],
+        "module-j5e_relay-Relay.html#isClosed": [
+          "boolean",
+          "close",
+          "isclos",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/relay~relay#isclos",
+          "relay",
+          "true"
+        ],
+        "module-j5e_relay-Relay.html#type": [
+          "close",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/relay~relay#typ",
+          "nc",
+          "normal",
+          "open",
+          "relay",
+          "string",
+          "type"
+        ],
+        "module-j5e_relay-Relay.html#configure": [
+          "configur",
+          "function",
+          "module:j5e/relay~relay#configur",
+          "option",
+          "relay"
+        ],
+        "module-j5e_relay-Relay.html#close": [
+          "circuit",
+          "close",
+          "function",
+          "module:j5e/relay~relay#clos",
+          "relay"
+        ],
+        "module-j5e_relay-Relay.html#open": [
+          "circuit",
+          "function",
+          "module:j5e/relay~relay#open",
+          "open",
+          "relay"
+        ],
+        "module-j5e_relay-Relay.html#toggle": [
+          "circuit",
+          "function",
+          "module:j5e/relay~relay#toggl",
+          "relay",
+          "toggl"
         ],
         "module-j5e_light-Light.html": [
           "allow",
@@ -2271,7 +2271,6 @@ window.lunrData = {
           "configur",
           "function",
           "module:j5e/thermometer~thermometer#configur",
-          "option",
           "thermomet"
         ],
         "module-j5e_thermometer-Thermometer.html#on": [
@@ -4135,22 +4134,6 @@ window.lunrData = {
                             "ref": "module-j5e_thermometer.MF52A103J3470.html#fscaleTo",
                             "tf": 110
                           },
-                          "module-j5e_relay-Relay.html#configure": {
-                            "ref": "module-j5e_relay-Relay.html#configure",
-                            "tf": 110
-                          },
-                          "module-j5e_relay-Relay.html#close": {
-                            "ref": "module-j5e_relay-Relay.html#close",
-                            "tf": 110
-                          },
-                          "module-j5e_relay-Relay.html#open": {
-                            "ref": "module-j5e_relay-Relay.html#open",
-                            "tf": 110
-                          },
-                          "module-j5e_relay-Relay.html#toggle": {
-                            "ref": "module-j5e_relay-Relay.html#toggle",
-                            "tf": 110
-                          },
                           "module-j5e_thermometer.TMP36.html#configure": {
                             "ref": "module-j5e_thermometer.TMP36.html#configure",
                             "tf": 110
@@ -4193,6 +4176,22 @@ window.lunrData = {
                           },
                           "module-j5e_thermometer.TMP36.html#fscaleTo": {
                             "ref": "module-j5e_thermometer.TMP36.html#fscaleTo",
+                            "tf": 110
+                          },
+                          "module-j5e_relay-Relay.html#configure": {
+                            "ref": "module-j5e_relay-Relay.html#configure",
+                            "tf": 110
+                          },
+                          "module-j5e_relay-Relay.html#close": {
+                            "ref": "module-j5e_relay-Relay.html#close",
+                            "tf": 110
+                          },
+                          "module-j5e_relay-Relay.html#open": {
+                            "ref": "module-j5e_relay-Relay.html#open",
+                            "tf": 110
+                          },
+                          "module-j5e_relay-Relay.html#toggle": {
+                            "ref": "module-j5e_relay-Relay.html#toggle",
                             "tf": 110
                           },
                           "module-j5e_light-Light.html#configure": {
@@ -8612,7 +8611,7 @@ window.lunrData = {
                             },
                             "module-j5e_thermometer-Thermometer.html#configure": {
                               "ref": "module-j5e_thermometer-Thermometer.html#configure",
-                              "tf": 58.33333333333333
+                              "tf": 75
                             }
                           }
                         }
@@ -8734,97 +8733,6 @@ window.lunrData = {
                   "module-j5e_sensor-Sensor.html#samples": {
                     "ref": "module-j5e_sensor-Sensor.html#samples",
                     "tf": 8.333333333333332
-                  }
-                }
-              }
-            }
-          },
-          "r": {
-            "docs": {},
-            "u": {
-              "docs": {},
-              "e": {
-                "docs": {
-                  "module-j5e_relay-Relay.html#isClosed": {
-                    "ref": "module-j5e_relay-Relay.html#isClosed",
-                    "tf": 16.666666666666664
-                  },
-                  "module-j5e_switch-Switch.html#isClosed": {
-                    "ref": "module-j5e_switch-Switch.html#isClosed",
-                    "tf": 10
-                  },
-                  "module-j5e_switch-Switch.html#isOpen": {
-                    "ref": "module-j5e_switch-Switch.html#isOpen",
-                    "tf": 10
-                  },
-                  "module-j5e_button-Button.html#isClosed": {
-                    "ref": "module-j5e_button-Button.html#isClosed",
-                    "tf": 12.5
-                  },
-                  "module-j5e_button-Button.html#isOpen": {
-                    "ref": "module-j5e_button-Button.html#isOpen",
-                    "tf": 12.5
-                  },
-                  "module-j5e_led-LED.html#isRunning": {
-                    "ref": "module-j5e_led-LED.html#isRunning",
-                    "tf": 10
-                  },
-                  "module-j5e_led-LED.html#brightness": {
-                    "ref": "module-j5e_led-LED.html#brightness",
-                    "tf": 6.25
-                  },
-                  "module-j5e_led-LED.html#intensity": {
-                    "ref": "module-j5e_led-LED.html#intensity",
-                    "tf": 6.25
-                  },
-                  "module-j5e_led-LED.html#fade": {
-                    "ref": "module-j5e_led-LED.html#fade",
-                    "tf": 5.555555555555555
-                  },
-                  "module-j5e_led-LED.html#fadeIn": {
-                    "ref": "module-j5e_led-LED.html#fadeIn",
-                    "tf": 6.25
-                  },
-                  "module-j5e_led-LED.html#fadeOut": {
-                    "ref": "module-j5e_led-LED.html#fadeOut",
-                    "tf": 6.25
-                  },
-                  "module-j5e_led-LED.html#pulse": {
-                    "ref": "module-j5e_led-LED.html#pulse",
-                    "tf": 4.166666666666666
-                  }
-                }
-              }
-            }
-          },
-          "y": {
-            "docs": {},
-            "p": {
-              "docs": {},
-              "e": {
-                "docs": {
-                  "module-j5e_relay-Relay.html#type": {
-                    "ref": "module-j5e_relay-Relay.html#type",
-                    "tf": 683.3333333333334
-                  },
-                  "module-j5e_button-Button.html#downValue": {
-                    "ref": "module-j5e_button-Button.html#downValue",
-                    "tf": 7.142857142857142
-                  },
-                  "module-j5e_button-Button.html#upValue": {
-                    "ref": "module-j5e_button-Button.html#upValue",
-                    "tf": 7.142857142857142
-                  }
-                }
-              },
-              "i": {
-                "docs": {},
-                "c": {
-                  "docs": {
-                    "module-j5e_fn.html": {
-                      "ref": "module-j5e_fn.html",
-                      "tf": 5
-                    }
                   }
                 }
               }
@@ -8953,29 +8861,6 @@ window.lunrData = {
                         }
                       }
                     },
-                    "i": {
-                      "docs": {},
-                      "n": {
-                        "docs": {},
-                        "t": {
-                          "docs": {},
-                          "e": {
-                            "docs": {},
-                            "r": {
-                              "docs": {},
-                              "v": {
-                                "docs": {
-                                  "module-j5e_thermometer.TMP36.html#interval": {
-                                    "ref": "module-j5e_thermometer.TMP36.html#interval",
-                                    "tf": 100
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    },
                     "f": {
                       "docs": {
                         "module-j5e_thermometer.TMP36.html#F": {
@@ -9034,6 +8919,29 @@ window.lunrData = {
                                         "tf": 100
                                       }
                                     }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "i": {
+                      "docs": {},
+                      "n": {
+                        "docs": {},
+                        "t": {
+                          "docs": {},
+                          "e": {
+                            "docs": {},
+                            "r": {
+                              "docs": {},
+                              "v": {
+                                "docs": {
+                                  "module-j5e_thermometer.TMP36.html#interval": {
+                                    "ref": "module-j5e_thermometer.TMP36.html#interval",
+                                    "tf": 100
                                   }
                                 }
                               }
@@ -9114,23 +9022,6 @@ window.lunrData = {
                         }
                       }
                     },
-                    "a": {
-                      "docs": {},
-                      "r": {
-                        "docs": {},
-                        "e": {
-                          "docs": {},
-                          "f": {
-                            "docs": {
-                              "module-j5e_thermometer.TMP36.html#aref": {
-                                "ref": "module-j5e_thermometer.TMP36.html#aref",
-                                "tf": 100
-                              }
-                            }
-                          }
-                        }
-                      }
-                    },
                     "k": {
                       "docs": {
                         "module-j5e_thermometer.TMP36.html#K": {
@@ -9153,6 +9044,23 @@ window.lunrData = {
                                     "tf": 100
                                   }
                                 }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "a": {
+                      "docs": {},
+                      "r": {
+                        "docs": {},
+                        "e": {
+                          "docs": {},
+                          "f": {
+                            "docs": {
+                              "module-j5e_thermometer.TMP36.html#aref": {
+                                "ref": "module-j5e_thermometer.TMP36.html#aref",
+                                "tf": 100
                               }
                             }
                           }
@@ -9385,6 +9293,97 @@ window.lunrData = {
               "docs": {}
             }
           },
+          "r": {
+            "docs": {},
+            "u": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "module-j5e_relay-Relay.html#isClosed": {
+                    "ref": "module-j5e_relay-Relay.html#isClosed",
+                    "tf": 16.666666666666664
+                  },
+                  "module-j5e_switch-Switch.html#isClosed": {
+                    "ref": "module-j5e_switch-Switch.html#isClosed",
+                    "tf": 10
+                  },
+                  "module-j5e_switch-Switch.html#isOpen": {
+                    "ref": "module-j5e_switch-Switch.html#isOpen",
+                    "tf": 10
+                  },
+                  "module-j5e_button-Button.html#isClosed": {
+                    "ref": "module-j5e_button-Button.html#isClosed",
+                    "tf": 12.5
+                  },
+                  "module-j5e_button-Button.html#isOpen": {
+                    "ref": "module-j5e_button-Button.html#isOpen",
+                    "tf": 12.5
+                  },
+                  "module-j5e_led-LED.html#isRunning": {
+                    "ref": "module-j5e_led-LED.html#isRunning",
+                    "tf": 10
+                  },
+                  "module-j5e_led-LED.html#brightness": {
+                    "ref": "module-j5e_led-LED.html#brightness",
+                    "tf": 6.25
+                  },
+                  "module-j5e_led-LED.html#intensity": {
+                    "ref": "module-j5e_led-LED.html#intensity",
+                    "tf": 6.25
+                  },
+                  "module-j5e_led-LED.html#fade": {
+                    "ref": "module-j5e_led-LED.html#fade",
+                    "tf": 5.555555555555555
+                  },
+                  "module-j5e_led-LED.html#fadeIn": {
+                    "ref": "module-j5e_led-LED.html#fadeIn",
+                    "tf": 6.25
+                  },
+                  "module-j5e_led-LED.html#fadeOut": {
+                    "ref": "module-j5e_led-LED.html#fadeOut",
+                    "tf": 6.25
+                  },
+                  "module-j5e_led-LED.html#pulse": {
+                    "ref": "module-j5e_led-LED.html#pulse",
+                    "tf": 4.166666666666666
+                  }
+                }
+              }
+            }
+          },
+          "y": {
+            "docs": {},
+            "p": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "module-j5e_relay-Relay.html#type": {
+                    "ref": "module-j5e_relay-Relay.html#type",
+                    "tf": 683.3333333333334
+                  },
+                  "module-j5e_button-Button.html#downValue": {
+                    "ref": "module-j5e_button-Button.html#downValue",
+                    "tf": 7.142857142857142
+                  },
+                  "module-j5e_button-Button.html#upValue": {
+                    "ref": "module-j5e_button-Button.html#upValue",
+                    "tf": 7.142857142857142
+                  }
+                }
+              },
+              "i": {
+                "docs": {},
+                "c": {
+                  "docs": {
+                    "module-j5e_fn.html": {
+                      "ref": "module-j5e_fn.html",
+                      "tf": 5
+                    }
+                  }
+                }
+              }
+            }
+          },
           "e": {
             "docs": {},
             "m": {
@@ -9471,13 +9470,13 @@ window.lunrData = {
                             "ref": "module-j5e_thermometer.MF52A103J3470.html#configure",
                             "tf": 658.3333333333334
                           },
-                          "module-j5e_relay-Relay.html#configure": {
-                            "ref": "module-j5e_relay-Relay.html#configure",
-                            "tf": 708.3333333333334
-                          },
                           "module-j5e_thermometer.TMP36.html#configure": {
                             "ref": "module-j5e_thermometer.TMP36.html#configure",
                             "tf": 658.3333333333334
+                          },
+                          "module-j5e_relay-Relay.html#configure": {
+                            "ref": "module-j5e_relay-Relay.html#configure",
+                            "tf": 708.3333333333334
                           },
                           "module-j5e_light-Light.html#configure": {
                             "ref": "module-j5e_light-Light.html#configure",
@@ -9493,7 +9492,7 @@ window.lunrData = {
                           },
                           "module-j5e_thermometer-Thermometer.html#configure": {
                             "ref": "module-j5e_thermometer-Thermometer.html#configure",
-                            "tf": 708.3333333333334
+                            "tf": 725
                           },
                           "module-j5e_sensor-Sensor.html#configure": {
                             "ref": "module-j5e_sensor-Sensor.html#configure",
@@ -9749,13 +9748,13 @@ window.lunrData = {
                       "ref": "module-j5e_thermometer.MF52A103J3470.html",
                       "tf": 118.33333333333333
                     },
-                    "module-j5e_relay-Relay.html": {
-                      "ref": "module-j5e_relay-Relay.html",
-                      "tf": 120
-                    },
                     "module-j5e_thermometer.TMP36.html": {
                       "ref": "module-j5e_thermometer.TMP36.html",
                       "tf": 115.55555555555556
+                    },
+                    "module-j5e_relay-Relay.html": {
+                      "ref": "module-j5e_relay-Relay.html",
+                      "tf": 120
                     },
                     "module-j5e_light-Light.html": {
                       "ref": "module-j5e_light-Light.html",
@@ -10824,29 +10823,6 @@ window.lunrData = {
                         }
                       }
                     },
-                    "i": {
-                      "docs": {},
-                      "n": {
-                        "docs": {},
-                        "t": {
-                          "docs": {},
-                          "e": {
-                            "docs": {},
-                            "r": {
-                              "docs": {},
-                              "v": {
-                                "docs": {
-                                  "module-j5e_thermometer.LM335.html#interval": {
-                                    "ref": "module-j5e_thermometer.LM335.html#interval",
-                                    "tf": 100
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    },
                     "f": {
                       "docs": {
                         "module-j5e_thermometer.LM335.html#F": {
@@ -10905,6 +10881,29 @@ window.lunrData = {
                                         "tf": 100
                                       }
                                     }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "i": {
+                      "docs": {},
+                      "n": {
+                        "docs": {},
+                        "t": {
+                          "docs": {},
+                          "e": {
+                            "docs": {},
+                            "r": {
+                              "docs": {},
+                              "v": {
+                                "docs": {
+                                  "module-j5e_thermometer.LM335.html#interval": {
+                                    "ref": "module-j5e_thermometer.LM335.html#interval",
+                                    "tf": 100
                                   }
                                 }
                               }
@@ -10985,23 +10984,6 @@ window.lunrData = {
                         }
                       }
                     },
-                    "a": {
-                      "docs": {},
-                      "r": {
-                        "docs": {},
-                        "e": {
-                          "docs": {},
-                          "f": {
-                            "docs": {
-                              "module-j5e_thermometer.LM335.html#aref": {
-                                "ref": "module-j5e_thermometer.LM335.html#aref",
-                                "tf": 100
-                              }
-                            }
-                          }
-                        }
-                      }
-                    },
                     "k": {
                       "docs": {
                         "module-j5e_thermometer.LM335.html#K": {
@@ -11024,6 +11006,23 @@ window.lunrData = {
                                     "tf": 100
                                   }
                                 }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "a": {
+                      "docs": {},
+                      "r": {
+                        "docs": {},
+                        "e": {
+                          "docs": {},
+                          "f": {
+                            "docs": {
+                              "module-j5e_thermometer.LM335.html#aref": {
+                                "ref": "module-j5e_thermometer.LM335.html#aref",
+                                "tf": 100
                               }
                             }
                           }
@@ -11372,29 +11371,6 @@ window.lunrData = {
                       }
                     }
                   },
-                  "i": {
-                    "docs": {},
-                    "n": {
-                      "docs": {},
-                      "t": {
-                        "docs": {},
-                        "e": {
-                          "docs": {},
-                          "r": {
-                            "docs": {},
-                            "v": {
-                              "docs": {
-                                "module-j5e_thermometer.LM35.html#interval": {
-                                  "ref": "module-j5e_thermometer.LM35.html#interval",
-                                  "tf": 100
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  },
                   "f": {
                     "docs": {
                       "module-j5e_thermometer.LM35.html#F": {
@@ -11453,6 +11429,29 @@ window.lunrData = {
                                       "tf": 100
                                     }
                                   }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "i": {
+                    "docs": {},
+                    "n": {
+                      "docs": {},
+                      "t": {
+                        "docs": {},
+                        "e": {
+                          "docs": {},
+                          "r": {
+                            "docs": {},
+                            "v": {
+                              "docs": {
+                                "module-j5e_thermometer.LM35.html#interval": {
+                                  "ref": "module-j5e_thermometer.LM35.html#interval",
+                                  "tf": 100
                                 }
                               }
                             }
@@ -11533,23 +11532,6 @@ window.lunrData = {
                       }
                     }
                   },
-                  "a": {
-                    "docs": {},
-                    "r": {
-                      "docs": {},
-                      "e": {
-                        "docs": {},
-                        "f": {
-                          "docs": {
-                            "module-j5e_thermometer.LM35.html#aref": {
-                              "ref": "module-j5e_thermometer.LM35.html#aref",
-                              "tf": 100
-                            }
-                          }
-                        }
-                      }
-                    }
-                  },
                   "k": {
                     "docs": {
                       "module-j5e_thermometer.LM35.html#K": {
@@ -11572,6 +11554,23 @@ window.lunrData = {
                                   "tf": 100
                                 }
                               }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "a": {
+                    "docs": {},
+                    "r": {
+                      "docs": {},
+                      "e": {
+                        "docs": {},
+                        "f": {
+                          "docs": {
+                            "module-j5e_thermometer.LM35.html#aref": {
+                              "ref": "module-j5e_thermometer.LM35.html#aref",
+                              "tf": 100
                             }
                           }
                         }
@@ -11835,12 +11834,12 @@ window.lunrData = {
                                   "ref": "module-j5e_thermometer.MF52A103J3470.html",
                                   "tf": 50
                                 },
-                                "module-j5e_relay-Relay.html": {
-                                  "ref": "module-j5e_relay-Relay.html",
-                                  "tf": 50
-                                },
                                 "module-j5e_thermometer.TMP36.html": {
                                   "ref": "module-j5e_thermometer.TMP36.html",
+                                  "tf": 50
+                                },
+                                "module-j5e_relay-Relay.html": {
+                                  "ref": "module-j5e_relay-Relay.html",
                                   "tf": 50
                                 },
                                 "module-j5e_light-Light.html": {
@@ -11926,12 +11925,12 @@ window.lunrData = {
                                         "ref": "module-j5e_thermometer.LM335.html#kelvin",
                                         "tf": 33.33333333333333
                                       },
-                                      "module-j5e_thermometer.LM335.html#range": {
-                                        "ref": "module-j5e_thermometer.LM335.html#range",
-                                        "tf": 33.33333333333333
-                                      },
                                       "module-j5e_thermometer.LM335.html#K": {
                                         "ref": "module-j5e_thermometer.LM335.html#K",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_thermometer.LM335.html#range": {
+                                        "ref": "module-j5e_thermometer.LM335.html#range",
                                         "tf": 33.33333333333333
                                       },
                                       "module-j5e_thermometer.LM335.html#raw": {
@@ -11974,12 +11973,12 @@ window.lunrData = {
                                         "ref": "module-j5e_thermometer.LM35.html#kelvin",
                                         "tf": 33.33333333333333
                                       },
-                                      "module-j5e_thermometer.LM35.html#range": {
-                                        "ref": "module-j5e_thermometer.LM35.html#range",
-                                        "tf": 33.33333333333333
-                                      },
                                       "module-j5e_thermometer.LM35.html#K": {
                                         "ref": "module-j5e_thermometer.LM35.html#K",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_thermometer.LM35.html#range": {
+                                        "ref": "module-j5e_thermometer.LM35.html#range",
                                         "tf": 33.33333333333333
                                       },
                                       "module-j5e_thermometer.LM35.html#raw": {
@@ -12022,12 +12021,12 @@ window.lunrData = {
                                         "ref": "module-j5e_thermometer.MF52A103J3470.html#kelvin",
                                         "tf": 33.33333333333333
                                       },
-                                      "module-j5e_thermometer.MF52A103J3470.html#range": {
-                                        "ref": "module-j5e_thermometer.MF52A103J3470.html#range",
-                                        "tf": 33.33333333333333
-                                      },
                                       "module-j5e_thermometer.MF52A103J3470.html#K": {
                                         "ref": "module-j5e_thermometer.MF52A103J3470.html#K",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_thermometer.MF52A103J3470.html#range": {
+                                        "ref": "module-j5e_thermometer.MF52A103J3470.html#range",
                                         "tf": 33.33333333333333
                                       },
                                       "module-j5e_thermometer.MF52A103J3470.html#raw": {
@@ -12050,18 +12049,6 @@ window.lunrData = {
                                         "ref": "module-j5e_thermometer.MF52A103J3470.html#value",
                                         "tf": 33.33333333333333
                                       },
-                                      "module-j5e_relay-Relay.html#value": {
-                                        "ref": "module-j5e_relay-Relay.html#value",
-                                        "tf": 33.33333333333333
-                                      },
-                                      "module-j5e_relay-Relay.html#isClosed": {
-                                        "ref": "module-j5e_relay-Relay.html#isClosed",
-                                        "tf": 33.33333333333333
-                                      },
-                                      "module-j5e_relay-Relay.html#type": {
-                                        "ref": "module-j5e_relay-Relay.html#type",
-                                        "tf": 33.33333333333333
-                                      },
                                       "module-j5e_thermometer.TMP36.html#celsius": {
                                         "ref": "module-j5e_thermometer.TMP36.html#celsius",
                                         "tf": 33.33333333333333
@@ -12082,12 +12069,12 @@ window.lunrData = {
                                         "ref": "module-j5e_thermometer.TMP36.html#kelvin",
                                         "tf": 33.33333333333333
                                       },
-                                      "module-j5e_thermometer.TMP36.html#range": {
-                                        "ref": "module-j5e_thermometer.TMP36.html#range",
-                                        "tf": 33.33333333333333
-                                      },
                                       "module-j5e_thermometer.TMP36.html#K": {
                                         "ref": "module-j5e_thermometer.TMP36.html#K",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_thermometer.TMP36.html#range": {
+                                        "ref": "module-j5e_thermometer.TMP36.html#range",
                                         "tf": 33.33333333333333
                                       },
                                       "module-j5e_thermometer.TMP36.html#raw": {
@@ -12108,6 +12095,18 @@ window.lunrData = {
                                       },
                                       "module-j5e_thermometer.TMP36.html#value": {
                                         "ref": "module-j5e_thermometer.TMP36.html#value",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_relay-Relay.html#value": {
+                                        "ref": "module-j5e_relay-Relay.html#value",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_relay-Relay.html#isClosed": {
+                                        "ref": "module-j5e_relay-Relay.html#isClosed",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_relay-Relay.html#type": {
+                                        "ref": "module-j5e_relay-Relay.html#type",
                                         "tf": 33.33333333333333
                                       },
                                       "module-j5e_light-Light.html#level": {
@@ -12991,13 +12990,13 @@ window.lunrData = {
                       "ref": "module-j5e_thermometer.MF52A103J3470.html",
                       "tf": 8.333333333333332
                     },
-                    "module-j5e_relay-Relay.html": {
-                      "ref": "module-j5e_relay-Relay.html",
-                      "tf": 10
-                    },
                     "module-j5e_thermometer.TMP36.html": {
                       "ref": "module-j5e_thermometer.TMP36.html",
                       "tf": 5.555555555555555
+                    },
+                    "module-j5e_relay-Relay.html": {
+                      "ref": "module-j5e_relay-Relay.html",
+                      "tf": 10
                     },
                     "module-j5e_light-Light.html": {
                       "ref": "module-j5e_light-Light.html",
@@ -13706,12 +13705,12 @@ window.lunrData = {
                         "ref": "module-j5e_thermometer.MF52A103J3470.html#configure",
                         "tf": 33.33333333333333
                       },
-                      "module-j5e_relay-Relay.html#configure": {
-                        "ref": "module-j5e_relay-Relay.html#configure",
-                        "tf": 33.33333333333333
-                      },
                       "module-j5e_thermometer.TMP36.html#configure": {
                         "ref": "module-j5e_thermometer.TMP36.html#configure",
+                        "tf": 33.33333333333333
+                      },
+                      "module-j5e_relay-Relay.html#configure": {
+                        "ref": "module-j5e_relay-Relay.html#configure",
                         "tf": 33.33333333333333
                       },
                       "module-j5e_light-Light.html#configure": {
@@ -13728,10 +13727,6 @@ window.lunrData = {
                       },
                       "module-j5e_button-Button.html#configure": {
                         "ref": "module-j5e_button-Button.html#configure",
-                        "tf": 33.33333333333333
-                      },
-                      "module-j5e_thermometer-Thermometer.html#configure": {
-                        "ref": "module-j5e_thermometer-Thermometer.html#configure",
                         "tf": 33.33333333333333
                       },
                       "module-j5e_sensor-Sensor.html#configure": {
@@ -14260,29 +14255,6 @@ window.lunrData = {
                                                                       }
                                                                     }
                                                                   },
-                                                                  "i": {
-                                                                    "docs": {},
-                                                                    "n": {
-                                                                      "docs": {},
-                                                                      "t": {
-                                                                        "docs": {},
-                                                                        "e": {
-                                                                          "docs": {},
-                                                                          "r": {
-                                                                            "docs": {},
-                                                                            "v": {
-                                                                              "docs": {
-                                                                                "module-j5e_thermometer.LM335.html#interval": {
-                                                                                  "ref": "module-j5e_thermometer.LM335.html#interval",
-                                                                                  "tf": 1100
-                                                                                }
-                                                                              }
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  },
                                                                   "f": {
                                                                     "docs": {
                                                                       "module-j5e_thermometer.LM335.html#F": {
@@ -14341,6 +14313,29 @@ window.lunrData = {
                                                                                       "tf": 1100
                                                                                     }
                                                                                   }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  },
+                                                                  "i": {
+                                                                    "docs": {},
+                                                                    "n": {
+                                                                      "docs": {},
+                                                                      "t": {
+                                                                        "docs": {},
+                                                                        "e": {
+                                                                          "docs": {},
+                                                                          "r": {
+                                                                            "docs": {},
+                                                                            "v": {
+                                                                              "docs": {
+                                                                                "module-j5e_thermometer.LM335.html#interval": {
+                                                                                  "ref": "module-j5e_thermometer.LM335.html#interval",
+                                                                                  "tf": 1100
                                                                                 }
                                                                               }
                                                                             }
@@ -14422,23 +14417,6 @@ window.lunrData = {
                                                                       }
                                                                     }
                                                                   },
-                                                                  "a": {
-                                                                    "docs": {},
-                                                                    "r": {
-                                                                      "docs": {},
-                                                                      "e": {
-                                                                        "docs": {},
-                                                                        "f": {
-                                                                          "docs": {
-                                                                            "module-j5e_thermometer.LM335.html#aref": {
-                                                                              "ref": "module-j5e_thermometer.LM335.html#aref",
-                                                                              "tf": 1100
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  },
                                                                   "k": {
                                                                     "docs": {
                                                                       "module-j5e_thermometer.LM335.html#K": {
@@ -14461,6 +14439,23 @@ window.lunrData = {
                                                                                   "tf": 1100
                                                                                 }
                                                                               }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  },
+                                                                  "a": {
+                                                                    "docs": {},
+                                                                    "r": {
+                                                                      "docs": {},
+                                                                      "e": {
+                                                                        "docs": {},
+                                                                        "f": {
+                                                                          "docs": {
+                                                                            "module-j5e_thermometer.LM335.html#aref": {
+                                                                              "ref": "module-j5e_thermometer.LM335.html#aref",
+                                                                              "tf": 1100
                                                                             }
                                                                           }
                                                                         }
@@ -14787,29 +14782,6 @@ window.lunrData = {
                                                                     }
                                                                   }
                                                                 },
-                                                                "i": {
-                                                                  "docs": {},
-                                                                  "n": {
-                                                                    "docs": {},
-                                                                    "t": {
-                                                                      "docs": {},
-                                                                      "e": {
-                                                                        "docs": {},
-                                                                        "r": {
-                                                                          "docs": {},
-                                                                          "v": {
-                                                                            "docs": {
-                                                                              "module-j5e_thermometer.LM35.html#interval": {
-                                                                                "ref": "module-j5e_thermometer.LM35.html#interval",
-                                                                                "tf": 1100
-                                                                              }
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                },
                                                                 "f": {
                                                                   "docs": {
                                                                     "module-j5e_thermometer.LM35.html#F": {
@@ -14868,6 +14840,29 @@ window.lunrData = {
                                                                                     "tf": 1100
                                                                                   }
                                                                                 }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                },
+                                                                "i": {
+                                                                  "docs": {},
+                                                                  "n": {
+                                                                    "docs": {},
+                                                                    "t": {
+                                                                      "docs": {},
+                                                                      "e": {
+                                                                        "docs": {},
+                                                                        "r": {
+                                                                          "docs": {},
+                                                                          "v": {
+                                                                            "docs": {
+                                                                              "module-j5e_thermometer.LM35.html#interval": {
+                                                                                "ref": "module-j5e_thermometer.LM35.html#interval",
+                                                                                "tf": 1100
                                                                               }
                                                                             }
                                                                           }
@@ -14949,23 +14944,6 @@ window.lunrData = {
                                                                     }
                                                                   }
                                                                 },
-                                                                "a": {
-                                                                  "docs": {},
-                                                                  "r": {
-                                                                    "docs": {},
-                                                                    "e": {
-                                                                      "docs": {},
-                                                                      "f": {
-                                                                        "docs": {
-                                                                          "module-j5e_thermometer.LM35.html#aref": {
-                                                                            "ref": "module-j5e_thermometer.LM35.html#aref",
-                                                                            "tf": 1100
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                },
                                                                 "k": {
                                                                   "docs": {
                                                                     "module-j5e_thermometer.LM35.html#K": {
@@ -14988,6 +14966,23 @@ window.lunrData = {
                                                                                 "tf": 1100
                                                                               }
                                                                             }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                },
+                                                                "a": {
+                                                                  "docs": {},
+                                                                  "r": {
+                                                                    "docs": {},
+                                                                    "e": {
+                                                                      "docs": {},
+                                                                      "f": {
+                                                                        "docs": {
+                                                                          "module-j5e_thermometer.LM35.html#aref": {
+                                                                            "ref": "module-j5e_thermometer.LM35.html#aref",
+                                                                            "tf": 1100
                                                                           }
                                                                         }
                                                                       }
@@ -15332,29 +15327,6 @@ window.lunrData = {
                                                                                       }
                                                                                     }
                                                                                   },
-                                                                                  "i": {
-                                                                                    "docs": {},
-                                                                                    "n": {
-                                                                                      "docs": {},
-                                                                                      "t": {
-                                                                                        "docs": {},
-                                                                                        "e": {
-                                                                                          "docs": {},
-                                                                                          "r": {
-                                                                                            "docs": {},
-                                                                                            "v": {
-                                                                                              "docs": {
-                                                                                                "module-j5e_thermometer.MF52A103J3470.html#interval": {
-                                                                                                  "ref": "module-j5e_thermometer.MF52A103J3470.html#interval",
-                                                                                                  "tf": 1100
-                                                                                                }
-                                                                                              }
-                                                                                            }
-                                                                                          }
-                                                                                        }
-                                                                                      }
-                                                                                    }
-                                                                                  },
                                                                                   "f": {
                                                                                     "docs": {
                                                                                       "module-j5e_thermometer.MF52A103J3470.html#F": {
@@ -15413,6 +15385,29 @@ window.lunrData = {
                                                                                                       "tf": 1100
                                                                                                     }
                                                                                                   }
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  },
+                                                                                  "i": {
+                                                                                    "docs": {},
+                                                                                    "n": {
+                                                                                      "docs": {},
+                                                                                      "t": {
+                                                                                        "docs": {},
+                                                                                        "e": {
+                                                                                          "docs": {},
+                                                                                          "r": {
+                                                                                            "docs": {},
+                                                                                            "v": {
+                                                                                              "docs": {
+                                                                                                "module-j5e_thermometer.MF52A103J3470.html#interval": {
+                                                                                                  "ref": "module-j5e_thermometer.MF52A103J3470.html#interval",
+                                                                                                  "tf": 1100
                                                                                                 }
                                                                                               }
                                                                                             }
@@ -15494,23 +15489,6 @@ window.lunrData = {
                                                                                       }
                                                                                     }
                                                                                   },
-                                                                                  "a": {
-                                                                                    "docs": {},
-                                                                                    "r": {
-                                                                                      "docs": {},
-                                                                                      "e": {
-                                                                                        "docs": {},
-                                                                                        "f": {
-                                                                                          "docs": {
-                                                                                            "module-j5e_thermometer.MF52A103J3470.html#aref": {
-                                                                                              "ref": "module-j5e_thermometer.MF52A103J3470.html#aref",
-                                                                                              "tf": 1100
-                                                                                            }
-                                                                                          }
-                                                                                        }
-                                                                                      }
-                                                                                    }
-                                                                                  },
                                                                                   "k": {
                                                                                     "docs": {
                                                                                       "module-j5e_thermometer.MF52A103J3470.html#K": {
@@ -15533,6 +15511,23 @@ window.lunrData = {
                                                                                                   "tf": 1100
                                                                                                 }
                                                                                               }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  },
+                                                                                  "a": {
+                                                                                    "docs": {},
+                                                                                    "r": {
+                                                                                      "docs": {},
+                                                                                      "e": {
+                                                                                        "docs": {},
+                                                                                        "f": {
+                                                                                          "docs": {
+                                                                                            "module-j5e_thermometer.MF52A103J3470.html#aref": {
+                                                                                              "ref": "module-j5e_thermometer.MF52A103J3470.html#aref",
+                                                                                              "tf": 1100
                                                                                             }
                                                                                           }
                                                                                         }
@@ -15884,29 +15879,6 @@ window.lunrData = {
                                                                       }
                                                                     }
                                                                   },
-                                                                  "i": {
-                                                                    "docs": {},
-                                                                    "n": {
-                                                                      "docs": {},
-                                                                      "t": {
-                                                                        "docs": {},
-                                                                        "e": {
-                                                                          "docs": {},
-                                                                          "r": {
-                                                                            "docs": {},
-                                                                            "v": {
-                                                                              "docs": {
-                                                                                "module-j5e_thermometer.TMP36.html#interval": {
-                                                                                  "ref": "module-j5e_thermometer.TMP36.html#interval",
-                                                                                  "tf": 1100
-                                                                                }
-                                                                              }
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  },
                                                                   "f": {
                                                                     "docs": {
                                                                       "module-j5e_thermometer.TMP36.html#F": {
@@ -15965,6 +15937,29 @@ window.lunrData = {
                                                                                       "tf": 1100
                                                                                     }
                                                                                   }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  },
+                                                                  "i": {
+                                                                    "docs": {},
+                                                                    "n": {
+                                                                      "docs": {},
+                                                                      "t": {
+                                                                        "docs": {},
+                                                                        "e": {
+                                                                          "docs": {},
+                                                                          "r": {
+                                                                            "docs": {},
+                                                                            "v": {
+                                                                              "docs": {
+                                                                                "module-j5e_thermometer.TMP36.html#interval": {
+                                                                                  "ref": "module-j5e_thermometer.TMP36.html#interval",
+                                                                                  "tf": 1100
                                                                                 }
                                                                               }
                                                                             }
@@ -16046,23 +16041,6 @@ window.lunrData = {
                                                                       }
                                                                     }
                                                                   },
-                                                                  "a": {
-                                                                    "docs": {},
-                                                                    "r": {
-                                                                      "docs": {},
-                                                                      "e": {
-                                                                        "docs": {},
-                                                                        "f": {
-                                                                          "docs": {
-                                                                            "module-j5e_thermometer.TMP36.html#aref": {
-                                                                              "ref": "module-j5e_thermometer.TMP36.html#aref",
-                                                                              "tf": 1100
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  },
                                                                   "k": {
                                                                     "docs": {
                                                                       "module-j5e_thermometer.TMP36.html#K": {
@@ -16085,6 +16063,23 @@ window.lunrData = {
                                                                                   "tf": 1100
                                                                                 }
                                                                               }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  },
+                                                                  "a": {
+                                                                    "docs": {},
+                                                                    "r": {
+                                                                      "docs": {},
+                                                                      "e": {
+                                                                        "docs": {},
+                                                                        "f": {
+                                                                          "docs": {
+                                                                            "module-j5e_thermometer.TMP36.html#aref": {
+                                                                              "ref": "module-j5e_thermometer.TMP36.html#aref",
+                                                                              "tf": 1100
                                                                             }
                                                                           }
                                                                         }
@@ -19643,20 +19638,20 @@ window.lunrData = {
                         "ref": "module-j5e_thermometer.LM335.html#limit",
                         "tf": 110
                       },
-                      "module-j5e_thermometer.LM335.html#threshold": {
-                        "ref": "module-j5e_thermometer.LM335.html#threshold",
-                        "tf": 110
-                      },
                       "module-j5e_thermometer.LM335.html#C": {
                         "ref": "module-j5e_thermometer.LM335.html#C",
                         "tf": 110
                       },
-                      "module-j5e_thermometer.LM335.html#interval": {
-                        "ref": "module-j5e_thermometer.LM335.html#interval",
+                      "module-j5e_thermometer.LM335.html#threshold": {
+                        "ref": "module-j5e_thermometer.LM335.html#threshold",
                         "tf": 110
                       },
                       "module-j5e_thermometer.LM335.html#fahrenheit": {
                         "ref": "module-j5e_thermometer.LM335.html#fahrenheit",
+                        "tf": 110
+                      },
+                      "module-j5e_thermometer.LM335.html#interval": {
+                        "ref": "module-j5e_thermometer.LM335.html#interval",
                         "tf": 110
                       },
                       "module-j5e_thermometer.LM335.html#F": {
@@ -19667,24 +19662,24 @@ window.lunrData = {
                         "ref": "module-j5e_thermometer.LM335.html#smoothing",
                         "tf": 110
                       },
-                      "module-j5e_thermometer.LM335.html#aref": {
-                        "ref": "module-j5e_thermometer.LM335.html#aref",
-                        "tf": 110
-                      },
                       "module-j5e_thermometer.LM335.html#kelvin": {
                         "ref": "module-j5e_thermometer.LM335.html#kelvin",
+                        "tf": 110
+                      },
+                      "module-j5e_thermometer.LM335.html#aref": {
+                        "ref": "module-j5e_thermometer.LM335.html#aref",
                         "tf": 110
                       },
                       "module-j5e_thermometer.LM335.html#samples": {
                         "ref": "module-j5e_thermometer.LM335.html#samples",
                         "tf": 110
                       },
-                      "module-j5e_thermometer.LM335.html#range": {
-                        "ref": "module-j5e_thermometer.LM335.html#range",
-                        "tf": 110
-                      },
                       "module-j5e_thermometer.LM335.html#K": {
                         "ref": "module-j5e_thermometer.LM335.html#K",
+                        "tf": 110
+                      },
+                      "module-j5e_thermometer.LM335.html#range": {
+                        "ref": "module-j5e_thermometer.LM335.html#range",
                         "tf": 110
                       },
                       "module-j5e_thermometer.LM335.html#raw": {
@@ -19715,20 +19710,20 @@ window.lunrData = {
                         "ref": "module-j5e_thermometer.LM35.html#limit",
                         "tf": 110
                       },
-                      "module-j5e_thermometer.LM35.html#threshold": {
-                        "ref": "module-j5e_thermometer.LM35.html#threshold",
-                        "tf": 110
-                      },
                       "module-j5e_thermometer.LM35.html#C": {
                         "ref": "module-j5e_thermometer.LM35.html#C",
                         "tf": 110
                       },
-                      "module-j5e_thermometer.LM35.html#interval": {
-                        "ref": "module-j5e_thermometer.LM35.html#interval",
+                      "module-j5e_thermometer.LM35.html#threshold": {
+                        "ref": "module-j5e_thermometer.LM35.html#threshold",
                         "tf": 110
                       },
                       "module-j5e_thermometer.LM35.html#fahrenheit": {
                         "ref": "module-j5e_thermometer.LM35.html#fahrenheit",
+                        "tf": 110
+                      },
+                      "module-j5e_thermometer.LM35.html#interval": {
+                        "ref": "module-j5e_thermometer.LM35.html#interval",
                         "tf": 110
                       },
                       "module-j5e_thermometer.LM35.html#F": {
@@ -19739,24 +19734,24 @@ window.lunrData = {
                         "ref": "module-j5e_thermometer.LM35.html#smoothing",
                         "tf": 110
                       },
-                      "module-j5e_thermometer.LM35.html#aref": {
-                        "ref": "module-j5e_thermometer.LM35.html#aref",
-                        "tf": 110
-                      },
                       "module-j5e_thermometer.LM35.html#kelvin": {
                         "ref": "module-j5e_thermometer.LM35.html#kelvin",
+                        "tf": 110
+                      },
+                      "module-j5e_thermometer.LM35.html#aref": {
+                        "ref": "module-j5e_thermometer.LM35.html#aref",
                         "tf": 110
                       },
                       "module-j5e_thermometer.LM35.html#samples": {
                         "ref": "module-j5e_thermometer.LM35.html#samples",
                         "tf": 110
                       },
-                      "module-j5e_thermometer.LM35.html#range": {
-                        "ref": "module-j5e_thermometer.LM35.html#range",
-                        "tf": 110
-                      },
                       "module-j5e_thermometer.LM35.html#K": {
                         "ref": "module-j5e_thermometer.LM35.html#K",
+                        "tf": 110
+                      },
+                      "module-j5e_thermometer.LM35.html#range": {
+                        "ref": "module-j5e_thermometer.LM35.html#range",
                         "tf": 110
                       },
                       "module-j5e_thermometer.LM35.html#raw": {
@@ -19787,20 +19782,20 @@ window.lunrData = {
                         "ref": "module-j5e_thermometer.MF52A103J3470.html#limit",
                         "tf": 110
                       },
-                      "module-j5e_thermometer.MF52A103J3470.html#threshold": {
-                        "ref": "module-j5e_thermometer.MF52A103J3470.html#threshold",
-                        "tf": 110
-                      },
                       "module-j5e_thermometer.MF52A103J3470.html#C": {
                         "ref": "module-j5e_thermometer.MF52A103J3470.html#C",
                         "tf": 110
                       },
-                      "module-j5e_thermometer.MF52A103J3470.html#interval": {
-                        "ref": "module-j5e_thermometer.MF52A103J3470.html#interval",
+                      "module-j5e_thermometer.MF52A103J3470.html#threshold": {
+                        "ref": "module-j5e_thermometer.MF52A103J3470.html#threshold",
                         "tf": 110
                       },
                       "module-j5e_thermometer.MF52A103J3470.html#fahrenheit": {
                         "ref": "module-j5e_thermometer.MF52A103J3470.html#fahrenheit",
+                        "tf": 110
+                      },
+                      "module-j5e_thermometer.MF52A103J3470.html#interval": {
+                        "ref": "module-j5e_thermometer.MF52A103J3470.html#interval",
                         "tf": 110
                       },
                       "module-j5e_thermometer.MF52A103J3470.html#F": {
@@ -19811,24 +19806,24 @@ window.lunrData = {
                         "ref": "module-j5e_thermometer.MF52A103J3470.html#smoothing",
                         "tf": 110
                       },
-                      "module-j5e_thermometer.MF52A103J3470.html#aref": {
-                        "ref": "module-j5e_thermometer.MF52A103J3470.html#aref",
-                        "tf": 110
-                      },
                       "module-j5e_thermometer.MF52A103J3470.html#kelvin": {
                         "ref": "module-j5e_thermometer.MF52A103J3470.html#kelvin",
+                        "tf": 110
+                      },
+                      "module-j5e_thermometer.MF52A103J3470.html#aref": {
+                        "ref": "module-j5e_thermometer.MF52A103J3470.html#aref",
                         "tf": 110
                       },
                       "module-j5e_thermometer.MF52A103J3470.html#samples": {
                         "ref": "module-j5e_thermometer.MF52A103J3470.html#samples",
                         "tf": 110
                       },
-                      "module-j5e_thermometer.MF52A103J3470.html#range": {
-                        "ref": "module-j5e_thermometer.MF52A103J3470.html#range",
-                        "tf": 110
-                      },
                       "module-j5e_thermometer.MF52A103J3470.html#K": {
                         "ref": "module-j5e_thermometer.MF52A103J3470.html#K",
+                        "tf": 110
+                      },
+                      "module-j5e_thermometer.MF52A103J3470.html#range": {
+                        "ref": "module-j5e_thermometer.MF52A103J3470.html#range",
                         "tf": 110
                       },
                       "module-j5e_thermometer.MF52A103J3470.html#raw": {
@@ -19851,18 +19846,6 @@ window.lunrData = {
                         "ref": "module-j5e_thermometer.MF52A103J3470.html#value",
                         "tf": 110
                       },
-                      "module-j5e_relay-Relay.html#value": {
-                        "ref": "module-j5e_relay-Relay.html#value",
-                        "tf": 110
-                      },
-                      "module-j5e_relay-Relay.html#isClosed": {
-                        "ref": "module-j5e_relay-Relay.html#isClosed",
-                        "tf": 110
-                      },
-                      "module-j5e_relay-Relay.html#type": {
-                        "ref": "module-j5e_relay-Relay.html#type",
-                        "tf": 110
-                      },
                       "module-j5e_thermometer.TMP36.html#celsius": {
                         "ref": "module-j5e_thermometer.TMP36.html#celsius",
                         "tf": 110
@@ -19871,20 +19854,20 @@ window.lunrData = {
                         "ref": "module-j5e_thermometer.TMP36.html#limit",
                         "tf": 110
                       },
-                      "module-j5e_thermometer.TMP36.html#threshold": {
-                        "ref": "module-j5e_thermometer.TMP36.html#threshold",
-                        "tf": 110
-                      },
                       "module-j5e_thermometer.TMP36.html#C": {
                         "ref": "module-j5e_thermometer.TMP36.html#C",
                         "tf": 110
                       },
-                      "module-j5e_thermometer.TMP36.html#interval": {
-                        "ref": "module-j5e_thermometer.TMP36.html#interval",
+                      "module-j5e_thermometer.TMP36.html#threshold": {
+                        "ref": "module-j5e_thermometer.TMP36.html#threshold",
                         "tf": 110
                       },
                       "module-j5e_thermometer.TMP36.html#fahrenheit": {
                         "ref": "module-j5e_thermometer.TMP36.html#fahrenheit",
+                        "tf": 110
+                      },
+                      "module-j5e_thermometer.TMP36.html#interval": {
+                        "ref": "module-j5e_thermometer.TMP36.html#interval",
                         "tf": 110
                       },
                       "module-j5e_thermometer.TMP36.html#F": {
@@ -19895,24 +19878,24 @@ window.lunrData = {
                         "ref": "module-j5e_thermometer.TMP36.html#smoothing",
                         "tf": 110
                       },
-                      "module-j5e_thermometer.TMP36.html#aref": {
-                        "ref": "module-j5e_thermometer.TMP36.html#aref",
-                        "tf": 110
-                      },
                       "module-j5e_thermometer.TMP36.html#kelvin": {
                         "ref": "module-j5e_thermometer.TMP36.html#kelvin",
+                        "tf": 110
+                      },
+                      "module-j5e_thermometer.TMP36.html#aref": {
+                        "ref": "module-j5e_thermometer.TMP36.html#aref",
                         "tf": 110
                       },
                       "module-j5e_thermometer.TMP36.html#samples": {
                         "ref": "module-j5e_thermometer.TMP36.html#samples",
                         "tf": 110
                       },
-                      "module-j5e_thermometer.TMP36.html#range": {
-                        "ref": "module-j5e_thermometer.TMP36.html#range",
-                        "tf": 110
-                      },
                       "module-j5e_thermometer.TMP36.html#K": {
                         "ref": "module-j5e_thermometer.TMP36.html#K",
+                        "tf": 110
+                      },
+                      "module-j5e_thermometer.TMP36.html#range": {
+                        "ref": "module-j5e_thermometer.TMP36.html#range",
                         "tf": 110
                       },
                       "module-j5e_thermometer.TMP36.html#raw": {
@@ -19933,6 +19916,18 @@ window.lunrData = {
                       },
                       "module-j5e_thermometer.TMP36.html#value": {
                         "ref": "module-j5e_thermometer.TMP36.html#value",
+                        "tf": 110
+                      },
+                      "module-j5e_relay-Relay.html#value": {
+                        "ref": "module-j5e_relay-Relay.html#value",
+                        "tf": 110
+                      },
+                      "module-j5e_relay-Relay.html#isClosed": {
+                        "ref": "module-j5e_relay-Relay.html#isClosed",
+                        "tf": 110
+                      },
+                      "module-j5e_relay-Relay.html#type": {
+                        "ref": "module-j5e_relay-Relay.html#type",
                         "tf": 110
                       },
                       "module-j5e_light-Light.html#level": {
@@ -20610,29 +20605,6 @@ window.lunrData = {
                                         }
                                       }
                                     },
-                                    "i": {
-                                      "docs": {},
-                                      "n": {
-                                        "docs": {},
-                                        "t": {
-                                          "docs": {},
-                                          "e": {
-                                            "docs": {},
-                                            "r": {
-                                              "docs": {},
-                                              "v": {
-                                                "docs": {
-                                                  "module-j5e_thermometer.MF52A103J3470.html#interval": {
-                                                    "ref": "module-j5e_thermometer.MF52A103J3470.html#interval",
-                                                    "tf": 100
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    },
                                     "f": {
                                       "docs": {
                                         "module-j5e_thermometer.MF52A103J3470.html#F": {
@@ -20691,6 +20663,29 @@ window.lunrData = {
                                                         "tf": 100
                                                       }
                                                     }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "i": {
+                                      "docs": {},
+                                      "n": {
+                                        "docs": {},
+                                        "t": {
+                                          "docs": {},
+                                          "e": {
+                                            "docs": {},
+                                            "r": {
+                                              "docs": {},
+                                              "v": {
+                                                "docs": {
+                                                  "module-j5e_thermometer.MF52A103J3470.html#interval": {
+                                                    "ref": "module-j5e_thermometer.MF52A103J3470.html#interval",
+                                                    "tf": 100
                                                   }
                                                 }
                                               }
@@ -20771,23 +20766,6 @@ window.lunrData = {
                                         }
                                       }
                                     },
-                                    "a": {
-                                      "docs": {},
-                                      "r": {
-                                        "docs": {},
-                                        "e": {
-                                          "docs": {},
-                                          "f": {
-                                            "docs": {
-                                              "module-j5e_thermometer.MF52A103J3470.html#aref": {
-                                                "ref": "module-j5e_thermometer.MF52A103J3470.html#aref",
-                                                "tf": 100
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    },
                                     "k": {
                                       "docs": {
                                         "module-j5e_thermometer.MF52A103J3470.html#K": {
@@ -20810,6 +20788,23 @@ window.lunrData = {
                                                     "tf": 100
                                                   }
                                                 }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "a": {
+                                      "docs": {},
+                                      "r": {
+                                        "docs": {},
+                                        "e": {
+                                          "docs": {},
+                                          "f": {
+                                            "docs": {
+                                              "module-j5e_thermometer.MF52A103J3470.html#aref": {
+                                                "ref": "module-j5e_thermometer.MF52A103J3470.html#aref",
+                                                "tf": 100
                                               }
                                             }
                                           }
@@ -21056,21 +21051,21 @@ window.lunrData = {
                         "ref": "module-j5e_thermometer.LM335.html#celsius",
                         "tf": 33.33333333333333
                       },
-                      "module-j5e_thermometer.LM335.html#threshold": {
-                        "ref": "module-j5e_thermometer.LM335.html#threshold",
-                        "tf": 50
-                      },
                       "module-j5e_thermometer.LM335.html#C": {
                         "ref": "module-j5e_thermometer.LM335.html#C",
                         "tf": 33.33333333333333
                       },
-                      "module-j5e_thermometer.LM335.html#interval": {
-                        "ref": "module-j5e_thermometer.LM335.html#interval",
+                      "module-j5e_thermometer.LM335.html#threshold": {
+                        "ref": "module-j5e_thermometer.LM335.html#threshold",
                         "tf": 50
                       },
                       "module-j5e_thermometer.LM335.html#fahrenheit": {
                         "ref": "module-j5e_thermometer.LM335.html#fahrenheit",
                         "tf": 33.33333333333333
+                      },
+                      "module-j5e_thermometer.LM335.html#interval": {
+                        "ref": "module-j5e_thermometer.LM335.html#interval",
+                        "tf": 50
                       },
                       "module-j5e_thermometer.LM335.html#F": {
                         "ref": "module-j5e_thermometer.LM335.html#F",
@@ -21080,13 +21075,13 @@ window.lunrData = {
                         "ref": "module-j5e_thermometer.LM335.html#smoothing",
                         "tf": 58.33333333333333
                       },
-                      "module-j5e_thermometer.LM335.html#aref": {
-                        "ref": "module-j5e_thermometer.LM335.html#aref",
-                        "tf": 50
-                      },
                       "module-j5e_thermometer.LM335.html#kelvin": {
                         "ref": "module-j5e_thermometer.LM335.html#kelvin",
                         "tf": 33.33333333333333
+                      },
+                      "module-j5e_thermometer.LM335.html#aref": {
+                        "ref": "module-j5e_thermometer.LM335.html#aref",
+                        "tf": 50
                       },
                       "module-j5e_thermometer.LM335.html#samples": {
                         "ref": "module-j5e_thermometer.LM335.html#samples",
@@ -21132,21 +21127,21 @@ window.lunrData = {
                         "ref": "module-j5e_thermometer.LM35.html#celsius",
                         "tf": 33.33333333333333
                       },
-                      "module-j5e_thermometer.LM35.html#threshold": {
-                        "ref": "module-j5e_thermometer.LM35.html#threshold",
-                        "tf": 50
-                      },
                       "module-j5e_thermometer.LM35.html#C": {
                         "ref": "module-j5e_thermometer.LM35.html#C",
                         "tf": 33.33333333333333
                       },
-                      "module-j5e_thermometer.LM35.html#interval": {
-                        "ref": "module-j5e_thermometer.LM35.html#interval",
+                      "module-j5e_thermometer.LM35.html#threshold": {
+                        "ref": "module-j5e_thermometer.LM35.html#threshold",
                         "tf": 50
                       },
                       "module-j5e_thermometer.LM35.html#fahrenheit": {
                         "ref": "module-j5e_thermometer.LM35.html#fahrenheit",
                         "tf": 33.33333333333333
+                      },
+                      "module-j5e_thermometer.LM35.html#interval": {
+                        "ref": "module-j5e_thermometer.LM35.html#interval",
+                        "tf": 50
                       },
                       "module-j5e_thermometer.LM35.html#F": {
                         "ref": "module-j5e_thermometer.LM35.html#F",
@@ -21156,13 +21151,13 @@ window.lunrData = {
                         "ref": "module-j5e_thermometer.LM35.html#smoothing",
                         "tf": 58.33333333333333
                       },
-                      "module-j5e_thermometer.LM35.html#aref": {
-                        "ref": "module-j5e_thermometer.LM35.html#aref",
-                        "tf": 50
-                      },
                       "module-j5e_thermometer.LM35.html#kelvin": {
                         "ref": "module-j5e_thermometer.LM35.html#kelvin",
                         "tf": 33.33333333333333
+                      },
+                      "module-j5e_thermometer.LM35.html#aref": {
+                        "ref": "module-j5e_thermometer.LM35.html#aref",
+                        "tf": 50
                       },
                       "module-j5e_thermometer.LM35.html#samples": {
                         "ref": "module-j5e_thermometer.LM35.html#samples",
@@ -21208,21 +21203,21 @@ window.lunrData = {
                         "ref": "module-j5e_thermometer.MF52A103J3470.html#celsius",
                         "tf": 33.33333333333333
                       },
-                      "module-j5e_thermometer.MF52A103J3470.html#threshold": {
-                        "ref": "module-j5e_thermometer.MF52A103J3470.html#threshold",
-                        "tf": 50
-                      },
                       "module-j5e_thermometer.MF52A103J3470.html#C": {
                         "ref": "module-j5e_thermometer.MF52A103J3470.html#C",
                         "tf": 33.33333333333333
                       },
-                      "module-j5e_thermometer.MF52A103J3470.html#interval": {
-                        "ref": "module-j5e_thermometer.MF52A103J3470.html#interval",
+                      "module-j5e_thermometer.MF52A103J3470.html#threshold": {
+                        "ref": "module-j5e_thermometer.MF52A103J3470.html#threshold",
                         "tf": 50
                       },
                       "module-j5e_thermometer.MF52A103J3470.html#fahrenheit": {
                         "ref": "module-j5e_thermometer.MF52A103J3470.html#fahrenheit",
                         "tf": 33.33333333333333
+                      },
+                      "module-j5e_thermometer.MF52A103J3470.html#interval": {
+                        "ref": "module-j5e_thermometer.MF52A103J3470.html#interval",
+                        "tf": 50
                       },
                       "module-j5e_thermometer.MF52A103J3470.html#F": {
                         "ref": "module-j5e_thermometer.MF52A103J3470.html#F",
@@ -21232,13 +21227,13 @@ window.lunrData = {
                         "ref": "module-j5e_thermometer.MF52A103J3470.html#smoothing",
                         "tf": 58.33333333333333
                       },
-                      "module-j5e_thermometer.MF52A103J3470.html#aref": {
-                        "ref": "module-j5e_thermometer.MF52A103J3470.html#aref",
-                        "tf": 50
-                      },
                       "module-j5e_thermometer.MF52A103J3470.html#kelvin": {
                         "ref": "module-j5e_thermometer.MF52A103J3470.html#kelvin",
                         "tf": 33.33333333333333
+                      },
+                      "module-j5e_thermometer.MF52A103J3470.html#aref": {
+                        "ref": "module-j5e_thermometer.MF52A103J3470.html#aref",
+                        "tf": 50
                       },
                       "module-j5e_thermometer.MF52A103J3470.html#samples": {
                         "ref": "module-j5e_thermometer.MF52A103J3470.html#samples",
@@ -21280,29 +21275,25 @@ window.lunrData = {
                         "ref": "module-j5e_thermometer.MF52A103J3470.html#fscaleTo",
                         "tf": 20
                       },
-                      "module-j5e_relay-Relay.html#value": {
-                        "ref": "module-j5e_relay-Relay.html#value",
-                        "tf": 33.33333333333333
-                      },
                       "module-j5e_thermometer.TMP36.html#celsius": {
                         "ref": "module-j5e_thermometer.TMP36.html#celsius",
+                        "tf": 33.33333333333333
+                      },
+                      "module-j5e_thermometer.TMP36.html#C": {
+                        "ref": "module-j5e_thermometer.TMP36.html#C",
                         "tf": 33.33333333333333
                       },
                       "module-j5e_thermometer.TMP36.html#threshold": {
                         "ref": "module-j5e_thermometer.TMP36.html#threshold",
                         "tf": 50
                       },
-                      "module-j5e_thermometer.TMP36.html#C": {
-                        "ref": "module-j5e_thermometer.TMP36.html#C",
+                      "module-j5e_thermometer.TMP36.html#fahrenheit": {
+                        "ref": "module-j5e_thermometer.TMP36.html#fahrenheit",
                         "tf": 33.33333333333333
                       },
                       "module-j5e_thermometer.TMP36.html#interval": {
                         "ref": "module-j5e_thermometer.TMP36.html#interval",
                         "tf": 50
-                      },
-                      "module-j5e_thermometer.TMP36.html#fahrenheit": {
-                        "ref": "module-j5e_thermometer.TMP36.html#fahrenheit",
-                        "tf": 33.33333333333333
                       },
                       "module-j5e_thermometer.TMP36.html#F": {
                         "ref": "module-j5e_thermometer.TMP36.html#F",
@@ -21312,13 +21303,13 @@ window.lunrData = {
                         "ref": "module-j5e_thermometer.TMP36.html#smoothing",
                         "tf": 58.33333333333333
                       },
-                      "module-j5e_thermometer.TMP36.html#aref": {
-                        "ref": "module-j5e_thermometer.TMP36.html#aref",
-                        "tf": 50
-                      },
                       "module-j5e_thermometer.TMP36.html#kelvin": {
                         "ref": "module-j5e_thermometer.TMP36.html#kelvin",
                         "tf": 33.33333333333333
+                      },
+                      "module-j5e_thermometer.TMP36.html#aref": {
+                        "ref": "module-j5e_thermometer.TMP36.html#aref",
+                        "tf": 50
                       },
                       "module-j5e_thermometer.TMP36.html#samples": {
                         "ref": "module-j5e_thermometer.TMP36.html#samples",
@@ -21359,6 +21350,10 @@ window.lunrData = {
                       "module-j5e_thermometer.TMP36.html#fscaleTo": {
                         "ref": "module-j5e_thermometer.TMP36.html#fscaleTo",
                         "tf": 20
+                      },
+                      "module-j5e_relay-Relay.html#value": {
+                        "ref": "module-j5e_relay-Relay.html#value",
+                        "tf": 33.33333333333333
                       },
                       "module-j5e_light-Light.html#level": {
                         "ref": "module-j5e_light-Light.html#level",
@@ -22002,6 +21997,94 @@ window.lunrData = {
             }
           }
         },
+        "k": {
+          "docs": {
+            "module-j5e_thermometer.LM335.html#K": {
+              "ref": "module-j5e_thermometer.LM335.html#K",
+              "tf": 633.3333333333334
+            },
+            "module-j5e_thermometer.LM35.html#K": {
+              "ref": "module-j5e_thermometer.LM35.html#K",
+              "tf": 633.3333333333334
+            },
+            "module-j5e_thermometer.MF52A103J3470.html#K": {
+              "ref": "module-j5e_thermometer.MF52A103J3470.html#K",
+              "tf": 633.3333333333334
+            },
+            "module-j5e_thermometer.TMP36.html#K": {
+              "ref": "module-j5e_thermometer.TMP36.html#K",
+              "tf": 633.3333333333334
+            },
+            "module-j5e_thermometer-Thermometer.html#K": {
+              "ref": "module-j5e_thermometer-Thermometer.html#K",
+              "tf": 683.3333333333334
+            }
+          },
+          "e": {
+            "docs": {},
+            "l": {
+              "docs": {},
+              "v": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "n": {
+                    "docs": {
+                      "module-j5e_thermometer.LM335.html#kelvin": {
+                        "ref": "module-j5e_thermometer.LM335.html#kelvin",
+                        "tf": 658.3333333333334
+                      },
+                      "module-j5e_thermometer.LM335.html#K": {
+                        "ref": "module-j5e_thermometer.LM335.html#K",
+                        "tf": 25
+                      },
+                      "module-j5e_thermometer.LM35.html#kelvin": {
+                        "ref": "module-j5e_thermometer.LM35.html#kelvin",
+                        "tf": 658.3333333333334
+                      },
+                      "module-j5e_thermometer.LM35.html#K": {
+                        "ref": "module-j5e_thermometer.LM35.html#K",
+                        "tf": 25
+                      },
+                      "module-j5e_thermometer.MF52A103J3470.html#kelvin": {
+                        "ref": "module-j5e_thermometer.MF52A103J3470.html#kelvin",
+                        "tf": 658.3333333333334
+                      },
+                      "module-j5e_thermometer.MF52A103J3470.html#K": {
+                        "ref": "module-j5e_thermometer.MF52A103J3470.html#K",
+                        "tf": 25
+                      },
+                      "module-j5e_thermometer.TMP36.html#kelvin": {
+                        "ref": "module-j5e_thermometer.TMP36.html#kelvin",
+                        "tf": 658.3333333333334
+                      },
+                      "module-j5e_thermometer.TMP36.html#K": {
+                        "ref": "module-j5e_thermometer.TMP36.html#K",
+                        "tf": 25
+                      },
+                      "module-j5e_thermometer-Thermometer.html#kelvin": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#kelvin",
+                        "tf": 708.3333333333334
+                      },
+                      "module-j5e_thermometer-Thermometer.html#K": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#K",
+                        "tf": 25
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "y": {
+              "docs": {
+                "module-j5e_animation.html": {
+                  "ref": "module-j5e_animation.html",
+                  "tf": 3.571428571428571
+                }
+              }
+            }
+          }
+        },
         "v": {
           "docs": {},
           "o": {
@@ -22123,10 +22206,6 @@ window.lunrData = {
                     "ref": "module-j5e_thermometer.MF52A103J3470.html#fscaleTo",
                     "tf": 7.142857142857142
                   },
-                  "module-j5e_relay-Relay.html#value": {
-                    "ref": "module-j5e_relay-Relay.html#value",
-                    "tf": 693.3333333333334
-                  },
                   "module-j5e_thermometer.TMP36.html#value": {
                     "ref": "module-j5e_thermometer.TMP36.html#value",
                     "tf": 633.3333333333334
@@ -22146,6 +22225,10 @@ window.lunrData = {
                   "module-j5e_thermometer.TMP36.html#fscaleTo": {
                     "ref": "module-j5e_thermometer.TMP36.html#fscaleTo",
                     "tf": 7.142857142857142
+                  },
+                  "module-j5e_relay-Relay.html#value": {
+                    "ref": "module-j5e_relay-Relay.html#value",
+                    "tf": 693.3333333333334
                   },
                   "module-j5e_light-Light.html#level": {
                     "ref": "module-j5e_light-Light.html#level",
@@ -22254,94 +22337,6 @@ window.lunrData = {
                     "ref": "module-j5e_led.html",
                     "tf": 2.7777777777777777
                   }
-                }
-              }
-            }
-          }
-        },
-        "k": {
-          "docs": {
-            "module-j5e_thermometer.LM335.html#K": {
-              "ref": "module-j5e_thermometer.LM335.html#K",
-              "tf": 633.3333333333334
-            },
-            "module-j5e_thermometer.LM35.html#K": {
-              "ref": "module-j5e_thermometer.LM35.html#K",
-              "tf": 633.3333333333334
-            },
-            "module-j5e_thermometer.MF52A103J3470.html#K": {
-              "ref": "module-j5e_thermometer.MF52A103J3470.html#K",
-              "tf": 633.3333333333334
-            },
-            "module-j5e_thermometer.TMP36.html#K": {
-              "ref": "module-j5e_thermometer.TMP36.html#K",
-              "tf": 633.3333333333334
-            },
-            "module-j5e_thermometer-Thermometer.html#K": {
-              "ref": "module-j5e_thermometer-Thermometer.html#K",
-              "tf": 683.3333333333334
-            }
-          },
-          "e": {
-            "docs": {},
-            "l": {
-              "docs": {},
-              "v": {
-                "docs": {},
-                "i": {
-                  "docs": {},
-                  "n": {
-                    "docs": {
-                      "module-j5e_thermometer.LM335.html#kelvin": {
-                        "ref": "module-j5e_thermometer.LM335.html#kelvin",
-                        "tf": 658.3333333333334
-                      },
-                      "module-j5e_thermometer.LM335.html#K": {
-                        "ref": "module-j5e_thermometer.LM335.html#K",
-                        "tf": 25
-                      },
-                      "module-j5e_thermometer.LM35.html#kelvin": {
-                        "ref": "module-j5e_thermometer.LM35.html#kelvin",
-                        "tf": 658.3333333333334
-                      },
-                      "module-j5e_thermometer.LM35.html#K": {
-                        "ref": "module-j5e_thermometer.LM35.html#K",
-                        "tf": 25
-                      },
-                      "module-j5e_thermometer.MF52A103J3470.html#kelvin": {
-                        "ref": "module-j5e_thermometer.MF52A103J3470.html#kelvin",
-                        "tf": 658.3333333333334
-                      },
-                      "module-j5e_thermometer.MF52A103J3470.html#K": {
-                        "ref": "module-j5e_thermometer.MF52A103J3470.html#K",
-                        "tf": 25
-                      },
-                      "module-j5e_thermometer.TMP36.html#kelvin": {
-                        "ref": "module-j5e_thermometer.TMP36.html#kelvin",
-                        "tf": 658.3333333333334
-                      },
-                      "module-j5e_thermometer.TMP36.html#K": {
-                        "ref": "module-j5e_thermometer.TMP36.html#K",
-                        "tf": 25
-                      },
-                      "module-j5e_thermometer-Thermometer.html#kelvin": {
-                        "ref": "module-j5e_thermometer-Thermometer.html#kelvin",
-                        "tf": 708.3333333333334
-                      },
-                      "module-j5e_thermometer-Thermometer.html#K": {
-                        "ref": "module-j5e_thermometer-Thermometer.html#K",
-                        "tf": 25
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "y": {
-              "docs": {
-                "module-j5e_animation.html": {
-                  "ref": "module-j5e_animation.html",
-                  "tf": 3.571428571428571
                 }
               }
             }
@@ -22911,7 +22906,7 @@ window.lunrData = {
           }
         }
       },
-      "length": 2484
+      "length": 2483
     },
     "corpusTokens": [
       "0",
@@ -23742,16 +23737,6 @@ window.lunrData = {
       "summary": "",
       "description": "Limits the output range"
     },
-    "module-j5e_thermometer.LM335.html#threshold": {
-      "id": "module-j5e_thermometer.LM335.html#threshold",
-      "kind": "member",
-      "title": "threshold :number",
-      "longname": "module:j5e/thermometer.LM335#threshold",
-      "name": "threshold",
-      "tags": "module:j5e/thermometer.LM335#threshold LM335#threshold threshold",
-      "summary": "",
-      "description": "The minimum amount of change required to emit a \"change\" event"
-    },
     "module-j5e_thermometer.LM335.html#C": {
       "id": "module-j5e_thermometer.LM335.html#C",
       "kind": "member",
@@ -23762,15 +23747,15 @@ window.lunrData = {
       "summary": "",
       "description": "Alias for celsius"
     },
-    "module-j5e_thermometer.LM335.html#interval": {
-      "id": "module-j5e_thermometer.LM335.html#interval",
+    "module-j5e_thermometer.LM335.html#threshold": {
+      "id": "module-j5e_thermometer.LM335.html#threshold",
       "kind": "member",
-      "title": "interval :number",
-      "longname": "module:j5e/thermometer.LM335#interval",
-      "name": "interval",
-      "tags": "module:j5e/thermometer.LM335#interval LM335#interval interval",
+      "title": "threshold :number",
+      "longname": "module:j5e/thermometer.LM335#threshold",
+      "name": "threshold",
+      "tags": "module:j5e/thermometer.LM335#threshold LM335#threshold threshold",
       "summary": "",
-      "description": "The interval between readings (in ms)"
+      "description": "The minimum amount of change required to emit a \"change\" event"
     },
     "module-j5e_thermometer.LM335.html#fahrenheit": {
       "id": "module-j5e_thermometer.LM335.html#fahrenheit",
@@ -23781,6 +23766,16 @@ window.lunrData = {
       "tags": "module:j5e/thermometer.LM335#fahrenheit LM335#fahrenheit fahrenheit",
       "summary": "",
       "description": "Get degrees in fahrenheit"
+    },
+    "module-j5e_thermometer.LM335.html#interval": {
+      "id": "module-j5e_thermometer.LM335.html#interval",
+      "kind": "member",
+      "title": "interval :number",
+      "longname": "module:j5e/thermometer.LM335#interval",
+      "name": "interval",
+      "tags": "module:j5e/thermometer.LM335#interval LM335#interval interval",
+      "summary": "",
+      "description": "The interval between readings (in ms)"
     },
     "module-j5e_thermometer.LM335.html#F": {
       "id": "module-j5e_thermometer.LM335.html#F",
@@ -23802,16 +23797,6 @@ window.lunrData = {
       "summary": "",
       "description": "The number of samples to take before finding the median"
     },
-    "module-j5e_thermometer.LM335.html#aref": {
-      "id": "module-j5e_thermometer.LM335.html#aref",
-      "kind": "member",
-      "title": "aref :number",
-      "longname": "module:j5e/thermometer.LM335#aref",
-      "name": "aref",
-      "tags": "module:j5e/thermometer.LM335#aref LM335#aref aref",
-      "summary": "",
-      "description": "The reference voltage"
-    },
     "module-j5e_thermometer.LM335.html#kelvin": {
       "id": "module-j5e_thermometer.LM335.html#kelvin",
       "kind": "member",
@@ -23821,6 +23806,16 @@ window.lunrData = {
       "tags": "module:j5e/thermometer.LM335#kelvin LM335#kelvin kelvin",
       "summary": "",
       "description": "Get degrees in kelvin"
+    },
+    "module-j5e_thermometer.LM335.html#aref": {
+      "id": "module-j5e_thermometer.LM335.html#aref",
+      "kind": "member",
+      "title": "aref :number",
+      "longname": "module:j5e/thermometer.LM335#aref",
+      "name": "aref",
+      "tags": "module:j5e/thermometer.LM335#aref LM335#aref aref",
+      "summary": "",
+      "description": "The reference voltage"
     },
     "module-j5e_thermometer.LM335.html#samples": {
       "id": "module-j5e_thermometer.LM335.html#samples",
@@ -23832,16 +23827,6 @@ window.lunrData = {
       "summary": "",
       "description": "The number of samples to take before finding the median"
     },
-    "module-j5e_thermometer.LM335.html#range": {
-      "id": "module-j5e_thermometer.LM335.html#range",
-      "kind": "member",
-      "title": "&lt;readonly&gt; range :Array.&lt;number&gt;",
-      "longname": "module:j5e/thermometer.LM335#range",
-      "name": "range",
-      "tags": "module:j5e/thermometer.LM335#range LM335#range range",
-      "summary": "",
-      "description": "The input range of the sensor"
-    },
     "module-j5e_thermometer.LM335.html#K": {
       "id": "module-j5e_thermometer.LM335.html#K",
       "kind": "member",
@@ -23851,6 +23836,16 @@ window.lunrData = {
       "tags": "module:j5e/thermometer.LM335#K LM335#K K",
       "summary": "",
       "description": "Alias for kelvin"
+    },
+    "module-j5e_thermometer.LM335.html#range": {
+      "id": "module-j5e_thermometer.LM335.html#range",
+      "kind": "member",
+      "title": "&lt;readonly&gt; range :Array.&lt;number&gt;",
+      "longname": "module:j5e/thermometer.LM335#range",
+      "name": "range",
+      "tags": "module:j5e/thermometer.LM335#range LM335#range range",
+      "summary": "",
+      "description": "The input range of the sensor"
     },
     "module-j5e_thermometer.LM335.html#raw": {
       "id": "module-j5e_thermometer.LM335.html#raw",
@@ -24043,16 +24038,6 @@ window.lunrData = {
       "summary": "",
       "description": "Limits the output range"
     },
-    "module-j5e_thermometer.LM35.html#threshold": {
-      "id": "module-j5e_thermometer.LM35.html#threshold",
-      "kind": "member",
-      "title": "threshold :number",
-      "longname": "module:j5e/thermometer.LM35#threshold",
-      "name": "threshold",
-      "tags": "module:j5e/thermometer.LM35#threshold LM35#threshold threshold",
-      "summary": "",
-      "description": "The minimum amount of change required to emit a \"change\" event"
-    },
     "module-j5e_thermometer.LM35.html#C": {
       "id": "module-j5e_thermometer.LM35.html#C",
       "kind": "member",
@@ -24063,15 +24048,15 @@ window.lunrData = {
       "summary": "",
       "description": "Alias for celsius"
     },
-    "module-j5e_thermometer.LM35.html#interval": {
-      "id": "module-j5e_thermometer.LM35.html#interval",
+    "module-j5e_thermometer.LM35.html#threshold": {
+      "id": "module-j5e_thermometer.LM35.html#threshold",
       "kind": "member",
-      "title": "interval :number",
-      "longname": "module:j5e/thermometer.LM35#interval",
-      "name": "interval",
-      "tags": "module:j5e/thermometer.LM35#interval LM35#interval interval",
+      "title": "threshold :number",
+      "longname": "module:j5e/thermometer.LM35#threshold",
+      "name": "threshold",
+      "tags": "module:j5e/thermometer.LM35#threshold LM35#threshold threshold",
       "summary": "",
-      "description": "The interval between readings (in ms)"
+      "description": "The minimum amount of change required to emit a \"change\" event"
     },
     "module-j5e_thermometer.LM35.html#fahrenheit": {
       "id": "module-j5e_thermometer.LM35.html#fahrenheit",
@@ -24082,6 +24067,16 @@ window.lunrData = {
       "tags": "module:j5e/thermometer.LM35#fahrenheit LM35#fahrenheit fahrenheit",
       "summary": "",
       "description": "Get degrees in fahrenheit"
+    },
+    "module-j5e_thermometer.LM35.html#interval": {
+      "id": "module-j5e_thermometer.LM35.html#interval",
+      "kind": "member",
+      "title": "interval :number",
+      "longname": "module:j5e/thermometer.LM35#interval",
+      "name": "interval",
+      "tags": "module:j5e/thermometer.LM35#interval LM35#interval interval",
+      "summary": "",
+      "description": "The interval between readings (in ms)"
     },
     "module-j5e_thermometer.LM35.html#F": {
       "id": "module-j5e_thermometer.LM35.html#F",
@@ -24103,16 +24098,6 @@ window.lunrData = {
       "summary": "",
       "description": "The number of samples to take before finding the median"
     },
-    "module-j5e_thermometer.LM35.html#aref": {
-      "id": "module-j5e_thermometer.LM35.html#aref",
-      "kind": "member",
-      "title": "aref :number",
-      "longname": "module:j5e/thermometer.LM35#aref",
-      "name": "aref",
-      "tags": "module:j5e/thermometer.LM35#aref LM35#aref aref",
-      "summary": "",
-      "description": "The reference voltage"
-    },
     "module-j5e_thermometer.LM35.html#kelvin": {
       "id": "module-j5e_thermometer.LM35.html#kelvin",
       "kind": "member",
@@ -24122,6 +24107,16 @@ window.lunrData = {
       "tags": "module:j5e/thermometer.LM35#kelvin LM35#kelvin kelvin",
       "summary": "",
       "description": "Get degrees in kelvin"
+    },
+    "module-j5e_thermometer.LM35.html#aref": {
+      "id": "module-j5e_thermometer.LM35.html#aref",
+      "kind": "member",
+      "title": "aref :number",
+      "longname": "module:j5e/thermometer.LM35#aref",
+      "name": "aref",
+      "tags": "module:j5e/thermometer.LM35#aref LM35#aref aref",
+      "summary": "",
+      "description": "The reference voltage"
     },
     "module-j5e_thermometer.LM35.html#samples": {
       "id": "module-j5e_thermometer.LM35.html#samples",
@@ -24133,16 +24128,6 @@ window.lunrData = {
       "summary": "",
       "description": "The number of samples to take before finding the median"
     },
-    "module-j5e_thermometer.LM35.html#range": {
-      "id": "module-j5e_thermometer.LM35.html#range",
-      "kind": "member",
-      "title": "&lt;readonly&gt; range :Array.&lt;number&gt;",
-      "longname": "module:j5e/thermometer.LM35#range",
-      "name": "range",
-      "tags": "module:j5e/thermometer.LM35#range LM35#range range",
-      "summary": "",
-      "description": "The input range of the sensor"
-    },
     "module-j5e_thermometer.LM35.html#K": {
       "id": "module-j5e_thermometer.LM35.html#K",
       "kind": "member",
@@ -24152,6 +24137,16 @@ window.lunrData = {
       "tags": "module:j5e/thermometer.LM35#K LM35#K K",
       "summary": "",
       "description": "Alias for kelvin"
+    },
+    "module-j5e_thermometer.LM35.html#range": {
+      "id": "module-j5e_thermometer.LM35.html#range",
+      "kind": "member",
+      "title": "&lt;readonly&gt; range :Array.&lt;number&gt;",
+      "longname": "module:j5e/thermometer.LM35#range",
+      "name": "range",
+      "tags": "module:j5e/thermometer.LM35#range LM35#range range",
+      "summary": "",
+      "description": "The input range of the sensor"
     },
     "module-j5e_thermometer.LM35.html#raw": {
       "id": "module-j5e_thermometer.LM35.html#raw",
@@ -24344,16 +24339,6 @@ window.lunrData = {
       "summary": "",
       "description": "Limits the output range"
     },
-    "module-j5e_thermometer.MF52A103J3470.html#threshold": {
-      "id": "module-j5e_thermometer.MF52A103J3470.html#threshold",
-      "kind": "member",
-      "title": "threshold :number",
-      "longname": "module:j5e/thermometer.MF52A103J3470#threshold",
-      "name": "threshold",
-      "tags": "module:j5e/thermometer.MF52A103J3470#threshold MF52A103J3470#threshold threshold",
-      "summary": "",
-      "description": "The minimum amount of change required to emit a \"change\" event"
-    },
     "module-j5e_thermometer.MF52A103J3470.html#C": {
       "id": "module-j5e_thermometer.MF52A103J3470.html#C",
       "kind": "member",
@@ -24364,15 +24349,15 @@ window.lunrData = {
       "summary": "",
       "description": "Alias for celsius"
     },
-    "module-j5e_thermometer.MF52A103J3470.html#interval": {
-      "id": "module-j5e_thermometer.MF52A103J3470.html#interval",
+    "module-j5e_thermometer.MF52A103J3470.html#threshold": {
+      "id": "module-j5e_thermometer.MF52A103J3470.html#threshold",
       "kind": "member",
-      "title": "interval :number",
-      "longname": "module:j5e/thermometer.MF52A103J3470#interval",
-      "name": "interval",
-      "tags": "module:j5e/thermometer.MF52A103J3470#interval MF52A103J3470#interval interval",
+      "title": "threshold :number",
+      "longname": "module:j5e/thermometer.MF52A103J3470#threshold",
+      "name": "threshold",
+      "tags": "module:j5e/thermometer.MF52A103J3470#threshold MF52A103J3470#threshold threshold",
       "summary": "",
-      "description": "The interval between readings (in ms)"
+      "description": "The minimum amount of change required to emit a \"change\" event"
     },
     "module-j5e_thermometer.MF52A103J3470.html#fahrenheit": {
       "id": "module-j5e_thermometer.MF52A103J3470.html#fahrenheit",
@@ -24383,6 +24368,16 @@ window.lunrData = {
       "tags": "module:j5e/thermometer.MF52A103J3470#fahrenheit MF52A103J3470#fahrenheit fahrenheit",
       "summary": "",
       "description": "Get degrees in fahrenheit"
+    },
+    "module-j5e_thermometer.MF52A103J3470.html#interval": {
+      "id": "module-j5e_thermometer.MF52A103J3470.html#interval",
+      "kind": "member",
+      "title": "interval :number",
+      "longname": "module:j5e/thermometer.MF52A103J3470#interval",
+      "name": "interval",
+      "tags": "module:j5e/thermometer.MF52A103J3470#interval MF52A103J3470#interval interval",
+      "summary": "",
+      "description": "The interval between readings (in ms)"
     },
     "module-j5e_thermometer.MF52A103J3470.html#F": {
       "id": "module-j5e_thermometer.MF52A103J3470.html#F",
@@ -24404,16 +24399,6 @@ window.lunrData = {
       "summary": "",
       "description": "The number of samples to take before finding the median"
     },
-    "module-j5e_thermometer.MF52A103J3470.html#aref": {
-      "id": "module-j5e_thermometer.MF52A103J3470.html#aref",
-      "kind": "member",
-      "title": "aref :number",
-      "longname": "module:j5e/thermometer.MF52A103J3470#aref",
-      "name": "aref",
-      "tags": "module:j5e/thermometer.MF52A103J3470#aref MF52A103J3470#aref aref",
-      "summary": "",
-      "description": "The reference voltage"
-    },
     "module-j5e_thermometer.MF52A103J3470.html#kelvin": {
       "id": "module-j5e_thermometer.MF52A103J3470.html#kelvin",
       "kind": "member",
@@ -24423,6 +24408,16 @@ window.lunrData = {
       "tags": "module:j5e/thermometer.MF52A103J3470#kelvin MF52A103J3470#kelvin kelvin",
       "summary": "",
       "description": "Get degrees in kelvin"
+    },
+    "module-j5e_thermometer.MF52A103J3470.html#aref": {
+      "id": "module-j5e_thermometer.MF52A103J3470.html#aref",
+      "kind": "member",
+      "title": "aref :number",
+      "longname": "module:j5e/thermometer.MF52A103J3470#aref",
+      "name": "aref",
+      "tags": "module:j5e/thermometer.MF52A103J3470#aref MF52A103J3470#aref aref",
+      "summary": "",
+      "description": "The reference voltage"
     },
     "module-j5e_thermometer.MF52A103J3470.html#samples": {
       "id": "module-j5e_thermometer.MF52A103J3470.html#samples",
@@ -24434,16 +24429,6 @@ window.lunrData = {
       "summary": "",
       "description": "The number of samples to take before finding the median"
     },
-    "module-j5e_thermometer.MF52A103J3470.html#range": {
-      "id": "module-j5e_thermometer.MF52A103J3470.html#range",
-      "kind": "member",
-      "title": "&lt;readonly&gt; range :Array.&lt;number&gt;",
-      "longname": "module:j5e/thermometer.MF52A103J3470#range",
-      "name": "range",
-      "tags": "module:j5e/thermometer.MF52A103J3470#range MF52A103J3470#range range",
-      "summary": "",
-      "description": "The input range of the sensor"
-    },
     "module-j5e_thermometer.MF52A103J3470.html#K": {
       "id": "module-j5e_thermometer.MF52A103J3470.html#K",
       "kind": "member",
@@ -24453,6 +24438,16 @@ window.lunrData = {
       "tags": "module:j5e/thermometer.MF52A103J3470#K MF52A103J3470#K K",
       "summary": "",
       "description": "Alias for kelvin"
+    },
+    "module-j5e_thermometer.MF52A103J3470.html#range": {
+      "id": "module-j5e_thermometer.MF52A103J3470.html#range",
+      "kind": "member",
+      "title": "&lt;readonly&gt; range :Array.&lt;number&gt;",
+      "longname": "module:j5e/thermometer.MF52A103J3470#range",
+      "name": "range",
+      "tags": "module:j5e/thermometer.MF52A103J3470#range MF52A103J3470#range range",
+      "summary": "",
+      "description": "The input range of the sensor"
     },
     "module-j5e_thermometer.MF52A103J3470.html#raw": {
       "id": "module-j5e_thermometer.MF52A103J3470.html#raw",
@@ -24614,87 +24609,6 @@ window.lunrData = {
       "summary": "",
       "description": "fscaleTo Scales value to single precision float representation"
     },
-    "module-j5e_relay-Relay.html": {
-      "id": "module-j5e_relay-Relay.html",
-      "kind": "class",
-      "title": "&lt;async&gt; j5e/relay~Relay",
-      "longname": "module:j5e/relay~Relay",
-      "name": "Relay",
-      "tags": "module:j5e/relay~Relay",
-      "summary": "",
-      "description": "The Relay class allows for control of a relay",
-      "body": ""
-    },
-    "module-j5e_relay-Relay.html#value": {
-      "id": "module-j5e_relay-Relay.html#value",
-      "kind": "member",
-      "title": "&lt;readonly&gt; value :number",
-      "longname": "module:j5e/relay~Relay#value",
-      "name": "value",
-      "tags": "module:j5e/relay~Relay#value value",
-      "summary": "",
-      "description": "A numerical value representing the relay state"
-    },
-    "module-j5e_relay-Relay.html#isClosed": {
-      "id": "module-j5e_relay-Relay.html#isClosed",
-      "kind": "member",
-      "title": "&lt;readonly&gt; isClosed :boolean",
-      "longname": "module:j5e/relay~Relay#isClosed",
-      "name": "isClosed",
-      "tags": "module:j5e/relay~Relay#isClosed isClosed",
-      "summary": "",
-      "description": "True if the relay is closed"
-    },
-    "module-j5e_relay-Relay.html#type": {
-      "id": "module-j5e_relay-Relay.html#type",
-      "kind": "member",
-      "title": "&lt;readonly&gt; type :string",
-      "longname": "module:j5e/relay~Relay#type",
-      "name": "type",
-      "tags": "module:j5e/relay~Relay#type type",
-      "summary": "",
-      "description": "\"NC\" if the relay is normally closed, \"NO\" if the relay is normally open"
-    },
-    "module-j5e_relay-Relay.html#configure": {
-      "id": "module-j5e_relay-Relay.html#configure",
-      "kind": "function",
-      "title": "configure( options ) → {Relay}",
-      "longname": "module:j5e/relay~Relay#configure",
-      "name": "configure",
-      "tags": "module:j5e/relay~Relay#configure configure",
-      "summary": "",
-      "description": "Configure a Relay"
-    },
-    "module-j5e_relay-Relay.html#close": {
-      "id": "module-j5e_relay-Relay.html#close",
-      "kind": "function",
-      "title": "close() → {Relay}",
-      "longname": "module:j5e/relay~Relay#close",
-      "name": "close",
-      "tags": "module:j5e/relay~Relay#close close",
-      "summary": "",
-      "description": "Close the relay circuit"
-    },
-    "module-j5e_relay-Relay.html#open": {
-      "id": "module-j5e_relay-Relay.html#open",
-      "kind": "function",
-      "title": "open() → {Relay}",
-      "longname": "module:j5e/relay~Relay#open",
-      "name": "open",
-      "tags": "module:j5e/relay~Relay#open open",
-      "summary": "",
-      "description": "Open the relay circuit"
-    },
-    "module-j5e_relay-Relay.html#toggle": {
-      "id": "module-j5e_relay-Relay.html#toggle",
-      "kind": "function",
-      "title": "toggle() → {Relay}",
-      "longname": "module:j5e/relay~Relay#toggle",
-      "name": "toggle",
-      "tags": "module:j5e/relay~Relay#toggle toggle",
-      "summary": "",
-      "description": "Toggle the relay circuit"
-    },
     "module-j5e_thermometer.TMP36.html": {
       "id": "module-j5e_thermometer.TMP36.html",
       "kind": "class",
@@ -24726,16 +24640,6 @@ window.lunrData = {
       "summary": "",
       "description": "Limits the output range"
     },
-    "module-j5e_thermometer.TMP36.html#threshold": {
-      "id": "module-j5e_thermometer.TMP36.html#threshold",
-      "kind": "member",
-      "title": "threshold :number",
-      "longname": "module:j5e/thermometer.TMP36#threshold",
-      "name": "threshold",
-      "tags": "module:j5e/thermometer.TMP36#threshold TMP36#threshold threshold",
-      "summary": "",
-      "description": "The minimum amount of change required to emit a \"change\" event"
-    },
     "module-j5e_thermometer.TMP36.html#C": {
       "id": "module-j5e_thermometer.TMP36.html#C",
       "kind": "member",
@@ -24746,15 +24650,15 @@ window.lunrData = {
       "summary": "",
       "description": "Alias for celsius"
     },
-    "module-j5e_thermometer.TMP36.html#interval": {
-      "id": "module-j5e_thermometer.TMP36.html#interval",
+    "module-j5e_thermometer.TMP36.html#threshold": {
+      "id": "module-j5e_thermometer.TMP36.html#threshold",
       "kind": "member",
-      "title": "interval :number",
-      "longname": "module:j5e/thermometer.TMP36#interval",
-      "name": "interval",
-      "tags": "module:j5e/thermometer.TMP36#interval TMP36#interval interval",
+      "title": "threshold :number",
+      "longname": "module:j5e/thermometer.TMP36#threshold",
+      "name": "threshold",
+      "tags": "module:j5e/thermometer.TMP36#threshold TMP36#threshold threshold",
       "summary": "",
-      "description": "The interval between readings (in ms)"
+      "description": "The minimum amount of change required to emit a \"change\" event"
     },
     "module-j5e_thermometer.TMP36.html#fahrenheit": {
       "id": "module-j5e_thermometer.TMP36.html#fahrenheit",
@@ -24765,6 +24669,16 @@ window.lunrData = {
       "tags": "module:j5e/thermometer.TMP36#fahrenheit TMP36#fahrenheit fahrenheit",
       "summary": "",
       "description": "Get degrees in fahrenheit"
+    },
+    "module-j5e_thermometer.TMP36.html#interval": {
+      "id": "module-j5e_thermometer.TMP36.html#interval",
+      "kind": "member",
+      "title": "interval :number",
+      "longname": "module:j5e/thermometer.TMP36#interval",
+      "name": "interval",
+      "tags": "module:j5e/thermometer.TMP36#interval TMP36#interval interval",
+      "summary": "",
+      "description": "The interval between readings (in ms)"
     },
     "module-j5e_thermometer.TMP36.html#F": {
       "id": "module-j5e_thermometer.TMP36.html#F",
@@ -24786,16 +24700,6 @@ window.lunrData = {
       "summary": "",
       "description": "The number of samples to take before finding the median"
     },
-    "module-j5e_thermometer.TMP36.html#aref": {
-      "id": "module-j5e_thermometer.TMP36.html#aref",
-      "kind": "member",
-      "title": "aref :number",
-      "longname": "module:j5e/thermometer.TMP36#aref",
-      "name": "aref",
-      "tags": "module:j5e/thermometer.TMP36#aref TMP36#aref aref",
-      "summary": "",
-      "description": "The reference voltage"
-    },
     "module-j5e_thermometer.TMP36.html#kelvin": {
       "id": "module-j5e_thermometer.TMP36.html#kelvin",
       "kind": "member",
@@ -24805,6 +24709,16 @@ window.lunrData = {
       "tags": "module:j5e/thermometer.TMP36#kelvin TMP36#kelvin kelvin",
       "summary": "",
       "description": "Get degrees in kelvin"
+    },
+    "module-j5e_thermometer.TMP36.html#aref": {
+      "id": "module-j5e_thermometer.TMP36.html#aref",
+      "kind": "member",
+      "title": "aref :number",
+      "longname": "module:j5e/thermometer.TMP36#aref",
+      "name": "aref",
+      "tags": "module:j5e/thermometer.TMP36#aref TMP36#aref aref",
+      "summary": "",
+      "description": "The reference voltage"
     },
     "module-j5e_thermometer.TMP36.html#samples": {
       "id": "module-j5e_thermometer.TMP36.html#samples",
@@ -24816,16 +24730,6 @@ window.lunrData = {
       "summary": "",
       "description": "The number of samples to take before finding the median"
     },
-    "module-j5e_thermometer.TMP36.html#range": {
-      "id": "module-j5e_thermometer.TMP36.html#range",
-      "kind": "member",
-      "title": "&lt;readonly&gt; range :Array.&lt;number&gt;",
-      "longname": "module:j5e/thermometer.TMP36#range",
-      "name": "range",
-      "tags": "module:j5e/thermometer.TMP36#range TMP36#range range",
-      "summary": "",
-      "description": "The input range of the sensor"
-    },
     "module-j5e_thermometer.TMP36.html#K": {
       "id": "module-j5e_thermometer.TMP36.html#K",
       "kind": "member",
@@ -24835,6 +24739,16 @@ window.lunrData = {
       "tags": "module:j5e/thermometer.TMP36#K TMP36#K K",
       "summary": "",
       "description": "Alias for kelvin"
+    },
+    "module-j5e_thermometer.TMP36.html#range": {
+      "id": "module-j5e_thermometer.TMP36.html#range",
+      "kind": "member",
+      "title": "&lt;readonly&gt; range :Array.&lt;number&gt;",
+      "longname": "module:j5e/thermometer.TMP36#range",
+      "name": "range",
+      "tags": "module:j5e/thermometer.TMP36#range TMP36#range range",
+      "summary": "",
+      "description": "The input range of the sensor"
     },
     "module-j5e_thermometer.TMP36.html#raw": {
       "id": "module-j5e_thermometer.TMP36.html#raw",
@@ -24995,6 +24909,87 @@ window.lunrData = {
       "tags": "module:j5e/thermometer.TMP36#fscaleTo TMP36#fscaleTo fscaleTo",
       "summary": "",
       "description": "fscaleTo Scales value to single precision float representation"
+    },
+    "module-j5e_relay-Relay.html": {
+      "id": "module-j5e_relay-Relay.html",
+      "kind": "class",
+      "title": "&lt;async&gt; j5e/relay~Relay",
+      "longname": "module:j5e/relay~Relay",
+      "name": "Relay",
+      "tags": "module:j5e/relay~Relay",
+      "summary": "",
+      "description": "The Relay class allows for control of a relay",
+      "body": ""
+    },
+    "module-j5e_relay-Relay.html#value": {
+      "id": "module-j5e_relay-Relay.html#value",
+      "kind": "member",
+      "title": "&lt;readonly&gt; value :number",
+      "longname": "module:j5e/relay~Relay#value",
+      "name": "value",
+      "tags": "module:j5e/relay~Relay#value value",
+      "summary": "",
+      "description": "A numerical value representing the relay state"
+    },
+    "module-j5e_relay-Relay.html#isClosed": {
+      "id": "module-j5e_relay-Relay.html#isClosed",
+      "kind": "member",
+      "title": "&lt;readonly&gt; isClosed :boolean",
+      "longname": "module:j5e/relay~Relay#isClosed",
+      "name": "isClosed",
+      "tags": "module:j5e/relay~Relay#isClosed isClosed",
+      "summary": "",
+      "description": "True if the relay is closed"
+    },
+    "module-j5e_relay-Relay.html#type": {
+      "id": "module-j5e_relay-Relay.html#type",
+      "kind": "member",
+      "title": "&lt;readonly&gt; type :string",
+      "longname": "module:j5e/relay~Relay#type",
+      "name": "type",
+      "tags": "module:j5e/relay~Relay#type type",
+      "summary": "",
+      "description": "\"NC\" if the relay is normally closed, \"NO\" if the relay is normally open"
+    },
+    "module-j5e_relay-Relay.html#configure": {
+      "id": "module-j5e_relay-Relay.html#configure",
+      "kind": "function",
+      "title": "configure( options ) → {Relay}",
+      "longname": "module:j5e/relay~Relay#configure",
+      "name": "configure",
+      "tags": "module:j5e/relay~Relay#configure configure",
+      "summary": "",
+      "description": "Configure a Relay"
+    },
+    "module-j5e_relay-Relay.html#close": {
+      "id": "module-j5e_relay-Relay.html#close",
+      "kind": "function",
+      "title": "close() → {Relay}",
+      "longname": "module:j5e/relay~Relay#close",
+      "name": "close",
+      "tags": "module:j5e/relay~Relay#close close",
+      "summary": "",
+      "description": "Close the relay circuit"
+    },
+    "module-j5e_relay-Relay.html#open": {
+      "id": "module-j5e_relay-Relay.html#open",
+      "kind": "function",
+      "title": "open() → {Relay}",
+      "longname": "module:j5e/relay~Relay#open",
+      "name": "open",
+      "tags": "module:j5e/relay~Relay#open open",
+      "summary": "",
+      "description": "Open the relay circuit"
+    },
+    "module-j5e_relay-Relay.html#toggle": {
+      "id": "module-j5e_relay-Relay.html#toggle",
+      "kind": "function",
+      "title": "toggle() → {Relay}",
+      "longname": "module:j5e/relay~Relay#toggle",
+      "name": "toggle",
+      "tags": "module:j5e/relay~Relay#toggle toggle",
+      "summary": "",
+      "description": "Toggle the relay circuit"
     },
     "module-j5e_light-Light.html": {
       "id": "module-j5e_light-Light.html",
@@ -25875,7 +25870,7 @@ window.lunrData = {
     "module-j5e_thermometer-Thermometer.html#configure": {
       "id": "module-j5e_thermometer-Thermometer.html#configure",
       "kind": "function",
-      "title": "configure( options ) → {Thermometer}",
+      "title": "configure() → {Thermometer}",
       "longname": "module:j5e/thermometer~Thermometer#configure",
       "name": "configure",
       "tags": "module:j5e/thermometer~Thermometer#configure configure",
