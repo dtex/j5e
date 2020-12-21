@@ -28,7 +28,10 @@ describe("Relay", function() {
 
           const relay = await new Relay({
             pin: 12,
-            io: Digital,
+            io: Digital
+          });
+
+          relay.configure({
             type: "NC"
           });
 
@@ -73,7 +76,10 @@ describe("Relay", function() {
 
         const relay = await new Relay({
           pin: 12,
-          io: Digital,
+          io: Digital
+        });
+
+        relay.configure({
           type: "NC"
         });
 
@@ -85,7 +91,10 @@ describe("Relay", function() {
 
         const relay = await new Relay({
           pin: 12,
-          io: Digital,
+          io: Digital
+        });
+
+        relay.configure({
           type: "NC"
         });
 
@@ -125,7 +134,10 @@ describe("Relay", function() {
 
         const relay = await new Relay({
           pin: 12,
-          io: Digital,
+          io: Digital
+        });
+
+        relay.configure({
           type: "NC"
         });
 
@@ -137,7 +149,10 @@ describe("Relay", function() {
 
         const relay = await new Relay({
           pin: 12,
-          io: Digital,
+          io: Digital
+        });
+
+        relay.configure({
           type: "NC"
         });
 
@@ -165,7 +180,10 @@ describe("Relay", function() {
 
         const relay = await new Relay({
           pin: 12,
-          io: Digital,
+          io: Digital
+        });
+
+        relay.configure({
           type: "NC"
         });
 
@@ -200,7 +218,10 @@ describe("Relay", function() {
       it("should write LOW to IO when normally closed", async function() {
         const relay = await new Relay({
           pin: 12,
-          io: Digital,
+          io: Digital
+        });
+
+        relay.configure({
           type: "NC"
         });
 
@@ -237,7 +258,10 @@ describe("Relay", function() {
       it("should write HIGH to IO when normally closed", async function() {
         const relay = await new Relay({
           pin: 12,
-          io: Digital,
+          io: Digital
+        });
+
+        relay.configure({
           type: "NC"
         });
 
@@ -282,7 +306,10 @@ describe("Relay", function() {
       it("should toggle with HIGH = open and LOW = closed when Normally Closed", async function() {
         const relay = await new Relay({
           pin: 12,
-          io: Digital,
+          io: Digital
+        });
+
+        relay.configure({
           type: "NC"
         });
 

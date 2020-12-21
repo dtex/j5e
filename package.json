@@ -29,12 +29,12 @@
     "test": "test"
   },
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha",
-    "docs": "./node_modules/jsdoc/jsdoc.js -t ./node_modules/foodoc/template -u ./build/docs/tutorials -c ./build/docs/jsdoc.json -d docs",
+    "test": "mocha",
+    "docs": "jsdoc -t ./node_modules/foodoc/template -u ./build/docs/tutorials -c ./build/docs/jsdoc.json -d docs",
     "lint": "npm run lintLib;npm run lintTest",
-    "lintLib": "node ./node_modules/eslint/bin/eslint.js lib/*/*.js",
-    "lintExamples": "node ./node_modules/eslint/bin/eslint.js examples/*/*.js",
-    "lintTest": "node ./node_modules/eslint/bin/eslint.js test/*.js --rule '\"func-names\": [\"error\", \"never\"]'"
+    "lintLib": "eslint lib/*/*.js",
+    "lintExamples": "eslint examples/*/*.js",
+    "lintTest": "eslint test/*.js --rule '\"func-names\": [\"error\", \"never\"]'"
   },
   "repository": {
     "type": "git",

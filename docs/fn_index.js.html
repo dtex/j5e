@@ -120,6 +120,9 @@ export function normalizeIO(pin = {}) {
   if (typeof pin === "number" || typeof pin === "string") {
     return { pin };
   }
+  if (Array.isArray(pin)) {
+    return { pins: pin };
+  }
   return pin;
 };
 
@@ -223,7 +226,7 @@ export function constrain(value, low, high) {
 
 /** Asynchronously load a provider. This allows users to simply pass a path or skip specifying a provider altogether (uses builtins).
  * @param {object} ioOpts - An IO options object
- * @param {io} [ioOpts.io] - The path to the IO class
+ * @param {string|io} [ioOpts.io] - The path to the IO class or an io instance
  * @param {string} defaultProvider - The default provider to use if none was passed in the io object
  * @ignore
  */

@@ -133,7 +133,8 @@ class RGB {
 
   /**
    * Instantiate an RGB LED
-   * @param {object[]} options - Pin identifiers or Options object (See {@tutorial C-INSTANTIATING})
+   * @param {number[]|string[]|object[]|object} io - Pin identifier or IO Options (See {@tutorial C-INSTANTIATING})
+   * @param {object} [options] - Device configuration options
    * @param {boolean} [options.sink=false] - True if the device is wired for sink drive
    * @example
    * &lt;caption>Using pin numbers&lt;/caption>

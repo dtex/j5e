@@ -25,7 +25,10 @@ describe("Servo - Standard", function() {
 
           const servo = await new Servo({
             pin: 12,
-            io: PWM,
+            io: PWM
+          });
+
+          servo.configure({
             pwmRange: [1000, 2000]
           });
           let spy = sinon.spy(servo.io, "write");
@@ -47,7 +50,10 @@ describe("Servo - Standard", function() {
 
           const servo = await new Servo({
             pin: 12,
-            io: PWM,
+            io: PWM
+          });
+
+          servo.configure({
             range: [40, 120]
           });
 
@@ -66,7 +72,10 @@ describe("Servo - Standard", function() {
 
           const servo = await new Servo({
             pin: 12,
-            io: PWM,
+            io: PWM
+          });
+
+          servo.configure({
             deviceRange: [0, 360]
           });
 
@@ -85,7 +94,10 @@ describe("Servo - Standard", function() {
 
           const servo = await new Servo({
             pin: 12,
-            io: PWM,
+            io: PWM
+          });
+
+          servo.configure({
             startAt: 120
           });
 
@@ -100,7 +112,10 @@ describe("Servo - Standard", function() {
 
           const servo = await new Servo({
             pin: 12,
-            io: PWM,
+            io: PWM
+          });
+
+          servo.configure({
             offset: -10
           });
 
@@ -116,7 +131,10 @@ describe("Servo - Standard", function() {
 
           const servo = await new Servo({
             pin: 12,
-            io: PWM,
+            io: PWM
+          });
+
+          servo.configure({
             invert: true
           });
           servo.to(120);
@@ -132,7 +150,10 @@ describe("Servo - Standard", function() {
 
           const servo = await new Servo({
             pin: 12,
-            io: PWM,
+            io: PWM
+          });
+
+          servo.configure({
             center: false
           });
           assert.equal(servo.position, 90);
@@ -345,7 +366,10 @@ describe("Servo - Standard", function() {
 
         const servo = await new Servo({
           pin: 12,
-          io: PWM,
+          io: PWM
+        });
+
+        servo.configure({
           range: [20, 160]
         });
 
@@ -374,7 +398,10 @@ describe("Servo - Standard", function() {
 
         const servo = await new Servo({
           pin: 12,
-          io: PWM,
+          io: PWM
+        });
+
+        servo.configure({
           range: [20, 160]
         });
 
@@ -404,7 +431,10 @@ describe("Servo - Standard", function() {
 
         const servo = await new Servo({
           pin: 12,
-          io: PWM,
+          io: PWM
+        });
+
+        servo.configure({
           deviceRange: [30, 100]
         });
 
@@ -434,7 +464,10 @@ describe("Servo - Standard", function() {
 
         const servo = await new Servo({
           pin: 12,
-          io: PWM,
+          io: PWM
+        });
+
+        servo.configure({
           startAt: 20
         });
 
@@ -662,7 +695,10 @@ describe("Servo - Continuous", function() {
         it("should behave as contiuous rotation servo when type is \"continuous\"", async function() {
           const servo = await new Servo({
             pin: 12,
-            io: PWM,
+            io: PWM
+          });
+
+          servo.configure({
             type: "continuous"
           });
 
@@ -681,7 +717,10 @@ describe("Servo - Continuous", function() {
 
           const servo = await new Servo({
             pin: 12,
-            io: PWM,
+            io: PWM
+          });
+
+          servo.configure({
             deadband: [80, 85],
             type: "continuous"
           });
@@ -709,7 +748,10 @@ describe("Servo - Continuous", function() {
 
         const servo = await new Servo({
           pin: 12,
-          io: PWM,
+          io: PWM
+        });
+
+        servo.configure({
           type: "continuous"
         });
 
@@ -722,7 +764,10 @@ describe("Servo - Continuous", function() {
 
         const servo = await new Servo({
           pin: 12,
-          io: PWM,
+          io: PWM
+        });
+
+        servo.configure({
           type: "continuous"
         });
 
@@ -739,7 +784,10 @@ describe("Servo - Continuous", function() {
 
         const servo = await new Servo({
           pin: 12,
-          io: PWM,
+          io: PWM
+        });
+
+        servo.configure({
           type: "continuous"
         });
 
@@ -752,7 +800,10 @@ describe("Servo - Continuous", function() {
 
         const servo = await new Servo({
           pin: 12,
-          io: PWM,
+          io: PWM
+        });
+
+        servo.configure({
           type: "continuous"
         });
 
@@ -769,7 +820,10 @@ describe("Servo - Continuous", function() {
 
         const servo = await new Servo({
           pin: 12,
-          io: PWM,
+          io: PWM
+        });
+
+        servo.configure({
           type: "continuous"
         });
 

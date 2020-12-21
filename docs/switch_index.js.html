@@ -102,7 +102,7 @@
  */
 
 import { Emitter } from "j5e/event";
-import { normalizeParams, getProvider } from "j5e/fn";
+import { normalizeDevice, normalizeIO, getProvider } from "j5e/fn";
 
 /**
  * Class representing a switch
@@ -116,7 +116,8 @@ class Switch extends Emitter {
 
   /**
    * Instantiate a switch
-   * @param {object} options - A pin number, pin identifier or a complete IO options object (See {@tutorial C-INSTANTIATING}
+   * @param {number|string|object} io - Pin identifier or IO Options (See {@tutorial C-INSTANTIATING})
+   * @param {object} options - Device configuration options
    * @example
    * &lt;caption>Use a switch to control an LED&lt;/caption>
    * import Switch from "j5e/switch";
@@ -133,14 +134,15 @@ class Switch extends Emitter {
    *   led.on();
    * });
    */
-  constructor(options) {
+  constructor(io, options) {
     return (async() => {
-      options = normalizeParams(options);
+      options = normalizeDevice(options);
+      io = normalizeIO(io);
       super();
 
-      const Provider = await getProvider(options, "builtin/digital");
+      const Provider = await getProvider(io, "builtin/digital");
       this.io = new Provider({
-        pin: options.pin,
+        pin: io.pin,
         mode: Provider.Input,
         edge: Provider.Rising | Provider.Falling,
         onReadable: () => {

@@ -60,10 +60,14 @@ describe("Light", function() {
 
           let light = await new Light({
             pin: 17,
-            io: Analog,
+            io: Analog
+          });
+
+          light.configure({
             enabled: false
           });
-          assert.equal(light.interval, null);
+
+          assert.equal(light.interval, 0);
           assert.equal(light.smoothing, 10);
           assert.equal(light.raw, null);
           assert.equal(light.value, null);
@@ -82,7 +86,10 @@ describe("Light", function() {
           const clock = sinon.useFakeTimers();
           let light = await new Light({
             pin: 17,
-            io: Analog,
+            io: Analog
+          });
+
+          light.configure({
             enabled: false
           });
 
@@ -104,7 +111,10 @@ describe("Light", function() {
 
           let light = await new Light({
             pin: 17,
-            io: Analog,
+            io: Analog
+          });
+
+          light.configure({
             interval: 50
           });
           assert.equal(light.interval, 50);
@@ -126,7 +136,10 @@ describe("Light", function() {
           const clock = sinon.useFakeTimers();
           let light = await new Light({
             pin: 17,
-            io: Analog,
+            io: Analog
+          });
+
+          light.configure({
             interval: 50
           });
 
@@ -148,7 +161,10 @@ describe("Light", function() {
 
           let light = await new Light({
             pin: 17,
-            io: Analog,
+            io: Analog
+          });
+
+          light.configure({
             range: [256, 758]
           });
           assert.equal(light.interval, 100);
@@ -169,7 +185,10 @@ describe("Light", function() {
 
           let light = await new Light({
             pin: 17,
-            io: Analog,
+            io: Analog
+          });
+
+          light.configure({
             range: [256, 768]
           });
 
@@ -212,7 +231,10 @@ describe("Light", function() {
 
           let light = await new Light({
             pin: 17,
-            io: Analog,
+            io: Analog
+          });
+
+          light.configure({
             limit: [256, 758]
           });
 
@@ -236,7 +258,10 @@ describe("Light", function() {
           const clock = sinon.useFakeTimers();
           let light = await new Light({
             pin: 17,
-            io: Analog,
+            io: Analog
+          });
+
+          light.configure({
             limit: [256, 768]
           });
 
@@ -298,7 +323,10 @@ describe("Light", function() {
 
           let light = await new Light({
             pin: 17,
-            io: Analog,
+            io: Analog
+          });
+
+          light.configure({
             threshold: 20
           });
 
@@ -322,7 +350,10 @@ describe("Light", function() {
           const clock = sinon.useFakeTimers();
           let light = await new Light({
             pin: 17,
-            io: Analog,
+            io: Analog
+          });
+
+          light.configure({
             threshold: 20
           });
 
@@ -389,9 +420,13 @@ describe("Light", function() {
       it("should return the correct value when passed the interval param", async function() {
         let light = await new Light({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        light.configure({
           interval: 10
         });
+
         assert.equal(light.interval, 10);
         light.disable();
       });
@@ -400,9 +435,13 @@ describe("Light", function() {
         const clock = sinon.useFakeTimers();
         let light = await new Light({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        light.configure({
           interval: 10
         });
+
         const readSpy = sinon.spy(light.io, "read");
         clock.tick(1005);
         assert.equal(readSpy.callCount, 100);
@@ -413,9 +452,13 @@ describe("Light", function() {
       it("should return the correct value when set", async function() {
         let light = await new Light({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        light.configure({
           interval: 10
         });
+
         light.interval = 20;
         assert.equal(light.interval, 20);
         light.disable();
@@ -425,9 +468,13 @@ describe("Light", function() {
         const clock = sinon.useFakeTimers();
         let light = await new Light({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        light.configure({
           interval: 10
         });
+
         light.interval = 20;
         const readSpy = sinon.spy(light.io, "read");
         clock.tick(1005);
@@ -454,9 +501,13 @@ describe("Light", function() {
       it("should return the correct value regardless of range", async function() {
         let light = await new Light({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        light.configure({
           range: [400, 800]
         });
+
         light.io.value = 123;
         light.read();
         assert.equal(light.raw, 123);
@@ -466,9 +517,13 @@ describe("Light", function() {
       it("should return the correct value regardless of limit", async function() {
         let light = await new Light({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        light.configure({
           limit: [400, 800]
         });
+
         light.io.value = 123;
         light.read();
         assert.equal(light.raw, 123);
@@ -478,9 +533,13 @@ describe("Light", function() {
       it("should return the correct value regardless of scale", async function() {
         let light = await new Light({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        light.configure({
           scale: [400, 800]
         });
+
         light.io.value = 123;
         light.read();
         assert.equal(light.raw, 123);
@@ -505,9 +564,13 @@ describe("Light", function() {
       it("should return the correct value based on range", async function() {
         let light = await new Light({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        light.configure({
           range: [400, 800]
         });
+
         [[123, 0], [400, 0], [600, 511.5], [800, 1023], [1000, 1023]].forEach(inAndOut => {
           light.io.value = inAndOut[0];
           light.read();
@@ -520,9 +583,13 @@ describe("Light", function() {
       it("should return the correct value based on scale", async function() {
         let light = await new Light({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        light.configure({
           scale: [400, 800]
         });
+
         [[0, 400], [400, 556], [600, 634], [800, 712], [1000, 791]].forEach(inAndOut => {
           light.io.value = inAndOut[0];
           light.read();
@@ -535,10 +602,14 @@ describe("Light", function() {
       it("should return the correct value based on scale and range", async function() {
         let light = await new Light({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        light.configure({
           range: [400, 800],
           scale: [0, 255]
         });
+
         [[0, 0], [400, 0], [600, 127.5], [800, 255], [1000, 255]].forEach(inAndOut => {
           light.io.value = inAndOut[0];
           light.read();
@@ -570,7 +641,10 @@ describe("Light", function() {
 
         const light = await new Light({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        light.configure({
           range: [400, 800]
         });
 
@@ -587,9 +661,13 @@ describe("Light", function() {
       it("should return the correct value based on scale", async function() {
         let light = await new Light({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        light.configure({
           scale: [400, 800]
         });
+
         [[0, 0], [400, 0], [600, 0.5], [800, 1], [1000, 1]].forEach(inAndOut => {
           light.io.value = inAndOut[0];
           light.read();
@@ -602,10 +680,14 @@ describe("Light", function() {
       it("should return the correct value based on scale and range", async function() {
         let light = await new Light({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        light.configure({
           range: [400, 800],
           scale: [0, 255]
         });
+
         [[0, 0], [400, 1], [600, 1], [800, 1], [1000, 1]].forEach(inAndOut => {
           light.io.value = inAndOut[0];
           light.read();
@@ -632,9 +714,13 @@ describe("Light", function() {
       it("should return the correct value based on range", async function() {
         let light = await new Light({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        light.configure({
           range: [400, 800]
         });
+
         [[123, 0], [400, 0], [600, 511.5], [800, 1023], [1000, 1023]].forEach(inAndOut => {
           light.io.value = inAndOut[0];
           light.read();
@@ -647,9 +733,13 @@ describe("Light", function() {
       it("should return the correct value based on scale", async function() {
         let light = await new Light({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        light.configure({
           scale: [400, 800]
         });
+
         [[0, 400], [400, 556], [600, 634], [800, 712], [1000, 791]].forEach(inAndOut => {
           light.io.value = inAndOut[0];
           light.read();
@@ -662,10 +752,14 @@ describe("Light", function() {
       it("should return the correct value based on scale and range", async function() {
         let light = await new Light({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        light.configure({
           range: [400, 800],
           scale: [0, 255]
         });
+
         [[0, 0], [400, 0], [600, 127.5], [800, 255], [1000, 255]].forEach(inAndOut => {
           light.io.value = inAndOut[0];
           light.read();
@@ -702,9 +796,13 @@ describe("Light", function() {
       it("should return limit set in options", async function() {
         let light = await new Light({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        light.configure({
           limit: [200, 823]
         });
+
         assert.equal(light.limit[0], 200);
         assert.equal(light.limit[1], 823);
         light.disable();
@@ -713,9 +811,13 @@ describe("Light", function() {
       it("should be settable", async function() {
         let light = await new Light({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        light.configure({
           limit: [200, 823]
         });
+
         assert.equal(light.limit[0], 200);
         assert.equal(light.limit[1], 823);
         light.limit = [300, 900];
@@ -727,9 +829,13 @@ describe("Light", function() {
       it("should be settable", async function() {
         let light = await new Light({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        light.configure({
           limit: [200, 800]
         });
+
         assert.equal(light.limit[0], 200);
         assert.equal(light.limit[1], 800);
         light.limit = [300, 900];
@@ -743,7 +849,10 @@ describe("Light", function() {
         const clock = sinon.useFakeTimers();
         let light = await new Light({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        light.configure({
           limit: [256, 768]
         });
 
@@ -834,9 +943,13 @@ describe("Light", function() {
       it("should return the threshold set in options", async function() {
         let light = await new Light({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        light.configure({
           threshold: 5
         });
+
         assert.equal(light.threshold, 5);
         light.disable();
       });
@@ -916,9 +1029,13 @@ describe("Light", function() {
       it("should return the smoothing set in options", async function() {
         let light = await new Light({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        light.configure({
           smoothing: 5
         });
+
         assert.equal(light.smoothing, 5);
         light.disable();
       });
@@ -1055,7 +1172,10 @@ describe("Light", function() {
 
         let light = await new Light({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        light.configure({
           enabled: false
         });
 
@@ -1264,7 +1384,10 @@ describe("Light", function() {
 
         let light = await new Light({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        light.configure({
           scale: [0, 255]
         });
 
@@ -1368,7 +1491,10 @@ describe("Light", function() {
 
         let light = await new Light({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        light.configure({
           scale: [0, 255]
         });
 
@@ -1414,7 +1540,10 @@ describe("Light", function() {
         const clock = sinon.useFakeTimers();
         let light = await new Light({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        light.configure({
           limit: [256, 768]
         });
 
@@ -1501,7 +1630,10 @@ describe("Light", function() {
         const clock = sinon.useFakeTimers();
         let light = await new Light({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        light.configure({
           limit: [256, 768]
         });
 
@@ -1578,7 +1710,10 @@ describe("Light", function() {
         const clock = sinon.useFakeTimers();
         let light = await new Light({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        light.configure({
           limit: [256, 768]
         });
 

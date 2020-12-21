@@ -70,10 +70,13 @@ describe("Thermometer", function() {
 
           let thermometer = await new Thermometer({
             pin: 17,
-            io: Analog,
+            io: Analog
+          });
+
+          thermometer.configure({
             enabled: false
           });
-          assert.equal(thermometer.interval, null);
+          assert.equal(thermometer.interval, 0);
           assert.equal(thermometer.smoothing, 10);
           assert.equal(thermometer.raw, null);
           assert.equal(thermometer.value, null);
@@ -92,7 +95,10 @@ describe("Thermometer", function() {
           const clock = sinon.useFakeTimers();
           let thermometer = await new Thermometer({
             pin: 17,
-            io: Analog,
+            io: Analog
+          });
+
+          thermometer.configure({
             enabled: false
           });
 
@@ -114,7 +120,10 @@ describe("Thermometer", function() {
 
           let thermometer = await new Thermometer({
             pin: 17,
-            io: Analog,
+            io: Analog
+          });
+
+          thermometer.configure({
             interval: 50
           });
           assert.equal(thermometer.interval, 50);
@@ -136,7 +145,10 @@ describe("Thermometer", function() {
           const clock = sinon.useFakeTimers();
           let thermometer = await new Thermometer({
             pin: 17,
-            io: Analog,
+            io: Analog
+          });
+
+          thermometer.configure({
             interval: 50
           });
 
@@ -158,7 +170,10 @@ describe("Thermometer", function() {
 
           let thermometer = await new Thermometer({
             pin: 17,
-            io: Analog,
+            io: Analog
+          });
+
+          thermometer.configure({
             range: [256, 758]
           });
           assert.equal(thermometer.interval, 100);
@@ -179,7 +194,10 @@ describe("Thermometer", function() {
 
           let thermometer = await new Thermometer({
             pin: 17,
-            io: Analog,
+            io: Analog
+          });
+
+          thermometer.configure({
             range: [256, 768]
           });
 
@@ -222,7 +240,10 @@ describe("Thermometer", function() {
 
           let thermometer = await new Thermometer({
             pin: 17,
-            io: Analog,
+            io: Analog
+          });
+
+          thermometer.configure({
             limit: [256, 758]
           });
 
@@ -246,7 +267,10 @@ describe("Thermometer", function() {
           const clock = sinon.useFakeTimers();
           let thermometer = await new Thermometer({
             pin: 17,
-            io: Analog,
+            io: Analog
+          });
+
+          thermometer.configure({
             limit: [256, 768]
           });
 
@@ -309,7 +333,10 @@ describe("Thermometer", function() {
 
           let thermometer = await new Thermometer({
             pin: 17,
-            io: Analog,
+            io: Analog
+          });
+
+          thermometer.configure({
             threshold: 20
           });
 
@@ -333,7 +360,10 @@ describe("Thermometer", function() {
           const clock = sinon.useFakeTimers();
           let thermometer = await new Thermometer({
             pin: 17,
-            io: Analog,
+            io: Analog
+          });
+
+          thermometer.configure({
             threshold: 20
           });
 
@@ -374,7 +404,10 @@ describe("Thermometer", function() {
         it("should return the correct value", async function() {
           let thermometer = await new Thermometer({
             pin: 17,
-            io: Analog,
+            io: Analog
+          });
+
+          thermometer.configure({
             toCelsius: function(raw) {
               const mV = 3.3 * 1000 * raw / 1023;
               return (mV / 10) - 50;
@@ -390,7 +423,10 @@ describe("Thermometer", function() {
         it("should return the correct value based on range", async function() {
           let thermometer = await new Thermometer({
             pin: 17,
-            io: Analog,
+            io: Analog
+          });
+
+          thermometer.configure({
             range: [400, 800],
             toCelsius: function(raw) {
               const mV = 3.3 * 1000 * raw / 1023;
@@ -409,7 +445,10 @@ describe("Thermometer", function() {
         it("should return the correct value based on scale", async function() {
           let thermometer = await new Thermometer({
             pin: 17,
-            io: Analog,
+            io: Analog
+          });
+
+          thermometer.configure({
             scale: [400, 800],
             toCelsius: function(raw) {
               const mV = 3.3 * 1000 * raw / 1023;
@@ -428,7 +467,10 @@ describe("Thermometer", function() {
         it("should return the correct value based on scale and range", async function() {
           let thermometer = await new Thermometer({
             pin: 17,
-            io: Analog,
+            io: Analog
+          });
+
+          thermometer.configure({
             range: [400, 800],
             scale: [0, 255],
             toCelsius: function(raw) {
@@ -478,9 +520,13 @@ describe("Thermometer", function() {
       it("should return the correct value when passed the interval param", async function() {
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           interval: 10
         });
+
         assert.equal(thermometer.interval, 10);
         thermometer.disable();
       });
@@ -489,9 +535,13 @@ describe("Thermometer", function() {
         const clock = sinon.useFakeTimers();
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           interval: 10
         });
+
         const readSpy = sinon.spy(thermometer.io, "read");
         clock.tick(1005);
         assert.equal(readSpy.callCount, 100);
@@ -502,9 +552,13 @@ describe("Thermometer", function() {
       it("should return the correct value when set", async function() {
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           interval: 10
         });
+
         thermometer.interval = 20;
         assert.equal(thermometer.interval, 20);
         thermometer.disable();
@@ -514,9 +568,13 @@ describe("Thermometer", function() {
         const clock = sinon.useFakeTimers();
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           interval: 10
         });
+
         thermometer.interval = 20;
         const readSpy = sinon.spy(thermometer.io, "read");
         clock.tick(1005);
@@ -543,9 +601,13 @@ describe("Thermometer", function() {
       it("should return the correct value regardless of range", async function() {
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           range: [400, 800]
         });
+
         thermometer.io.value = 123;
         thermometer.read();
         assert.equal(thermometer.raw, 123);
@@ -555,9 +617,13 @@ describe("Thermometer", function() {
       it("should return the correct value regardless of limit", async function() {
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           limit: [400, 800]
         });
+
         thermometer.io.value = 123;
         thermometer.read();
         assert.equal(thermometer.raw, 123);
@@ -567,9 +633,13 @@ describe("Thermometer", function() {
       it("should return the correct value regardless of scale", async function() {
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           scale: [400, 800]
         });
+
         thermometer.io.value = 123;
         thermometer.read();
         assert.equal(thermometer.raw, 123);
@@ -594,9 +664,13 @@ describe("Thermometer", function() {
       it("should return the correct value based on range", async function() {
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           range: [400, 800]
         });
+
         [[123, 0], [400, 0], [600, 511.5], [800, 1023], [1000, 1023]].forEach(inAndOut => {
           thermometer.io.value = inAndOut[0];
           thermometer.read();
@@ -609,9 +683,13 @@ describe("Thermometer", function() {
       it("should return the correct value based on scale", async function() {
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           scale: [400, 800]
         });
+
         [[0, 400], [400, 556], [600, 634], [800, 712], [1000, 791]].forEach(inAndOut => {
           thermometer.io.value = inAndOut[0];
           thermometer.read();
@@ -624,10 +702,14 @@ describe("Thermometer", function() {
       it("should return the correct value based on scale and range", async function() {
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           range: [400, 800],
           scale: [0, 255]
         });
+
         [[0, 0], [400, 0], [600, 127.5], [800, 255], [1000, 255]].forEach(inAndOut => {
           thermometer.io.value = inAndOut[0];
           thermometer.read();
@@ -654,9 +736,13 @@ describe("Thermometer", function() {
       it("should return the correct value based on range", async function() {
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           range: [400, 800]
         });
+
         [[123, 0], [400, 0], [600, 511.5], [800, 1023], [1000, 1023]].forEach(inAndOut => {
           thermometer.io.value = inAndOut[0];
           thermometer.read();
@@ -669,9 +755,13 @@ describe("Thermometer", function() {
       it("should return the correct value based on scale", async function() {
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           scale: [400, 800]
         });
+
         [[0, 400], [400, 556], [600, 634], [800, 712], [1000, 791]].forEach(inAndOut => {
           thermometer.io.value = inAndOut[0];
           thermometer.read();
@@ -684,10 +774,14 @@ describe("Thermometer", function() {
       it("should return the correct value based on scale and range", async function() {
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           range: [400, 800],
           scale: [0, 255]
         });
+
         [[0, 0], [400, 0], [600, 127.5], [800, 255], [1000, 255]].forEach(inAndOut => {
           thermometer.io.value = inAndOut[0];
           thermometer.read();
@@ -714,9 +808,13 @@ describe("Thermometer", function() {
       it("should return the correct value based on range", async function() {
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           range: [400, 800]
         });
+
         [[123, 0], [400, 0], [600, 511.5], [800, 1023], [1000, 1023]].forEach(inAndOut => {
           thermometer.io.value = inAndOut[0];
           thermometer.read();
@@ -729,9 +827,13 @@ describe("Thermometer", function() {
       it("should return the correct value based on scale", async function() {
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           scale: [400, 800]
         });
+
         [[0, 400], [400, 556], [600, 634], [800, 712], [1000, 791]].forEach(inAndOut => {
           thermometer.io.value = inAndOut[0];
           thermometer.read();
@@ -744,10 +846,14 @@ describe("Thermometer", function() {
       it("should return the correct value based on scale and range", async function() {
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           range: [400, 800],
           scale: [0, 255]
         });
+
         [[0, 0], [400, 0], [600, 127.5], [800, 255], [1000, 255]].forEach(inAndOut => {
           thermometer.io.value = inAndOut[0];
           thermometer.read();
@@ -774,9 +880,13 @@ describe("Thermometer", function() {
       it("should return the correct value based on range", async function() {
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           range: [400, 800]
         });
+
         [[123, 0], [400, 0], [600, 511.5], [800, 1023], [1000, 1023]].forEach(inAndOut => {
           thermometer.io.value = inAndOut[0];
           thermometer.read();
@@ -789,9 +899,13 @@ describe("Thermometer", function() {
       it("should return the correct value based on scale", async function() {
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           scale: [400, 800]
         });
+
         [[0, 400], [400, 556], [600, 634], [800, 712], [1000, 791]].forEach(inAndOut => {
           thermometer.io.value = inAndOut[0];
           thermometer.read();
@@ -804,10 +918,14 @@ describe("Thermometer", function() {
       it("should return the correct value based on scale and range", async function() {
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           range: [400, 800],
           scale: [0, 255]
         });
+
         [[0, 0], [400, 0], [600, 127.5], [800, 255], [1000, 255]].forEach(inAndOut => {
           thermometer.io.value = inAndOut[0];
           thermometer.read();
@@ -834,9 +952,13 @@ describe("Thermometer", function() {
       it("should return the correct value based on range", async function() {
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           range: [400, 800]
         });
+
         [[123, 273.15], [400, 273.15], [600, 784.65], [800, 1296.15], [1000, 1296.15]].forEach(inAndOut => {
           thermometer.io.value = inAndOut[0];
           thermometer.read();
@@ -849,9 +971,13 @@ describe("Thermometer", function() {
       it("should return the correct value based on scale", async function() {
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           scale: [400, 800]
         });
+
         [[0, 673.15], [400, 829.55], [600, 907.75], [800, 985.96], [1000, 1064.16]].forEach(inAndOut => {
           thermometer.io.value = inAndOut[0];
           thermometer.read();
@@ -864,10 +990,14 @@ describe("Thermometer", function() {
       it("should return the correct value based on scale and range", async function() {
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           range: [400, 800],
           scale: [0, 255]
         });
+
         [[0, 273.15], [400, 273.15], [600, 400.65], [800, 528.15], [1000, 528.15]].forEach(inAndOut => {
           thermometer.io.value = inAndOut[0];
           thermometer.read();
@@ -894,9 +1024,13 @@ describe("Thermometer", function() {
       it("should return the correct value based on range", async function() {
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           range: [400, 800]
         });
+
         [[123, 273.15], [400, 273.15], [600, 784.65], [800, 1296.15], [1000, 1296.15]].forEach(inAndOut => {
           thermometer.io.value = inAndOut[0];
           thermometer.read();
@@ -909,9 +1043,13 @@ describe("Thermometer", function() {
       it("should return the correct value based on scale", async function() {
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           scale: [400, 800]
         });
+
         [[0, 673.15], [400, 829.55], [600, 907.75], [800, 985.96], [1000, 1064.16]].forEach(inAndOut => {
           thermometer.io.value = inAndOut[0];
           thermometer.read();
@@ -924,10 +1062,14 @@ describe("Thermometer", function() {
       it("should return the correct value based on scale and range", async function() {
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           range: [400, 800],
           scale: [0, 255]
         });
+
         [[0, 273.15], [400, 273.15], [600, 400.65], [800, 528.15], [1000, 528.15]].forEach(inAndOut => {
           thermometer.io.value = inAndOut[0];
           thermometer.read();
@@ -954,9 +1096,13 @@ describe("Thermometer", function() {
       it("should return the correct value based on range", async function() {
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           range: [400, 800]
         });
+
         [[123, 32], [400, 32], [600, 952.7], [800, 1873.4], [1000, 1873.4]].forEach(inAndOut => {
           thermometer.io.value = inAndOut[0];
           thermometer.read();
@@ -969,9 +1115,13 @@ describe("Thermometer", function() {
       it("should return the correct value based on scale", async function() {
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           scale: [400, 800]
         });
+
         [[0, 752], [400, 1033.52], [600, 1174.29], [800, 1315.05], [1000, 1455.81]].forEach(inAndOut => {
           thermometer.io.value = inAndOut[0];
           thermometer.read();
@@ -984,10 +1134,14 @@ describe("Thermometer", function() {
       it("should return the correct value based on scale and range", async function() {
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           range: [400, 800],
           scale: [0, 255]
         });
+
         [[0, 32], [400, 32], [600, 261.5], [800, 491], [1000, 491]].forEach(inAndOut => {
           thermometer.io.value = inAndOut[0];
           thermometer.read();
@@ -1014,9 +1168,13 @@ describe("Thermometer", function() {
       it("should return the correct value based on range", async function() {
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           range: [400, 800]
         });
+
         [[123, 32], [400, 32], [600, 952.7], [800, 1873.4], [1000, 1873.4]].forEach(inAndOut => {
           thermometer.io.value = inAndOut[0];
           thermometer.read();
@@ -1029,9 +1187,13 @@ describe("Thermometer", function() {
       it("should return the correct value based on scale", async function() {
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           scale: [400, 800]
         });
+
         [[0, 752], [400, 1033.52], [600, 1174.29], [800, 1315.05], [1000, 1455.81]].forEach(inAndOut => {
           thermometer.io.value = inAndOut[0];
           thermometer.read();
@@ -1044,10 +1206,14 @@ describe("Thermometer", function() {
       it("should return the correct value based on scale and range", async function() {
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           range: [400, 800],
           scale: [0, 255]
         });
+
         [[0, 32], [400, 32], [600, 261.5], [800, 491], [1000, 491]].forEach(inAndOut => {
           thermometer.io.value = inAndOut[0];
           thermometer.read();
@@ -1084,9 +1250,13 @@ describe("Thermometer", function() {
       it("should return limit set in options", async function() {
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           limit: [200, 823]
         });
+
         assert.equal(thermometer.limit[0], 200);
         assert.equal(thermometer.limit[1], 823);
         thermometer.disable();
@@ -1095,9 +1265,13 @@ describe("Thermometer", function() {
       it("should be settable", async function() {
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           limit: [200, 823]
         });
+
         assert.equal(thermometer.limit[0], 200);
         assert.equal(thermometer.limit[1], 823);
         thermometer.limit = [300, 900];
@@ -1109,7 +1283,10 @@ describe("Thermometer", function() {
       it("should be settable", async function() {
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           limit: [200, 800]
         });
         assert.equal(thermometer.limit[0], 200);
@@ -1125,7 +1302,10 @@ describe("Thermometer", function() {
         const clock = sinon.useFakeTimers();
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           limit: [256, 768]
         });
 
@@ -1216,9 +1396,13 @@ describe("Thermometer", function() {
       it("should return the threshold set in options", async function() {
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           threshold: 5
         });
+
         assert.equal(thermometer.threshold, 5);
         thermometer.disable();
       });
@@ -1298,9 +1482,13 @@ describe("Thermometer", function() {
       it("should return the smoothing set in options", async function() {
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           smoothing: 5
         });
+
         assert.equal(thermometer.smoothing, 5);
         thermometer.disable();
       });
@@ -1437,7 +1625,10 @@ describe("Thermometer", function() {
 
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           enabled: false
         });
 
@@ -1646,7 +1837,10 @@ describe("Thermometer", function() {
 
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           scale: [0, 255]
         });
 
@@ -1750,7 +1944,10 @@ describe("Thermometer", function() {
 
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           scale: [0, 255]
         });
 
@@ -1796,7 +1993,10 @@ describe("Thermometer", function() {
         const clock = sinon.useFakeTimers();
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           limit: [256, 768]
         });
 
@@ -1883,7 +2083,10 @@ describe("Thermometer", function() {
         const clock = sinon.useFakeTimers();
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           limit: [256, 768]
         });
 
@@ -1960,7 +2163,10 @@ describe("Thermometer", function() {
         const clock = sinon.useFakeTimers();
         let thermometer = await new Thermometer({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        thermometer.configure({
           limit: [256, 768]
         });
 

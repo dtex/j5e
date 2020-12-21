@@ -25,8 +25,11 @@ describe("Button", function() {
         it("should invert state when the invert option is true", async function() {
           const button = await new Button({
             pin: 13,
-            io: Digital,
-            invert: true
+            io: Digital
+          });
+
+          button.configure({
+            normallyClosed: true
           });
 
           button.io.write(0);
@@ -45,8 +48,8 @@ describe("Button", function() {
         it("should invert state when the isPullup option is true", async function() {
           const button = await new Button({
             pin: 13,
-            io: Digital,
-            isPullup: true
+            mode: "InputPullUp",
+            io: Digital
           });
 
           button.io.write(0);
@@ -62,7 +65,9 @@ describe("Button", function() {
         it("should not invert state when the isPullup and invert options are true", async function() {
           const button = await new Button({
             pin: 13,
-            io: Digital,
+            io: Digital
+          },
+          {
             isPullup: true,
             invert: true
           });
@@ -79,32 +84,15 @@ describe("Button", function() {
 
       });
 
-      describe("isPulldown", function() {
-
-        it("should not invert state when the isPulldown option is true", async function() {
-          const button = await new Button({
-            pin: 13,
-            io: Digital,
-            isPulldown: true
-          });
-
-          button.io.write(1);
-          assert.equal(button.isClosed, true);
-          assert.equal(button.isOpen, false);
-
-          button.io.write(0);
-          assert.equal(button.isClosed, false);
-          assert.equal(button.isOpen, true);
-
-        });
-      });
-
       describe("holdtime", function() {
 
         it("should set the holdtime state when passed a value in options", async function() {
           const button = await new Button({
             pin: 13,
-            io: Digital,
+            io: Digital
+          });
+
+          button.configure({
             holdtime: 2000
           });
 
@@ -121,7 +109,10 @@ describe("Button", function() {
         it("should delay event emissions by debounced value that is passed", async function() {
           const button = await new Button({
             pin: 13,
-            io: Digital,
+            io: Digital
+          });
+
+          button.configure({
             debounce: 20
           });
 
@@ -251,7 +242,10 @@ describe("Button", function() {
         const holdSpy = sinon.spy();
         const button = await new Button({
           pin: 13,
-          io: Digital,
+          io: Digital
+        });
+
+        button.configure({
           holdtime: 2000
         });
 
@@ -290,8 +284,11 @@ describe("Button", function() {
 
         const button = await new Button({
           pin: 13,
-          io: Digital,
-          invert: true
+          io: Digital
+        });
+
+        button.configure({
+          normallyClosed: true
         });
 
         assert.equal(button.downValue, 0);
@@ -303,7 +300,7 @@ describe("Button", function() {
         const button = await new Button({
           pin: 13,
           io: Digital,
-          isPullup: true
+          mode: "InputPullUp"
         });
 
         assert.equal(button.downValue, 0);
@@ -315,8 +312,11 @@ describe("Button", function() {
         const button = await new Button({
           pin: 13,
           io: Digital,
-          isPullup: true,
-          invert: true
+          mode: "InputPullUp"
+        });
+
+        button.configure({
+          normallyClosed: true
         });
 
         assert.equal(button.downValue, 1);
@@ -353,8 +353,11 @@ describe("Button", function() {
 
         const button = await new Button({
           pin: 13,
-          io: Digital,
-          invert: true
+          io: Digital
+        });
+
+        button.configure({
+          normallyClosed: true
         });
 
         assert.equal(button.upValue, 1);
@@ -366,7 +369,7 @@ describe("Button", function() {
         const button = await new Button({
           pin: 13,
           io: Digital,
-          isPullup: true
+          mode: "InputPullUp"
         });
 
         assert.equal(button.upValue, 1);
@@ -378,8 +381,11 @@ describe("Button", function() {
         const button = await new Button({
           pin: 13,
           io: Digital,
-          isPullup: true,
-          invert: true
+          mode: "InputPullUp"
+        });
+
+        button.configure({
+          normallyClosed: true
         });
 
         assert.equal(button.upValue, 0);

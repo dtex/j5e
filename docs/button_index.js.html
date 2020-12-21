@@ -102,7 +102,7 @@
  */
 
 import { Emitter } from "j5e/event";
-import { debounce, normalizeParams, getProvider, timer } from "j5e/fn";
+import { debounce, normalizeDevice, normalizeIO, getProvider, timer } from "j5e/fn";
 
 const aliases = {
   down: ["down", "press"],
@@ -128,7 +128,8 @@ class Button extends Emitter {
 
   /**
    * Instantiate a button
-   * @param {object} options - A pin number, pin identifier or a complete IO options object (See {@tutorial C-INSTANTIATING}
+   * @param {number|string|object} io - Pin identifier or IO Options (See {@tutorial C-INSTANTIATING})
+   * @param {object} options - Device configuration options
    * @param {boolean} [options.invert=false] - Inverts the up and down values
    * @param {boolean} [options.isPullup=false] - Initialize as a pullup button
    * @param {boolean} [options.isPulldown=false] - Initialize as a pulldown button
@@ -150,16 +151,17 @@ class Button extends Emitter {
    *   led.on();
    * });
    */
-  constructor(options) {
+  constructor(io, options) {
     return (async() => {
 
       let raw;
       let invert = false;
 
-      options = normalizeParams(options);
+      io = normalizeIO(io);
+      options = normalizeDevice(options);
       super();
 
-      const Provider = await getProvider(options, "builtin/digital");
+      const Provider = await getProvider(io, "builtin/digital");
 
       let mode = Provider.Input;
       if (typeof options.isPullup !== "undefined") {

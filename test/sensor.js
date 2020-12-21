@@ -58,10 +58,14 @@ describe("Sensor", function() {
 
           let sensor = await new Sensor({
             pin: 17,
-            io: Analog,
+            io: Analog
+          });
+
+          sensor.configure({
             enabled: false
           });
-          assert.equal(sensor.interval, null);
+
+          assert.equal(sensor.interval, 0);
           assert.equal(sensor.smoothing, 10);
           assert.equal(sensor.raw, null);
           assert.equal(sensor.value, null);
@@ -80,14 +84,17 @@ describe("Sensor", function() {
           const clock = sinon.useFakeTimers();
           let sensor = await new Sensor({
             pin: 17,
-            io: Analog,
+            io: Analog
+          });
+
+          sensor.configure({
             enabled: false
           });
 
-          const writeSpy = sinon.spy(sensor.io, "read");
+          const readSpy = sinon.spy(sensor.io, "read");
 
           clock.tick(1050);
-          assert.equal(writeSpy.callCount, 0);
+          assert.equal(readSpy.callCount, 0);
           clock.restore();
 
           sensor.disable();
@@ -102,9 +109,13 @@ describe("Sensor", function() {
 
           let sensor = await new Sensor({
             pin: 17,
-            io: Analog,
+            io: Analog
+          });
+
+          sensor.configure({
             interval: 50
           });
+
           assert.equal(sensor.interval, 50);
           assert.equal(sensor.smoothing, 10);
           assert.equal(sensor.raw, null);
@@ -124,14 +135,18 @@ describe("Sensor", function() {
           const clock = sinon.useFakeTimers();
           let sensor = await new Sensor({
             pin: 17,
-            io: Analog,
+            io: Analog
+          });
+
+          sensor.configure({
             interval: 50
           });
 
-          const writeSpy = sinon.spy(sensor.io, "read");
+          const readSpy = sinon.spy(sensor.io, "read");
 
           clock.tick(1005);
-          assert.equal(writeSpy.callCount, 20);
+
+          assert.equal(readSpy.callCount, 20);
           clock.restore();
 
           sensor.disable();
@@ -146,9 +161,13 @@ describe("Sensor", function() {
 
           let sensor = await new Sensor({
             pin: 17,
-            io: Analog,
+            io: Analog
+          });
+
+          sensor.configure({
             range: [256, 758]
           });
+
           assert.equal(sensor.interval, 100);
           assert.equal(sensor.smoothing, 10);
           assert.equal(sensor.raw, null);
@@ -167,7 +186,10 @@ describe("Sensor", function() {
 
           let sensor = await new Sensor({
             pin: 17,
-            io: Analog,
+            io: Analog
+          });
+
+          sensor.configure({
             range: [256, 768]
           });
 
@@ -210,7 +232,10 @@ describe("Sensor", function() {
 
           let sensor = await new Sensor({
             pin: 17,
-            io: Analog,
+            io: Analog
+          });
+
+          sensor.configure({
             limit: [256, 758]
           });
 
@@ -234,7 +259,10 @@ describe("Sensor", function() {
           const clock = sinon.useFakeTimers();
           let sensor = await new Sensor({
             pin: 17,
-            io: Analog,
+            io: Analog
+          });
+
+          sensor.configure({
             limit: [256, 768]
           });
 
@@ -296,7 +324,10 @@ describe("Sensor", function() {
 
           let sensor = await new Sensor({
             pin: 17,
-            io: Analog,
+            io: Analog
+          });
+
+          sensor.configure({
             threshold: 20
           });
 
@@ -320,7 +351,10 @@ describe("Sensor", function() {
           const clock = sinon.useFakeTimers();
           let sensor = await new Sensor({
             pin: 17,
-            io: Analog,
+            io: Analog
+          });
+
+          sensor.configure({
             threshold: 20
           });
 
@@ -387,9 +421,13 @@ describe("Sensor", function() {
       it("should return the correct value when passed the interval param", async function() {
         let sensor = await new Sensor({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        sensor.configure({
           interval: 10
         });
+
         assert.equal(sensor.interval, 10);
         sensor.disable();
       });
@@ -398,9 +436,13 @@ describe("Sensor", function() {
         const clock = sinon.useFakeTimers();
         let sensor = await new Sensor({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        sensor.configure({
           interval: 10
         });
+
         const readSpy = sinon.spy(sensor.io, "read");
         clock.tick(1005);
         assert.equal(readSpy.callCount, 100);
@@ -411,9 +453,13 @@ describe("Sensor", function() {
       it("should return the correct value when set", async function() {
         let sensor = await new Sensor({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        sensor.configure({
           interval: 10
         });
+
         sensor.interval = 20;
         assert.equal(sensor.interval, 20);
         sensor.disable();
@@ -423,9 +469,13 @@ describe("Sensor", function() {
         const clock = sinon.useFakeTimers();
         let sensor = await new Sensor({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        sensor.configure({
           interval: 10
         });
+
         sensor.interval = 20;
         const readSpy = sinon.spy(sensor.io, "read");
         clock.tick(1005);
@@ -452,9 +502,13 @@ describe("Sensor", function() {
       it("should return the correct value regardless of range", async function() {
         let sensor = await new Sensor({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        sensor.configure({
           range: [400, 800]
         });
+
         sensor.io.value = 123;
         sensor.read();
         assert.equal(sensor.raw, 123);
@@ -464,9 +518,13 @@ describe("Sensor", function() {
       it("should return the correct value regardless of limit", async function() {
         let sensor = await new Sensor({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        sensor.configure({
           limit: [400, 800]
         });
+
         sensor.io.value = 123;
         sensor.read();
         assert.equal(sensor.raw, 123);
@@ -476,9 +534,13 @@ describe("Sensor", function() {
       it("should return the correct value regardless of scale", async function() {
         let sensor = await new Sensor({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        sensor.configure({
           scale: [400, 800]
         });
+
         sensor.io.value = 123;
         sensor.read();
         assert.equal(sensor.raw, 123);
@@ -503,9 +565,13 @@ describe("Sensor", function() {
       it("should return the correct value based on range", async function() {
         let sensor = await new Sensor({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        sensor.configure({
           range: [400, 800]
         });
+
         [[123, 0], [400, 0], [600, 511.5], [800, 1023], [1000, 1023]].forEach(inAndOut => {
           sensor.io.value = inAndOut[0];
           sensor.read();
@@ -518,9 +584,13 @@ describe("Sensor", function() {
       it("should return the correct value based on scale", async function() {
         let sensor = await new Sensor({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        sensor.configure({
           scale: [400, 800]
         });
+
         [[0, 400], [400, 556], [600, 634], [800, 712], [1000, 791]].forEach(inAndOut => {
           sensor.io.value = inAndOut[0];
           sensor.read();
@@ -533,10 +603,14 @@ describe("Sensor", function() {
       it("should return the correct value based on scale and range", async function() {
         let sensor = await new Sensor({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        sensor.configure({
           range: [400, 800],
           scale: [0, 255]
         });
+
         [[0, 0], [400, 0], [600, 127.5], [800, 255], [1000, 255]].forEach(inAndOut => {
           sensor.io.value = inAndOut[0];
           sensor.read();
@@ -563,9 +637,13 @@ describe("Sensor", function() {
       it("should return the correct value based on range", async function() {
         let sensor = await new Sensor({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        sensor.configure({
           range: [400, 800]
         });
+
         [[123, 0], [400, 0], [600, 511.5], [800, 1023], [1000, 1023]].forEach(inAndOut => {
           sensor.io.value = inAndOut[0];
           sensor.read();
@@ -578,9 +656,13 @@ describe("Sensor", function() {
       it("should return the correct value based on scale", async function() {
         let sensor = await new Sensor({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        sensor.configure({
           scale: [400, 800]
         });
+
         [[0, 400], [400, 556], [600, 634], [800, 712], [1000, 791]].forEach(inAndOut => {
           sensor.io.value = inAndOut[0];
           sensor.read();
@@ -593,10 +675,14 @@ describe("Sensor", function() {
       it("should return the correct value based on scale and range", async function() {
         let sensor = await new Sensor({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        sensor.configure({
           range: [400, 800],
           scale: [0, 255]
         });
+
         [[0, 0], [400, 0], [600, 127.5], [800, 255], [1000, 255]].forEach(inAndOut => {
           sensor.io.value = inAndOut[0];
           sensor.read();
@@ -633,9 +719,13 @@ describe("Sensor", function() {
       it("should return limit set in options", async function() {
         let sensor = await new Sensor({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        sensor.configure({
           limit: [200, 823]
         });
+
         assert.equal(sensor.limit[0], 200);
         assert.equal(sensor.limit[1], 823);
         sensor.disable();
@@ -644,9 +734,13 @@ describe("Sensor", function() {
       it("should be settable", async function() {
         let sensor = await new Sensor({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        sensor.configure({
           limit: [200, 823]
         });
+
         assert.equal(sensor.limit[0], 200);
         assert.equal(sensor.limit[1], 823);
         sensor.limit = [300, 900];
@@ -658,9 +752,13 @@ describe("Sensor", function() {
       it("should be settable", async function() {
         let sensor = await new Sensor({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        sensor.configure({
           limit: [200, 800]
         });
+
         assert.equal(sensor.limit[0], 200);
         assert.equal(sensor.limit[1], 800);
         sensor.limit = [300, 900];
@@ -674,7 +772,10 @@ describe("Sensor", function() {
         const clock = sinon.useFakeTimers();
         let sensor = await new Sensor({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        sensor.configure({
           limit: [256, 768]
         });
 
@@ -765,9 +866,13 @@ describe("Sensor", function() {
       it("should return the threshold set in options", async function() {
         let sensor = await new Sensor({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        sensor.configure({
           threshold: 5
         });
+
         assert.equal(sensor.threshold, 5);
         sensor.disable();
       });
@@ -847,9 +952,13 @@ describe("Sensor", function() {
       it("should return the smoothing set in options", async function() {
         let sensor = await new Sensor({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        sensor.configure({
           smoothing: 5
         });
+
         assert.equal(sensor.smoothing, 5);
         sensor.disable();
       });
@@ -986,7 +1095,10 @@ describe("Sensor", function() {
 
         let sensor = await new Sensor({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        sensor.configure({
           enabled: false
         });
 
@@ -1195,7 +1307,10 @@ describe("Sensor", function() {
 
         let sensor = await new Sensor({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        sensor.configure({
           scale: [0, 255]
         });
 
@@ -1299,7 +1414,10 @@ describe("Sensor", function() {
 
         let sensor = await new Sensor({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        sensor.configure({
           scale: [0, 255]
         });
 
@@ -1345,7 +1463,10 @@ describe("Sensor", function() {
         const clock = sinon.useFakeTimers();
         let sensor = await new Sensor({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        sensor.configure({
           limit: [256, 768]
         });
 
@@ -1432,7 +1553,10 @@ describe("Sensor", function() {
         const clock = sinon.useFakeTimers();
         let sensor = await new Sensor({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        sensor.configure({
           limit: [256, 768]
         });
 
@@ -1509,7 +1633,10 @@ describe("Sensor", function() {
         const clock = sinon.useFakeTimers();
         let sensor = await new Sensor({
           pin: 17,
-          io: Analog,
+          io: Analog
+        });
+
+        sensor.configure({
           limit: [256, 768]
         });
 
