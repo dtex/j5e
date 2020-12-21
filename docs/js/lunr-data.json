@@ -1646,6 +1646,289 @@
           "singl",
           "valu"
         ],
+        "module-j5e_thermometer-Thermometer.html": [
+          "allow",
+          "analog",
+          "class",
+          "control",
+          "j5e/thermometer~thermomet",
+          "lt;async&gt",
+          "module:j5e/thermometer~thermomet",
+          "thermistor",
+          "thermomet"
+        ],
+        "module-j5e_thermometer-Thermometer.html#celsius": [
+          "celsiu",
+          "degre",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/thermometer~thermometer#celsiu",
+          "number"
+        ],
+        "module-j5e_thermometer-Thermometer.html#C": [
+          "alia",
+          "c",
+          "celsiu",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/thermometer~thermometer#c",
+          "number"
+        ],
+        "module-j5e_thermometer-Thermometer.html#fahrenheit": [
+          "degre",
+          "fahrenheit",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/thermometer~thermometer#fahrenheit",
+          "number"
+        ],
+        "module-j5e_thermometer-Thermometer.html#F": [
+          "alia",
+          "f",
+          "fahrenheit",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/thermometer~thermometer#f",
+          "number"
+        ],
+        "module-j5e_thermometer-Thermometer.html#kelvin": [
+          "degre",
+          "kelvin",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/thermometer~thermometer#kelvin",
+          "number"
+        ],
+        "module-j5e_thermometer-Thermometer.html#K": [
+          "alia",
+          "k",
+          "kelvin",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/thermometer~thermometer#k",
+          "number"
+        ],
+        "module-j5e_thermometer-Thermometer.html#limit": [
+          "array.&lt;number&gt",
+          "limit",
+          "member",
+          "module:j5e/thermometer~thermometer#limit",
+          "output",
+          "rang"
+        ],
+        "module-j5e_thermometer-Thermometer.html#threshold": [
+          "amount",
+          "chang",
+          "emit",
+          "event",
+          "member",
+          "minimum",
+          "module:j5e/thermometer~thermometer#threshold",
+          "number",
+          "requir",
+          "threshold"
+        ],
+        "module-j5e_thermometer-Thermometer.html#interval": [
+          "between",
+          "interv",
+          "member",
+          "module:j5e/thermometer~thermometer#interv",
+          "ms",
+          "number",
+          "read"
+        ],
+        "module-j5e_thermometer-Thermometer.html#smoothing": [
+          "befor",
+          "find",
+          "median",
+          "member",
+          "module:j5e/thermometer~thermometer#smooth",
+          "number",
+          "sampl",
+          "smooth",
+          "take"
+        ],
+        "module-j5e_thermometer-Thermometer.html#aref": [
+          "aref",
+          "member",
+          "module:j5e/thermometer~thermometer#aref",
+          "number",
+          "refer",
+          "voltag"
+        ],
+        "module-j5e_thermometer-Thermometer.html#samples": [
+          "befor",
+          "find",
+          "median",
+          "member",
+          "module:j5e/thermometer~thermometer#sampl",
+          "number",
+          "sampl",
+          "take"
+        ],
+        "module-j5e_thermometer-Thermometer.html#range": [
+          "array.&lt;number&gt",
+          "input",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/thermometer~thermometer#rang",
+          "rang",
+          "sensor"
+        ],
+        "module-j5e_thermometer-Thermometer.html#raw": [
+          "adc",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/thermometer~thermometer#raw",
+          "number",
+          "raw",
+          "read",
+          "recent"
+        ],
+        "module-j5e_thermometer-Thermometer.html#median": [
+          "adc",
+          "lt;readonly&gt",
+          "median",
+          "member",
+          "module:j5e/thermometer~thermometer#median",
+          "number",
+          "read",
+          "recent"
+        ],
+        "module-j5e_thermometer-Thermometer.html#resolution": [
+          "adc",
+          "lt;readonly&gt",
+          "maximum",
+          "member",
+          "module:j5e/thermometer~thermometer#resolut",
+          "number",
+          "possibl",
+          "read",
+          "resolut"
+        ],
+        "module-j5e_thermometer-Thermometer.html#scaled": [
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/thermometer~thermometer#sc",
+          "number",
+          "raw",
+          "read",
+          "recent",
+          "scale"
+        ],
+        "module-j5e_thermometer-Thermometer.html#value": [
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/thermometer~thermometer#valu",
+          "number",
+          "valu"
+        ],
+        "module-j5e_thermometer-Thermometer.html#configure": [
+          "configur",
+          "function",
+          "module:j5e/thermometer~thermometer#configur",
+          "option",
+          "thermomet"
+        ],
+        "module-j5e_thermometer-Thermometer.html#on": [
+          "creat",
+          "event",
+          "function",
+          "listen",
+          "module:j5e/thermometer~thermometer#on"
+        ],
+        "module-j5e_thermometer-Thermometer.html#within": [
+          "callback",
+          "certain",
+          "fire",
+          "function",
+          "module:j5e/thermometer~thermometer#within",
+          "rang",
+          "unit",
+          "valu",
+          "within"
+        ],
+        "module-j5e_thermometer-Thermometer.html#removeListener": [
+          "event",
+          "function",
+          "listen",
+          "module:j5e/thermometer~thermometer#removelisten",
+          "remov",
+          "removelisten"
+        ],
+        "module-j5e_thermometer-Thermometer.html#once": [
+          "creat",
+          "event",
+          "fire",
+          "function",
+          "listen",
+          "module:j5e/thermometer~thermometer#onc",
+          "on",
+          "onc",
+          "time"
+        ],
+        "module-j5e_thermometer-Thermometer.html#enable": [
+          "disabl",
+          "enabl",
+          "function",
+          "module:j5e/thermometer~thermometer#en",
+          "object",
+          "sensor"
+        ],
+        "module-j5e_thermometer-Thermometer.html#disable": [
+          "disabl",
+          "enabl",
+          "function",
+          "module:j5e/thermometer~thermometer#dis",
+          "object",
+          "sensor"
+        ],
+        "module-j5e_thermometer-Thermometer.html#read": [
+          "function",
+          "module:j5e/thermometer~thermometer#read",
+          "number",
+          "read",
+          "sensor",
+          "synchron"
+        ],
+        "module-j5e_thermometer-Thermometer.html#scale": [
+          "function",
+          "high",
+          "low",
+          "module:j5e/thermometer~thermometer#scal",
+          "object",
+          "rang",
+          "scale",
+          "scale/scaleto",
+          "set",
+          "valu"
+        ],
+        "module-j5e_thermometer-Thermometer.html#scaleTo": [
+          "function",
+          "high",
+          "integ",
+          "low",
+          "module:j5e/thermometer~thermometer#scaleto",
+          "number",
+          "represent",
+          "scale",
+          "scaleto",
+          "valu"
+        ],
+        "module-j5e_thermometer-Thermometer.html#fscaleTo": [
+          "float",
+          "fscaleto",
+          "function",
+          "high",
+          "low",
+          "module:j5e/thermometer~thermometer#fscaleto",
+          "number",
+          "precis",
+          "represent",
+          "scale",
+          "singl",
+          "valu"
+        ],
         "module-j5e_servo-Servo.html": [
           "allow",
           "class",
@@ -2089,288 +2372,6 @@
           "function",
           "module:j5e/button~button#configur",
           "option"
-        ],
-        "module-j5e_thermometer-Thermometer.html": [
-          "allow",
-          "analog",
-          "class",
-          "control",
-          "j5e/thermometer~thermomet",
-          "lt;async&gt",
-          "module:j5e/thermometer~thermomet",
-          "thermistor",
-          "thermomet"
-        ],
-        "module-j5e_thermometer-Thermometer.html#celsius": [
-          "celsiu",
-          "degre",
-          "lt;readonly&gt",
-          "member",
-          "module:j5e/thermometer~thermometer#celsiu",
-          "number"
-        ],
-        "module-j5e_thermometer-Thermometer.html#C": [
-          "alia",
-          "c",
-          "celsiu",
-          "lt;readonly&gt",
-          "member",
-          "module:j5e/thermometer~thermometer#c",
-          "number"
-        ],
-        "module-j5e_thermometer-Thermometer.html#fahrenheit": [
-          "degre",
-          "fahrenheit",
-          "lt;readonly&gt",
-          "member",
-          "module:j5e/thermometer~thermometer#fahrenheit",
-          "number"
-        ],
-        "module-j5e_thermometer-Thermometer.html#F": [
-          "alia",
-          "f",
-          "fahrenheit",
-          "lt;readonly&gt",
-          "member",
-          "module:j5e/thermometer~thermometer#f",
-          "number"
-        ],
-        "module-j5e_thermometer-Thermometer.html#kelvin": [
-          "degre",
-          "kelvin",
-          "lt;readonly&gt",
-          "member",
-          "module:j5e/thermometer~thermometer#kelvin",
-          "number"
-        ],
-        "module-j5e_thermometer-Thermometer.html#K": [
-          "alia",
-          "k",
-          "kelvin",
-          "lt;readonly&gt",
-          "member",
-          "module:j5e/thermometer~thermometer#k",
-          "number"
-        ],
-        "module-j5e_thermometer-Thermometer.html#limit": [
-          "array.&lt;number&gt",
-          "limit",
-          "member",
-          "module:j5e/thermometer~thermometer#limit",
-          "output",
-          "rang"
-        ],
-        "module-j5e_thermometer-Thermometer.html#threshold": [
-          "amount",
-          "chang",
-          "emit",
-          "event",
-          "member",
-          "minimum",
-          "module:j5e/thermometer~thermometer#threshold",
-          "number",
-          "requir",
-          "threshold"
-        ],
-        "module-j5e_thermometer-Thermometer.html#interval": [
-          "between",
-          "interv",
-          "member",
-          "module:j5e/thermometer~thermometer#interv",
-          "ms",
-          "number",
-          "read"
-        ],
-        "module-j5e_thermometer-Thermometer.html#smoothing": [
-          "befor",
-          "find",
-          "median",
-          "member",
-          "module:j5e/thermometer~thermometer#smooth",
-          "number",
-          "sampl",
-          "smooth",
-          "take"
-        ],
-        "module-j5e_thermometer-Thermometer.html#aref": [
-          "aref",
-          "member",
-          "module:j5e/thermometer~thermometer#aref",
-          "number",
-          "refer",
-          "voltag"
-        ],
-        "module-j5e_thermometer-Thermometer.html#samples": [
-          "befor",
-          "find",
-          "median",
-          "member",
-          "module:j5e/thermometer~thermometer#sampl",
-          "number",
-          "sampl",
-          "take"
-        ],
-        "module-j5e_thermometer-Thermometer.html#range": [
-          "array.&lt;number&gt",
-          "input",
-          "lt;readonly&gt",
-          "member",
-          "module:j5e/thermometer~thermometer#rang",
-          "rang",
-          "sensor"
-        ],
-        "module-j5e_thermometer-Thermometer.html#raw": [
-          "adc",
-          "lt;readonly&gt",
-          "member",
-          "module:j5e/thermometer~thermometer#raw",
-          "number",
-          "raw",
-          "read",
-          "recent"
-        ],
-        "module-j5e_thermometer-Thermometer.html#median": [
-          "adc",
-          "lt;readonly&gt",
-          "median",
-          "member",
-          "module:j5e/thermometer~thermometer#median",
-          "number",
-          "read",
-          "recent"
-        ],
-        "module-j5e_thermometer-Thermometer.html#resolution": [
-          "adc",
-          "lt;readonly&gt",
-          "maximum",
-          "member",
-          "module:j5e/thermometer~thermometer#resolut",
-          "number",
-          "possibl",
-          "read",
-          "resolut"
-        ],
-        "module-j5e_thermometer-Thermometer.html#scaled": [
-          "lt;readonly&gt",
-          "member",
-          "module:j5e/thermometer~thermometer#sc",
-          "number",
-          "raw",
-          "read",
-          "recent",
-          "scale"
-        ],
-        "module-j5e_thermometer-Thermometer.html#value": [
-          "lt;readonly&gt",
-          "member",
-          "module:j5e/thermometer~thermometer#valu",
-          "number",
-          "valu"
-        ],
-        "module-j5e_thermometer-Thermometer.html#configure": [
-          "configur",
-          "function",
-          "module:j5e/thermometer~thermometer#configur",
-          "thermomet"
-        ],
-        "module-j5e_thermometer-Thermometer.html#on": [
-          "creat",
-          "event",
-          "function",
-          "listen",
-          "module:j5e/thermometer~thermometer#on"
-        ],
-        "module-j5e_thermometer-Thermometer.html#within": [
-          "callback",
-          "certain",
-          "fire",
-          "function",
-          "module:j5e/thermometer~thermometer#within",
-          "rang",
-          "unit",
-          "valu",
-          "within"
-        ],
-        "module-j5e_thermometer-Thermometer.html#removeListener": [
-          "event",
-          "function",
-          "listen",
-          "module:j5e/thermometer~thermometer#removelisten",
-          "remov",
-          "removelisten"
-        ],
-        "module-j5e_thermometer-Thermometer.html#once": [
-          "creat",
-          "event",
-          "fire",
-          "function",
-          "listen",
-          "module:j5e/thermometer~thermometer#onc",
-          "on",
-          "onc",
-          "time"
-        ],
-        "module-j5e_thermometer-Thermometer.html#enable": [
-          "disabl",
-          "enabl",
-          "function",
-          "module:j5e/thermometer~thermometer#en",
-          "object",
-          "sensor"
-        ],
-        "module-j5e_thermometer-Thermometer.html#disable": [
-          "disabl",
-          "enabl",
-          "function",
-          "module:j5e/thermometer~thermometer#dis",
-          "object",
-          "sensor"
-        ],
-        "module-j5e_thermometer-Thermometer.html#read": [
-          "function",
-          "module:j5e/thermometer~thermometer#read",
-          "number",
-          "read",
-          "sensor",
-          "synchron"
-        ],
-        "module-j5e_thermometer-Thermometer.html#scale": [
-          "function",
-          "high",
-          "low",
-          "module:j5e/thermometer~thermometer#scal",
-          "object",
-          "rang",
-          "scale",
-          "scale/scaleto",
-          "set",
-          "valu"
-        ],
-        "module-j5e_thermometer-Thermometer.html#scaleTo": [
-          "function",
-          "high",
-          "integ",
-          "low",
-          "module:j5e/thermometer~thermometer#scaleto",
-          "number",
-          "represent",
-          "scale",
-          "scaleto",
-          "valu"
-        ],
-        "module-j5e_thermometer-Thermometer.html#fscaleTo": [
-          "float",
-          "fscaleto",
-          "function",
-          "high",
-          "low",
-          "module:j5e/thermometer~thermometer#fscaleto",
-          "number",
-          "precis",
-          "represent",
-          "scale",
-          "singl",
-          "valu"
         ],
         "module-j5e_sensor-Sensor.html": [
           "adc",
@@ -3348,6 +3349,22 @@
                       "ref": "module-j5e_light-Light.html#once",
                       "tf": 41.66666666666666
                     },
+                    "module-j5e_thermometer-Thermometer.html#threshold": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#threshold",
+                      "tf": 7.142857142857142
+                    },
+                    "module-j5e_thermometer-Thermometer.html#on": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#on",
+                      "tf": 66.66666666666666
+                    },
+                    "module-j5e_thermometer-Thermometer.html#removeListener": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#removeListener",
+                      "tf": 49.99999999999999
+                    },
+                    "module-j5e_thermometer-Thermometer.html#once": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#once",
+                      "tf": 41.66666666666666
+                    },
                     "module-j5e_servo-Servo.html#on": {
                       "ref": "module-j5e_servo-Servo.html#on",
                       "tf": 66.66666666666666
@@ -3398,22 +3415,6 @@
                     },
                     "module-j5e_button-Button.html#once": {
                       "ref": "module-j5e_button-Button.html#once",
-                      "tf": 41.66666666666666
-                    },
-                    "module-j5e_thermometer-Thermometer.html#threshold": {
-                      "ref": "module-j5e_thermometer-Thermometer.html#threshold",
-                      "tf": 7.142857142857142
-                    },
-                    "module-j5e_thermometer-Thermometer.html#on": {
-                      "ref": "module-j5e_thermometer-Thermometer.html#on",
-                      "tf": 66.66666666666666
-                    },
-                    "module-j5e_thermometer-Thermometer.html#removeListener": {
-                      "ref": "module-j5e_thermometer-Thermometer.html#removeListener",
-                      "tf": 49.99999999999999
-                    },
-                    "module-j5e_thermometer-Thermometer.html#once": {
-                      "ref": "module-j5e_thermometer-Thermometer.html#once",
                       "tf": 41.66666666666666
                     },
                     "module-j5e_sensor-Sensor.html#threshold": {
@@ -3697,6 +3698,14 @@
                     "ref": "module-j5e_light-Light.html#once",
                     "tf": 8.333333333333332
                   },
+                  "module-j5e_thermometer-Thermometer.html#within": {
+                    "ref": "module-j5e_thermometer-Thermometer.html#within",
+                    "tf": 8.333333333333332
+                  },
+                  "module-j5e_thermometer-Thermometer.html#once": {
+                    "ref": "module-j5e_thermometer-Thermometer.html#once",
+                    "tf": 8.333333333333332
+                  },
                   "module-j5e_servo-Servo.html#once": {
                     "ref": "module-j5e_servo-Servo.html#once",
                     "tf": 8.333333333333332
@@ -3715,14 +3724,6 @@
                   },
                   "module-j5e_button-Button.html#once": {
                     "ref": "module-j5e_button-Button.html#once",
-                    "tf": 8.333333333333332
-                  },
-                  "module-j5e_thermometer-Thermometer.html#within": {
-                    "ref": "module-j5e_thermometer-Thermometer.html#within",
-                    "tf": 8.333333333333332
-                  },
-                  "module-j5e_thermometer-Thermometer.html#once": {
-                    "ref": "module-j5e_thermometer-Thermometer.html#once",
                     "tf": 8.333333333333332
                   },
                   "module-j5e_sensor-Sensor.html#within": {
@@ -4238,6 +4239,50 @@
                             "ref": "module-j5e_light-Light.html#fscaleTo",
                             "tf": 110
                           },
+                          "module-j5e_thermometer-Thermometer.html#configure": {
+                            "ref": "module-j5e_thermometer-Thermometer.html#configure",
+                            "tf": 110
+                          },
+                          "module-j5e_thermometer-Thermometer.html#on": {
+                            "ref": "module-j5e_thermometer-Thermometer.html#on",
+                            "tf": 110
+                          },
+                          "module-j5e_thermometer-Thermometer.html#within": {
+                            "ref": "module-j5e_thermometer-Thermometer.html#within",
+                            "tf": 110
+                          },
+                          "module-j5e_thermometer-Thermometer.html#removeListener": {
+                            "ref": "module-j5e_thermometer-Thermometer.html#removeListener",
+                            "tf": 110
+                          },
+                          "module-j5e_thermometer-Thermometer.html#once": {
+                            "ref": "module-j5e_thermometer-Thermometer.html#once",
+                            "tf": 110
+                          },
+                          "module-j5e_thermometer-Thermometer.html#enable": {
+                            "ref": "module-j5e_thermometer-Thermometer.html#enable",
+                            "tf": 110
+                          },
+                          "module-j5e_thermometer-Thermometer.html#disable": {
+                            "ref": "module-j5e_thermometer-Thermometer.html#disable",
+                            "tf": 110
+                          },
+                          "module-j5e_thermometer-Thermometer.html#read": {
+                            "ref": "module-j5e_thermometer-Thermometer.html#read",
+                            "tf": 110
+                          },
+                          "module-j5e_thermometer-Thermometer.html#scale": {
+                            "ref": "module-j5e_thermometer-Thermometer.html#scale",
+                            "tf": 110
+                          },
+                          "module-j5e_thermometer-Thermometer.html#scaleTo": {
+                            "ref": "module-j5e_thermometer-Thermometer.html#scaleTo",
+                            "tf": 110
+                          },
+                          "module-j5e_thermometer-Thermometer.html#fscaleTo": {
+                            "ref": "module-j5e_thermometer-Thermometer.html#fscaleTo",
+                            "tf": 110
+                          },
                           "module-j5e_servo-Servo.html#configure": {
                             "ref": "module-j5e_servo-Servo.html#configure",
                             "tf": 110
@@ -4352,50 +4397,6 @@
                           },
                           "module-j5e_button-Button.html#configure": {
                             "ref": "module-j5e_button-Button.html#configure",
-                            "tf": 110
-                          },
-                          "module-j5e_thermometer-Thermometer.html#configure": {
-                            "ref": "module-j5e_thermometer-Thermometer.html#configure",
-                            "tf": 110
-                          },
-                          "module-j5e_thermometer-Thermometer.html#on": {
-                            "ref": "module-j5e_thermometer-Thermometer.html#on",
-                            "tf": 110
-                          },
-                          "module-j5e_thermometer-Thermometer.html#within": {
-                            "ref": "module-j5e_thermometer-Thermometer.html#within",
-                            "tf": 110
-                          },
-                          "module-j5e_thermometer-Thermometer.html#removeListener": {
-                            "ref": "module-j5e_thermometer-Thermometer.html#removeListener",
-                            "tf": 110
-                          },
-                          "module-j5e_thermometer-Thermometer.html#once": {
-                            "ref": "module-j5e_thermometer-Thermometer.html#once",
-                            "tf": 110
-                          },
-                          "module-j5e_thermometer-Thermometer.html#enable": {
-                            "ref": "module-j5e_thermometer-Thermometer.html#enable",
-                            "tf": 110
-                          },
-                          "module-j5e_thermometer-Thermometer.html#disable": {
-                            "ref": "module-j5e_thermometer-Thermometer.html#disable",
-                            "tf": 110
-                          },
-                          "module-j5e_thermometer-Thermometer.html#read": {
-                            "ref": "module-j5e_thermometer-Thermometer.html#read",
-                            "tf": 110
-                          },
-                          "module-j5e_thermometer-Thermometer.html#scale": {
-                            "ref": "module-j5e_thermometer-Thermometer.html#scale",
-                            "tf": 110
-                          },
-                          "module-j5e_thermometer-Thermometer.html#scaleTo": {
-                            "ref": "module-j5e_thermometer-Thermometer.html#scaleTo",
-                            "tf": 110
-                          },
-                          "module-j5e_thermometer-Thermometer.html#fscaleTo": {
-                            "ref": "module-j5e_thermometer-Thermometer.html#fscaleTo",
                             "tf": 110
                           },
                           "module-j5e_sensor-Sensor.html#on": {
@@ -4799,6 +4800,10 @@
                       "ref": "module-j5e_light-Light.html#range",
                       "tf": 16.666666666666664
                     },
+                    "module-j5e_thermometer-Thermometer.html#range": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#range",
+                      "tf": 16.666666666666664
+                    },
                     "module-j5e_button-Button.html#downValue": {
                       "ref": "module-j5e_button-Button.html#downValue",
                       "tf": 7.142857142857142
@@ -4806,10 +4811,6 @@
                     "module-j5e_button-Button.html#upValue": {
                       "ref": "module-j5e_button-Button.html#upValue",
                       "tf": 7.142857142857142
-                    },
-                    "module-j5e_thermometer-Thermometer.html#range": {
-                      "ref": "module-j5e_thermometer-Thermometer.html#range",
-                      "tf": 16.666666666666664
                     },
                     "module-j5e_sensor-Sensor.html": {
                       "ref": "module-j5e_sensor-Sensor.html",
@@ -6037,14 +6038,6 @@
                         "ref": "module-j5e_light-Light.html#scaled",
                         "tf": 12.5
                       },
-                      "module-j5e_servo-Servo.html#last": {
-                        "ref": "module-j5e_servo-Servo.html#last",
-                        "tf": 16.666666666666664
-                      },
-                      "module-j5e_servo-Servo.html#position": {
-                        "ref": "module-j5e_servo-Servo.html#position",
-                        "tf": 7.142857142857142
-                      },
                       "module-j5e_thermometer-Thermometer.html#raw": {
                         "ref": "module-j5e_thermometer-Thermometer.html#raw",
                         "tf": 12.5
@@ -6056,6 +6049,14 @@
                       "module-j5e_thermometer-Thermometer.html#scaled": {
                         "ref": "module-j5e_thermometer-Thermometer.html#scaled",
                         "tf": 12.5
+                      },
+                      "module-j5e_servo-Servo.html#last": {
+                        "ref": "module-j5e_servo-Servo.html#last",
+                        "tf": 16.666666666666664
+                      },
+                      "module-j5e_servo-Servo.html#position": {
+                        "ref": "module-j5e_servo-Servo.html#position",
+                        "tf": 7.142857142857142
                       },
                       "module-j5e_sensor-Sensor.html#raw": {
                         "ref": "module-j5e_sensor-Sensor.html#raw",
@@ -6155,6 +6156,10 @@
                       "ref": "module-j5e_light-Light.html#removeListener",
                       "tf": 16.666666666666664
                     },
+                    "module-j5e_thermometer-Thermometer.html#removeListener": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#removeListener",
+                      "tf": 16.666666666666664
+                    },
                     "module-j5e_servo-Servo.html#removeListener": {
                       "ref": "module-j5e_servo-Servo.html#removeListener",
                       "tf": 16.666666666666664
@@ -6169,10 +6174,6 @@
                     },
                     "module-j5e_button-Button.html#removeListener": {
                       "ref": "module-j5e_button-Button.html#removeListener",
-                      "tf": 16.666666666666664
-                    },
-                    "module-j5e_thermometer-Thermometer.html#removeListener": {
-                      "ref": "module-j5e_thermometer-Thermometer.html#removeListener",
                       "tf": 16.666666666666664
                     },
                     "module-j5e_sensor-Sensor.html#removeListener": {
@@ -6214,6 +6215,10 @@
                                     "ref": "module-j5e_light-Light.html#removeListener",
                                     "tf": 683.3333333333334
                                   },
+                                  "module-j5e_thermometer-Thermometer.html#removeListener": {
+                                    "ref": "module-j5e_thermometer-Thermometer.html#removeListener",
+                                    "tf": 683.3333333333334
+                                  },
                                   "module-j5e_servo-Servo.html#removeListener": {
                                     "ref": "module-j5e_servo-Servo.html#removeListener",
                                     "tf": 683.3333333333334
@@ -6228,10 +6233,6 @@
                                   },
                                   "module-j5e_button-Button.html#removeListener": {
                                     "ref": "module-j5e_button-Button.html#removeListener",
-                                    "tf": 683.3333333333334
-                                  },
-                                  "module-j5e_thermometer-Thermometer.html#removeListener": {
-                                    "ref": "module-j5e_thermometer-Thermometer.html#removeListener",
                                     "tf": 683.3333333333334
                                   },
                                   "module-j5e_sensor-Sensor.html#removeListener": {
@@ -6498,10 +6499,6 @@
                     "ref": "module-j5e_light-Light.html#scale",
                     "tf": 10
                   },
-                  "module-j5e_servo-Servo.html#sweep": {
-                    "ref": "module-j5e_servo-Servo.html#sweep",
-                    "tf": 7.142857142857142
-                  },
                   "module-j5e_thermometer-Thermometer.html#limit": {
                     "ref": "module-j5e_thermometer-Thermometer.html#limit",
                     "tf": 16.666666666666664
@@ -6517,6 +6514,10 @@
                   "module-j5e_thermometer-Thermometer.html#scale": {
                     "ref": "module-j5e_thermometer-Thermometer.html#scale",
                     "tf": 10
+                  },
+                  "module-j5e_servo-Servo.html#sweep": {
+                    "ref": "module-j5e_servo-Servo.html#sweep",
+                    "tf": 7.142857142857142
                   },
                   "module-j5e_sensor-Sensor.html#limit": {
                     "ref": "module-j5e_sensor-Sensor.html#limit",
@@ -6579,14 +6580,6 @@
                   "ref": "module-j5e_light-Light.html#scaled",
                   "tf": 12.5
                 },
-                "module-j5e_button-Button.html#downValue": {
-                  "ref": "module-j5e_button-Button.html#downValue",
-                  "tf": 7.142857142857142
-                },
-                "module-j5e_button-Button.html#upValue": {
-                  "ref": "module-j5e_button-Button.html#upValue",
-                  "tf": 7.142857142857142
-                },
                 "module-j5e_thermometer-Thermometer.html#raw": {
                   "ref": "module-j5e_thermometer-Thermometer.html#raw",
                   "tf": 695.8333333333334
@@ -6594,6 +6587,14 @@
                 "module-j5e_thermometer-Thermometer.html#scaled": {
                   "ref": "module-j5e_thermometer-Thermometer.html#scaled",
                   "tf": 12.5
+                },
+                "module-j5e_button-Button.html#downValue": {
+                  "ref": "module-j5e_button-Button.html#downValue",
+                  "tf": 7.142857142857142
+                },
+                "module-j5e_button-Button.html#upValue": {
+                  "ref": "module-j5e_button-Button.html#upValue",
+                  "tf": 7.142857142857142
                 },
                 "module-j5e_sensor-Sensor.html#raw": {
                   "ref": "module-j5e_sensor-Sensor.html#raw",
@@ -7124,6 +7125,10 @@
                   "ref": "module-j5e_light-Light.html#scale",
                   "tf": 10
                 },
+                "module-j5e_thermometer-Thermometer.html#scale": {
+                  "ref": "module-j5e_thermometer-Thermometer.html#scale",
+                  "tf": 10
+                },
                 "module-j5e_servo-Servo.html#to": {
                   "ref": "module-j5e_servo-Servo.html#to",
                   "tf": 7.142857142857142
@@ -7143,10 +7148,6 @@
                 "module-j5e_animation-Animation.html#speed": {
                   "ref": "module-j5e_animation-Animation.html#speed",
                   "tf": 12.5
-                },
-                "module-j5e_thermometer-Thermometer.html#scale": {
-                  "ref": "module-j5e_thermometer-Thermometer.html#scale",
-                  "tf": 10
                 },
                 "module-j5e_sensor-Sensor.html#scale": {
                   "ref": "module-j5e_sensor-Sensor.html#scale",
@@ -7975,6 +7976,18 @@
                       "ref": "module-j5e_thermometer.TMP36.html#kelvin",
                       "tf": 25
                     },
+                    "module-j5e_thermometer-Thermometer.html#celsius": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#celsius",
+                      "tf": 25
+                    },
+                    "module-j5e_thermometer-Thermometer.html#fahrenheit": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#fahrenheit",
+                      "tf": 25
+                    },
+                    "module-j5e_thermometer-Thermometer.html#kelvin": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#kelvin",
+                      "tf": 25
+                    },
                     "module-j5e_servo-Servo.html#to": {
                       "ref": "module-j5e_servo-Servo.html#to",
                       "tf": 32.14285714285714
@@ -7990,18 +8003,6 @@
                     "module-j5e_servo-Servo.html#max": {
                       "ref": "module-j5e_servo-Servo.html#max",
                       "tf": 8.333333333333332
-                    },
-                    "module-j5e_thermometer-Thermometer.html#celsius": {
-                      "ref": "module-j5e_thermometer-Thermometer.html#celsius",
-                      "tf": 25
-                    },
-                    "module-j5e_thermometer-Thermometer.html#fahrenheit": {
-                      "ref": "module-j5e_thermometer-Thermometer.html#fahrenheit",
-                      "tf": 25
-                    },
-                    "module-j5e_thermometer-Thermometer.html#kelvin": {
-                      "ref": "module-j5e_thermometer-Thermometer.html#kelvin",
-                      "tf": 25
                     }
                   }
                 }
@@ -8389,6 +8390,10 @@
                     "ref": "module-j5e_light-Light.html#once",
                     "tf": 8.333333333333332
                   },
+                  "module-j5e_thermometer-Thermometer.html#once": {
+                    "ref": "module-j5e_thermometer-Thermometer.html#once",
+                    "tf": 8.333333333333332
+                  },
                   "module-j5e_servo-Servo.html#to": {
                     "ref": "module-j5e_servo-Servo.html#to",
                     "tf": 32.14285714285714
@@ -8427,10 +8432,6 @@
                   },
                   "module-j5e_button-Button.html#once": {
                     "ref": "module-j5e_button-Button.html#once",
-                    "tf": 8.333333333333332
-                  },
-                  "module-j5e_thermometer-Thermometer.html#once": {
-                    "ref": "module-j5e_thermometer-Thermometer.html#once",
                     "tf": 8.333333333333332
                   },
                   "module-j5e_sensor-Sensor.html#once": {
@@ -8611,7 +8612,7 @@
                             },
                             "module-j5e_thermometer-Thermometer.html#configure": {
                               "ref": "module-j5e_thermometer-Thermometer.html#configure",
-                              "tf": 75
+                              "tf": 58.33333333333333
                             }
                           }
                         }
@@ -9482,6 +9483,10 @@
                             "ref": "module-j5e_light-Light.html#configure",
                             "tf": 700
                           },
+                          "module-j5e_thermometer-Thermometer.html#configure": {
+                            "ref": "module-j5e_thermometer-Thermometer.html#configure",
+                            "tf": 708.3333333333334
+                          },
                           "module-j5e_servo-Servo.html#configure": {
                             "ref": "module-j5e_servo-Servo.html#configure",
                             "tf": 708.3333333333334
@@ -9489,10 +9494,6 @@
                           "module-j5e_button-Button.html#configure": {
                             "ref": "module-j5e_button-Button.html#configure",
                             "tf": 708.3333333333334
-                          },
-                          "module-j5e_thermometer-Thermometer.html#configure": {
-                            "ref": "module-j5e_thermometer-Thermometer.html#configure",
-                            "tf": 725
                           },
                           "module-j5e_sensor-Sensor.html#configure": {
                             "ref": "module-j5e_sensor-Sensor.html#configure",
@@ -9528,6 +9529,10 @@
                           "ref": "module-j5e_light-Light.html",
                           "tf": 10
                         },
+                        "module-j5e_thermometer-Thermometer.html": {
+                          "ref": "module-j5e_thermometer-Thermometer.html",
+                          "tf": 8.333333333333332
+                        },
                         "module-j5e_servo-Servo.html": {
                           "ref": "module-j5e_servo-Servo.html",
                           "tf": 8.333333333333332
@@ -9542,10 +9547,6 @@
                         },
                         "module-j5e_button-Button.html": {
                           "ref": "module-j5e_button-Button.html",
-                          "tf": 8.333333333333332
-                        },
-                        "module-j5e_thermometer-Thermometer.html": {
-                          "ref": "module-j5e_thermometer-Thermometer.html",
                           "tf": 8.333333333333332
                         },
                         "module-j5e_led-LED.html": {
@@ -9760,6 +9761,10 @@
                       "ref": "module-j5e_light-Light.html",
                       "tf": 120
                     },
+                    "module-j5e_thermometer-Thermometer.html": {
+                      "ref": "module-j5e_thermometer-Thermometer.html",
+                      "tf": 118.33333333333333
+                    },
                     "module-j5e_servo-Servo.html": {
                       "ref": "module-j5e_servo-Servo.html",
                       "tf": 118.33333333333333
@@ -9774,10 +9779,6 @@
                     },
                     "module-j5e_button-Button.html": {
                       "ref": "module-j5e_button-Button.html",
-                      "tf": 118.33333333333333
-                    },
-                    "module-j5e_thermometer-Thermometer.html": {
-                      "ref": "module-j5e_thermometer-Thermometer.html",
                       "tf": 118.33333333333333
                     },
                     "module-j5e_sensor-Sensor.html": {
@@ -10121,6 +10122,14 @@
                       "ref": "module-j5e_light-Light.html#once",
                       "tf": 8.333333333333332
                     },
+                    "module-j5e_thermometer-Thermometer.html#on": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#on",
+                      "tf": 16.666666666666664
+                    },
+                    "module-j5e_thermometer-Thermometer.html#once": {
+                      "ref": "module-j5e_thermometer-Thermometer.html#once",
+                      "tf": 8.333333333333332
+                    },
                     "module-j5e_servo-Servo.html#on": {
                       "ref": "module-j5e_servo-Servo.html#on",
                       "tf": 16.666666666666664
@@ -10151,14 +10160,6 @@
                     },
                     "module-j5e_button-Button.html#once": {
                       "ref": "module-j5e_button-Button.html#once",
-                      "tf": 8.333333333333332
-                    },
-                    "module-j5e_thermometer-Thermometer.html#on": {
-                      "ref": "module-j5e_thermometer-Thermometer.html#on",
-                      "tf": 16.666666666666664
-                    },
-                    "module-j5e_thermometer-Thermometer.html#once": {
-                      "ref": "module-j5e_thermometer-Thermometer.html#once",
                       "tf": 8.333333333333332
                     },
                     "module-j5e_sensor-Sensor.html#on": {
@@ -10535,6 +10536,18 @@
                         "ref": "module-j5e_light-Light.html#once",
                         "tf": 41.66666666666666
                       },
+                      "module-j5e_thermometer-Thermometer.html#on": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#on",
+                        "tf": 66.66666666666666
+                      },
+                      "module-j5e_thermometer-Thermometer.html#removeListener": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#removeListener",
+                        "tf": 49.99999999999999
+                      },
+                      "module-j5e_thermometer-Thermometer.html#once": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#once",
+                        "tf": 41.66666666666666
+                      },
                       "module-j5e_servo-Servo.html#on": {
                         "ref": "module-j5e_servo-Servo.html#on",
                         "tf": 66.66666666666666
@@ -10581,18 +10594,6 @@
                       },
                       "module-j5e_button-Button.html#once": {
                         "ref": "module-j5e_button-Button.html#once",
-                        "tf": 41.66666666666666
-                      },
-                      "module-j5e_thermometer-Thermometer.html#on": {
-                        "ref": "module-j5e_thermometer-Thermometer.html#on",
-                        "tf": 66.66666666666666
-                      },
-                      "module-j5e_thermometer-Thermometer.html#removeListener": {
-                        "ref": "module-j5e_thermometer-Thermometer.html#removeListener",
-                        "tf": 49.99999999999999
-                      },
-                      "module-j5e_thermometer-Thermometer.html#once": {
-                        "ref": "module-j5e_thermometer-Thermometer.html#once",
                         "tf": 41.66666666666666
                       },
                       "module-j5e_sensor-Sensor.html#on": {
@@ -11846,6 +11847,10 @@
                                   "ref": "module-j5e_light-Light.html",
                                   "tf": 50
                                 },
+                                "module-j5e_thermometer-Thermometer.html": {
+                                  "ref": "module-j5e_thermometer-Thermometer.html",
+                                  "tf": 50
+                                },
                                 "module-j5e_servo-Servo.html": {
                                   "ref": "module-j5e_servo-Servo.html",
                                   "tf": 50
@@ -11856,10 +11861,6 @@
                                 },
                                 "module-j5e_button-Button.html": {
                                   "ref": "module-j5e_button-Button.html",
-                                  "tf": 50
-                                },
-                                "module-j5e_thermometer-Thermometer.html": {
-                                  "ref": "module-j5e_thermometer-Thermometer.html",
                                   "tf": 50
                                 },
                                 "module-j5e_sensor-Sensor.html": {
@@ -12137,42 +12138,6 @@
                                         "ref": "module-j5e_light-Light.html#value",
                                         "tf": 33.33333333333333
                                       },
-                                      "module-j5e_servo-Servo.html#history": {
-                                        "ref": "module-j5e_servo-Servo.html#history",
-                                        "tf": 50
-                                      },
-                                      "module-j5e_servo-Servo.html#last": {
-                                        "ref": "module-j5e_servo-Servo.html#last",
-                                        "tf": 50
-                                      },
-                                      "module-j5e_servo-Servo.html#position": {
-                                        "ref": "module-j5e_servo-Servo.html#position",
-                                        "tf": 50
-                                      },
-                                      "module-j5e_switch-Switch.html#isClosed": {
-                                        "ref": "module-j5e_switch-Switch.html#isClosed",
-                                        "tf": 50
-                                      },
-                                      "module-j5e_switch-Switch.html#isOpen": {
-                                        "ref": "module-j5e_switch-Switch.html#isOpen",
-                                        "tf": 50
-                                      },
-                                      "module-j5e_button-Button.html#isClosed": {
-                                        "ref": "module-j5e_button-Button.html#isClosed",
-                                        "tf": 33.33333333333333
-                                      },
-                                      "module-j5e_button-Button.html#isOpen": {
-                                        "ref": "module-j5e_button-Button.html#isOpen",
-                                        "tf": 33.33333333333333
-                                      },
-                                      "module-j5e_button-Button.html#downValue": {
-                                        "ref": "module-j5e_button-Button.html#downValue",
-                                        "tf": 33.33333333333333
-                                      },
-                                      "module-j5e_button-Button.html#upValue": {
-                                        "ref": "module-j5e_button-Button.html#upValue",
-                                        "tf": 33.33333333333333
-                                      },
                                       "module-j5e_thermometer-Thermometer.html#celsius": {
                                         "ref": "module-j5e_thermometer-Thermometer.html#celsius",
                                         "tf": 33.33333333333333
@@ -12219,6 +12184,42 @@
                                       },
                                       "module-j5e_thermometer-Thermometer.html#value": {
                                         "ref": "module-j5e_thermometer-Thermometer.html#value",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_servo-Servo.html#history": {
+                                        "ref": "module-j5e_servo-Servo.html#history",
+                                        "tf": 50
+                                      },
+                                      "module-j5e_servo-Servo.html#last": {
+                                        "ref": "module-j5e_servo-Servo.html#last",
+                                        "tf": 50
+                                      },
+                                      "module-j5e_servo-Servo.html#position": {
+                                        "ref": "module-j5e_servo-Servo.html#position",
+                                        "tf": 50
+                                      },
+                                      "module-j5e_switch-Switch.html#isClosed": {
+                                        "ref": "module-j5e_switch-Switch.html#isClosed",
+                                        "tf": 50
+                                      },
+                                      "module-j5e_switch-Switch.html#isOpen": {
+                                        "ref": "module-j5e_switch-Switch.html#isOpen",
+                                        "tf": 50
+                                      },
+                                      "module-j5e_button-Button.html#isClosed": {
+                                        "ref": "module-j5e_button-Button.html#isClosed",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_button-Button.html#isOpen": {
+                                        "ref": "module-j5e_button-Button.html#isOpen",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_button-Button.html#downValue": {
+                                        "ref": "module-j5e_button-Button.html#downValue",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_button-Button.html#upValue": {
+                                        "ref": "module-j5e_button-Button.html#upValue",
                                         "tf": 33.33333333333333
                                       },
                                       "module-j5e_sensor-Sensor.html#range": {
@@ -13002,6 +13003,10 @@
                       "ref": "module-j5e_light-Light.html",
                       "tf": 10
                     },
+                    "module-j5e_thermometer-Thermometer.html": {
+                      "ref": "module-j5e_thermometer-Thermometer.html",
+                      "tf": 8.333333333333332
+                    },
                     "module-j5e_servo-Servo.html": {
                       "ref": "module-j5e_servo-Servo.html",
                       "tf": 8.333333333333332
@@ -13016,10 +13021,6 @@
                     },
                     "module-j5e_button-Button.html": {
                       "ref": "module-j5e_button-Button.html",
-                      "tf": 8.333333333333332
-                    },
-                    "module-j5e_thermometer-Thermometer.html": {
-                      "ref": "module-j5e_thermometer-Thermometer.html",
                       "tf": 8.333333333333332
                     },
                     "module-j5e_sensor-Sensor.html": {
@@ -13717,6 +13718,10 @@
                         "ref": "module-j5e_light-Light.html#configure",
                         "tf": 33.33333333333333
                       },
+                      "module-j5e_thermometer-Thermometer.html#configure": {
+                        "ref": "module-j5e_thermometer-Thermometer.html#configure",
+                        "tf": 33.33333333333333
+                      },
                       "module-j5e_servo-Servo.html#configure": {
                         "ref": "module-j5e_servo-Servo.html#configure",
                         "tf": 33.33333333333333
@@ -13796,6 +13801,10 @@
                 "ref": "module-j5e_light-Light.html#once",
                 "tf": 8.333333333333332
               },
+              "module-j5e_thermometer-Thermometer.html#once": {
+                "ref": "module-j5e_thermometer-Thermometer.html#once",
+                "tf": 8.333333333333332
+              },
               "module-j5e_servo-Servo.html#once": {
                 "ref": "module-j5e_servo-Servo.html#once",
                 "tf": 8.333333333333332
@@ -13810,10 +13819,6 @@
               },
               "module-j5e_button-Button.html#once": {
                 "ref": "module-j5e_button-Button.html#once",
-                "tf": 8.333333333333332
-              },
-              "module-j5e_thermometer-Thermometer.html#once": {
-                "ref": "module-j5e_thermometer-Thermometer.html#once",
                 "tf": 8.333333333333332
               },
               "module-j5e_sensor-Sensor.html#once": {
@@ -13843,6 +13848,10 @@
                   "ref": "module-j5e_light-Light.html#once",
                   "tf": 683.3333333333334
                 },
+                "module-j5e_thermometer-Thermometer.html#once": {
+                  "ref": "module-j5e_thermometer-Thermometer.html#once",
+                  "tf": 683.3333333333334
+                },
                 "module-j5e_servo-Servo.html#once": {
                   "ref": "module-j5e_servo-Servo.html#once",
                   "tf": 683.3333333333334
@@ -13857,10 +13866,6 @@
                 },
                 "module-j5e_button-Button.html#once": {
                   "ref": "module-j5e_button-Button.html#once",
-                  "tf": 683.3333333333334
-                },
-                "module-j5e_thermometer-Thermometer.html#once": {
-                  "ref": "module-j5e_thermometer-Thermometer.html#once",
                   "tf": 683.3333333333334
                 },
                 "module-j5e_sensor-Sensor.html#once": {
@@ -13965,14 +13970,6 @@
                         "ref": "module-j5e_light-Light.html#scale",
                         "tf": 16.666666666666664
                       },
-                      "module-j5e_servo-Servo.html#max": {
-                        "ref": "module-j5e_servo-Servo.html#max",
-                        "tf": 33.33333333333333
-                      },
-                      "module-j5e_servo-Servo.html#center": {
-                        "ref": "module-j5e_servo-Servo.html#center",
-                        "tf": 33.33333333333333
-                      },
                       "module-j5e_thermometer-Thermometer.html#enable": {
                         "ref": "module-j5e_thermometer-Thermometer.html#enable",
                         "tf": 50
@@ -13984,6 +13981,14 @@
                       "module-j5e_thermometer-Thermometer.html#scale": {
                         "ref": "module-j5e_thermometer-Thermometer.html#scale",
                         "tf": 16.666666666666664
+                      },
+                      "module-j5e_servo-Servo.html#max": {
+                        "ref": "module-j5e_servo-Servo.html#max",
+                        "tf": 33.33333333333333
+                      },
+                      "module-j5e_servo-Servo.html#center": {
+                        "ref": "module-j5e_servo-Servo.html#center",
+                        "tf": 33.33333333333333
                       },
                       "module-j5e_sensor-Sensor.html#enable": {
                         "ref": "module-j5e_sensor-Sensor.html#enable",
@@ -19982,46 +19987,6 @@
                         "ref": "module-j5e_light-Light.html#value",
                         "tf": 110
                       },
-                      "module-j5e_servo-Servo.html#history": {
-                        "ref": "module-j5e_servo-Servo.html#history",
-                        "tf": 110
-                      },
-                      "module-j5e_servo-Servo.html#last": {
-                        "ref": "module-j5e_servo-Servo.html#last",
-                        "tf": 110
-                      },
-                      "module-j5e_servo-Servo.html#position": {
-                        "ref": "module-j5e_servo-Servo.html#position",
-                        "tf": 110
-                      },
-                      "module-j5e_switch-Switch.html#isClosed": {
-                        "ref": "module-j5e_switch-Switch.html#isClosed",
-                        "tf": 110
-                      },
-                      "module-j5e_switch-Switch.html#isOpen": {
-                        "ref": "module-j5e_switch-Switch.html#isOpen",
-                        "tf": 110
-                      },
-                      "module-j5e_button-Button.html#isClosed": {
-                        "ref": "module-j5e_button-Button.html#isClosed",
-                        "tf": 110
-                      },
-                      "module-j5e_button-Button.html#isOpen": {
-                        "ref": "module-j5e_button-Button.html#isOpen",
-                        "tf": 110
-                      },
-                      "module-j5e_button-Button.html#downValue": {
-                        "ref": "module-j5e_button-Button.html#downValue",
-                        "tf": 110
-                      },
-                      "module-j5e_button-Button.html#upValue": {
-                        "ref": "module-j5e_button-Button.html#upValue",
-                        "tf": 110
-                      },
-                      "module-j5e_button-Button.html#holdtime": {
-                        "ref": "module-j5e_button-Button.html#holdtime",
-                        "tf": 110
-                      },
                       "module-j5e_thermometer-Thermometer.html#celsius": {
                         "ref": "module-j5e_thermometer-Thermometer.html#celsius",
                         "tf": 110
@@ -20092,6 +20057,46 @@
                       },
                       "module-j5e_thermometer-Thermometer.html#value": {
                         "ref": "module-j5e_thermometer-Thermometer.html#value",
+                        "tf": 110
+                      },
+                      "module-j5e_servo-Servo.html#history": {
+                        "ref": "module-j5e_servo-Servo.html#history",
+                        "tf": 110
+                      },
+                      "module-j5e_servo-Servo.html#last": {
+                        "ref": "module-j5e_servo-Servo.html#last",
+                        "tf": 110
+                      },
+                      "module-j5e_servo-Servo.html#position": {
+                        "ref": "module-j5e_servo-Servo.html#position",
+                        "tf": 110
+                      },
+                      "module-j5e_switch-Switch.html#isClosed": {
+                        "ref": "module-j5e_switch-Switch.html#isClosed",
+                        "tf": 110
+                      },
+                      "module-j5e_switch-Switch.html#isOpen": {
+                        "ref": "module-j5e_switch-Switch.html#isOpen",
+                        "tf": 110
+                      },
+                      "module-j5e_button-Button.html#isClosed": {
+                        "ref": "module-j5e_button-Button.html#isClosed",
+                        "tf": 110
+                      },
+                      "module-j5e_button-Button.html#isOpen": {
+                        "ref": "module-j5e_button-Button.html#isOpen",
+                        "tf": 110
+                      },
+                      "module-j5e_button-Button.html#downValue": {
+                        "ref": "module-j5e_button-Button.html#downValue",
+                        "tf": 110
+                      },
+                      "module-j5e_button-Button.html#upValue": {
+                        "ref": "module-j5e_button-Button.html#upValue",
+                        "tf": 110
+                      },
+                      "module-j5e_button-Button.html#holdtime": {
+                        "ref": "module-j5e_button-Button.html#holdtime",
                         "tf": 110
                       },
                       "module-j5e_sensor-Sensor.html#limit": {
@@ -20335,12 +20340,12 @@
                           "ref": "module-j5e_light-Light.html#threshold",
                           "tf": 7.142857142857142
                         },
-                        "module-j5e_servo-Servo.html#min": {
-                          "ref": "module-j5e_servo-Servo.html#min",
-                          "tf": 7.142857142857142
-                        },
                         "module-j5e_thermometer-Thermometer.html#threshold": {
                           "ref": "module-j5e_thermometer-Thermometer.html#threshold",
+                          "tf": 7.142857142857142
+                        },
+                        "module-j5e_servo-Servo.html#min": {
+                          "ref": "module-j5e_servo-Servo.html#min",
                           "tf": 7.142857142857142
                         },
                         "module-j5e_sensor-Sensor.html#threshold": {
@@ -20376,13 +20381,13 @@
                 "ref": "module-j5e_light-Light.html#interval",
                 "tf": 12.5
               },
-              "module-j5e_button-Button.html#holdtime": {
-                "ref": "module-j5e_button-Button.html#holdtime",
-                "tf": 5.555555555555555
-              },
               "module-j5e_thermometer-Thermometer.html#interval": {
                 "ref": "module-j5e_thermometer-Thermometer.html#interval",
                 "tf": 12.5
+              },
+              "module-j5e_button-Button.html#holdtime": {
+                "ref": "module-j5e_button-Button.html#holdtime",
+                "tf": 5.555555555555555
               },
               "module-j5e_sensor-Sensor.html#interval": {
                 "ref": "module-j5e_sensor-Sensor.html#interval",
@@ -20431,13 +20436,13 @@
                           "ref": "module-j5e_light-Light.html#resolution",
                           "tf": 12.5
                         },
-                        "module-j5e_servo-Servo.html#max": {
-                          "ref": "module-j5e_servo-Servo.html#max",
-                          "tf": 8.333333333333332
-                        },
                         "module-j5e_thermometer-Thermometer.html#resolution": {
                           "ref": "module-j5e_thermometer-Thermometer.html#resolution",
                           "tf": 12.5
+                        },
+                        "module-j5e_servo-Servo.html#max": {
+                          "ref": "module-j5e_servo-Servo.html#max",
+                          "tf": 8.333333333333332
                         },
                         "module-j5e_sensor-Sensor.html#resolution": {
                           "ref": "module-j5e_sensor-Sensor.html#resolution",
@@ -21411,18 +21416,6 @@
                         "ref": "module-j5e_light-Light.html#fscaleTo",
                         "tf": 20
                       },
-                      "module-j5e_button-Button.html#downValue": {
-                        "ref": "module-j5e_button-Button.html#downValue",
-                        "tf": 33.33333333333333
-                      },
-                      "module-j5e_button-Button.html#upValue": {
-                        "ref": "module-j5e_button-Button.html#upValue",
-                        "tf": 33.33333333333333
-                      },
-                      "module-j5e_button-Button.html#holdtime": {
-                        "ref": "module-j5e_button-Button.html#holdtime",
-                        "tf": 50
-                      },
                       "module-j5e_thermometer-Thermometer.html#celsius": {
                         "ref": "module-j5e_thermometer-Thermometer.html#celsius",
                         "tf": 33.33333333333333
@@ -21498,6 +21491,18 @@
                       "module-j5e_thermometer-Thermometer.html#fscaleTo": {
                         "ref": "module-j5e_thermometer-Thermometer.html#fscaleTo",
                         "tf": 20
+                      },
+                      "module-j5e_button-Button.html#downValue": {
+                        "ref": "module-j5e_button-Button.html#downValue",
+                        "tf": 33.33333333333333
+                      },
+                      "module-j5e_button-Button.html#upValue": {
+                        "ref": "module-j5e_button-Button.html#upValue",
+                        "tf": 33.33333333333333
+                      },
+                      "module-j5e_button-Button.html#holdtime": {
+                        "ref": "module-j5e_button-Button.html#holdtime",
+                        "tf": 50
                       },
                       "module-j5e_sensor-Sensor.html#threshold": {
                         "ref": "module-j5e_sensor-Sensor.html#threshold",
@@ -21728,13 +21733,13 @@
                           "ref": "module-j5e_light-Light.html#interval",
                           "tf": 12.5
                         },
-                        "module-j5e_servo-Servo.html#sweep": {
-                          "ref": "module-j5e_servo-Servo.html#sweep",
-                          "tf": 7.142857142857142
-                        },
                         "module-j5e_thermometer-Thermometer.html#interval": {
                           "ref": "module-j5e_thermometer-Thermometer.html#interval",
                           "tf": 12.5
+                        },
+                        "module-j5e_servo-Servo.html#sweep": {
+                          "ref": "module-j5e_servo-Servo.html#sweep",
+                          "tf": 7.142857142857142
                         },
                         "module-j5e_sensor-Sensor.html#interval": {
                           "ref": "module-j5e_sensor-Sensor.html#interval",
@@ -21796,10 +21801,6 @@
                       "ref": "module-j5e_light-Light.html#samples",
                       "tf": 8.333333333333332
                     },
-                    "module-j5e_button-Button.html#holdtime": {
-                      "ref": "module-j5e_button-Button.html#holdtime",
-                      "tf": 5.555555555555555
-                    },
                     "module-j5e_thermometer-Thermometer.html#smoothing": {
                       "ref": "module-j5e_thermometer-Thermometer.html#smoothing",
                       "tf": 8.333333333333332
@@ -21807,6 +21808,10 @@
                     "module-j5e_thermometer-Thermometer.html#samples": {
                       "ref": "module-j5e_thermometer-Thermometer.html#samples",
                       "tf": 8.333333333333332
+                    },
+                    "module-j5e_button-Button.html#holdtime": {
+                      "ref": "module-j5e_button-Button.html#holdtime",
+                      "tf": 5.555555555555555
                     },
                     "module-j5e_sensor-Sensor.html#smoothing": {
                       "ref": "module-j5e_sensor-Sensor.html#smoothing",
@@ -22906,7 +22911,7 @@
           }
         }
       },
-      "length": 2483
+      "length": 2484
     },
     "corpusTokens": [
       "0",
@@ -25242,6 +25247,307 @@
       "summary": "",
       "description": "fscaleTo Scales value to single precision float representation"
     },
+    "module-j5e_thermometer-Thermometer.html": {
+      "id": "module-j5e_thermometer-Thermometer.html",
+      "kind": "class",
+      "title": "&lt;async&gt; j5e/thermometer~Thermometer",
+      "longname": "module:j5e/thermometer~Thermometer",
+      "name": "Thermometer",
+      "tags": "module:j5e/thermometer~Thermometer",
+      "summary": "",
+      "description": "The Thermometer class allows for control of analog thermistors",
+      "body": ""
+    },
+    "module-j5e_thermometer-Thermometer.html#celsius": {
+      "id": "module-j5e_thermometer-Thermometer.html#celsius",
+      "kind": "member",
+      "title": "&lt;readonly&gt; celsius :number",
+      "longname": "module:j5e/thermometer~Thermometer#celsius",
+      "name": "celsius",
+      "tags": "module:j5e/thermometer~Thermometer#celsius celsius",
+      "summary": "",
+      "description": "Get degrees in celsius"
+    },
+    "module-j5e_thermometer-Thermometer.html#C": {
+      "id": "module-j5e_thermometer-Thermometer.html#C",
+      "kind": "member",
+      "title": "&lt;readonly&gt; C :number",
+      "longname": "module:j5e/thermometer~Thermometer#C",
+      "name": "C",
+      "tags": "module:j5e/thermometer~Thermometer#C C",
+      "summary": "",
+      "description": "Alias for celsius"
+    },
+    "module-j5e_thermometer-Thermometer.html#fahrenheit": {
+      "id": "module-j5e_thermometer-Thermometer.html#fahrenheit",
+      "kind": "member",
+      "title": "&lt;readonly&gt; fahrenheit :number",
+      "longname": "module:j5e/thermometer~Thermometer#fahrenheit",
+      "name": "fahrenheit",
+      "tags": "module:j5e/thermometer~Thermometer#fahrenheit fahrenheit",
+      "summary": "",
+      "description": "Get degrees in fahrenheit"
+    },
+    "module-j5e_thermometer-Thermometer.html#F": {
+      "id": "module-j5e_thermometer-Thermometer.html#F",
+      "kind": "member",
+      "title": "&lt;readonly&gt; F :number",
+      "longname": "module:j5e/thermometer~Thermometer#F",
+      "name": "F",
+      "tags": "module:j5e/thermometer~Thermometer#F F",
+      "summary": "",
+      "description": "Alias for fahrenheit"
+    },
+    "module-j5e_thermometer-Thermometer.html#kelvin": {
+      "id": "module-j5e_thermometer-Thermometer.html#kelvin",
+      "kind": "member",
+      "title": "&lt;readonly&gt; kelvin :number",
+      "longname": "module:j5e/thermometer~Thermometer#kelvin",
+      "name": "kelvin",
+      "tags": "module:j5e/thermometer~Thermometer#kelvin kelvin",
+      "summary": "",
+      "description": "Get degrees in kelvin"
+    },
+    "module-j5e_thermometer-Thermometer.html#K": {
+      "id": "module-j5e_thermometer-Thermometer.html#K",
+      "kind": "member",
+      "title": "&lt;readonly&gt; K :number",
+      "longname": "module:j5e/thermometer~Thermometer#K",
+      "name": "K",
+      "tags": "module:j5e/thermometer~Thermometer#K K",
+      "summary": "",
+      "description": "Alias for kelvin"
+    },
+    "module-j5e_thermometer-Thermometer.html#limit": {
+      "id": "module-j5e_thermometer-Thermometer.html#limit",
+      "kind": "member",
+      "title": "limit :Array.&lt;number&gt;",
+      "longname": "module:j5e/thermometer~Thermometer#limit",
+      "name": "limit",
+      "tags": "module:j5e/thermometer~Thermometer#limit limit",
+      "summary": "",
+      "description": "Limits the output range"
+    },
+    "module-j5e_thermometer-Thermometer.html#threshold": {
+      "id": "module-j5e_thermometer-Thermometer.html#threshold",
+      "kind": "member",
+      "title": "threshold :number",
+      "longname": "module:j5e/thermometer~Thermometer#threshold",
+      "name": "threshold",
+      "tags": "module:j5e/thermometer~Thermometer#threshold threshold",
+      "summary": "",
+      "description": "The minimum amount of change required to emit a \"change\" event"
+    },
+    "module-j5e_thermometer-Thermometer.html#interval": {
+      "id": "module-j5e_thermometer-Thermometer.html#interval",
+      "kind": "member",
+      "title": "interval :number",
+      "longname": "module:j5e/thermometer~Thermometer#interval",
+      "name": "interval",
+      "tags": "module:j5e/thermometer~Thermometer#interval interval",
+      "summary": "",
+      "description": "The interval between readings (in ms)"
+    },
+    "module-j5e_thermometer-Thermometer.html#smoothing": {
+      "id": "module-j5e_thermometer-Thermometer.html#smoothing",
+      "kind": "member",
+      "title": "smoothing :number",
+      "longname": "module:j5e/thermometer~Thermometer#smoothing",
+      "name": "smoothing",
+      "tags": "module:j5e/thermometer~Thermometer#smoothing smoothing",
+      "summary": "",
+      "description": "The number of samples to take before finding the median"
+    },
+    "module-j5e_thermometer-Thermometer.html#aref": {
+      "id": "module-j5e_thermometer-Thermometer.html#aref",
+      "kind": "member",
+      "title": "aref :number",
+      "longname": "module:j5e/thermometer~Thermometer#aref",
+      "name": "aref",
+      "tags": "module:j5e/thermometer~Thermometer#aref aref",
+      "summary": "",
+      "description": "The reference voltage"
+    },
+    "module-j5e_thermometer-Thermometer.html#samples": {
+      "id": "module-j5e_thermometer-Thermometer.html#samples",
+      "kind": "member",
+      "title": "samples :number",
+      "longname": "module:j5e/thermometer~Thermometer#samples",
+      "name": "samples",
+      "tags": "module:j5e/thermometer~Thermometer#samples samples",
+      "summary": "",
+      "description": "The number of samples to take before finding the median"
+    },
+    "module-j5e_thermometer-Thermometer.html#range": {
+      "id": "module-j5e_thermometer-Thermometer.html#range",
+      "kind": "member",
+      "title": "&lt;readonly&gt; range :Array.&lt;number&gt;",
+      "longname": "module:j5e/thermometer~Thermometer#range",
+      "name": "range",
+      "tags": "module:j5e/thermometer~Thermometer#range range",
+      "summary": "",
+      "description": "The input range of the sensor"
+    },
+    "module-j5e_thermometer-Thermometer.html#raw": {
+      "id": "module-j5e_thermometer-Thermometer.html#raw",
+      "kind": "member",
+      "title": "&lt;readonly&gt; raw :number",
+      "longname": "module:j5e/thermometer~Thermometer#raw",
+      "name": "raw",
+      "tags": "module:j5e/thermometer~Thermometer#raw raw",
+      "summary": "",
+      "description": "Get the most recent raw ADC reading"
+    },
+    "module-j5e_thermometer-Thermometer.html#median": {
+      "id": "module-j5e_thermometer-Thermometer.html#median",
+      "kind": "member",
+      "title": "&lt;readonly&gt; median :number",
+      "longname": "module:j5e/thermometer~Thermometer#median",
+      "name": "median",
+      "tags": "module:j5e/thermometer~Thermometer#median median",
+      "summary": "",
+      "description": "Get the most recent median ADC reading"
+    },
+    "module-j5e_thermometer-Thermometer.html#resolution": {
+      "id": "module-j5e_thermometer-Thermometer.html#resolution",
+      "kind": "member",
+      "title": "&lt;readonly&gt; resolution :number",
+      "longname": "module:j5e/thermometer~Thermometer#resolution",
+      "name": "resolution",
+      "tags": "module:j5e/thermometer~Thermometer#resolution resolution",
+      "summary": "",
+      "description": "The maximum possible ADC reading"
+    },
+    "module-j5e_thermometer-Thermometer.html#scaled": {
+      "id": "module-j5e_thermometer-Thermometer.html#scaled",
+      "kind": "member",
+      "title": "&lt;readonly&gt; scaled :number",
+      "longname": "module:j5e/thermometer~Thermometer#scaled",
+      "name": "scaled",
+      "tags": "module:j5e/thermometer~Thermometer#scaled scaled",
+      "summary": "",
+      "description": "Get the most recent scaled raw reading"
+    },
+    "module-j5e_thermometer-Thermometer.html#value": {
+      "id": "module-j5e_thermometer-Thermometer.html#value",
+      "kind": "member",
+      "title": "&lt;readonly&gt; value :number",
+      "longname": "module:j5e/thermometer~Thermometer#value",
+      "name": "value",
+      "tags": "module:j5e/thermometer~Thermometer#value value",
+      "summary": "",
+      "description": ""
+    },
+    "module-j5e_thermometer-Thermometer.html#configure": {
+      "id": "module-j5e_thermometer-Thermometer.html#configure",
+      "kind": "function",
+      "title": "configure( options ) → {Thermometer}",
+      "longname": "module:j5e/thermometer~Thermometer#configure",
+      "name": "configure",
+      "tags": "module:j5e/thermometer~Thermometer#configure configure",
+      "summary": "",
+      "description": "Configure a Thermometer"
+    },
+    "module-j5e_thermometer-Thermometer.html#on": {
+      "id": "module-j5e_thermometer-Thermometer.html#on",
+      "kind": "function",
+      "title": "on( event, listener )",
+      "longname": "module:j5e/thermometer~Thermometer#on",
+      "name": "on",
+      "tags": "module:j5e/thermometer~Thermometer#on on",
+      "summary": "",
+      "description": "Create an event listener"
+    },
+    "module-j5e_thermometer-Thermometer.html#within": {
+      "id": "module-j5e_thermometer-Thermometer.html#within",
+      "kind": "function",
+      "title": "within( range, unit, callback )",
+      "longname": "module:j5e/thermometer~Thermometer#within",
+      "name": "within",
+      "tags": "module:j5e/thermometer~Thermometer#within within",
+      "summary": "",
+      "description": "Fire a callback when the value is within a certain range"
+    },
+    "module-j5e_thermometer-Thermometer.html#removeListener": {
+      "id": "module-j5e_thermometer-Thermometer.html#removeListener",
+      "kind": "function",
+      "title": "removeListener( event, listener )",
+      "longname": "module:j5e/thermometer~Thermometer#removeListener",
+      "name": "removeListener",
+      "tags": "module:j5e/thermometer~Thermometer#removeListener removeListener",
+      "summary": "",
+      "description": "Remove an event listener"
+    },
+    "module-j5e_thermometer-Thermometer.html#once": {
+      "id": "module-j5e_thermometer-Thermometer.html#once",
+      "kind": "function",
+      "title": "once( event, listener )",
+      "longname": "module:j5e/thermometer~Thermometer#once",
+      "name": "once",
+      "tags": "module:j5e/thermometer~Thermometer#once once",
+      "summary": "",
+      "description": "Create an event listener that will only fire one time."
+    },
+    "module-j5e_thermometer-Thermometer.html#enable": {
+      "id": "module-j5e_thermometer-Thermometer.html#enable",
+      "kind": "function",
+      "title": "enable() → {Object}",
+      "longname": "module:j5e/thermometer~Thermometer#enable",
+      "name": "enable",
+      "tags": "module:j5e/thermometer~Thermometer#enable enable",
+      "summary": "",
+      "description": "Enable a disabled sensor."
+    },
+    "module-j5e_thermometer-Thermometer.html#disable": {
+      "id": "module-j5e_thermometer-Thermometer.html#disable",
+      "kind": "function",
+      "title": "disable() → {Object}",
+      "longname": "module:j5e/thermometer~Thermometer#disable",
+      "name": "disable",
+      "tags": "module:j5e/thermometer~Thermometer#disable disable",
+      "summary": "",
+      "description": "Disable an enabled sensor."
+    },
+    "module-j5e_thermometer-Thermometer.html#read": {
+      "id": "module-j5e_thermometer-Thermometer.html#read",
+      "kind": "function",
+      "title": "read() → {Number}",
+      "longname": "module:j5e/thermometer~Thermometer#read",
+      "name": "read",
+      "tags": "module:j5e/thermometer~Thermometer#read read",
+      "summary": "",
+      "description": "Synchronous read of a sensor."
+    },
+    "module-j5e_thermometer-Thermometer.html#scale": {
+      "id": "module-j5e_thermometer-Thermometer.html#scale",
+      "kind": "function",
+      "title": "scale( low, high [, low, high ] ) → {Object}",
+      "longname": "module:j5e/thermometer~Thermometer#scale",
+      "name": "scale",
+      "tags": "module:j5e/thermometer~Thermometer#scale scale",
+      "summary": "",
+      "description": "scale/scaleTo Set a value scaling range"
+    },
+    "module-j5e_thermometer-Thermometer.html#scaleTo": {
+      "id": "module-j5e_thermometer-Thermometer.html#scaleTo",
+      "kind": "function",
+      "title": "scaleTo( low, low, high ) → {Number}",
+      "longname": "module:j5e/thermometer~Thermometer#scaleTo",
+      "name": "scaleTo",
+      "tags": "module:j5e/thermometer~Thermometer#scaleTo scaleTo",
+      "summary": "",
+      "description": "scaleTo Scales value to integer representation"
+    },
+    "module-j5e_thermometer-Thermometer.html#fscaleTo": {
+      "id": "module-j5e_thermometer-Thermometer.html#fscaleTo",
+      "kind": "function",
+      "title": "fscaleTo( low, low, high ) → {Number}",
+      "longname": "module:j5e/thermometer~Thermometer#fscaleTo",
+      "name": "fscaleTo",
+      "tags": "module:j5e/thermometer~Thermometer#fscaleTo fscaleTo",
+      "summary": "",
+      "description": "fscaleTo Scales value to single precision float representation"
+    },
     "module-j5e_servo-Servo.html": {
       "id": "module-j5e_servo-Servo.html",
       "kind": "class",
@@ -25675,307 +25981,6 @@
       "tags": "module:j5e/button~Button#configure configure",
       "summary": "",
       "description": "Configure a button"
-    },
-    "module-j5e_thermometer-Thermometer.html": {
-      "id": "module-j5e_thermometer-Thermometer.html",
-      "kind": "class",
-      "title": "&lt;async&gt; j5e/thermometer~Thermometer",
-      "longname": "module:j5e/thermometer~Thermometer",
-      "name": "Thermometer",
-      "tags": "module:j5e/thermometer~Thermometer",
-      "summary": "",
-      "description": "The Thermometer class allows for control of analog thermistors",
-      "body": ""
-    },
-    "module-j5e_thermometer-Thermometer.html#celsius": {
-      "id": "module-j5e_thermometer-Thermometer.html#celsius",
-      "kind": "member",
-      "title": "&lt;readonly&gt; celsius :number",
-      "longname": "module:j5e/thermometer~Thermometer#celsius",
-      "name": "celsius",
-      "tags": "module:j5e/thermometer~Thermometer#celsius celsius",
-      "summary": "",
-      "description": "Get degrees in celsius"
-    },
-    "module-j5e_thermometer-Thermometer.html#C": {
-      "id": "module-j5e_thermometer-Thermometer.html#C",
-      "kind": "member",
-      "title": "&lt;readonly&gt; C :number",
-      "longname": "module:j5e/thermometer~Thermometer#C",
-      "name": "C",
-      "tags": "module:j5e/thermometer~Thermometer#C C",
-      "summary": "",
-      "description": "Alias for celsius"
-    },
-    "module-j5e_thermometer-Thermometer.html#fahrenheit": {
-      "id": "module-j5e_thermometer-Thermometer.html#fahrenheit",
-      "kind": "member",
-      "title": "&lt;readonly&gt; fahrenheit :number",
-      "longname": "module:j5e/thermometer~Thermometer#fahrenheit",
-      "name": "fahrenheit",
-      "tags": "module:j5e/thermometer~Thermometer#fahrenheit fahrenheit",
-      "summary": "",
-      "description": "Get degrees in fahrenheit"
-    },
-    "module-j5e_thermometer-Thermometer.html#F": {
-      "id": "module-j5e_thermometer-Thermometer.html#F",
-      "kind": "member",
-      "title": "&lt;readonly&gt; F :number",
-      "longname": "module:j5e/thermometer~Thermometer#F",
-      "name": "F",
-      "tags": "module:j5e/thermometer~Thermometer#F F",
-      "summary": "",
-      "description": "Alias for fahrenheit"
-    },
-    "module-j5e_thermometer-Thermometer.html#kelvin": {
-      "id": "module-j5e_thermometer-Thermometer.html#kelvin",
-      "kind": "member",
-      "title": "&lt;readonly&gt; kelvin :number",
-      "longname": "module:j5e/thermometer~Thermometer#kelvin",
-      "name": "kelvin",
-      "tags": "module:j5e/thermometer~Thermometer#kelvin kelvin",
-      "summary": "",
-      "description": "Get degrees in kelvin"
-    },
-    "module-j5e_thermometer-Thermometer.html#K": {
-      "id": "module-j5e_thermometer-Thermometer.html#K",
-      "kind": "member",
-      "title": "&lt;readonly&gt; K :number",
-      "longname": "module:j5e/thermometer~Thermometer#K",
-      "name": "K",
-      "tags": "module:j5e/thermometer~Thermometer#K K",
-      "summary": "",
-      "description": "Alias for kelvin"
-    },
-    "module-j5e_thermometer-Thermometer.html#limit": {
-      "id": "module-j5e_thermometer-Thermometer.html#limit",
-      "kind": "member",
-      "title": "limit :Array.&lt;number&gt;",
-      "longname": "module:j5e/thermometer~Thermometer#limit",
-      "name": "limit",
-      "tags": "module:j5e/thermometer~Thermometer#limit limit",
-      "summary": "",
-      "description": "Limits the output range"
-    },
-    "module-j5e_thermometer-Thermometer.html#threshold": {
-      "id": "module-j5e_thermometer-Thermometer.html#threshold",
-      "kind": "member",
-      "title": "threshold :number",
-      "longname": "module:j5e/thermometer~Thermometer#threshold",
-      "name": "threshold",
-      "tags": "module:j5e/thermometer~Thermometer#threshold threshold",
-      "summary": "",
-      "description": "The minimum amount of change required to emit a \"change\" event"
-    },
-    "module-j5e_thermometer-Thermometer.html#interval": {
-      "id": "module-j5e_thermometer-Thermometer.html#interval",
-      "kind": "member",
-      "title": "interval :number",
-      "longname": "module:j5e/thermometer~Thermometer#interval",
-      "name": "interval",
-      "tags": "module:j5e/thermometer~Thermometer#interval interval",
-      "summary": "",
-      "description": "The interval between readings (in ms)"
-    },
-    "module-j5e_thermometer-Thermometer.html#smoothing": {
-      "id": "module-j5e_thermometer-Thermometer.html#smoothing",
-      "kind": "member",
-      "title": "smoothing :number",
-      "longname": "module:j5e/thermometer~Thermometer#smoothing",
-      "name": "smoothing",
-      "tags": "module:j5e/thermometer~Thermometer#smoothing smoothing",
-      "summary": "",
-      "description": "The number of samples to take before finding the median"
-    },
-    "module-j5e_thermometer-Thermometer.html#aref": {
-      "id": "module-j5e_thermometer-Thermometer.html#aref",
-      "kind": "member",
-      "title": "aref :number",
-      "longname": "module:j5e/thermometer~Thermometer#aref",
-      "name": "aref",
-      "tags": "module:j5e/thermometer~Thermometer#aref aref",
-      "summary": "",
-      "description": "The reference voltage"
-    },
-    "module-j5e_thermometer-Thermometer.html#samples": {
-      "id": "module-j5e_thermometer-Thermometer.html#samples",
-      "kind": "member",
-      "title": "samples :number",
-      "longname": "module:j5e/thermometer~Thermometer#samples",
-      "name": "samples",
-      "tags": "module:j5e/thermometer~Thermometer#samples samples",
-      "summary": "",
-      "description": "The number of samples to take before finding the median"
-    },
-    "module-j5e_thermometer-Thermometer.html#range": {
-      "id": "module-j5e_thermometer-Thermometer.html#range",
-      "kind": "member",
-      "title": "&lt;readonly&gt; range :Array.&lt;number&gt;",
-      "longname": "module:j5e/thermometer~Thermometer#range",
-      "name": "range",
-      "tags": "module:j5e/thermometer~Thermometer#range range",
-      "summary": "",
-      "description": "The input range of the sensor"
-    },
-    "module-j5e_thermometer-Thermometer.html#raw": {
-      "id": "module-j5e_thermometer-Thermometer.html#raw",
-      "kind": "member",
-      "title": "&lt;readonly&gt; raw :number",
-      "longname": "module:j5e/thermometer~Thermometer#raw",
-      "name": "raw",
-      "tags": "module:j5e/thermometer~Thermometer#raw raw",
-      "summary": "",
-      "description": "Get the most recent raw ADC reading"
-    },
-    "module-j5e_thermometer-Thermometer.html#median": {
-      "id": "module-j5e_thermometer-Thermometer.html#median",
-      "kind": "member",
-      "title": "&lt;readonly&gt; median :number",
-      "longname": "module:j5e/thermometer~Thermometer#median",
-      "name": "median",
-      "tags": "module:j5e/thermometer~Thermometer#median median",
-      "summary": "",
-      "description": "Get the most recent median ADC reading"
-    },
-    "module-j5e_thermometer-Thermometer.html#resolution": {
-      "id": "module-j5e_thermometer-Thermometer.html#resolution",
-      "kind": "member",
-      "title": "&lt;readonly&gt; resolution :number",
-      "longname": "module:j5e/thermometer~Thermometer#resolution",
-      "name": "resolution",
-      "tags": "module:j5e/thermometer~Thermometer#resolution resolution",
-      "summary": "",
-      "description": "The maximum possible ADC reading"
-    },
-    "module-j5e_thermometer-Thermometer.html#scaled": {
-      "id": "module-j5e_thermometer-Thermometer.html#scaled",
-      "kind": "member",
-      "title": "&lt;readonly&gt; scaled :number",
-      "longname": "module:j5e/thermometer~Thermometer#scaled",
-      "name": "scaled",
-      "tags": "module:j5e/thermometer~Thermometer#scaled scaled",
-      "summary": "",
-      "description": "Get the most recent scaled raw reading"
-    },
-    "module-j5e_thermometer-Thermometer.html#value": {
-      "id": "module-j5e_thermometer-Thermometer.html#value",
-      "kind": "member",
-      "title": "&lt;readonly&gt; value :number",
-      "longname": "module:j5e/thermometer~Thermometer#value",
-      "name": "value",
-      "tags": "module:j5e/thermometer~Thermometer#value value",
-      "summary": "",
-      "description": ""
-    },
-    "module-j5e_thermometer-Thermometer.html#configure": {
-      "id": "module-j5e_thermometer-Thermometer.html#configure",
-      "kind": "function",
-      "title": "configure() → {Thermometer}",
-      "longname": "module:j5e/thermometer~Thermometer#configure",
-      "name": "configure",
-      "tags": "module:j5e/thermometer~Thermometer#configure configure",
-      "summary": "",
-      "description": "Configure a Thermometer"
-    },
-    "module-j5e_thermometer-Thermometer.html#on": {
-      "id": "module-j5e_thermometer-Thermometer.html#on",
-      "kind": "function",
-      "title": "on( event, listener )",
-      "longname": "module:j5e/thermometer~Thermometer#on",
-      "name": "on",
-      "tags": "module:j5e/thermometer~Thermometer#on on",
-      "summary": "",
-      "description": "Create an event listener"
-    },
-    "module-j5e_thermometer-Thermometer.html#within": {
-      "id": "module-j5e_thermometer-Thermometer.html#within",
-      "kind": "function",
-      "title": "within( range, unit, callback )",
-      "longname": "module:j5e/thermometer~Thermometer#within",
-      "name": "within",
-      "tags": "module:j5e/thermometer~Thermometer#within within",
-      "summary": "",
-      "description": "Fire a callback when the value is within a certain range"
-    },
-    "module-j5e_thermometer-Thermometer.html#removeListener": {
-      "id": "module-j5e_thermometer-Thermometer.html#removeListener",
-      "kind": "function",
-      "title": "removeListener( event, listener )",
-      "longname": "module:j5e/thermometer~Thermometer#removeListener",
-      "name": "removeListener",
-      "tags": "module:j5e/thermometer~Thermometer#removeListener removeListener",
-      "summary": "",
-      "description": "Remove an event listener"
-    },
-    "module-j5e_thermometer-Thermometer.html#once": {
-      "id": "module-j5e_thermometer-Thermometer.html#once",
-      "kind": "function",
-      "title": "once( event, listener )",
-      "longname": "module:j5e/thermometer~Thermometer#once",
-      "name": "once",
-      "tags": "module:j5e/thermometer~Thermometer#once once",
-      "summary": "",
-      "description": "Create an event listener that will only fire one time."
-    },
-    "module-j5e_thermometer-Thermometer.html#enable": {
-      "id": "module-j5e_thermometer-Thermometer.html#enable",
-      "kind": "function",
-      "title": "enable() → {Object}",
-      "longname": "module:j5e/thermometer~Thermometer#enable",
-      "name": "enable",
-      "tags": "module:j5e/thermometer~Thermometer#enable enable",
-      "summary": "",
-      "description": "Enable a disabled sensor."
-    },
-    "module-j5e_thermometer-Thermometer.html#disable": {
-      "id": "module-j5e_thermometer-Thermometer.html#disable",
-      "kind": "function",
-      "title": "disable() → {Object}",
-      "longname": "module:j5e/thermometer~Thermometer#disable",
-      "name": "disable",
-      "tags": "module:j5e/thermometer~Thermometer#disable disable",
-      "summary": "",
-      "description": "Disable an enabled sensor."
-    },
-    "module-j5e_thermometer-Thermometer.html#read": {
-      "id": "module-j5e_thermometer-Thermometer.html#read",
-      "kind": "function",
-      "title": "read() → {Number}",
-      "longname": "module:j5e/thermometer~Thermometer#read",
-      "name": "read",
-      "tags": "module:j5e/thermometer~Thermometer#read read",
-      "summary": "",
-      "description": "Synchronous read of a sensor."
-    },
-    "module-j5e_thermometer-Thermometer.html#scale": {
-      "id": "module-j5e_thermometer-Thermometer.html#scale",
-      "kind": "function",
-      "title": "scale( low, high [, low, high ] ) → {Object}",
-      "longname": "module:j5e/thermometer~Thermometer#scale",
-      "name": "scale",
-      "tags": "module:j5e/thermometer~Thermometer#scale scale",
-      "summary": "",
-      "description": "scale/scaleTo Set a value scaling range"
-    },
-    "module-j5e_thermometer-Thermometer.html#scaleTo": {
-      "id": "module-j5e_thermometer-Thermometer.html#scaleTo",
-      "kind": "function",
-      "title": "scaleTo( low, low, high ) → {Number}",
-      "longname": "module:j5e/thermometer~Thermometer#scaleTo",
-      "name": "scaleTo",
-      "tags": "module:j5e/thermometer~Thermometer#scaleTo scaleTo",
-      "summary": "",
-      "description": "scaleTo Scales value to integer representation"
-    },
-    "module-j5e_thermometer-Thermometer.html#fscaleTo": {
-      "id": "module-j5e_thermometer-Thermometer.html#fscaleTo",
-      "kind": "function",
-      "title": "fscaleTo( low, low, high ) → {Number}",
-      "longname": "module:j5e/thermometer~Thermometer#fscaleTo",
-      "name": "fscaleTo",
-      "tags": "module:j5e/thermometer~Thermometer#fscaleTo fscaleTo",
-      "summary": "",
-      "description": "fscaleTo Scales value to single precision float representation"
     },
     "module-j5e_sensor-Sensor.html": {
       "id": "module-j5e_sensor-Sensor.html",

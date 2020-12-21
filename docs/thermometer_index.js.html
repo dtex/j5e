@@ -120,15 +120,6 @@ class Thermometer extends Sensor {
   /**
    * Instantiate a Thermometer
    * @param {number|string|object} io - Pin identifier or IO Options (See {@tutorial C-INSTANTIATING})
-   * @param {object} options - Device configuration options
-   * @param {number} [options.aref=3.3] - Analog reference voltage
-   * @param {boolean} [options.enabled=true] - Wether the device is currently performing reads every &lt;interval>ms
-   * @param {number} [options.interval=100] - Interval between readings in millseconds
-   * @param {number[]} [options.limit=null] - Limit the output range
-   * @param {number[]} [options.range=[0, N]] - The input range of the sensor
-   * @param {number[]} [options.scale=[0, N]] - The output range for the sensor's value
-   * @param {number} [options.threshold=1] - The minimum amount of change required to emit a "change" event
-   * @param {callback} [options.toCelsius] - A function that will be used to calculate the degrees in celisus from this.raw (expects one param). Will not be used if toCelsius is already defined on a subclass. All other getters are based on degrees Celsius so they do not need to be provided.
    * @example
    * &lt;caption>Use a thermometer&lt;/caption>
    * import Thermometer from "j5e/thermometer";
@@ -159,6 +150,15 @@ class Thermometer extends Sensor {
   /**
    * Configure a Thermometer
    * @returns {Thermometer} The instance on which the method was called
+   * @param {object} options - Device configuration options
+   * @param {number} [options.aref=3.3] - Analog reference voltage
+   * @param {boolean} [options.enabled=true] - Wether the device is currently performing reads every &lt;interval>ms
+   * @param {number} [options.interval=100] - Interval between readings in millseconds
+   * @param {number[]} [options.limit=null] - Limit the output range
+   * @param {number[]} [options.range=[0, N]] - The input range of the sensor
+   * @param {number[]} [options.scale=[0, N]] - The output range for the sensor's value
+   * @param {number} [options.threshold=1] - The minimum amount of change required to emit a "change" event
+   * @param {callback} [options.toCelsius] - Function that converts raw value to Celsius
    * @example
    * &lt;caption>Passing in Cofiguration Options&lt;/caption>
    import Thermometer from "j5e/thermometer";
