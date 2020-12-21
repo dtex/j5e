@@ -22,7 +22,9 @@ describe("RGB", function() {
         { pin: 12, io: PWM },
         { pin: 13, io: PWM },
         { pin: 14, io: PWM }
-      ], {
+      ]);
+
+      rgb.configure({
         sink: true
       });
       assert.equal(rgb instanceof RGB, true);
