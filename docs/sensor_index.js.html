@@ -200,10 +200,12 @@ class Sensor extends Withinable {
     this.#state.smoothing = options.smoothing || 10;
     this.#state.threshold = options.threshold || 1;
 
-    if (options.enabled === false) {
-      this.disable();
-    } else {
-      this.enable();
+    if (typeof options.enabled !== "undefined") {
+      if (options.enabled === false) {
+        this.disable();
+      } else {
+        this.enable();
+      }
     }
 
     if (typeof options.interval !== "undefined") {

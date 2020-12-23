@@ -590,14 +590,6 @@ window.lunrData = {
           "number",
           "valu"
         ],
-        "module-j5e_thermometer.LM35.html#configure": [
-          "configur",
-          "function",
-          "lm35",
-          "lm35#configur",
-          "module:j5e/thermometer.lm35#configur",
-          "option"
-        ],
         "module-j5e_thermometer.LM35.html#on": [
           "creat",
           "event",
@@ -638,6 +630,14 @@ window.lunrData = {
           "on",
           "onc",
           "time"
+        ],
+        "module-j5e_thermometer.LM35.html#configure": [
+          "configur",
+          "function",
+          "lm35#configur",
+          "module:j5e/thermometer.lm35#configur",
+          "option",
+          "thermomet"
         ],
         "module-j5e_thermometer.LM35.html#enable": [
           "disabl",
@@ -901,14 +901,6 @@ window.lunrData = {
           "number",
           "valu"
         ],
-        "module-j5e_thermometer.MF52A103J3470.html#configure": [
-          "configur",
-          "function",
-          "mf52a103j3470",
-          "mf52a103j3470#configur",
-          "module:j5e/thermometer.mf52a103j3470#configur",
-          "option"
-        ],
         "module-j5e_thermometer.MF52A103J3470.html#on": [
           "creat",
           "event",
@@ -949,6 +941,14 @@ window.lunrData = {
           "on",
           "onc",
           "time"
+        ],
+        "module-j5e_thermometer.MF52A103J3470.html#configure": [
+          "configur",
+          "function",
+          "mf52a103j3470#configur",
+          "module:j5e/thermometer.mf52a103j3470#configur",
+          "option",
+          "thermomet"
         ],
         "module-j5e_thermometer.MF52A103J3470.html#enable": [
           "disabl",
@@ -1539,14 +1539,6 @@ window.lunrData = {
           "number",
           "valu"
         ],
-        "module-j5e_light-Light.html#configure": [
-          "configur",
-          "function",
-          "light",
-          "module:j5e/light~light#configur",
-          "option",
-          "sensor"
-        ],
         "module-j5e_light-Light.html#on": [
           "creat",
           "event",
@@ -1583,6 +1575,13 @@ window.lunrData = {
           "on",
           "onc",
           "time"
+        ],
+        "module-j5e_light-Light.html#configure": [
+          "configur",
+          "function",
+          "module:j5e/light~light#configur",
+          "option",
+          "sensor"
         ],
         "module-j5e_light-Light.html#enable": [
           "disabl",
@@ -3031,9 +3030,7 @@ window.lunrData = {
           "vari"
         ],
         "module-j5e_light.html": [
-          "class",
           "j5e/light",
-          "light",
           "modul",
           "module:j5e/light"
         ],
@@ -4047,10 +4044,6 @@ window.lunrData = {
                             "ref": "module-j5e_thermometer.LM335.html#fscaleTo",
                             "tf": 110
                           },
-                          "module-j5e_thermometer.LM35.html#configure": {
-                            "ref": "module-j5e_thermometer.LM35.html#configure",
-                            "tf": 110
-                          },
                           "module-j5e_thermometer.LM35.html#on": {
                             "ref": "module-j5e_thermometer.LM35.html#on",
                             "tf": 110
@@ -4065,6 +4058,10 @@ window.lunrData = {
                           },
                           "module-j5e_thermometer.LM35.html#once": {
                             "ref": "module-j5e_thermometer.LM35.html#once",
+                            "tf": 110
+                          },
+                          "module-j5e_thermometer.LM35.html#configure": {
+                            "ref": "module-j5e_thermometer.LM35.html#configure",
                             "tf": 110
                           },
                           "module-j5e_thermometer.LM35.html#enable": {
@@ -4091,10 +4088,6 @@ window.lunrData = {
                             "ref": "module-j5e_thermometer.LM35.html#fscaleTo",
                             "tf": 110
                           },
-                          "module-j5e_thermometer.MF52A103J3470.html#configure": {
-                            "ref": "module-j5e_thermometer.MF52A103J3470.html#configure",
-                            "tf": 110
-                          },
                           "module-j5e_thermometer.MF52A103J3470.html#on": {
                             "ref": "module-j5e_thermometer.MF52A103J3470.html#on",
                             "tf": 110
@@ -4109,6 +4102,10 @@ window.lunrData = {
                           },
                           "module-j5e_thermometer.MF52A103J3470.html#once": {
                             "ref": "module-j5e_thermometer.MF52A103J3470.html#once",
+                            "tf": 110
+                          },
+                          "module-j5e_thermometer.MF52A103J3470.html#configure": {
+                            "ref": "module-j5e_thermometer.MF52A103J3470.html#configure",
                             "tf": 110
                           },
                           "module-j5e_thermometer.MF52A103J3470.html#enable": {
@@ -4195,10 +4192,6 @@ window.lunrData = {
                             "ref": "module-j5e_relay-Relay.html#toggle",
                             "tf": 110
                           },
-                          "module-j5e_light-Light.html#configure": {
-                            "ref": "module-j5e_light-Light.html#configure",
-                            "tf": 110
-                          },
                           "module-j5e_light-Light.html#on": {
                             "ref": "module-j5e_light-Light.html#on",
                             "tf": 110
@@ -4213,6 +4206,10 @@ window.lunrData = {
                           },
                           "module-j5e_light-Light.html#once": {
                             "ref": "module-j5e_light-Light.html#once",
+                            "tf": 110
+                          },
+                          "module-j5e_light-Light.html#configure": {
+                            "ref": "module-j5e_light-Light.html#configure",
                             "tf": 110
                           },
                           "module-j5e_light-Light.html#enable": {
@@ -7040,7 +7037,7 @@ window.lunrData = {
                       },
                       "module-j5e_light-Light.html#configure": {
                         "ref": "module-j5e_light-Light.html#configure",
-                        "tf": 16.666666666666664
+                        "tf": 58.33333333333333
                       },
                       "module-j5e_light-Light.html#enable": {
                         "ref": "module-j5e_light-Light.html#enable",
@@ -8606,6 +8603,14 @@ window.lunrData = {
                         "docs": {},
                         "t": {
                           "docs": {
+                            "module-j5e_thermometer.LM35.html#configure": {
+                              "ref": "module-j5e_thermometer.LM35.html#configure",
+                              "tf": 58.33333333333333
+                            },
+                            "module-j5e_thermometer.MF52A103J3470.html#configure": {
+                              "ref": "module-j5e_thermometer.MF52A103J3470.html#configure",
+                              "tf": 58.33333333333333
+                            },
                             "module-j5e_thermometer-Thermometer.html": {
                               "ref": "module-j5e_thermometer-Thermometer.html",
                               "tf": 508.3333333333333
@@ -9481,7 +9486,7 @@ window.lunrData = {
                           },
                           "module-j5e_light-Light.html#configure": {
                             "ref": "module-j5e_light-Light.html#configure",
-                            "tf": 700
+                            "tf": 708.3333333333334
                           },
                           "module-j5e_thermometer-Thermometer.html#configure": {
                             "ref": "module-j5e_thermometer-Thermometer.html#configure",
@@ -9800,10 +9805,6 @@ window.lunrData = {
                     "module-j5e_led.html": {
                       "ref": "module-j5e_led.html",
                       "tf": 2.7777777777777777
-                    },
-                    "module-j5e_light.html": {
-                      "ref": "module-j5e_light.html",
-                      "tf": 25
                     },
                     "module-j5e_thermometer.html": {
                       "ref": "module-j5e_thermometer.html",
@@ -10661,10 +10662,6 @@ window.lunrData = {
                       "ref": "module-j5e_light-Light.html",
                       "tf": 510
                     },
-                    "module-j5e_light-Light.html#configure": {
-                      "ref": "module-j5e_light-Light.html#configure",
-                      "tf": 49.99999999999999
-                    },
                     "module-j5e_led-LED.html": {
                       "ref": "module-j5e_led-LED.html",
                       "tf": 7.142857142857142
@@ -10672,10 +10669,6 @@ window.lunrData = {
                     "module-j5e_led.html": {
                       "ref": "module-j5e_led.html",
                       "tf": 2.7777777777777777
-                    },
-                    "module-j5e_light.html": {
-                      "ref": "module-j5e_light.html",
-                      "tf": 25
                     }
                   }
                 }
@@ -11258,10 +11251,6 @@ window.lunrData = {
                   "module-j5e_thermometer.LM35.html": {
                     "ref": "module-j5e_thermometer.LM35.html",
                     "tf": 666.6666666666666
-                  },
-                  "module-j5e_thermometer.LM35.html#configure": {
-                    "ref": "module-j5e_thermometer.LM35.html#configure",
-                    "tf": 58.33333333333333
                   }
                 },
                 "#": {
@@ -17682,35 +17671,6 @@ window.lunrData = {
                                                           }
                                                         }
                                                       },
-                                                      "c": {
-                                                        "docs": {},
-                                                        "o": {
-                                                          "docs": {},
-                                                          "n": {
-                                                            "docs": {},
-                                                            "f": {
-                                                              "docs": {},
-                                                              "i": {
-                                                                "docs": {},
-                                                                "g": {
-                                                                  "docs": {},
-                                                                  "u": {
-                                                                    "docs": {},
-                                                                    "r": {
-                                                                      "docs": {
-                                                                        "module-j5e_light-Light.html#configure": {
-                                                                          "ref": "module-j5e_light-Light.html#configure",
-                                                                          "tf": 1150
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                      },
                                                       "o": {
                                                         "docs": {},
                                                         "n": {
@@ -17745,6 +17705,35 @@ window.lunrData = {
                                                                     "module-j5e_light-Light.html#within": {
                                                                       "ref": "module-j5e_light-Light.html#within",
                                                                       "tf": 1150
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      },
+                                                      "c": {
+                                                        "docs": {},
+                                                        "o": {
+                                                          "docs": {},
+                                                          "n": {
+                                                            "docs": {},
+                                                            "f": {
+                                                              "docs": {},
+                                                              "i": {
+                                                                "docs": {},
+                                                                "g": {
+                                                                  "docs": {},
+                                                                  "u": {
+                                                                    "docs": {},
+                                                                    "r": {
+                                                                      "docs": {
+                                                                        "module-j5e_light-Light.html#configure": {
+                                                                          "ref": "module-j5e_light-Light.html#configure",
+                                                                          "tf": 1150
+                                                                        }
+                                                                      }
                                                                     }
                                                                   }
                                                                 }
@@ -20496,10 +20485,6 @@ window.lunrData = {
                                     "module-j5e_thermometer.MF52A103J3470.html": {
                                       "ref": "module-j5e_thermometer.MF52A103J3470.html",
                                       "tf": 666.6666666666666
-                                    },
-                                    "module-j5e_thermometer.MF52A103J3470.html#configure": {
-                                      "ref": "module-j5e_thermometer.MF52A103J3470.html#configure",
-                                      "tf": 58.33333333333333
                                     }
                                   },
                                   "#": {
@@ -22911,7 +22896,7 @@ window.lunrData = {
           }
         }
       },
-      "length": 2484
+      "length": 2481
     },
     "corpusTokens": [
       "0",
@@ -24203,16 +24188,6 @@ window.lunrData = {
       "summary": "",
       "description": ""
     },
-    "module-j5e_thermometer.LM35.html#configure": {
-      "id": "module-j5e_thermometer.LM35.html#configure",
-      "kind": "function",
-      "title": "configure( options ) → {LM35}",
-      "longname": "module:j5e/thermometer.LM35#configure",
-      "name": "configure",
-      "tags": "module:j5e/thermometer.LM35#configure LM35#configure configure",
-      "summary": "",
-      "description": "Configure an LM35"
-    },
     "module-j5e_thermometer.LM35.html#on": {
       "id": "module-j5e_thermometer.LM35.html#on",
       "kind": "function",
@@ -24252,6 +24227,16 @@ window.lunrData = {
       "tags": "module:j5e/thermometer.LM35#once LM35#once once",
       "summary": "",
       "description": "Create an event listener that will only fire one time."
+    },
+    "module-j5e_thermometer.LM35.html#configure": {
+      "id": "module-j5e_thermometer.LM35.html#configure",
+      "kind": "function",
+      "title": "configure( options ) → {Thermometer}",
+      "longname": "module:j5e/thermometer.LM35#configure",
+      "name": "configure",
+      "tags": "module:j5e/thermometer.LM35#configure LM35#configure configure",
+      "summary": "",
+      "description": "Configure a Thermometer"
     },
     "module-j5e_thermometer.LM35.html#enable": {
       "id": "module-j5e_thermometer.LM35.html#enable",
@@ -24504,16 +24489,6 @@ window.lunrData = {
       "summary": "",
       "description": ""
     },
-    "module-j5e_thermometer.MF52A103J3470.html#configure": {
-      "id": "module-j5e_thermometer.MF52A103J3470.html#configure",
-      "kind": "function",
-      "title": "configure( options ) → {MF52A103J3470}",
-      "longname": "module:j5e/thermometer.MF52A103J3470#configure",
-      "name": "configure",
-      "tags": "module:j5e/thermometer.MF52A103J3470#configure MF52A103J3470#configure configure",
-      "summary": "",
-      "description": "Configure an MF52A103J3470"
-    },
     "module-j5e_thermometer.MF52A103J3470.html#on": {
       "id": "module-j5e_thermometer.MF52A103J3470.html#on",
       "kind": "function",
@@ -24553,6 +24528,16 @@ window.lunrData = {
       "tags": "module:j5e/thermometer.MF52A103J3470#once MF52A103J3470#once once",
       "summary": "",
       "description": "Create an event listener that will only fire one time."
+    },
+    "module-j5e_thermometer.MF52A103J3470.html#configure": {
+      "id": "module-j5e_thermometer.MF52A103J3470.html#configure",
+      "kind": "function",
+      "title": "configure( options ) → {Thermometer}",
+      "longname": "module:j5e/thermometer.MF52A103J3470#configure",
+      "name": "configure",
+      "tags": "module:j5e/thermometer.MF52A103J3470#configure MF52A103J3470#configure configure",
+      "summary": "",
+      "description": "Configure a Thermometer"
     },
     "module-j5e_thermometer.MF52A103J3470.html#enable": {
       "id": "module-j5e_thermometer.MF52A103J3470.html#enable",
@@ -25137,16 +25122,6 @@ window.lunrData = {
       "summary": "",
       "description": ""
     },
-    "module-j5e_light-Light.html#configure": {
-      "id": "module-j5e_light-Light.html#configure",
-      "kind": "function",
-      "title": "configure( options ) → {Light}",
-      "longname": "module:j5e/light~Light#configure",
-      "name": "configure",
-      "tags": "module:j5e/light~Light#configure configure",
-      "summary": "",
-      "description": "Configure a Light sensor"
-    },
     "module-j5e_light-Light.html#on": {
       "id": "module-j5e_light-Light.html#on",
       "kind": "function",
@@ -25186,6 +25161,16 @@ window.lunrData = {
       "tags": "module:j5e/light~Light#once once",
       "summary": "",
       "description": "Create an event listener that will only fire one time."
+    },
+    "module-j5e_light-Light.html#configure": {
+      "id": "module-j5e_light-Light.html#configure",
+      "kind": "function",
+      "title": "configure( options ) → {Sensor}",
+      "longname": "module:j5e/light~Light#configure",
+      "name": "configure",
+      "tags": "module:j5e/light~Light#configure configure",
+      "summary": "",
+      "description": "Configure a Sensor"
     },
     "module-j5e_light-Light.html#enable": {
       "id": "module-j5e_light-Light.html#enable",
@@ -26618,7 +26603,7 @@ window.lunrData = {
       "name": "j5e/light",
       "tags": "module:j5e/light",
       "summary": "",
-      "description": "Class Light",
+      "description": "",
       "body": ""
     },
     "module-j5e_relay.html": {

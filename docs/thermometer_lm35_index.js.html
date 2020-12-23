@@ -107,6 +107,7 @@ import { normalizeDevice, normalizeIO } from "j5e/fn";
  * @fires data
  * @fires change
  */
+
 class LM35 extends Thermometer {
 
   /**
@@ -151,18 +152,10 @@ class LM35 extends Thermometer {
   /**
    * Configure an LM35
    * @returns {LM35} The instance on which the method was called
-   * @param {object} options - Device configuration options
-   * @param {number} [options.aref=3.3] - Analog reference voltage
-   * @param {boolean} [options.enabled=true] - Wether the device is currently performing reads every &lt;interval>ms
-   * @param {number} [options.interval=100] - Interval between readings in millseconds
-   * @param {number[]} [options.limit=null] - Limit the output range
-   * @param {number[]} [options.range=[0, N]] - The input range of the sensor
-   * @param {number[]} [options.scale=[0, N]] - The output range for the sensor's value
-   * @param {number} [options.threshold=1] - The minimum amount of change required to emit a "change" event
-   * @param {callback} [options.toCelsius] - Function that converts raw value to Celsius
+   * @inheritdoc
    * @example
    * &lt;caption>Passing in Cofiguration Options&lt;/caption>
-   import LM35 from "j5e/lm35";
+   * import LM35 from "j5e/lm35";
    *
    * const thermometer = await new LM35({
    *  pin: 14

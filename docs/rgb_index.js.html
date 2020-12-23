@@ -252,7 +252,7 @@ class RGB {
   configure(options = {}) {
     options = normalizeDevice(options);
 
-    if (options.sink) {
+    if (typeof options.sink !== "undefined") {
       this.#state.sink = true;
     }
 

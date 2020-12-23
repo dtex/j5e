@@ -210,7 +210,9 @@ class Button extends Emitter {
   configure(options) {
     options = normalizeDevice(options);
 
-    this.#state.normallyClosed = options.normallyClosed || this.#state.normallyClosed;
+    if (typeof options.normallyClosed !== "undefined") {
+      this.#state.normallyClosed = options.normallyClosed;
+    }
     this.#state.holdtime = options.holdtime || this.#state.holdtime;
     this.#state.debounce = options.debounce || this.#state.debounce;
 

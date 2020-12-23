@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>TMP36</title>
+		<title>LM335</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -85,7 +85,7 @@
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
 				<span class="kind">class</span>
-				<h1><span class="name">TMP36</span></h1>
+				<h1><span class="name">LM335</span></h1>
 			</div>
 		</div>
 	<div class="container content">
@@ -94,16 +94,16 @@
 						<ol class="breadcrumb">
 							<li><a href="index.html">Home</a></li>
 							<li><a href="list_class.html">Classes</a></li>
-							<li class="active">TMP36</li>
+							<li class="active">LM335</li>
 						</ol>
 					<section>
 							<dl class="symbol primary">
 								<dt class="symbol-title class collapsible-symbol expanded">
-			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="name">TMP36</span><span class="signature-params">( <span class="signature-param">io</span>&nbsp;)</span><span class="signature-type"></span></h2>
+			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="name">LM335</span><span class="signature-params">( <span class="signature-param">io</span>&nbsp;)</span><span class="signature-type"></span></h2>
 </dt>
 <dd class="symbol-details class  collapsible-symbol expanded" style="max-height: 9999px;">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Instantiate a TMP36 Thermometer</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Instantiate an LM335 Thermometer</div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -125,13 +125,13 @@
 					</tbody>
 				</table>
 			</div>
-			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Use a TMP36</p></div>
+			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Use a LM335</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import TMP36 from &quot;j5e/tmp36&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LM335 from &quot;j5e/lm335&quot;;
 			
-			const myTMP36 &#x3D; await new TMP36(12);
+			const myLM335 &#x3D; await new LM335(12);
 			
-			myTMP36.on(&quot;change&quot;, function(data) {
+			myLM335.on(&quot;change&quot;, function(data) {
 			  trace(data.C);
 			});</code></pre>
 					</div>
@@ -155,7 +155,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="thermometer_tmp36_index.js.html">thermometer/tmp36/index.js</a>, <a href="thermometer_tmp36_index.js.html#line-31">line 31</a></p>
+									<p class="form-control-static"><a href="thermometer_lm335_index.js.html">thermometer/lm335/index.js</a>, <a href="thermometer_lm335_index.js.html#line-31">line 31</a></p>
 								</div>
 							</div>
 			
@@ -171,11 +171,11 @@
 									<dl class="symbol">
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="configure" class="function public"><span class="name">configure</span><span class="signature-params">( <span class="signature-param">options</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{<a href="TMP36.html">TMP36</a>}</span></h4>
+			<h4 id="configure" class="function public"><span class="name">configure</span><span class="signature-params">( <span class="signature-param">options</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{<a href="LM335.html">LM335</a>}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Configure a TMP36</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Configure an LM335</div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -284,7 +284,7 @@
 			</div>
 			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type"><a href="TMP36.html">TMP36</a></span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type"><a href="LM335.html">LM335</a></span></label>
 								<div class="col-sm-9">
 									<div class="form-control-static returns-description">The instance on which the method was called</div>
 								</div>
@@ -292,17 +292,11 @@
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Passing in Cofiguration Options</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Thermometer from &quot;j5e/thermometer&quot;;
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import LM335 from &quot;j5e/lm335&quot;;
 			
-			const thermometer &#x3D; await new Thermometer({
+			const thermometer &#x3D; await new LM335({
 			 pin: 14
 			});
-			
-			myThermometer.configure({
-			  toCelsius: function(raw) {
-			    return raw / 16;
-			  }
-			}) ;
 			
 			thermometer.on(&quot;change&quot;, data &#x3D;&gt; {
 			 trace(thermometer.celsius);
@@ -328,7 +322,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="thermometer_tmp36_index.js.html">thermometer/tmp36/index.js</a>, <a href="thermometer_tmp36_index.js.html#line-87">line 87</a></p>
+									<p class="form-control-static"><a href="thermometer_lm335_index.js.html">thermometer/lm335/index.js</a>, <a href="thermometer_lm335_index.js.html#line-76">line 76</a></p>
 								</div>
 							</div>
 			

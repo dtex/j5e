@@ -124,9 +124,6 @@ class LED {
   /**
    * Instantiate an LED
    * @param {number|string|object} io - Pin identifier or IO Options (See {@tutorial C-INSTANTIATING})
-   * @param {object} [options] - Device configuration options
-   * @param {boolean} [options.pwm=false] - True if the device is wired to a PWM pin
-   * @param {boolean} [options.sink=false] - True if the device is wired for sink drive
    * @example
    * &lt;caption>Using a pin number&lt;/caption>
    * import LED from "j5e/led";
@@ -195,8 +192,8 @@ class LED {
   configure(options = {}) {
     options = normalizeDevice(options);
 
-    if (options.sink) {
-      this.#state.sink = true;
+    if (typeof options.sink !== "undefined") {
+      this.#state.sink = options.sink;
     }
 
     return this;
