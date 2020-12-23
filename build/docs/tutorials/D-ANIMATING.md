@@ -62,7 +62,7 @@ Note that a segment is just a JavaScript Object literal. It can be defined stati
 * **oncomplete:** function to execute when segment is completed (default: none)
 * **onloop:** function to execute when segment loops (default: none)
 
-##keyFrame Arrays
+## keyFrame Arrays
 If a single device is being animated, keyFrames may be a single dimensional array. If more than one device is being animated it must be 2-dimensional (an array of arrays). We call this a "keyFrame set". The index of each device in the target maps to the same index in a keyFrame set so the length of the two should be identical.
 
 Each keyFrame array should have an element that maps to each cue point in the cuePoints array. keyFrames[0][0] for example represents the position of the first device in your animation target at the first cuePoint. These may or may not be the same length. If there are fewer elements in a keyFrame array than in the cuePoints array, then the keyFrame array will be right padded with null values.
@@ -70,7 +70,7 @@ Each keyFrame array should have an element that maps to each cue point in the cu
 Elements in a keyFrame array represent a device's position at the corresponding cuePoint. Positions can be described in a number of ways:
 
 ### A Number
-This is a step in degrees from the previous cuePoint's position.
+This is a step in value from the previous cuePoint's value.
 ```
 // servo.last.degrees === 90
 ... cuePoints: [0, 0.25, 0.5, 0.75, 1], keyFrames : [ -45, 90, -135, 20, 70 ], ...
@@ -110,12 +110,19 @@ Will copy the previous known value (don't move the device)
 ### A keyFrame object
 The available properties for keyFrame objects are:
 
-**step**: A step in degrees from the previous cuePoint position.
+**step**: A step in value from the previous cuePoint value.
 ```
 // servo.last.degrees === 90
 ... cuePoints: [0, 0.25, 0.5, 0.75, 1], keyFrames : [ -45, {step: 90}, -135, 20, 70 ], ...
 ```
 ![step property](img/Animation-Graph(1).png)
+
+**value**: An explicit value.
+```
+// servo.last.degrees === 90
+... cuePoints: [0, 0.25, 0.5, 0.75, 1], keyFrames : [ -45, {value: 180}, -135, 20, 70 ], ...
+```
+![degrees property](img/Animation-Graph(6).png)
 
 **degrees**: The servo position in degrees.
 ```
@@ -145,7 +152,7 @@ The available properties for keyFrame objects are:
 ```
 ![copyFrame property](img/Animation-Graph(9).png)
 
-**position**: A two or three tuple defining a coordinate in 2d or 3d space.
+**position**: A two or three tuple defining a coordinate in 2d or 3d space 🤯.
 ```
 // two-tuple
 ...  cuePoints: [0, 0.5, 1], keyFrames : [ { position: [10, 10 ] }, { position: [20, 50 ] }, { position: [10, 10 ] } ] ...
@@ -154,11 +161,12 @@ The available properties for keyFrame objects are:
 ...  cuePoints: [0, 0.5, 1], keyFrames : [ { position: [10, 10, 0 ] }, { position: [20, 50, 90 ] }, { position: [10, 10, 0 ] } ] ...
 ```
 
-## Additional Tips
+## Tips for Moving Robots
 
+ * Reason about the position of your robot's limbs using [robot coordinate space](https://github.com/dtex/tharp/wiki/Coordinate-Spaces).
+ * Divide animations into small reusable components. These will be your segments.
  * Use the servos' isInverted property to keep movements on the left and right side moving in the same direction when passed the same value.
  * Use the servos' offset property so that 90 degrees on one is the same as 90 degrees on corresponding servos.
- * Divide animations into small reusable components. These will be your segments.
  * Use onstop functions when your looping animation is halted to return a bot's animated limbs to their home positions. In other words, when an animation stops make sure your bot is ready for the next segment, whatever it may be.
  * Use loopback properties to give you a place for prep moves that occur before a looping segment. For example, when walking the first step is half the size of the looping steps.
  * Nearly always use null as the first value in an animation segment. It allows the segment to be started from a variety of positions.
