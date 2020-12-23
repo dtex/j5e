@@ -43,7 +43,7 @@
 				}
 			</style>
 		<script type="text/javascript">
-			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"MMMM D, YYYY","systemName":"J5e","systemSummary":"Johnny Five for Embedded Systems","systemLogo":"img/j5e.png","systemColor":"#000","navMembers":[{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Copyright © 2019—2020 The contributors to the j5e and Johnny-Five projects.","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":true,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":{"ua":"UA-36026876-4","domain":"dtex.github.io"},"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":["./static/custom.css"],"scripts":[],"monospaceLinks":false,"cleverLinks":false,"forkMe":"./build/docs/fork/forkme_right_white_ffffff.webp"};
+			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"MMMM D, YYYY","systemName":"J5e","systemSummary":"Johnny Five for Embedded Systems","systemLogo":"img/j5e.png","systemColor":"#000","navMembers":[{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Copyright © 2019—2021 The contributors to the j5e and Johnny-Five projects.","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":true,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":{"ua":"UA-36026876-4","domain":"dtex.github.io"},"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":["./static/custom.css"],"scripts":[],"monospaceLinks":false,"cleverLinks":false,"forkMe":"./build/docs/fork/forkme_right_white_ffffff.webp"};
 			window.DOCLET_TOC_ENABLED = false;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
@@ -65,7 +65,6 @@
 			</div>
 			<div class="navbar-collapse collapse" id="topNavigation">
 				<ul class="nav navbar-nav">
-							<li><a href="list_class.html">Classes</a></li>
 							<li><a href="list_module.html">Modules</a></li>
 							<li><a href="list_tutorial.html">Tutorials</a></li>
 				</ul>
@@ -102,7 +101,7 @@
  */
 
 import { Emitter } from "j5e/event";
-import { normalizeParams, getProvider } from "j5e/fn";
+import { normalizeDevice, normalizeIO, getProvider } from "j5e/fn";
 
 /**
  * The Motor class constructs objects that represent a single DC Motor (usually) attached to a motor controller.
@@ -123,9 +122,11 @@ class Motor extends Emitter {
 
   /**
    * Instantiate a Motor
-   * @param {object} options - Pin identifier or IO Options (See {@tutorial C-INSTANTIATING})
-   * @param {Number} pin A single pin for basic
-   * @param {Number|Number[]} pins A pin number or a two or three digit array of pins [pwm, dir]|[pwm, dir, cdir]
+   * @param {number|string|number[]|string[]|object[]|object} io - A pin identifier, an array of pin identifiers or IO Options in PWM, DIR, CDIR order, or a motor IO options object (See {@tutorial C-INSTANTIATING})
+   * @param {object} [io.pwm] - Pin identifier or IO Options for the red channel
+   * @param {object} [io.dir] - Pin identifier or IO Options for the green channel
+   * @param {object} [io.cdir] - Pin identifier or IO Options for the blue channel
+   * @param {object} [options] - Device configuration options
    * @example
    * &lt;caption>Using a pin number&lt;/caption>
    * import Motor from "j5e/motor";
@@ -148,7 +149,7 @@ class Motor extends Emitter {
    *
    * const motor = await new Motor([ 3, 12 ]);
    * motor.fwd();
-   * 
+   *
    * @example
    * &lt;caption>Initializing 2 pin, Bi-Directional DC Motors with an object&lt;/caption>
    * import Motor from "j5e/motor";
@@ -157,15 +158,15 @@ class Motor extends Emitter {
    *   pins: [ 3, 12 ]
    * });
    * motor.fwd();
-   * 
+   *
    * @example
    * &lt;caption>Initializing 2 pin, Bi-Directional DC Motors with explicit pins&lt;/caption>
    * import Motor from "j5e/motor";
    *
    * const motor = await new Motor({
    *   pins: {
-   *     pwm: 3, 
-   *     dir: 12 
+   *     pwm: 3,
+   *     dir: 12
    *   }
    * });
    * motor.fwd();
@@ -210,10 +211,14 @@ class Motor extends Emitter {
    * motor.fwd();
   */
 
-  constructor(options) {
+  constructor(io, options) {
     return (async() => {
 
-      options = normalizeParams(options);
+      options = normalizeDevice(options);
+      io = normalizeIO(io);
+      if (!Array.isArray(io.pins)) {
+        io.pins = [io.pins];
+      }
       super();
 
       // Derive device based on pins passed
@@ -628,7 +633,7 @@ const Devices = {
 		</div>
 	</div>
 	<footer>
-				<div class="copyright">Copyright © 2019—2020 The contributors to the j5e and Johnny-Five projects.</div>
+				<div class="copyright">Copyright © 2019—2021 The contributors to the j5e and Johnny-Five projects.</div>
 			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a> using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
