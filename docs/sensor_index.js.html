@@ -144,7 +144,7 @@ class Sensor extends Withinable {
    *  trace(data);
    * });
    */
-  constructor(io, options) {
+  constructor(io) {
     return (async() => {
       io = normalizeIO(io);
       super();
@@ -154,7 +154,9 @@ class Sensor extends Withinable {
         pin: io.pin,
       });
 
-      this.configure();
+      this.configure({
+        interval: 100
+      });
 
       return this;
 
@@ -199,16 +201,16 @@ class Sensor extends Withinable {
     this.#state.smoothing = options.smoothing || 10;
     this.#state.threshold = options.threshold || 1;
 
+    if (typeof options.interval !== "undefined") {
+      this.interval = options.interval;
+    }
+
     if (typeof options.enabled !== "undefined") {
       if (options.enabled === false) {
         this.disable();
       } else {
         this.enable();
       }
-    }
-
-    if (typeof options.interval !== "undefined") {
-      this.interval = this.#state.interval = options.interval || null;
     }
 
     return this;
@@ -383,7 +385,7 @@ class Sensor extends Withinable {
    * });
    */
   disable() {
-    if (this.#state.enabled) {
+    if (this.#state.enabled || this.#state.enabled === null) {
       this.#state.enabled = false;
       this.#state.previousInterval = this.#state.interval;
       this.interval = 0;
