@@ -536,7 +536,7 @@
 							<td><span class="param-type">String</span> | <span class="param-type">Array</span> | <span class="param-type">Object</span> | <span class="param-type">Number</span></td>
 								<td class="attributes"></td>
 							<td class="last">
-									Hexadecimal color string, Array of color values, RGB object {red, green, blue}, or the value of the red channel
+									Hexadecimal color string, Array of color values, RGB object {red, green, blue}, or the value of the red channel [0, 1]
 							</td>
 						</tr>
 						<tr>
@@ -544,7 +544,7 @@
 							<td><span class="param-type">Number</span></td>
 								<td class="attributes">&lt;optional&gt;<br/></td>
 							<td class="last">
-									The value of the green channel
+									The value of the green channel [0, 1]
 							</td>
 						</tr>
 						<tr>
@@ -552,7 +552,7 @@
 							<td><span class="param-type">Number</span></td>
 								<td class="attributes">&lt;optional&gt;<br/></td>
 							<td class="last">
-									The value of the blue channel
+									The value of the blue channel [0, 1]
 							</td>
 						</tr>
 					</tbody>
@@ -578,21 +578,21 @@
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;j5e/rgb&quot;;
 			
 			const rgb &#x3D; await new RGB([13, 12, 14]);
-			rgb.color(&quot;rgb(102, 51, 153)&quot;);</code></pre>
+			rgb.color(&quot;rgb(0.4, 0.2, 0.6)&quot;);</code></pre>
 					</div>
 					<div class="example-caption"><p>Use an RGBA String to make it darker purple</p></div>
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;j5e/rgb&quot;;
 			
 			const rgb &#x3D; await new RGB([13, 12, 14]);
-			rgb.color(&quot;rgba(102, 51, 153, 50%)&quot;);</code></pre>
+			rgb.color(&quot;rgba(0.4, 0.2, 0.6, 50%)&quot;);</code></pre>
 					</div>
 					<div class="example-caption"><p>Use an array to make it purple</p></div>
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;j5e/rgb&quot;;
 			
 			const rgb &#x3D; await new RGB([13, 12, 14]);
-			rgb.color([408, 204, 612]); // Assumes 10-bit</code></pre>
+			rgb.color([0.4, 0.2, 0.6]);</code></pre>
 					</div>
 					<div class="example-caption"><p>Use an object to make it purple</p></div>
 					<div class="example-code">
@@ -600,9 +600,9 @@
 			
 			const rgb &#x3D; await new RGB([13, 12, 14]);
 			rgb.color({
-			  red: 102,
-			  green: 51,
-			  blue: 153
+			  red: 0.4,
+			  green: 0.2,
+			  blue: 0.6
 			});</code></pre>
 					</div>
 					<div class="example-caption"><p>Use seperate Red, Green, and Blue arguments to make it purple</p></div>
@@ -610,7 +610,7 @@
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import RGB from &quot;j5e/rgb&quot;;
 			
 			const rgb &#x3D; await new RGB([13, 12, 14]);
-			rgb.color(408, 204, 612); // Assumes 10-bit</code></pre>
+			rgb.color(0.4, 0.2, 0.6);</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
@@ -632,7 +632,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-295">line 295</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-297">line 297</a></p>
 								</div>
 							</div>
 			
@@ -684,7 +684,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-338">line 338</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-340">line 340</a></p>
 								</div>
 							</div>
 			
@@ -741,7 +741,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-369">line 369</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-371">line 371</a></p>
 								</div>
 							</div>
 			
@@ -798,7 +798,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-405">line 405</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-407">line 407</a></p>
 								</div>
 							</div>
 			
@@ -890,7 +890,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-430">line 430</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-432">line 432</a></p>
 								</div>
 							</div>
 			
@@ -1001,7 +1001,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-478">line 478</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-480">line 480</a></p>
 								</div>
 							</div>
 			
@@ -1087,7 +1087,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-519">line 519</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-521">line 521</a></p>
 								</div>
 							</div>
 			
@@ -1099,7 +1099,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="fadeIn" class="function public"><span class="name">fadeIn</span><span class="signature-params">( [&nbsp;<span class="signature-param">time</span> [,&nbsp;<span class="signature-param">callback</span>&nbsp;]&nbsp;]&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{RGB}</span></h4>
+			<h4 id="fadeOut" class="function public"><span class="name">fadeOut</span><span class="signature-params">( [&nbsp;<span class="signature-param">time</span> [,&nbsp;<span class="signature-param">callback</span>&nbsp;]&nbsp;]&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{RGB}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
@@ -1174,7 +1174,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-536">line 536</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-538">line 538</a></p>
 								</div>
 							</div>
 			
@@ -1266,7 +1266,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-561">line 561</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-563">line 563</a></p>
 								</div>
 							</div>
 			
@@ -1345,7 +1345,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-605">line 605</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-607">line 607</a></p>
 								</div>
 							</div>
 			
@@ -1402,7 +1402,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-631">line 631</a></p>
+									<p class="form-control-static"><a href="rgb_index.js.html">rgb/index.js</a>, <a href="rgb_index.js.html#line-633">line 633</a></p>
 								</div>
 							</div>
 			

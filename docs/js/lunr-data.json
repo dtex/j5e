@@ -2907,12 +2907,24 @@
           "valu"
         ],
         "module-j5e_rgb-RGB.html#fadeIn": [
+          "bright",
           "callback",
           "fade",
           "fadein",
+          "full",
           "function",
           "led",
           "module:j5e/rgb~rgb#fadein",
+          "rgb",
+          "time"
+        ],
+        "module-j5e_rgb-RGB.html#fadeOut": [
+          "callback",
+          "fade",
+          "fadeout",
+          "function",
+          "led",
+          "module:j5e/rgb~rgb#fadeout",
           "rgb",
           "time"
         ],
@@ -3086,7 +3098,7 @@
           "xs"
         ]
       },
-      "length": 301
+      "length": 302
     },
     "tokenStore": {
       "root": {
@@ -3934,6 +3946,10 @@
                   },
                   "module-j5e_rgb-RGB.html#fadeIn": {
                     "ref": "module-j5e_rgb-RGB.html#fadeIn",
+                    "tf": 10
+                  },
+                  "module-j5e_rgb-RGB.html#fadeOut": {
+                    "ref": "module-j5e_rgb-RGB.html#fadeOut",
                     "tf": 16.666666666666664
                   },
                   "module-j5e_rgb-RGB.html#stop": {
@@ -3965,6 +3981,10 @@
                         "module-j5e_led-LED.html#fadeOut": {
                           "ref": "module-j5e_led-LED.html#fadeOut",
                           "tf": 681.25
+                        },
+                        "module-j5e_rgb-RGB.html#fadeOut": {
+                          "ref": "module-j5e_rgb-RGB.html#fadeOut",
+                          "tf": 675
                         }
                       }
                     }
@@ -4509,6 +4529,10 @@
                           },
                           "module-j5e_rgb-RGB.html#fadeIn": {
                             "ref": "module-j5e_rgb-RGB.html#fadeIn",
+                            "tf": 110
+                          },
+                          "module-j5e_rgb-RGB.html#fadeOut": {
+                            "ref": "module-j5e_rgb-RGB.html#fadeOut",
                             "tf": 110
                           },
                           "module-j5e_rgb-RGB.html#pulse": {
@@ -6677,6 +6701,10 @@
                 },
                 "module-j5e_rgb-RGB.html#fadeIn": {
                   "ref": "module-j5e_rgb-RGB.html#fadeIn",
+                  "tf": 35
+                },
+                "module-j5e_rgb-RGB.html#fadeOut": {
+                  "ref": "module-j5e_rgb-RGB.html#fadeOut",
                   "tf": 41.666666666666664
                 },
                 "module-j5e_rgb-RGB.html#pulse": {
@@ -8432,6 +8460,10 @@
                   },
                   "module-j5e_rgb-RGB.html#fadeIn": {
                     "ref": "module-j5e_rgb-RGB.html#fadeIn",
+                    "tf": 25
+                  },
+                  "module-j5e_rgb-RGB.html#fadeOut": {
+                    "ref": "module-j5e_rgb-RGB.html#fadeOut",
                     "tf": 25
                   }
                 },
@@ -10216,6 +10248,10 @@
                           },
                           "module-j5e_rgb-RGB.html#fadeIn": {
                             "ref": "module-j5e_rgb-RGB.html#fadeIn",
+                            "tf": 25
+                          },
+                          "module-j5e_rgb-RGB.html#fadeOut": {
+                            "ref": "module-j5e_rgb-RGB.html#fadeOut",
                             "tf": 25
                           },
                           "module-j5e_rgb-RGB.html#pulse": {
@@ -12434,6 +12470,10 @@
                 },
                 "module-j5e_rgb-RGB.html#fadeIn": {
                   "ref": "module-j5e_rgb-RGB.html#fadeIn",
+                  "tf": 10
+                },
+                "module-j5e_rgb-RGB.html#fadeOut": {
+                  "ref": "module-j5e_rgb-RGB.html#fadeOut",
                   "tf": 16.666666666666664
                 },
                 "module-j5e_rgb-RGB.html#pulse": {
@@ -17160,6 +17200,20 @@
                                                             "module-j5e_rgb-RGB.html#fadeIn": {
                                                               "ref": "module-j5e_rgb-RGB.html#fadeIn",
                                                               "tf": 1150
+                                                            }
+                                                          }
+                                                        }
+                                                      },
+                                                      "o": {
+                                                        "docs": {},
+                                                        "u": {
+                                                          "docs": {},
+                                                          "t": {
+                                                            "docs": {
+                                                              "module-j5e_rgb-RGB.html#fadeOut": {
+                                                                "ref": "module-j5e_rgb-RGB.html#fadeOut",
+                                                                "tf": 1150
+                                                              }
                                                             }
                                                           }
                                                         }
@@ -23168,6 +23222,7 @@
       "module:j5e/rgb~rgb#configur",
       "module:j5e/rgb~rgb#fad",
       "module:j5e/rgb~rgb#fadein",
+      "module:j5e/rgb~rgb#fadeout",
       "module:j5e/rgb~rgb#isanod",
       "module:j5e/rgb~rgb#ison",
       "module:j5e/rgb~rgb#isrun",
@@ -26405,6 +26460,16 @@
       "longname": "module:j5e/rgb~RGB#fadeIn",
       "name": "fadeIn",
       "tags": "module:j5e/rgb~RGB#fadeIn fadeIn",
+      "summary": "",
+      "description": "Fade an RGB LED to full brightness"
+    },
+    "module-j5e_rgb-RGB.html#fadeOut": {
+      "id": "module-j5e_rgb-RGB.html#fadeOut",
+      "kind": "function",
+      "title": "fadeOut( [ time [, callback ] ] ) → {RGB}",
+      "longname": "module:j5e/rgb~RGB#fadeOut",
+      "name": "fadeOut",
+      "tags": "module:j5e/rgb~RGB#fadeOut fadeOut",
       "summary": "",
       "description": "Fade an RGB LED off"
     },
