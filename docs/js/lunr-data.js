@@ -2679,15 +2679,11 @@ window.lunrData = {
           "module:j5e/led~led#blink"
         ],
         "module-j5e_led-LED.html#brightness": [
-          "attach",
           "bright",
           "function",
           "led",
           "module:j5e/led~led#bright",
-          "pwm",
-          "requir",
           "set",
-          "true",
           "valu"
         ],
         "module-j5e_led-LED.html#intensity": [
@@ -2698,10 +2694,7 @@ window.lunrData = {
           "intens",
           "led",
           "module:j5e/led~led#intens",
-          "pwm",
-          "requir",
           "set",
-          "true",
           "valu"
         ],
         "module-j5e_led-LED.html#fade": [
@@ -3101,7 +3094,7 @@ window.lunrData = {
           "docs": {
             "module-j5e_led-LED.html#intensity": {
               "ref": "module-j5e_led-LED.html#intensity",
-              "tf": 6.25
+              "tf": 10
             }
           },
           ",": {
@@ -3136,7 +3129,7 @@ window.lunrData = {
               "docs": {
                 "module-j5e_led-LED.html#intensity": {
                   "ref": "module-j5e_led-LED.html#intensity",
-                  "tf": 6.25
+                  "tf": 10
                 }
               }
             },
@@ -5880,14 +5873,6 @@ window.lunrData = {
                         "ref": "module-j5e_sensor-Sensor.html#threshold",
                         "tf": 7.142857142857142
                       },
-                      "module-j5e_led-LED.html#brightness": {
-                        "ref": "module-j5e_led-LED.html#brightness",
-                        "tf": 6.25
-                      },
-                      "module-j5e_led-LED.html#intensity": {
-                        "ref": "module-j5e_led-LED.html#intensity",
-                        "tf": 6.25
-                      },
                       "module-j5e_led-LED.html#fade": {
                         "ref": "module-j5e_led-LED.html#fade",
                         "tf": 5.555555555555555
@@ -7146,11 +7131,11 @@ window.lunrData = {
                 },
                 "module-j5e_led-LED.html#brightness": {
                   "ref": "module-j5e_led-LED.html#brightness",
-                  "tf": 6.25
+                  "tf": 16.666666666666664
                 },
                 "module-j5e_led-LED.html#intensity": {
                   "ref": "module-j5e_led-LED.html#intensity",
-                  "tf": 6.25
+                  "tf": 10
                 }
               },
               "i": {
@@ -9318,14 +9303,6 @@ window.lunrData = {
                   "module-j5e_led-LED.html#isRunning": {
                     "ref": "module-j5e_led-LED.html#isRunning",
                     "tf": 10
-                  },
-                  "module-j5e_led-LED.html#brightness": {
-                    "ref": "module-j5e_led-LED.html#brightness",
-                    "tf": 6.25
-                  },
-                  "module-j5e_led-LED.html#intensity": {
-                    "ref": "module-j5e_led-LED.html#intensity",
-                    "tf": 6.25
                   },
                   "module-j5e_led-LED.html#fade": {
                     "ref": "module-j5e_led-LED.html#fade",
@@ -12401,11 +12378,11 @@ window.lunrData = {
                 },
                 "module-j5e_led-LED.html#brightness": {
                   "ref": "module-j5e_led-LED.html#brightness",
-                  "tf": 39.58333333333333
+                  "tf": 49.99999999999999
                 },
                 "module-j5e_led-LED.html#intensity": {
                   "ref": "module-j5e_led-LED.html#intensity",
-                  "tf": 39.58333333333333
+                  "tf": 43.33333333333333
                 },
                 "module-j5e_led-LED.html#fade": {
                   "ref": "module-j5e_led-LED.html#fade",
@@ -12885,14 +12862,6 @@ window.lunrData = {
             "docs": {},
             "m": {
               "docs": {
-                "module-j5e_led-LED.html#brightness": {
-                  "ref": "module-j5e_led-LED.html#brightness",
-                  "tf": 12.5
-                },
-                "module-j5e_led-LED.html#intensity": {
-                  "ref": "module-j5e_led-LED.html#intensity",
-                  "tf": 6.25
-                },
                 "module-j5e_led-LED.html#fade": {
                   "ref": "module-j5e_led-LED.html#fade",
                   "tf": 5.555555555555555
@@ -13526,26 +13495,6 @@ window.lunrData = {
                       "module-j5e_rgb-RGB.html#color": {
                         "ref": "module-j5e_rgb-RGB.html#color",
                         "tf": 2.941176470588235
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "t": {
-            "docs": {},
-            "t": {
-              "docs": {},
-              "a": {
-                "docs": {},
-                "c": {
-                  "docs": {},
-                  "h": {
-                    "docs": {
-                      "module-j5e_led-LED.html#brightness": {
-                        "ref": "module-j5e_led-LED.html#brightness",
-                        "tf": 6.25
                       }
                     }
                   }
@@ -21924,11 +21873,11 @@ window.lunrData = {
                     "docs": {
                       "module-j5e_led-LED.html#brightness": {
                         "ref": "module-j5e_led-LED.html#brightness",
-                        "tf": 689.5833333333334
+                        "tf": 700
                       },
                       "module-j5e_led-LED.html#intensity": {
                         "ref": "module-j5e_led-LED.html#intensity",
-                        "tf": 6.25
+                        "tf": 10
                       },
                       "module-j5e_led-LED.html#fadeIn": {
                         "ref": "module-j5e_led-LED.html#fadeIn",
@@ -22858,7 +22807,7 @@ window.lunrData = {
           }
         }
       },
-      "length": 2477
+      "length": 2470
     },
     "corpusTokens": [
       "0",
@@ -22882,7 +22831,6 @@ window.lunrData = {
       "argument",
       "array",
       "array.&lt;number&gt",
-      "attach",
       "avail",
       "be",
       "befor",
@@ -26257,7 +26205,7 @@ window.lunrData = {
       "name": "brightness",
       "tags": "module:j5e/led~LED#brightness brightness",
       "summary": "",
-      "description": "Set the brightness of an led attached to PWM (Requires ```pwm: true```)"
+      "description": "Set the brightness of an led"
     },
     "module-j5e_led-LED.html#intensity": {
       "id": "module-j5e_led-LED.html#intensity",
@@ -26267,7 +26215,7 @@ window.lunrData = {
       "name": "intensity",
       "tags": "module:j5e/led~LED#intensity intensity",
       "summary": "",
-      "description": "Set the brightness of an led 0-100 (Requires ```pwm: true```)"
+      "description": "Set the brightness of an led 0-100"
     },
     "module-j5e_led-LED.html#fade": {
       "id": "module-j5e_led-LED.html#fade",
