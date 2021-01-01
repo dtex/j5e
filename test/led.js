@@ -241,10 +241,10 @@ describe("LED - PWM", function() {
         });
 
         led.on();
-        assert.equal(led.value, 1023);
+        assert.equal(led.value, 1);
 
-        led.brightness(512);
-        assert.equal(led.value, 512);
+        led.brightness(0.5);
+        assert.equal(led.value, 0.5);
 
 
       });
@@ -318,7 +318,7 @@ describe("LED - PWM", function() {
         assert.equal(led.value, 0);
         led.on();
         assert.equal(writeSpy.getCall(0).args[0], 1023);
-        assert.equal(led.value, 1023);
+        assert.equal(led.value, 1);
       });
 
     });
@@ -335,7 +335,7 @@ describe("LED - PWM", function() {
         const writeSpy = sinon.spy(led.io, "write");
 
         led.on();
-        assert.equal(led.value, 1023);
+        assert.equal(led.value, 1);
         led.off();
         assert.equal(writeSpy.getCall(0).args[0], 1023);
         assert.equal(writeSpy.getCall(1).args[0], 0);
@@ -358,7 +358,7 @@ describe("LED - PWM", function() {
 
         led.toggle();
         assert(writeSpy.calledOnceWith(1023));
-        assert.equal(led.value, 1023);
+        assert.equal(led.value, 1);
 
         led.toggle();
         assert.equal(writeSpy.callCount, 2);
@@ -370,8 +370,7 @@ describe("LED - PWM", function() {
 
     describe("Brightness", function() {
 
-      it("should call io digital.write twice, with 0 and 512", async function() {
-
+      it("should call io.write twice, with 0 and 512", async function() {
         const led = await new LED({
           pin: 12,
           io: PWM
@@ -384,11 +383,10 @@ describe("LED - PWM", function() {
         assert(writeSpy.calledOnceWith(0));
         assert.equal(led.value, 0);
 
-        led.brightness(512);
+        led.brightness(0.5);
         assert.equal(writeSpy.callCount, 2);
-        assert.equal(writeSpy.secondCall.args[0], 512);
-        assert.equal(led.value, 512);
-
+        assert.equal(writeSpy.secondCall.args[0], 511);
+        assert.equal(led.value, 0.5);
       });
     });
 
