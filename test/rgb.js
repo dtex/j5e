@@ -138,13 +138,13 @@ describe("RGB", function() {
         clock.tick(1010);
 
         assert.equal(writeSpyRed.getCall(1).args[0], 1);
-        assert.equal(writeSpyRed.getCall(26).args[0], 544);
+        assert.equal(writeSpyRed.getCall(26).args[0], 543);
         assert.equal(writeSpyRed.getCall(50).args[0], 1023);
 
         clock.tick(1000);
 
         assert.equal(writeSpyRed.callCount, 101);
-        assert.equal(writeSpyRed.getCall(51).args[0], 1022);
+        assert.equal(writeSpyRed.getCall(51).args[0], 1021);
         assert.equal(writeSpyRed.getCall(76).args[0], 479);
         assert.equal(writeSpyRed.getCall(100).args[0], 0);
 
