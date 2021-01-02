@@ -2,6 +2,7 @@ node_modules
 .vscode
 lerna-debug.log
 .DS_Store
+coverage
 
 
 coverage/tmp/
