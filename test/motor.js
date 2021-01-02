@@ -248,6 +248,28 @@ describe("Motor - Non-Directional", function() {
 
   describe("Methods", function() {
 
+    describe("speed", function() {
+
+      it("should set the motor to the requested speed", async function() {
+        const motor = await new Motor({
+          pwm: {
+            pin: 12,
+            io: PWM
+          },
+          dir: {
+            pin: 13,
+            io: Digital
+          }
+        });
+
+        const writeSpy = sinon.spy(motor.io.pwm, "write");
+        motor.speed(0.7);
+        assert.equal(writeSpy.callCount, 1);
+        assert.equal(writeSpy.getCall(0).args[0], 716);
+
+      });
+    });
+
     describe("forward", function() {
 
       it("should do the right thing", async function() {
