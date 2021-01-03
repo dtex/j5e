@@ -64,6 +64,27 @@ describe("Motor - Non-Directional", function() {
       assert.equal(motor.HIGH, 1023);
     });
 
+    it("should return a valid directional Motor instance when passed an array of three pins", async function() {
+      const motor = await new Motor([
+        {
+          pin: 12,
+          io: PWM
+        }, {
+          pin: 13,
+          io: Digital
+        }, {
+          pin: 14,
+          io: Digital
+        }
+      ]);
+      assert.equal(motor instanceof Motor, true);
+      assert.equal(motor.io.pwm instanceof PWM, true);
+      assert.equal(motor.io.dir instanceof Digital, true);
+      assert.equal(motor.io.cdir instanceof Digital, true);
+      assert.equal(motor.LOW, 0);
+      assert.equal(motor.HIGH, 1023);
+    });
+
     it("should return a valid directional Motor instance and a brake when passed three pins and a brake", async function() {
       const motor = await new Motor({
         pwm: {
@@ -91,69 +112,6 @@ describe("Motor - Non-Directional", function() {
       assert.equal(motor.io.brake instanceof Digital, true);
       assert.equal(motor.LOW, 0);
       assert.equal(motor.HIGH, 1023);
-    });
-
-    it("should return a valid directional Motor instance and a sensor when passed three motor pins and a current pin", async function() {
-      const motor = await new Motor({
-        pwm: {
-          pin: 12,
-          io: PWM
-        },
-        dir: {
-          pin: 13,
-          io: Digital
-        },
-        cdir: {
-          pin: 14,
-          io: Digital
-        },
-        current: {
-          pin: 17,
-          io: Analog
-        }
-      });
-      assert.equal(motor instanceof Motor, true);
-      assert.equal(motor.io.pwm instanceof PWM, true);
-      assert.equal(motor.io.dir instanceof Digital, true);
-      assert.equal(motor.io.cdir instanceof Digital, true);
-      assert.equal(motor.io.current instanceof Analog, true);
-      assert.equal(motor.LOW, 0);
-      assert.equal(motor.HIGH, 1023);
-      assert.equal(motor.io.current.resolution, 10);
-    });
-
-    it("should return a valid directional Motor instance when passed a pwm, dir, cdir, brake and current pin", async function() {
-      const motor = await new Motor({
-        pwm: {
-          pin: 12,
-          io: PWM
-        },
-        dir: {
-          pin: 13,
-          io: Digital
-        },
-        cdir: {
-          pin: 14,
-          io: Digital
-        },
-        brake: {
-          pin: 11,
-          io: Digital
-        },
-        current: {
-          pin: 17,
-          io: Analog
-        }
-      });
-      assert.equal(motor instanceof Motor, true);
-      assert.equal(motor.io.pwm instanceof PWM, true);
-      assert.equal(motor.io.dir instanceof Digital, true);
-      assert.equal(motor.io.cdir instanceof Digital, true);
-      assert.equal(motor.io.brake instanceof Digital, true);
-      assert.equal(motor.io.current instanceof Analog, true);
-      assert.equal(motor.LOW, 0);
-      assert.equal(motor.HIGH, 1023);
-      assert.equal(motor.io.current.resolution, 10);
     });
 
     // All tests related to default instantiation
@@ -270,6 +228,131 @@ describe("Motor - Non-Directional", function() {
       });
     });
 
+    describe("start", function() {
+
+      it("should start the motor at the current speed", async function() {
+        const motor = await new Motor({
+          pwm: {
+            pin: 12,
+            io: PWM
+          },
+          dir: {
+            pin: 13,
+            io: Digital
+          }
+        });
+
+        const writeSpy = sinon.spy(motor.io.pwm, "write");
+        motor.start(0.7);
+        assert.equal(writeSpy.callCount, 1);
+        assert.equal(writeSpy.getCall(0).args[0], 716);
+      });
+
+      // [ all other tests related to someMethod ]
+
+    });
+
+    describe("stop", function() {
+
+      it("should stop the motor", async function() {
+        const motor = await new Motor({
+          pwm: {
+            pin: 12,
+            io: PWM
+          },
+          dir: {
+            pin: 13,
+            io: Digital
+          }
+        });
+
+        const writeSpy = sinon.spy(motor.io.pwm, "write");
+        motor.start(0.7);
+        assert.equal(writeSpy.callCount, 1);
+        assert.equal(writeSpy.getCall(0).args[0], 716);
+        motor.stop();
+        assert.equal(writeSpy.callCount, 2);
+        assert.equal(writeSpy.getCall(1).args[0], 0);
+      });
+
+      // [ all other tests related to someMethod ]
+
+    });
+
+    describe("brake", function() {
+
+      it("should set the brake and dir pins high", async function() {
+        const motor = await new Motor({
+          pwm: {
+            pin: 12,
+            io: PWM
+          },
+          dir: {
+            pin: 13,
+            io: Digital
+          },
+          brake: {
+            pin: 14,
+            io: Digital
+          }
+        });
+
+        const writeSpy = sinon.spy(motor.io.pwm, "write");
+        const dirSpy = sinon.spy(motor.io.dir, "write");
+        const brakeSpy = sinon.spy(motor.io.brake, "write");
+
+        motor.start(0.7);
+        assert.equal(writeSpy.callCount, 1);
+        assert.equal(writeSpy.getCall(0).args[0], 716);
+
+        motor.brake();
+        assert.equal(writeSpy.callCount, 2);
+        assert.equal(writeSpy.getCall(1).args[0], 1023);
+        assert.equal(dirSpy.callCount, 1);
+        assert.equal(dirSpy.getCall(0).args[0], 1);
+        assert.equal(brakeSpy.callCount, 1);
+        assert.equal(brakeSpy.getCall(0).args[0], 1);
+      });
+
+      it("should set the pwm, cdir, and dir pins high", async function() {
+        const motor = await new Motor({
+          pwm: {
+            pin: 12,
+            io: PWM
+          },
+          dir: {
+            pin: 13,
+            io: Digital
+          },
+          cdir: {
+            pin: 11,
+            io: Digital
+          }
+        });
+
+        const writeSpy = sinon.spy(motor.io.pwm, "write");
+
+        motor.start(0.7);
+        assert.equal(writeSpy.callCount, 1);
+        assert.equal(writeSpy.getCall(0).args[0], 716);
+
+        motor.brake();
+        assert.equal(writeSpy.callCount, 2);
+        assert.equal(writeSpy.getCall(1).args[0], 0);
+      });
+
+    });
+
+    describe("release", function() {
+
+      it("should do the right thing", async function() {
+        // ...
+      });
+
+      // [ all other tests related to someMethod ]
+
+    });
+
     describe("forward", function() {
 
       it("should do the right thing", async function() {
@@ -301,46 +384,6 @@ describe("Motor - Non-Directional", function() {
     });
 
     describe("rev", function() {
-
-      it("should do the right thing", async function() {
-        // ...
-      });
-
-      // [ all other tests related to someMethod ]
-
-    });
-
-    describe("start", function() {
-
-      it("should do the right thing", async function() {
-        // ...
-      });
-
-      // [ all other tests related to someMethod ]
-
-    });
-
-    describe("stop", function() {
-
-      it("should do the right thing", async function() {
-        // ...
-      });
-
-      // [ all other tests related to someMethod ]
-
-    });
-
-    describe("brake", function() {
-
-      it("should do the right thing", async function() {
-        // ...
-      });
-
-      // [ all other tests related to someMethod ]
-
-    });
-
-    describe("release", function() {
 
       it("should do the right thing", async function() {
         // ...
