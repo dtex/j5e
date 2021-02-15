@@ -22,7 +22,7 @@ describe("Motor - Non-Directional", function() {
       assert.equal(motor.HIGH, 1023);
     });
 
-    it("should return a valid directional Motor instance when passed two pins", async function() {
+    /*it("should return a valid directional Motor instance when passed two pins", async function() {
       const motor = await new Motor({
         pwm: {
           pin: 12,
@@ -112,7 +112,7 @@ describe("Motor - Non-Directional", function() {
       assert.equal(motor.io.brake instanceof Digital, true);
       assert.equal(motor.LOW, 0);
       assert.equal(motor.HIGH, 1023);
-    });
+    });*/
 
     // All tests related to default instantiation
 
@@ -146,13 +146,57 @@ describe("Motor - Non-Directional", function() {
           assert.equal(motor.enabled, false);
         });
 
-        it("should not mode the motor when enabled: false is passed to configuration", async function() {
+        it("should not move the motor when enabled: false is passed to configuration", async function() {
+
+          const motor = await new Motor({
+            pwm: {
+              pin: 12,
+              io: PWM
+            }
+          });
+
+          motor.configure({
+            enabled: false
+          });
+
+          const writeSpy = sinon.spy(motor.io.pwm, "write");
+          motor.speed(0.7);
+          assert.equal(writeSpy.callCount, 0);
 
         });
 
       });
 
       describe("threshold", async function() {
+
+        it("should have the correct theshold when a custom threshold is passed", async function() {
+          const motor = await new Motor({
+            pwm: {
+              pin: 12,
+              io: PWM
+            }
+          });
+
+          motor.configure({
+            threshold: 0.5
+          });
+
+          const writeSpy = sinon.spy(motor.io.pwm, "write");
+          motor.speed(0.4);
+          assert.equal(writeSpy.callCount, 1);
+          assert.equal(writeSpy.getCall(0).args[0], 0);
+
+          motor.speed(0.6);
+          assert.equal(writeSpy.callCount, 2);
+          assert.equal(writeSpy.getCall(1).args[0], 613);
+
+        });
+
+        // [ All other tests related to this option ]
+
+      });
+
+      describe("invertPWM", async function() {
 
         it("should have the correct theshold when a custom threshold is passed", async function() {
 
@@ -213,10 +257,6 @@ describe("Motor - Non-Directional", function() {
           pwm: {
             pin: 12,
             io: PWM
-          },
-          dir: {
-            pin: 13,
-            io: Digital
           }
         });
 
@@ -235,10 +275,6 @@ describe("Motor - Non-Directional", function() {
           pwm: {
             pin: 12,
             io: PWM
-          },
-          dir: {
-            pin: 13,
-            io: Digital
           }
         });
 
@@ -259,10 +295,6 @@ describe("Motor - Non-Directional", function() {
           pwm: {
             pin: 12,
             io: PWM
-          },
-          dir: {
-            pin: 13,
-            io: Digital
           }
         });
 
@@ -286,47 +318,6 @@ describe("Motor - Non-Directional", function() {
           pwm: {
             pin: 12,
             io: PWM
-          },
-          dir: {
-            pin: 13,
-            io: Digital
-          },
-          brake: {
-            pin: 14,
-            io: Digital
-          }
-        });
-
-        const writeSpy = sinon.spy(motor.io.pwm, "write");
-        const dirSpy = sinon.spy(motor.io.dir, "write");
-        const brakeSpy = sinon.spy(motor.io.brake, "write");
-
-        motor.start(0.7);
-        assert.equal(writeSpy.callCount, 1);
-        assert.equal(writeSpy.getCall(0).args[0], 716);
-
-        motor.brake();
-        assert.equal(writeSpy.callCount, 2);
-        assert.equal(writeSpy.getCall(1).args[0], 1023);
-        assert.equal(dirSpy.callCount, 1);
-        assert.equal(dirSpy.getCall(0).args[0], 1);
-        assert.equal(brakeSpy.callCount, 1);
-        assert.equal(brakeSpy.getCall(0).args[0], 1);
-      });
-
-      it("should set the pwm, cdir, and dir pins high", async function() {
-        const motor = await new Motor({
-          pwm: {
-            pin: 12,
-            io: PWM
-          },
-          dir: {
-            pin: 13,
-            io: Digital
-          },
-          cdir: {
-            pin: 11,
-            io: Digital
           }
         });
 
@@ -343,10 +334,26 @@ describe("Motor - Non-Directional", function() {
 
     });
 
-    describe("release", function() {
+    describe("resume", function() {
 
-      it("should do the right thing", async function() {
-        // ...
+      it("should set pwm high", async function() {
+        const motor = await new Motor({
+          pwm: {
+            pin: 12,
+            io: PWM
+          }
+        });
+
+        const writeSpy = sinon.spy(motor.io.pwm, "write");
+
+        motor.forward();
+        motor.stop();
+        motor.resume();
+
+        assert.equal(writeSpy.callCount, 3);
+        assert.equal(writeSpy.getCall(0).args[0], 1023);
+        assert.equal(writeSpy.getCall(1).args[0], 0);
+        assert.equal(writeSpy.getCall(2).args[0], 1023);
       });
 
       // [ all other tests related to someMethod ]
@@ -355,8 +362,70 @@ describe("Motor - Non-Directional", function() {
 
     describe("forward", function() {
 
-      it("should do the right thing", async function() {
-        // ...
+      it("should set pwm high", async function() {
+        const motor = await new Motor({
+          pwm: {
+            pin: 12,
+            io: PWM
+          }
+        });
+
+        const writeSpy = sinon.spy(motor.io.pwm, "write");
+
+        motor.forward();
+        assert.equal(writeSpy.callCount, 1);
+        assert.equal(writeSpy.getCall(0).args[0], 1023);
+      });
+
+      it("should set pwm high and dir pins low", async function() {
+        const motor = await new Motor({
+          pwm: {
+            pin: 12,
+            io: PWM
+          },
+          dir: {
+            pin: 13,
+            io: Digital
+          }
+        });
+
+        const writeSpy = sinon.spy(motor.io.pwm, "write");
+        const dirSpy = sinon.spy(motor.io.dir, "write");
+
+        motor.forward();
+        assert.equal(writeSpy.callCount, 2);
+        assert.equal(writeSpy.getCall(0).args[0], 0);
+        assert.equal(dirSpy.callCount, 1);
+        assert.equal(dirSpy.getCall(0).args[0], 1);
+      });
+
+      it("should pwm and dir pins high and set cdir low", async function() {
+        const motor = await new Motor({
+          pwm: {
+            pin: 12,
+            io: PWM
+          },
+          dir: {
+            pin: 13,
+            io: Digital
+          },
+          cdir: {
+            pin: 11,
+            io: Digital
+          }
+        });
+
+        const writeSpy = sinon.spy(motor.io.pwm, "write");
+        const dirSpy = sinon.spy(motor.io.dir, "write");
+        const cdirSpy = sinon.spy(motor.io.cdir, "write");
+
+        motor.forward();
+        assert.equal(writeSpy.callCount, 2);
+        assert.equal(writeSpy.getCall(0).args[0], 0);
+        assert.equal(dirSpy.callCount, 1);
+        assert.equal(dirSpy.getCall(0).args[0], 1);
+        assert.equal(cdirSpy.callCount, 1);
+        assert.equal(cdirSpy.getCall(0).args[0], 0);
       });
 
       // [ all other tests related to someMethod ]
@@ -375,8 +444,70 @@ describe("Motor - Non-Directional", function() {
 
     describe("reverse", function() {
 
-      it("should do the right thing", async function() {
-        // ...
+      it("should set pwm low", async function() {
+        const motor = await new Motor({
+          pwm: {
+            pin: 12,
+            io: PWM
+          }
+        });
+
+        const writeSpy = sinon.spy(motor.io.pwm, "write");
+
+        motor.reverse();
+        assert.equal(writeSpy.callCount, 1);
+        assert.equal(writeSpy.getCall(0).args[0], 0);
+      });
+
+      it("should set pwm low and dir pins high", async function() {
+        const motor = await new Motor({
+          pwm: {
+            pin: 12,
+            io: PWM
+          },
+          dir: {
+            pin: 13,
+            io: Digital
+          }
+        });
+
+        const writeSpy = sinon.spy(motor.io.pwm, "write");
+        const dirSpy = sinon.spy(motor.io.dir, "write");
+
+        motor.reverse();
+        assert.equal(writeSpy.callCount, 2);
+        assert.equal(writeSpy.getCall(1).args[0], 0);
+        assert.equal(dirSpy.callCount, 1);
+        assert.equal(dirSpy.getCall(0).args[0], 0);
+      });
+
+      it("should pwm and dir pins low and set cdir high", async function() {
+        const motor = await new Motor({
+          pwm: {
+            pin: 12,
+            io: PWM
+          },
+          dir: {
+            pin: 13,
+            io: Digital
+          },
+          cdir: {
+            pin: 11,
+            io: Digital
+          }
+        });
+
+        const writeSpy = sinon.spy(motor.io.pwm, "write");
+        const dirSpy = sinon.spy(motor.io.dir, "write");
+        const cdirSpy = sinon.spy(motor.io.cdir, "write");
+
+        motor.reverse();
+        assert.equal(writeSpy.callCount, 2);
+        assert.equal(writeSpy.getCall(1).args[0], 0);
+        assert.equal(dirSpy.callCount, 1);
+        assert.equal(dirSpy.getCall(0).args[0], 0);
+        assert.equal(cdirSpy.callCount, 1);
+        assert.equal(cdirSpy.getCall(0).args[0], 1);
       });
 
       // [ all other tests related to someMethod ]
