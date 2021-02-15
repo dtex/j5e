@@ -653,11 +653,136 @@ describe("Servo - Standard", function() {
 
     });
 
+    describe("stop", function() {
+
+      it("should stop an ongoing animation", async function() {
+
+        let clock = sinon.useFakeTimers();
+
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM
+        });
+
+        servo.to(0);
+
+        servo.sweep();
+        assert.equal(servo.position, 0);
+
+        clock.tick(250);
+        assert.equal(Math.abs(servo.position - 24.4) < 0.1, true);
+
+        clock.tick(250);
+        assert.equal(Math.abs(servo.position - 90) < 0.1, true);
+
+        clock.tick(250);
+        assert.equal(Math.abs(servo.position - 151.6) < 0.1, true);
+
+        servo.stop();
+
+        clock.tick(250);
+        assert.equal(Math.abs(servo.position - 151.6) < 0.1, true);
+
+        clock.restore();
+
+      });
+
+      it("should stop a continuous rotation servo", async function() {
+
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM,
+          type: "continuous"
+        });
+
+        servo.cw();
+        assert.equal(servo.position, 180);
+
+        servo.stop();
+        assert.equal(servo.position, 90);
+
+      });
+
+    });
+
+    describe("normalize", function() {
+
+      it("should replace null in the first element with the current position", async function() {
+
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM
+        });
+
+        servo.to(90);
+        const result = servo.normalize([null, 20]);
+        assert.equal(result[0].value, 90);
+
+      });
+
+      it("should replace step in the first element with the current position + step", async function() {
+
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM
+        });
+
+        servo.to(90);
+        const result = servo.normalize([50, 20]);
+        assert.equal(result[0].value, 140);
+
+      });
+
+      it("should handle step values as numbers when in positions > 0", async function() {
+
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM
+        });
+
+        servo.to(90);
+        const result = servo.normalize([50, 20, -60]);
+        assert.equal(result[0].value, 140);
+        assert.equal(result[1].step, 20);
+        assert.equal(result[2].step, -60);
+
+      });
+
+      it("should convert \"degrees\" to \"value\"", async function() {
+
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM
+        });
+
+        const result = servo.normalize([{ degrees: 50 }, { degrees: 20 }, { degrees: -60 }]);
+        assert.equal(result[0].value, 50);
+        assert.equal(result[1].value, 20);
+        assert.equal(result[2].value, -60);
+
+      });
+
+      it("should coconvert \"copyDegrees\" to \"copyValue\"", async function() {
+
+        const servo = await new Servo({
+          pin: 12,
+          io: PWM
+        });
+
+        const result = servo.normalize([{ degrees: 50 }, { step: 20 }, { copyDegrees: 0 }]);
+        assert.equal(result[0].value, 50);
+        assert.equal(result[1].step, 20);
+        assert.equal(result[2].copyValue, 0);
+
+      });
+
+    });
+
   });
 
   describe("Events", function() {
 
-    describe("move:complete", function() {
+    describe("moveComplete", function() {
 
       it("should emit the event at the appropriate time", async function() {
         const completeSpy = sinon.spy();
