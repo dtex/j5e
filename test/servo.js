@@ -691,7 +691,9 @@ describe("Servo - Standard", function() {
 
         const servo = await new Servo({
           pin: 12,
-          io: PWM,
+          io: PWM
+        });
+        servo.configure({
           type: "continuous"
         });
 
