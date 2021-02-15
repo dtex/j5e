@@ -229,17 +229,30 @@ export function constrain(value, low, high) {
  * @param {string} defaultProvider - The default provider to use if none was passed in the io object
  * @ignore
  */
-export async function getProvider(ioOpts, defaultProvider) {
+export async function getProvider(ioOpts, ioType) {
   if (!ioOpts) {
     return null;
   }
-  if (!ioOpts.io || typeof ioOpts.io === "string") {
-    const Provider = await import(ioOpts.io || defaultProvider);
-    return Provider.default;
-  } else {
-    return ioOpts.io;
+  if (ioOpts.io) {
+    if (typeof ioOpts.io === "string") {
+      const Provider = await import(ioOpts.io);
+      return Provider;
+    } else {
+      return ioOpts.io;
+    }
   }
+  return defaultProvider(ioType);
 }
+
+/** Divine the default provider and return constructor for desired io type
+ * @param {string} ioType - The desired io type
+ * @ignore
+ */
+export async function defaultProvider(ioType) {
+  let defaultProvider = Host.io;
+  return defaultProvider[ioType];
+}
+
 
 /** Wrapper for setInterval, clearInterval, and setImmediate. This is necessary so we can use the Global methods in node.js and the System methods in XS.
  * @namespace timer

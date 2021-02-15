@@ -132,7 +132,7 @@ class Color extends Emitter {
       const {ioOpts, deviceOpts} = normalizeParams(io, device);
       super();
 
-      const Provider = await getProvider(ioOpts, "builtin/i2c");
+      const Provider = await getProvider(ioOpts, "i2c");
       
       this.io = new Provider(ioOpts);
       

@@ -138,7 +138,7 @@ class Servo extends Emitter {
     return (async() => {
       io = normalizeIO(io);
 
-      const Provider = await getProvider(io, "builtin/pwm");
+      const Provider = await getProvider(io, "PWM");
       super();
 
       this.io = new Provider({

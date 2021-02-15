@@ -147,7 +147,7 @@ class Button extends Emitter {
       io = normalizeIO(io);
       super();
 
-      const Provider = await getProvider(io, "builtin/digital");
+      const Provider = await getProvider(io, "Digital");
 
       let mode = Provider.Input;
       if (typeof io.mode !== "undefined") {
