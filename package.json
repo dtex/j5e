@@ -1,6 +1,6 @@
 {
   "name": "j5e",
-  "version": "0.9.4",
+  "version": "0.10.0",
   "description": "j5e is a device framework built for ECMA TC-53's IO pattern",
   "main": "index.js",
   "exports": {
@@ -48,8 +48,22 @@
     "moddable",
     "xs",
     "esp8266",
+    "esp32",
+    
+    "button",
     "led",
-    "switch"
+    "motor",
+    "photoresistor",
+    "relay",
+    "rgb",
+    "servo",
+    "switch",
+    "sensor",
+    "thermometer",
+      "lm35",
+      "lm335",
+      "mf52a103j3470",
+      "tmp36"
   ],
   "author": "Donovan Buck <donovan@donovan.bz>",
   "license": "MIT",

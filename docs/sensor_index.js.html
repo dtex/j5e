@@ -149,7 +149,7 @@ class Sensor extends Withinable {
       io = normalizeIO(io);
       super();
 
-      const Provider = await getProvider(io, "builtin/analog");
+      const Provider = await getProvider(io, "Analog");
       this.io = new Provider({
         pin: io.pin,
       });

@@ -38,7 +38,7 @@ class XXX extends Emitter {
       options = normalizeParams(options);
       super();
 
-      const Provider = await getProvider(options, "builtin/digital");
+      const Provider = await getProvider(options, "Digital");
       this.io = new Provider({
         pin: options.pin,
         mode: Provider.Input,
