@@ -4,19 +4,19 @@ J5e device instantiation allows for a few different patterns. On one hand we wan
 new DeviceClass(ioOptions);
 ````
 
-The ```io``` object follows the [TC-53 IO Class Pattern](https://github.com/EcmaTC53/spec/blob/master/docs/tc53.md#9-io-class-pattern) and accepts the same properties describes in the individual IO classes. In addition, J5e can accepts the `io` property which can be either a path or constructor in the event you do not want to use the default io provider.
+The ```ioOptions``` object follows the [TC-53 IO Class Pattern](https://github.com/EcmaTC53/spec/blob/master/docs/tc53.md#9-io-class-pattern) and accepts the same properties describes in the individual IO classes. In addition, J5e can accepts the `ioOptions.io` property which can be either a path or constructor in the event you do not want to use the default io provider.
 
 *Whoah, what's a provider?*
 
 In the physical world a provider is a "thing" (hardware or software) that provides constructors for IO instances. The IO could be built into the device running your JavaScript, part of a physically connected device like an expander or external microcontroller, or even part of a cloud service that controls a device located halfway around the world. 
 
-In code a provider is a bundle of classes that work with that "thing". Providers could come from a board manufacturer, an expander library, an IoT cloud service, an open source hero, or a myriad of other places. The most basic providers are the **builtins** that are bundled with some platforms. For the ESP8266, providers are bundled with the [Moddable SDK](https://github.com/Moddable-OpenSource/moddable), and are part of that SDK's IO module. They give access to the ESP8266's built-in GPIO pins. Non-builtin providers are known as "external providers".
+In code a provider is a bundle of classes that work with that "thing". Providers could come from a board manufacturer, an expander library, an IoT cloud service, an open source hero, or a myriad of other places. For the ESP8266 and ESP32, providers are bundled with the [Moddable SDK](https://github.com/Moddable-OpenSource/moddable), and are part of that SDK's IO module. They give access to the built-in GPIO pins.
 
-## The `iooptions` object
-In TC-53 parlance, an "IO" is a single GPIO (General-Purpose Input/Output) instance. That GPIO Instance could be Digital, PWM, Serial, I2C, SPI or something else. **The ```io``` options object describes the configuration for the IO instance**. This configuration could include which board to use, which pins, what data rate, etc. The details depend on your situation and provider. 
+## The `ioOptions` object
+In TC-53 parlance, an "IO" is a single GPIO (General-Purpose Input/Output) instance. That GPIO Instance could be Digital, PWM, Serial, I2C, SPI or something else. **The ```ioOptions``` options object describes the configuration for the IO instance**. This configuration could include which board to use, which pins, what data rate, etc. The details depend on your situation and provider. 
 
 The options argument is always required and can take a few different forms: 
-* **Pin Identifier** - This is the simplest scenario and would be a single number or string. J5e will assume the provider is a builtin. The particular type of IO will vary by device class. For example, servo would default to ```builtin/PWM```. Button or switch would default to ```builtin/Digital```.
+* **Pin Identifier** - This is the simplest scenario and would be a single number or string. J5e will assume the provider is built into the Host.io global. The particular type of IO you need will vary by device type. For example, servo would default to ```Host.io.PWM```. Button or switch would default to ```Host.io.Digital```.
   ````js
   import LED from "j5e/led";
 
@@ -27,7 +27,7 @@ The options argument is always required and can take a few different forms:
   led.blink();
   ````
 
-  *You may notice that we are using Top Level Await when instantiating the device. We get away with this by using an IIFE that returns an async function.*
+  *You may notice that we are using Top Level Await when instantiating the device. We get away with this by using an [IIFE that returns an async function](https://anthonychu.ca/post/async-await-typescript-nodejs/).*
 ---
 * **Object Literal** - Sometimes it is necessary to specify more than just a pin number to instantiate an IO. For example if you are using an external provider, or need to set the data speed.
   ````js
@@ -45,7 +45,7 @@ The options argument is always required and can take a few different forms:
   });
   ```` 
   ---
-* **IO Module Path** - As we mentioned earlier, it is possible to pass the path to the IO module you want to use as a string. J5e will import the module dynamically, instantiate an IO, and attach it to your device. You will need to have included that module in your manifest.json or whatever module scheme is appropriate for your environment.
+* **IO Module Path** - It is possible to pass the path to the IO module you want to use as a string. J5e will import the module dynamically. You will need to have included that module in your manifest.json or whatever module scheme is appropriate for your environment.
   ````js
   import LED from "j5e/LED";
   
@@ -90,8 +90,40 @@ The options argument is always required and can take a few different forms:
   m1.forward();
   ````
 
+  ---
+* **A TC-53 Peripheral Class Pattern conformant options object** - The [peripheral class pattern](https://github.com/EcmaTC53/spec/blob/master/docs/tc53.md#12-peripheral-class-pattern) allows for explicit description of each of the required IO instances for a device type.
+  ````js
+  import Motor from "j5e/motor";
+
+  // Instantiate a Motor
+  const motor = await new Motor({
+    pwm: {
+      pin: 2
+    },
+    dir: {
+      pin: 3
+    }
+  });
+
+  motor.forward();
+  ````
+
+  ---
+* **J5e shorthand for the peripheral class pattern**
+  ````js
+  import Motor from "j5e/motor";
+
+  // Instantiate a Motor
+  const motor = await new Motor({
+    pwm: 2,
+    dir: 3
+  });
+    
+  motor.forward();
+  ````
+
 ## The ```device``` options object
-A device is something connected to your IO. It could be a sensor, a switch, and LED, a motor, a GPS receiver, or whatever. The universe of devices is vast. Since the details of the device properties can vary greatly, you need to reference the documentation for each device class to know how to use them. 
+A device is something connected to your IO. It could be a sensor, a switch, and LED, a motor, a GPS receiver, or whatever. The universe of devices is vast. Since the details of the device properties can vary greatly, you need to reference the documentation for each device module to know how to use it. 
 
 J5e will use common defaults for device configuration, but you can override the defaults by calling the device instance's `configuration` method.
 
@@ -107,7 +139,5 @@ J5e will use common defaults for device configuration, but you can override the 
 
   servo.sweep();
   ````
-
-  The available properties vary by device type, so you'll need to check the documentation for each device class.
 
 ---
