@@ -2110,6 +2110,125 @@
           "onc",
           "time"
         ],
+        "module-j5e_motor-Motor.html": [
+          "allow",
+          "class",
+          "control",
+          "dc",
+          "direct",
+          "j5e/motor~motor",
+          "lt;async&gt",
+          "module:j5e/motor~motor",
+          "motor",
+          "non"
+        ],
+        "module-j5e_motor-Motor.html#isOn": [
+          "boolean",
+          "current",
+          "flow",
+          "ison",
+          "lt;readonly&gt",
+          "mean",
+          "member",
+          "module:j5e/motor~motor#ison",
+          "motor",
+          "necessarili",
+          "turn",
+          "whether"
+        ],
+        "module-j5e_motor-Motor.html#currentSpeed": [
+          "current",
+          "currentspe",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/motor~motor#currentspe",
+          "motor'",
+          "number",
+          "speed"
+        ],
+        "module-j5e_motor-Motor.html#enabled": [
+          "boolean",
+          "enabl",
+          "lt;readonly&gt",
+          "member",
+          "module:j5e/motor~motor#en",
+          "motor",
+          "whether"
+        ],
+        "module-j5e_motor-Motor.html#configure": [
+          "configur",
+          "function",
+          "module:j5e/motor~motor#configur",
+          "motor",
+          "option"
+        ],
+        "module-j5e_motor-Motor.html#enable": [
+          "enabl",
+          "function",
+          "high",
+          "module:j5e/motor~motor#en",
+          "motor",
+          "pin",
+          "set",
+          "valu"
+        ],
+        "module-j5e_motor-Motor.html#disable": [
+          "disabl",
+          "enabl",
+          "function",
+          "low",
+          "module:j5e/motor~motor#dis",
+          "motor",
+          "pin",
+          "set",
+          "valu"
+        ],
+        "module-j5e_motor-Motor.html#start": [
+          "function",
+          "module:j5e/motor~motor#start",
+          "motor",
+          "speed",
+          "start"
+        ],
+        "module-j5e_motor-Motor.html#stop": [
+          "function",
+          "module:j5e/motor~motor#stop",
+          "motor",
+          "stop"
+        ],
+        "module-j5e_motor-Motor.html#brake": [
+          "behav",
+          "brake",
+          "coast",
+          "control",
+          "durat",
+          "function",
+          "module:j5e/motor~motor#brak",
+          "motor",
+          "note",
+          "pin",
+          "same",
+          "stop",
+          "support"
+        ],
+        "module-j5e_motor-Motor.html#resume": [
+          "current",
+          "durat",
+          "function",
+          "module:j5e/motor~motor#resum",
+          "motor",
+          "resum",
+          "speed"
+        ],
+        "module-j5e_motor-Motor.html#release": [
+          "brake",
+          "call",
+          "function",
+          "module:j5e/motor~motor#releas",
+          "motor",
+          "releas",
+          "resum"
+        ],
         "module-j5e_animation-Animation.html": [
           "allow",
           "anim",
@@ -3033,6 +3152,15 @@
           "modul",
           "module:j5e/light"
         ],
+        "module-j5e_motor.html": [
+          "class",
+          "j5e/motor",
+          "librari",
+          "manag",
+          "modul",
+          "module:j5e/motor",
+          "motor"
+        ],
         "module-j5e_relay.html": [
           "j5e/relay",
           "modul",
@@ -3098,7 +3226,7 @@
           "xs"
         ]
       },
-      "length": 302
+      "length": 315
     },
     "tokenStore": {
       "root": {
@@ -3490,6 +3618,18 @@
                       "ref": "module-j5e_thermometer-Thermometer.html#disable",
                       "tf": 16.666666666666664
                     },
+                    "module-j5e_motor-Motor.html#enabled": {
+                      "ref": "module-j5e_motor-Motor.html#enabled",
+                      "tf": 700
+                    },
+                    "module-j5e_motor-Motor.html#enable": {
+                      "ref": "module-j5e_motor-Motor.html#enable",
+                      "tf": 714.2857142857143
+                    },
+                    "module-j5e_motor-Motor.html#disable": {
+                      "ref": "module-j5e_motor-Motor.html#disable",
+                      "tf": 7.142857142857142
+                    },
                     "module-j5e_sensor-Sensor.html#enable": {
                       "ref": "module-j5e_sensor-Sensor.html#enable",
                       "tf": 716.6666666666666
@@ -3810,6 +3950,10 @@
               },
               "w": {
                 "docs": {
+                  "module-j5e_motor-Motor.html#isOn": {
+                    "ref": "module-j5e_motor-Motor.html#isOn",
+                    "tf": 7.142857142857142
+                  },
                   "module-j5e_switch-Switch.html#isClosed": {
                     "ref": "module-j5e_switch-Switch.html#isClosed",
                     "tf": 10
@@ -4341,6 +4485,38 @@
                           },
                           "module-j5e_servo-Servo.html#once": {
                             "ref": "module-j5e_servo-Servo.html#once",
+                            "tf": 110
+                          },
+                          "module-j5e_motor-Motor.html#configure": {
+                            "ref": "module-j5e_motor-Motor.html#configure",
+                            "tf": 110
+                          },
+                          "module-j5e_motor-Motor.html#enable": {
+                            "ref": "module-j5e_motor-Motor.html#enable",
+                            "tf": 110
+                          },
+                          "module-j5e_motor-Motor.html#disable": {
+                            "ref": "module-j5e_motor-Motor.html#disable",
+                            "tf": 110
+                          },
+                          "module-j5e_motor-Motor.html#start": {
+                            "ref": "module-j5e_motor-Motor.html#start",
+                            "tf": 110
+                          },
+                          "module-j5e_motor-Motor.html#stop": {
+                            "ref": "module-j5e_motor-Motor.html#stop",
+                            "tf": 110
+                          },
+                          "module-j5e_motor-Motor.html#brake": {
+                            "ref": "module-j5e_motor-Motor.html#brake",
+                            "tf": 110
+                          },
+                          "module-j5e_motor-Motor.html#resume": {
+                            "ref": "module-j5e_motor-Motor.html#resume",
+                            "tf": 110
+                          },
+                          "module-j5e_motor-Motor.html#release": {
+                            "ref": "module-j5e_motor-Motor.html#release",
                             "tf": 110
                           },
                           "module-j5e_animation-Animation.html#on": {
@@ -4961,6 +5137,22 @@
             },
             "o": {
               "docs": {},
+              "n": {
+                "docs": {
+                  "module-j5e_motor-Motor.html#isOn": {
+                    "ref": "module-j5e_motor-Motor.html#isOn",
+                    "tf": 683.3333333333334
+                  },
+                  "module-j5e_led-LED.html#isOn": {
+                    "ref": "module-j5e_led-LED.html#isOn",
+                    "tf": 683.3333333333334
+                  },
+                  "module-j5e_rgb-RGB.html#isOn": {
+                    "ref": "module-j5e_rgb-RGB.html#isOn",
+                    "tf": 683.3333333333334
+                  }
+                }
+              },
               "p": {
                 "docs": {},
                 "e": {
@@ -4976,18 +5168,6 @@
                         "tf": 683.3333333333334
                       }
                     }
-                  }
-                }
-              },
-              "n": {
-                "docs": {
-                  "module-j5e_led-LED.html#isOn": {
-                    "ref": "module-j5e_led-LED.html#isOn",
-                    "tf": 683.3333333333334
-                  },
-                  "module-j5e_rgb-RGB.html#isOn": {
-                    "ref": "module-j5e_rgb-RGB.html#isOn",
-                    "tf": 683.3333333333334
                   }
                 }
               }
@@ -5477,6 +5657,49 @@
                                               "tf": 50
                                             }
                                           }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "m": {
+                  "docs": {},
+                  "o": {
+                    "docs": {},
+                    "t": {
+                      "docs": {},
+                      "o": {
+                        "docs": {},
+                        "r": {
+                          "docs": {
+                            "module-j5e_motor.html": {
+                              "ref": "module-j5e_motor.html",
+                              "tf": 600
+                            }
+                          },
+                          "~": {
+                            "docs": {},
+                            "m": {
+                              "docs": {},
+                              "o": {
+                                "docs": {},
+                                "t": {
+                                  "docs": {},
+                                  "o": {
+                                    "docs": {},
+                                    "r": {
+                                      "docs": {
+                                        "module-j5e_motor-Motor.html": {
+                                          "ref": "module-j5e_motor-Motor.html",
+                                          "tf": 50
                                         }
                                       }
                                     }
@@ -6122,6 +6345,14 @@
                 "docs": {},
                 "m": {
                   "docs": {
+                    "module-j5e_motor-Motor.html#resume": {
+                      "ref": "module-j5e_motor-Motor.html#resume",
+                      "tf": 700
+                    },
+                    "module-j5e_motor-Motor.html#release": {
+                      "ref": "module-j5e_motor-Motor.html#release",
+                      "tf": 12.5
+                    },
                     "module-j5e_animation-Animation.html#play": {
                       "ref": "module-j5e_animation-Animation.html#play",
                       "tf": 10
@@ -6374,6 +6605,20 @@
                     "module-j5e_relay.html": {
                       "ref": "module-j5e_relay.html",
                       "tf": 50
+                    }
+                  }
+                }
+              },
+              "e": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "s": {
+                    "docs": {
+                      "module-j5e_motor-Motor.html#release": {
+                        "ref": "module-j5e_motor-Motor.html#release",
+                        "tf": 712.5
+                      }
                     }
                   }
                 }
@@ -6850,6 +7095,10 @@
                   "docs": {
                     "undefined": {
                       "tf": 73.33333333333333
+                    },
+                    "module-j5e_motor-Motor.html#start": {
+                      "ref": "module-j5e_motor-Motor.html#start",
+                      "tf": 708.3333333333334
                     }
                   },
                   "a": {
@@ -6924,6 +7173,14 @@
                   "module-j5e_servo-Servo.html#stop": {
                     "ref": "module-j5e_servo-Servo.html#stop",
                     "tf": 760
+                  },
+                  "module-j5e_motor-Motor.html#stop": {
+                    "ref": "module-j5e_motor-Motor.html#stop",
+                    "tf": 725
+                  },
+                  "module-j5e_motor-Motor.html#brake": {
+                    "ref": "module-j5e_motor-Motor.html#brake",
+                    "tf": 6.25
                   },
                   "module-j5e_animation-Animation.html#play": {
                     "ref": "module-j5e_animation-Animation.html#play",
@@ -7148,6 +7405,14 @@
                 "module-j5e_servo-Servo.html#center": {
                   "ref": "module-j5e_servo-Servo.html#center",
                   "tf": 10
+                },
+                "module-j5e_motor-Motor.html#enable": {
+                  "ref": "module-j5e_motor-Motor.html#enable",
+                  "tf": 7.142857142857142
+                },
+                "module-j5e_motor-Motor.html#disable": {
+                  "ref": "module-j5e_motor-Motor.html#disable",
+                  "tf": 7.142857142857142
                 },
                 "module-j5e_animation-Animation.html#speed": {
                   "ref": "module-j5e_animation-Animation.html#speed",
@@ -7419,6 +7684,14 @@
                       "ref": "module-j5e_sensor-Sensor.html#samples",
                       "tf": 708.3333333333334
                     }
+                  }
+                }
+              },
+              "e": {
+                "docs": {
+                  "module-j5e_motor-Motor.html#brake": {
+                    "ref": "module-j5e_motor-Motor.html#brake",
+                    "tf": 3.125
                   }
                 }
               }
@@ -7780,6 +8053,18 @@
                       "ref": "module-j5e_servo-Servo.html#ccw",
                       "tf": 33.33333333333333
                     },
+                    "module-j5e_motor-Motor.html#currentSpeed": {
+                      "ref": "module-j5e_motor-Motor.html#currentSpeed",
+                      "tf": 16.666666666666664
+                    },
+                    "module-j5e_motor-Motor.html#start": {
+                      "ref": "module-j5e_motor-Motor.html#start",
+                      "tf": 33.33333333333333
+                    },
+                    "module-j5e_motor-Motor.html#resume": {
+                      "ref": "module-j5e_motor-Motor.html#resume",
+                      "tf": 16.666666666666664
+                    },
                     "module-j5e_animation-Animation.html#pause": {
                       "ref": "module-j5e_animation-Animation.html#pause",
                       "tf": 7.142857142857142
@@ -7832,6 +8117,29 @@
                       "module-j5e_switch.html": {
                         "ref": "module-j5e_switch.html",
                         "tf": 25
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "u": {
+            "docs": {},
+            "p": {
+              "docs": {},
+              "p": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "r": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "module-j5e_motor-Motor.html#brake": {
+                          "ref": "module-j5e_motor-Motor.html#brake",
+                          "tf": 3.125
+                        }
                       }
                     }
                   }
@@ -8116,6 +8424,10 @@
                         "ref": "module-j5e_thermometer-Thermometer.html#disable",
                         "tf": 716.6666666666666
                       },
+                      "module-j5e_motor-Motor.html#disable": {
+                        "ref": "module-j5e_motor-Motor.html#disable",
+                        "tf": 707.1428571428571
+                      },
                       "module-j5e_sensor-Sensor.html#enable": {
                         "ref": "module-j5e_sensor-Sensor.html#enable",
                         "tf": 16.666666666666664
@@ -8123,6 +8435,23 @@
                       "module-j5e_sensor-Sensor.html#disable": {
                         "ref": "module-j5e_sensor-Sensor.html#disable",
                         "tf": 716.6666666666666
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "r": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "c": {
+                  "docs": {},
+                  "t": {
+                    "docs": {
+                      "module-j5e_motor-Motor.html": {
+                        "ref": "module-j5e_motor-Motor.html",
+                        "tf": 6.25
                       }
                     }
                   }
@@ -8167,6 +8496,14 @@
               }
             }
           },
+          "c": {
+            "docs": {
+              "module-j5e_motor-Motor.html": {
+                "ref": "module-j5e_motor-Motor.html",
+                "tf": 6.25
+              }
+            }
+          },
           "u": {
             "docs": {},
             "r": {
@@ -8175,6 +8512,14 @@
                 "docs": {},
                 "t": {
                   "docs": {
+                    "module-j5e_motor-Motor.html#brake": {
+                      "ref": "module-j5e_motor-Motor.html#brake",
+                      "tf": 33.33333333333333
+                    },
+                    "module-j5e_motor-Motor.html#resume": {
+                      "ref": "module-j5e_motor-Motor.html#resume",
+                      "tf": 33.33333333333333
+                    },
                     "module-j5e_led-LED.html#blink": {
                       "ref": "module-j5e_led-LED.html#blink",
                       "tf": 25
@@ -8341,6 +8686,10 @@
               "docs": {},
               "n": {
                 "docs": {
+                  "module-j5e_motor-Motor.html#isOn": {
+                    "ref": "module-j5e_motor-Motor.html#isOn",
+                    "tf": 7.142857142857142
+                  },
                   "module-j5e_led-LED.html#on": {
                     "ref": "module-j5e_led-LED.html#on",
                     "tf": 25
@@ -9495,6 +9844,10 @@
                             "ref": "module-j5e_servo-Servo.html#configure",
                             "tf": 708.3333333333334
                           },
+                          "module-j5e_motor-Motor.html#configure": {
+                            "ref": "module-j5e_motor-Motor.html#configure",
+                            "tf": 708.3333333333334
+                          },
                           "module-j5e_button-Button.html#configure": {
                             "ref": "module-j5e_button-Button.html#configure",
                             "tf": 708.3333333333334
@@ -9540,6 +9893,14 @@
                         "module-j5e_servo-Servo.html": {
                           "ref": "module-j5e_servo-Servo.html",
                           "tf": 8.333333333333332
+                        },
+                        "module-j5e_motor-Motor.html": {
+                          "ref": "module-j5e_motor-Motor.html",
+                          "tf": 6.25
+                        },
+                        "module-j5e_motor-Motor.html#brake": {
+                          "ref": "module-j5e_motor-Motor.html#brake",
+                          "tf": 3.125
                         },
                         "module-j5e_animation-Animation.html": {
                           "ref": "module-j5e_animation-Animation.html",
@@ -9699,6 +10060,20 @@
                 }
               }
             },
+            "a": {
+              "docs": {},
+              "s": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "module-j5e_motor-Motor.html#brake": {
+                      "ref": "module-j5e_motor-Motor.html#brake",
+                      "tf": 3.125
+                    }
+                  }
+                }
+              }
+            },
             "l": {
               "docs": {},
               "o": {
@@ -9769,6 +10144,10 @@
                       "ref": "module-j5e_servo-Servo.html",
                       "tf": 118.33333333333333
                     },
+                    "module-j5e_motor-Motor.html": {
+                      "ref": "module-j5e_motor-Motor.html",
+                      "tf": 116.25
+                    },
                     "module-j5e_animation-Animation.html": {
                       "ref": "module-j5e_animation-Animation.html",
                       "tf": 110
@@ -9800,6 +10179,10 @@
                     "module-j5e_led.html": {
                       "ref": "module-j5e_led.html",
                       "tf": 2.7777777777777777
+                    },
+                    "module-j5e_motor.html": {
+                      "ref": "module-j5e_motor.html",
+                      "tf": 12.5
                     },
                     "module-j5e_thermometer.html": {
                       "ref": "module-j5e_thermometer.html",
@@ -10177,6 +10560,10 @@
               "docs": {},
               "l": {
                 "docs": {
+                  "module-j5e_motor-Motor.html#release": {
+                    "ref": "module-j5e_motor-Motor.html#release",
+                    "tf": 12.5
+                  },
                   "module-j5e_fn.html": {
                     "ref": "module-j5e_fn.html",
                     "tf": 5
@@ -10313,6 +10700,18 @@
                           "ref": "module-j5e_light-Light.html#level",
                           "tf": 10
                         },
+                        "module-j5e_motor-Motor.html#isOn": {
+                          "ref": "module-j5e_motor-Motor.html#isOn",
+                          "tf": 7.142857142857142
+                        },
+                        "module-j5e_motor-Motor.html#currentSpeed": {
+                          "ref": "module-j5e_motor-Motor.html#currentSpeed",
+                          "tf": 16.666666666666664
+                        },
+                        "module-j5e_motor-Motor.html#resume": {
+                          "ref": "module-j5e_motor-Motor.html#resume",
+                          "tf": 16.666666666666664
+                        },
                         "module-j5e_animation-Animation.html#speed": {
                           "ref": "module-j5e_animation-Animation.html#speed",
                           "tf": 12.5
@@ -10344,6 +10743,20 @@
                         "module-j5e_rgb-RGB.html#fade": {
                           "ref": "module-j5e_rgb-RGB.html#fade",
                           "tf": 6.25
+                        }
+                      },
+                      "s": {
+                        "docs": {},
+                        "p": {
+                          "docs": {},
+                          "e": {
+                            "docs": {
+                              "module-j5e_motor-Motor.html#currentSpeed": {
+                                "ref": "module-j5e_motor-Motor.html#currentSpeed",
+                                "tf": 683.3333333333334
+                              }
+                            }
+                          }
                         }
                       }
                     }
@@ -10662,6 +11075,10 @@
                         "module-j5e_led.html": {
                           "ref": "module-j5e_led.html",
                           "tf": 2.7777777777777777
+                        },
+                        "module-j5e_motor.html": {
+                          "ref": "module-j5e_motor.html",
+                          "tf": 12.5
                         }
                       }
                     }
@@ -11819,6 +12236,10 @@
                                   "ref": "module-j5e_servo-Servo.html",
                                   "tf": 50
                                 },
+                                "module-j5e_motor-Motor.html": {
+                                  "ref": "module-j5e_motor-Motor.html",
+                                  "tf": 50
+                                },
                                 "module-j5e_switch-Switch.html": {
                                   "ref": "module-j5e_switch-Switch.html",
                                   "tf": 50
@@ -12162,6 +12583,18 @@
                                         "ref": "module-j5e_servo-Servo.html#position",
                                         "tf": 50
                                       },
+                                      "module-j5e_motor-Motor.html#isOn": {
+                                        "ref": "module-j5e_motor-Motor.html#isOn",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_motor-Motor.html#currentSpeed": {
+                                        "ref": "module-j5e_motor-Motor.html#currentSpeed",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "module-j5e_motor-Motor.html#enabled": {
+                                        "ref": "module-j5e_motor-Motor.html#enabled",
+                                        "tf": 33.33333333333333
+                                      },
                                       "module-j5e_switch-Switch.html#isClosed": {
                                         "ref": "module-j5e_switch-Switch.html#isClosed",
                                         "tf": 50
@@ -12327,6 +12760,10 @@
                 "module-j5e_thermometer-Thermometer.html#fscaleTo": {
                   "ref": "module-j5e_thermometer-Thermometer.html#fscaleTo",
                   "tf": 40
+                },
+                "module-j5e_motor-Motor.html#disable": {
+                  "ref": "module-j5e_motor-Motor.html#disable",
+                  "tf": 7.142857142857142
                 },
                 "module-j5e_sensor-Sensor.html#scale": {
                   "ref": "module-j5e_sensor-Sensor.html#scale",
@@ -12833,6 +13270,25 @@
               }
             }
           },
+          "i": {
+            "docs": {},
+            "n": {
+              "docs": {
+                "module-j5e_motor-Motor.html#enable": {
+                  "ref": "module-j5e_motor-Motor.html#enable",
+                  "tf": 7.142857142857142
+                },
+                "module-j5e_motor-Motor.html#disable": {
+                  "ref": "module-j5e_motor-Motor.html#disable",
+                  "tf": 7.142857142857142
+                },
+                "module-j5e_motor-Motor.html#brake": {
+                  "ref": "module-j5e_motor-Motor.html#brake",
+                  "tf": 3.125
+                }
+              }
+            }
+          },
           "l": {
             "docs": {},
             "a": {
@@ -12970,6 +13426,10 @@
                     "module-j5e_servo-Servo.html": {
                       "ref": "module-j5e_servo-Servo.html",
                       "tf": 8.333333333333332
+                    },
+                    "module-j5e_motor-Motor.html": {
+                      "ref": "module-j5e_motor-Motor.html",
+                      "tf": 6.25
                     },
                     "module-j5e_animation-Animation.html": {
                       "ref": "module-j5e_animation-Animation.html",
@@ -13666,6 +14126,10 @@
                         "ref": "module-j5e_servo-Servo.html#configure",
                         "tf": 33.33333333333333
                       },
+                      "module-j5e_motor-Motor.html#configure": {
+                        "ref": "module-j5e_motor-Motor.html#configure",
+                        "tf": 33.33333333333333
+                      },
                       "module-j5e_animation-Animation.html#enqueue": {
                         "ref": "module-j5e_animation-Animation.html#enqueue",
                         "tf": 50
@@ -14013,6 +14477,10 @@
                     },
                     "module-j5e_light.html": {
                       "ref": "module-j5e_light.html",
+                      "tf": 110
+                    },
+                    "module-j5e_motor.html": {
+                      "ref": "module-j5e_motor.html",
                       "tf": 110
                     },
                     "module-j5e_relay.html": {
@@ -19013,6 +19481,244 @@
                                   }
                                 }
                               },
+                              "m": {
+                                "docs": {},
+                                "o": {
+                                  "docs": {},
+                                  "t": {
+                                    "docs": {},
+                                    "o": {
+                                      "docs": {},
+                                      "r": {
+                                        "docs": {
+                                          "module-j5e_motor.html": {
+                                            "ref": "module-j5e_motor.html",
+                                            "tf": 1300
+                                          }
+                                        },
+                                        "~": {
+                                          "docs": {},
+                                          "m": {
+                                            "docs": {},
+                                            "o": {
+                                              "docs": {},
+                                              "t": {
+                                                "docs": {},
+                                                "o": {
+                                                  "docs": {},
+                                                  "r": {
+                                                    "docs": {
+                                                      "module-j5e_motor-Motor.html": {
+                                                        "ref": "module-j5e_motor-Motor.html",
+                                                        "tf": 1300
+                                                      }
+                                                    },
+                                                    "#": {
+                                                      "docs": {},
+                                                      "i": {
+                                                        "docs": {},
+                                                        "s": {
+                                                          "docs": {},
+                                                          "o": {
+                                                            "docs": {},
+                                                            "n": {
+                                                              "docs": {
+                                                                "module-j5e_motor-Motor.html#isOn": {
+                                                                  "ref": "module-j5e_motor-Motor.html#isOn",
+                                                                  "tf": 1150
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      },
+                                                      "c": {
+                                                        "docs": {},
+                                                        "u": {
+                                                          "docs": {},
+                                                          "r": {
+                                                            "docs": {},
+                                                            "r": {
+                                                              "docs": {},
+                                                              "e": {
+                                                                "docs": {},
+                                                                "n": {
+                                                                  "docs": {},
+                                                                  "t": {
+                                                                    "docs": {},
+                                                                    "s": {
+                                                                      "docs": {},
+                                                                      "p": {
+                                                                        "docs": {},
+                                                                        "e": {
+                                                                          "docs": {
+                                                                            "module-j5e_motor-Motor.html#currentSpeed": {
+                                                                              "ref": "module-j5e_motor-Motor.html#currentSpeed",
+                                                                              "tf": 1150
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        },
+                                                        "o": {
+                                                          "docs": {},
+                                                          "n": {
+                                                            "docs": {},
+                                                            "f": {
+                                                              "docs": {},
+                                                              "i": {
+                                                                "docs": {},
+                                                                "g": {
+                                                                  "docs": {},
+                                                                  "u": {
+                                                                    "docs": {},
+                                                                    "r": {
+                                                                      "docs": {
+                                                                        "module-j5e_motor-Motor.html#configure": {
+                                                                          "ref": "module-j5e_motor-Motor.html#configure",
+                                                                          "tf": 1150
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      },
+                                                      "e": {
+                                                        "docs": {},
+                                                        "n": {
+                                                          "docs": {
+                                                            "module-j5e_motor-Motor.html#enabled": {
+                                                              "ref": "module-j5e_motor-Motor.html#enabled",
+                                                              "tf": 1150
+                                                            },
+                                                            "module-j5e_motor-Motor.html#enable": {
+                                                              "ref": "module-j5e_motor-Motor.html#enable",
+                                                              "tf": 1150
+                                                            }
+                                                          }
+                                                        }
+                                                      },
+                                                      "d": {
+                                                        "docs": {},
+                                                        "i": {
+                                                          "docs": {},
+                                                          "s": {
+                                                            "docs": {
+                                                              "module-j5e_motor-Motor.html#disable": {
+                                                                "ref": "module-j5e_motor-Motor.html#disable",
+                                                                "tf": 1150
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      },
+                                                      "s": {
+                                                        "docs": {},
+                                                        "t": {
+                                                          "docs": {},
+                                                          "a": {
+                                                            "docs": {},
+                                                            "r": {
+                                                              "docs": {},
+                                                              "t": {
+                                                                "docs": {
+                                                                  "module-j5e_motor-Motor.html#start": {
+                                                                    "ref": "module-j5e_motor-Motor.html#start",
+                                                                    "tf": 1150
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          },
+                                                          "o": {
+                                                            "docs": {},
+                                                            "p": {
+                                                              "docs": {
+                                                                "module-j5e_motor-Motor.html#stop": {
+                                                                  "ref": "module-j5e_motor-Motor.html#stop",
+                                                                  "tf": 1150
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      },
+                                                      "b": {
+                                                        "docs": {},
+                                                        "r": {
+                                                          "docs": {},
+                                                          "a": {
+                                                            "docs": {},
+                                                            "k": {
+                                                              "docs": {
+                                                                "module-j5e_motor-Motor.html#brake": {
+                                                                  "ref": "module-j5e_motor-Motor.html#brake",
+                                                                  "tf": 1150
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      },
+                                                      "r": {
+                                                        "docs": {},
+                                                        "e": {
+                                                          "docs": {},
+                                                          "s": {
+                                                            "docs": {},
+                                                            "u": {
+                                                              "docs": {},
+                                                              "m": {
+                                                                "docs": {
+                                                                  "module-j5e_motor-Motor.html#resume": {
+                                                                    "ref": "module-j5e_motor-Motor.html#resume",
+                                                                    "tf": 1150
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          },
+                                                          "l": {
+                                                            "docs": {},
+                                                            "e": {
+                                                              "docs": {},
+                                                              "a": {
+                                                                "docs": {},
+                                                                "s": {
+                                                                  "docs": {
+                                                                    "module-j5e_motor-Motor.html#release": {
+                                                                      "ref": "module-j5e_motor-Motor.html#release",
+                                                                      "tf": 1150
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
                               "a": {
                                 "docs": {},
                                 "n": {
@@ -19567,6 +20273,72 @@
                 }
               }
             },
+            "t": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "r": {
+                  "docs": {
+                    "module-j5e_motor-Motor.html": {
+                      "ref": "module-j5e_motor-Motor.html",
+                      "tf": 512.5
+                    },
+                    "module-j5e_motor-Motor.html#isOn": {
+                      "ref": "module-j5e_motor-Motor.html#isOn",
+                      "tf": 7.142857142857142
+                    },
+                    "module-j5e_motor-Motor.html#enabled": {
+                      "ref": "module-j5e_motor-Motor.html#enabled",
+                      "tf": 16.666666666666664
+                    },
+                    "module-j5e_motor-Motor.html#configure": {
+                      "ref": "module-j5e_motor-Motor.html#configure",
+                      "tf": 58.33333333333333
+                    },
+                    "module-j5e_motor-Motor.html#enable": {
+                      "ref": "module-j5e_motor-Motor.html#enable",
+                      "tf": 57.14285714285714
+                    },
+                    "module-j5e_motor-Motor.html#disable": {
+                      "ref": "module-j5e_motor-Motor.html#disable",
+                      "tf": 57.14285714285714
+                    },
+                    "module-j5e_motor-Motor.html#start": {
+                      "ref": "module-j5e_motor-Motor.html#start",
+                      "tf": 58.33333333333333
+                    },
+                    "module-j5e_motor-Motor.html#stop": {
+                      "ref": "module-j5e_motor-Motor.html#stop",
+                      "tf": 75
+                    },
+                    "module-j5e_motor-Motor.html#brake": {
+                      "ref": "module-j5e_motor-Motor.html#brake",
+                      "tf": 42.70833333333333
+                    },
+                    "module-j5e_motor-Motor.html#resume": {
+                      "ref": "module-j5e_motor-Motor.html#resume",
+                      "tf": 33.33333333333333
+                    },
+                    "module-j5e_motor-Motor.html#release": {
+                      "ref": "module-j5e_motor-Motor.html#release",
+                      "tf": 50
+                    },
+                    "module-j5e_motor.html": {
+                      "ref": "module-j5e_motor.html",
+                      "tf": 12.5
+                    }
+                  },
+                  "'": {
+                    "docs": {
+                      "module-j5e_motor-Motor.html#currentSpeed": {
+                        "ref": "module-j5e_motor-Motor.html#currentSpeed",
+                        "tf": 16.666666666666664
+                      }
+                    }
+                  }
+                }
+              }
+            },
             "r": {
               "docs": {},
               "e": {
@@ -20025,6 +20797,18 @@
                         "ref": "module-j5e_servo-Servo.html#position",
                         "tf": 110
                       },
+                      "module-j5e_motor-Motor.html#isOn": {
+                        "ref": "module-j5e_motor-Motor.html#isOn",
+                        "tf": 110
+                      },
+                      "module-j5e_motor-Motor.html#currentSpeed": {
+                        "ref": "module-j5e_motor-Motor.html#currentSpeed",
+                        "tf": 110
+                      },
+                      "module-j5e_motor-Motor.html#enabled": {
+                        "ref": "module-j5e_motor-Motor.html#enabled",
+                        "tf": 110
+                      },
                       "module-j5e_switch-Switch.html#isClosed": {
                         "ref": "module-j5e_switch-Switch.html#isClosed",
                         "tf": 110
@@ -20231,6 +21015,17 @@
                 }
               }
             },
+            "a": {
+              "docs": {},
+              "n": {
+                "docs": {
+                  "module-j5e_motor-Motor.html#isOn": {
+                    "ref": "module-j5e_motor-Motor.html#isOn",
+                    "tf": 7.142857142857142
+                  }
+                }
+              }
+            },
             "t": {
               "docs": {},
               "h": {
@@ -20426,6 +21221,20 @@
                           }
                         }
                       }
+                    }
+                  }
+                }
+              }
+            },
+            "n": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "g": {
+                  "docs": {
+                    "module-j5e_motor.html": {
+                      "ref": "module-j5e_motor.html",
+                      "tf": 12.5
                     }
                   }
                 }
@@ -21442,6 +22251,10 @@
                         "ref": "module-j5e_thermometer-Thermometer.html#fscaleTo",
                         "tf": 20
                       },
+                      "module-j5e_motor-Motor.html#currentSpeed": {
+                        "ref": "module-j5e_motor-Motor.html#currentSpeed",
+                        "tf": 33.33333333333333
+                      },
                       "module-j5e_button-Button.html#downValue": {
                         "ref": "module-j5e_button-Button.html#downValue",
                         "tf": 33.33333333333333
@@ -21554,6 +22367,25 @@
                 }
               }
             },
+            "n": {
+              "docs": {
+                "module-j5e_motor-Motor.html": {
+                  "ref": "module-j5e_motor-Motor.html",
+                  "tf": 6.25
+                }
+              }
+            },
+            "t": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "module-j5e_motor-Motor.html#brake": {
+                    "ref": "module-j5e_motor-Motor.html#brake",
+                    "tf": 3.125
+                  }
+                }
+              }
+            },
             "d": {
               "docs": {},
               "e": {
@@ -21574,18 +22406,6 @@
           },
           "e": {
             "docs": {},
-            "w": {
-              "docs": {
-                "module-j5e_led-LED.html#fade": {
-                  "ref": "module-j5e_led-LED.html#fade",
-                  "tf": 5.555555555555555
-                },
-                "module-j5e_rgb-RGB.html#fade": {
-                  "ref": "module-j5e_rgb-RGB.html#fade",
-                  "tf": 6.25
-                }
-              }
-            },
             "c": {
               "docs": {},
               "e": {
@@ -21604,11 +22424,34 @@
                               "ref": "module-j5e_fn-timer.html",
                               "tf": 4.166666666666666
                             }
+                          },
+                          "l": {
+                            "docs": {},
+                            "i": {
+                              "docs": {
+                                "module-j5e_motor-Motor.html#isOn": {
+                                  "ref": "module-j5e_motor-Motor.html#isOn",
+                                  "tf": 7.142857142857142
+                                }
+                              }
+                            }
                           }
                         }
                       }
                     }
                   }
+                }
+              }
+            },
+            "w": {
+              "docs": {
+                "module-j5e_led-LED.html#fade": {
+                  "ref": "module-j5e_led-LED.html#fade",
+                  "tf": 5.555555555555555
+                },
+                "module-j5e_rgb-RGB.html#fade": {
+                  "ref": "module-j5e_rgb-RGB.html#fade",
+                  "tf": 6.25
                 }
               }
             }
@@ -21774,6 +22617,20 @@
                   }
                 }
               }
+            },
+            "h": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "v": {
+                  "docs": {
+                    "module-j5e_motor-Motor.html#brake": {
+                      "ref": "module-j5e_motor-Motor.html#brake",
+                      "tf": 3.125
+                    }
+                  }
+                }
+              }
             }
           },
           "o": {
@@ -21790,6 +22647,14 @@
                       "docs": {
                         "module-j5e_relay-Relay.html#isClosed": {
                           "ref": "module-j5e_relay-Relay.html#isClosed",
+                          "tf": 33.33333333333333
+                        },
+                        "module-j5e_motor-Motor.html#isOn": {
+                          "ref": "module-j5e_motor-Motor.html#isOn",
+                          "tf": 33.33333333333333
+                        },
+                        "module-j5e_motor-Motor.html#enabled": {
+                          "ref": "module-j5e_motor-Motor.html#enabled",
                           "tf": 33.33333333333333
                         },
                         "module-j5e_button-Button.html#isClosed": {
@@ -21820,6 +22685,60 @@
                           "ref": "module-j5e_rgb-RGB.html#isAnode",
                           "tf": 33.33333333333333
                         }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "r": {
+            "docs": {},
+            "a": {
+              "docs": {},
+              "k": {
+                "docs": {},
+                "e": {
+                  "docs": {
+                    "module-j5e_motor-Motor.html#brake": {
+                      "ref": "module-j5e_motor-Motor.html#brake",
+                      "tf": 695.8333333333334
+                    },
+                    "module-j5e_motor-Motor.html#release": {
+                      "ref": "module-j5e_motor-Motor.html#release",
+                      "tf": 12.5
+                    }
+                  }
+                }
+              }
+            },
+            "i": {
+              "docs": {},
+              "g": {
+                "docs": {},
+                "h": {
+                  "docs": {},
+                  "t": {
+                    "docs": {
+                      "module-j5e_led-LED.html#brightness": {
+                        "ref": "module-j5e_led-LED.html#brightness",
+                        "tf": 700
+                      },
+                      "module-j5e_led-LED.html#intensity": {
+                        "ref": "module-j5e_led-LED.html#intensity",
+                        "tf": 10
+                      },
+                      "module-j5e_led-LED.html#fadeIn": {
+                        "ref": "module-j5e_led-LED.html#fadeIn",
+                        "tf": 6.25
+                      },
+                      "module-j5e_rgb-RGB.html#fadeIn": {
+                        "ref": "module-j5e_rgb-RGB.html#fadeIn",
+                        "tf": 10
+                      },
+                      "module-j5e_led.html": {
+                        "ref": "module-j5e_led.html",
+                        "tf": 2.7777777777777777
                       }
                     }
                   }
@@ -21910,42 +22829,6 @@
                   "module-j5e_rgb-RGB.html#color": {
                     "ref": "module-j5e_rgb-RGB.html#color",
                     "tf": 20
-                  }
-                }
-              }
-            }
-          },
-          "r": {
-            "docs": {},
-            "i": {
-              "docs": {},
-              "g": {
-                "docs": {},
-                "h": {
-                  "docs": {},
-                  "t": {
-                    "docs": {
-                      "module-j5e_led-LED.html#brightness": {
-                        "ref": "module-j5e_led-LED.html#brightness",
-                        "tf": 700
-                      },
-                      "module-j5e_led-LED.html#intensity": {
-                        "ref": "module-j5e_led-LED.html#intensity",
-                        "tf": 10
-                      },
-                      "module-j5e_led-LED.html#fadeIn": {
-                        "ref": "module-j5e_led-LED.html#fadeIn",
-                        "tf": 6.25
-                      },
-                      "module-j5e_rgb-RGB.html#fadeIn": {
-                        "ref": "module-j5e_rgb-RGB.html#fadeIn",
-                        "tf": 10
-                      },
-                      "module-j5e_led.html": {
-                        "ref": "module-j5e_led.html",
-                        "tf": 2.7777777777777777
-                      }
-                    }
                   }
                 }
               }
@@ -22229,6 +23112,14 @@
                     "ref": "module-j5e_thermometer-Thermometer.html#fscaleTo",
                     "tf": 7.142857142857142
                   },
+                  "module-j5e_motor-Motor.html#enable": {
+                    "ref": "module-j5e_motor-Motor.html#enable",
+                    "tf": 7.142857142857142
+                  },
+                  "module-j5e_motor-Motor.html#disable": {
+                    "ref": "module-j5e_motor-Motor.html#disable",
+                    "tf": 7.142857142857142
+                  },
                   "module-j5e_sensor-Sensor.html#value": {
                     "ref": "module-j5e_sensor-Sensor.html#value",
                     "tf": 683.3333333333334
@@ -22500,6 +23391,50 @@
               }
             }
           },
+          "h": {
+            "docs": {},
+            "e": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "h": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "r": {
+                      "docs": {
+                        "module-j5e_motor-Motor.html#isOn": {
+                          "ref": "module-j5e_motor-Motor.html#isOn",
+                          "tf": 7.142857142857142
+                        },
+                        "module-j5e_motor-Motor.html#enabled": {
+                          "ref": "module-j5e_motor-Motor.html#enabled",
+                          "tf": 16.666666666666664
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "a": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "v": {
+                    "docs": {
+                      "module-j5e_rgb-RGB.html#on": {
+                        "ref": "module-j5e_rgb-RGB.html#on",
+                        "tf": 7.142857142857142
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
           "e": {
             "docs": {},
             "t": {
@@ -22513,26 +23448,6 @@
                       "module-j5e_led-LED.html#isOn": {
                         "ref": "module-j5e_led-LED.html#isOn",
                         "tf": 25
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "h": {
-            "docs": {},
-            "a": {
-              "docs": {},
-              "t": {
-                "docs": {},
-                "e": {
-                  "docs": {},
-                  "v": {
-                    "docs": {
-                      "module-j5e_rgb-RGB.html#on": {
-                        "ref": "module-j5e_rgb-RGB.html#on",
-                        "tf": 7.142857142857142
                       }
                     }
                   }
@@ -22669,6 +23584,10 @@
                   "module-j5e_thermometer-Thermometer.html#fscaleTo": {
                     "ref": "module-j5e_thermometer-Thermometer.html#fscaleTo",
                     "tf": 20
+                  },
+                  "module-j5e_motor-Motor.html#enable": {
+                    "ref": "module-j5e_motor-Motor.html#enable",
+                    "tf": 7.142857142857142
                   },
                   "module-j5e_sensor-Sensor.html#scale": {
                     "ref": "module-j5e_sensor-Sensor.html#scale",
@@ -22861,7 +23780,7 @@
           }
         }
       },
-      "length": 2470
+      "length": 2572
     },
     "corpusTokens": [
       "0",
@@ -22888,10 +23807,12 @@
       "avail",
       "be",
       "befor",
+      "behav",
       "between",
       "blink",
       "blue",
       "boolean",
+      "brake",
       "bright",
       "button",
       "c",
@@ -22908,6 +23829,7 @@
       "clearinterv",
       "clockwis",
       "close",
+      "coast",
       "code",
       "color",
       "common",
@@ -22921,14 +23843,17 @@
       "counter",
       "creat",
       "current",
+      "currentspe",
       "cw",
       "d",
+      "dc",
       "default",
       "degre",
       "depend",
       "devic",
       "digit",
       "diod",
+      "direct",
       "disabl",
       "document",
       "downvalu",
@@ -23003,6 +23928,8 @@
       "j5e/led~l",
       "j5e/light",
       "j5e/light~light",
+      "j5e/motor",
+      "j5e/motor~motor",
       "j5e/relay",
       "j5e/relay~relay",
       "j5e/rgb",
@@ -23099,8 +24026,10 @@
       "lt;async&gt",
       "lt;readonly&gt",
       "maintain",
+      "manag",
       "max",
       "maximum",
+      "mean",
       "median",
       "member",
       "method",
@@ -23205,6 +24134,18 @@
       "module:j5e/light~light#threshold",
       "module:j5e/light~light#valu",
       "module:j5e/light~light#within",
+      "module:j5e/motor",
+      "module:j5e/motor~motor",
+      "module:j5e/motor~motor#brak",
+      "module:j5e/motor~motor#configur",
+      "module:j5e/motor~motor#currentspe",
+      "module:j5e/motor~motor#dis",
+      "module:j5e/motor~motor#en",
+      "module:j5e/motor~motor#ison",
+      "module:j5e/motor~motor#releas",
+      "module:j5e/motor~motor#resum",
+      "module:j5e/motor~motor#start",
+      "module:j5e/motor~motor#stop",
       "module:j5e/relay",
       "module:j5e/relay~relay",
       "module:j5e/relay~relay#clos",
@@ -23435,14 +24376,19 @@
       "module:j5e/thermometer~thermometer#valu",
       "module:j5e/thermometer~thermometer#within",
       "more",
+      "motor",
+      "motor'",
       "move",
       "ms",
       "namespac",
       "nc",
       "necessari",
+      "necessarili",
       "new",
       "node.j",
+      "non",
       "normal",
+      "note",
       "number",
       "numer",
       "object",
@@ -23460,6 +24406,7 @@
       "pass",
       "paus",
       "photoresistor",
+      "pin",
       "play",
       "playback",
       "posit",
@@ -23481,6 +24428,7 @@
       "red",
       "refer",
       "relay",
+      "releas",
       "remov",
       "removelisten",
       "repres",
@@ -23493,6 +24441,7 @@
       "rgb",
       "rotat",
       "run",
+      "same",
       "sampl",
       "scale",
       "scale/scaleto",
@@ -23520,6 +24469,7 @@
       "step",
       "stop",
       "string",
+      "support",
       "sweep",
       "switch",
       "synchron",
@@ -23582,6 +24532,7 @@
       "voltag",
       "wether",
       "whatev",
+      "whether",
       "wire",
       "within",
       "work",
@@ -25667,6 +26618,127 @@
       "summary": "",
       "description": "Create an event listener that will only fire one time."
     },
+    "module-j5e_motor-Motor.html": {
+      "id": "module-j5e_motor-Motor.html",
+      "kind": "class",
+      "title": "&lt;async&gt; j5e/motor~Motor",
+      "longname": "module:j5e/motor~Motor",
+      "name": "Motor",
+      "tags": "module:j5e/motor~Motor",
+      "summary": "",
+      "description": "The Motor class allows for control of non-directional DC Motors",
+      "body": ""
+    },
+    "module-j5e_motor-Motor.html#isOn": {
+      "id": "module-j5e_motor-Motor.html#isOn",
+      "kind": "member",
+      "title": "&lt;readonly&gt; isOn :boolean",
+      "longname": "module:j5e/motor~Motor#isOn",
+      "name": "isOn",
+      "tags": "module:j5e/motor~Motor#isOn isOn",
+      "summary": "",
+      "description": "Whether current is flowing. This does not necessarily mean the motor is turning."
+    },
+    "module-j5e_motor-Motor.html#currentSpeed": {
+      "id": "module-j5e_motor-Motor.html#currentSpeed",
+      "kind": "member",
+      "title": "&lt;readonly&gt; currentSpeed :number",
+      "longname": "module:j5e/motor~Motor#currentSpeed",
+      "name": "currentSpeed",
+      "tags": "module:j5e/motor~Motor#currentSpeed currentSpeed",
+      "summary": "",
+      "description": "The Motor's current speed"
+    },
+    "module-j5e_motor-Motor.html#enabled": {
+      "id": "module-j5e_motor-Motor.html#enabled",
+      "kind": "member",
+      "title": "&lt;readonly&gt; enabled :boolean",
+      "longname": "module:j5e/motor~Motor#enabled",
+      "name": "enabled",
+      "tags": "module:j5e/motor~Motor#enabled enabled",
+      "summary": "",
+      "description": "Whether the motor is enabled"
+    },
+    "module-j5e_motor-Motor.html#configure": {
+      "id": "module-j5e_motor-Motor.html#configure",
+      "kind": "function",
+      "title": "configure( options ) → {Motor}",
+      "longname": "module:j5e/motor~Motor#configure",
+      "name": "configure",
+      "tags": "module:j5e/motor~Motor#configure configure",
+      "summary": "",
+      "description": "Configure a Motor"
+    },
+    "module-j5e_motor-Motor.html#enable": {
+      "id": "module-j5e_motor-Motor.html#enable",
+      "kind": "function",
+      "title": "enable() → {Motor}",
+      "longname": "module:j5e/motor~Motor#enable",
+      "name": "enable",
+      "tags": "module:j5e/motor~Motor#enable enable",
+      "summary": "",
+      "description": "Enable a motor. If there is an enable pin, set its value to high"
+    },
+    "module-j5e_motor-Motor.html#disable": {
+      "id": "module-j5e_motor-Motor.html#disable",
+      "kind": "function",
+      "title": "disable() → {Motor}",
+      "longname": "module:j5e/motor~Motor#disable",
+      "name": "disable",
+      "tags": "module:j5e/motor~Motor#disable disable",
+      "summary": "",
+      "description": "Disable a motor. If there is an enable pin, set its value to low"
+    },
+    "module-j5e_motor-Motor.html#start": {
+      "id": "module-j5e_motor-Motor.html#start",
+      "kind": "function",
+      "title": "start( speed ) → {Motor}",
+      "longname": "module:j5e/motor~Motor#start",
+      "name": "start",
+      "tags": "module:j5e/motor~Motor#start start",
+      "summary": "",
+      "description": "Start the motor"
+    },
+    "module-j5e_motor-Motor.html#stop": {
+      "id": "module-j5e_motor-Motor.html#stop",
+      "kind": "function",
+      "title": "stop() → {Motor}",
+      "longname": "module:j5e/motor~Motor#stop",
+      "name": "stop",
+      "tags": "module:j5e/motor~Motor#stop stop",
+      "summary": "",
+      "description": "Stop the motor"
+    },
+    "module-j5e_motor-Motor.html#brake": {
+      "id": "module-j5e_motor-Motor.html#brake",
+      "kind": "function",
+      "title": "brake( [ duration ] ) → {Motor}",
+      "longname": "module:j5e/motor~Motor#brake",
+      "name": "brake",
+      "tags": "module:j5e/motor~Motor#brake brake",
+      "summary": "",
+      "description": "Brakes the motor - Note that not all motor controllers support braking. If there is no brake pin, brake() behaves the same as stop() and the motor will coast to a stop"
+    },
+    "module-j5e_motor-Motor.html#resume": {
+      "id": "module-j5e_motor-Motor.html#resume",
+      "kind": "function",
+      "title": "resume( [ duration ] ) → {Motor}",
+      "longname": "module:j5e/motor~Motor#resume",
+      "name": "resume",
+      "tags": "module:j5e/motor~Motor#resume resume",
+      "summary": "",
+      "description": "Resumes the current speed"
+    },
+    "module-j5e_motor-Motor.html#release": {
+      "id": "module-j5e_motor-Motor.html#release",
+      "kind": "function",
+      "title": "release() → {Motor}",
+      "longname": "module:j5e/motor~Motor#release",
+      "name": "release",
+      "tags": "module:j5e/motor~Motor#release release",
+      "summary": "",
+      "description": "Releases the brake and calls resume"
+    },
     "module-j5e_animation-Animation.html": {
       "id": "module-j5e_animation-Animation.html",
       "kind": "class",
@@ -26567,6 +27639,17 @@
       "tags": "module:j5e/light",
       "summary": "",
       "description": "",
+      "body": ""
+    },
+    "module-j5e_motor.html": {
+      "id": "module-j5e_motor.html",
+      "kind": "module",
+      "title": "j5e/motor",
+      "longname": "module:j5e/motor",
+      "name": "j5e/motor",
+      "tags": "module:j5e/motor",
+      "summary": "",
+      "description": "Class library for managing Motors.",
       "body": ""
     },
     "module-j5e_relay.html": {

@@ -31,6 +31,7 @@ Interested in contributing? Check out [CONTRIBUTING.md](https://github.com/dtex/
         <li><a href="https://dtex.github.io/j5e/module-j5e_button.html">Button</a></li>
         <li><a href="https://dtex.github.io/j5e/module-j5e_led.html">LED</a></li>
         <li><a href="https://dtex.github.io/j5e/module-j5e_light.html">Light (Photoresistors)</a></li>
+        <li><a href="https://dtex.github.io/j5e/module-j5e_motor.html">Motor</a></li>
         <li><a href="https://dtex.github.io/j5e/module-j5e_relay.html">Relay</a></li>
       </ul>
     </td>

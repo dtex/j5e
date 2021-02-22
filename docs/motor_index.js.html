@@ -94,39 +94,33 @@
 		<section class="source-section">
 			<article></article>
 			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">/**
- * Class library for managing Motors (Light Emitting Diodes).
+ * Class library for managing Motors.
  * @module j5e/motor
  * @requires module:j5e/event
  * @requires module:j5e/fn
  */
 
 import { Emitter } from "j5e/event";
-import { normalizeDevice, normalizeIO, getProvider } from "j5e/fn";
+import { constrain, map, asyncForEach, normalizeDevice, normalizeIO, getProvider, timer } from "j5e/fn";
 
 /**
- * The Motor class constructs objects that represent a single DC Motor (usually) attached to a motor controller.
- * @classdesc The Motor class allows for control of DC Motors
+ * The Motor class constructs objects that represent a single non-directional DC Motor (usually) attached to a motor controller.
+ * @classdesc The Motor class allows for control of non-directional DC Motors
  * @async
  */
 class Motor extends Emitter {
 
   #state = {
     device: "NONDIRECTIONAL",
-    threshold: 30,
-    invertPWM: false,
+    threshold: 0.11,
     isOn: false,
-    direction: 1,
     currentSpeed: 0,
     enabled: true
   };
 
   /**
    * Instantiate a Motor
-   * @param {number|string|number[]|string[]|object[]|object} io - A pin identifier, an array of pin identifiers or IO Options in PWM, DIR, CDIR order, or a motor IO options object (See {@tutorial C-INSTANTIATING})
-   * @param {object} [io.pwm] - Pin identifier or IO Options for the red channel
-   * @param {object} [io.dir] - Pin identifier or IO Options for the green channel
-   * @param {object} [io.cdir] - Pin identifier or IO Options for the blue channel
-   * @param {object} [options] - Device configuration options
+   * @param {number|string|number[]|string[]|object[]|object} io - A pin identifier or motor IO options object (See {@tutorial C-INSTANTIATING})
    * @example
    * &lt;caption>Using a pin number&lt;/caption>
    * import Motor from "j5e/motor";
@@ -142,123 +136,76 @@ class Motor extends Emitter {
    *   pin: 12
    * });
    * motor.fwd();
-   *
-   * @example
-   * &lt;caption>Initializing 2 pin, Bi-Directional DC Motors&lt;/caption>
-   * import Motor from "j5e/motor";
-   *
-   * const motor = await new Motor([ 3, 12 ]);
-   * motor.fwd();
-   *
-   * @example
-   * &lt;caption>Initializing 2 pin, Bi-Directional DC Motors with an object&lt;/caption>
-   * import Motor from "j5e/motor";
-   *
-   * const motor = await new Motor({
-   *   pins: [ 3, 12 ]
-   * });
-   * motor.fwd();
-   *
-   * @example
-   * &lt;caption>Initializing 2 pin, Bi-Directional DC Motors with explicit pins&lt;/caption>
-   * import Motor from "j5e/motor";
-   *
-   * const motor = await new Motor({
-   *   pins: {
-   *     pwm: 3,
-   *     dir: 12
-   *   }
-   * });
-   * motor.fwd();
-   *
-   * @example
-   * &lt;caption>Initializing 3 pin, Bi-Directional DC Motors&lt;/caption>
-   * import Motor from "j5e/motor";
-   *
-   * const motor = await new Motor([ 3, 12, 11 ]);
-   * motor.fwd();
-   *
-   * @example
-   * &lt;caption>Initializing 3 pin, Bi-Directional DC Motors with an object&lt;/caption>
-   * import Motor from "j5e/motor";
-   *
-   * const motor = await new Motor({
-   *   pins: [ 3, 12, 11 ]
-   * });
-   * motor.fwd();
-   *
-   * @example
-   * &lt;caption>Initializing 3 pin, Bi-Directional DC Motors with explicit pins&lt;/caption>
-   * import Motor from "j5e/motor";
-   *
-   * const motor = await new Motor({
-   *   pins: {
-   *     pwm: 3,
-   *     dir: 12,
-   *     cdir: 11
-   *   }
-   * });
-   * motor.fwd();
-   *
-   * @example
-   * &lt;caption>Initializing Bi-Directional DC Motors with inverted speed for reverse. Most likely used for non-commercial H-Bridge controllers&lt;/caption>
-   * import Motor from "j5e/motor";
-   *
-   * const motor = await new Motor({
-   *   pins: [3, 23],
-   *   invertPWM: true
-   * });
-   * motor.fwd();
-  */
-
-  constructor(io, options) {
+   */
+  constructor(io) {
     return (async() => {
 
-      options = normalizeDevice(options);
-      io = normalizeIO(io);
-      if (!Array.isArray(io.pins)) {
-        io.pins = [io.pins];
-      }
       super();
 
-      // Derive device based on pins passed
-      if (options.pins) {
-        if (Array.isArray(options.pins)) {
-          this.#state.device = ["NONDIRECTIONAL", "DIRECTIONAL", "CDIR"][options.pins.length - 1];
-        } else {
-          if (typeof options.pins.dir === "undefined") {
-            this.#state.device = "NONDIRECTIONAL";
-          } else {
-            this.#state.device = "DIRECTIONAL";
-          }
-          if (typeof options.pins.cdir !== "undefined") {
-            this.#state.device = "CDIR";
-          }
+      if (Array.isArray(io)) {
+        io = {
+          pwm: io[0]
+        };
+      } else {
+        if (!io.pwm) {
+          io = { pwm: io };
         }
       }
 
-      Object.defineProperties(this, Devices[this.#state.device]);
-
-      if (typeof options.threshold !== "undefined") {
-        this.#state.threshold = options.threshold;
+      this.io = {
+        pwm: normalizeIO(io.pwm),
+        enable: normalizeIO(io.enable),
+        brake: normalizeIO(io.brake)
       };
 
-      if (typeof options.invertPWM !== "undefined") {
-        this.#state.invertPWM = options.invertPWM;
-      };
+      let pwmProvider = await getProvider(io.pwm, "PWM");
 
-      this.initialize(options);
+      this.io.pwm = new pwmProvider({
+        pin: io.pwm.pin
+      });
 
-//     this.validatePins();
-//     this.enable();
-//     this.dir(this.direction);
-//   }
+      this.LOW = 0;
+      this.HIGH = (1 &lt;&lt; this.io.pwm.resolution) - 1;
+
+      this.configure();
+
       return this;
     })();
   }
 
   /**
-   * Wether current is flowing. This does not necessarily mean the motor is turning.
+   * Configure a Motor
+   * @returns {Motor} The instance on which the method was called
+   * @param {object} options - Device configuration options
+   * @param {boolean} [options.enabled = true] - Sets the enabled state of a motor
+   * @param {number} [options.threshold=0.11] - The minimum speed [0, 1] that will make the motor move
+   * @example
+   * import Motor from "j5e/motor";
+   *
+   * const motor = await new Motor(12);
+	 * motor.configure({
+   *   enabled: false
+   * });
+   * motor.forward(); // No signal is sent
+   */
+  configure(options = {}) {
+    options = normalizeDevice(options);
+
+    if (typeof options.threshold !== "undefined") {
+      this.#state.threshold = options.threshold;
+    };
+
+    if (typeof options.enabled !== "undefined") {
+      this.enabled = options.enabled;
+    } else {
+      this.enable();
+    };
+
+    return this;
+  }
+
+  /**
+   * Whether current is flowing. This does not necessarily mean the motor is turning.
    * @type {boolean}
    * @readonly
    */
@@ -276,7 +223,7 @@ class Motor extends Emitter {
   }
 
   /**
-   * Wether the motor is enabled
+   * Whether the motor is enabled
    * @type {boolean}
    * @readonly
    */
@@ -284,349 +231,205 @@ class Motor extends Emitter {
     return this.#state.enabled;
   }
 
-  /**
-   * Initializes the motor by instantiating the necessary IO's
-   * @private
-   */
-  initialize(options) {
-    this.io = {};
-
-    this.io.pwm = new Provider({
-      pin: options.pin
-    });
-    pinMode(this.pins.pwm, this.io.MODES.PWM);
-
-    ["dir", "cdir"].forEach(pin => {
-      if (typeof this.pins[pin] !== "undefined") {
-        this.io.pinMode(this.pins[pin], this.io.MODES.OUTPUT);
-      }
-    });
+  set enabled(enable) {
+    if (this.io.enable) {
+      this.io.enable.write(enable);
+    }
+    this.#state.enabled = enable;
   }
 
-// // Check for required pins
-// Motor.prototype.validatePins = function() {
+  /**
+   * Enable a motor. If there is an enable pin, set its value to high
+   * @return {Motor}
+   * @example
+   * &lt;caption>Enable a motor&lt;/caption>
+   * import Motor from "j5e/motor";
+   *
+   * const motor = await new Motor([13, 12]);
+	 * motor.disable();
+   * window.setTimeout(() => {
+   *   motor.enable();
+   * }, 5000);
+   */
+  enable() {
+    this.enabled = true;
+  }
 
-//   if (typeof this.pins.pwm === "undefined") {
-//     throw new Error("PWM pin must be defined");
-//   }
+  /**
+   * Disable a motor. If there is an enable pin, set its value to low
+   * @return {Motor}
+   * @example
+   * &lt;caption>Disable a motor&lt;/caption>
+   * import Motor from "j5e/motor";
+   *
+   * const motor = await new Motor([13, 12]);
+	 * motor.disable();
+   */
+  disable() {
+    this.enabled = false;
+  };
 
-//   if (typeof this.pins.dir === "undefined" &amp;&amp; this.settings.device !== "NONDIRECTIONAL") {
-//     throw new Error("DIR pin must be defined");
-//   }
+  /**
+   * Set the motor's speed
+   * @param {object|number} options - Speed options or value [0, 1]
+   * @param {number} options.speed - Speed [0, 1]
+   * @param {number} options.saveSpeed - Wether speed should be saved
+   * @param {boolean} options.braking - Wether brake is on
+   * @return {Motor}
+   * @private
+   */
+  speed(options) {
 
-//   if (this.settings.device === "CDIR" &amp;&amp; typeof this.pins.cdir === "undefined") {
-//     throw new Error("CDIR pin must be defined for three wire motors");
-//   }
-// };
+    if (typeof options === "undefined") {
+      return this.#state.currentSpeed;
+    } else {
 
+      if (typeof options === "number") {
+        options = {
+          speed: options
+        };
+      }
+
+      options.speed = constrain(options.speed, 0, 1);
+
+      options.saveSpeed = typeof options.saveSpeed !== "undefined" ? options.saveSpeed : true;
+
+      if (options.speed &lt; this.#state.threshold) {
+        options.speed = 0;
+      }
+
+      this.#state.isOn = options.speed === 0 ? false : true;
+
+      if (options.saveSpeed) {
+        this.#state.currentSpeed = options.speed;
+      }
+
+      if (this.#state.enabled) {
+        this.io.pwm.write(map(options.speed, 0, 1, this.LOW, this.HIGH));
+      }
+
+      return this;
+    }
+
+  };
+
+  /**
+   * Start the motor
+   * @param {number} speed - Speed [0, 1]
+   * @return {Motor}
+   */
+  start(speed) {
+
+    // get current speed if nothing provided.
+    speed = typeof speed !== "undefined" ? speed : this.speed();
+
+    this.speed({
+      speed: speed,
+      braking: false
+    });
+
+    // "start" event is fired when the motor is started
+    if (speed > 0) {
+      timer.setImmediate(() => this.emit("start"));
+    }
+
+    return this;
+  };
+
+  /**
+   * Stop the motor
+   * @return {Motor}
+   */
+  stop() {
+    this.speed({
+      speed: 0,
+      saveSpeed: false
+    });
+    timer.setImmediate(() => this.emit("stop"));
+
+    return this;
+  };
+
+  /**
+   * Brakes the motor - Note that not all motor controllers support braking. If there is no brake pin, brake() behaves the same as stop() and the motor will coast to a stop
+   * @param {number} [duration] - Time in millseconds to hold the brake
+   * @return {Motor}
+   */
+  brake(duration) {
+    if (!this.io.brake) {
+      this.stop();
+    } else {
+      this.io.brake.write(1);
+      this.speed({
+        speed: 1,
+        saveSpeed: false,
+        braking: true
+      });
+      timer.setImmediate(() => this.emit("brake"));
+
+      if (typeof duration !== "undefined") {
+        let motor = this;
+        timer.setTimeout(function() {
+          motor.release();
+        }, duration);
+      }
+
+    }
+
+    return this;
+  };
+
+  /**
+   * Resumes the current speed
+   * @param {number} [duration] - Time in millseconds to hold the brake
+   * @return {Motor}
+   */
+  resume() {
+    const speed = this.speed();
+    this.start(speed);
+
+    return this;
+  };
+
+  /**
+   * Releases the brake and calls resume
+   * @return {Motor}
+   */
+  release() {
+    if (typeof this.io.brake !== "undefined") {
+      this.io.brake.write(1);
+    }
+    this.resume();
+    timer.setImmediate(() => this.emit("release"));
+
+    return this;
+  };
+
+  fwd(speed) {
+    this.forward(speed);
+  };
+
+  forward(speed = 1) {
+    this.start(speed);
+    timer.setImmediate(() => this.emit("forward"));
+    return this;
+  };
+
+  dir(speed) {
+    speed = speed || this.speed();
+    return this;
+  };
+
+  resume() {
+    const speed = this.speed();
+    this.speed({
+      speed
+    });
+    return this;
+  }
 };
 
 export default Motor;
-
-
-
-
-
-// class Motor extends Emitter {
-//   constructor(options) {
-
-// }
-
-
-
-// Motor.prototype.setPin = function(pin, value) {
-//   this.io.digitalWrite(pin, value);
-// };
-
-// Motor.prototype.setPWM = function(pin, value) {
-//   this.io.analogWrite(pin, Fn.map(value, 0, 255, 0, this.board.RESOLUTION.PWM));
-// };
-
-// Motor.prototype.speed = function(options) {
-//   var state = priv.get(this);
-
-//   if (typeof options === "undefined") {
-//     return state.currentSpeed;
-//   } else {
-
-//     if (typeof options === "number") {
-//       options = {
-//         speed: options
-//       };
-//     }
-
-//     options.speed = Board.constrain(options.speed, 0, 255);
-
-//     options.saveSpeed = typeof options.saveSpeed !== "undefined" ?
-//       options.saveSpeed : true;
-
-//     if (options.speed &lt; this.threshold) {
-//       options.speed = 0;
-//     }
-
-//     state.isOn = options.speed === 0 ? false : true;
-
-//     if (options.saveSpeed) {
-//       state.currentSpeed = options.speed;
-//     }
-
-//     if (options.braking) {
-//       state.braking = true;
-//     }
-
-//     if (this.invertPWM &amp;&amp; this.direction.value === 1) {
-//       options.speed ^= 0xff;
-//     }
-
-//     this.setPWM(this.pins.pwm, options.speed);
-
-//     return this;
-//   }
-
-// };
-
-// // start a motor - essentially just switch it on like a normal motor
-// Motor.prototype.start = function(speed) {
-//   // Send a signal to turn on the motor and run at given speed in whatever
-//   // direction is currently set.
-//   if (this.pins.brake &amp;&amp; this.braking) {
-//     this.setPin(this.pins.brake, 0);
-//   }
-
-//   // get current speed if nothing provided.
-//   speed = typeof speed !== "undefined" ?
-//     speed : this.speed();
-
-//   this.speed({
-//     speed: speed,
-//     braking: false
-//   });
-
-//   // "start" event is fired when the motor is started
-//   if (speed > 0) {
-//     process.nextTick(() => this.emit("start"));
-//   }
-
-//   return this;
-// };
-
-// Motor.prototype.stop = function() {
-//   this.speed({
-//     speed: 0,
-//     saveSpeed: false
-//   });
-//   process.nextTick(() => this.emit("stop"));
-
-//   return this;
-// };
-
-// Motor.prototype.brake = function(duration) {
-//   if (typeof this.pins.brake === "undefined") {
-//     if (this.board.io.name !== "Mock") {
-//       console.log("Non-braking motor type");
-//     }
-//     this.stop();
-//   } else {
-//     this.setPin(this.pins.brake, 1);
-//     this.setPin(this.pins.dir, 1);
-//     this.speed({
-//       speed: 255,
-//       saveSpeed: false,
-//       braking: true
-//     });
-//     process.nextTick(() => this.emit("brake"));
-
-//     if (duration) {
-//       var motor = this;
-//       this.board.wait(duration, function() {
-//         motor.resume();
-//       });
-//     }
-//   }
-
-//   return this;
-// };
-
-// Motor.prototype.release = function() {
-//   this.resume();
-//   process.nextTick(() => this.emit("release"));
-
-//   return this;
-// };
-
-// Motor.prototype.resume = function() {
-//   var speed = this.speed();
-//   this.dir(this.direction);
-//   this.start(speed);
-
-//   return this;
-// };
-
-// Motor.prototype.enable = function() {
-//   var state = priv.get(this);
-//   if (typeof this.pins.enable !== "undefined" &amp;&amp; !state.enabled) {
-//     this.setPin(this.pins.enable, 1);
-//     state.enabled = true;
-//   }
-// };
-
-// Motor.prototype.disable = function() {
-//   var state = priv.get(this);
-//   if (typeof this.pins.enable !== "undefined" &amp;&amp; state.enabled) {
-//     this.setPin(this.pins.enable, 0);
-//     state.enabled = false;
-//   }
-// };
-
-
-
-// [
-//   /**
-//    * forward Turn the Motor in its forward direction
-//    * fwd Turn the Motor in its forward direction
-//    *
-//    * @param  {Number} 0-255, 0 is stopped, 255 is fastest
-//    * @return {Object} this
-//    */
-//   {
-//     name: "forward",
-//     abbr: "fwd",
-//     value: 1
-//   },
-//   /**
-//    * reverse Turn the Motor in its reverse direction
-//    * rev Turn the Motor in its reverse direction
-//    *
-//    * @param  {Number} 0-255, 0 is stopped, 255 is fastest
-//    * @return {Object} this
-//    */
-//   {
-//     name: "reverse",
-//     abbr: "rev",
-//     value: 0
-//   }
-// ].forEach(dir => {
-//   Motor.prototype[dir.name] = Motor.prototype[dir.abbr] = function(speed) {
-//     this.dir(dir);
-//     this.start(speed);
-//     return this;
-//   };
-// });
-
-const Devices = {
-  NONDIRECTIONAL: {
-    pins: {
-      get() {
-        if (this.settings.pin) {
-          return {
-            pwm: this.settings.pin
-          };
-        } else {
-          return this.settings.pins || {};
-        }
-      }
-    },
-    dir: {
-      writable: true,
-      configurable: true,
-      value(speed) {
-        speed = speed || this.speed();
-        return this;
-      }
-    },
-    resume: {
-      value() {
-        const speed = this.speed();
-        this.speed({
-          speed
-        });
-        return this;
-      }
-    }
-  },
-  DIRECTIONAL: {
-    pins: {
-      get() {
-        if (Array.isArray(this.settings.pins)) {
-          return {
-            pwm: this.settings.pins[0],
-            dir: this.settings.pins[1]
-          };
-        } else {
-          return this.settings.pins;
-        }
-      }
-    },
-    dir: {
-      writable: true,
-      configurable: true,
-      value(dir) {
-
-        this.stop();
-
-        this.setPin(this.pins.dir, dir.value);
-        this.direction = dir;
-
-        process.nextTick(() => this.emit(dir.name));
-
-        return this;
-      }
-    }
-  },
-  CDIR: {
-    pins: {
-      get() {
-        if (Array.isArray(this.settings.pins)) {
-          return {
-            pwm: this.settings.pins[0],
-            dir: this.settings.pins[1],
-            cdir: this.settings.pins[2]
-          };
-        } else {
-          return this.settings.pins;
-        }
-      }
-    },
-    dir: {
-      value(dir) {
-
-        this.stop();
-        this.direction = dir;
-
-        this.setPin(this.pins.cdir, 1 ^ dir.value);
-        this.setPin(this.pins.dir, dir.value);
-
-        process.nextTick(() => this.emit(dir.name));
-
-        return this;
-      }
-    },
-    brake: {
-      value(duration) {
-
-        this.speed({
-          speed: 0,
-          saveSpeed: false
-        });
-        this.setPin(this.pins.dir, 1, 127);
-        this.setPin(this.pins.cdir, 1, 128, 127);
-        this.speed({
-          speed: 255,
-          saveSpeed: false,
-          braking: true
-        });
-
-        process.nextTick(() => this.emit("brake"));
-
-        if (duration) {
-          this.board.wait(duration, () => this.stop());
-        }
-
-        return this;
-      }
-    }
-  }
-};
 </code></pre>
 		</section>
 			</div>
