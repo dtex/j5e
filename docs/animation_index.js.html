@@ -458,7 +458,6 @@ class Animation extends Emitter {
     localTarget.render(this.tweenedValue(indices, progress));
 
     // See if we have reached the end of the animation
-    /* istanbul ignore else */
     if ((this.progress === 1 &amp;&amp; !this.reverse) || (progress === this.loopback &amp;&amp; this.reverse)) {
 
       if (this.loop || (this.metronomic &amp;&amp; !this.reverse)) {
@@ -554,7 +553,6 @@ class Animation extends Emitter {
 
       // If the keyframe at indices.left is null, move left
       for (kIndices.left = indices.left; kIndices.left > -1; kIndices.left--) {
-        /* istanbul ignore else */
         if (keyFrame[kIndices.left] !== null) {
           break;
         }
@@ -571,7 +569,6 @@ class Animation extends Emitter {
 
       // Catch divide by zero
       if (!Number.isFinite(tween.progress)) {
-        /* istanbul ignore next */
         tween.progress = this.reverse ? 0 : 1;
       }
 
@@ -654,13 +651,11 @@ class Animation extends Emitter {
           }
 
           // Copy value from another frame
-          /* istanbul ignore if */
           if (typeof keyFrame.copyValue !== "undefined") {
             keyFrame.value = source[keyFrame.copyValue].value;
           }
 
           // Copy everything from another keyframe in this array
-          /* istanbul ignore if */
           if (keyFrame.copyFrame) {
             keyFrame = source[keyFrame.copyFrame];
           }

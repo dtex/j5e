@@ -1,0 +1,20 @@
+{
+  "include": [],
+  "modules": {
+    "*": [],
+    "j5e/fn": "$(j5e)/lib/fn/*",
+    "j5e/motor": "$(j5e)/lib/motor/*",
+    "j5e/event": "$(j5e)/lib/event/*"
+  },
+  "preload": [
+    "j5e/fn",
+    "j5e/motor",
+    "j5e/event"
+  ],
+  "platforms": {
+    "esp": {},
+    "...": {
+      "error": "Experimental TC53 IO modules unsupported"
+    }
+  }
+}

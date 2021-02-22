@@ -97,11 +97,11 @@
 					<section>
 							<dl class="symbol primary">
 								<dt class="symbol-title class collapsible-symbol expanded">
-			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="signature-attribs">&lt;async> </span><span class="name">Motor</span><span class="signature-params">( <span class="signature-param">io</span> [,&nbsp;<span class="signature-param">options</span>&nbsp;]&nbsp;)</span><span class="signature-type"></span></h2>
+			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="signature-attribs">&lt;async> </span><span class="name">Motor</span><span class="signature-params">( <span class="signature-param">io</span>&nbsp;)</span><span class="signature-type"></span></h2>
 </dt>
 <dd class="symbol-details class  collapsible-symbol expanded" style="max-height: 9999px;">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description classdesc">The Motor class allows for control of DC Motors</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description classdesc">The Motor class allows for control of non-directional DC Motors</div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -109,7 +109,6 @@
 					<tr>
 							<th>Name</th>
 						<th>Type</th>
-							<th>Attributes</th>
 						<th class="last">Description</th>
 					</tr>
 					</thead>
@@ -117,53 +116,8 @@
 						<tr>
 								<td><code>io</code></td>
 							<td><span class="param-type">number</span> | <span class="param-type">string</span> | <span class="param-type">Array.&lt;number></span> | <span class="param-type">Array.&lt;string></span> | <span class="param-type">Array.&lt;object></span> | <span class="param-type">object</span></td>
-								<td class="attributes"></td>
 							<td class="last">
-									A pin identifier, an array of pin identifiers or IO Options in PWM, DIR, CDIR order, or a motor IO options object (See <a href="tutorial-C-INSTANTIATING.html">Instantiating a Device</a>)
-										<table class="params table table-striped">
-											<thead>
-											<tr>
-													<th>Name</th>
-												<th>Type</th>
-													<th>Attributes</th>
-												<th class="last">Description</th>
-											</tr>
-											</thead>
-											<tbody>
-												<tr>
-														<td><code>pwm</code></td>
-													<td><span class="param-type">object</span></td>
-														<td class="attributes">&lt;optional&gt;<br/></td>
-													<td class="last">
-															Pin identifier or IO Options for the red channel
-													</td>
-												</tr>
-												<tr>
-														<td><code>dir</code></td>
-													<td><span class="param-type">object</span></td>
-														<td class="attributes">&lt;optional&gt;<br/></td>
-													<td class="last">
-															Pin identifier or IO Options for the green channel
-													</td>
-												</tr>
-												<tr>
-														<td><code>cdir</code></td>
-													<td><span class="param-type">object</span></td>
-														<td class="attributes">&lt;optional&gt;<br/></td>
-													<td class="last">
-															Pin identifier or IO Options for the blue channel
-													</td>
-												</tr>
-											</tbody>
-										</table>
-							</td>
-						</tr>
-						<tr>
-								<td><code>options</code></td>
-							<td><span class="param-type">object</span></td>
-								<td class="attributes">&lt;optional&gt;<br/></td>
-							<td class="last">
-									Device configuration options
+									A pin identifier or motor IO options object (See <a href="tutorial-C-INSTANTIATING.html">Instantiating a Device</a>)
 							</td>
 						</tr>
 					</tbody>
@@ -182,73 +136,6 @@
 			
 			const motor &#x3D; await new Motor({
 			  pin: 12
-			});
-			motor.fwd();</code></pre>
-					</div>
-					<div class="example-caption"><p>Initializing 2 pin, Bi-Directional DC Motors</p></div>
-					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Motor from &quot;j5e/motor&quot;;
-			
-			const motor &#x3D; await new Motor([ 3, 12 ]);
-			motor.fwd();</code></pre>
-					</div>
-					<div class="example-caption"><p>Initializing 2 pin, Bi-Directional DC Motors with an object</p></div>
-					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Motor from &quot;j5e/motor&quot;;
-			
-			const motor &#x3D; await new Motor({
-			  pins: [ 3, 12 ]
-			});
-			motor.fwd();</code></pre>
-					</div>
-					<div class="example-caption"><p>Initializing 2 pin, Bi-Directional DC Motors with explicit pins</p></div>
-					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Motor from &quot;j5e/motor&quot;;
-			
-			const motor &#x3D; await new Motor({
-			  pins: {
-			    pwm: 3,
-			    dir: 12
-			  }
-			});
-			motor.fwd();</code></pre>
-					</div>
-					<div class="example-caption"><p>Initializing 3 pin, Bi-Directional DC Motors</p></div>
-					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Motor from &quot;j5e/motor&quot;;
-			
-			const motor &#x3D; await new Motor([ 3, 12, 11 ]);
-			motor.fwd();</code></pre>
-					</div>
-					<div class="example-caption"><p>Initializing 3 pin, Bi-Directional DC Motors with an object</p></div>
-					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Motor from &quot;j5e/motor&quot;;
-			
-			const motor &#x3D; await new Motor({
-			  pins: [ 3, 12, 11 ]
-			});
-			motor.fwd();</code></pre>
-					</div>
-					<div class="example-caption"><p>Initializing 3 pin, Bi-Directional DC Motors with explicit pins</p></div>
-					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Motor from &quot;j5e/motor&quot;;
-			
-			const motor &#x3D; await new Motor({
-			  pins: {
-			    pwm: 3,
-			    dir: 12,
-			    cdir: 11
-			  }
-			});
-			motor.fwd();</code></pre>
-					</div>
-					<div class="example-caption"><p>Initializing Bi-Directional DC Motors with inverted speed for reverse. Most likely used for non-commercial H-Bridge controllers</p></div>
-					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Motor from &quot;j5e/motor&quot;;
-			
-			const motor &#x3D; await new Motor({
-			  pins: [3, 23],
-			  invertPWM: true
 			});
 			motor.fwd();</code></pre>
 					</div>
@@ -272,7 +159,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="motor_index.js.html">motor/index.js</a>, <a href="motor_index.js.html#line-119">line 119</a></p>
+									<p class="form-control-static"><a href="motor_index.js.html">motor/index.js</a>, <a href="motor_index.js.html#line-45">line 45</a></p>
 								</div>
 							</div>
 			
@@ -292,7 +179,7 @@
 		</dt>
 <dd class="symbol-details member public  collapsible-symbol">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Wether current is flowing. This does not necessarily mean the motor is turning.</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Whether current is flowing. This does not necessarily mean the motor is turning.</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 							<!-- type -->
@@ -320,7 +207,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="motor_index.js.html">motor/index.js</a>, <a href="motor_index.js.html#line-170">line 170</a></p>
+									<p class="form-control-static"><a href="motor_index.js.html">motor/index.js</a>, <a href="motor_index.js.html#line-117">line 117</a></p>
 								</div>
 							</div>
 			
@@ -364,7 +251,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="motor_index.js.html">motor/index.js</a>, <a href="motor_index.js.html#line-179">line 179</a></p>
+									<p class="form-control-static"><a href="motor_index.js.html">motor/index.js</a>, <a href="motor_index.js.html#line-126">line 126</a></p>
 								</div>
 							</div>
 			
@@ -380,7 +267,7 @@
 		</dt>
 <dd class="symbol-details member public  collapsible-symbol">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Wether the motor is enabled</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Whether the motor is enabled</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 							<!-- type -->
@@ -408,7 +295,515 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="motor_index.js.html">motor/index.js</a>, <a href="motor_index.js.html#line-188">line 188</a></p>
+									<p class="form-control-static"><a href="motor_index.js.html">motor/index.js</a>, <a href="motor_index.js.html#line-135">line 135</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+									</dl>
+									<h3>Methods</h3>
+									<dl class="symbol">
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id="configure" class="function public"><span class="name">configure</span><span class="signature-params">( <span class="signature-param">options</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Motor}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Configure a Motor</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>options</code></td>
+							<td><span class="param-type">object</span></td>
+							<td class="last">
+									Device configuration options
+										<table class="params table table-striped">
+											<thead>
+											<tr>
+													<th>Name</th>
+												<th>Type</th>
+													<th>Attributes</th>
+													<th>Default</th>
+												<th class="last">Description</th>
+											</tr>
+											</thead>
+											<tbody>
+												<tr>
+														<td><code>enabled</code></td>
+													<td><span class="param-type">boolean</span></td>
+														<td class="attributes">&lt;optional&gt;<br/></td>
+														<td>true</td>
+													<td class="last">
+															Sets the enabled state of a motor
+													</td>
+												</tr>
+												<tr>
+														<td><code>threshold</code></td>
+													<td><span class="param-type">number</span></td>
+														<td class="attributes">&lt;optional&gt;<br/></td>
+														<td>0.11</td>
+													<td class="last">
+															The minimum speed [0, 1] that will make the motor move
+													</td>
+												</tr>
+											</tbody>
+										</table>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Motor</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description">The instance on which the method was called</div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Motor from &quot;j5e/motor&quot;;
+			
+			const motor &#x3D; await new Motor(12);
+			motor.configure({
+			  enabled: false
+			});
+			motor.forward(); // No signal is sent</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="motor_index.js.html">motor/index.js</a>, <a href="motor_index.js.html#line-96">line 96</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id="enable" class="function public"><span class="name">enable</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{Motor}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Enable a motor. If there is an enable pin, set its value to high</div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Motor</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Enable a motor</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Motor from &quot;j5e/motor&quot;;
+			
+			const motor &#x3D; await new Motor([13, 12]);
+			motor.disable();
+			window.setTimeout(() &#x3D;&gt; {
+			  motor.enable();
+			}, 5000);</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="motor_index.js.html">motor/index.js</a>, <a href="motor_index.js.html#line-159">line 159</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id="disable" class="function public"><span class="name">disable</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{Motor}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Disable a motor. If there is an enable pin, set its value to low</div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Motor</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Disable a motor</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Motor from &quot;j5e/motor&quot;;
+			
+			const motor &#x3D; await new Motor([13, 12]);
+			motor.disable();</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="motor_index.js.html">motor/index.js</a>, <a href="motor_index.js.html#line-173">line 173</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id="start" class="function public"><span class="name">start</span><span class="signature-params">( <span class="signature-param">speed</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Motor}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Start the motor</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>speed</code></td>
+							<td><span class="param-type">number</span></td>
+							<td class="last">
+									Speed [0, 1]
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Motor</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="motor_index.js.html">motor/index.js</a>, <a href="motor_index.js.html#line-226">line 226</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id="stop" class="function public"><span class="name">stop</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{Motor}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Stop the motor</div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Motor</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="motor_index.js.html">motor/index.js</a>, <a href="motor_index.js.html#line-248">line 248</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id="brake" class="function public"><span class="name">brake</span><span class="signature-params">( [&nbsp;<span class="signature-param">duration</span>&nbsp;]&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Motor}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Brakes the motor - Note that not all motor controllers support braking. If there is no brake pin, brake() behaves the same as stop() and the motor will coast to a stop</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>duration</code></td>
+							<td><span class="param-type">number</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Time in millseconds to hold the brake
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Motor</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="motor_index.js.html">motor/index.js</a>, <a href="motor_index.js.html#line-263">line 263</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id="resume" class="function public"><span class="name">resume</span><span class="signature-params">( [&nbsp;<span class="signature-param">duration</span>&nbsp;]&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Motor}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Resumes the current speed</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>duration</code></td>
+							<td><span class="param-type">number</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Time in millseconds to hold the brake
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Motor</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="motor_index.js.html">motor/index.js</a>, <a href="motor_index.js.html#line-292">line 292</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id="release" class="function public"><span class="name">release</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{Motor}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Releases the brake and calls resume</div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Motor</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="motor_index.js.html">motor/index.js</a>, <a href="motor_index.js.html#line-303">line 303</a></p>
 								</div>
 							</div>
 			

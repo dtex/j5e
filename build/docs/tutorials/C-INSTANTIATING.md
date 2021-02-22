@@ -4,7 +4,7 @@ J5e device instantiation allows for a few different patterns. On one hand we wan
 new DeviceClass(ioOptions);
 ````
 
-The ```ioOptions``` object follows the [TC-53 IO Class Pattern](https://github.com/EcmaTC53/spec/blob/master/docs/tc53.md#9-io-class-pattern) and accepts the same properties describes in the individual IO classes. In addition, J5e can accepts the `ioOptions.io` property which can be either a path or constructor in the event you do not want to use the default io provider.
+The ```ioOptions``` object follows the [TC-53 IO Class Pattern](https://github.com/EcmaTC53/spec/blob/master/docs/tc53.md#9-io-class-pattern) and accepts the same properties described in the individual IO classes. In addition, J5e can accept the `ioOptions.io` property which can be either a path or constructor in the event you do not want to use the default io provider.
 
 *Whoah, what's a provider?*
 
