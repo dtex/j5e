@@ -50,7 +50,6 @@
     "xs",
     "esp8266",
     "esp32",
-    
     "button",
     "led",
     "motor",
@@ -61,10 +60,10 @@
     "switch",
     "sensor",
     "thermometer",
-      "lm35",
-      "lm335",
-      "mf52a103j3470",
-      "tmp36"
+    "lm35",
+    "lm335",
+    "mf52a103j3470",
+    "tmp36"
   ],
   "author": "Donovan Buck <donovan@donovan.bz>",
   "license": "MIT",
@@ -83,7 +82,7 @@
     "foodoc": "github:dtex/foodoc#master",
     "fs-extra": "^8.1.0",
     "jsdoc": "^3.6.4",
-    "mocha": "^8.0.1",
+    "mocha": "^8.3.0",
     "sinon": "^9.0.2"
   },
   "dependencies": {}
