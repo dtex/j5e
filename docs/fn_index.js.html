@@ -249,7 +249,7 @@ export async function getProvider(ioOpts, ioType) {
  * @ignore
  */
 export async function defaultProvider(ioType) {
-  let defaultProvider = Host.io;
+  let defaultProvider = device.io;
   return defaultProvider[ioType];
 }
 

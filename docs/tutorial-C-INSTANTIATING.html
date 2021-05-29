@@ -109,7 +109,7 @@
 <p>The options argument is always required and can take a few different forms:</p>
 <ul>
 <li>
-<p><strong>Pin Identifier</strong> - This is the simplest scenario and would be a single number or string. J5e will assume the provider is built into the Host.io global. The particular type of IO you need will vary by device type. For example, servo would default to <code>Host.io.PWM</code>. Button or switch would default to <code>Host.io.Digital</code>.</p>
+<p><strong>Pin Identifier</strong> - This is the simplest scenario and would be a single number or string. J5e will assume the provider is built into the device.io global. The particular type of IO you need will vary by device type. For example, servo would default to <code>device.io.PWM</code>. Button or switch would default to <code>device.io.Digital</code>.</p>
 <pre class="prettyprint source lang-js"><code>import LED from &quot;j5e/led&quot;;
 
 // Instantiate an LED connected to 
