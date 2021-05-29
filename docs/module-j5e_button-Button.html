@@ -158,18 +158,18 @@
 			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Use a button to control an LED</p></div>
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Button from &quot;j5e/button&quot;;
-			import LED from &quot;j5e/led&quot;;
-			
-			const button &#x3D; await new Button(12);
-			const led &#x3D; await new LED(13);
-			
-			button.on(&quot;open&quot;, function() {
-			  led.off();
-			});
-			
-			button.on(&quot;close&quot;, function() {
-			  led.on();
-			});</code></pre>
+import LED from &quot;j5e/led&quot;;
+	
+const button &#x3D; await new Button(12);
+const led &#x3D; await new LED(13);
+
+button.on(&quot;open&quot;, function() {
+  led.off();
+});
+
+button.on(&quot;close&quot;, function() {
+  led.on();
+});</code></pre>
 					</div>
 			</div>			<div class="callout callout-warning"><h5>Fires</h5>		<form class="form-horizontal fires">
 							<div class="form-group">
@@ -764,20 +764,20 @@
 					</form>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">import Button from &quot;j5e/button&quot;;
-			import LED from &quot;j5e/led&quot;;
-			
-			const button &#x3D; await new Button(14);
-			button.configure({
-			  debounce: 20
-			});
-			
-			button.on(&quot;open&quot;, function() {
-			 led.off();
-			});
-			
-			button.on(&quot;close&quot;, function() {
-			 led.on();
-			});</code></pre>
+import LED from &quot;j5e/led&quot;;
+
+const button &#x3D; await new Button(14);
+button.configure({
+  debounce: 20
+});
+
+button.on(&quot;open&quot;, function() {
+ led.off();
+});
+
+button.on(&quot;close&quot;, function() {
+ led.on();
+});</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
