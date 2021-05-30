@@ -16,7 +16,7 @@ In code a provider is a bundle of classes that work with that "thing". Providers
 In TC-53 parlance, an "IO" is a single GPIO (General-Purpose Input/Output) instance. That GPIO Instance could be Digital, PWM, Serial, I2C, SPI or something else. **The ```ioOptions``` options object describes the configuration for the IO instance**. This configuration could include which board to use, which pins, what data rate, etc. The details depend on your situation and provider. 
 
 The options argument is always required and can take a few different forms: 
-* **Pin Identifier** - This is the simplest scenario and would be a single number or string. J5e will assume the provider is built into the Host.io global. The particular type of IO you need will vary by device type. For example, servo would default to ```Host.io.PWM```. Button or switch would default to ```Host.io.Digital```.
+* **Pin Identifier** - This is the simplest scenario and would be a single number or string. J5e will assume the provider is built into the device.io global. The particular type of IO you need will vary by device type. For example, servo would default to ```device.io.PWM```. Button or switch would default to ```device.io.Digital```.
   ````js
   import LED from "j5e/led";
 
