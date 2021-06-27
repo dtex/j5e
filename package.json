@@ -30,7 +30,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "c8 mocha --exit",
+    "test": "c8 mocha --recursive --exit",
     "docs": "jsdoc -t ./node_modules/foodoc/template -u ./build/docs/tutorials -c ./build/docs/jsdoc.json -d docs",
     "lint": "npm run lintLib;npm run lintTest",
     "lintLib": "eslint lib/*/*.js",
