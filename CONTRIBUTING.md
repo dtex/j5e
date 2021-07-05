@@ -1,5 +1,5 @@
 ## j5e Repo Anatomy
-One goal of j5e is write once, run anywhere. We are building toward this goal before TC-53 IOCP conformant platforms exist. To that end, the structure of this repo may change to help us support more platforms. The JS is the same across platforms, but the different implementations of ECMAScript Modules may require special concessions (package.json vs manifest.json and varying module resolution schemes for example).
+One goal of j5e is write once, run anywhere. We are building toward this goal before ECMA-419 conformant platforms exist. To that end, the structure of this repo may change to help us support more platforms. The JS is the same across platforms, but the different implementations of ECMAScript Modules may require special concessions (package.json vs manifest.json and varying module resolution schemes for example).
 
 ### Special Scaffolding
 j5e is designed to import just the parts it needs, so subpath exports in node.js are absolutely necessary. To make everything link up you will need to symlink your dev folder to itself. From the root run ```npm link``` and then ```npm link j5e```. This will allow tests to import subpaths, and for subpaths to import their siblings.
