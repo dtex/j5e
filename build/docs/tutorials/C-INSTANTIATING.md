@@ -4,7 +4,7 @@ J5e device instantiation allows for a few different patterns. On one hand we wan
 new DeviceClass(ioOptions);
 ````
 
-The ```ioOptions``` object follows the [TC-53 IO Class Pattern](https://github.com/EcmaTC53/spec/blob/master/docs/tc53.md#9-io-class-pattern) and accepts the same properties described in the individual IO classes. In addition, J5e can accept the `ioOptions.io` property which can be either a path or constructor in the event you do not want to use the default io provider.
+The ```ioOptions``` object follows the [ECMA-419 specification](https://www.ecma-international.org/publications-and-standards/standards/ecma-419/) and accepts the same properties described in the individual IO classes. In addition, J5e can accept the `ioOptions.io` property which can be either a path or constructor in the event you do not want to use the default io provider.
 
 *Whoah, what's a provider?*
 
@@ -13,7 +13,7 @@ In the physical world a provider is a "thing" (hardware or software) that provid
 In code a provider is a bundle of classes that work with that "thing". Providers could come from a board manufacturer, an expander library, an IoT cloud service, an open source hero, or a myriad of other places. For the ESP8266 and ESP32, providers are bundled with the [Moddable SDK](https://github.com/Moddable-OpenSource/moddable), and are part of that SDK's IO module. They give access to the built-in GPIO pins.
 
 ## The `ioOptions` object
-In TC-53 parlance, an "IO" is a single GPIO (General-Purpose Input/Output) instance. That GPIO Instance could be Digital, PWM, Serial, I2C, SPI or something else. **The ```ioOptions``` options object describes the configuration for the IO instance**. This configuration could include which board to use, which pins, what data rate, etc. The details depend on your situation and provider. 
+In ECMA-419 parlance, an "IO" is a single GPIO (General-Purpose Input/Output) instance. That GPIO Instance could be Digital, PWM, Serial, I2C, SPI or something else. **The ```ioOptions``` options object describes the configuration for the IO instance**. This configuration could include which board to use, which pins, what data rate, etc. The details depend on your situation and provider. 
 
 The options argument is always required and can take a few different forms: 
 * **Pin Identifier** - This is the simplest scenario and would be a single number or string. J5e will assume the provider is built into the device.io global. The particular type of IO you need will vary by device type. For example, servo would default to ```device.io.PWM```. Button or switch would default to ```device.io.Digital```.
@@ -91,7 +91,7 @@ The options argument is always required and can take a few different forms:
   ````
 
   ---
-* **A TC-53 Peripheral Class Pattern conformant options object** - The [peripheral class pattern](https://github.com/EcmaTC53/spec/blob/master/docs/tc53.md#12-peripheral-class-pattern) allows for explicit description of each of the required IO instances for a device type.
+* **An ECMA-419 Peripheral Class Pattern conformant options object** - The [peripheral class pattern](https://github.com/EcmaTC53/spec/blob/master/docs/tc53.md#12-peripheral-class-pattern) allows for explicit description of each of the required IO instances for a device type.
   ````js
   import Motor from "j5e/motor";
 

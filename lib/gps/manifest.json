@@ -3,11 +3,12 @@
   "modules": {
     "*": [],
     "j5e/fn": "$(j5e)/lib/fn/*",
-    "j5e/relay": "$(j5e)/lib/relay/*"
+    "j5e/event": "$(j5e)/lib/event/*",
+    "j5e/gps": "$(j5e)/lib/gps/*"
   },
   "preload": [
     "j5e/fn",
-    "j5e/relay"
+    "j5e/event"
   ],
   "platforms": {
     "esp": {},

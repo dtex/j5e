@@ -7,6 +7,7 @@
     "j5e/easing": "$(j5e)/lib/easing/*",
     "j5e/event": "$(j5e)/lib/event/*",
     "j5e/fn": "$(j5e)/lib/fn/*",
+    "j5e/gps": "$(j5e)/lib/gps/*",
     "j5e/led": "$(j5e)/lib/led/*",
     "j5e/light": "$(j5e)/lib/light/*",
     "j5e/motor": "$(j5e)/lib/motor/*",
@@ -25,8 +26,9 @@
   "preload": [],
   "platforms": {
     "esp": {},
+    "esp32": {},
     "...": {
-      "error": "Experimental TC53 IO modules unsupported"
+      "error": "Experimental ECMA-419 IO modules unsupported"
     }
   }
 }
