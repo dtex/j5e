@@ -1,6 +1,6 @@
 {
   "name": "j5e",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "description": "j5e is a device framework built to levarage the ECMA-419 specification",
   "main": "index.js",
   "exports": {
