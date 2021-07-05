@@ -26,8 +26,9 @@
   "preload": [],
   "platforms": {
     "esp": {},
+    "esp32": {},
     "...": {
-      "error": "Experimental TC53 IO modules unsupported"
+      "error": "Experimental ECMA-419 IO modules unsupported"
     }
   }
 }

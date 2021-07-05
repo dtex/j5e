@@ -1,0 +1,512 @@
+<!-- start:source.tmpl.hbs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+		<title>gps/index.js</title>
+		<link rel="icon" type="image/png" href="favicon.png"/>
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="css/prism.min.css">
+		<link type="text/css" rel="stylesheet" href="css/template.min.css">
+			<link type="text/css" rel="stylesheet" href="./static/custom.css">
+			<style>
+				.page-header,
+				pre.code-toolbar > .toolbar:hover {
+					background-color: #000;
+				}
+				.callout-primary,
+				.toc .nav > li > a:hover,
+				.toc .nav > li > a:focus,
+				.toc .nav > li.active > a,
+				.toc .nav > li.active > a:hover,
+				.toc .nav > li.active > a:focus,
+				pre.code-toolbar > .toolbar:hover {
+					border-left-color: #000;
+				}
+				pre.code-toolbar > .toolbar:hover {
+					border-bottom-color: #000;
+				}
+				.callout-primary h5,
+				.symbol-title.collapsible-symbol .toggle-icon,
+				.breadcrumb li a,
+				.toc .nav > li > a:hover,
+				.toc .nav > li > a:focus,
+				.toc .nav > li.active > a,
+				.toc .nav > li.active > a:hover,
+				.toc .nav > li.active > a:focus {
+					color: #000;
+				}
+			</style>
+		<script type="text/javascript">
+			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"MMMM D, YYYY","systemName":"J5e","systemSummary":"Johnny Five for Embedded Systems","systemLogo":"img/j5e.png","systemColor":"#000","navMembers":[{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Copyright © 2019—2021 The contributors to the j5e and Johnny-Five projects.","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":true,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":{"ua":"UA-36026876-4","domain":"dtex.github.io"},"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":["./static/custom.css"],"scripts":[],"monospaceLinks":false,"cleverLinks":false,"forkMe":"./build/docs/fork/forkme_right_white_ffffff.webp"};
+			window.DOCLET_TOC_ENABLED = false;
+			window.DOCLET_AFILTER_ENABLED = false;
+		</script>
+</head>
+<body>
+	<!-- start:navbar.hbs -->
+	<header class="navbar navbar-default navbar-fixed-top navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand branding-logo" href="index.html" style="background-image: url(img/j5e.png);">
+					J5e
+				</a>
+				<!-- displayed on small devices -->
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="navbar-collapse collapse" id="topNavigation">
+				<ul class="nav navbar-nav">
+							<li><a href="list_module.html">Modules</a></li>
+							<li><a href="list_tutorial.html">Tutorials</a></li>
+				</ul>
+					<!-- start:lunr-search-navbar.hbs -->
+					<form class="navbar-form navbar-right" role="search">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Search" id="lunr-search-input">
+							<div class="input-group-btn">
+								<button class="btn btn-default" id="lunr-search-submit">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+					<!-- start:lunr-search-navbar.hbs -->		</div>
+		</div>
+	</header>
+	<!-- end:navbar.hbs -->		<div class="page-header">
+			<div class="container">
+				<span class="kind">source</span>
+				<h1><span class="name">gps/index.js</span></h1>
+			</div>
+		</div>
+	<div class="container content">
+		<div class="row">
+			<div class="col-md-12 main-content">
+		<section class="source-section">
+			<article></article>
+			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">/**
+ * For working with GPS receivers
+ * @module j5e/gps
+ * @requires module:j5e/event
+ * @requires module:j5e/fn
+ */
+
+import { Emitter } from "j5e/event";
+import { normalizeIO, getProvider, toFixed } from "j5e/fn";
+
+/**
+ * Class representing a GPS receiver
+ * @classdesc The GPS class allows communication with GPS receivers
+ * @extends Emitter
+ * @fires GPS#sentence
+ * @fires GPS#operations
+ * @fires GPS#acknowledge
+ * @fires GPS#unkown
+ * @fires GPS#data
+ * @fires GPS#change
+ * @fires GPS#navigation
+ */
+class GPS extends Emitter {
+
+  #state = {
+    input: "",
+    frequency: 1,
+    fixed: 6,
+    sat: {},
+    latitude: 0.0,
+    longitude: 0.0,
+    altitude: 0.0,
+    speed: 0.0,
+    course: 0.0,
+    time: null,
+    lowPowerMode: false
+  };
+
+  /**
+   * Instantiate a GPS Receiver
+   * @param {(number[]|string[]|object)} io - The pin numbers, pin identifiers or a complete IO options object
+   * @param {number} [io.baud=9600] - The baud rate for serial communication
+   * @param {(number[]|string[])} [io.pins] - If passing an object, the pin numbers or pin identifiers for transmit and receive in a 2 element array
+   * @param {(number|string)} [io.transmit] - The pin number or pin identifier for transmit
+   * @param {(number|string)} [io.receive] - The pin number or pin identifier for receive
+   * @param {(number|string)} [io.port=0] - The serial port number or port identifier
+   */
+
+  constructor(io) {
+    return (async() => {
+
+      io = normalizeIO(io);
+
+      if (Array.isArray(io.pins)) {
+        io.transmit = io.pins[0];
+        io.receive = io.pins[1];
+      }
+
+      super();
+
+      const Provider = await getProvider(io, "Serial");
+
+      this.io = new Provider({
+        baud: io.baud || 9600,
+        transmit: io.transmit,
+        receive: io.receive,
+        port: io.port || 0,
+        format: "buffer",
+        onReadable: (count) => {
+          this.processData(count);
+        }
+      });
+
+      return this;
+    })();
+  }
+
+  /**
+   * Configure a GPS
+   * @returns {GPS} The instance on which the method was called
+   * @param {object} [options={}] - An object containing device options
+   * @param {number} [options.frequency=1] - The frequency of updates in Hz
+   * @param {number} [options.fixed=6] - Precision for latitude and longitude readings
+   * @example
+   * import GPS from "j5e/gps";
+   *
+   * const gps = await new GPS({
+   *   transmit: 17,
+   *   receive: 16,
+   *   port: 2,
+   *   baud: 9600
+   * });
+	 *
+   * gps.configure({
+   *   frequency: 2
+   * });
+   */
+  config(options) {
+    if (options.frequency) {
+      this.frequency = options.frequency;
+      this.#state.frequency = options.frequency;
+    }
+    if (options.fixed) {
+      this.#state.fixed = options.fixed;
+    }
+  }
+
+  /**
+   * The most recent measured latitude
+   * @type {number}
+   * @readonly
+   */
+  get latitude() {
+    return this.#state.latitude;
+  }
+
+  /**
+   * The most recent measured longitude
+   * @type {number}
+   * @readonly
+   */
+  get longitude() {
+    return this.#state.longitude;
+  }
+
+  /**
+   * The most recent measured altitude
+   * @type {number}
+   * @readonly
+   */
+  get altitude() {
+    return this.#state.altitude;
+  }
+
+  /**
+   * Satellite operation details {pdop, hdop, vdop}
+   * @type {object}
+   * @readonly
+   */
+  get sat() {
+    return this.#state.sat;
+  }
+
+  /**
+   * The most recent measured ground speed
+   * @type {number}
+   * @readonly
+   */
+  get speed() {
+    return this.#state.speed;
+  }
+
+  /**
+   * The most recent measured course
+   * @type {number}
+   * @readonly
+   */
+  get course() {
+    return this.#state.course;
+  }
+
+  /**
+   * Time of last fix
+   * @type {number}
+   * @readonly
+   */
+  get time() {
+    return this.#state.time;
+  }
+
+  /**
+   * Frequency of updates in hz
+   * @type {number}
+   */
+  get frequency() {
+    return this.#state.frequency;
+  }
+
+  set frequency(frequency) {
+    throw "Frequency setter not defined";
+  }
+
+  /*
+   * Internal method used to process incoming serial data
+   * @private
+   * @param {number} count - Length of data available for serial read
+   */
+  processData(count) {
+    let x = this.io.read(count);
+
+    this.#state.input += String.fromCharCode.apply(null, new Uint8Array(x));
+
+    let sentences = this.#state.input.split("\r\n");
+    if (sentences.length > 1) {
+      for (let i = 0; i &lt; sentences.length - 1; i++) {
+        this.parseNmeaSentence(sentences[i]);
+      }
+      this.#state.input = sentences[sentences.length - 1];
+    }
+  }
+
+  /*
+   * Send a command to the GPS receiver module
+   * @param {string} command - The command (minus the checksum) to send
+   * @returns null
+   */
+  sendCommand = function(command) {
+    // Append *, checksum and cr/lf
+    command += getNmeaChecksum(command.substring(1));
+    let commandAB = str2ab(command);
+    this.io.write(commandAB);
+  };
+
+  /*
+   * Internal method used parsing NMEA data
+   * @param {string} sentence - The NMEA sentence to be parsed
+   * @private
+   * @see {@link http://aprs.gids.nl/nmea|NMEA Sentence Information}
+   */
+  parseNmeaSentence(sentence) {
+    const cksum = sentence.split("*");
+
+    // Check for valid sentence
+    if (cksum[1] !== getNmeaChecksum(cksum[0].substring(1))) {
+      return;
+    }
+
+    this.emit("sentence", sentence);
+
+    const segments = cksum[0].split(",");
+    const last = {
+      latitude: this.#state.latitude,
+      longitude: this.#state.longitude,
+      altitude: this.#state.altitude,
+      speed: this.#state.speed,
+      course: this.#state.course
+    };
+
+    let now = new Date();
+
+    switch (segments[0]) {
+      case "$GPGGA":
+        // Time, position and fix related data
+        this.#state.time = new Date(now.getUTCFullYear(), now.getMonth(), now.getDay(), Number(segments[1].substring(0, 2)), Number(segments[1].substring(2, 4)), Number(segments[1].substring(4, 6)));
+        this.#state.latitude = degToDec(segments[2], 2, segments[3], this.#state.fixed);
+        this.#state.longitude = degToDec(segments[4], 3, segments[5], this.#state.fixed);
+        this.#state.altitude = Number.parseFloat(Number(segments[9]).toFixed(this.#state.fixed));
+        break;
+
+      case "$GPGSA":
+        // Operating details
+        this.#state.sat.satellites = segments.slice(3, 15);
+        this.#state.sat.pdop = Number(segments[15]);
+        this.#state.sat.hdop = Number(segments[16]);
+        this.#state.sat.vdop = Number(segments[17]);
+        this.emit("operations", this.#state.sat);
+        break;
+
+      case "$GPRMC":
+        // GPS &amp; Transit data
+        this.#state.time = new Date(now.getUTCFullYear(), now.getMonth(), now.getDay(), Number(segments[1].substring(0, 2)), Number(segments[1].substring(2, 4)), Number(segments[1].substring(4, 6)));
+        this.#state.latitude = degToDec(segments[3], 2, segments[4], this.#state.fixed);
+        this.#state.longitude = degToDec(segments[5], 3, segments[6], this.#state.fixed);
+        this.#state.course = Number(segments[8]);
+        this.#state.speed = toFixed(segments[7] * 0.514444, this.#state.fixed);
+        break;
+
+      case "$GPVTG":
+        // Track Made Good and Ground Speed
+        this.#state.course = Number(segments[1]);
+        this.#state.speed = toFixed(segments[5] * 0.514444, this.#state.fixed);
+        break;
+
+      case "$GPGSV":
+        // Satellites in view
+        break;
+
+      case "$PGACK":
+        // Acknowledge command
+        this.emit("acknowledge", sentence);
+        break;
+
+      default:
+        this.emit("unknown", sentence);
+        break;
+    }
+
+    this.emit("data", {
+      latitude: this.#state.latitude,
+      longitude: this.#state.longitude,
+      altitude: this.#state.altitude,
+      speed: this.#state.speed,
+      course: this.#state.course,
+      sat: this.#state.sat,
+      time: this.#state.time
+    });
+
+    if (last.latitude !== this.#state.latitude ||
+      last.longitude !== this.#state.longitude ||
+      last.altitude !== this.#state.altitude) {
+
+      this.emit("change", {
+        latitude: this.#state.latitude,
+        longitude: this.#state.longitude,
+        altitude: this.#state.altitude
+      });
+    }
+
+    if (last.speed !== this.#state.speed ||
+      last.course !== this.#state.course) {
+
+      this.emit("navigation", {
+        speed: this.#state.speed,
+        course: this.#state.course
+      });
+    }
+
+  };
+
+}
+
+/*
+ * Internal method used to convert degrees to decimal
+ * @param {string} degrees - Degrees from NMEA sentence
+ * @param {number} intDigitsLength - Length of the degrees value part fo the string
+ * @param {string} cardinal - Cardinal direction [N, S, E, W]
+ * @param {number} fixed - Max number of digits after the decimal in the returned value
+ * @private
+ */
+function degToDec(degrees, intDigitsLength, cardinal, fixed) {
+  if (degrees) {
+    let decimal = Number(degrees.substring(0, intDigitsLength)) + Number(degrees.substring(intDigitsLength)) / 60;
+
+    if (cardinal === "S" || cardinal === "W") {
+      decimal *= -1;
+    }
+    return Number(decimal.toFixed(fixed));
+  } else {
+    return 0;
+  }
+}
+
+/*
+ * Internal method used to calculate NMEA chuecksum
+ * @param {string} sentence - Sentence from GPS receiver
+ * @private
+ */
+function getNmeaChecksum(sentence) {
+  let cksum = 0x00;
+  for (let i = 0; i &lt; sentence.length; ++i) {
+    cksum ^= sentence.charCodeAt(i);
+  }
+  cksum = cksum.toString(16).toUpperCase();
+
+  if (cksum.length &lt; 2) {
+    cksum = ("00" + cksum).slice(-2);
+  }
+
+  return cksum;
+}
+
+/*
+ * Internal method used to convert from string to array buffer
+ * @param {string} str - String to convert
+ * @private
+ */
+function str2ab(str) {
+  let buf = new ArrayBuffer(str.length);
+  let bufView = new Uint8Array(buf);
+  for (let i = 0, strLen = str.length; i &lt; strLen; i++) {
+    bufView[i] = str.charCodeAt(i);
+  }
+  return buf;
+}
+
+export default GPS;
+</code></pre>
+		</section>
+			</div>
+		</div>
+	</div>
+	<footer>
+				<div class="copyright">Copyright © 2019—2021 The contributors to the j5e and Johnny-Five projects.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+	</footer>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/clipboard.min.js"></script>
+	<script src="js/prism.min.js"></script>
+	<script src="js/template.min.js"></script>
+		<!-- start:lunr-search-modal.hbs -->
+		<div class="modal fade" id="lunr-search-modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Search results</h4>
+					</div>
+					<div class="modal-body" id="lunr-search-body">
+					</div>
+					<div class="modal-footer" id="lunr-search-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+		<!-- end:lunr-search-modal.hbs -->		<script src="js/lunr.min.js"></script>
+	
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-36026876-4"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());gtag('config', 'UA-36026876-4');
+</script>
+<a href="https://github.com/dtex/j5e"><img width="149" height="149" style="z-index:1000;position:absolute;top: 50px;right: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_white_ffffff.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a></body>
+</html>
+<!-- end:source.tmpl.hbs -->

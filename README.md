@@ -27,14 +27,15 @@ Interested in contributing? Check out [CONTRIBUTING.md](https://github.com/dtex/
       <ul>
         <li><a href="https://dtex.github.io/j5e/module-j5e_animation.html">Animation</a></li>
         <li><a href="https://dtex.github.io/j5e/module-j5e_button.html">Button</a></li>
+        <li><a href="https://dtex.github.io/j5e/module-j5e_gps.html">GPS</a></li>
         <li><a href="https://dtex.github.io/j5e/module-j5e_led.html">LED</a></li>
         <li><a href="https://dtex.github.io/j5e/module-j5e_light.html">Light (Photoresistors)</a></li>
         <li><a href="https://dtex.github.io/j5e/module-j5e_motor.html">Motor</a></li>
-        <li><a href="https://dtex.github.io/j5e/module-j5e_relay.html">Relay</a></li>
       </ul>
     </td>
     <td width="50%">
       <ul>
+        <li><a href="https://dtex.github.io/j5e/module-j5e_relay.html">Relay</a></li>
         <li><a href="https://dtex.github.io/j5e/module-j5e_rgb.html">RGB LED</a></li>
         <li><a href="https://dtex.github.io/j5e/module-j5e_sensor.html">Sensor</a></li>
         <li><a href="https://dtex.github.io/j5e/module-j5e_servo.html">Servo</a></li>

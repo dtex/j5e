@@ -1,7 +1,7 @@
 {
   "name": "j5e",
   "version": "0.12.0",
-  "description": "j5e is a device framework built for ECMA TC-53's IO pattern",
+  "description": "j5e is a device framework built to levarage the ECMA-419 specification",
   "main": "index.js",
   "exports": {
     ".": "./index.js",
@@ -75,7 +75,7 @@
   "homepage": "https://dtex.github.com/j5e",
   "sourceType": "module",
   "devDependencies": {
-    "@dtex/mock-io": "0.0.5",
+    "@dtex/mock-io": "^0.0.6",
     "babel-eslint": "^10.1.0",
     "c8": "^7.4.0",
     "chai": "^4.2.0",
