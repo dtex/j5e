@@ -20,6 +20,34 @@ describe("LED - Digital", function() {
 
     });
 
+    it("should return a valid LED instance when passed an Digital Instance", async function() {
+
+      const digital = new Digital({
+        pin: 12,
+        io: Digital
+      });
+      const led = await new LED(digital);
+
+      assert.equal(led instanceof LED, true);
+      assert.equal(led.LOW, 0);
+      assert.equal(led.HIGH, 1);
+
+    });
+
+    it("should return a valid LED instance when options.io is a string", async function() {
+
+      const digital = new Digital({
+        pin: 12,
+        io: "@dtex/mock-io"
+      });
+      const led = await new LED(digital);
+
+      assert.equal(led instanceof LED, true);
+      assert.equal(led.LOW, 0);
+      assert.equal(led.HIGH, 1);
+
+    });
+
   });
 
   describe("Properties", function() {
