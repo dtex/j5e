@@ -1,0 +1,19 @@
+{
+  "include": [],
+  "modules": {
+    "*": [],
+    "j5e/fn": "$(j5e)/lib/fn/*",
+    "j5e/expander": "$(j5e)/lib/expander/*",
+    "j5e/pca9685": "$(j5e)/lib/expander/pca9685/*"
+  },
+  "preload": [
+    "j5e/fn"
+  ],
+  "platforms": {
+    "esp": {},
+    "esp32": {},
+    "...": {
+      "error": "Experimental ECMA-419 IO modules unsupported"
+    }
+  }
+}

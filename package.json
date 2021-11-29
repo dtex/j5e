@@ -9,6 +9,8 @@
     "./button": "./lib/button/index.js",
     "./easing": "./lib/easing/index.js",
     "./event": "./lib/event/index.js",
+    "./expander": "./lib/expander/index.js",
+    "./pca9685": "./lib/expander/pca9685/index.js",
     "./fn": "./lib/fn/index.js",
     "./gps": "./lib/gps/index.js",
     "./led": "./lib/led/index.js",
