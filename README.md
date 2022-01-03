@@ -16,32 +16,11 @@ const led = await new LED(14);
 led.blink();
 ````
 
-New users should check out the [Getting Started](https://dtex.github.io/j5e/tutorial-A-GETSTARTED.html) guide.
+New users should check out the [Getting Started](https://j5e.dev/getting-started/installation/) guide.
 
-Interested in contributing? Check out [CONTRIBUTING.md](https://github.com/dtex/J5e/blob/master/CONTRIBUTING.md) in the repo.
+Full documentation can be found at [j5e.dev](https://j5e.dev).
 
-### J5e Modules
-<table style="border: none;" width="100%">
-  <tr>
-    <td width="50%">
-      <ul>
-        <li><a href="https://dtex.github.io/j5e/module-j5e_animation.html">Animation</a></li>
-        <li><a href="https://dtex.github.io/j5e/module-j5e_button.html">Button</a></li>
-        <li><a href="https://dtex.github.io/j5e/module-j5e_gps.html">GPS</a></li>
-        <li><a href="https://dtex.github.io/j5e/module-j5e_led.html">LED</a></li>
-        <li><a href="https://dtex.github.io/j5e/module-j5e_light.html">Light (Photoresistors)</a></li>
-        <li><a href="https://dtex.github.io/j5e/module-j5e_motor.html">Motor</a></li>
-      </ul>
-    </td>
-    <td width="50%">
-      <ul>
-        <li><a href="https://dtex.github.io/j5e/module-j5e_relay.html">Relay</a></li>
-        <li><a href="https://dtex.github.io/j5e/module-j5e_rgb.html">RGB LED</a></li>
-        <li><a href="https://dtex.github.io/j5e/module-j5e_sensor.html">Sensor</a></li>
-        <li><a href="https://dtex.github.io/j5e/module-j5e_servo.html">Servo</a></li>
-        <li><a href="https://dtex.github.io/j5e/module-j5e_switch.html">Switch</a></li>
-        <li><a href="https://dtex.github.io/j5e/module-j5e_thermometer.html">Thermometer</a></li>
-      </ul>
-    </td>
-  </tr>
-</table>
+Interested in contributing? Check out [CONTRIBUTING.md](https://github.com/dtex/J5e/blob/master/CONTRIBUTING.md) in this repo.
+
+The documentation repo for J5e can be found on [github](https://github.com/dtex/j5e-docs).
+
