@@ -12,10 +12,8 @@ Currently, the only provider that conforms to ECMA-419 is [Moddable's IO module 
 ````js
 import LED from "j5e/led";
 
-(async() => {
-  const led = await new LED(14);
-  led.blink();
-})();
+const led = await new LED(14);
+led.blink();
 ````
 
 New users should check out the [Getting Started](https://j5e.dev/getting-started/installation/) guide.
