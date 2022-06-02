@@ -6,6 +6,9 @@
 	"modules": {
 		"*": "./main"
 	},
+	"defines": {
+		"main_async": 1
+	},
 	"creation": {
 		"static": 32768,
 		"chunk": {

@@ -6,5 +6,8 @@
 	],
 	"modules": {
 		"*": "./main"
+	},
+	"defines": {
+		"main_async": 1
 	}
 }
