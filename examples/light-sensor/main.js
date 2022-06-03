@@ -7,5 +7,5 @@ const led = await new LED(12, {
 });
 
 light.on("change", function(data) {
-  led.brightness(1023 - data);
+  led.brightness(1 - data/led.HIGH);
 });
