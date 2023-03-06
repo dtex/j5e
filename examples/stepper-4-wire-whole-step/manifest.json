@@ -1,0 +1,13 @@
+{
+	"include": [
+		"$(MODDABLE)/examples/manifest_base.json",
+		"$(MODDABLE)/modules/io/manifest.json",
+		"$(j5e)/lib/stepper/manifest.json"
+	],
+	"modules": {
+		"*": "./main"
+	},
+	"defines": {
+		"main_async": 1
+	}
+}
