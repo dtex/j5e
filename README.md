@@ -18,7 +18,7 @@ led.blink();
 
 New users should check out the [Getting Started](https://j5e.dev/getting-started/installation/) guide.
 
-Full documentation can be found at [j5e.dev](https://j5e.dev).
+Full documentation can be found at [www.j5e.dev](https://www.j5e.dev).
 
 Interested in contributing? Check out [CONTRIBUTING.md](https://github.com/dtex/J5e/blob/master/CONTRIBUTING.md) in this repo.
 
