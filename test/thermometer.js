@@ -394,6 +394,7 @@ describe("Thermometer", function() {
           assert.equal(count, 4);
 
           thermometer.disable();
+          clock.restore();
 
         });
 
@@ -1528,6 +1529,7 @@ describe("Thermometer", function() {
         });
         assert.equal(dataSpy.callCount, 2);
         assert.equal(dataSpy.lastCall.args[0].celsius, 15.5);
+        clock.restore();
       });
 
       it("should emit the correct events and values when smoothing is 5", async function() {
@@ -1556,6 +1558,7 @@ describe("Thermometer", function() {
         });
         assert.equal(dataSpy.callCount, 4);
         assert.equal(dataSpy.lastCall.args[0].celsius, 18);
+        clock.restore();
       });
 
       it("should emit the correct events and values when smoothing changes", async function() {
@@ -1586,6 +1589,7 @@ describe("Thermometer", function() {
         });
         assert.equal(dataSpy.callCount, 3);
         assert.equal(dataSpy.lastCall.args[0].celsius, 15.5);
+        clock.restore();
       });
 
     });

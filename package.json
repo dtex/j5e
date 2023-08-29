@@ -75,15 +75,17 @@
   "homepage": "https://dtex.github.com/j5e",
   "sourceType": "module",
   "devDependencies": {
-    "@dtex/mock-io": "^0.0.6",
-    "babel-eslint": "^10.1.0",
-    "c8": "^7.4.0",
-    "chai": "^4.2.0",
-    "eslint": "^7.4.0",
-    "eslint-config-idiomatic": "^4.0.0",
+    "@dtex/mock-io": "^0.0.7",
+    "c8": "^8.0.1",
+    "chai": "^4.3.8",
+    "eslint": "^8.48.0",
+    "eslint-config-standard": "^17.1.0",
+    "@babel/eslint-parser": "^7.22.11",
     "fs-extra": "^8.1.0",
-    "mocha": "^8.3.0",
-    "sinon": "^9.0.2"
+    "mocha": "^10.2.0",
+    "sinon": "^15.2.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    
+  }
 }
