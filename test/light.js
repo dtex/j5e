@@ -383,6 +383,7 @@ describe("Light", function() {
 
           assert.equal(count, 4);
 
+          clock.restore();
           light.disable();
 
         });
@@ -634,6 +635,7 @@ describe("Light", function() {
         light.read();
         clock.tick(1000);
         assert.equal(light.level, 0.12);
+        clock.restore();
         light.disable();
       });
 
@@ -1075,6 +1077,7 @@ describe("Light", function() {
         });
         assert.equal(dataSpy.callCount, 2);
         assert.equal(dataSpy.lastCall.args, 16);
+        clock.restore();
       });
 
       it("should emit the correct events and values when smoothing is 5", async function() {
@@ -1103,6 +1106,7 @@ describe("Light", function() {
         });
         assert.equal(dataSpy.callCount, 4);
         assert.equal(dataSpy.lastCall.args, 18);
+        clock.restore();
       });
 
       it("should emit the correct events and values when smoothing changes", async function() {
@@ -1133,6 +1137,8 @@ describe("Light", function() {
         });
         assert.equal(dataSpy.callCount, 3);
         assert.equal(dataSpy.lastCall.args, 16);
+
+        clock.restore();
       });
 
     });

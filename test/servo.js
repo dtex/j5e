@@ -344,6 +344,8 @@ describe("Servo - Standard", function() {
         clock.tick(500);
         assert.equal(servo.position, 50);
 
+        clock.restore();
+
       });
 
     });
@@ -803,6 +805,7 @@ describe("Servo - Standard", function() {
         assert.equal(completeSpy.callCount, 0);
         clock.tick(520);
         assert.equal(completeSpy.callCount, 1);
+        clock.restore();
       });
 
     });
