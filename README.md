@@ -1,8 +1,8 @@
-![Node.js CI](https://github.com/dtex/j5e/workflows/Node.js%20CI/badge.svg)
+<!--![Node.js CI](https://github.com/dtex/j5e/workflows/Node.js%20CI/badge.svg)-->
 ## J5e
 <img width="40%" align="right" alt="A robot poking its head out from inside washing machine" style="margin:0 0 35px 35px;" src="https://raw.githubusercontent.com/dtex/j5e/main/build/docs/img/J5-embedded-666x666.png" />
 
-Control LED's, Servos, Switches, and more with J5e. It runs onboard microcontrollers like the ESP8266. Your code is 100% JavaScript. It does not require node.js, a host server or an SBC to host the app.
+Control LED's, Servos, Switches, and more with J5e. It runs onboard microcontrollers like the ESP8266 or ESP32. Your code is 100% JavaScript. It does not require node.js, a host server or an SBC to host the app.
 
 J5e is a device framework built upon [ECMA-419](https://www.ecma-international.org/publications-and-standards/standards/ecma-419/), the Embedded Systems API Specification for ECMAScript. ECMA-419 provides a standard interface for accessing underlying hardware interfaces (GPIO). J5e's API is based on the [Johnny-Five](https://github.com/rwaldron.johnny-five) API which has been battle tested over quite some time. 
 
