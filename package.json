@@ -1,7 +1,7 @@
 {
   "name": "j5e",
-  "version": "0.15.0",
-  "description": "j5e is a device framework built to levarage the ECMA-419 specification",
+  "version": "0.16.0",
+  "description": "j5e is a device first robotics an IoT framework built to levarage the ECMA-419 specification",
   "exports": {
     "./animation": "./lib/animation/index.js",
     "./button": "./lib/button/index.js",
